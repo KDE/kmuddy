@@ -1,0 +1,5 @@
+#!/bin/bash
+# Generating compileable files from bison and flex:
+flex -oflex-out.cpp flex-input.lex
+bison -d bison-input.ypp
+

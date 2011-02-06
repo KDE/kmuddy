@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=KMuddy
+Type=Application
+Exec=kmuddy -caption "%c" %i %m
+Icon=kmuddy.png
+DocPath=kmuddy/index.html
+GenericName=MUD client
+Comment=MUD client
+Comment[de]=
+Terminal=false
+Name[de]=KMuddy
+GenericName[en_CA]=MUD client

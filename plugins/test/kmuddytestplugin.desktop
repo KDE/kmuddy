@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Testing Plug-in
+Comment=Testing Plug-in
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddytestplugin
+X-KMuddy-Version=2
+

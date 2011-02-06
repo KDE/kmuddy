@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+Comment=A Mapper for KMuddy
+Name=Kmuddy Mapper
+ServiceTypes=KMuddy/Plugin
+X-KDE-Library=kmuddymapper
+X-Kmud-Part-Name=Kmud Mapper
+X-Kmud-Part-Version=2.0
+X-Kmud-Part-Author=John-Paul Stanford
+X-Kmud-Part-Email=jp@stanwood.org.uk
+X-Kmud-Part-URL=http://www.kmud.de
+X-Kmud-Part-Description=This is an auto mapper for Kmud.
+X-Kmud-MapperPart-TestProperty=test test test
+X-KMuddy-Version=2
+

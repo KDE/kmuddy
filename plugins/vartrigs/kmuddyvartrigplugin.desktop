@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Variable Triggers
+Comment=Adds supports for triggers that fire off variable changes.
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddyvartrigplugin
+X-KMuddy-Version=2
+

@@ -1,0 +1,75 @@
+.TH KMuddy 1 "3 January 2009" "Version 1.0" "KMuddy Manual Pages"
+.SH NAME
+KMuddy \- a feature-rich MUD client for KDE
+.SH SYNOPSIS
+.B kmuddy
+[\-\-help] [--help-qt] [--help-kde] [--help-all] [--author]
+[-v,--version] [--license] [--]
+.SH DESCRIPTION
+\fIKMuddy\fP is a feature-rich MUD(Multi-User Dungeon) client for KDE.
+
+Currently supported features include ANSI color, tabbed connection 
+window, MCCP v1/v2 compression, configurable colors and short-cuts, 
+split-screen output history, command history, connection profiles, 
+intelligent word-wrapping, flexible aliases and triggers with POSIX 
+regular expressions, session transcripts, macro keys, external 
+scripting, scripting variables, Mud Sound Protocol, and more.
+
+For more detailed information, see the KMuddy Handbook in the KDE help 
+section.
+.SH OPTIONS
+KMuddy accepts the following commandline options:
+.TP
+.B \-\-help
+Show summary of options.
+.TP
+.B \-\-help\-qt
+Show QT-related options.
+.TP
+.B \-\-help\-kde
+Show KDE-related options.
+.TP
+.B \-\-help\-all
+Show all commandline options.
+.TP
+.B \-\-author
+Display information on KMuddy's author.
+.TP
+.B \-\-license
+Output a full copy of KMuddy's software license
+.TP
+.B \-v, \-\-version
+Print version number and exit.
+.TP
+.B \-\-
+End of options.
+.SH FILES
+.TP
+~/.kde/share/config/kmuddyrc
+Per-user global configuration file.
+.TP
+~/.kmuddy/
+Connection profile(s).  For each seperate profile, things like triggers, 
+aliases, etc. are kept.
+.TP
+${KDEDIR}/share/doc/HTML/en/kmuddy
+The KMuddy Handbook lives here.
+.TP
+${KDEDIR}/share/kmuddy/
+KMuddy example and test scripts in C, C++, and Perl.
+.TP
+${KDEDIR}/bin/kmuddy
+The actual binary executable.
+.SH ENVIRONMENT
+.TP 12
+.B KMUDDY_SOCKET
+To communicate variables back and forth with scripts in realtime, KMuddy 
+uses a temporary socket.  When KMuddy executes an external script with 
+variable-communication enabled, this environment variable is set.
+.SH OTHER INFO
+The webpage for KMuddy is at http://www.kmuddy.com.  Here you can find
+info about KMuddy, download the latest version, investigate the 
+web-board, etc.
+.SH COPYRIGHT NOTICE
+KMuddy is (c) 2002-2009 Tomas Mecir and distributed under the terms of 
+the GPL v2, see \fIkmuddy --license\fP

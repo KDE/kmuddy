@@ -1,0 +1,103 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="KmuddyMapperPart" version="2.0">
+	<MenuBar>
+		<Menu name = "File"><Text>&amp;File</Text>
+			<Action name = "fileNew"/>
+			<Separator/>
+			<Action name = "fileLoad"/>
+			<Action name = "fileSave"/>
+			<Separator/>
+			<Action name = "fileInfo"/>
+		</Menu>
+		<Menu name = "Edit"><Text>&amp;Edit</Text>
+			<Action name = "edit_undo"/>
+			<Action name = "edit_redo"/>
+			<Separator/>
+			<Action name = "editCut" />		
+			<Action name = "editCopy"/>
+			<Action name = "editPaste"/>
+			<Action name = "editDelete"/>
+			<Separator/>
+			<Action name = "editSelectAll"/>
+			<Action name = "editUnselectAll"/>
+			<Action name = "editInvertSelection"/>
+		</Menu>
+		<Menu name="View"><Text>&amp;View</Text>
+			<Action name = "viewToolsToolbar"/>
+			<Action name = "viewNavToolbar"/>
+			<Separator/>
+			<Action name = "viewUpperLevel"/>
+			<Action name = "viewLowerLevel"/>
+		</Menu>
+		<Menu name = "Tools"><Text>&amp;Tools</Text>
+			<Action name = "toolsCreate"/>
+			<Action name = "toolsGrid"/>
+			<Separator/>
+			<Menu name = "Level Tools"><Text>&amp;Level tools</Text>
+				<Action name = "toolsLevelUp"/>
+				<Action name = "toolsLevelDown"/>
+				<Action name = "toolsLevelDelete"/>
+			</Menu>
+			<Menu name = "Zone Tools"><Text>&amp;Zone Tools</Text>
+				<Action name = "toolsZoneUp"/>
+				<Action name = "toolsDeleteZone"/>
+				<Action name = "toolsZoneProperties"/>
+			</Menu>
+		</Menu>
+		<Menu name="Window"><Text>&amp;Window</Text>
+			<Action name = "viewNewMap"/>
+		</Menu>
+	</MenuBar>
+	<StatusBar/>
+	<ToolBar fullWidth="false" name="tools"><Text>Tools</Text>
+		<Action name = "toolsCreate"/>
+		<Action name = "toolsGrid"/>
+		<Separator/>
+		<Action name = "edit_undo"/>
+		<Action name = "edit_redo"/>
+	</ToolBar>
+	<ToolBar fullWidth="false" name="navigation"><Text>Navigation</Text>
+		<Action name = "toolsLevelUp"/>
+		<Action name = "toolsLevelDown"/>
+		<Separator/>
+		<Action name = "toolsZoneUp"/>
+		<Separator/>
+		<Action name = "toolsZoneList"/>
+	</ToolBar>
+	<Menu name = "room_popup">
+		<Action name = "roomCurrentPos"/>
+		<Action name = "roomLoginPoint"/>
+		<Action name = "roomWalkTo"/>
+		<Separator/>
+		<Action name = "roomDelete"/>
+		<Separator/>
+		<Action name = "labelMenu"/>
+		<Action name = "roomProperties"/>
+	</Menu>
+	<Menu name = "path_popup">
+		<Action name = "pathOneWay"/>
+		<Action name = "pathTwoWay"/>
+		<Separator/>
+		<Action name = "pathAddBend"/>
+		<Action name = "pathDelBend"/>
+		<Action name = "pathEditBends"/>
+		<Separator/>
+		<Action name = "pathDelete"/>
+		<Separator/>
+		<Action name = "pathPorperties"/>
+    </Menu>
+	<Menu name = "text_popup">
+		<Action name = "textDelete"/>
+		<Separator/>
+		<Action name = "textProperties"/>
+	</Menu>
+	<Menu name = "zone_popup">
+		<Action name = "zoneOpen"/>
+		<Separator/>
+		<Action name = "zoneDelete"/>
+		<Separator/>
+		<Action name = "labelMenu"/>
+		<Action name = "zoneProperties"/>
+	</Menu>
+</kpartgui>
+

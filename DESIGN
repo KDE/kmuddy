@@ -1,0 +1,165 @@
+
+This document describes the architectural changes in KMuddy, that will be done
+after KMuddy 1.0 is out (though some of these might be implemented sooner).
+It is by no means complete, and it's also a bit disorganized, so be careful ;)
+
+Many parts of this are already completed, and some are obsolete.
+
+SCRIPTING LANGUAGE
+------------------
+This is how things should work:
+- [ expression ] - evaluate expression, put result
+- /expression - evaluate expression, ignore result
+- allow indentation in front of /
+- also option of aliases/... to strip leading spaces to allow better indenting
+- change old syntax and perhaps provide converter ( /set name value becomes /set("name","value") )
+- unify functions and macros - everything will be a function, some may simply return nothing relevant
+- speedwalk: make it simply a substitution for a new /walk(path) command
+- repeater: substitution for a /rep command, /rep must also parse its parameter as cCommand etc
+- new class cCommand that holds the parsed command, so we don't need ugly tricks
+- make ""s optional for single-word strings
+- ability to send a cCommand through an event, and actually use this in the command processing code
+- ability to have a script wait for a condition - other things will be executed in the meantime, until the condition is met
+- conditions: expression is true, variable is set to something, some time has elapsed, some number of lines has been received, a particular line is received, etc.; and /wait commands to match
+- provide/consume commands, consume will halt execution until a resource becomes available
+- foreach loop
+- better support for lists and arrays and such in scripting syntax, the functions work but are not very intuitive
+- ability to declare sub-routines and call them
+- change aliases to be actual anonymous sub-routines instead of being expanded directly into the command list
+- get rid of pseudo-variables, they're confusing and stupid, having aliases as subroutines will allow us to do that
+- subroutines will of course halt execution of caller until they're done, and then caller will continue execution
+- Kross: ability to define sub-routines in various scripting languages - requires testing to see how slow/fast this would be; also need access to variables etc.
+
+
+
+
+Basic structure
+---------------
+lib/ - classes that are shared by KMuddy core and plug-ins
+lib/widgets - some commonly used widgets
+kmuddy/ - the core functionality
+kmuddy/dialogs - core dialogs
+plugins/ - plug-ins
+
+The lib/ directory contains classes that can be manipulated by plug-ins - displayer,
+ANSI parser, status line, preferences and so on...
+
+There must NOT be any dependencies on core in lib.
+
+PLUG-INS
+--------
+The following plug-ins are to be considered base plug-ins - will be distributed
+together with KMuddy, as they provide important functionality...
+
+MULTILINE - multi-line edit (the separate one)
+TRANSCRIPT - basic transcript
+VARIABLES - GUI and macros for manipulating variables (the storage classes are in
+  core)
+COMMANDS - many useful commands (/disp, /sysmsg, /quit, /status, ...)
+SCRIPTING - external scripting, variable server, /exec command
+
+These plug-ins are not so important, they might be distributed with KMuddy or
+separately, as determined later.
+
+ADVTRANSCRIPT - advanced transcript (maybe merge with TRANSCRIPT?)
+TIMERS - timer support, /rep
+STATISTICS - connection statistics
+COLORS - expand some sequences in user commands into ANSI color codes
+VARTRIG - triggers reacting on variable changes
+MXPTRIG - MXP-related stuff, special triggers mostly (MXP support is in core
+    and libmxp)
+MAPPER - the mapper
+MATH - many math functions usable in expressions
+STRINGS - functions/macros for string manipulation
+FILES - functions/macros for file manipulation
+DB - database support
+
+Handling of lists and groups
+----------------------------
+- all objects organizable into groups
+- some object groups need priorities, others don't
+- each object belongs to exactly one group
+- the list editor should be able to modify the groups
+- cSaveableList should be modified so that it contains a list of groups, each of them
+  containing a list of objects (i.e. list of lists)
+- all that has to be loaded/saved
+- each group and object should know how to disable itself
+- list editor should have Enable/Disable button (or checkboxes near items or
+  something), must be configurable (disabling a variable makes no sense)
+- separate group-management should no longer be needed
+
+Global/profile settings
+-----------------------
+Current way of having two methods per config option (get/set) is not very good.
+We should use another approach - a couple of mappings, one for each option type
+(int, bool, string, ...). When saving stuff, care should be taken not to mix two
+valueswith equal name, but different type (could be done by prepending/appending
+type-prefix/suffix to name, or by having one group per type). Everyone who wants
+some config-option should also provide default value, returned if such option
+hasn't been set yet.
+
+Managing aliases/trgigers/groups via input-line
+-----------------------------------------------
+Macros should be provided to allow adding/modifying/deleting/(de)activating of stuff.
+TODO: those macros
+
+storing session-related data in plug-ins
+----------------------------------------
+method 1: map<cSession *, cDataStorage *> data; - for data that should not be saved
+method 2: storing in cConnPrefs - if that data has to be remembered between sessions
+
+saving lists/larger data/... in plug-ins (to a separate file)
+-------------------------------------------------------------
+cConnPrefs knows current profile name - add methods to return path where configfile
+should be written.
+Profile import/export has to be modified to support those files! (currently it
+has a fixed list of files to export/import)
+
+syncing dialogs
+---------------
+- lists should emit some signal, whenever a change occurs, so that dialogs can be
+kept in sync (triggers can alter stuff with the new macros, even if the dialogs
+are modal (so there's no reason to have those dlgs modal)
+
+Triggers and scripting
+----------------------
+ SEE FORUMS :)
+
+Events/actions
+--------------
+Many objects will be capable of registering themselves with an event/action
+class. Here they will be allowed to publish method calls and register events
+that they can trigger. Some plug-in wil then provide functions to call those
+methods and also to call some command(s) when some event fires off.
+Most things shall be based on these events - e.g. timers will be hooked to
+some timeout event, alias/trigger processing will also be based on some event
+(with help of the calling class - we need to set some flags about things like
+gagging and so).
+Some priorities for event handlers may need to be introduced.
+There could be an entire module that would allow the user to hook their macros
+on various events; it may also provide something like /invokeevent to allow
+hooking on custom events (something like /notify for external scripts).
+
+Custom commands and functions
+-----------------------------
+There will be some plug-in that will allow custom commands (similar to aliases,
+but it'd be clear that these are custom commands and not MUD commands) and
+functions (these can then be included in []-eval blocks).
+Functions need to return some value.
+The function is simply a list of expressions + possibility to assign result
+of that expression to some variable (expressions can't do that natively due
+to immediate variable expansion)
+Some special variable holding result of last expression will also be useful.
+Result of the very last expression of the function shall be the return value
+of the whole function.
+Recursive calls may also be allowed (LIMITED due to lack of local
+variables).
+
+Tags
+----
+- each object can have a tag (more tags?).
+- you can export all objects with some tag(s) or import them, possibly renaming
+each tag, or delete all existing objects with a given tag and import new ones,
+or whatever you want.
+- list of defined tags + some description...
+

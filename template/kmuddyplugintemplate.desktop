@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Plugin Template
+Comment=Plugin Template
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddyplugintemplate
+X-KMuddy-Version=2
+

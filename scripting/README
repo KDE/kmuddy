@@ -1,0 +1,23 @@
+This directory contains various example files for external scripting. Note that you must have the Scripting plugin loaded if you want to use this feature.
+
+List of files in this directories:
+
+kmuddyvars.h - C/C++ routines for accessing KMuddy's variables
+kmuddy-usock-client.pl - Perl routines for accessing KMuddy's variables
+kmuddy.rb - Ruby routines for accessing KMuddy's variables
+
+stdin-notify.pl - framework for Perl scripts, allowing to use both regular
+communication and notify - uses the select() syscall
+
+locktest.c - testing C script
+vartest.c - C script showing usage of kmuddyvars.h
+pre.c - testing preprocessor script
+kmuddy-usock-test.pl - Perl script showing usage of kmuddy-usock-client.pl
+varexample.rb - Ruby script showing usage of kmuddy.rb
+
+testserver.cpp - testing script that communicates via events
+tmpserver.pl - the same as tmpserver.pl, but in Perl
+
+README.python - describes the two files below
+kmuddy.py - Python script for using the variable server
+sample_script.py - sample script using kmuddy.py

@@ -1,0 +1,30 @@
+This file refers to kmuddy.py and sample_script.py, within the same directory.
+
+KMuddy Python Scripting
+
+This archive contains an experimental Python interface for KMuddy that
+reduces writing your own Python scripts to the following simple steps:
+
+1. import kmuddy
+2. initSocket() - (optional, if you want your script to get/set variables,
+   send commands, etc.)
+3. registerEvent(portNumber, eventHandler (optional parameter))
+4. wait4Event()
+5. closeSocket() (optional)
+6. Implementing the script logic in the event handlers or a loop or both
+	
+Comprehensive documentation is provided via Python's built-in __doc__
+facility and in sample_script.py.
+
+This code has not been overly tested, so it is quite possible that it does
+not work under certain circumstances (I must admit that this is pretty much
+my first Python program ;)
+
+Should you encounter bugs, have further questions or want to contribute
+improvements, please go ahead and drop me a line at apefan@web.de or on
+the KMuddy forum.
+
+Have fun!
+--
+Matthias
+

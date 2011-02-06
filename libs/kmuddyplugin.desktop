@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=ServiceType
+X-KDE-ServiceType=KMuddy/Plugin
+X-KDE-Derived=KPluginInfo
+Comment=KMuddy Plugin
+
+# version of plug-in, used to prevent loading plug-ins with incompatible API
+[PropertyDef::X-KMuddy-Version]
+Type=int
+

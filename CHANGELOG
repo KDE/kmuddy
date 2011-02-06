@@ -1,0 +1,2251 @@
+CHANGELOG
+---------
+
+This is a detailed change-log. I have started writing this on
+5th September 2002, right after the first public release (version 0.1) ...
+----------
+
+2010-12-13
+
+* loaded a new mudlist
+* added more functions to the new scripting API
+* added script support to aliases, timers, buttons, and shortcuts
+* created an unified UI for editing scripts
+* fixed a problem causing tabs to be stuck
+
+2010-12-12
+
+* more work on the scripting API
+
+2010-08-01
+
+* started work on a Javascript scripting API
+
+2009-10-31
+
+* The Quick Connect dialog now remembers what was written to it
+
+2009-10-11
+
+* Fixed the newlines after prompt option
+
+2009-09-28
+
+* The file kmuddy.desktop should be correctly installed now
+
+
+*** RELEASED THIS AS 1.0.1 final ***
+
+2009-09-20
+* Arithmetic expressions will once again work correctly with floating-point numbers on locales that have something other than "." as a decimal separator
+* Error output from scripts will be correctly displayed now
+* /notify will work correctly once again
+* Scripts that communicate variables will no longer crash KMuddy
+* The multi-line dialog will no longer skip empty lines
+* Fixed some more crashes
+
+2009-07-29
+* Fixed a problem causing whole-words to not be properly applied when loading aliases
+* Fixed a problem causing profiles to not be loaded/saved correctly on first start
+
+
+*** RELEASED THIS AS 1.0 final ***
+
+2009-07-19
+* Applied a patch from Magnus Lungborg fixing some issues with tab completion
+
+2009-06-28
+* fixed a crash when displaying a text in scripts
+* removed the colorization code for scripts, we'll do that better later on
+* fixed a scripting crash when using "Communicate variables"
+* fixed a crash when opening a MXP menu
+* fixed a crash when clicking on a MXP menu item
+
+2009-04-26
+* disabled the non-functioning import/export profile functionality
+* all actions are assigned to the main window now - fixes problem with shortcuts not being accessible when the menubar is hidden
+* some cleanup in the mapper
+* fixed a crash in the room dialog of the mapper
+* fixed a mapper crash when trying to move an exit
+
+*** RELEASED THIS AS 1.0rc2 **
+
+2009-04-11
+* fixed a crash in rewrite triggers with an empty replacement text
+* fixed a crash in variable expansion when presented with a " $$ " string
+* fixed a crash in gauges upon disconnecting
+* rewrite triggers GUI will now properly display settings of existing triggers
+
+*** RELEASED THIS AS 1.0rc1 ***
+
+2009-03-22
+* some simplification of quitting code, quitting from systray queries connections for closing
+
+2009-03-14
+* moved variable triggers to their own plugin
+* moved cCmdQueues from core to lib
+* applied patch by Robert Marmorstein, adding support for a systray icon and passive popup notify
+
+2009-03-08
+* added reverse MXP negotiation - DO->WILL. This is against the spec, but some MUDs apparently use it
+
+2009-03-07
+* added scripts to the profile converter
+
+2009-02-15
+* improvements in cursor-key history browsing, patch by Steven Jackson
+* auto-fill now properly colorizes the filled part
+
+2009-02-14
+* default profile values are now shared across connections
+* fixed a problem with session objects not being deleted properly, causing memory leaks
+* fixed a problem with gauges staying through reconnects
+* workarounded a problem with variables and event priorities, proper fix pending
+
+2009-02-08
+* the running scripts dialog is now a docker and uses the correct model
+* improvements in the object model
+
+2009-01-24
+* continuing work on porting and streamlining the running scripts code
+* implemented a model for the running scripts list
+
+2009-01-11
+* converted the scripting plugin to use the new object system, streamlined the options
+* did some improvements in the plug-in interface
+* continuing work on porting the scripting plugin over to QProcess and other Qt4 goodies
+
+2009-01-10
+* fixed map saving
+* applied Mandriva's patch to allow out-of-source builds
+* started work on converting the scripting plugin to use the new object system
+
+*** RELEASED THIS AS 1.0pre4 ***
+
+2009-01-04
+* added option to save a profile manually
+* added some links to MUD connector and such on the MUD list streen
+
+2009-01-03
+* fixed up the About page a bit
+* added some convenience macros around the object system - tgroupon, tgroupoff, agroupon, agroupoff
+* fixed a problem with two empty lines being sent if the user didn't specify name/password
+
+2008-12-28
+* fixed behaviour of object editor upon disconnecting or switching to a non-profile connection
+* removed calls to painting code in mouse events of the mapper - this doesn't work on Qt4
+* mapper text tool will no longer crash
+* renamed "Save changes" to "Apply changes" in the list editor
+* react properly if the active object has been changed - fields that weren't changed in the GUI are updated, fields that did retain their new value
+* the alias and trigger editors no longer use the Qt3 support library
+
+2008-12-27
+* fixed a crash when closing and reopening the mapper
+* created the dialog and basic GUI for the variable viewer - not usable yet
+* implemented the model for the variable viewer
+* hooked the variable viewer on the right events - the plugin is now functional
+
+2008-12-26
+* implemented drag and drop for the object editor model
+* activated drag and drop in the object editor - only a single item can be dragged for now
+
+2008-12-25
+* fixed output window redirection so that it actually displays the text in output windows
+* fixed global matching for aliases and triggers to continue matching if the pattern matches but the condition does not
+* react properly when deleting the last object in a list
+
+2008-12-24
+* fixed a problem with profile boolean preferences not being loaded/saved
+* mapper: moved the profile config tabs to global config, as we don't support per-profile settings anyway
+* mapper: actually made the above mentioned tabs remember content across sessions
+
+2008-12-14
+* fixed a bug causing new objects to be added to the wrong list when switching lists
+  without clicking on any object first
+* unsetting a variable will now properly trigger an event
+* created a skeleton for the upcoming Variable Viewer plugin
+
+2008-12-13
+* KDE4 mapper compiles and runs now, still has problems
+
+2008-12-07
+* continuing work on porting the mapper
+
+2008-12-06
+* started work on porting the mapper
+
+*** RELEASED THIS AS 1.0pre3 ***
+
+2008-11-17
+* fixed some remaining issues with the new model
+* the GUI now selects newly added objects/groups
+* the object editor now shows whether an object is active, and groups are displayed in bold
+* added buttons to the toolbars
+* polished the GUI object manipulation code
+
+2008-11-16
+* reimplemented the object model using QAbstractItemModel
+
+2008-10-19
+* reimplemented the button toolbar using the object system
+* fixed a problem with reporting of object priority changes
+* implemented button support in the profile converter
+* fixed a regression with whole-line colorizing not working
+
+2008-10-18
+* fixed a problem with setting and applying of some profile settings, most notably MXP ones
+* fully ported the Statistics dockwindow away from Qt3Support
+* ported the Output windows dialog away from Qt3Support - more refactoring needed here
+* ported the Colors page of the application settings away from Qt3Support
+* ported the MXP Console away from Qt3Support
+* ported the Multiline input to a dock window and away from Qt3Support
+* some other polishing and code cleanup
+* ported cDirList away from Qt3Support
+* now the only item in core depending on Qt3Support is cConsole
+
+2008-10-12
+* ported sound support to Phonon and enabled it
+* sound support is always enabled now
+* fixed a problem with console widget resizing
+* finished porting the object editors from Qt3 compat code to new Qt4 one
+* removed some dead code
+
+2008-10-11
+* the Statistics dialog now reacts on session switches
+* converted the MXP Console to a dock window
+
+2008-10-06
+* converted connection statistics to a docker
+* simplified the code that displays the docker and such
+* docker positions are now automatically saved/restored
+
+2008-10-05
+* added MXP status to the connection statistics
+
+*** RELEASED THIS AS 1.0pre2 ***
+
+2008-09-27
+* the test plugin will no longer be compiled by default
+* implemented displaying of MUD details in the MUD viewer
+* implemented sorting of MUDs in the list through a proxy model
+* the MUD list is now usable
+* added filtering capabilities to the MUD list dialog
+* more polish in the MUD list dialog
+* added the MUD list to the repository and made it install correctly
+
+2008-09-21
+* implemented a class that loads, parses and stores the MUD list
+* implemented a data model around the above class
+* removed some Qt3 code from the Edit Profile dialog
+* started work on the actual dialog that shows the MUD list
+* the dialog can now show the list, cannot select anything yet, cannot see details either
+
+2008-09-14
+* implemented a converter from the MUD Connector supplied data to XML format
+
+2008-09-06
+* the profile converter now properly converts variables
+* improvements in the alias/trigger editor - the test area no longer uses Qt3 support code, and it can be resized/hidden if desired
+
+2008-08-30
+* removed some dead and unused code
+* ported the main widget to QTabWidget (wanted QMdiArea but it's missing too much functionality)
+* simplified the session management code
+* fixed a problem with GA signals being propagated when not needed
+
+2008-08-23
+* fixed some crashes
+* fixed variable triggers
+* fixed auto-connect on startup
+* fixed network error reporting
+* fixed main window actions used to scroll the console and navitage between tabs
+* removed all uses of deprecated QString::null and replaced with QString()
+* fixed the ability to show and hide the menu bar
+* fixed loading of variables
+* fixed the status variables, they should work correctly again
+* fixed displaying of prompt in the status bar
+* fixed displaying of prompt in the separate field
+* added default setting values for global and local settings to avoid their duplication at many places
+* fixed painting of gauges
+* fixed all other problems with gauges, they work correctly now
+
+2008-08-17
+* fixed some problems and crashes in the color triggers
+* fixed importing of shortcut keys, including conversion from Qt3 keycodes
+* fixed some more crashes
+* fixed and greatly simplified the menu manager, it now works properly
+* a pointer to the main window is located in cActionManager now, so that plugins
+  can use it
+* replaced some usages of the KMuddy class with the new KMainWindow pointer and
+  removed some dependencies
+* improvements in the Objects dialog
+
+2008-08-16
+* implemented the searching and the dialog of the profile importer
+* profile import from KDE3 now works perfectly
+
+2008-08-10
+* added the basic portions of the old profile code to the profile converter
+* made the profile converter compile (it doesn't do anything yet)
+* implemented the actual profile conversion of all the settings and lists - no GUI yet, untested
+
+2008-08-09
+* ported the telnet code to the new KDE4 socketing
+* added proper encoding support
+* removed the quit-command support
+
+2008-08-03
+* fixed some crashes - KMuddy can now connect using the new profile syste,
+* ported the variable list away from cSaveableList
+* fixed a bunch of more problems
+* fixed a long-standing bug that was causing the first item of a list to not be set
+* the window list is now saved together with the rest of the profile
+* removed cSaveableField and cSaveableList
+
+2008-08-02
+* ported over all the functionality of the Connect dialog to the new profile system
+* ported the connecting code over to the new profile system
+* disabled profile import/export for now
+* fixed a couple of problemw in profile loading
+
+2008-07-27
+* imeplemented a data model containing the list of profiles - will be used for the Connect dialog
+* the Connect dialog uses the new data model now
+
+2008-07-26
+* removed support for the action toolbar - I want to implement this better later on
+* ported macro keys
+* removed the variables dialog - not needed, and it was limited anyway
+* ported most of the code from cConnPrefs to cProfileSettings
+
+2008-07-20
+* fully ported gauges
+* made the whole thing compile again
+
+2008-07-19
+* fully ported variable triggers
+* fully ported status variables
+* started porting gauges
+
+2008-07-13
+* finished porting timers
+* integrated the tick timer into main timer code, adjusted /tick and /ticknow
+* implemented changing of alias/trigger/timer visible name
+
+2008-07-12
+* the new alias/trigger code compiles - some problems still need to be resolved
+* started work on porting timers
+
+2008-07-06
+* finished porting the trigger editor GUI
+* removed old alias and trigger dialogs
+
+2008-07-05
+* finished porting the trigger code - GUI part still pending
+* started work on porting over the trigger editor GUI
+
+2008-06-21
+* implemented the data loading/saving for the alias editor, untested
+* started work on porting the trigger code to the object system
+
+2008-06-14
+* implemented the GUI of the new alias editor - mostly a copy of the old version, some changes pending
+
+2008-06-07
+* implemented the periodic save functionality for the new object system
+* built-in list types now get properly registered in the app
+* implemented the base of the alias editor widget - doesn't work yet
+
+2008-06-01
+* ported over the aliases code - the GUI isn't done yet
+
+2008-05-31
+* some cleanup in the object list code
+* started work on the converted plug-in
+* started porting the aliases code to the new object system
+
+2008-05-18
+* tied profile load/save code to the profile connect/disconnect events - this means that all profile information and lists will now get loaded/saved upon connect/disconnect
+* changed event invocation so that local objects receive them before the global ones do
+* implemented profile creation, renaming, deletion and duplication in the new profile manager (untested)
+
+2008-05-17
+* implemented list load/save functionality in the list manager
+* implemented load/save for profile settings (not used yet)
+* also implemented more functionality of the profile/list manager
+
+2008-05-11
+* implemented basic functionality of the profile manager, including XML load/save
+
+2008-05-10
+* started work on the new profile settings (will replace cConnPrefs) and profile manager (will replace cProfiles)
+
+2008-05-04
+* implemented the XML saving code
+* tested XML load/save, everything works perfectly
+
+2008-05-01
+* implemented the XML loading code
+
+2008-04-27
+* implemented the generic traversal list routine with callback support
+* automated creation of all list types within newly created sessions
+* automated creation of new list types within existing sessions
+
+2008-04-26
+* added the toolbar with direction buttons into the Object Editor - doesn't actually work yet
+* made the direction toolbar work
+
+2008-04-19
+* implemented add/remove object/group GUI, including error checking and the like
+
+2008-04-13
+* added context menus to the object editor to add/remove items - these menus do not work yet
+
+2008-03-29
+* work on integrating the object editor into the dialog GUI
+* implemented the group editor
+* implemented object and GUI uploading when navigating the list
+
+2008-03-23
+* implemented parts of the object editor dialog GUI
+
+2008-03-16
+* implemented the ability to retrieve all object data
+* implemented the base class for the object editor widgets
+
+2008-03-09
+* renamed action/event handler to prevent all the warnings about hiding overloaded methods
+* some small cleanup in MCCP code
+
+2008-03-02
+* the root group is now called "Root", and it cannot be moved/renamed/deleted
+* fixed moving/deleting objects
+* all object manipulation now works perfectly - creating, moving, deleting, setting attributes, etc. (no GUI yet)
+* behave properly when nested groups are involved in moving and deleting
+
+2008-03-01
+* implemented all basic object and group manipulation macros:
+  - create object
+  - create group
+  - remove object/group
+  - move object to group at position
+  - rename object/group
+  - enable/disable object/group
+  - set object/group priority
+  - set object attribute
+
+2008-02-23
+* implemented interfaces for the object manipulation macros/functions
+* implemented support for global object identifiers
+* deleted old agroupon, agroupoff, tgroupon and tgroupoff commands
+* implemented the object and group functions which return global object identifiers
+* implemented functions obattrib, oiattrib and osattrib, which return object attributes
+
+
+2008-02-10
+* implemented the minimal basics of the Objects dialog and hooked it to the menu
+* implemented session awareness for the list manager
+* the Objects dialog now displays the desired list, based on the combobox and active session
+* implemented a little testing list to test things with
+
+2008-02-02
+* implemented the cListViewer class, which displays the object model
+
+2008-01-27
+* implemented the list manager functionality
+* made the current version compile - doesn't do anything useful yet
+
+2008-01-20
+* continuing the model work
+
+2008-01-19
+* continuing the model work
+
+2008-01-12
+* work on implementing the Qt standard model into the lists code
+
+2007-12-30
+* continuing work on the XML load support
+* implemented basics of the list manager class
+
+2007-12-29
+* continuing work on the object system - did parts of the XML load support
+
+2007-12-22
+* fixed a possible startup crash
+* fixed console background, it's black once again
+* fixed the Plugins dialog
+* ported plugin loading
+* ported the Strings plugin, it works perfectly now
+* ported the plugin template
+* ported the testing plug-in
+
+2007-12-15
+* fixed a tooltip crash
+* fixed color loading
+* fixed application icons - most get displayed properly once again
+* fixed layout of some dialogs
+* fixed documentation installing
+* many other fixes
+
+2007-12-09
+* finished porting the core
+
+2007-12-08
+* contunuing porting the core
+
+2007-12-02
+* ported half of the core
+
+2007-11-25
+* finished porting the dialogs
+
+2007-11-24
+* done porting the lib/ part - still depends on KDE3Support
+* started porting the dialogs
+
+2007-11-17
+* continuing porting efforts, adjusting classes to compile on Qt4/KDE4
+
+2007-11-11
+* started porting to Qt4/KDE4 - converted buildsystem, ran automated conversions
+
+2007-11-03
+* implemented load/save code for individual objects
+
+2007-10-28
+* implemented a cListGroup class, which represents a group of objects
+* started with on the cList class, which represents one whole list
+
+2007-10-20
+* finished the cListObject class
+
+2007-10-13
+* implemented most of the cListObject class, which will form the basic of the new object system
+
+2007-10-06
+* implemented the cPattern object which performs pattern matching
+* ported cSaveableField to cPattern to test it - a bit inefficient, but cSaveableField is going to be removed anyway
+
+2007-08-18
+* fixed a problem with double Undo/Redo in the mapper Edit menu
+* fixed wrong placement of some menu items in the Mapper window
+* implemented saving of global mapper options (profile-based options do not get saved currently)
+* the mapper pages in global settings have their icons now
+* removed useless mapper plug-ins
+* fixed the speedwalk list mapper plug-in to display properly
+* fixed a problem causing the speedwalk to crash
+
+2007-07-22
+* moved the global settings class from core to lib, so that plug-ins may alter settings
+* continued moving settings appkying routines away from cGlobalSettings
+* cGlobalSettings::apply exists no more - all settings changes are directly handled by the corresponding objects now
+
+2007-07-14
+* started moving the settings applying routines methods away from cGlobalSettings and into individual objects
+* moved application settings dialog filling/retrieval from cGlobalSettings to dlgAppSettings
+* moved the plugin manager from core to lib
+* application settings dialog is no longer invoked by cGlobalSettings, but rather by the KMuddy class
+
+2007-07-07
+* global settings class now compiles again - manipulation methods pending move to individual objects
+
+2007-06-30
+* global settings now support addition of new configuration values
+* global settings object is a singleton now, not a global object (the global object still exists for backwards compatibility)
+* cGlobalSettings no longer feeds the new settings to various objects - instead, it simply raises an event and lets all interested parties react on it
+
+2007-04-14
+* the whole mapper now compiles
+* KMuddy now detects and loads the mapper
+* putting mapper config dialogs into KMuddy works
+* added a Show Mapper item to the View menu
+* fixed map creation issues
+* KMuddy is now able to load the mapper and show a map - although GUI doesn't work much at the moment
+* MAPPER WORKS !!!
+* AUTOMATED MOVE TRACKING AND ROOM CREATION WORKS !!!
+* fixed a crash when closing the mapper
+* the Show Mapper item is not properly unchecked upon closing the mapper
+* the mapper plugins that dock to the window still do not work
+
+2007-04-08
+* got the dialog list to compile
+* continuing work on porting the mapper - almost all compiles now, with the exception of CMapManager
+
+2007-03-25
+* implemented a dialog list class which holds a list of dialogs
+* both settings dialogs now register themselves with the dialog list
+* both settings dialogs now invoke events when the dialogs are created and closed; this will allow plug-ins to add new pages onto them
+* continuing work on porting the mapper
+* mapper: ported preference dialogs
+* mapper: the dialogs/ directory now fully compiles without Kmud
+* mapper: the filefilters/ directory now fully compiles without Kmud
+* mapper: fixed some issues in mapper plug-ins, still don't compile due to missing KmudViewManager
+
+2007-03-11
+* fixed a problem with the multi-command sending that prevented KMuddy from sending anything ...
+
+2007-02-12
+* converted variable triggers to include queue support - this makes /if work properly from within variable triggers
+
+2007-02-02
+* the cConnection class now supports sending multiple commands at once - they're to be separated with '\n' in the string
+* continuing work on porting the mapper
+
+January 2007
+* fixed a crash when the MXP library returns an empty string
+* started work on porting the Kmud mapper to KMuddy
+
+*** RELEASED THIS AS 0.8 final ***
+
+2006-11-05
+* updated documentation
+
+2006-10-18
+* HTML output now properly escapes special sequences
+
+*** RELEASED THIS AS 0.8rc1 ***
+
+2006-10-11
+* fixed crashes upon reconnect when using variables, caused by a stalled variable list pointer
+* speedup in trigger processing
+
+2006-10-09
+* fixed a bug in MSP when there are trailing spaces in file name
+
+2006-09-16
+* some cleanups in telnet option handling
+
+2006-09-13
+* fixed the problem with telnet options randomly not being recognized
+
+2006-09-12
+* changed telnet class to use d-pointer trick, and to utilise a better approach
+  for merging packets
+
+2006-08-11
+* added some debugging output for telnet protocols
+
+2006-07-07
+* updated the documentation
+
+2006-07-05
+* implemented GUI to load/unload plug-ins
+
+*** RELEASED THIS AS 0.8pre5 ***
+
+2006-06-07
+* added macro /setval, which allows setting list values and similar things
+
+2006-06-04
+* fixed some bugs in plugin manager
+* completed the STRINGS plugin, made it work correctly
+* STRINGS PLUGIN WORKS !!!
+
+2006-06-01
+* implemented a STRINGS plugin, which contains many functions for string manipulation
+
+2006-05-31
+* moved external scripting to the SCRIPTING plugin
+
+2006-05-29
+* fixed some problem in the menu manager
+* MENU MANAGER WORKS!
+* created SCRIPTING plugin, no stuff there yet
+* removed preprocessor scripts, plug-ins are better
+
+2006-05-26
+* finished class cMenuManager
+* hooked cMenuManager into KMuddy, menus are now constructed using it
+* removed some calls to deprecated KDE methods
+
+2006-05-25
+* implemented most of the cMenuManager class
+
+2006-03-16
+* made the whole thing actually compile ...
+
+2006-03-13
+* plugin manager is now hooked to all the necessary events, and forwards them to plug-ins
+
+2006-03-12
+* plugin manager compiles, although it doesn't work yet
+* wrote a plug-in template
+* implemented a simple testing plug-in
+* BASIC PLUG-IN INTERFACE WORKS !!!
+
+2006-03-10
+* started work on the new plugin manager that uses KParts
+
+*** RELEASED THIS AS 0.8pre4 ***
+
+2006-02-03
+* fixed some minor problems with conditional triggers
+* fixed some crashes in certain macros, when trying to access non-existant
+  variables
+* all-numeric names for variables are now supported by expression parser
+
+2006-02-02
+* implemented GUI for conditional triggers and global matching.
+* implemented global matching for aliases and triggers (not for rewrite trigs)
+* CONDITIONAL/GLOBAL ALIASES/TRIGGERS WORK !!!
+
+2006-02-01
+* aliases/triggers now support conditional matching, GUI still missing
+* aliases/triggers now have the "global" flag, and some parts of matching support it
+
+2006-01-20
+* fixed some crashes and somesuch
+* IF/ELSE/ENDIF WORKS !!!
+
+2006-01-19
+* parser expressions are now cached - makes them much much faster, as we don't have
+  to reparse whenever a trigger fires, or something like that
+
+2006-01-18
+* support multiple execution stacks
+* implemented commands /if, /else and /endif. Makes use of exec stacks and preprocessing macros
+
+2006-01-17
+* added support for preprocessing macros, currently not used anywhere either
+
+2006-01-16
+* added support for execution stacks into cCmdQueue, not used anywhere as of now
+
+2006-01-10
+* fixed variable triggers
+
+2005-12-22
+* fixed push-down actions
+
+2005-12-18
+* implemented /lset, /lunset, /linc, /ldec
+* made the whole thing compileable again
+
+2005-12-11
+* implemented some functions for array/list manipulation
+
+2005-12-10
+* implemented some macros for array/list manipulation and so
+
+2005-12-06
+* fixed status variables
+
+*** RELEASED THIS AS 0.8pre3 ***
+
+2005-12-03
+* fixed some crashes in the internal scripting parser
+* setting a value/variable auto-detects numeric values
+* empty scripts ([]) are now sent as-is, same for script with errors
+
+2005-12-02
+* inserted the parser into code
+* cCmdProcessor supports expanding []s and calling the parser
+* INTERNAL SCRIPTING PARSER WORKS !!!
+
+2005-12-01
+* converted parser from Alex Bache to use cValue
+
+2005-11-30
+* fixed a crash when setting variables to values other than strings
+
+2005-11-29
+* fixed compilation, KMuddy now compiles again
+
+2005-11-27
+* moved the remaining macros to macros.cpp
+* moved notify to a separate file, /notify should now work too (untested)
+
+2005-11-26
+* got rid of the get macro, we don't want it
+* converted variable manipulation macros (set, unset, inc, dec,
+  provide-res, request-res)
+* moved macros.cpp from lib to main, where it belongs ...
+
+2005-11-25
+* implemented the get macro in the new way
+* implemented the basics of new macro calling, more still pending
+
+2005-11-24
+* implemented loading and saving of cValue
+* Variables GUI shows lists/arrays as such, and they're read-only
+
+2005-11-04
+* gagged lines are now included in the transcript
+* command queues now support local variables
+* cCmdProcessor no longer receives data via events - allows us to pass cCmdQueue pointer
+
+2005-11-03
+* greatly improved the cValue class - now uses implicit sharing, supports arrays with
+  dynamic ranges, as well as string sets
+* /echo no longer unnecessarily duplicates code ... also gets included in transcript
+
+2005-10-26
+* output windows now get the same settings as the main output
+
+2005-10-24
+* make it compile without mxp ...
+* status variables work again
+* don't crash on client-side disconnect
+
+2005-10-22
+* don't crash upon disconnect on KDE 3.4
+
+2005-10-19
+* command separators in aliases are now properly expanded
+
+2005-10-18
+* fixed compilation problems when mxp not compiled
+* fixed crash on reconnect - objects were not unregistered properly
+
+2005-10-17
+* included patch from Magnus Lundborg that improves tab-expansion
+* cCmdParser class implemented
+* cCmdProcessor now work in the new style; macros are still done in the old style
+* COMMAND QUEUES WORK !
+* I mean, basic implementation works - there's still work left to do, that will be done when
+  internal scripting gets in - waiting commands and so on; local variables are not there either
+
+2005-10-16
+* cCmdQueue class implemented
+* parts of cCmdParser implemented - mostly moved from cCmdProcessor
+
+2005-10-12
+* continuing on the command queues - doesn't work yet, but at least compiles again
+
+2005-10-10
+* sending a command resets the prompt counter - means we can get a prompt displayed afterwards
+* started work on the command queues
+
+2005-10-07
+* idle timer works again
+* properly terminate running scripts on disconnect - should also prevent crash
+  when reconnecting (not tested)
+
+2005-10-06
+* don't crash on aliases that send original commands
+
+2005-09-20
+* fixed a crash with output windows, when the text is not gagged from primary
+  console
+* fixed the problem with color triggers not colorizing merged lines
+
+2005-09-19
+* finished conversion to the new architecture, with lib/main splitting and so
+* this took more than two monthes - intermediate entries not included
+
+2005-05-20
+* implemented conversion routines in cValue
+* basic arithmetical operations now support arrays
+
+2005-05-15
+* wrote most parts of cValue, only value retrieval/conversion missing
+
+2005-05-14
+* implemented cValueList and some parts of cValue - these represent one value / array of values
+
+2005-05-09
+* implemented the macro manager
+* implemented the base function and macro classes (cMacro, cFunction)
+
+2005-05-08
+* implemented the cActionManager class, which manages all the actions
+
+2005-05-06
+* implemented the cActionBase class, the base of all classes which will use actions
+
+*** RELEASED THIS AS 0.7.1 ***
+
+2005-03-06
+* the Scripts dialog now includes "Move 10 up", "Move 10 down" and "Move to..." buttons
+
+2005-03-03
+* the force-redraw functionality is now configurable
+
+2005-02-24
+* fixed problem with gauges not updated upon max-variable change
+
+*** RELEASED THIS AS 0.7.1pre ***
+
+2005-02-16
+* new aliases now default to "Begins with" comparison type
+* /echo now expands variables
+
+2005-02-15
+* implemented TAB-expansion of last words
+* TAB-EXPANSION WORKS !!!
+
+2005-02-14
+* started work on TAB-expansion of last words
+
+2005-02-04
+* timestamps for advanced transcript now have 1/100 sec. precision
+* /echo now displays messages in system message color
+
+2005-02-03
+* added /notify fixes from Alex Bache
+
+2005-02-02
+* /echo now displays things no matter what settings are set
+
+2005-01-30
+* only non-zero script return codes are displayed to reduce spam
+
+2005-01-28
+* status variables should now be correctly displayed on startup
+
+2005-01-18
+* aliases, macro calls, ... in the login sequence are now processed
+* system messages after a prompt are now correctly displayed during scrollback
+
+2005-01-15
+* support for the send-as-is prefix
+
+2005-01-14
+* initial buffer size is now set correctly
+* implemented support for setting arbitrary wrap position
+
+2005-01-11
+* fixed bug with idle timer not being updated onm some events
+
+2004-12-29
+* added updated Ruby code to access the variable server (by lontau)
+
+2004-12-26
+* custom session name is now preserved after reconnect
+
+2004-12-23
+* scrollback is now preserved after a reconnect
+
+2004-12-21
+* status bar now shows idle time of the user
+
+2004-12-02
+* don't crash with auto-connect
+
+*** RELEASED THIS AS 0.7 ***
+
+2004-11-26
+* updated spec file
+
+2004-11-24
+* The dialog box used to choose script's executable now lists all files -
+  prevents problems with scripts not being shown
+
+2004-11-17
+* middle-click paste to standard input now also treats newlines correctly
+
+*** RELEASED THIS AS 0.7rc1 ***
+
+2004-11-14
+* paste to standard input line treats newlines correctly
+* applied doc changes from Drossos Stamboulakis
+
+2004-11-12
+* KRegexpEditor integration. By Drossos Stamboulakis
+
+2004-11-06
+* implemented option to disable telnet negotiation on startup
+
+2004-11-05
+* finished the multi-line input line !!!
+* applied patch from Alex Bache that fixes delaying problem with /notify
+
+2004-11-04
+* implemented the multi-input-line widget, which can resize itself as needed
+* added a button that can switch between standard input and multi-line one (has no icon yet)
+* option "Cursor keys browse history" is now enabled by default (only affects new users)
+* implemented command sending for the multi-line input line (not tested yet)
+
+2004-10-24
+* finished link menu support
+
+2004-10-23
+* console resizing can no longer corrupt view, as was the case at some rare occasions
+* implemented most of link menu support in cConsole
+
+2004-10-22
+* wrote code to parse MXP menu information into a list of commands and captions
+
+2004-10-20
+* configure should work well for non-bash shells
+* MXP now correctly supports sound/music, gauges and status variables
+
+2004-10-16
+* gauges no longer crash when max.variable is set to zero
+
+*** RELEASED THIS AS 0.7pre4 ***
+
+2004-10-11
+* polished gauges a bit, fixed some bugs and crashes
+* GAUGES WORK!!!
+* new objects are now added at cursor position, not to the end
+
+2004-10-02
+* implemented some gauges-related logic
+
+2004-09-26
+* some fixes for sending internationalized characters
+
+2004-09-23
+* implemented the cGaugeBarItem widget, which displays one gauge
+
+2004-09-17
+* fixed a bug that prevented speed-walking from working correctly
+* status variables are now initialized correctly
+* STATUS VARIABLES WORK!
+
+2004-09-14
+* some bugfixes in status variables
+* MXP manager now correctly reports supported features
+
+2004-09-12
+* implemented requestGauge methods in cGaugeList
+
+2004-09-08
+* implemented the Gauges and Edit gauge dialog boxes
+* Gauge-dialog GUI now works (gauges themselves don't work yet, though)
+
+2004-09-04
+* status variables no longer crash KMuddy
+
+2004-08-30
+* some bugfixes in status variables, they now compile (but don't work yet)
+
+2004-08-25
+* implemented dialog that shows a list of status variables
+* implemented dialog that edits a status variable
+
+2004-08-22
+* MXP now works correctly for quick-connections
+
+2004-08-20
+* implemented cStatusVar::updateBar(), that updates text of one status-var
+* implemented class cStatusVarList, which manages status variables
+* cConnPrefs now creates and initializes the cStatusVarList object - status vars should now
+  work (no GUI yet)
+
+2004-08-19
+* some bugfixes in cGauge and cStatusVar
+* line splitting now correctly splits links
+* support for variable displaying in cStatusBar class
+
+2004-08-17
+* implemented classes cGauge and cStatusVar, that represent a gauge and a variable in status bar
+
+2004-08-16
+* leading spaces are now trimmed when breaking lines
+
+2004-08-13
+* cursor over link now changes to a KDE-style hand
+
+*** RELEASED THIS AS 0.7pre3 ***
+
+2004-08-05
+* applied patch from Drossos Stamboulakis that adds support for sending commands to another tab
+* wrote cTextChunk::expireNamedLinks
+* cConsole now supports link expiration
+* implemented link expiration (the <EXPIRE> tag of MXP)
+
+2004-08-04
+* replacement text for rewrite triggers now supports pseudo-variables and also normal variables
+* fixed a problem in pseudo-variable  expansion that prevented it from recognizing two
+  variables with no separator between them
+* color triggers work!
+
+2004-08-03
+* wrote GUI for trigger matching (not tested yet)
+
+2004-08-02
+* clicking on a link performs requested action
+* clickable links now work!
+* modified triggers' API to support rewriting
+* implemented rewriting support into trigger matching (no GUI yet)
+
+2004-08-01
+* cMXPManager and cTextProcessor now support links; however, clicking on then still doesn't work
+* MXP is now correctly disabled when the server asks for it
+* cursor is now changed to a hand when it hovers over some link
+
+2004-07-31
+* timestamps now work correctly!
+
+2004-07-30
+* wrote cTextChunk::replace, that will be the basis of rewrite triggers
+* cConsole now changes cursor shape when hovering over some link
+* cConsole now shows timestamps as tooltips
+
+2004-07-29
+* wrote cTextChunk::itemAt
+* cTextChunk now maintains a timestamp
+* wrote cTextChunk::getTimeStamp
+* wrote first part of cTextChunk::replace
+
+2004-07-28
+* implemented a link chunk (no clicking-related stuff yet, just storage and painting)
+
+2004-07-24
+* don't crash when auto-connecting to some profile
+
+2004-07-23
+* fixed a bug in MXP manager that was causing MXP to stay enabled 
+  after reconnect (even to another profile)
+
+*** RELEASED THIS AS 0.7pre2 ***
+
+2004-07-22
+* some fixes to make MXP settings work correctly
+
+2004-07-21
+* correctly inform server when MXP is disabled
+* implemented dialog for changing some MXP preferences
+
+2004-07-19
+* hopefully fixed that color-trigger crash
+* MXP support: <sbr> is converted to a space (but ignored otherwise)
+
+2004-07-18
+* implemented MXP console, that shows MXP warnings and errors
+* fixed crash with advanced transcript in HTML mode
+* HTML transcript now uses <pre> tags to display text in a fixed font
+* HTML transcript now includes generator info :)
+
+2004-07-14
+* finished basic MXP support, including some MXP settings (no GUI yet)
+
+2004-07-10
+* applied patch that adds support for full-screen mode
+
+2004-07-08
+* fixed problem with MXP library detection
+* first bits of cMXPManager and related stuff
+* fixed problem with trigger moving occuring even if Cancel pressed
+
+2004-07-06
+* some checks that should resolve problems with color triggers when
+  switching between 0.6.1 and 0.7pre1
+
+  2004-07-04
+* configure now detects presence of MXP library
+* part of tick timers disapperared somewhere - added it again...
+
+2004-06-30
+* empty lines are now displayed correctly
+* script output is included in session transcript
+
+2004-06-29
+* attempted to fix a crash when splitting lines, as well as a problem
+  that causes text to be displayed after a prompt, instead of being
+  shifted to a new line
+
+*** RELEASED THIS AS 0.7pre1 ***
+
+2004-06-23
+* color triggers now support any color you want :D  GUI still needs some polishing
+* applied patch from Drossos Stamboulakis that adds support for triple-click, selecting
+  the whole line
+
+2004-06-21
+* fixed profile importing (it failed to recognize variable list)
+
+2004-06-20
+* bright ANSI tag not followed by a color change now works correctly
+* indentation of  splitted lines now works correctly again
+
+2004-06-19
+* dialogs with lists of aliases,triggers,..., now have a default size of 70% of main window size
+* color triggers should no longer hang KMuddy
+
+2004-06-18
+* line splitting now works correctly again
+
+2004-06-13
+* fixed some more problems/crashes
+* DISPLAYING WITH FULL COLORS WORKS !!!
+* SESSION TRANSCRIPT WITH FULL COLOR SUPPORT WORKS !!!
+* HTML TRANSCRIPT WORKS !!!
+* new colore triggers work (tho you cannot choose non-ansi colors yet) (and they also hang, bah)
+
+2004-06-12
+* fixed some bugs and crashes related to the newly added code...
+
+2004-06-11
+* color triggers now work with full color support; however, the dialog still
+  only supports the basic color set
+* all text processing should now use the new cTextChunk support
+* implemented cTextChunk::makeLine() to avoid some code duplication
+
+2004-06-10
+* "negative image" attribute should now work
+* class cTextProcessor converted to use new cTextChunk stuff
+
+2004-06-09
+* started updating the cTextProcessor class, also some updates in cANSIParser
+* updated cSession to use the updated signals/slots
+* cANSIParser now manages information about current color/attributes (used to be in cTextProcessor)
+
+2004-06-08
+* updated cTranscript and dlgTranscript to support cHistoryBuffer and new transcript types
+* cTextProcessor now contains colors as QColor, not indexes
+
+2004-06-07
+* updated cConsole::paintCell(), it now calls cTextChunk::paint()
+* updated cConsole::dumpBuffer() to use cHistoryBuffer
+* updated cConsole::hasBlink() to use cHistoryBuffer
+* updated cConsole::addSelectionToClipboard() to use cHistoryBuffer
+* updated cConsole::mouseDoubleClickEvent() to use cHistoryBuffer
+* cConsole class is fully ported
+* ported dlgOutputWindow to use cHistoryBuffer
+* ported cTranscript to use cHistoryBuffer, associated dialogs are not updated yet
+* cTranscript now supports ANSI/HTML transcript, adv.transcript now also supports these
+
+2004-06-06
+* implemented painting support in cTextChunk and friends
+
+2004-06-05
+* cTextChunk and friends now include some ANSI and HTML transcript support
+
+2004-06-04
+* implemented some of conversion routines (plain, ANSI, HTML) in cTextChunk and friends
+* implemented some constructANSI methods in chunkFg and chunkBg
+
+2004-06-03
+* implemented the cHistoryBuffer class that will hold the text lines in cConsole
+* modified cConsole header file to use the new cHistoryBuffer/cTextChunk classes
+* ported easy parts of cConsole to use cHistoryBuffer
+* implemented cTextChunk::duplicate() what creates a duplicate of the chunk
+* ported cConsole::addNewText to use cHistoryBuffer
+* these cConsole methods still need to be ported: dumpBuffer, paintCell, mouseDoubleClickEvent,
+  addSelectionToClipboard, hasBlink
+
+2004-06-02
+* implemented cTextChunk::applyColorChanges, not tested yet though
+
+2004-05-31
+* wrote part of cTextChunk::applyColorChanges
+
+2004-05-30
+* cTextChunk::splitLine now correctly assigns starting attributes
+* \e can now be used to send escape sequences :D
+
+2004-05-29
+* implemented cTextChunk::splitLine and some other methods
+* write interface in cTextChunk for color changes - no implementation yet
+
+2004-05-28
+* implemented a part of cTextChunk class
+* implemented chunkItem class representing one item in a chunk, and some derived classes
+
+2004-05-27
+* KMuddy can no longer be compiled - full color support is being implemented...
+* moved color definitions from cConsole to cANSIParser
+* created class cTextChunk, that represents a chunk of text
+
+2004-05-01
+* some more patches in March and April... offline edit and so
+
+2004-03-06
+* applied a patch from Henrikki Almussa, that fixes handling multi-word groups
+  in /tgroup{onn/off}
+
+2004-02-28
+* applied patch from Alex Bache, that adds support for sending events to
+  scripts, and also fixes trigger execution on prompts
+* applied patch from Henrikki Almusa, that adds support for commands
+  tgroupon and tgroupoff, that enable/disable trigger groups
+* added support for reflecting changes in trigger groups in the groups dialog
+* scripting/ directory now gets installed by make install
+
+2004-02-22
+* multiple prompts received too quickly are now displayed correctly
+
+2004-02-12
+* merged in code from Marco Mastroddi that adds support for a tick timer
+
+2004-01-29
+* fixed prompt handling in preprocessor scripts
+
+2004-01-27
+* completion for includes directional commands by default, to prevent unwanted expansion
+* added ability to rename tabs
+
+2004-01-17
+* some updates needed for 0.6.1rc1
+
+2004-01-15
+* fixed some problems in Vlad's code, improved the output-window a bit
+* MULTIPLE OUTPUT WINDOWS WORK!!!
+* some progress/testing with the variable triggers...
+* VARIABLE TRIGGERS WORK!!!
+
+2004-01-13
+* added better error reporting for MSP
+
+2004-01-08
+* implemented back-end part of variable triggers support
+
+2004-01-07
+* hrm, nothing done in last two weeks - blame exams :(
+
+2003-12-24
+* cPluginManager can be compiled, no idea if it works...
+
+2003-12-23
+* wrote cPluginManager::loadPlugin()
+
+2003-12-22
+* wrote cPluginManager::findPlugins() and cPluginManager::unloadPlugin()
+
+2003-12-20
+* implemented parts of support for loading/unloading plugins
+
+2003-12-19
+* implemented passing of data/events to plug-ins in cPluginManager
+* relevant classes now pass data to plugin manager when needed
+* scripts now also receive gagged lines
+* variable list now emits a signal whenever some variable value changes
+
+2003-12-12
+* implemented first parts of plug-in support
+* fixed some minor bugs in 0.6
+
+*** RELEASED VERSION 0.6
+
+2003-12-05
+* aplied flow control fixes from Alex Bache
+
+2003-11-28
+* some bugfixes in aliases and some compilation fixes
+
+2003-11-24
+* updated documentation
+
+2003-11-23
+* some crash-fixes with quick-connections
+* applied improved version of Alex' patch
+
+2003-11-21
+* applied patch from Alex Bache that fixes deadlock with flow control when some
+  script consumes its input too quickly
+
+2003-11-17
+* scripts with flow control don't start until flow control processes all
+  lines pending at the time when the script was launched
+* merged adv.transcript-and-right-click-menus patch from Vlad
+
+2003-11-16
+* applied patches from Vlad Lazarenko that improve prompt-related stuff
+  and transcript
+* fixed some problems with preprocessor scripts
+* PREPROCESSOR SCRIPTS WORK!!!
+
+2003-11-10
+* running scripts no longer emit textSent when flow control is off
+* implemented GUI for preprocessor script support
+* wrote preprocessor script handling - needs testing
+
+2003-11-09
+* fixed a bug with color triggers
+* wrote first bits of preprocessor script support
+* applied patch from Favorit that adds an option to work better
+    with LPMud-based prompts
+
+2003-11-07
+* fixed some problems with locking - works fine now
+
+2003-10-27
+* implemented support for locking of variables in scripts (note that it's
+    not 100% - locked variables can still be changed via /set or GUI -
+    it's not meant to be 100%, just a means of synchronizing scripts)
+
+2003-10-24
+* moved testarea back to Basic page of Edit alias/trigger dialog box
+* tested new variable features in scripts - everything works great :)
+
+2003-10-22
+* fixed deadlocking with flow control (with help of Alex Bache)
+
+2003-10-20
+* some more checks to prevent deadlock with flow control
+* inc/dec and resource support in cVariableList
+* implemented commands /inc, /dec, /provide-res and /request-res
+* implemented externalscript actions inc, dec, request and provide
+* implemented the new features in a C external script header; needs testing
+
+2003-10-05
+* fixes some bugs in unix domain sockets code
+* VARIABLES IN SCRIPTS WORK!!!
+
+2003-10-04
+* finished implementing variable support in scripting (server side)
+* implemented client-side variable support in scripting
+* neither of these works properly - needs testing
+
+2003-10-03
+* implemented most of variable support in scripting (unix domain sockets and
+  similar stuff)
+
+2003-09-29
+* MSP can be used even if not negotiated (some MUDs depend on it)
+* mid-line MSP triggers are now also supported
+* fixed a memory leak in aRts support
+
+2003-09-28
+* fixed some problems with testarea and multi-line aliases/triggers
+
+2003-09-27
+* sent commands for aliases and triggers can now be multi-line; modified
+  the GUI and all relevant classes to support this
+
+2003-09-26
+* redesigned the edit alias/trigger dialog, merged with special trigger
+  dialog
+
+2003-09-19
+* prompt is now correctly terminated when it's sent to a script
+
+2003-09-12
+* implemented default session transcript directory (profile-based)
+
+2003-09-10
+* implemented GUI for managing variables
+
+2003-09-09
+* settings and objects (aliases, triggers, ...) are now auto-saved every
+  5 minutes
+* implemented basic functions in cVariableList
+* implemented variable expansion in cVariableList (with recursion support,
+  so that if $a is b, $b is c, $c is xxx, then $$$a should expand to xxx)
+* the variable expansion recursion limited to at most 10 passes, to avoid
+  endless loop, e.g. when $a contains $b and $b contains $a
+* implemented basic variable manipulation commands - /set, /unset, /get
+* implemented new script calling command - /exec; old method still possible
+* tested variables with aliases/triggers - work perfectly
+* BASIC VARIABLE SUPPORT WORKS!!! (no GUI yet)
+
+2003-09-08
+* implemented support for beeping on \a character
+* implemented class cVariable, that stores one variable; it's very simple
+  as of now, will probably become more complicated over time
+* wrote skeleton of cVariableList class, that will hold the list of variables
+* added variable list to the connection preferences class
+
+2003-09-07
+* fixed a crash when quick-connecting to a MSP-enabled MUD
+* fixed a crash when closing second+ tab
+* detected prompt is also displayed in the status bar
+
+2003-09-06
+* unfinished lines are now shown in the status bar - reduces prompt-detection
+  problems
+* implemented auxiliary input line
+
+2003-09-01
+* fixed a nasty bug in speed-walking
+* speed-walk string can now be empty (off by default)
+
+2003-08-21
+* RELEASED VERSION 0.5.1
+
+2003-08-19
+* implemented option to disable flow control for some scripts
+* implemented the option to display triggered command, instead of sending it
+
+2003-08-16
+* implemented a prompt-timer, that assumes that non-terminated line that
+  waits in the buffer for 1 second is probably a prompt
+
+2003-07-23
+* prompt is now sent to scripts even if adv.comm is disabled
+* implemented prompt-detection triggers
+
+2003-07-20
+* implememented script input flow control; looks like it's not 100% due to
+  buffering at OS level, but better than nothing :)
+* implemented GUI for import/export profile
+* IMPORT/EXPORT PROFILE WORKS!!!
+* we're ready for 0.5.1rc :)
+
+2003-07-19
+* output from script that's sent to the MUD is now parsed for things like
+  command calls, speed-walking and similar stuff, exactly as if those
+  commands were entered in the input line.
+
+2003-07-18
+* wrote cProfiles::importProfile and cProfiles::exportProfile
+* applied two patches from Scott Monachello, that fix problem when enabling
+  action toolbar and improve scripting support by splitting stdout/stderr,
+  allowing to have one of them displayed and the other sent to the MUD.
+
+2003-07-16
+* better optimized ANSI sequence generation in session transcript
+* improved pseudo-variable recognition to allow non-space characters
+  immediately after the variable name; in addition, the $(name) syntax is
+  now possible
+
+2003-07-08
+* implemented gagging, notification and sound triggers
+* NEW TRIGGER TYPES WORK!
+* session transcript can now be prepended with buffer dump
+* speedwalking sequence can now include numbers >= 10
+* applied patch from Scott Monachello that disconnects all active
+  connections when quitting, also asking the user whether he really
+  wants to close them
+* modified abovementioned patch to support closing using Alt+F4
+* pre-release of 0.5.1 is ready
+
+2003-07-07
+* fixed some crashes related to recent changes
+* NEW TEXT HANDLING WORKS!
+* implemented split-screen resizing (using CTRL+ALT+Up/Down)
+* still some strange crashes left - reverted to old history implementation,
+    abandoning cHistoryBuffer for now - crashes fixed
+* started work on new trigger types (gag, notify, sound)
+
+2003-07-06
+* rewrote cConsole::addText (again); now it's MUCH simpler thanks to last
+  improvements
+* added TAB character support in cTextProcessor
+* added correct prompt displaying (uses GA character)
+* many fixes related to new text handling; it's now almost functional
+
+2003-07-05
+* converted to new text handling: cTranscript, cGlobalSettings, cSession,
+    cTrigger, cTextProcessor; only cConsole needs refinements
+
+2003-06-26
+* improved script organization, adding move up/down and alphabetical sort
+* added case sensitive option for alias/trigger matching
+
+2003-06-25
+* applied patch from Alex Bache that improves alias/trigger dialog, adding
+  buttons Move 10 up and Move 10 down
+* added option Move to... to the alias/trigger dialog, that allows better
+  organization of aliases/triggers
+
+2003-06-21
+* RELEASED VERSION 0.5
+
+2003-06-20
+* reverted back to older admin/ dir, because new one requires kde 3.1
+* applied quick fix from Alex Bache that fixes problem with wrong colored
+  lines
+  
+2003-06-18
+* updated all configure-related stuff to autoconf 2.53, automake 1.6, also
+  updated admin/ directory; I hope that everything will work well
+* ready for 0.5 release :)
+
+2003-06-15
+* fixed some wordwrapping issues in addText; it should now be fully
+  functional (I hope)
+
+  2003-06-14
+* replaced my version of addText with one contributed by Alex Bache
+* fixed some problems in that code
+
+2003-06-09
+* replaced some isShown with isVisible to maintain compatibility with KDE 3.0
+
+2003-06-05
+* main window is no longer deleted in function main(), as it looks like
+  Qt tries to delete it as well, which leads to crashes on some machines.
+  Maybe only some versions of Qt are affected, who knows? (I've been
+  unable to reproduce this with Qt 3.1.1)
+* Ha! I believe I found out why color triggers were causing KMuddy to
+  crash and fixed that :)
+
+2003-06-04
+* found one crash on disconnect and fixed it
+* NAWS information is now correctly sent on startup
+* screen is now correctly updated on font change
+* NAWS is now sent correctly after font change
+* Reconnect/Close tab menu items are no longer disabled after a failed
+  reconnect attempt
+
+2003-06-02
+* scripts now receive text in local encoding, not in Latin1
+* scripts now receive prompt, if using adv.communication (prefix 3) and
+  if MUD supports telnet GA signal
+* fixed compilation problem with disabled sound
+* pending commands are now cancelled when disconnecting, so that they
+  don't cause the tab to be closed immediately
+* updated documentation to reflect changes since 0.4.1
+* fixed a crash on disconnect when action toolbar is displayed
+
+2003-06-01
+* implemented missing stuff in macro keys support, did some testing
+* MACRO KEYS WORK!!!
+* implemented auto-connecting on startup
+* hmm... looks like that ugly hack to display window caption no longer
+  works... Now the standard solution works... No upgrade in kdelibs or
+  anywhere... Strange... The same kdelibs function behaving differently
+  in 0.5pre1 and 0.5pre3 ... Maybe it's caused by config.h?
+
+2003-05-30
+* wrote dialogs that are used to edit macro keys
+* implemented keygrabber dialog and necessary support in KMuddy class
+* connected macro keys dialogs to menus, implemented necessary stuff
+  needed to make everything work
+
+2003-05-28
+* wrote class cShortcut, that represents one macro key
+* wrote class cShortcutList, that stores a list of macro keys and sends
+  commands when key is pressed
+* implemented event filter and related stuff
+* all back-end stuff for macro keys is now implemented, but not tested yet
+
+2003-05-24
+* implemented SDL support (WAV files at least)
+* third pre-release of version 0.5 is ready :)
+
+2003-05-23
+* implemented autoconf tests for SDL_mixer and libartskde
+* Tried to compile with sound disabled, and it works!
+* modified that script above to use libtool for testing; prevents problems
+  with missing .la files, that are needed by libtool but standard autoconf
+  checks don't need them
+* SOUND SUPPORT IS NOW CONFIGURABLE!!! (but SDL not implemented yet)
+
+2003-05-18
+* finished #ifdef-ing of everything sound-related
+* started updating configure script to detect libartskde/SDL_mixer
+
+2003-05-16
+* connected timer-handling stuff to the menu
+* disabling/enabling aliases/triggers/timers now only affects active
+  connection
+* fixed a bug that could sometimes cause delete alias/trigger/timer not to
+  work correctly
+* fixed some problems in timers
+* TIMERS WORK!!!
+* first modifications to support configurable sound support; started to
+  put all sound-based stuff in #ifdef/#endif directives
+
+2003-05-10
+* implemented dialogs that can be used to set timers
+
+2003-05-09
+* implemented class cTimerList, that manages timers
+
+2003-05-08
+* implemented class cTimer, that represents one timer. It supports both
+  standard and one-shot timers
+
+2003-05-02
+* outgoing IAC bytes are now treated correctly (doubled when needed)
+* SUPPRESS-GA is no longer negotiated
+* applied two patches from Scott Monachello that improve scripting dialog,
+  fix some bugs and also add popup menu to Running Scripts dialog
+* cTelnet now supports GO-AHEAD and emits receivedGA() signal
+* trimming of leading/trailing spaces in commands is now optional
+* sending of prefix & suffix together with an alias is now optional
+
+2003-04-23
+* cMSP now uses cSoundPlayer to play sounds
+* MSP SEEMS TO WORK !!! ( not tested much, but something just got played :) )
+* sound/music volumes still not supported
+* Ogg/Vorbis dependency created by libkdearts is not handled by configure;
+  this must be fixed
+
+2003-04-19
+* wrote class cSoundPlayer, that handles sound playing
+
+2003-04-18
+* Connect dialog now remembers last selected item
+* list of directories for MSP now updates selected item correctly
+
+2003-04-17
+* added support for global MSP configuration
+* fixed bug that prevented alias/trigger group from being set correctly
+* applied patch from Alex Bache that improves regexp trigger matching speed
+
+2003-04-13
+* added support for MSP configuration for profiles
+
+2003-04-12
+* wrote class cDirList, that implements a widget that manages a list of
+  directories
+
+2003-04-11
+* applied patch from Alex Bache that fixes scripting when a lot of text
+  is to be sent to a script
+* applied some things from Alex Bache's patch that greatly improve redrawing
+  performance and also solve problems when too much text arrives after
+  history size has been reached (most of this patch was not applied though,
+  as it had problems with output cache and wordwrapping)
+
+2003-04-04
+* fixed a bug in Edit Profile dialog - empty lines in connection sequence
+  are no longer wiped out
+* middle-click in main output window scrolls in to the bottom
+* tabs can now be switched using keyboard; default keybindings are
+  alt+pgup/pgdn and alt+number
+
+2003-04-03
+* sending of login sequence can now be temporarily disabled
+
+2003-03-28
+* added more functionality to the MSP parser; tokenization, file finding,
+  choosing random file on multiple matches
+* implemented class cDownloader
+* implemented support for downloading sounds/music
+* Ha! Most of MSP support works! It can parse triggers, search for files,
+  download them from remote server if possible. The only two missing things
+  are dialogs for configuring it and playing the sound via aRts
+* fixed window caption in KDE 3.1 (its KMainWindow seems to be buggy)
+
+2003-03-27
+* MSP parser now correctly recognizes sound/music triggers, it can also
+  parse them (experimental)
+* fixed a crash on terminate in KDE 3.1
+
+2003-03-21
+* implemented part 1 of MSP parser
+
+2003-03-19
+* fixed a crash in cMCCP
+
+2003-03-16
+* created interface of the cMSP class, that'll implement the MSP protocol
+* KMuddy now accepts telnet negotiation for MSP and will forward traffic
+  to MSP parser if needed, though no parsing is done at the moment
+
+2003-03-14
+* implemented the Connection Statistics dialog box
+* fixed one minor bug in cTelnet class
+
+2003-03-13
+* removed the hack that allowed sending of terminal ID to AFKMud, as its
+  new version behaves correctly
+* auto-completion now offers most commonly used commands first
+* implemented Reconnect option
+* I hope I've finally fixed the crash when using KDE 3.1
+
+2003-03-09
+* implemented all important parts of the Advanced trigger dialog that are
+  needed for colorizations
+* fixed some bugs in colorization code
+* COLOR TRIGGERS WORK!!!
+
+2003-03-08
+* started implementing the Advanced trigger dialog (colorizations and such)
+
+2003-03-07
+* fixed some bugs in cTrigger::prepareColorizationArrays
+
+2003-03-02
+* finished method cTrigger::prepareColorizationArrays; back-end colorization
+  stuff is now complete (no testing yet though)
+
+2003-03-01
+* implemented dump buffer function
+* class cTrigger now loads/saves color triggers, they still don't work though
+* implemented most of back-end color trigger support in cTrigger class
+
+2003-02-28
+* applied fix from Yui Unifex to support telnet-style pasting
+* applied fix from Carsten Nikiel that improves flashing and modified it
+  to be more KDE-complaint
+* had to keep that old blinking stuff for global blinking, because the
+  Modified icon does not show correctly if using translated KDE (it looks
+  for translated version of [modified] string but KMuddy is in English and
+  it uses original non-translated string) :-(
+* size of history buffer in console is now configurable, default 1000
+  
+2003-02-27
+* implemented cConsole::colorizeLastLine and cConsole::dumpBuffer
+
+2003-02-23
+* when connection closes, it's now possible to close that tab by pressing
+  the ENTER key
+* history size is now 5000
+
+2003-02-22
+* found a bug in MCCP code
+* MCCP WORKS!!!
+* cMCCP class now counts size of compressed and uncompressed data
+* If multiple tabs are active and one connection closes, the tab no longer
+  closes automatically (prevents loss of output)
+
+2003-02-21
+* continuing work on MCCP support, finished writing class cMCCP, class
+  needs testing
+* the new MCCP code now compiles successfully, but it still doesn't work :(
+
+2003-02-15
+* started work on MCCP support
+
+2003-02-14
+* Terminal ID is now also sent to AFKMud that doesn't implement it correctly
+* ANSI color codes are now saved correctly in session transcript
+
+2003-02-11
+* RELEASED VERSION 0.4.1
+
+2003-02-07
+* KMuddy 0.4.1 ready for release - created tarballs and Mandrake RPMs
+
+2003-02-06
+* added support for italics, underline and strikeout text attributes
+  (: italics only works if the font supports it :)
+* added support for negative image
+* also added support for rapid blink (treated as normal blink), faint
+  (treated as bold off), gothic (treated as italics) and double underline
+  (treated as single underline)
+* KMuddy now supports all important ANSI color codes (everything except
+  10-19 (alternative fonts), 26 (proportional spacing), 38 (special fg
+  color), 48 (special bg color), 50 (proportional spacing off) and codes > 50
+  (special effects like framed, encircled, overlined and so...).
+  It's unlikely that I'll ever support these codes.
+* ANSI color support is now considered complete. :)
+
+2003-02-05
+* auxiliary console no longer hides some text after historySize has
+  been reached
+* KMuddy no longer crashes when aux. console is shown in the moment when
+  historySize is reached
+* auxiliary console historySize has been reduced (you never see more than
+  last few lines, so it's not needed to waste memory on this)
+* auxiliary console no longer uses cache - it's not big enough to take
+  advantage of it, so it was just another waste of memory
+
+2003-02-04
+* auxiliary console now behaves almost correctly
+* fixed some problems with blinking
+* Blinking works!
+* New profile dialog now includes default login sequence
+* updated web page (local copy only)
+* updated user manual
+
+2003-02-03
+* implemented support for blinking, further testing required
+
+2003-02-02
+* Login sequence can now be customized (profile-based connections only)
+
+2003-01-31
+* Whole words matching in aliases is now optional
+* occasional crashes when terminating with an active connection should
+  no longer occur ( I hope, I couldn't reproduce this :( )
+* \\n is no longer treated as \ followed by \n
+* when BS expansion in AT only was enabled, alias A -> B existed and
+  command A\nC was entered, that \n was treated as command separator because
+  of the alias expansion. Fixed. (using an ugly hack - protecting backslashes
+  that shouldn't be expanded by replacing them with \x01 then back)
+* backslash expansion should now work correctly in all cases
+    
+2003-01-30
+* fixed some bugs in code added yesterday; updated command parsing now
+  works properly
+* trigger loop detection and multi-command limit can now be disabled
+* KMuddy no longer crashes when adding a new alias/trigger without choosing
+  its group (sometimes it failed to set it to BASE)
+* implemented support for word wrapping
+  
+2003-01-29
+* code cleanup in class cCmdProcessor
+* some new features in class cCmdProcessor (multi-char separator, backslashes
+  for aliases/trigers only and more (thanks to Orion Elder for these ideas)
+
+2003-01-28
+* fixed a bug in inputline popup menu that was causing it not to work
+
+2003-01-27
+* RELEASED VERSION 0.4
+
+2003-01-25
+* made RPMs for KMuddy 0.4, notified SuSE packager
+
+2003-01-24
+* fixed some bugs in '\'-sending
+* TABs are no longer displayer as squares - they are now ignored; will be
+  fixed after the 0.4 release
+
+2003-01-23
+* added method cProfiles::duplicateProfile
+* implemented GUI for profile duplication
+* profile duplication now works properly
+* fixed bug in multi-command alias expansion
+* added support for sending tabulators (by typing \t) (but they are not
+  displayed correctly when we receive them :-( )
+* commands can now be also separated with \n character
+* '\' character can be sent by doubling it
+
+2003-01-21
+* fixed some scripting-related crashes that I've discovered
+* single-instance scripts now work properly
+* updated user manual to include all the new features
+* also added information about pseudo-variables and regular expressions
+  to the user manual
+
+2003-01-20
+* implemented dialog Running scripts, which lists all running scripts and
+  contains GUI for manipulating scripts
+* changed code that handles script suspending/resuming, it now uses signals
+  (SIGSTOP and SIGCONT)
+* fixed some problems with scripts
+* added notification when script has finished and when it couldn't be started
+* fixed updating of alias/trigger groups dialog when connection closes
+* SCRIPTING WORKS!!! Now that's excellent. :-))) 0.4 will be out soon :-)
+
+2003-01-18
+* added getFirstId() and getNextId() to cRunningList. Now I'm ready to code
+  the running scripts dialog that'll manage them
+
+2003-01-15
+* added server output notification (some blinking when app/tab not active
+  and some text arrives)
+* implemented functions in cRunningList that manage scripts
+
+2003-01-14
+* added support for default script location/working directory
+* default script parameters are now set correctly
+* Edit Script dialog now checks some params - executable must be set
+  and script name must be unique (so that you can run it from input line)
+
+2003-01-13
+* all script options are now saved correctly
+* looks like scripts work well now, but running script manager is still
+  missing (something that can suspend/resume/terminate... them)
+* scripts now support default script locations
+
+2003-01-11
+* added option to send a command multiple times (e.g. #10 smile sends 10
+  times smile). Thanks to David Ortega Tamayo for this.
+* sending only matched text to script now works
+* only-if-match script option works as well
+
+2003-01-07
+* fixed handling of invisible text in cConsole::addCommand and friends
+* scripts can now send commands or show their output
+* macros can now be executed as commands (with macrochar, '/' by default)
+* KMuddy no longer crashes when pressing the Context Menu key, context
+  menu is shown correctly
+
+2003-01-05
+* implemented class cRunningList, made the whole stuff compilable again
+* fixed a bug that arose if tabbar was disabled on start-up
+* applied a patch from Abigail Brady that fixed some problems in ANSI color
+  handling. Also fixed some other things that he discovered. KMuddy now
+  conforms to the color standard defined in Ecma-048 (though only a subset
+  of defined codes is supported). Thanks!
+* added Scripts dialog to Profile menu
+
+2002-12-22
+* created Scripts dialog
+* added run* functions to cScriptList
+* added script list saving support
+
+2002-12-14
+* If you had some connection then created another but connection failed,
+  a new tab with "No connection" was created but not destroyed. Fixed.
+* fixed some updating of window caption
+* Connect window now appears immediately after prossing Connect button,
+  so that users don't think that we've crashed
+
+2002-12-13
+* implemented class cRunningScript (only integration to a list of scripts
+  is missing, because that list is missing as well)
+* wrote class cScriptList, that handles a list of scripts (TRIVIAL :))
+
+2002-12-08
+* implemented class cScript, that represents one script
+* created a skeleton of cRunningScript class, that represents one running
+  script
+
+2002-12-06
+* implemented the dlgGroups dialog, that shows and manages a list of groups
+* implemented menuitems and actions for dlgGroups
+* ALIAS/TRIGGER GROUPS WORK!!!
+* double-clicking on an entry in Connect dialog starts the connection
+
+2002-12-05
+* wrote class cGroup - basis of alias/trigger groups
+* wrote class cGroupList - a list of alias/trigger groups
+* aliases/triggers now contain information about their group
+* aliases/triggers now only work if their group is active
+* added alias/trigger groups to the profile
+* it is now possible to change alias/trigger group in the Edit alias/trigger
+  dialog (but there's only one group, so it isn't very usable yet...)
+* Ha! Found out why the multiline kept hiding behind the main window and
+  fixed it
+* improved decision assistant a bit
+   
+2002-12-02
+* RELEASED VERSION 0.3.1
+
+2002-11-30
+* prepared webpage update
+* version 0.3.1 finished
+* created tarballs and Mandrake RPMs, notified packagers (well, packager ;))
+
+2002-11-29
+* added option to hide the tabbar if it contains only one tab
+* added IPC support to announce changes in global settings to other
+  running instances of KMuddy
+* spent two hours trying to get rid of one strange crash :|
+  Wrote the sentence "If you change some class and nothing else
+  then look in that class first even if things break down somewhere else!"
+  above my computer ;(((
+
+2002-11-28
+* fixed crash when disconnecting a second+ connection (hopefully :)
+* workaround for problem with QT's QTabBar, which does not emit
+  selected(int) signal for the tab that gets selected after removeTab
+  has been called. This makes disconnecting work properly.
+* when switching between connections, inputline is activated and its
+  selection restored
+* fixed crash in cGlobalSettings when some sessions have been disconnected
+  and preferences are applied
+* action toolbar now updates correctly when switching between connections
+* window now has a minimum size - workaround for the tiny window at first
+  startup
+* fixed crash when quitting with transcript running
+  
+2002-11-27
+* fixed lots of problems that appeared with the switch to cSession
+* KMainWindow is now used instead of simple QVBox
+* Main window now remembers its position/size; the old "cols x rows"
+  method is no longer used
+* Action toolbar can now be undocked
+* support for miltiple sessions now works, but there are still some bugs...
+
+2002-11-24
+* finished the effort, now it compiles again (though it doesn't work yet)
+
+2002-11-23
+* fixed handling of non-latin1 characters in cConsole and cTelnet
+* finished cSession support in KMuddy class
+* started effort to make the whole stuff compilable
+
+2002-11-18
+* added SuSE 8.0 RPMs of KMuddy 0.3 from A.Cascio to the download page
+
+2002-11-17
+* added Andrea Cascio to the "Thanks to" page :)
+* implemented cSession support in cTelnet, cSendCmd, cANSIParser,
+  cCmdProcessor, cTextProcessor, cConnection, cTranscript, cConsole,
+  cInputLine, cStatus, cAction, cActionList, cAlias, cAliasList,
+  cConnPrefs, cGlobalSettings, cProfiles, cTriggerList,
+  dlgAliasTrigger, dlgAppSettings
+* partially implemented cSession management support in class KMuddy
+
+2002-11-16
+* included patch from Andrea Cascio that extends speed-walking with Up and
+  Down dommands
+* added object construction/preparation to cStatus. This will form the basis
+of tabbed support in 0.3.1
+
+2002-11-15
+* fixed a bug with mousewheel scrolling in auxiliary console (that's the
+  small window showing last few lines that pops up if you scroll the main
+  console)
+* fixed problem with window centering on the screen whenever
+  user changes global settings
+* added option not to echo commands and/or system messages
+* added the Decision assistant similar to one from zMUD (it just writes
+  a random sentence)
+* added class cSession. It does nothing now, but it'll form the basis
+  of upcoming support for multiple worlds within one instance. This will
+  come in version 0.3.1
+* added cSessionBase class, made it one of ancestors of every class that
+  needs one instance per connection. Multiple inheritance is definitely a
+  good thing :) . This class provides access to appropriate cSession object.
+
+2002-11-10
+* fixed compilation problem with gcc 2.95 (thanks to Dre)
+* fixed a bug that caused history browsing with cursor keys not to work if
+  "keep text" option was disabled
+  
+2002-11-08
+* RELEASED VERSION 0.3
+
+2002-11-08
+* created an icon for KMuddy
+* created Mandrake 9.0 RPM and tarball for 0.3
+
+2002-11-07
+* console size is no longer remembered between sessions. Instead, the size
+  that you specify in Global settings is used for every session.
+* fixed some problems with action toolbar and console resizing
+* code is now ready for 0.3 release, but I'll create manual and RPMs first
+* manual written :)))
+* added entry for $(prefix)/lib/menu; this is only valid for Mandrake, but
+  it gets installed for every distribution... File can get to some strange
+  place if KDE is in /opt. Maybe i'll look at this later
+
+2002-11-06
+* problem with setting inputline colors fixed - looks like setting of colors
+  of edit widgets in Qt 3.0.5 has been corrected, it now uses correct
+  palette. Updated to work with both 3.0.5 and older (I think...).
+* implemented class cActionList, modified class cAction
+* added action list and edit action dialogs (by updating/modyfying dialogs
+  for aliases and triggers)
+* actions are now a part of profile
+* action toolbar is automatically shown/hidden as needed
+* ACTION TOOLBAR WORKS!!!
+* disabled window auto-centering
+
+2002-11-05
+* I've just upgraded to mandrake9, (disabled supermount :|) and tested kmuddy
+  with gcc-3.2. Incredible... Please don't report speed-related problems
+  if you use older compiler.
+  Also, it looks like some colors cannot be set properly now.
+  I'll look at it.
+
+2002-11-03
+* tried to include toolbar and failed :(
+   looks like toolbars are a bit tricky without a KMainWindow, as they don't
+   resize when undocked, ending up being too small to be usable. Anyone knows
+   how to fix this? (preferably without reimplementing resize event and all
+   that sort of stuff...)
+   I could include a non-floating toolbar, and the action toolbar is done
+   like this, but I cease to do this now. Maybe later?
+* implemented cAction class, that represents one button in a action toolbar
+  (inherited from cSaveableField, together with cAlias and cTrigger)
+
+2002-11-02
+* Iconized the app, mostly with KDE's standard icons. They are not always
+  suitable for their actions, but I had no other... I'm no artist :(((
+  Maybe somebody could volunteer to draw better ones?
+  
+2002-11-01
+* implemented Session Transcript dialog box
+* finished cTranscript class
+* SESSION TRANSCRIPT WORKS!
+* re-enabled Report Bug... option in Help menu (found out that it's sent
+  to kmuddy@host.sk, so that it's okay to have it enabled :))
+  
+2002-10-31
+* implemented most of cTranscript class, that handles session transcript
+* fixed a bug in ANSI parser that sometimes caused wrong colors to be used
+* fixed some bugs and strange lines in cConsole (main output screen)
+  
+2002-10-27
+* added Cancel pending commands to Edit menu (and made it work :))
+* added Enable command parsing to Edit menu (the same here :))
+* multiline edit now supports prefix and suffix added to each command
+
+2002-10-26
+* implemented speed-walking (was easier than I thought :) )
+* added Copy To Clipboard to Edit menu
+
+2002-10-26
+* RELEASED VERSION 0.2.1
+
+2002-10-25
+* implemented a drawing cache - increases drawing performance
+
+2002-10-24
+* empty commands can now be sent - needed with MUDs that send multi-page
+  texts (e.g. help), waiting for ENTER after each page
+* command history can now be browsed with UP/DOWN (last 10 commands only)
+
+2002-10-22
+* fixed a bug causing KMuddy to crash on profile disconnecting
+* added a patch for 0.2 fixing this
+
+2002-10-21
+* RELEASED VERSION 0.2
+
+2002-10-20
+* output window can now be scrolled with SHIFT+{up,down,pageup,pagedown}
+
+2002-10-19
+* fixed another compilation issues from 0.1a - no more 0.1 releases though
+* added "What's this" help to many widgets
+
+2002-10-18
+* Well, looks like 0.1a doesn't compile with gcc 2.96. Terrible.
+* implemented some connection preferences
+* correct quit-command is now sent by cTelnet when disconnecting
+* it's now possible to disable ANSI colors
+* implemented GUI for above-mentioned things
+
+2002-10-17
+* fixed some bugs that prevented KMuddy from being compiled
+  with gcc 2.95 and maybe also gcc 3.2
+* released version 0.1a that (maybe) fixes that for version 0.1
+
+2002-10-14
+* implemented class cTextProcessor that proceses text after it's been
+  displayed
+* TRIGGERS WORK!!!
+* detection of infinite trigger loop is ready and working
+* alases and triggers can now be disabled
+
+2002-10-13
+* classes that handle triggers (cTrigger and cTriggerList) implemented
+* GUI for triggers added (most stuff is common with aliases)
+* (triggers still don't work, but they can be created/edited/tested...)
+
+2002-10-12
+* test area for aliases works
+* aliases are now fully implemented
+
+2002-09-29
+* bugfix: variable expansion no longer affects the alias text
+* regexp aliases should now work correctly (haven't tested much, but...)
+* implemented changing order of aliases/triggers
+* Aliases GUI is now usable (testarea still missing...)
+
+2002-09-26
+* most of Edit alias dialog's functionality implemented (everything except
+  Test area); aliases now have (partially) functional GUI!
+
+2002-09-22
+* Aliases dialog now shows a list of aliases
+* designed Edit alias dialog
+
+2002-09-15
+* first dialog for alias GUI designed (but doesn't work)
+
+2002-09-14
+* aliases now must be the whole word (so that you can have single-letter
+  aliases like l->look without expansion look->lookook and still be able
+  to use "l at something")
+
+2002-09-13
+* added support for moving items in cSaveableList
+* ALIASES WORK! (though GUI is still not available)
+* implemented alias support in cCmdProcessor
+
+2002-09-12
+* some improvements in alias expansion
+* implemented class cAliasList, that manipulates the aliases
+* reverted from KExtendedSocket back to KSocket. KExtendedSocket does
+  not work properly :(
+* well, some of the problems weren't actually caused by KExtendedSocket,
+  but nevertheless I still think that KSocket is better for this...
+
+2002-09-10
+* finished all functions in class cSaveableList - common stuff for aliases
+  and triggers is ready (though not tested yet...)
+* implemented class cAlias, which represents one alias
+
+2002-09-09
+* wrote double-linked list routines in cSaveableList
+
+2002-09-08
+* some modifications/addons to cSaveableField (incl. pseudo-variables
+  support)
+* wrote header file of abstract cSaveableList class
+  (manages cSaveableField items; derived classes will manage
+  aliases/triggers)
+
+2002-09-07
+* wrote abstract class cSaveableField; alias/trigger objects will be
+  derived
+  from this; text comparison is here (substring, regexp and friends)
+
+2002-09-06
+* merged cConnection fix with 0.1 release
+
+2002-09-05
+* Fixed auto-login in cConnection class - should no longer crash/hang
+* MUD name is now displayed in main window titlebar
+
+2002-09-05
+* Version 0.1 released!

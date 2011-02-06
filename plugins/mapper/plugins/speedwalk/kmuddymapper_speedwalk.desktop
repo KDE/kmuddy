@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+Comment=The speedwalk list plugin for the kmuddy mapper
+Name=Speedwalk
+ServiceTypes=KMuddy/Mapper/Plugin
+X-KDE-Library=libkmuddymapper_speedwalk
+X-KMuddy-Mapper-Plugin-Name=Kmuddy Mapper Speedwalk Plugin
+X-KMuddy-Mapper-Plugin-Version=1.0
+X-KMuddy-Mapper-Plugin-Author=John-Paul Stanford
+X-KMuddy-Mapper-Plugin-Email=kmud-devel@kmud.de
+X-KMuddy-Mapper-Plugin-URL=http://www.kmud.de
+X-KMuddy-Mapper-Plugin-Description=The speedwalk list plugin for the kmuddy mapper
+

@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=ServiceType
+X-KDE-ServiceType=KMuddy/Mapper/Plugin
+Name=KMuddy Mapper Tool
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-Name]
+Type=QString
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-Version]
+Type=QString
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-Author]
+Type=QString
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-Email]
+Type=QString
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-URL]
+Type=QString
+
+[PropertyDef::X-KMuddy-Mapper-Plugin-Description]
+Type=QString
+

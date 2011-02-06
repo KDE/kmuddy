@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Variable Viewer
+Comment=This plug-in provides a variable viewer window.
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddyvarviewerplugin
+X-KMuddy-Version=2
+

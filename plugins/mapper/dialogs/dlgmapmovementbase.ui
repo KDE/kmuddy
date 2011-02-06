@@ -1,0 +1,90 @@
+<ui version="4.0" stdsetdef="1" >
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>DlgMapMovementBase</class>
+  <widget class="QWidget" name="DlgMapMovementBase" >
+    <property name="geometry" >
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>600</width>
+        <height>480</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" >
+      <item>
+        <widget class="Q3GroupBox" name="m_fraMovement" >
+          <property name="title" >
+            <string>Valid Room Checking</string>
+          </property>
+          <layout class="QVBoxLayout" >
+            <item>
+              <widget class="QCheckBox" name="m_chkEnableValidRoomChecking" >
+                <property name="text" >
+                  <string>Enable valid room checking</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QLabel" name="m_lblInvalidMoveStrs" >
+                <property name="text" >
+                  <string>Invalid Move Strings</string>
+                </property>
+                <property name="wordWrap" >
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="Q3ListBox" name="m_lstInvalidMoveStrs" />
+            </item>
+            <item>
+              <layout class="QHBoxLayout" >
+                <item>
+                  <spacer name="spacer1" >
+                    <property name="sizeHint" >
+                      <size>
+                        <width>31</width>
+                        <height>20</height>
+                      </size>
+                    </property>
+                    <property name="sizeType" >
+                      <enum>QSizePolicy::Expanding</enum>
+                    </property>
+                    <property name="orientation" >
+                      <enum>Qt::Horizontal</enum>
+                    </property>
+                  </spacer>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="m_cmdAdd" >
+                    <property name="text" >
+                      <string>Add</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="m_cmdEdit" >
+                    <property name="text" >
+                      <string>Edit</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QPushButton" name="m_cmdRemove" >
+                    <property name="text" >
+                      <string>Remove</string>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+          </layout>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11" />
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+</ui>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Profile Converter
+Comment=This plug-in converts profiles from old KMuddy versions.
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddyconverterplugin
+X-KMuddy-Version=2
+

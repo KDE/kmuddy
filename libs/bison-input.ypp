@@ -1,0 +1,224 @@
+%{
+// Authors:
+// Alex Bache <alexbache@ntlworld.com>, 2005
+// Tomas Mecir <kmuddy@kmuddy.com>, 2005
+//
+// Copyright: See COPYING file that comes with this distribution
+//
+//
+   #include <list>
+  
+   #include "instructions.h"
+   
+   using namespace std;
+   
+   // Source code and destination for compiled instructions
+   const char        *source;
+   bool               new_source;
+   list<instruction> *code;
+   instruction        op;
+   
+   // Marker to notify of invalid characters in expression
+   bool token_error;
+   
+   // Functions required by Flex/Bison
+   int yylex(void);
+   void yyerror(char *);
+   
+   // Compile an expression into a list of instructions
+   bool compile(const char        *source_code,
+                list<instruction> *compiled_code);
+   
+   // Output an 'operation' instruction
+   void make_op(instruction::instruction_type instr);
+   
+   // Output an instruction with an integer operand
+   void make_integer_op(instruction::instruction_type instr,
+                        const int                     operand);
+   
+   // Output an instruction with a double operand
+   void make_double_op(instruction::instruction_type instr,
+                       const double                  operand);
+   
+   // Output an instruction with a string operand
+   void make_string_op(instruction::instruction_type  instr,
+                       char                          *operand);
+   
+%}
+
+%union
+{
+   int     int_val;
+   double  double_val;
+   char   *string_val;
+   int nothing;
+}
+
+  // Tokens - basic units we extract from input using Flex
+%token <int_val>    INTEGER
+%token <double_val> DOUBLE_V
+%token <string_val> STRING_V
+%token <string_val> STRING_LITERAL
+%token <string_val> FUNCTION_NAME
+%token STRING_TYPECAST INT_TYPECAST DOUBLE_TYPECAST
+%token AND OR
+%token GT GE LT LE EQUALS NOT_EQUALS
+
+  // Define data types of nonterminal symbols
+%type <nothing> expr
+%type <string_val> func_call
+
+ // Operator precedence rules - describes which operations are done before others
+%left AND OR
+%left GT GE LT LE EQ NE
+%left '+' '-' '.'
+%left '*' '/'
+%nonassoc STRING_TYPECAST INT_TYPECAST DOUBLE_TYPECAST
+%left UMINUS '!'
+%right FUNCTION_CALL
+
+%%
+expr:   expr AND expr       { make_op(instruction::and_op); }
+      | expr OR  expr       { make_op(instruction::or_op);  }
+      | expr GT  expr       { make_op(instruction::greater_than);  }
+      | expr GE  expr       { make_op(instruction::greater_or_equal); }
+      | expr LT  expr       { make_op(instruction::less_than);     }
+      | expr LE  expr       { make_op(instruction::less_or_equal); }
+      | expr EQ  expr       { make_op(instruction::equals);    }
+      | expr NE  expr       { make_op(instruction::not_equal); }
+      | expr '+' expr       { make_op(instruction::add);  }
+      | expr '-' expr       { make_op(instruction::sub);  }
+      | expr '*' expr       { make_op(instruction::mult); }
+      | expr '/' expr       { make_op(instruction::div);  }
+      | expr '.' expr       { make_op(instruction::string_concat); }
+      | '(' expr ')'  { }
+      | func_call arg_list ')' %prec FUNCTION_CALL { make_string_op(instruction::function_call, $1); }
+;
+
+// generating expressions from basic tokens ...
+
+expr:   INTEGER      { make_integer_op(instruction::push_value, $1); }
+      | DOUBLE_V     { make_double_op(instruction::push_value, $1);  }
+      | STRING_V  { make_string_op(instruction::push_variable, $1);     }
+      | STRING_LITERAL { make_string_op(instruction::push_value, $1); }
+      | '-' expr %prec UMINUS  { make_op(instruction::unary_minus); }
+      | '!' expr %prec '!'     { make_op(instruction::not_op);      }
+      | INT_TYPECAST expr %prec INT_TYPECAST { make_op(instruction::cast_to_int); }
+      | DOUBLE_TYPECAST expr %prec DOUBLE_TYPECAST { make_op(instruction::cast_to_double); }
+      | STRING_TYPECAST expr %prec STRING_TYPECAST { make_op(instruction::cast_to_string); }
+;          
+
+func_call: FUNCTION_NAME { make_op(instruction::push_func_arg_marker); }
+;
+
+arg_list:   expr
+          | arg_list ',' expr
+;
+
+
+%%
+
+//***************************************************************
+// Function to handle errors (required by Bison)
+//***************************************************************
+
+void yyerror(char *)
+{
+} // yyerror
+
+
+
+//***************************************************************
+// Function to compile source into a list of instructions using
+// Bison.
+//
+// Returns true if compiled successfully
+//***************************************************************
+
+bool compile(const char        *source_code,
+             list<instruction> *compiled_code)
+{
+   source      = source_code;
+   new_source  = true;
+   code        = compiled_code;
+   token_error = false;
+   
+   code->clear();
+   
+   if ((yyparse()   == 0)    &&
+       (token_error == false)  )
+   {
+      return true;
+   } // endif compiled source successfully
+   else
+   {
+      code->clear();
+      
+      return false;
+   } // endelse failed to compile
+   
+} // compile
+
+
+
+//***************************************************************
+// Output an 'operation' instruction
+//***************************************************************
+
+void make_op(instruction::instruction_type instr)
+{
+   op.instr = instr;
+   op.arg = cValue::empty();
+
+   code->push_back(op);
+   
+} // make_op
+
+
+
+//***************************************************************
+// Output an instruction with an integer operand
+//***************************************************************
+
+void make_integer_op(instruction::instruction_type instr,
+                     const int                     operand)
+{
+   op.instr      = instr;
+   op.arg = cValue (operand);
+   
+   code->push_back(op);
+   
+} // make_integer_op
+
+   
+
+//***************************************************************
+// Output an instruction with a double operand
+//***************************************************************
+
+void make_double_op(instruction::instruction_type instr,
+                    const double                  operand)
+{
+   op.instr         = instr;
+   op.arg = cValue (operand);
+   
+   code->push_back(op);
+   
+} // make_double_op
+
+
+   
+//***************************************************************
+// Output an instruction with a string operand
+//***************************************************************
+
+void make_string_op(instruction::instruction_type  instr,
+                    char                          *operand)
+{
+   op.instr         = instr;
+   op.arg = cValue (QString (operand));
+   
+   code->push_back(op);
+   
+} // make_string_op
+

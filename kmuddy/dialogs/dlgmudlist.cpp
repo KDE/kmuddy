@@ -1,0 +1,143 @@
+//
+// C++ Implementation: dlgmudlist
+//
+// Description: A dialog displaying the list of MUDs from the MUD Connector database.
+//
+//
+// Author: Tomas Mecir <kmuddy@kmuddy.com>, (C) 2008-2009
+//
+// Copyright: See COPYING file that comes with this distribution
+//
+//
+
+#include "dlgmudlist.h"
+
+#include "cmudlist.h"
+
+#include <QGridLayout>
+#include <QLabel>
+#include <QSortFilterProxyModel>
+#include <QSplitter>
+#include <QTextDocument>
+#include <QTreeView>
+#include <klineedit.h>
+#include <klocale.h>
+#include <ktextbrowser.h>
+
+cMUDList *dlgMudList::lst = 0;
+
+struct dlgMudList::Private {
+  KLineEdit *filter;
+  QTreeView *view;
+  KTextBrowser *details;
+  // model used to handle sorting
+  QSortFilterProxyModel *proxy;
+};
+
+dlgMudList::dlgMudList (QWidget *parent) : KDialog (parent)
+{
+  d = new Private;
+  if (!lst)
+    // This is a SLOW operation, as it loads the big XML.
+    lst = new cMUDList;
+
+  // initialize the dialog
+  setInitialSize (QSize (750, 500));
+  setCaption (i18n ("MUD Listing"));
+  setButtons (KDialog::Ok | KDialog::Cancel);
+
+  //create main dialog's widget
+  QWidget *main = new QWidget (this);
+  QVBoxLayout *mainLayout = new QVBoxLayout (main);
+  setMainWidget (main);
+
+  QSplitter *page = new QSplitter (main);
+  page->setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Expanding);
+  QWidget *left = new QWidget (page);
+  QGridLayout *layout = new QGridLayout (left);
+  d->filter = new KLineEdit (left);
+  QLabel *lbl = new QLabel (i18n ("&Filter:"), left);
+  lbl->setBuddy (d->filter);
+  d->view = new QTreeView (left);
+  layout->addWidget (lbl, 0, 0);
+  layout->addWidget (d->filter, 0, 1);
+  layout->addWidget (d->view, 1, 0, 1, 2);
+  d->details = new KTextBrowser (page);
+  page->addWidget (left);
+  page->addWidget (d->details);
+  QLabel *source = new QLabel ("The list is provided courtesy of <a href=\"http://www.mudconnector.com/\">The MUD Connector</a>.<br/>If you are unsure which game to pick, you may also want to check out <a href=\"http://www.topmudsites.com\">www.topmudsites.com</a>.", main);
+  source->setOpenExternalLinks (true);
+  source->setWordWrap (true);
+  
+  mainLayout->addWidget (page);
+  mainLayout->addWidget (source);
+
+  d->view->setRootIsDecorated (false);
+  d->view->setItemsExpandable (false);
+  d->proxy = new QSortFilterProxyModel (this);
+  d->proxy->setSourceModel (lst->model ());
+  d->proxy->setFilterCaseSensitivity (Qt::CaseInsensitive);
+  d->proxy->setSortCaseSensitivity (Qt::CaseInsensitive);
+  d->view->setModel (d->proxy);
+  d->view->setSortingEnabled (true);
+  d->view->sortByColumn (0, Qt::AscendingOrder);
+  d->view->resizeColumnToContents (0);
+
+  connect (d->filter, SIGNAL (textChanged (const QString &)), d->proxy, SLOT (setFilterFixedString (const QString &)));
+  connect (d->view->selectionModel(), SIGNAL (currentChanged (const QModelIndex &, const QModelIndex &)), this, SLOT (currentChanged (const QModelIndex &)));
+  connect (d->view, SIGNAL (doubleClicked (const QModelIndex &)), this, SLOT (accept ()));
+}
+
+dlgMudList::~dlgMudList ()
+{
+  delete d;
+}
+
+const cMUDEntry *dlgMudList::getEntry (QWidget *parent)
+{
+  dlgMudList *dlg = new dlgMudList (parent);
+  if (dlg->exec() != QDialog::Accepted) return 0;
+  // obtain the selected entry
+  const cMUDEntry *e = dlg->selectedEntry ();
+  delete dlg;
+  return e;
+}
+
+void dlgMudList::currentChanged (const QModelIndex &index)
+{
+  QModelIndex idx = d->proxy->mapToSource (index);
+  const cMUDEntry *e = lst->entry (idx.row());
+  if (!e) return;
+
+  // place the data into the details viewer
+  QTextDocument *doc = d->details->document();
+  QString html;
+  html = "<html><body><table border=0 cellpadding=10 cellspacing=1 width=100%>";
+  html += "<tr bgcolor=#E0E0E0><td><b>Name</b></td><td>"+Qt::escape(e->name)+"</td></tr>";
+  html += "<tr bgcolor=#D7D7D7><td><b>Host</b></td><td>"+Qt::escape(e->host)+":"+QString::number(e->port);
+  if (!e->ip.isEmpty())
+    html += " ("+Qt::escape (e->ip)+")";
+  html += "</td></tr>";
+  if (!e->www.isEmpty())
+    html += "<tr bgcolor=#E0E0E0><td><b>URL</b></td><td><a href=\""+Qt::escape(e->www)+"\">"+Qt::escape(e->www)+"</a></td></tr>";
+  html += "<tr bgcolor=#D7D7D7><td><b>Codebase</b></td><td>"+Qt::escape(e->codebase)+"</td></tr>";
+  html += "</table>";
+  QStringList::const_iterator it;
+  for (it = e->desc.begin(); it != e->desc.end(); ++it)
+    html += "<div style=\"margin-bottom:5px\">"+Qt::escape (*it)+"</div>";
+  html += "</body></html>";
+  doc->setHtml (html);
+}
+
+const cMUDEntry *dlgMudList::selectedEntry ()
+{
+  QItemSelectionModel *sm = d->view->selectionModel();
+  if (!sm->hasSelection())
+    return 0;
+  int row = sm->selectedRows().first().row();
+  // we have the row in the view now, so now we need to map it to the row in the original model
+  QModelIndex idx = d->proxy->index (row, 0);
+  return lst->entry (d->proxy->mapToSource (idx).row());
+}
+
+#include "dlgmudlist.moc"

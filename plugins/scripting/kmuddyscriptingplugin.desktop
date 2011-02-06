@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=External Scripting
+Comment=Adds support for external scripting.
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddyscriptingplugin
+X-KMuddy-Version=2
+

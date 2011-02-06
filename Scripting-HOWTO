@@ -1,0 +1,443 @@
+KMuddy Scripting HOWTO
+----------------------
+
+This document will try to teach you the basics of external scripting for KMuddy.
+It assumes no programming experience, though it would be helpful...
+
+KMuddy scripts can be written in many different languages, both compiled
+and interpreted ones. For this document, I've chosen to use the Perl
+language, because it's easy at the beginnings, yet very powerful once you get
+more into it.
+
+1. Basic script structure
+-------------------------
+
+There are more script types possible, but one that you'll probably want to
+use most is a script that reads output from the MUD line after line, looking
+for certain patterns that you instruct it of, and executing some commands
+after a certain text comes.
+This document will describe this type of script, because it's probably the
+most useful one.
+
+The basic structure of such script looks as follows:
+
+#!/usr/bin/perl
+$| = 1;
+
+#initialization goes here
+
+while (<STDIN>)
+{
+  #process line here
+
+}
+
+   
+The first line informs the OS, that the script should be processed by perl.
+The second line switches output into unbuffered mode, which is needed to prevent
+commands from being sent to the MUD too late.
+Lines beginning with a #, are comments (first one is a bit special).
+Next, we can do some initialization (nothing for now), and the while-cycle
+waits for output from the MUD, reads it line after line, and processes it.
+(Note that this simple script never ends. More on this later.)
+
+The script should be saved in a file somewhere. Preferably to a directory
+dedicated for your scripts. Then, set the script to be executable. This can be done
+using your favourite file manager, or from the console by typing
+"chmod +x scriptfile" (without quotes, replacing scriptfile with the name
+of your script). Then add the new script into KMuddy, setting name to something
+reasonable, executable path should point to your script.
+Don't modify any of the options, you won't need those in the beginning.
+
+The script can be executed by typing
+/exec scriptname
+where scriptname is the name given to the script in the Edit script dialog.
+You can execute scripts from the input line, or from an alias/trigger, as
+you want.
+
+
+2. Pattern matching and command execution
+-----------------------------------------
+
+The most important feature of a script is the ability to parse text coming
+from the MUD. The most common way of doing this is by using regular
+expressions. I'm not giong to explain regexps here, refer to KMuddy
+documentation for a documentation about regexps and back-references. You may
+also want to read some more advanced regexp documentation somewhere, once
+the basics described in KMuddy's manual are not sufficient for you, but these
+basics should be sufficient for now.
+
+As a simple example, let's say that you want to send "eat bread", whenever
+"You are hungry." comes from the MUD. This could be done via triggers, but
+this can also be the basis of more advanced scripting. :)
+
+#!/usr/bin/perl
+$| = 1;
+while (<STDIN>)
+{
+  if (/You are hungry\./)
+  {
+    print "eat bread\n";
+  }
+}
+
+So what does this do?
+The first part is the same as the basic script mentioned above.
+The line beginning with 'if', takes the line received from the MUD and compares it with
+the regular expression given in between the '//' characters (note that the 'period' has to
+be protected by a backslash, because a 'period' is a special character of regular
+expressions).
+When the corresponding text arrives, the command after 'if' is executed - in our
+case it's the print command. This command prints something to the standard
+output of the script, which is caught by KMuddy and sent to the MUD.
+The \n sequence is very important here, it represents a newline. It is
+equivalent to pressing the ENTER key by the script, so it needs to be
+given after every command that your script wants to send.
+The {} sequence needs to be written after every if-command (C programmers beware)
+Finally, all commands need to be terminated with a semicolon ;. ('if' and
+'while' and the '#!/usr/bin/perl' lines are not commands, but structural blocks)
+
+Note that multiple commands can be executed as well:
+
+  if (/You are hungry\./)
+  {
+    print "eat bread\n";
+    print "say I ate bread.\n";
+  }
+
+The indentation is not required, perl will understand it anyway, but it makes
+your script more readable.
+
+If you've read the regexp docs, you know that the pattern is not good, because
+it looks for that line everywhere, including the middle of the sentence, and
+that is not good. So, we modify it a bit:
+
+  if (/^You are hungry\.$/)
+
+Now it's correct :)
+
+
+3. Multiple matching blocks
+---------------------------
+
+The first script was nice, but not very useful. A trigger can do the same thing.
+Now, instead of emulating one trigger though, we'll learn how to emulate two 
+or more of them. Also, we'll learn how to make it so that only some matching 
+occurs if some other script was successful and/or unsuccessful.
+
+So, let's assume that you want to write an idiotical (read: example) script
+that will make you say nuts whenever a word "nuts" comes from the MUD, or say
+"apples" when the word apples comes, but only if that word wasn't said by
+another player (to prevent the infinite loop).
+So, the script looks like this (the basic structure is omitted, only
+things inside while() are written:
+
+  if (/say/)
+  {
+    # do nothing in this case
+  }
+  else
+  {
+    if (/apples/)
+    {
+      print "say apples\n";
+    }
+    if (/nuts/)
+    {
+      print "say nuts\n";
+    }
+  }
+
+Execution happens from top to the bottom, so the apples and nuts get
+looked for in this order, and both matching occurs regardless on their
+results. The print commands only get executed if their respective test was
+successful, obviously.
+
+New construction in this example is the "else" part. This gets executed if
+the condition tested in its associated "if" is false. In our case, it's
+false if the matching says no, it's not there.
+
+Since the {} block is required after if/else even if there's only one command,
+you won't have the problems with a misplaced 'else'.
+
+Another thing to remember is that if you want to put another condition immediately
+after else, you can't use if(){} else if (){}. You need to use either:
+
+if (foo) {x;}
+else {
+  if (foo2)
+  {x;}
+}
+
+or use the "elsif" statement:
+
+if (foo1) {x1;}
+elsif (foo2) {x2;}
+
+and so on...
+
+
+3.  Script termination
+----------------------
+
+Tired of having to terminate your scripts by hand? Well, there's a better
+way - the exit statement.
+Example tells it all (only contents of while are included)
+
+  if (/text1/)
+  {
+    print "oh yeah\n";
+  }
+  if (/this text quits the script/)
+  {
+    print "say script terminated\n";
+    exit;
+  }
+
+
+4. Variables
+------------
+If you know variables in KMuddy, you know the standard variables in perl as
+well (but there's more than just those). So, instead of explaining variables
+again here, I refer you to the appropriate section of KMuddy Handbook.
+
+An important thing to remember is, that while the 'principles' of variables are
+the same for KMuddy variables and script variables, they are not the same.
+Variables defined in one script cannot be used in another script, and they
+cannot be used in KMuddy either. Variables defined in KMuddy cannot be used
+as you would use normal script variables. KMuddy's variables are accessible
+via the variable server, but there's no client part for it written yet that
+could be used in perl scripts - only C/C++ client exist as of now. So, until
+this changes, there's no way you could access KMuddy's variables off your
+scripts (only that you can send /set commands and friends).
+
+Okay, now that you understand what variables are, let's have a look at how to
+use them in perl.
+
+Example (whole script this time):
+
+#!/usr/bin/perl
+$ != 1;
+my $var = 0;
+print "search herbs\n";
+while (<STDIN>)
+{
+  if (/^You have found some herbs.$/)
+  {
+    $var = 0;
+    print "search herbs\n";
+  }
+  else
+  {
+    if (/^You have found nothing.$/)
+    {
+      $var = $var + 1;
+    }
+  }
+  if ($var == 3) {
+    exit;
+  }
+}
+
+We're getting into more interesting stuff here, this script is already quite
+usable. :-) Explanation of some lines:
+
+my $var = 0;
+This statement defines a new variable called $var and assigns zero to it.
+It's best to declare all variables before the "while" cycle for now. After
+you become more skilled, you may want to declare them elsewhere, but there are
+some things that one must be aware of, so better stay with this method for now.
+
+$var = 0;
+Here we take an existing variable of $var and assign zero to it.
+(Note that this line (without the "my"), could have been used in the above
+described line as well, but it just isn't a good programming practice :)
+
+$var = $var + 1;
+Write this in your Math course and you're in for trouble. :) But it's okay
+here, since it's not an equation. What this line does is that it takes
+everything to the right of the "=" sign, evaluates it (in our case, it takes
+what's stored in $var and adds 1), then it stores the result in the variable
+on the left, $var in our case.
+Note that typing $var2 = $var + 1; won't modify the $var variable. :)
+
+if ($var == 3)
+Until now, we've only used the // operator (if (/blah/)), but the if statement
+can do much more. In this case, we are checking whether $var 'is equal to' 3. If
+it is, the command (or all commands inside these {}) will be executed, just as it
+was when the pattern matched.
+Note that we're comparing with "==", not plain "=", to avoid confusion, as the
+interpreter doesn't know whether we want to assign or to compare (okay, it's
+obvious in this case, but it wouldn't be in more complex expressions).
+In addition to "==", you can also use <, <=, >, >= and != for comparison.
+The last one '!=' means not-equal-to.
+
+Oh, in case you haven't figured it out by now, the script calls the
+"search herbs" command again and again, until it fails three times in a row.
+Remember this structure, you'll probably use it quite often :)
+
+6. Finite state machines
+------------------------
+We are now getting to the topic that is of great importance for any bigger
+script(s). Without getting into too much detail, a finite state machine (FSM)
+is a device that has an input and a set of states. One of these states is
+initial, some of them (maybe none) are terminating states. What the machine
+does is that it reads input, and depending on what it gets and on the current
+state, it may change its state.
+Actually, our scripts are more powerful than this, because we can have
+multiple states and we also write some output, but this abstraction will do
+for now.
+
+A bigger example of how all this can be used:
+
+Let's assume that you want to write a script that converts all your money
+to more valuable currencies. Let the MUD's commands/output be as follows:
+
+money - command to view your money
+You are broke. - when ya have nothing
+You have 54 bronze, 17 silver, 20 gold and 4 platinum coins in your pockets.
+  - output of the 'money' command when you aren't broke.
+convert XX bronze to silver - command convert bronze to silver.
+Next, say that the coin values are as follows:
+1 platinum = 5 gold
+1 gold = 6 silver
+1 silver = 10 bronze
+And assume that you need to provide exact numbers for conversion, as the
+bank doesn't return change.
+Also say that you don't want to exchange more than 100 coins a once,
+because you'd have to pay a fee for larger amounts.
+
+Of course, this is just an example that would probably work nowhere "as is",
+as every MUD is different. But it's sufficient to show you how things work.
+
+So, we'll have the following states:
+
+1. exchanging bronze -> silver
+2. exchanging silver -> gold
+3. exchanging gold -> platinum
+4. done
+
+Here we'll be proceeding in linear order, 1->2->3->4. More complex order
+is possible too, including unpredictable ones (changing state to more
+possible ones depending on what the MUD sends), depending on what you want.
+
+So, the script should look like this (couldn't test anywhere, so it may
+    contain bugs...)
+
+#!/usr/bin/perl
+$| = 1;
+my $state = 1;
+my $amount;
+#start the loop
+print "money\n";
+while (<STDIN>)
+{
+  #dot needs to be protected with \, remember? :)
+  if (/^You are broke\.$/)
+  {
+    exit;
+  }
+  #exchanged something - start another round
+  if (/^You exchange/)
+  {
+    print "money\n";
+  }
+  #only parse the lines with correct prefix/suffix
+  if (/^You have .* coins in your pockets\.$/)
+  {
+    if ($state == 1)
+    {
+      #how much bronze? stores number in back-reference
+      #note that we don't have to check if the line really contains the
+      #correct prefix/suffix, as we did that already
+      if (/(\d+) bronze/)
+      {
+        #closest smaller number divisible by 10
+        $amount = $1 - $1 % 10;
+        if ($amount > 100) { $amount = 100; }
+        #too few coins, proceed with silver
+        if ($amount == 0) {
+          $state = 2;
+        }
+        else
+        {
+          print "exchange $amount bronze for silver\n";
+        }
+      }
+      else {
+        #none, proceed with silver
+        $state = 2;
+      }
+    }
+#IMPORTANT: we'll immediately process first silver, if there's not anough
+#bronze (because $state is now 2). This behaviour may not always be correct.
+#In such case, use "else" statement to prevent this behaviour. e.g.
+#if ($state == 1) {...} else if ($state == 2) {...} else if ($state == 3) {...}
+    if ($state == 2)
+    {
+      if (/(\d+) silver/)
+      {
+        $amount = $1 - $1 % 6;
+        if ($amount > 100) { $amount = 100; }
+        if ($amount == 0) {
+          $state = 3;
+        }
+        else
+        {
+          print "exchange $amount silver for gold\n";
+        }
+      }
+      else
+      {
+        $state = 3;
+      }
+    }
+    if ($state == 3)
+    {
+      if (/(\d+) gold/)
+      {
+        $amount = $1 - $1 % 5;
+        if ($amount > 100) { $amount = 100; }
+        if ($amount == 0) {
+          $state = 4;
+        }
+        else
+        {
+          print "exchange $amount gold for platinum\n";
+        }
+      }
+      else {
+        $state = 4;
+      }
+    }
+    #state 4 - terminate the script
+    if ($state == 4)
+    {
+      exit;
+    }
+  }
+}
+
+
+Kinda long, isn't it? :)  I believe it shouldn't be difficult to understand
+how this script works.
+
+7. Future reading
+-----------------
+After you gain some experience with all this stuff, you may want to go for
+some more advanced stuff. I would then recommend reading
+man perlintro
+which contains almost everything mentioned here, and much more.
+Then, you may want to go to
+man perl
+which contains a list of everything that could be of interest :)
+
+
+So, this is the end of this HOWTO. I hope you liked it, and wish you happy
+scripting :)
+
+
+/ Tomas Mecir
+  kmuddy@kmuddy.net
+
+

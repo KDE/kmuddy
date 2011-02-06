@@ -1,0 +1,12 @@
+This directory contains the template for a KMuddy plug-in.
+
+To use it, copy all the files to a new directory, rename files as necessary,
+then edit the files and change file/class names.
+
+All occurences of kmuddyplugintemplate must be renamed to the same string, and
+the same holds for KMuddyPluginTemplate.
+
+If your plug-in is a part of KMuddy's tree, add it to plugins/CMakeLists
+to the directories list, then run make in the plugins directory.
+
+

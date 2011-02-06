@@ -1,0 +1,102 @@
+This is a TODO list for KMuddy.
+
+TODO-list:
+----------
+
+Keyboard shortcuts not loaded properly?
+
+Fix bell to go through knotify. Make other things (global notify etc) go through knotify as well.
+
+'Duplicate' object functionality
+
+Problem with prompt detection triggers: I have a script to append some stuff after my prompt and if I want it to be printed I have to add a \n to my script and I think the space at the beginning of the following line is the go ahead signal since I already added a new line to print my script output and the prompt. 
+ 
+The Enabled/Disabled function for macro keys doesn't appear to work. Whether the function is enabled or disabled, the client captures the key and sends in the command. 
+
+/notify can't handle UTF8.
+
+Segfault fix:
+http://www.kmuddy.com/mercuryboard/index.php?a=topic&t=1246
+
+Document advanced transcript !!!
+
+MSP: when more matches for a file exist and more repeats are requested,
+file should be randomly chosen for each iteration. Currently, it's chosen
+only once.
+
+MSP: directory creation does not work !!!
+
+4dimensions.org 6000 - nothing displayed iff both MCCP and MXP on
+
+variables should not get expanded in the password for auto-login (hmpf)
+
+
+Wish-list:
+----------
+Notation:
+* = bigger feature
+- = smaller feature
+? = not sure if I'll do this
+----------
+* speed-walking improvements: slow-walking, detecting invalid moves, ... (12.8.2003 by Alex Bache)
+  / probably a part of mapper?
+- notification improvements (don't notify gags, MUD-specific settings, notify-all-but) (29.8.2003 by Orion Elder)
+? support for HTTP proxy (2.9.2003 by Omykron)
+  / this looks more like something that KDE itself should support...
+- profile-specific settings for action toolbar (position, size, ...) (9.9.2003 by Nuno Sousa)
+- file quoting (8.12.2003 by Egarwaen)
+- color triggers should support bold/italics/... (17.1.2004 by Egarwaen)
+* multiple connections off the same profile should share data (23.1.2004 by Egarwaen)
+  / big change - for or after 1.0
+- allow disabling MCCP in a profile (23.1.2004 by Saurag)
+- allow using F1 in macros (11.2.2004 by Ardanwen)
+  / non-trivial, KDE enforces F1 to be help ...
+- groupped radio buttons in actions bar (18.2.2004 by Hena)
+- allow setting a variable to script's return value (27.3.2004 by Meteor)
+- support the EOR option to recognize prompts (17.4.2004 by Sebastian Andersson)
+- prompt coloring in the next-to-input label or in statusbar (4.5.2004 by Evuldarke)
+- small textbox above input line for displaying of some quick information,
+  controllable by scripts (22.6.2004 by Alex Bache)
+- have Duplicate button in aliases/triggers/... (11.9.2004 by Alex Bache)
+- command-line option (say, --load-profile) to make a connection on startup (14.10.2004 by crache)
+? remember last command(s) in some variable (17.10.2004 by kormoc)
+  / which commands? incl. ones from triggers/scripts? aliases expanded?
+- variable that if set, redirects output to another window (4.11.2004 by Alex Bache)
+- prompt bar's font and color should be changeable (5.11.2004 by Gopher)
+  / see also a similar wish higher (from 4.5.2004)
+- profile option to default to multi-line input (17.11.2004 by Darkk)
+- history for multi-line input (no auto-completion) (3.12.2004 by Balinares)
+- allow gagging of *some* sent commands (possibly commands prefixed with @ or something) (3.12.2004 by Dan)  
+- expand ANSI color codes in script output (7.12.2004 by lontau)
+* implement the "remember line" feature (see his mail about it) (13.12.2004 by Warren Brian Noronha)
+* implement the MCP protocol and local editing via dns-mud-moo-org-simpleedit package (19.12.2004 by Zephiris)
+  / spec is at http://www.belfry.com/fuzzball/trebuchet/mcp.html
+  / also have a look at http://www.moo.mud.org/mcp/index.html
+* possibility for output windows to input text, with some prefix - for channels and such (28.12.2004 by ixonkai)
+- make it so that giving a command separator twice will lead to it being sent to the MUD (only once) (7.1.2005 by giraffel)
+  / zMUD does this with its double semicolons
+- option to not update idle timer upon sending trigger/script output (15.1.2005 by Trekie)
+- have /echo in various colors (20.3.2005 by pkollmorgen)
+- aliases that can call other aliases (20.3.2005 by pkollmorgen)
+  / doable with a /command macro, that will treat the text as a new command
+    to execute (it will have to deal with infinite recursion too)
+- ability to exec triggers on text from scripts (20.3.2005 by pkollmorgen)
+  / will be doable with some /text macro
+- selecting with mouse should scroll the view (20.3.2005 by pkollmorgen)
+- option to disable TAB-completion - problems with second input-line (5.4.2005 by Omykron)
+- ability to do something when idle timer reaches certain value (23.5.2005 by Olli)
+- Shortest-match auto-completion should show greyed text at first, arrow or something should insert the completed text (25.9.2005 by Kaioth)
+- triggers that only match if the text has a certain color (5.10.2005 by Magnus)
+- convenience: change background color of active tab (3.12.2005 by Ken Rosser)
+- accessing output windows using internal scripting (possibly using a parameter in /echo?) (5.12.2005 by dwold)
+- somehow be able to send a command without the trailing \n (telnet mode?) (4.2.2006 by nahpets)
+- list of running timers, with remaining time (8.2.2006 by trekie)
+- triggers that only match off a prompt (24.2.2006 by Alex Bache)
+- tab-completion only off a pre-defined list (8.3.2006 by Roady)
+- enabling/disabling output windows with some command (1.9.2006 by Edward)
+- change the "Do not allow more than 100 commands" to specify how many (16.3.2007 by Chaosone)
+- add a silent popup list choice to the command history - popup that only appears upon pressing something (16.3.2007 by Chaosone)
+- add "Paste as trigger" somewhere (16.3.2007 by Chaosone)
+- timers with float value timeouts
+- ability to add comments to objects
+

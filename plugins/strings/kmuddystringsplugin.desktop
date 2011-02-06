@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Strings
+Comment=This plug-in adds many strings functions.
+ServiceTypes=KMuddy/Plugin
+Type=Service
+X-KDE-Library=kmuddystringsplugin
+X-KMuddy-Version=2
+
