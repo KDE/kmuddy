@@ -88,7 +88,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
 
   // LPMud prompt handling
   lpmudstyle = new QCheckBox (i18n ("&Auto-append newlines after prompt"), frmconn);
-  lpmudstyle->setWhatsThis( i18n ("Enables adding linefeeds afer GA-terminated prompts "
+  lpmudstyle->setWhatsThis( i18n ("Enables adding linefeeds after GA-terminated prompts "
              "to have properly aligned output."));
   
   promptlabel = new QCheckBox (i18n ("&Show prompt in a separate field"), frmconn);
@@ -189,7 +189,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   QVBoxLayout *soundlayout = new QVBoxLayout (frmsound);
   usemsp = new QCheckBox (i18n ("&Enable sounds for this profile"), frmsound);
   usemsp->setWhatsThis( i18n ("Enable playing sounds with this profile.\n"
-      "Note that this will only wirk if you enable sounds in global preferences.\n"
+      "Note that this will only work if you enable sounds in global preferences.\n"
       "Also note that this will only work if your MUD supports <b>MSP</b> "
       "(MUD Sound Protocol)."));
   dirlist = new cDirList (frmsound);
