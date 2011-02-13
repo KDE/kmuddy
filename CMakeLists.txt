@@ -28,7 +28,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 add_subdirectory( libs )
 add_subdirectory( kmuddy )
 add_subdirectory( plugins )
-add_subdirectory( po )
 add_subdirectory( scripting )
 
 include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
