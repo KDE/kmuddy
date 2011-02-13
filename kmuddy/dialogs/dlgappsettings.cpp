@@ -281,7 +281,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   //edhistory shouldn't be too wide too
   edforceredraw->setMaximumSize (edforceredraw->minimumSizeHint ());
   edforceredraw->setWhatsThis( i18n ("Forced redraw after adding a given amount "
-    "of lines. Setting this to a low number may prevent some displaying problems, at a cost"
+    "of lines. Setting this to a low number may prevent some displaying problems, at a cost "
     "of higher CPU usage. Setting it to Never will disable the feature, redraw will "
     "only occur when needed."));
 
@@ -404,7 +404,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   inputcombolayout->setColumnStretch (2, 3);
     //swap ENTERS
   chkswapenters = new QCheckBox (i18n ("S&wap ENTER and CTRL+ENTER for multi-line"), frminput);
-  chkswapenters->setWhatsThis( i18n ("When turned off, CTRL+ENTER will insert another"
+  chkswapenters->setWhatsThis( i18n ("When turned off, CTRL+ENTER will insert another "
       "line in the multi-line input line, and ENTER will send commands to the server. "
       "If turned of, then the behaviour of these keys gets swapped."));
    //place widgets on the page

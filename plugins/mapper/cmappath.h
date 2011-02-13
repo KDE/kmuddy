@@ -177,7 +177,7 @@ private:
 	void getZonePathCords(bool *drawZoneTerminator,directionTyp *destDir,
 	                      QPoint *start,QPoint *end,QPoint *zonepos, CMapZone *zone);
 
-	/** This method is used to calcualte the distance from a path segmeant */
+	/** This method is used to calcualte the distance from a path segment */
 	int getDistance (int x,int y,int x1,int x2,int y1,int y2);
 	bool generatePath(directionTyp *destDir,QPoint *zonepos,CMapZone *currentZone);
 	/** Used to draw an arrow head */

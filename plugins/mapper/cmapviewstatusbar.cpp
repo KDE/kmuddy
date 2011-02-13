@@ -48,7 +48,7 @@ CMapViewStatusbar::CMapViewStatusbar(QWidget *parent, const char *name ) : Q3Fra
 	lblLevelStatus->setFocusProxy(parent);
 	lblZoneLabel = new QLabel(i18n("Zone : "),this);
 	lblZoneLabel->setFocusProxy(parent);
-	lblZoneStatus = new QLabel(i18n("Unamed"),this);
+	lblZoneStatus = new QLabel(i18n("Unnamed"),this);
 	lblZoneStatus->setFont(f);
 	lblZoneStatus->setFocusProxy(parent);
 

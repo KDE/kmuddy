@@ -68,7 +68,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   QLabel *lbl1 = new QLabel (i18n ("&Command"), basicPage);
   d->cmd = new KLineEdit (basicPage);
   lbl1->setBuddy (d->cmd);
-  d->cmd->setWhatsThis( i18n ("Command that will be executed when you press the"
+  d->cmd->setWhatsThis( i18n ("Command that will be executed when you press the "
       "defined key combination.\n"
       "Command can include aliases, script calls and similar stuff."));
 

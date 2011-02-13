@@ -165,7 +165,7 @@ QPoint CMapPath::getIndent(directionTyp dir,QPoint pos)
 	return QPoint(x,y);
 }
 
-/** This method is used to calcualte the distance from a path segmeant */
+/** This method is used to calcualte the distance from a path segment */
 int CMapPath::getDistance (int x,int y,int x1,int x2,int y1,int y2)
 {
 	int a = y1 - y2;
@@ -667,7 +667,7 @@ void CMapPath::deletePathSegWithUndo(int seg)
 {
 	QPoint bend = deletePathSeg(seg);
 
-	CMapCmdElementProperties *cmdDeleteBend = new CMapCmdElementProperties(getManager(),i18n("Delete Path Segmeant"),this);
+	CMapCmdElementProperties *cmdDeleteBend = new CMapCmdElementProperties(getManager(),i18n("Delete Path Segment"),this);
 	cmdDeleteBend->getNewProperties().writeEntry("DelBend",bend);
 	cmdDeleteBend->getOrgProperties().writeEntry("AddBend",bend);
 	getManager()->addCommand(cmdDeleteBend);

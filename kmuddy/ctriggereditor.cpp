@@ -159,7 +159,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   d->type->addItem (i18n ("Ends with"));
   d->type->addItem (i18n ("Regular expression"));
   d->type->setWhatsThis( i18n ("Type of matching. Trigger will only be activated "
-      "if this passes this type of test. Note that triggeres are always matched as whole words."));
+      "if this passes this type of test. Note that triggers are always matched as whole words."));
   comboEditLayout->addWidget (d->type);
 
   //Check if kdeutils kregeditor is available...

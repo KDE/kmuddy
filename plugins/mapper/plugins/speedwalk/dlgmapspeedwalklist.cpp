@@ -202,7 +202,7 @@ void DlgMapSpeedwalkList::updateSpeedwalkList(CMapRoom *updatedRoom)
 QString DlgMapSpeedwalkList::getRoomName(CMapRoom *room)
 {
 	QString label =room->getLabel().trimmed();
-	if (label.isEmpty()) label = i18n("Unamed room");
+	if (label.isEmpty()) label = i18n("Unnamed room");
 	
 	return label;
 }

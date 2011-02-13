@@ -29,7 +29,7 @@
 
 CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
 {
-	label  = i18n("Unamed Zone");
+	label  = i18n("Unnamed Zone");
 	m_room_id_count = 0;
 	m_text_id_count = 0;	
 	manager->m_zoneCount ++;

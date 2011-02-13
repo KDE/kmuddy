@@ -346,7 +346,7 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
 					count++;
 				}
 
-				// Check to see if the level exsits and if not create it
+				// Check to see if the level exists and if not create it
 				CMapLevel *level = NULL;
 				if (levelNum>=(int)zone->getLevels()->count())
 				{
@@ -475,7 +475,7 @@ void CMapClipboard::pastePaths(unsigned int currentZoneID)
 					destZone = m_mapManager->getActiveView()->getCurrentlyViewedZone();
 				}
 
-				// Check to see if the level exsits and if not create it
+				// Check to see if the level exists and if not create it
 				CMapLevel *srcLevel = srcZone->getLevels()->at(srcLevelNum);
 				CMapLevel *destLevel = destZone->getLevels()->at(destLevelNum);
 
@@ -563,7 +563,7 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 					linkZone = m_mapManager->getActiveView()->getCurrentlyViewedZone();
 				}
 
-				// Check to see if the level exsits and if not create it
+				// Check to see if the level exists and if not create it
 				CMapLevel *linkLevel = linkZone->getLevels()->at(linkLevelNum);	
 
 				// Copy link text element properties to new properties
