@@ -8,7 +8,4 @@ Icon=kmuddy.png
 DocPath=kmuddy/index.html
 GenericName=MUD client
 Comment=MUD client
-Comment[de]=
 Terminal=false
-Name[de]=KMuddy
-GenericName[en_CA]=MUD client

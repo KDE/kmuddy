@@ -63,7 +63,7 @@ void cButtonEditor::createGUI(QWidget *parent)
   lblc1->setBuddy (d->command);
   d->command->setWhatsThis( i18n ("Command that will be executed if you click on the button. "
       "Note that you can enter multiple commands here (separated by semi-colons, "
-      "or another characted defined in <b>global settings</b>)."));
+      "or another character defined in <b>global settings</b>)."));
   
  //icon
   QLabel *il = new QLabel ("&Icon", basicPage);

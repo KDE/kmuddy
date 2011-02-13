@@ -509,8 +509,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
    //row 8
   chkexpandBS = new QCheckBox (i18n ("&Expand backslashes"), frmchars);
   chkexpandBS->setWhatsThis( i18n ("This will enable backslash expansion, "
-      "that is: \\n is end-of-line, \\t is TAB, \\\\ is \\, \\<anythisg else> "
-      "means<anything else>."));
+      "that is: \\n is end-of-line, \\t is TAB, \\\\ is \\, \\<anything else> "
+      "means <anything else>."));
 
    //place widgets
   charlayout->setSpacing (10);
