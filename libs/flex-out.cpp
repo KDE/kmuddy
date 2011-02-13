@@ -489,13 +489,23 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "flex-input.lex"
 #line 3 "flex-input.lex"
-// Authors:
-// Alex Bache <alexbache@ntlworld.com>, 2005
-// Tomas Mecir <kmuddy@kmuddy.com>, 2005
-//
-// Copyright: See COPYING file that comes with this distribution
-//
-//
+/*
+Copyright 2005-2011 Tomas Mecir <kmuddy@kmuddy.com>
+Copyright 2005 Alex Bache <alexbache@ntlworld.com>
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of 
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
     #include "cvalue.h"
     #include "bison-input.tab.hpp"
    
@@ -507,7 +517,7 @@ char *yytext;
    extern const char *source;
    extern bool        new_source;
    extern bool        token_error;
-#line 511 "flex-out.cpp"
+#line 521 "flex-out.cpp"
 
 #define INITIAL 0
 
@@ -689,7 +699,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 27 "flex-input.lex"
+#line 37 "flex-input.lex"
 
 
    if (new_source)
@@ -703,7 +713,7 @@ YY_DECL
    }
    
 
-#line 707 "flex-out.cpp"
+#line 717 "flex-out.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -788,7 +798,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 40 "flex-input.lex"
+#line 50 "flex-input.lex"
 {
              // Integer
              yylval.int_val = atoi(yytext); 
@@ -797,7 +807,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 46 "flex-input.lex"
+#line 56 "flex-input.lex"
 {
                         // Double
                         yylval.double_val = QString(yytext).toDouble();
@@ -806,7 +816,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 52 "flex-input.lex"
+#line 62 "flex-input.lex"
 {  
                                  // variable name
                                  yylval.string_val = strdup(yytext+1); 
@@ -815,7 +825,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 57 "flex-input.lex"
+#line 67 "flex-input.lex"
 {  
                                  // variable name looking like $number
                                  yylval.string_val = strdup(yytext+1); 
@@ -824,7 +834,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 63 "flex-input.lex"
+#line 73 "flex-input.lex"
 {  
                                    // Function name
                                    // strip the parenthesis
@@ -843,7 +853,7 @@ YY_RULE_SETUP
 case 6:
 /* rule 6 can match eol */
 YY_RULE_SETUP
-#line 78 "flex-input.lex"
+#line 88 "flex-input.lex"
 {
               // String literal
               yytext[yyleng-1] = '\0';
@@ -854,81 +864,81 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 86 "flex-input.lex"
+#line 96 "flex-input.lex"
 { return INT_TYPECAST;    }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 87 "flex-input.lex"
+#line 97 "flex-input.lex"
 { return DOUBLE_TYPECAST; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 88 "flex-input.lex"
+#line 98 "flex-input.lex"
 { return STRING_TYPECAST; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 90 "flex-input.lex"
+#line 100 "flex-input.lex"
 { return AND; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 91 "flex-input.lex"
+#line 101 "flex-input.lex"
 { return OR;  }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 92 "flex-input.lex"
+#line 102 "flex-input.lex"
 { return GT;  }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 93 "flex-input.lex"
+#line 103 "flex-input.lex"
 { return GE;  }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 94 "flex-input.lex"
+#line 104 "flex-input.lex"
 { return LT;  }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 95 "flex-input.lex"
+#line 105 "flex-input.lex"
 { return LE;  }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 96 "flex-input.lex"
+#line 106 "flex-input.lex"
 { return EQ;  }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 97 "flex-input.lex"
+#line 107 "flex-input.lex"
 { return NE;  }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 99 "flex-input.lex"
+#line 109 "flex-input.lex"
 { return *yytext; }
 	YY_BREAK
 case 19:
 /* rule 19 can match eol */
 YY_RULE_SETUP
-#line 101 "flex-input.lex"
+#line 111 "flex-input.lex"
 ;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 103 "flex-input.lex"
+#line 113 "flex-input.lex"
 { token_error = true; yyterminate(); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 105 "flex-input.lex"
+#line 115 "flex-input.lex"
 ECHO;
 	YY_BREAK
-#line 932 "flex-out.cpp"
+#line 942 "flex-out.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1926,7 +1936,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 105 "flex-input.lex"
+#line 115 "flex-input.lex"
 
 
 

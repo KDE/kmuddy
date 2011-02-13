@@ -88,7 +88,7 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 50 "bison-input.ypp"
+#line 61 "bison-input.ypp"
 {
    int     int_val;
    double  double_val;

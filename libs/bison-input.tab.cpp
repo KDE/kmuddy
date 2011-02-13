@@ -116,13 +116,24 @@
 /* Copy the first part of user declarations.  */
 #line 1 "bison-input.ypp"
 
-// Authors:
-// Alex Bache <alexbache@ntlworld.com>, 2005
-// Tomas Mecir <kmuddy@kmuddy.com>, 2005
-//
-// Copyright: See COPYING file that comes with this distribution
-//
-//
+/*
+Copyright 2005-2011 Tomas Mecir <kmuddy@kmuddy.com>
+Copyright 2005 Alex Bache <alexbache@ntlworld.com>
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of 
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
    #include <list>
   
    #include "instructions.h"
@@ -183,7 +194,7 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 50 "bison-input.ypp"
+#line 61 "bison-input.ypp"
 {
    int     int_val;
    double  double_val;
@@ -191,7 +202,7 @@ typedef union YYSTYPE
    int nothing;
 }
 /* Line 187 of yacc.c.  */
-#line 195 "bison-input.tab.cpp"
+#line 206 "bison-input.tab.cpp"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -204,7 +215,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 208 "bison-input.tab.cpp"
+#line 219 "bison-input.tab.cpp"
 
 #ifdef short
 # undef short
@@ -498,9 +509,9 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    81,    81,    82,    83,    84,    85,    86,    87,    88,
-      89,    90,    91,    92,    93,    94,    95,   100,   101,   102,
-     103,   104,   105,   106,   107,   108,   111,   114,   115
+       0,    92,    92,    93,    94,    95,    96,    97,    98,    99,
+     100,   101,   102,   103,   104,   105,   106,   111,   112,   113,
+     114,   115,   116,   117,   118,   119,   122,   125,   126
 };
 #endif
 
@@ -1445,133 +1456,133 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 81 "bison-input.ypp"
+#line 92 "bison-input.ypp"
     { make_op(instruction::and_op); ;}
     break;
 
   case 3:
-#line 82 "bison-input.ypp"
+#line 93 "bison-input.ypp"
     { make_op(instruction::or_op);  ;}
     break;
 
   case 4:
-#line 83 "bison-input.ypp"
+#line 94 "bison-input.ypp"
     { make_op(instruction::greater_than);  ;}
     break;
 
   case 5:
-#line 84 "bison-input.ypp"
+#line 95 "bison-input.ypp"
     { make_op(instruction::greater_or_equal); ;}
     break;
 
   case 6:
-#line 85 "bison-input.ypp"
+#line 96 "bison-input.ypp"
     { make_op(instruction::less_than);     ;}
     break;
 
   case 7:
-#line 86 "bison-input.ypp"
+#line 97 "bison-input.ypp"
     { make_op(instruction::less_or_equal); ;}
     break;
 
   case 8:
-#line 87 "bison-input.ypp"
+#line 98 "bison-input.ypp"
     { make_op(instruction::equals);    ;}
     break;
 
   case 9:
-#line 88 "bison-input.ypp"
+#line 99 "bison-input.ypp"
     { make_op(instruction::not_equal); ;}
     break;
 
   case 10:
-#line 89 "bison-input.ypp"
+#line 100 "bison-input.ypp"
     { make_op(instruction::add);  ;}
     break;
 
   case 11:
-#line 90 "bison-input.ypp"
+#line 101 "bison-input.ypp"
     { make_op(instruction::sub);  ;}
     break;
 
   case 12:
-#line 91 "bison-input.ypp"
+#line 102 "bison-input.ypp"
     { make_op(instruction::mult); ;}
     break;
 
   case 13:
-#line 92 "bison-input.ypp"
+#line 103 "bison-input.ypp"
     { make_op(instruction::div);  ;}
     break;
 
   case 14:
-#line 93 "bison-input.ypp"
+#line 104 "bison-input.ypp"
     { make_op(instruction::string_concat); ;}
     break;
 
   case 15:
-#line 94 "bison-input.ypp"
+#line 105 "bison-input.ypp"
     { ;}
     break;
 
   case 16:
-#line 95 "bison-input.ypp"
+#line 106 "bison-input.ypp"
     { make_string_op(instruction::function_call, (yyvsp[(1) - (3)].string_val)); ;}
     break;
 
   case 17:
-#line 100 "bison-input.ypp"
+#line 111 "bison-input.ypp"
     { make_integer_op(instruction::push_value, (yyvsp[(1) - (1)].int_val)); ;}
     break;
 
   case 18:
-#line 101 "bison-input.ypp"
+#line 112 "bison-input.ypp"
     { make_double_op(instruction::push_value, (yyvsp[(1) - (1)].double_val));  ;}
     break;
 
   case 19:
-#line 102 "bison-input.ypp"
+#line 113 "bison-input.ypp"
     { make_string_op(instruction::push_variable, (yyvsp[(1) - (1)].string_val));     ;}
     break;
 
   case 20:
-#line 103 "bison-input.ypp"
+#line 114 "bison-input.ypp"
     { make_string_op(instruction::push_value, (yyvsp[(1) - (1)].string_val)); ;}
     break;
 
   case 21:
-#line 104 "bison-input.ypp"
+#line 115 "bison-input.ypp"
     { make_op(instruction::unary_minus); ;}
     break;
 
   case 22:
-#line 105 "bison-input.ypp"
+#line 116 "bison-input.ypp"
     { make_op(instruction::not_op);      ;}
     break;
 
   case 23:
-#line 106 "bison-input.ypp"
+#line 117 "bison-input.ypp"
     { make_op(instruction::cast_to_int); ;}
     break;
 
   case 24:
-#line 107 "bison-input.ypp"
+#line 118 "bison-input.ypp"
     { make_op(instruction::cast_to_double); ;}
     break;
 
   case 25:
-#line 108 "bison-input.ypp"
+#line 119 "bison-input.ypp"
     { make_op(instruction::cast_to_string); ;}
     break;
 
   case 26:
-#line 111 "bison-input.ypp"
+#line 122 "bison-input.ypp"
     { make_op(instruction::push_func_arg_marker); ;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1575 "bison-input.tab.cpp"
+#line 1586 "bison-input.tab.cpp"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1785,7 +1796,7 @@ yyreturn:
 }
 
 
-#line 119 "bison-input.ypp"
+#line 130 "bison-input.ypp"
 
 
 //***************************************************************
