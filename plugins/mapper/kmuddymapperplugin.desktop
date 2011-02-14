@@ -2,6 +2,9 @@
 Type=ServiceType
 X-KDE-ServiceType=KMuddy/Mapper/Plugin
 Name=KMuddy Mapper Tool
+Name[pt]=Ferramenta de Mapeamento do KMuddy
+Name[uk]=Засіб роботи з картами KMuddy
+Name[x-test]=xxKMuddy Mapper Toolxx
 
 [PropertyDef::X-KMuddy-Mapper-Plugin-Name]
 Type=QString

@@ -1,7 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Testing Plug-in
+Name[pt]=A Testar o 'Plugin'
+Name[uk]=Тестовий додаток
+Name[x-test]=xxTesting Plug-inxx
 Comment=Testing Plug-in
+Comment[pt]=A Testar o 'Plugin'
+Comment[uk]=Тестовий додаток
+Comment[x-test]=xxTesting Plug-inxx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddytestplugin

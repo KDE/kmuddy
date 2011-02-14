@@ -1,7 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plugin Template
+Name[pt]=Modelo do 'Plugin'
+Name[uk]=Шаблон додатка
+Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
+Comment[pt]=Modelo do 'Plugin'
+Comment[uk]=Шаблон додатка
+Comment[x-test]=xxPlugin Templatexx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddyplugintemplate

@@ -1,7 +1,13 @@
 [Desktop Entry]
 Type=Service
 Comment=A Mapper for KMuddy
+Comment[pt]=Um Mapeador do KMuddy
+Comment[uk]=Робота з картами у KMuddy
+Comment[x-test]=xxA Mapper for KMuddyxx
 Name=Kmuddy Mapper
+Name[pt]=Um Mapeador do KMuddy
+Name[uk]=Робота з картами у Kmuddy
+Name[x-test]=xxKmuddy Mapperxx
 ServiceTypes=KMuddy/Plugin
 X-KDE-Library=kmuddymapper
 X-Kmud-Part-Name=Kmud Mapper

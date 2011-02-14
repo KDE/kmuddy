@@ -1,7 +1,14 @@
 [Desktop Entry]
 Type=Service
 Comment=The speedwalk list plugin for the kmuddy mapper
+Comment[pt]=O 'plugin' de listas do Speedwalk para o mapeador do KMuddy
+Comment[uk]=Додаток списку проходження до засобу роботи з картами KMuddy
+Comment[x-test]=xxThe speedwalk list plugin for the kmuddy mapperxx
 Name=Speedwalk
+Name[nl]=Speedwalk
+Name[pt]=Speedwalk
+Name[uk]=Проходження
+Name[x-test]=xxSpeedwalkxx
 ServiceTypes=KMuddy/Mapper/Plugin
 X-KDE-Library=libkmuddymapper_speedwalk
 X-KMuddy-Mapper-Plugin-Name=Kmuddy Mapper Speedwalk Plugin

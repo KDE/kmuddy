@@ -1,7 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Variable Viewer
+Name[pt]=Visualizador de Variáveis
+Name[uk]=Перегляд змінних
+Name[x-test]=xxVariable Viewerxx
 Comment=This plug-in provides a variable viewer window.
+Comment[pt]=Este 'plugin' fornece uma janela de visualização de variáveis.
+Comment[uk]=За допомогою цього додатка реалізовано роботу вікна перегляду змінних.
+Comment[x-test]=xxThis plug-in provides a variable viewer window.xx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddyvarviewerplugin

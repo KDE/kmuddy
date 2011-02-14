@@ -1,7 +1,16 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Strings
+Name[cs]=Řetězce
+Name[nl]=Tekenreeksen
+Name[pt]=Cadeias de Caracteres
+Name[sv]=Strängar
+Name[uk]=Рядки
+Name[x-test]=xxStringsxx
 Comment=This plug-in adds many strings functions.
+Comment[pt]=Este 'plugin' adiciona muitas funções para cadeias de caracteres.
+Comment[uk]=За допомогою цього додатка реалізовано багато функцій, призначених для обробки рядків.
+Comment[x-test]=xxThis plug-in adds many strings functions.xx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddystringsplugin
