@@ -312,7 +312,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
           parserState++;
         else
         {
-          corruptedTrigger (i18n ("Parameter names must be followed be '='."));
+          corruptedTrigger (i18n ("Parameter names must be followed by '='."));
           return;
         }
       }
@@ -371,7 +371,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
           {
             if ((number < 0) || (number > 100))
             {
-              corruptedTrigger (i18n ("Value of param P if out of 0-100 range."));
+              corruptedTrigger (i18n ("Value of param P is out of 0-100 range."));
               return;
             }
             priority = number;
