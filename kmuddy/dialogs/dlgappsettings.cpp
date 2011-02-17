@@ -406,7 +406,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   chkswapenters = new QCheckBox (i18n ("S&wap ENTER and CTRL+ENTER for multi-line"), frminput);
   chkswapenters->setWhatsThis( i18n ("When turned off, CTRL+ENTER will insert another "
       "line in the multi-line input line, and ENTER will send commands to the server. "
-      "If turned of, then the behaviour of these keys gets swapped."));
+      "If turned on, then the behaviour of these keys gets swapped."));
    //place widgets on the page
   inputlayout->addWidget (chkkeeptext);
   inputlayout->addWidget (chkselectkepttext);
