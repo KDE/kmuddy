@@ -1,12 +1,14 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=External Scripting
+Name[es]=Scripts externos
 Name[nl]=Externe scripting
 Name[pt]=Programação Externa
 Name[sv]=Externa skript
 Name[uk]=Зовнішні скрипти
 Name[x-test]=xxExternal Scriptingxx
 Comment=Adds support for external scripting.
+Comment[es]=Añade apoyo para scripts externos.
 Comment[pt]=Adiciona o suporte para programas externos.
 Comment[uk]=Додає підтримку обробки зовнішніх скриптів.
 Comment[x-test]=xxAdds support for external scripting.xx

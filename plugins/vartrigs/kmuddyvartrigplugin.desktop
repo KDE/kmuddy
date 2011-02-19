@@ -1,10 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Variable Triggers
+Name[es]=Desencadenantes variables
 Name[pt]=Activações de Variáveis
 Name[uk]=Умовні зміни
 Name[x-test]=xxVariable Triggersxx
 Comment=Adds supports for triggers that fire off variable changes.
+Comment[es]=Añade apoyo para desencadenantes que disparan cambios variables.
 Comment[pt]=Adiciona o suporte para activações que despoletam mudanças de variáveis.
 Comment[uk]=Додає підтримку умов, які призводять до змін значень змінних.
 Comment[x-test]=xxAdds supports for triggers that fire off variable changes.xx

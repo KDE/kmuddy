@@ -1,12 +1,14 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Profile Converter
+Name[es]=Conversor de perfiles
 Name[nl]=Profielconverter
 Name[pt]=Conversor de Perfis
 Name[sv]=Profilkonvertering
 Name[uk]=Засіб перетворення профілів
 Name[x-test]=xxProfile Converterxx
 Comment=This plug-in converts profiles from old KMuddy versions.
+Comment[es]=Este complemento convierte perfiles desde versiones antiguas de KMuddy.
 Comment[nl]=Deze plugin converteert profielen van oude KMuddy-versies.
 Comment[pt]=Este 'plugin' converte os perfis das versões antigas do KMuddy.
 Comment[uk]=За допомогою цього додатка можна перетворити дані профілів старих версій KMuddy.

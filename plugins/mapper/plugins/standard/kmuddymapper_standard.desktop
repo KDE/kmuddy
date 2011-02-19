@@ -1,11 +1,13 @@
 [Desktop Entry]
 Type=Service
 Comment=The standard mapper tools and views
+Comment[es]=Vistas y herramientas del mapeador estándar
 Comment[pt]=As ferramentas e vistas normais do mapeador
 Comment[uk]=Стандартні засоби і панелі перегляду карт
 Comment[x-test]=xxThe standard mapper tools and viewsxx
 Name=Standard
 Name[cs]=Standardní
+Name[es]=Estándar
 Name[nds]=Standard
 Name[nl]=Standaard
 Name[pt]=Normal
@@ -13,6 +15,7 @@ Name[sv]=Standard
 Name[uk]=Стандарт
 Name[x-test]=xxStandardxx
 Comment=The standard mapper tools and views
+Comment[es]=Vistas y herramientas del mapeador estándar
 Comment[pt]=As ferramentas e vistas normais do mapeador
 Comment[uk]=Стандартні засоби і панелі перегляду карт
 Comment[x-test]=xxThe standard mapper tools and viewsxx

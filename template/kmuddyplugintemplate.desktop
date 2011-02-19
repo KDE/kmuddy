@@ -1,11 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plugin Template
+Name[es]=Plantilla para complementos
 Name[nds]=Moduulvörlaag
 Name[pt]=Modelo do 'Plugin'
 Name[uk]=Шаблон додатка
 Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
+Comment[es]=Plantilla para complementos
 Comment[nds]=Moduulvörlaag
 Comment[pt]=Modelo do 'Plugin'
 Comment[uk]=Шаблон додатка

@@ -4,6 +4,7 @@ Type=ServiceType
 X-KDE-ServiceType=KMuddy/Plugin
 X-KDE-Derived=KPluginInfo
 Comment=KMuddy Plugin
+Comment[es]=Complemento para KMuddy
 Comment[nl]=Plugin van KMuddy
 Comment[pt]='Plugin' do KMuddy
 Comment[uk]=Додаток KMuddy
