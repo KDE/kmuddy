@@ -11,6 +11,7 @@ Comment=This plug-in converts profiles from old KMuddy versions.
 Comment[es]=Este complemento convierte perfiles desde versiones antiguas de KMuddy.
 Comment[nl]=Deze plugin converteert profielen van oude KMuddy-versies.
 Comment[pt]=Este 'plugin' converte os perfis das versões antigas do KMuddy.
+Comment[sv]=Det här insticksprogrammet konverterar profiler från gamla versioner av Kmuddy.
 Comment[uk]=За допомогою цього додатка можна перетворити дані профілів старих версій KMuddy.
 Comment[x-test]=xxThis plug-in converts profiles from old KMuddy versions.xx
 ServiceTypes=KMuddy/Plugin

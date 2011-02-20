@@ -11,6 +11,7 @@ Name[x-test]=xxStringsxx
 Comment=This plug-in adds many strings functions.
 Comment[es]=Este complemento añade muchas funciones de cadena.
 Comment[pt]=Este 'plugin' adiciona muitas funções para cadeias de caracteres.
+Comment[sv]=Det här insticksprogrammet lägger till en mängd strängfunktioner.
 Comment[uk]=За допомогою цього додатка реалізовано багато функцій, призначених для обробки рядків.
 Comment[x-test]=xxThis plug-in adds many strings functions.xx
 ServiceTypes=KMuddy/Plugin

@@ -10,6 +10,7 @@ Name[x-test]=xxExternal Scriptingxx
 Comment=Adds support for external scripting.
 Comment[es]=Añade apoyo para scripts externos.
 Comment[pt]=Adiciona o suporte para programas externos.
+Comment[sv]=Lägger till stöd för externa skript.
 Comment[uk]=Додає підтримку обробки зовнішніх скриптів.
 Comment[x-test]=xxAdds support for external scripting.xx
 ServiceTypes=KMuddy/Plugin
