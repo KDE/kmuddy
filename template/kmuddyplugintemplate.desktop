@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plugin Template
+Name[de]=Modulvorlage
 Name[es]=Plantilla para complementos
 Name[nds]=Moduulvörlaag
 Name[pt]=Modelo do 'Plugin'
@@ -8,6 +9,7 @@ Name[sv]=Mall för insticksprogram
 Name[uk]=Шаблон додатка
 Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
+Comment[de]=Modulvorlage
 Comment[es]=Plantilla para complementos
 Comment[nds]=Moduulvörlaag
 Comment[pt]=Modelo do 'Plugin'
