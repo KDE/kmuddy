@@ -94,10 +94,10 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
    //always tabbar
   chkalwaystabbar = new QCheckBox (i18n ("S&how the tab bar even if not needed"), frmwindow);
   chkalwaystabbar->setWhatsThis( i18n ("If this is checked, the tab bar will "
-      "be always shown. Otherwise, it will be hidden if it contains only one tab."));
+      "always be shown. Otherwise, it will be hidden if it contains only one tab."));
    //auxiliary input
   chkauxinput = new QCheckBox (i18n ("Show au&xiliary input line"), frmwindow);
-  chkauxinput->setWhatsThis( i18n ("You'll have two input lines instead of one."));
+  chkauxinput->setWhatsThis( i18n ("You will have two input lines instead of one."));
    //always notify
   chkalwaysnotify = new QCheckBox (i18n ("&Always notify"), frmwindow);
   chkalwaysnotify->setWhatsThis( i18n ("If this is checked, output notification "

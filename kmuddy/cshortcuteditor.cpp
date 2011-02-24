@@ -86,7 +86,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
 
   d->chkoverwrite = new QCheckBox (i18n ("&Overwrite existing text"), basicPage);
   d->chkoverwrite->setWhatsThis( i18n ("If there already is some text in "
-      "the inputline, should it be overwritten?"));
+      "the input line, should it be overwritten?"));
   connect (d->chksendit, SIGNAL (toggled (bool)), d->chkoverwrite, SLOT (setDisabled (bool)));
    
   QWidget *commonEditor = createCommonAttribEditor (basicPage);

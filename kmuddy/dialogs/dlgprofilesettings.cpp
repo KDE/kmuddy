@@ -53,7 +53,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   item = addPage (frmcommands, i18n ("Commands"));
   item->setIcon (KIcon ("gear"));
   QFrame *frmdirs = new QFrame (this);
-  item = addPage (frmdirs, i18n ("Directories"));
+  item = addPage (frmdirs, i18n ("Folders"));
   item->setIcon (KIcon ("folder"));
   QFrame *frmsound = new QFrame (this);
   item = addPage (frmsound, i18n ("Sound"));
@@ -75,7 +75,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   
   startupneg = new QCheckBox (i18n ("Enable telnet &negotiation on startup"), frmconn);
   startupneg->setWhatsThis( i18n ("Enables telnet negotiation for some option. Disabling "
-      "it may resolve problems with some servers that don't understand these."));
+      "it may resolve problems with some servers that do not understand these."));
 
   // encoding
   QLabel *lblencoding = new QLabel (i18n ("&Encoding:"), frmconn);
@@ -152,7 +152,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   edscriptdir = new KLineEdit (frmdirs);
   sl1->setBuddy (edscriptdir);
   QPushButton *locbutton = new QPushButton (i18n ("Browse..."), frmdirs);
-  edscriptdir->setWhatsThis( i18n ("Default directory where we'll look for "
+  edscriptdir->setWhatsThis( i18n ("Default directory where we will look for "
       "scripts."));
 
   QLabel *sl2 = new QLabel (i18n ("&Working directory"), frmdirs);

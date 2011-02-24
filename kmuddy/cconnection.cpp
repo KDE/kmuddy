@@ -263,9 +263,7 @@ void cConnection::eventStringHandler (QString event, int, QString &par1, const Q
       addCommands (par1.split ("\n"));
   }
   else if (event == "connection-failed") {
-    QString error = i18n ("Network error: ");
-    error += par1;
-    invokeEvent ("message", sess(), error);
+    invokeEvent ("message", sess(), i18n ("Network error: %1", par1));
     setConnectionClosed (true);
     updateMenus ();
   }
@@ -427,7 +425,7 @@ bool cConnection::handleDisconnect ()
     return true;    //no longer connected
   //ask if he really wants to disconnect
   if (KMessageBox::questionYesNoCancel (KMuddy::self(),
-        i18n("Do you want to close connection to ")+d->caption+"?",
+        i18n("Do you want to close connection to %1?", d->caption),
         i18n("Disconnect")) == KMessageBox::Yes)
   {
     disconnect ();

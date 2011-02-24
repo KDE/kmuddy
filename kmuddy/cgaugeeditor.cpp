@@ -75,7 +75,7 @@ void cGaugeEditor::createGUI(QWidget *parent)
   d->caption->setWhatsThis( i18n ("Caption shown next to variable value."));
 
   // color
-  QLabel *lbl4 = new QLabel (i18n ("&Caption"), parent);
+  QLabel *lbl4 = new QLabel (i18n ("&Color"), parent);
   d->btcolor = new KColorButton (Qt::white, parent);
   lbl4->setBuddy (d->btcolor);
   d->btcolor->setWhatsThis( i18n ("Color used to paint this gauge."));

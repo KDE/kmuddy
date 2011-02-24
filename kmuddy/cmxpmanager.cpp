@@ -307,7 +307,7 @@ void cMXPManager::processResult (mxpResult *res)
         case 21: reqName = i18n ("image map"); break;
         default: reqName = i18n ("unknown"); break;
       };
-      cMXPConsole::self()->addWarning (sess(), i18n ("Ignoring unsupported MXP request") + " (" + reqName + ").");
+      cMXPConsole::self()->addWarning (sess(), i18n ("Ignoring unsupported MXP request (%1)", reqName));
     }
     break;
   };

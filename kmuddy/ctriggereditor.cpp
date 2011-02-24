@@ -245,9 +245,9 @@ void cTriggerEditor::createGUI(QWidget *parent)
       "lower case letters are treated as different characters, otherwise "
       "they're considered to be the same."));
 
-  d->check3 = new QCheckBox (i18n ("Show, don't send"), options);
-  d->check3->setWhatsThis (i18n ("When enabled, the text won't be send to the MUD, it will be "
-      "only displayed on the screen."));
+  d->check3 = new QCheckBox (i18n ("Show but do not send"), options);
+  d->check3->setWhatsThis (i18n ("When enabled, the text will not be sent to the MUD, it will only be "
+      "displayed on the screen."));
 
   d->check4 =  new QCheckBox (i18n ("Global matching"), options);
   d->check4->setWhatsThis( i18n ("<p>With global matching, one trigger/trigger can match multiple "
@@ -255,7 +255,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
       "it matches only once on abcdabcd of global matching is off, but twice if it's on. "
       "For each match, the requested actions are performed - so the commands can be sent "
       "multiple times, once per match.</p>"
-      "<p>Note that failing the condition doesn't terminate scanning, so you can use "
+      "<p>Note that failing the condition does not terminate scanning, so you can use "
       "this to highlight names from a list (using the condition to check if a match is in the "
       "list), or something like that."));
 
@@ -409,7 +409,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   // the Special trigger tab
   QFrame *specialPage = new QFrame (tabs);
   QGridLayout *speciallayout = new QGridLayout (specialPage);
-  d->chkgag = new QCheckBox (i18n ("Don't show (&gag) the line"), specialPage);
+  d->chkgag = new QCheckBox (i18n ("Do not show (&gag) the line"), specialPage);
   d->chkgag->setWhatsThis( i18n ("This will prevent the matched line "
       "from being displayed in the output window."));
   d->chknotify = new QCheckBox (i18n ("&Notify"), specialPage);
@@ -422,7 +422,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
 
   d->chkprompt = new QCheckBox (i18n ("&Prompt-detection trigger"), specialPage);
   d->chkprompt->setWhatsThis( i18n ("Enabling this will turn this trigger "
-    "into a prompt-detection trigger, that is, text will be passed to these "
+    "into a prompt detection trigger, that is, text will be passed to these "
     "triggers even if no newline was received, the text will be displayed "
     "as a prompt if the trigger gets matched, and most other options will "
     "NOT be taken into effect - prompt-detect trigger cannot send out "
@@ -462,14 +462,14 @@ void cTriggerEditor::createGUI(QWidget *parent)
   d->windowlist->clear();
   
   d->chkgagoutput = new QCheckBox (i18n ("&Gag output in main window"), outwindow);
-  d->chkgagoutput->setWhatsThis( i18n ("This will cause output sent to separate window to not to "
+  d->chkgagoutput->setWhatsThis( i18n ("This will cause output sent to a separate window not to "
       "be displayed in main KMuddy session window"));
 
-  QLabel *wnl = new QLabel ("&Window name", outwindow);
+  QLabel *wnl = new QLabel (i18n ("&Window name"), outwindow);
   d->wname = new KLineEdit (outwindow);
   wnl->setBuddy(d->wname);
 
-  QPushButton *createwindow = new QPushButton ("&Create window", outwindow);
+  QPushButton *createwindow = new QPushButton (i18n ("&Create window"), outwindow);
   connect (createwindow, SIGNAL (clicked ()), this, SLOT (createOutputWindow ()));
 
   owlayout->addWidget (wll);
