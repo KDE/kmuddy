@@ -378,7 +378,10 @@ void cVariableList::load ()
 
   if (reader->hasError()) {
     // TODO: present the error to the user
-    QString lastError = i18n ("Error at line ") + QString::number (reader->lineNumber()) + i18n(", column ") + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString();
+    QString lastError = i18n ("Error at line %1, column %2: %3",
+                                QString::number (reader->lineNumber()),
+                                QString::number (reader->columnNumber()),
+                                reader->errorString());
     kWarning() << lastError << endl;
   }
   delete reader;

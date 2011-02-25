@@ -135,7 +135,7 @@ void cAliasEditor::createGUI(QWidget *parent)
   d->rcmd = new KTextEdit (basicPage);
   d->rcmd->setWordWrapMode (QTextOption::NoWrap);
   rcl->setBuddy (d->rcmd);
-  d->rcmd->setWhatsThis( i18n ("Command(s) that will replace command you've entered."));
+  d->rcmd->setWhatsThis( i18n ("Command(s) that will replace command you have entered."));
 
   //test area
   QGroupBox *testarea = new QGroupBox (i18n ("Test area"), basicTab);
@@ -209,7 +209,7 @@ void cAliasEditor::createGUI(QWidget *parent)
   d->check5 = new QCheckBox (i18n ("Global matching"), options);
   d->check5->setWhatsThis( i18n ("<p>With global matching, one alias/trigger can match multiple "
       "times, if it contains the pattern more than once. For example, if pattern is abc, "
-      "it matches only once on abcdabcd of global matching is off, but twice if it's on. "
+      "it matches only once on abcdabcd of global matching is off, but twice if it is on. "
       "For each match, the requested actions are performed - so the commands can be sent "
       "multiple times, once per match.</p>"
       "<p>Note that failing the condition doesn't terminate scanning, so you can use "

@@ -476,7 +476,10 @@ void cList::load (QXmlStreamReader *reader)
 
   if (reader->hasError()) {
     d->hasError = true;
-    d->lastError = i18n ("Error at line ") + QString::number (reader->lineNumber()) + i18n(", column ") + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString();
+    d->lastError = i18n ("Error at line %1, column %2: %3",
+                            QString::number (reader->lineNumber()),
+                            QString::number (reader->columnNumber()),
+                            reader->errorString());
   }
 
   listLoaded ();  // the list is loaded now

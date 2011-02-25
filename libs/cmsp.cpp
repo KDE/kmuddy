@@ -282,7 +282,7 @@ QString cMSP::nextToken (QString &from)
 void cMSP::corruptedTrigger (const QString &reason)
 {
   invokeEvent ("message", sess(), i18n ("MSP: Received corrupted sound trigger!"));
-  invokeEvent ("message", sess(), i18n ("MSP: Problem was: ") + reason);
+  invokeEvent ("message", sess(), i18n ("MSP: Problem was: %1", reason));
 }
 
 void cMSP::parseTrigger (const QString &seq, bool isSOUND)
@@ -337,8 +337,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
             number = paramValue.toInt (&ok);
             if (!ok)
             {
-              corruptedTrigger (i18n ("Parameter ") + QChar(ch) +
-                  i18n (" requires a numeric argument"));
+              corruptedTrigger (i18n ("Parameter %1 requires a numeric argument", QChar(ch)));
               return;
             }
           }

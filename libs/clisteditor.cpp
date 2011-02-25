@@ -281,14 +281,14 @@ void cListEditor::saveDataToObject ()
     if (obj->isGroup()) {
       cListGroup *g = obj->list()->group (d->guiData.name);
       if (g) {
-        KMessageBox::sorry (this, i18n ("Can not rename the group, as a group with such name already exists."));
+        KMessageBox::sorry (this, i18n ("Cannot rename the group, as a group with this name already exists."));
         return;
       }
       obj->list()->renameGroup ((cListGroup *) obj, d->guiData.name);
     } else {
       cListObject *o = obj->list()->getObject (d->guiData.name);
       if (o) {
-        KMessageBox::sorry (this, i18n ("Can not rename the object, as an object with such name already exists."));
+        KMessageBox::sorry (this, i18n ("Cannot rename the object, as an object with this name already exists."));
         return;
       }
       obj->list()->setObjectName (obj, d->guiData.name);
