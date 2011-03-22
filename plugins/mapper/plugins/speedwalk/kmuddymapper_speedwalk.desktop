@@ -2,6 +2,7 @@
 Type=Service
 Comment=The speedwalk list plugin for the kmuddy mapper
 Comment[es]=Complemento de lista de speedwalk para el mapeador de KMuddy
+Comment[fr]=Le module externe de la liste des déplacements automatiques (Speedwalking) pour l'éditeur de niveau (Mapper) de KMuddy
 Comment[pt]=O 'plugin' de listas do Speedwalk para o mapeador do KMuddy
 Comment[pt_BR]=O plug-in de listas do Speedwalk para o mapeador do KMuddy
 Comment[sv]=Insticksprogrammet för snabbgenomgång av listor för Kmuddy-karthantering
@@ -9,6 +10,7 @@ Comment[uk]=Додаток списку проходження до засобу
 Comment[x-test]=xxThe speedwalk list plugin for the kmuddy mapperxx
 Name=Speedwalk
 Name[es]=Speedwalk
+Name[fr]=Déplacements automatiques (Speedwalking)
 Name[nl]=Speedwalk
 Name[pt]=Speedwalk
 Name[pt_BR]=Speedwalk

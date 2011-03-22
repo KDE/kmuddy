@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Profile Converter
 Name[es]=Conversor de perfiles
+Name[fr]=Convertisseur de profil
 Name[nl]=Profielconverter
 Name[pt]=Conversor de Perfis
 Name[pt_BR]=Conversor de perfis
@@ -10,6 +11,7 @@ Name[uk]=Засіб перетворення профілів
 Name[x-test]=xxProfile Converterxx
 Comment=This plug-in converts profiles from old KMuddy versions.
 Comment[es]=Este complemento convierte perfiles desde versiones antiguas de KMuddy.
+Comment[fr]=Ce module externe convertit les profils issus des anciennes versions de KMuddy
 Comment[nl]=Deze plugin converteert profielen van oude KMuddy-versies.
 Comment[pt]=Este 'plugin' converte os perfis das versões antigas do KMuddy.
 Comment[pt_BR]=Este plug-in converte os perfis das versões antigas do KMuddy.

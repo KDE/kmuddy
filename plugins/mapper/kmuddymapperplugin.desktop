@@ -3,6 +3,7 @@ Type=ServiceType
 X-KDE-ServiceType=KMuddy/Mapper/Plugin
 Name=KMuddy Mapper Tool
 Name[es]=Herramienta mapeadora para KMuddy
+Name[fr]=Outils d'édition de niveau (Mapper) pour KMuddy
 Name[pt]=Ferramenta de Mapeamento do KMuddy
 Name[pt_BR]=Ferramenta de mapeamento do KMuddy
 Name[sv]=Kmuddy-kartverktyg

@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Testing Plug-in
 Name[es]=Probando el complemento
+Name[fr]=Module externe de test
 Name[pt]=A Testar o 'Plugin'
 Name[pt_BR]=Testando o plug-in
 Name[sv]=Insticksprogram för test
@@ -9,6 +10,7 @@ Name[uk]=Тестовий додаток
 Name[x-test]=xxTesting Plug-inxx
 Comment=Testing Plug-in
 Comment[es]=Probando el complemento
+Comment[fr]=Module externe de test
 Comment[pt]=A Testar o 'Plugin'
 Comment[pt_BR]=Testando o plug-in
 Comment[sv]=Insticksprogram för test

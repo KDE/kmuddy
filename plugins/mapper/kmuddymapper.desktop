@@ -2,6 +2,7 @@
 Type=Service
 Comment=A Mapper for KMuddy
 Comment[es]=Mapeador para KMuddy
+Comment[fr]=Un éditeur de niveau (Mapper) pour KMuddy
 Comment[pt]=Um Mapeador do KMuddy
 Comment[pt_BR]=Um mapeador do KMuddy
 Comment[sv]=Ett kartverktyg för Kmuddy
@@ -9,6 +10,7 @@ Comment[uk]=Робота з картами у KMuddy
 Comment[x-test]=xxA Mapper for KMuddyxx
 Name=Kmuddy Mapper
 Name[es]=Mapeador para Kmuddy
+Name[fr]=Éditeur de niveau (Mapper) pour KMuddy
 Name[pt]=Um Mapeador do KMuddy
 Name[pt_BR]=Mapeador do KMuddy
 Name[sv]=Kmuddy-karthantering
