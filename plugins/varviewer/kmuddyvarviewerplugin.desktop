@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Variable Viewer
 Name[es]=Visor variable
+Name[et]=Muutujanäitaja
 Name[fr]=Afficheur de variables
 Name[pt]=Visualizador de Variáveis
 Name[pt_BR]=Visualizador de variáveis
@@ -10,6 +11,7 @@ Name[uk]=Перегляд змінних
 Name[x-test]=xxVariable Viewerxx
 Comment=This plug-in provides a variable viewer window.
 Comment[es]=Este complemento proporciona una ventana de visor variable.
+Comment[et]=Muutujanäitaja akent pakkuv plugin.
 Comment[fr]=Ce module externe fournit une fenêtre d'affichage des variables
 Comment[pt]=Este 'plugin' fornece uma janela de visualização de variáveis.
 Comment[pt_BR]=Este plug-in fornece uma janela de visualização de variáveis.

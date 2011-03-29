@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=External Scripting
 Name[es]=Scripts externos
+Name[et]=Väline skriptimine
 Name[fr]=Scripts externes
 Name[nl]=Externe scripting
 Name[pt]=Programação Externa
@@ -11,6 +12,7 @@ Name[uk]=Зовнішні скрипти
 Name[x-test]=xxExternal Scriptingxx
 Comment=Adds support for external scripting.
 Comment[es]=Añade apoyo para scripts externos.
+Comment[et]=Välise skriptimise toetus.
 Comment[fr]=Ajoute la prise en charge des scripts externes.
 Comment[pt]=Adiciona o suporte para programas externos.
 Comment[pt_BR]=Adiciona suporte para scripts externos.
