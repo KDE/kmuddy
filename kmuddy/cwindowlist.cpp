@@ -161,9 +161,7 @@ void cWindowList::textToWindow (const QString &name, cTextChunk *chunk)
 
   //add text to the window
   windows[name]->addLine(chunk);
-  // switch-window is used, so that others can determine which window was used
-  // main output emits the same signal, prepended with switch-window with
-  // an empty string
+  // switch-window is used so that others can determine which window was used
   invokeEvent ("switch-window", sess(), name);
   invokeEvent ("displayed-line", sess(), chunk);
 }

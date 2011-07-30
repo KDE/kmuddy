@@ -23,6 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kconfig.h>
 #include <kconfiggroup.h>
 
+#include "cstatusvar.h"
+
 cStatusVar::cStatusVar (int _sess): sess(_sess)
 {
   varvalue = maxvarvalue = 0;
