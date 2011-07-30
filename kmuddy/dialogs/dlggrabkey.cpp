@@ -37,7 +37,7 @@ dlgGrabKey::dlgGrabKey (QWidget *parent) : KDialog (parent)
   //create main dialog's widget
   KVBox *vbox = new KVBox (this);
   setMainWidget (vbox);
-  new QLabel (i18n ("Press the desired short-cut..."), vbox);
+  new QLabel (i18n ("Press the desired shortcut..."), vbox);
 }
 
 dlgGrabKey::~dlgGrabKey ()

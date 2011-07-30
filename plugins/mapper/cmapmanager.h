@@ -375,7 +375,7 @@ private slots:
   void slotPathTwoWay(void);
   /** Used to add a bend to the path under the pointer */
   void slotPathAddBend(void);
-  /** Used to delete the path segmeant under the pointer */
+  /** Used to delete the path segment under the pointer */
   void slotPathDelBend(void);
   /** Used to edit the bends of the path under the pointer */
   void slotPathEditBends(void);

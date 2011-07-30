@@ -1,7 +1,25 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Strings
+Name[cs]=Řetězce
+Name[es]=Cadenas
+Name[et]=Stringid
+Name[fr]=Chaîne de caractères
+Name[nl]=Tekenreeksen
+Name[pt]=Cadeias de Caracteres
+Name[pt_BR]=Strings
+Name[sv]=Strängar
+Name[uk]=Рядки
+Name[x-test]=xxStringsxx
 Comment=This plug-in adds many strings functions.
+Comment[es]=Este complemento añade muchas funciones de cadena.
+Comment[et]=Paljusid stringifunktsioone lisav plugin.
+Comment[fr]=Ce module externe ajoute de nombreuses fonctions pour les chaînes de caractères
+Comment[pt]=Este 'plugin' adiciona muitas funções para cadeias de caracteres.
+Comment[pt_BR]=Este plug-in adiciona muitas funções para scripts.
+Comment[sv]=Det här insticksprogrammet lägger till en mängd strängfunktioner.
+Comment[uk]=За допомогою цього додатка реалізовано багато функцій, призначених для обробки рядків.
+Comment[x-test]=xxThis plug-in adds many strings functions.xx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddystringsplugin

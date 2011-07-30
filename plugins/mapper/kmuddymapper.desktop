@@ -1,7 +1,23 @@
 [Desktop Entry]
 Type=Service
 Comment=A Mapper for KMuddy
+Comment[es]=Mapeador para KMuddy
+Comment[et]=KMuddy tasemelooja
+Comment[fr]=Un éditeur de niveau (Mapper) pour KMuddy
+Comment[pt]=Um Mapeador do KMuddy
+Comment[pt_BR]=Um mapeador do KMuddy
+Comment[sv]=Ett kartverktyg för Kmuddy
+Comment[uk]=Робота з картами у KMuddy
+Comment[x-test]=xxA Mapper for KMuddyxx
 Name=Kmuddy Mapper
+Name[es]=Mapeador para Kmuddy
+Name[et]=KMuddy tasemelooja
+Name[fr]=Éditeur de niveau (Mapper) pour KMuddy
+Name[pt]=Um Mapeador do KMuddy
+Name[pt_BR]=Mapeador do KMuddy
+Name[sv]=Kmuddy-karthantering
+Name[uk]=Робота з картами у Kmuddy
+Name[x-test]=xxKmuddy Mapperxx
 ServiceTypes=KMuddy/Plugin
 X-KDE-Library=kmuddymapper
 X-Kmud-Part-Name=Kmud Mapper

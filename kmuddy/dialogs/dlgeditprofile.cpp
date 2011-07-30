@@ -63,7 +63,7 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : KDialog (parent)
   QLabel *l3 = new QLabel (i18n ("&Port:"), page);
   ed3 = new KRestrictedLine (page);
   ed3->setValidChars ("0123456789");
-  ed3->setWhatsThis( i18n ("Enter port on which it's running (usually some 4-digit number)."));
+  ed3->setWhatsThis( i18n ("Enter port on which your MUD running (usually some 4-digit number)."));
   QLabel *l4 = new QLabel (i18n ("&Login name:"), page);
   ed4 = new KLineEdit (page);
   ed4->setWhatsThis( i18n ("Enter your login name on the MUD here.<p><i>This setting is optional.</i>"));

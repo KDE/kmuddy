@@ -282,7 +282,7 @@ QString cMSP::nextToken (QString &from)
 void cMSP::corruptedTrigger (const QString &reason)
 {
   invokeEvent ("message", sess(), i18n ("MSP: Received corrupted sound trigger!"));
-  invokeEvent ("message", sess(), i18n ("MSP: Problem was: ") + reason);
+  invokeEvent ("message", sess(), i18n ("MSP: Problem was: %1", reason));
 }
 
 void cMSP::parseTrigger (const QString &seq, bool isSOUND)
@@ -312,7 +312,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
           parserState++;
         else
         {
-          corruptedTrigger (i18n ("Parameter names must be followed be '='."));
+          corruptedTrigger (i18n ("Parameter names must be followed by '='."));
           return;
         }
       }
@@ -337,8 +337,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
             number = paramValue.toInt (&ok);
             if (!ok)
             {
-              corruptedTrigger (i18n ("Parameter ") + QChar(ch) +
-                  i18n (" requires a numeric argument"));
+              corruptedTrigger (i18n ("Parameter %1 requires a numeric argument", QChar(ch)));
               return;
             }
           }
@@ -371,7 +370,7 @@ void cMSP::parseTrigger (const QString &seq, bool isSOUND)
           {
             if ((number < 0) || (number > 100))
             {
-              corruptedTrigger (i18n ("Value of param P if out of 0-100 range."));
+              corruptedTrigger (i18n ("Value of param P is out of 0-100 range."));
               return;
             }
             priority = number;

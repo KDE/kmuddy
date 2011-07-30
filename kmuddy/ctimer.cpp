@@ -67,6 +67,7 @@ void cTimer::attribChanged (const QString &name)
 
 void cTimer::updateVisibleName()
 {
+  //FIXME: fix word puzzle
   QString command = strVal ("command");
   if (command.isEmpty() && (!strVal ("script").isEmpty())) command = "(script)";
   if (command.isEmpty()) {

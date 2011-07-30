@@ -1420,7 +1420,7 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
     }
     else
     {
-      KMessageBox::information (NULL,i18n("A path already exsits at this location"),i18n("Kmud Mapper"));
+      KMessageBox::information (NULL,i18n("A path already exists at this location"),i18n("Kmud Mapper"));
     }
     
   }
@@ -2208,7 +2208,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
 
   currentRoom = tmpRoom;
   // Find the destination of the path that was traveled and if no path
-  // is exsits for the given direction create the room and path if necsarry
+  // exists for the given direction create the room and path if necessarry
   CMapPath *path = currentRoom->getPathDirection(dir,specialCmd);
 
     if (path)
@@ -2303,7 +2303,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
       }
     }
 
-    // Check to see if the room already exsits
+    // Check to see if the room already exists
     CMapElement *elm = findElementAt(QPoint (x,y),destLevel);
     CMapRoom *newCurrentRoom = NULL;
 
@@ -3014,10 +3014,10 @@ void CMapManager::slotPathAddBend(void)
   closeCommandGroup();
 }
 
-/** Used to delete the path segmeant under the pointer */
+/** Used to delete the path segment under the pointer */
 void CMapManager::slotPathDelBend(void)
 {
-  openCommandGroup(i18n("Delete Path Segmeant"));
+  openCommandGroup(i18n("Delete Path Segment"));
   CMapPath *path = (CMapPath *)m_selectedElement;
 
   int seg = path->mouseInPathSeg(m_selectedPos,getActiveView()->getCurrentlyViewedZone());

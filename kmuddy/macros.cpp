@@ -206,8 +206,7 @@ public:
     }
     int time = timer->tickTimeout ();
     if (time > 0)
-      am->invokeEvent ("message", sess, i18n ("Timer ticks in ") + QString::number(time) +
-          ((time > 1) ? i18n (" seconds.") : i18n (" second.")));
+      am->invokeEvent ("message", sess, i18np ("Timer ticks in 1 second.", "Timer ticks in %1 seconds.", QString::number(time)));
     else
       am->invokeEvent ("message", sess, i18n ("Timer ticks right now."));
   }

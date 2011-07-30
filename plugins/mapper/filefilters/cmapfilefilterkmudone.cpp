@@ -139,12 +139,12 @@ int CMapFileFilterKmudOne::loadData(QString filename)
 	}
 	else if(major==1 && minor==3)
 	{
-		KMessageBox::information (NULL,i18n("This version of the file format is nolonger supported by kmud"),i18n("Kmud Mapper"));
+		KMessageBox::information (NULL,i18n("This version of the file format is no longer supported by kmud"),i18n("Kmud Mapper"));
 		return -2;
 	}
 	else
 	{
-		KMessageBox::information (NULL,i18n("The file is the incorect version,\nor not a valid map file."),i18n("Kmud Mapper"));
+		KMessageBox::information (NULL,i18n("The file is the incorrect version,\nor not a valid map file."),i18n("Kmud Mapper"));
 
 		return -2;
 	}

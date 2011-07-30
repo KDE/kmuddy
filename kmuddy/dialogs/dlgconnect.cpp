@@ -217,12 +217,12 @@ void dlgConnect::deletePressed ()
 
   // can we do that ?
   if (mgr->hasSessionAssigned (profile)) {
-    KMessageBox::sorry (this, i18n ("This profile can not be deleted, because you have a connection open using this profile."), i18n ("Unable to delete"));
+    KMessageBox::sorry (this, i18n ("This profile cannot be deleted, because you have a connection open using this profile."), i18n ("Unable to delete"));
     return;
   }
 
   if (KMessageBox::questionYesNoCancel (this,
-        i18n ("Do you really want to delete profile ") + mgr->visibleProfileName (profile) + i18n (" ?"),
+        i18n ("Do you really want to delete profile %1?", mgr->visibleProfileName (profile)),
         i18n ("Delete profile")) != KMessageBox::Yes)
     return;
 

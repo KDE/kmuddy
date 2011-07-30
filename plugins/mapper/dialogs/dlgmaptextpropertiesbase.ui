@@ -337,7 +337,7 @@
                                                 </property>
                                                 <property stdset="1">
                                                     <name>text</name>
-                                                    <string>Width (pixels) :</string>
+                                                    <string>Width (pixels):</string>
                                                 </property>
                                             </widget>
                                             <widget row="1"  column="0" >
@@ -348,7 +348,7 @@
                                                 </property>
                                                 <property stdset="1">
                                                     <name>text</name>
-                                                    <string>Height (pixels) :</string>
+                                                    <string>Height (pixels):</string>
                                                 </property>
                                             </widget>
                                             <widget row="1"  column="1" >

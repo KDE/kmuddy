@@ -51,7 +51,7 @@ cValue cExpResolver::function_call (const QString &functionName, list<cValue> &a
 {
   if (!cMacroManager::self()->functionExists (functionName)) {
     cActionManager::self()->invokeEvent ("message", sess,
-        i18n ("Function %1 does not exist - assuming empty return value.").arg (functionName));
+        i18n ("Function %1 does not exist - assuming empty return value.", functionName));
     return cValue::empty();
   }
   return cMacroManager::self()->callFunction (functionName, arguments, sess, queue);

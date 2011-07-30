@@ -1,7 +1,24 @@
 [Desktop Entry]
 Type=Service
 Comment=The speedwalk list plugin for the kmuddy mapper
+Comment[es]=Complemento de lista de speedwalk para el mapeador de KMuddy
+Comment[et]=KMuddy tasemelooja kiirliikumise plugin
+Comment[fr]=Le module externe de la liste des déplacements automatiques (Speedwalking) pour l'éditeur de niveau (Mapper) de KMuddy
+Comment[pt]=O 'plugin' de listas do Speedwalk para o mapeador do KMuddy
+Comment[pt_BR]=O plug-in de listas do Speedwalk para o mapeador do KMuddy
+Comment[sv]=Insticksprogrammet för snabbgenomgång av listor för Kmuddy-karthantering
+Comment[uk]=Додаток списку проходження до засобу роботи з картами KMuddy
+Comment[x-test]=xxThe speedwalk list plugin for the kmuddy mapperxx
 Name=Speedwalk
+Name[es]=Speedwalk
+Name[et]=Kiirliikumine
+Name[fr]=Déplacements automatiques (Speedwalking)
+Name[nl]=Speedwalk
+Name[pt]=Speedwalk
+Name[pt_BR]=Speedwalk
+Name[sv]=Snabbgenomgång
+Name[uk]=Проходження
+Name[x-test]=xxSpeedwalkxx
 ServiceTypes=KMuddy/Mapper/Plugin
 X-KDE-Library=libkmuddymapper_speedwalk
 X-KMuddy-Mapper-Plugin-Name=Kmuddy Mapper Speedwalk Plugin

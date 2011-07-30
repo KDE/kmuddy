@@ -157,8 +157,16 @@ void cListViewer::deleteObject () {
   if (!cListManager::self()->objectId (d->currentItem)) return;
   
   // ask for confirmation
-  QString name = d->currentItem->isGroup() ? i18n("group") : d->list->objName();
-  if (KMessageBox::questionYesNo (this, i18n ("Do you really want to delete this ") + name + i18n ("?"), i18n ("Delete ") + name) != KMessageBox::Yes) return;
+  QString message1;
+  QString message2;
+  if (d->currentItem->isGroup()) {
+    message1 = i18n ("Do you really want to delete this group?");
+    message2 = i18n ("Delete group");
+  } else {
+    message1 = i18n ("Do you really want to delete this %1?", d->list->objName());
+    message2 = i18n ("Delete %1", d->list->objName());
+  }
+  if (KMessageBox::questionYesNo (this, message1, message2) != KMessageBox::Yes) return;
 
   // verify that the object still exists
   if (!cListManager::self()->objectId (d->currentItem)) return;
@@ -188,7 +196,7 @@ void cListViewer::addGroup () {
   // check if such group exists yet
   cListGroup *g = d->list->group (name);
   if (g) {
-    KMessageBox::sorry (this, i18n ("Can not create the group, as a group with such name already exists."));
+    KMessageBox::sorry (this, i18n ("Cannot create the group, as a group with this name already exists."));
     return;
   }
 

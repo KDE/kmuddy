@@ -213,9 +213,6 @@ void cOutput::decisionMessage (const QString &text)
 
 void cOutput::makeDecision ()
 {
-  QString s;
-  s = i18n ("My decision");
-  s += ": ";
   QString ss;
   //generate a random number in 0..9 range
   int which = KRandom::random() % 10;
@@ -231,7 +228,7 @@ void cOutput::makeDecision ()
     case 8: ss = i18n ("I agree with it."); break;
     case 9: ss = i18n ("Definitely yes!"); break;
   };
-  s += ss;
+  QString s = i18n ("My decision: %1", ss);
   //now display that decision
   decisionMessage (s);
 }

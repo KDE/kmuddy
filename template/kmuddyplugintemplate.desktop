@@ -1,7 +1,27 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plugin Template
+Name[de]=Modulvorlage
+Name[es]=Plantilla para complementos
+Name[et]=Mallplugin
+Name[fr]=Module externe de modèle
+Name[nds]=Moduulvörlaag
+Name[pt]=Modelo do 'Plugin'
+Name[pt_BR]=Modelo do plug-in
+Name[sv]=Mall för insticksprogram
+Name[uk]=Шаблон додатка
+Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
+Comment[de]=Modulvorlage
+Comment[es]=Plantilla para complementos
+Comment[et]=Mallplugin
+Comment[fr]=Module externe de modèle
+Comment[nds]=Moduulvörlaag
+Comment[pt]=Modelo do 'Plugin'
+Comment[pt_BR]=Modelo do plug-in
+Comment[sv]=Mall för insticksprogram
+Comment[uk]=Шаблон додатка
+Comment[x-test]=xxPlugin Templatexx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddyplugintemplate

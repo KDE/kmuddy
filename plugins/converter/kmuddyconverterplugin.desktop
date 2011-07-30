@@ -1,7 +1,25 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Profile Converter
+Name[es]=Conversor de perfiles
+Name[et]=Profiiliteisendaja
+Name[fr]=Convertisseur de profil
+Name[nl]=Profielconverter
+Name[pt]=Conversor de Perfis
+Name[pt_BR]=Conversor de perfis
+Name[sv]=Profilkonvertering
+Name[uk]=Засіб перетворення профілів
+Name[x-test]=xxProfile Converterxx
 Comment=This plug-in converts profiles from old KMuddy versions.
+Comment[es]=Este complemento convierte perfiles desde versiones antiguas de KMuddy.
+Comment[et]=Plugin, mis teisendab profiile KMuddy vanematest versioonidest.
+Comment[fr]=Ce module externe convertit les profils issus des anciennes versions de KMuddy
+Comment[nl]=Deze plugin converteert profielen van oude KMuddy-versies.
+Comment[pt]=Este 'plugin' converte os perfis das versões antigas do KMuddy.
+Comment[pt_BR]=Este plug-in converte os perfis das versões antigas do KMuddy.
+Comment[sv]=Det här insticksprogrammet konverterar profiler från gamla versioner av Kmuddy.
+Comment[uk]=За допомогою цього додатка можна перетворити дані профілів старих версій KMuddy.
+Comment[x-test]=xxThis plug-in converts profiles from old KMuddy versions.xx
 ServiceTypes=KMuddy/Plugin
 Type=Service
 X-KDE-Library=kmuddyconverterplugin

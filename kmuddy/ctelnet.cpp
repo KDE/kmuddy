@@ -248,7 +248,7 @@ void cTelnet::connectIt (const QString &address, int port, cProfileSettings *set
   setupEncoding ();
 
   d->_connecting = true;
-  cActionManager::self()->invokeEvent ("message", sess(), i18n ("Connecting ..."));
+  cActionManager::self()->invokeEvent ("message", sess(), i18n ("Connecting..."));
   d->hostName = address;
   d->hostPort = port;
   d->socket = KSocketFactory::connectToHost ("telnet", address, port);

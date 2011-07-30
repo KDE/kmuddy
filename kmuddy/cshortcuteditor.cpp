@@ -68,7 +68,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   QLabel *lbl1 = new QLabel (i18n ("&Command"), basicPage);
   d->cmd = new KLineEdit (basicPage);
   lbl1->setBuddy (d->cmd);
-  d->cmd->setWhatsThis( i18n ("Command that will be executed when you press the"
+  d->cmd->setWhatsThis( i18n ("Command that will be executed when you press the "
       "defined key combination.\n"
       "Command can include aliases, script calls and similar stuff."));
 
@@ -86,7 +86,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
 
   d->chkoverwrite = new QCheckBox (i18n ("&Overwrite existing text"), basicPage);
   d->chkoverwrite->setWhatsThis( i18n ("If there already is some text in "
-      "the inputline, should it be overwritten?"));
+      "the input line, should it be overwritten?"));
   connect (d->chksendit, SIGNAL (toggled (bool)), d->chkoverwrite, SLOT (setDisabled (bool)));
    
   QWidget *commonEditor = createCommonAttribEditor (basicPage);

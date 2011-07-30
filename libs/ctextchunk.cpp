@@ -761,6 +761,7 @@ QString cTextChunk::getTimeStamp ()
     int hoursago = minsago / 60;
     secsago = secsago % 60;
     minsago = minsago % 60;
+    // FIXME: fix word puzzle
     stamp += " (";
     if (hoursago)
       stamp += QString::number (hoursago) + ((hoursago == 1) ? i18n ("hour") : i18n ("hours"));
