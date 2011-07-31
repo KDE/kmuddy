@@ -17,7 +17,7 @@ kde4_add_ui3_files(kmuddymapper_speedwalk_PART_SRCS dlgmapspeedwalklistbase.ui )
 
 kde4_add_plugin(kmuddymapper_speedwalk WITH_PREFIX ${kmuddymapper_speedwalk_PART_SRCS})
 
-target_link_libraries(kmuddymapper_speedwalk  ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KDE3SUPPORT_LIBS} kmuddymapper )
+target_link_libraries(kmuddymapper_speedwalk  ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KDE3SUPPORT_LIBS} kmuddymapper kmuddycore)
 
 install(TARGETS kmuddymapper_speedwalk DESTINATION ${PLUGIN_INSTALL_DIR} )
 
