@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Testing Plug-in
+Name[de]=Test-Modul
 Name[es]=Probando el complemento
 Name[et]=Testplugin
 Name[fr]=Module externe de test
@@ -11,6 +12,7 @@ Name[sv]=Insticksprogram för test
 Name[uk]=Тестовий додаток
 Name[x-test]=xxTesting Plug-inxx
 Comment=Testing Plug-in
+Comment[de]=Test-Modul
 Comment[es]=Probando el complemento
 Comment[et]=Testplugin
 Comment[fr]=Module externe de test

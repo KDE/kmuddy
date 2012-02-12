@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Strings
 Name[cs]=Řetězce
+Name[de]=Zeichenketten
 Name[es]=Cadenas
 Name[et]=Stringid
 Name[fr]=Chaîne de caractères
@@ -14,6 +15,7 @@ Name[ug]=تېكىستلەر
 Name[uk]=Рядки
 Name[x-test]=xxStringsxx
 Comment=This plug-in adds many strings functions.
+Comment[de]=Ein Modul für viele Zeichenketten-Funktionen.
 Comment[es]=Este complemento añade muchas funciones de cadena.
 Comment[et]=Paljusid stringifunktsioone lisav plugin.
 Comment[fr]=Ce module externe ajoute de nombreuses fonctions pour les chaînes de caractères
