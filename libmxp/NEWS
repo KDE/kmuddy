@@ -1,0 +1,17 @@
+News in libmxp 0.2.4:
+- fix element parsing so that parameters can include spaces
+
+News in libmxp 0.2.3:
+- compilation fixes for newer gcc
+- use cmake instead of autotools
+
+News in libmxp 0.2.2:
+- programs that #include the lib no longer need to use C++ compiler
+
+News in libmxp 0.2.1:
+- some bugfixes and crashfixes
+
+News in libmxp 0.2:
+- support for "set xxx" flag
+- some bugfixes
+

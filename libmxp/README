@@ -1,0 +1,20 @@
+The MXP library
+---------------
+
+1. About
+
+Library that parses MXP stream.
+
+
+2. Instalation
+
+cmake .
+make
+make install
+
+
+
+
+/ Tomas Mecir
+  kmuddy@kmuddy.com
+

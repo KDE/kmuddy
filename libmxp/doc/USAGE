@@ -1,0 +1,327 @@
+
+LibMXP - developers' documentation
+----------------------------------
+
+The functions of the library are available by #including the libmxp.h
+header file.
+
+#include <libmxp/libmxp.h>
+
+IMPORTANT: this library implements the whole MXP parser, but you should
+still be consulting the MXP protocol when using this library, to ensure
+that you are correctly using the information supplied by this library
+
+
+Initializing the library
+------------------------
+
+First of all, you need a MXP handler, created using mxpCreateHandler().
+When you have it, you need to set all necessary parameters - default text
+properties, client version, supported features, and so on.
+
+When the library is initialized, you need to decide, whether to use MXP or
+not for the particular connection. Since the MXP protocol doesn't require
+negotiation, whether MXP should be used or not, you'll need to handle this
+on yourself. Having MXP on all the time isn't very wise due to possible
+problems on MUDs that don'd support this protocol.
+The library provides some support for various modes of functioning;
+it is recommended, that these modes are presented to the user to choose
+what suits him best.
+
+- Off: no MXP parsing, functions of the MXP library are never called
+- If negotiated: MXP is only used only after it has been enabled
+    using telnet negotiation (option number 91). Afterwards, mxpSwitchToOpen
+    function should be used to switch to OPEN mode - it is safe now.
+    Make this the default option if you want to play safe.
+- Auto-detect: Here you pass the text to the MXP library straight from
+    start, but you don't call switchToOpen - hence, the library will start
+    in LOCKED mode. If some mode-change request is received, the library
+    assumes that MXP is supported, and further processing is done normally.
+    This should be the default if you want to be compatible with MUDs
+    not supporting telnet negotiation.
+- Always on: In this state, call switchToOpen() immediately after creating the
+    MXP handler. In this state, MXP will be used even if the MUD doesn't
+    support it, which will lead to discarding of things containing the <
+    character (beginning of a tag), and some text formatting via MXP
+    will also be always possible. However, if the MUD doesn't strip ANSI
+    sequences correctly, other players could force you into SECURE mode, and
+    that's a Bad Thing (TM), unless you like things like having all the output
+    in a tiny window, and other nice stuff :D
+    Make this the default mode, if you want to be 100%-zMUD
+    compatible. Not recommended though...
+
+Oh, and one more thing. There are many features in MXP, that may require
+substantial changes in your client; it's not necessary to implement
+them all at once - you can start with the basic features (variables,
+attributes like bold/italics/..., colors and links), then advance to
+more complex features in next versions of your client... Or you can do it
+all at once - it's up to you :D
+
+Available functions:
+--------------------
+
+MXPHANDLER mxpCreateHandler ();
+
+Creates a new MXP handler, which holds state information for the parser.
+If your client supports multiple connections, you need to create a separate
+handler for each of them (provided that they use MXP, of course).
+
+
+void mxpDestroyHandler (MXPHANDLER handler);
+
+Destroys a previously created MXP handler.
+
+
+void mxpProcessText (MXPHANDLER handler, const char *text);
+
+Process some text with the handler. Pass the text received from the MUD
+to this function, and the library will parse it. You can then fetch the
+results using mxpNextresult and mxpHasResult.
+Note that you need to perform telnet option processing BEFORE passing the
+text to this function, to ensure that the server didn't disable MXP or
+something...
+
+
+mxpResult *mxpNextResult (MXPHANDLER handler);
+
+Fetch next result of the processing. The mxpResult structure is documented
+below.
+
+
+int mxpHasResults (MXPHANDLER handler);
+
+Checks whether there are any more results to fetch, returns non-zero if true.
+
+
+void mxpSwitchToOpen (MXPHANDLER handler);
+
+Set default mode to OPEN. Refer to the explanation above for more information.
+
+
+void mxpSetDefaultText (MXPHANDLER handler, const char *font, int size,
+  char _bold, char _italic, char _underline, char _strikeout, RGB fg, RGB bg);
+
+Set default text attributes. The library will send you these when default
+text should be used.
+
+
+void mxpSetHeaderParams (MXPHANDLER handler, int which, const char *font, int si
+    ze, char _bold,
+        char _italic, char _underline, char _strikeout, RGB fg, RGB bg);
+
+Set attributes of header 1-6 (for tags <h1>-<h6>).
+
+
+void mxpSetDefaultGaugeColor (MXPHANDLER handler, RGB color);
+
+Set default color for gauges.
+
+
+void mxpSetNonProportFont (MXPHANDLER handler, const char *font);
+
+Set used non-proportional font.
+
+
+void mxpSetClient (MXPHANDLER handler, const char *name, const char *version);
+
+Set client name and version reported to the MUD.
+
+
+void mxpSetScreenProps (MXPHANDLER handler, int sx, int sy, int wx, int wy,
+  int fx, int fy);
+
+Screen, window and font size, used by FRAME and IMAGE tags.
+
+
+void mxpSupportsLink (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support clickable links, including
+links that send commands.
+
+
+void mxpSupportsGauge (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support gauges.
+
+
+void mxpSupportsStatus (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support having variables in status bar.
+
+
+void mxpSupportsSound (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support sound.
+
+
+void mxpSupportsFrame (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support frames.
+
+
+void mxpSupportsImage (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support images.
+
+
+void mxpSupportsRelocate (MXPHANDLER handler, char supports);
+
+Here you inform the library whether you support relocating to other
+server/port and sending username/password on request.
+
+
+Note to mxpSupports* functions: you can set these to ON even if you don't
+support the feature, and you can receive requests to use a particular
+feature even if you say that you don't support it - all depends on whether
+the MUD pays attention to the supportedd features or not.
+Therefore, you should ignore all unsupported requests, the library will
+take care of the rest.
+
+
+
+The mxpResult structure
+-----------------------
+
+struct mxpResult {
+  int type;          //result type
+  void *data;        //result data, contents depend on result type
+};
+
+The data attribute needs to be retyped to the correct type depending on type.
+These are documented here, refer to test/test.cpp for a practical example on
+how to use this. This test.cpp could also serve as a basis for your
+implementation in the client, you just need to replace all printf's with
+your displaying routines :-)
+
+So...
+
+test=0:
+  nothing
+  data is of type void*
+
+test=1:
+  text
+  data is of type char*
+  newlines are always sent separately
+
+test=2:
+  line tag
+  data is of type int*
+
+test=3:
+  flag
+  data is of type flagStruct*
+  you may want to send some of these to the automapper, and to implement
+  the set xxx flag to set the appropriate variable :-) Refer to MXP docs
+  for more info
+
+test=4:
+  variable / erase variable
+  data is of type varStruct*
+  that variable should be created/updated/erased
+   
+test=5:
+  formatting
+  data is of type formatStruct*
+  usemask says which of given attributes are valid and should be applied
+
+test=6:
+  URL link
+  data is of type linkStruct*
+
+test=7:
+  Send link
+  data is of type sendStruct*
+  the command is to be sent to the MUD or put to the input line
+  
+test=8:
+  expire
+  data is of type char*
+  All links with this name should expire.
+  If data is 0, then all NAMED links should expire.
+  
+test=9:
+  send this
+  data is of type char*
+  this text should be sent to the MUD, as is... Used to send version
+  information and similar things
+
+test=10:
+  horizontal line
+  data is of type void*
+
+test=11:
+  sound/music
+  data is of type soundStruct*
+  refer to the MSP protocol...
+  
+test=12:
+  create a window
+  data is of type windowStruct*
+
+test=13:
+  create an internal window
+  data is of type internalWindowStruct*
+
+test=14:
+  close a window
+  data is of type char*
+
+test=15:
+  set active window
+  data is of type char*
+  all further text will do to this window; 0 means main window
+
+test=16:
+  move cursor
+  data is of type moveStruct*
+  in the active window, move cursor to (X,Y)
+  
+test=17:
+  erase text
+  data is of type void*
+  if data is 0, erase rest of line, otherwise erase rest of frame (cursor->bottom)
+  
+test=18:
+  relocate
+  data is of type relocateStruct*
+  relocate to new server/port
+
+test=19:
+  send username/password
+  data is of type void*
+  if data is non-zero, send username, otherwise send password
+
+test=20:
+  image
+  data is of type imageStruct*
+
+test=21:
+  image map
+  data is of type char*
+  clickable image map; will be immediately followed by the image (20) struct
+  commands from the image map are sent to the MUD as name?X,Y
+
+test=22:
+  gauge with some variable/maxvariable
+  data is of type gaugeStruct*
+
+test=23:
+  status bar with some variable/maxvariable
+  data is of type statStruct*
+
+test=-1:
+  MXP error
+  data is of type char*
+
+test=-2:
+  MXP warning
+  data is of type char*
+
+
+
+That is all.
+
+/ Tomas Mecir
+  kmuddy@kmuddy.net
+

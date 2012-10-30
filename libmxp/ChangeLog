@@ -1,0 +1,187 @@
+ChangeLog for libMXP
+--------------------
+
+*** RELEASED THIS AS VERSION 0.2.4 ***
+
+2009-11-28
+* Fixed a problem with ANSI sequences not being deleted from SEND links
+* Fixed a problem with custom element expansion and multi-word parameters
+
+*** RELEASED THIS AS VERSION 0.2.3 ***
+
+2009-10-31
+* Compilation fixes, buildsystem change
+
+2006-03-31
+* ANSI sequences are now stripped from the command in SEND tag
+
+Several more bugfixes during 2005 ...
+
+*** RELEASED THIS AS VERSION 0.2.1 ***
+
+2004-11-24
+* the <a></a> sequence with no href no longer crashes libmxp
+
+2004-10-16
+* tests are no longer compiled with make (they need an installed libmxp)
+
+2004-08-23
+* don't crash when a null pointer is sent to the parser
+
+2004-08-03
+* multiple &text; values in a SEND-link are now expanded correctly
+
+*** RELEASED THIS AS VERSION 0.2 ***
+
+2004-07-17
+* "set varname" flags are now supported
+
+2004-07-15
+* element names are now correctly converted to lowercase
+
+2004-05-22
+* RELEASED libmxp 0.1
+
+2004-05-21
+* wrote documentation, prepared 0.1 release
+
+2004-05-17
+* defining custom elements works!!!
+* elements with tags work!
+* implemented comments
+* \r not followed by \n is now treated as a newline character
+
+2004-05-15
+* more testing and bugfixing, most MXP features now work correctly
+* all internal tags except <support>, <!tag>, <!element> and <!attlist>
+work correctly
+
+2004-05-12
+* lots of testing, fixed some bugs and crashes
+
+2004-05-09
+* struct mxpResult no longer has a "callmeagain" attribute
+* implemented a testing program
+* fixed a couple of bugs and crashes
+
+2004-04-10
+* entities are no longer expanded in locked mode
+* wrote public API for the library :-D
+* resolved some compilation/linking problems
+
+2004-04-09
+* implemented class cMXPProcessor, that wraps public API and manages all other classes
+
+2004-04-08
+* fixed some problems and added some missing features, so that closing tags and deleted
+  variables are handled correctly
+* fully implemented support for tags !ELEMENT and !ATTLIST
+* fixed some more bugs noticed during compilation attempts
+
+2004-04-07
+* implemented class cMXPParser, that performs first-state parsing, as well as parsing of the
+  !ELEMENT tag
+
+2004-04-03
+* entity manager now ignored undefined entities, keeping the text intact
+* element manager now supports custom tags (but !element and !attlist are still unsupported)
+
+2004-04-02
+* added support for some more internal tags, only !element and !attlist are missing as of now
+* cMXPState now supports font/screen size settings, these are used by FRAME and IMAGE tags
+
+2004-04-01
+* added support for some more tags to cElementManager::processInternalTag()
+
+2004-03-27
+* added support for some tags to cElementManager::processInternalTag()
+
+2004-03-26
+* started work on cElementManager::processInternalTag
+
+2004-03-25
+* implemented support for parameter parsing and for assigning parameter names by their order
+* implemented support for assigning default values to omitted parameters
+
+2004-03-19
+* added definitions of internal MXP tags to the tag parser
+* implemented first part of tag contents parser
+
+2004-03-12
+* cMXPState is now capable of calling entity expansion
+* wrote interface of cElementHandler class
+* aliases for internal tags now supported
+* implemented basic functionality of element manager
+* element manager can now properly add and remove element definitions
+* line tags 20-99 are now supported by the element manager
+
+2004-03-11
+* cMXPState now supports tags SEND and IMAGE
+* cMXPState now supports everything except the SUPPORT tag...
+
+2004-03-07
+* cMXPState now supports the DEST tag
+* cMXPState now supports the A tag
+
+2004-02-27
+* result handler no longer allocates memory for empty strings
+* cMXPState now understands tags GAUGE and STAT
+* cMXPState now supports the FRAME tag
+
+2004-02-22
+* entity list gets updated correctly on a VAR tag
+
+2004-02-21
+* cMXPState now sets some default text attributes and stuff...
+* cMXPState now supports tags SMALL, TT, H1..H6, VERSION
+* result handler now supports gauge and status bar reporting ( forgot that :-/ )
+
+2004-02-20
+* cMXPState now correctly understands newlines and tags P, BR and NOBR
+* cMXPState now understands flags (it only passes them to the client - no variables and stuff here)
+* cMXPState now understands sending of variables, it also sends the necessary text for the VAR tag
+* implemented cMXPState::createClosingResult()
+* wrote cMXPState::applyResult()
+* cMXPState now supports all formatting tags (B,I,U,S,C,H,FONT)
+* cMXPSpace now supports SBR tag (it sends 0x1F)
+* fixed a problem with entity parsing
+* cEntityManager now supports all HTML entities, as listed at Mushclient's site
+* cMXPState now supports tags EXPIRE, HR, SOUND, MUSIC, RELOCATE, USER, PASSWORD
+
+2004-02-13
+* implemented parts of support for closing and auto-closing of tags
+
+2004-02-12
+* fixed some problems, so that the lib can be compiled
+
+2004-02-08
+* wrote a script that converts rgb.txt file coming with XFree86 into a header file usable by
+  libmxp
+* all colors from rgb.txt are now recognized by cMXPColors class
+
+2004-02-06
+* wrote most of class cMXPColors - list handling and parsing of colors in #rrggbb format
+* wrote support for MXP mode switching
+
+2004-02-05
+* wrote cResultHandler::deleteResult
+* class cResultHandler should now be complete
+* wrote interface of mxpState class, that handles line tags, closing of tags and similar stuff
+    (i.e. a large part of MXP logic is located here)
+
+2004-01-30
+* continuing writing cResultHandler - wrote handlers for all types
+
+2004-01-28
+* wrote mxpstruct.h header, that contains structures returned to calling program
+* started writing the result handler (cResultHandler) - wrote basic routines
+
+2004-01-26
+* entity manager can now behave properly at various boundaries (I hope)
+
+2004-01-25
+* wrote entity manager (cEntityManager) that manages and expands entities
+
+2004-01-12
+* started the project, configured automake and stuff
+

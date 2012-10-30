@@ -1,0 +1,19 @@
+TODO file for the libMXP library
+--------------------------------
+- <HIGH> tag should use something more sophisticated to compute the new color
+
+MXP features that are not implemented in the library:
+-----------------------------------------------------
+- Response for <VERSION> tag doesn't support sending of STYLE and REGISTERED
+  information
+- <!TAG> is not supported, because Zugg has added this to the spec after
+  I've gotten my copy, he didn't announce it anywhere nor did he update
+  the timestamp of the MXP document (!) - hence, <!tag> is not supported atm
+- QUIET parameter for the <relocate> tag is not supported; also, <relocate>
+  does not have a closing tag in this implementation
+- <support> with parameters is not supported
+
+Some of these features might be implemented in the future (if I see the
+    need for them).
+
+
