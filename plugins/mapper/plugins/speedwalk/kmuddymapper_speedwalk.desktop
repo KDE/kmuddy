@@ -12,6 +12,7 @@ Comment[sv]=Insticksprogrammet för snabbgenomgång av listor för Kmuddy-kartha
 Comment[uk]=Додаток списку проходження до засобу роботи з картами KMuddy
 Comment[x-test]=xxThe speedwalk list plugin for the kmuddy mapperxx
 Name=Speedwalk
+Name[de]=Speedwalk
 Name[es]=Speedwalk
 Name[et]=Kiirliikumine
 Name[fr]=Déplacements automatiques (Speedwalking)
