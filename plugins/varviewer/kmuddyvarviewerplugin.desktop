@@ -13,6 +13,7 @@ Name[sv]=Variabelvisning
 Name[uk]=Перегляд змінних
 Name[x-test]=xxVariable Viewerxx
 Comment=This plug-in provides a variable viewer window.
+Comment[de]=Diese Modul stellt ein Ansichtsfenster für Variablen bereit.
 Comment[es]=Este complemento proporciona una ventana de visor variable.
 Comment[et]=Muutujanäitaja akent pakkuv plugin.
 Comment[fr]=Ce module externe fournit une fenêtre d'affichage des variables
