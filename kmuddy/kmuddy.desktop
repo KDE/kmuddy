@@ -36,6 +36,7 @@ GenericName[sv]=MUD-klient
 GenericName[uk]=Клієнт MUD
 GenericName[x-test]=xxMUD clientxx
 Comment=MUD client
+Comment[de]=MUD-Dienstprogramm
 Comment[es]=Cliente de MUD
 Comment[et]=MUD-i klient
 Comment[fr]=Client MUD (Donjon Multi Utilisateurs)

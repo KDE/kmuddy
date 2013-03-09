@@ -15,6 +15,7 @@ Name[sv]=Profilkonvertering
 Name[uk]=Засіб перетворення профілів
 Name[x-test]=xxProfile Converterxx
 Comment=This plug-in converts profiles from old KMuddy versions.
+Comment[de]=Dieses Modul wandelt Profile älterer KMuddy-Versionen um.
 Comment[es]=Este complemento convierte perfiles desde versiones antiguas de KMuddy.
 Comment[et]=Plugin, mis teisendab profiile KMuddy vanematest versioonidest.
 Comment[fr]=Ce module externe convertit les profils issus des anciennes versions de KMuddy
