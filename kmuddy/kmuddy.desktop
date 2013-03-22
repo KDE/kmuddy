@@ -23,6 +23,7 @@ Exec=kmuddy -caption "%c" %i %m
 Icon=kmuddy.png
 DocPath=kmuddy/index.html
 GenericName=MUD client
+GenericName[de]=MUD-Dienstprogramm
 GenericName[es]=Cliente de MUD
 GenericName[et]=MUD-i klient
 GenericName[fr]=Client MUD (Multi Utilisateurs Donjons)
