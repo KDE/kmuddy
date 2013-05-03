@@ -1,6 +1,4 @@
 [Desktop Entry]
-Version=1.0
-Encoding=UTF-8
 Name=KMuddy
 Name[cs]=KMuddy
 Name[de]=KMuddy
@@ -20,8 +18,8 @@ Name[sv]=Kmuddy
 Name[uk]=KMuddy
 Name[x-test]=xxKMuddyxx
 Type=Application
-Exec=kmuddy -caption %c %i %m
-Icon=kmuddy.png
+Exec=kmuddy -caption %c %i
+Icon=kmuddy
 DocPath=kmuddy/index.html
 GenericName=MUD client
 GenericName[de]=MUD-Dienstprogramm
