@@ -47,7 +47,7 @@ cUnixSocket::cUnixSocket (int _sess, cRunningScript *rs) : sess(_sess)
     name = fname;
     free (fname);
     //now that we have the name, we create a socket and set some parameters
-    id = socket (PF_UNIX, SOCK_STREAM, 0);
+    id = socket (AF_UNIX, SOCK_STREAM, 0);
     sa.sun_family = AF_UNIX;
     strcpy (sa.sun_path, name.toLatin1());
     fcntl (id, O_NONBLOCK);
