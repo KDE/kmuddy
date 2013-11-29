@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Comment=A Mapper for KMuddy
+Comment[de]=Ein Mapper für KMuddy
 Comment[es]=Mapeador para KMuddy
 Comment[et]=KMuddy tasemelooja
 Comment[fr]=Un éditeur de niveaux pour KMuddy
@@ -12,6 +13,7 @@ Comment[sv]=Ett kartverktyg för Kmuddy
 Comment[uk]=Робота з картами у KMuddy
 Comment[x-test]=xxA Mapper for KMuddyxx
 Name=Kmuddy Mapper
+Name[de]=Kmuddy-Mapper
 Name[es]=Mapeador para Kmuddy
 Name[et]=KMuddy tasemelooja
 Name[fr]=Éditeur de niveaux pour KMuddy
