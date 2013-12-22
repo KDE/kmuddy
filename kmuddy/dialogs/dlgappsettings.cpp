@@ -118,8 +118,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   //system tray
   chksystray = new QCheckBox (i18n ("Display system tray icon"), frmwindow);
   chksystray->setWhatsThis( i18n ("This option toggles the presence of the "
-      "system tray icon.   The icon can be used to hide the application window "
-      "without taking up space in the taskbar.  You can click on the icon "
+      "system tray icon. The icon can be used to hide the application window "
+      "without taking up space in the taskbar. You can click on the icon "
       "to hide the window and then click again to restore it. "
       "Your connection will remain active even if the window is hidden "
       "and you will still receive notification messages. "));
@@ -127,7 +127,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   //passive popups
   chkpassivepopup = new QCheckBox (i18n ("Use passive popups"), frmwindow);
   chkpassivepopup->setWhatsThis( i18n ("This option toggles the use of "
-      "passive popups.  Passive popups appear near the system tray icon when you "
+      "passive popups. Passive popups appear near the system tray icon when you "
       "are in another window and alert you to the presence of activity in one "
       "of your connections. "));
   
