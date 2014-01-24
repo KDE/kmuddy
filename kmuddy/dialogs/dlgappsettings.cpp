@@ -45,16 +45,16 @@
 #include <kpushbutton.h>
 #include <kstandarddirs.h>
 
-//color list
-QString cltext[16] = { i18n("Black"), i18n("Red"), i18n("Green"),
+dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
+{
+  cDialogList::self()->addDialog ("app-prefs", this);
+
+  //color list
+  QString cltext[16] = { i18n("Black"), i18n("Red"), i18n("Green"),
     i18n("Yellow"), i18n("Blue"), i18n("Magenta"), i18n("Cyan"), i18n("Gray"),
     i18n("Dark gray"), i18n("Bright red"), i18n("Bright green"),
     i18n("Bright yellow"), i18n("Bright blue"), i18n("Bright magenta"),
     i18n("Bright cyan"), i18n("White") };
-
-dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
-{
-  cDialogList::self()->addDialog ("app-prefs", this);
 
   //initial dialog size
   setInitialSize (QSize (600, 400));
