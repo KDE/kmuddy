@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plugin Template
+Name[bs]=Servisni Predložak
 Name[de]=Modulvorlage
 Name[es]=Plantilla para complementos
 Name[et]=Mallplugin
@@ -17,6 +18,7 @@ Name[sv]=Mall för insticksprogram
 Name[uk]=Шаблон додатка
 Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
+Comment[bs]=Servisni Predložak
 Comment[de]=Modulvorlage
 Comment[es]=Plantilla para complementos
 Comment[et]=Mallplugin

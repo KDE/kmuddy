@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Strings
+Name[bs]=Stringovi
 Name[cs]=Řetězce
 Name[de]=Zeichenketten
 Name[es]=Cadenas
@@ -18,6 +19,7 @@ Name[ug]=تېكىستلەر
 Name[uk]=Рядки
 Name[x-test]=xxStringsxx
 Comment=This plug-in adds many strings functions.
+Comment[bs]=Ovaj servis daje mnoge stringovne funkcije
 Comment[de]=Ein Modul für viele Zeichenketten-Funktionen.
 Comment[es]=Este complemento añade muchas funciones de cadena.
 Comment[et]=Paljusid stringifunktsioone lisav plugin.

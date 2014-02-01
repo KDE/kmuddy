@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Comment=The speedwalk list plugin for the kmuddy mapper
+Comment[bs]=Lista servisa za kratice za Kmuddy Mapper
 Comment[de]=Das Modul Wegeskriptliste für Kmuddy-Mapper
 Comment[es]=Complemento de lista de speedwalk para el mapeador de KMuddy
 Comment[et]=KMuddy tasemelooja kiirliikumise plugin
@@ -13,6 +14,7 @@ Comment[sv]=Insticksprogrammet för snabbgenomgång av listor för Kmuddy-kartha
 Comment[uk]=Додаток списку проходження до засобу роботи з картами KMuddy
 Comment[x-test]=xxThe speedwalk list plugin for the kmuddy mapperxx
 Name=Speedwalk
+Name[bs]=Speedwalk
 Name[de]=Wegeskript
 Name[es]=Speedwalk
 Name[et]=Kiirliikumine

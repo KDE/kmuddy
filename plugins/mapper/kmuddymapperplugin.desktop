@@ -2,6 +2,7 @@
 Type=ServiceType
 X-KDE-ServiceType=KMuddy/Mapper/Plugin
 Name=KMuddy Mapper Tool
+Name[bs]=Alat za KMuddy Mapper
 Name[de]=Kmuddy-Mapper-Werkzeug
 Name[es]=Herramienta mapeadora para KMuddy
 Name[et]=KMuddy tasemelooja

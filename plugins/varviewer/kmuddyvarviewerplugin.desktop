@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Variable Viewer
+Name[bs]=Preglednik Varijabli
 Name[de]=Variablenansicht
 Name[es]=Visor variable
 Name[et]=Muutujanäitaja
@@ -14,6 +15,7 @@ Name[sv]=Variabelvisning
 Name[uk]=Перегляд змінних
 Name[x-test]=xxVariable Viewerxx
 Comment=This plug-in provides a variable viewer window.
+Comment[bs]=Ovaj servis pruža prozor za pregled varijable
 Comment[de]=Diese Modul stellt ein Ansichtsfenster für Variablen bereit.
 Comment[es]=Este complemento proporciona una ventana de visor variable.
 Comment[et]=Muutujanäitaja akent pakkuv plugin.

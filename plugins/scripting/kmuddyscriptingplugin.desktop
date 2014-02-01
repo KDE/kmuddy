@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=External Scripting
+Name[bs]=Vanjsko skriptiranje
 Name[de]=Externe Skripte
 Name[es]=Scripts externos
 Name[et]=Väline skriptimine
@@ -16,6 +17,7 @@ Name[sv]=Externa skript
 Name[uk]=Зовнішні скрипти
 Name[x-test]=xxExternal Scriptingxx
 Comment=Adds support for external scripting.
+Comment[bs]=Daje podršku za vanjsko skriptiranje
 Comment[de]=Unterstützung für externe Skripte
 Comment[es]=Añade apoyo para scripts externos.
 Comment[et]=Välise skriptimise toetus.

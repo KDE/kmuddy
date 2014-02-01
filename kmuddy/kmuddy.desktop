@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KMuddy
+Name[bs]=KMuddy
 Name[cs]=KMuddy
 Name[de]=KMuddy
 Name[es]=KMuddy
@@ -23,6 +24,7 @@ Exec=kmuddy -caption %c %i
 Icon=kmuddy
 DocPath=kmuddy/index.html
 GenericName=MUD client
+GenericName[bs]=MUD klijent
 GenericName[de]=MUD-Dienstprogramm
 GenericName[es]=Cliente de MUD
 GenericName[et]=MUD-i klient
@@ -39,6 +41,7 @@ GenericName[tr]=MUD istemcisi
 GenericName[uk]=Клієнт MUD
 GenericName[x-test]=xxMUD clientxx
 Comment=MUD client
+Comment[bs]=MUD klijent
 Comment[de]=MUD-Dienstprogramm
 Comment[es]=Cliente de MUD
 Comment[et]=MUD-i klient

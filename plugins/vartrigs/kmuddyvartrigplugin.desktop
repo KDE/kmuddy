@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Variable Triggers
+Name[bs]=Promjenjivi okidači
 Name[de]=Variable löst aus
 Name[es]=Desencadenantes variables
 Name[et]=Muutujapäästikud
@@ -13,6 +14,7 @@ Name[sv]=Variabelutlösare
 Name[uk]=Умовні зміни
 Name[x-test]=xxVariable Triggersxx
 Comment=Adds supports for triggers that fire off variable changes.
+Comment[bs]=Daje podršku za prekidače koji aktiviraju na promjene varijabli
 Comment[de]=Fügt Unterstützung für Auslöser hinzu, die Änderungen von Variablen bewirken.
 Comment[es]=Añade apoyo para desencadenantes que disparan cambios variables.
 Comment[et]=Muutujate muutumise puhul käivituvate päästikute toetus.

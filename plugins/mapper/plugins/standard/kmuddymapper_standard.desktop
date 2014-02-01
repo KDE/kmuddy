@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Comment=The standard mapper tools and views
+Comment[bs]=Standardni alati mapiranja i pogledi
 Comment[de]=Die Standard-Mapperwerkzeuge und Ansichten
 Comment[es]=Vistas y herramientas del mapeador estándar
 Comment[et]=Standardsed tasemelooja tööriistad ja vaated
@@ -35,6 +36,7 @@ Name[ug]=ئۆلچەملىك
 Name[uk]=Стандарт
 Name[x-test]=xxStandardxx
 Comment=The standard mapper tools and views
+Comment[bs]=Standardni alati mapiranja i pogledi
 Comment[de]=Die Standard-Mapperwerkzeuge und Ansichten
 Comment[es]=Vistas y herramientas del mapeador estándar
 Comment[et]=Standardsed tasemelooja tööriistad ja vaated
