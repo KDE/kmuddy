@@ -1,445 +1,376 @@
-<!DOCTYPE UI><UI>
-<class>DlgMapInfoBase</class>
-<widget>
-    <class>QDialog</class>
-    <property stdset="1">
-        <name>name</name>
-        <cstring>DlgMapInfoBase</cstring>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DlgMapInfoBase</class>
+ <widget class="QDialog" name="DlgMapInfoBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>372</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Map Information</string>
+  </property>
+  <widget class="QWidget" name="Layout7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>360</width>
+     <height>328</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout">
+    <property name="spacing">
+     <number>6</number>
     </property>
-    <property stdset="1">
-        <name>geometry</name>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QGroupBox" name="fraGeneral">
+      <property name="title">
+       <string>General Information</string>
+      </property>
+      <widget class="QWidget" name="Layout6">
+       <property name="geometry">
         <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>372</width>
-            <height>350</height>
+         <x>10</x>
+         <y>20</y>
+         <width>340</width>
+         <height>60</height>
         </rect>
-    </property>
-    <property stdset="1">
-        <name>caption</name>
-        <string>Map Information</string>
-    </property>
-    <widget>
-        <class>QLayoutWidget</class>
-        <property stdset="1">
-            <name>name</name>
-            <cstring>Layout7</cstring>
+       </property>
+       <layout class="QGridLayout">
+        <property name="margin">
+         <number>0</number>
         </property>
-        <property stdset="1">
-            <name>geometry</name>
-            <rect>
-                <x>10</x>
-                <y>10</y>
-                <width>360</width>
-                <height>328</height>
-            </rect>
+        <property name="spacing">
+         <number>6</number>
         </property>
-        <vbox>
-            <property stdset="1">
-                <name>margin</name>
-                <number>0</number>
+        <item row="0" column="1">
+         <widget class="QLabel" name="txtMud">
+          <property name="text">
+           <string>Test Mud</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="txtChar">
+          <property name="text">
+           <string>Slayer</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblMud">
+          <property name="text">
+           <string>Mud Name:</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lblChar">
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>32767</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Character Name:</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="fraMap">
+        <property name="title">
+         <string>Number of Map Elements</string>
+        </property>
+        <widget class="QWidget" name="Layout3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>180</width>
+           <height>150</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lblZones">
+            <property name="text">
+             <string>No. of Zones:</string>
             </property>
-            <property stdset="1">
-                <name>spacing</name>
-                <number>6</number>
+            <property name="wordWrap">
+             <bool>false</bool>
             </property>
-            <widget>
-                <class>QGroupBox</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>fraGeneral</cstring>
-                </property>
-                <property stdset="1">
-                    <name>title</name>
-                    <string>General Information</string>
-                </property>
-                <widget>
-                    <class>QLayoutWidget</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>Layout6</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>geometry</name>
-                        <rect>
-                            <x>10</x>
-                            <y>20</y>
-                            <width>340</width>
-                            <height>60</height>
-                        </rect>
-                    </property>
-                    <grid>
-                        <property stdset="1">
-                            <name>margin</name>
-                            <number>0</number>
-                        </property>
-                        <property stdset="1">
-                            <name>spacing</name>
-                            <number>6</number>
-                        </property>
-                        <widget row="0"  column="1" >
-                            <class>QLabel</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>txtMud</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>text</name>
-                                <string>Test Mud</string>
-                            </property>
-                        </widget>
-                        <widget row="1"  column="1" >
-                            <class>QLabel</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>txtChar</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>text</name>
-                                <string>Slayer</string>
-                            </property>
-                        </widget>
-                        <widget row="0"  column="0" >
-                            <class>QLabel</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>lblMud</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>text</name>
-                                <string>Mud Name:</string>
-                            </property>
-                        </widget>
-                        <widget row="1"  column="0" >
-                            <class>QLabel</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>lblChar</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>maximumSize</name>
-                                <size>
-                                    <width>100</width>
-                                    <height>32767</height>
-                                </size>
-                            </property>
-                            <property stdset="1">
-                                <name>text</name>
-                                <string>Character Name:</string>
-                            </property>
-                        </widget>
-                    </grid>
-                </widget>
-            </widget>
-            <widget>
-                <class>QLayoutWidget</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>Layout5</cstring>
-                </property>
-                <hbox>
-                    <property stdset="1">
-                        <name>margin</name>
-                        <number>0</number>
-                    </property>
-                    <property stdset="1">
-                        <name>spacing</name>
-                        <number>6</number>
-                    </property>
-                    <widget>
-                        <class>QGroupBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>fraMap</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>title</name>
-                            <string>Number of Map Elements</string>
-                        </property>
-                        <widget>
-                            <class>QLayoutWidget</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>Layout3</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>geometry</name>
-                                <rect>
-                                    <x>10</x>
-                                    <y>20</y>
-                                    <width>180</width>
-                                    <height>150</height>
-                                </rect>
-                            </property>
-                            <grid>
-                                <property stdset="1">
-                                    <name>margin</name>
-                                    <number>0</number>
-                                </property>
-                                <property stdset="1">
-                                    <name>spacing</name>
-                                    <number>6</number>
-                                </property>
-                                <widget row="4"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblZones</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>No. of Zones:</string>
-                                    </property>
-                                </widget>
-                                <widget row="3"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtTexts</cstring>
-                                    </property>
-                                </widget>
-                                <widget row="0"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtLvls</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>1</string>
-                                    </property>
-                                </widget>
-                                <widget row="0"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblLevels</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>No. of Levels:</string>
-                                    </property>
-                                </widget>
-                                <widget row="1"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblRooms</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>No. of Rooms:</string>
-                                    </property>
-                                </widget>
-                                <widget row="3"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblTexts</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>No. of Text Labels:</string>
-                                    </property>
-                                </widget>
-                                <widget row="2"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtPaths</cstring>
-                                    </property>
-                                </widget>
-                                <widget row="2"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblPaths</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>No. of Paths:</string>
-                                    </property>
-                                </widget>
-                                <widget row="1"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtRooms</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>1</string>
-                                    </property>
-                                </widget>
-                                <widget row="4"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtZones</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>maximumSize</name>
-                                        <size>
-                                            <width>40</width>
-                                            <height>32767</height>
-                                        </size>
-                                    </property>
-                                </widget>
-                            </grid>
-                        </widget>
-                    </widget>
-                    <widget>
-                        <class>QGroupBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>fraStarting</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>title</name>
-                            <string>Starting Position</string>
-                        </property>
-                        <widget>
-                            <class>QLayoutWidget</class>
-                            <property stdset="1">
-                                <name>name</name>
-                                <cstring>Layout4</cstring>
-                            </property>
-                            <property stdset="1">
-                                <name>geometry</name>
-                                <rect>
-                                    <x>10</x>
-                                    <y>20</y>
-                                    <width>130</width>
-                                    <height>120</height>
-                                </rect>
-                            </property>
-                            <grid>
-                                <property stdset="1">
-                                    <name>margin</name>
-                                    <number>0</number>
-                                </property>
-                                <property stdset="1">
-                                    <name>spacing</name>
-                                    <number>6</number>
-                                </property>
-                                <widget row="1"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblY</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>Y:</string>
-                                    </property>
-                                </widget>
-                                <widget row="3"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtZone</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>maximumSize</name>
-                                        <size>
-                                            <width>40</width>
-                                            <height>32767</height>
-                                        </size>
-                                    </property>
-                                </widget>
-                                <widget row="1"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtY</cstring>
-                                    </property>
-                                </widget>
-                                <widget row="3"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblZone</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>Zone:</string>
-                                    </property>
-                                </widget>
-                                <widget row="2"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtLvl</cstring>
-                                    </property>
-                                </widget>
-                                <widget row="0"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblX</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>X:</string>
-                                    </property>
-                                </widget>
-                                <widget row="0"  column="1" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>txtX</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>maximumSize</name>
-                                        <size>
-                                            <width>40</width>
-                                            <height>32767</height>
-                                        </size>
-                                    </property>
-                                </widget>
-                                <widget row="2"  column="0" >
-                                    <class>QLabel</class>
-                                    <property stdset="1">
-                                        <name>name</name>
-                                        <cstring>lblLvl</cstring>
-                                    </property>
-                                    <property stdset="1">
-                                        <name>text</name>
-                                        <string>Level:</string>
-                                    </property>
-                                </widget>
-                            </grid>
-                        </widget>
-                    </widget>
-                </hbox>
-            </widget>
-            <widget>
-                <class>QPushButton</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>cmdClose</cstring>
-                </property>
-                <property stdset="1">
-                    <name>maximumSize</name>
-                    <size>
-                        <width>100</width>
-                        <height>30</height>
-                    </size>
-                </property>
-                <property stdset="1">
-                    <name>text</name>
-                    <string>Close</string>
-                </property>
-            </widget>
-        </vbox>
-    </widget>
-</widget>
-<connections>
-    <connection>
-        <sender>cmdClose</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapInfoBase</receiver>
-        <slot>accept()</slot>
-    </connection>
-</connections>
-</UI>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="txtTexts">
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="txtLvls">
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblLevels">
+            <property name="text">
+             <string>No. of Levels:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblRooms">
+            <property name="text">
+             <string>No. of Rooms:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblTexts">
+            <property name="text">
+             <string>No. of Text Labels:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="txtPaths">
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblPaths">
+            <property name="text">
+             <string>No. of Paths:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="txtRooms">
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="txtZones">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>32767</height>
+             </size>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fraStarting">
+        <property name="title">
+         <string>Starting Position</string>
+        </property>
+        <widget class="QWidget" name="Layout4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>130</width>
+           <height>120</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblY">
+            <property name="text">
+             <string>Y:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="txtZone">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>32767</height>
+             </size>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="txtY">
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblZone">
+            <property name="text">
+             <string>Zone:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="txtLvl">
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblX">
+            <property name="text">
+             <string>X:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="txtX">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>32767</height>
+             </size>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblLvl">
+            <property name="text">
+             <string>Level:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cmdClose">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmdClose</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapInfoBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

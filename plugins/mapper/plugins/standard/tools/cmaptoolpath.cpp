@@ -100,16 +100,6 @@ void CMapToolPath::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 	}
 }
 
-/** This method is called when the active view changes */
-void CMapToolPath::viewChangedEvent(CMapViewBase *view)
-{
-	if (view)
-	{
-		view->setCursor(*currentCursor);
-		view->setMouseTracking(false);
-	}
-}
-
 /** This function called when a tool is selected */
 void CMapToolPath::toolSelected(void)
 {

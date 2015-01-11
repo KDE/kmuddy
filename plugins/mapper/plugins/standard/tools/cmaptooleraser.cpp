@@ -98,13 +98,3 @@ void CMapToolEraser::toolUnselected(void)
 {
 }
 
-/** This method is called when the active view changes */
-void CMapToolEraser::viewChangedEvent(CMapViewBase *view)
-{
-	if (view)
-	{
-		view->setCursor(*deleteCursor);
-		view->setMouseTracking(false);
-	}
-}
-

@@ -35,8 +35,6 @@
 #include <qtimer.h>
 #include <q3valuelist.h>
 #include <QActionGroup>
-
-//Added by qt3to4:
 #include <Q3PtrList>
 
 #include "cmapzone.h"
@@ -112,14 +110,11 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
 
   m_clipboard = new CMapClipboard(this,actionCollection(),"mapClipboard");
 
-  mapViewList.setAutoDelete(false);
-
-  activeView = NULL;
+  activeView = 0;
 
   setDefaultOptions();
   readOptions();
 
-  enableNonViewActions(false);
   enableViewControls(false);
 
   speedwalkActive = false;
@@ -161,14 +156,13 @@ CMapManager::~CMapManager()
   if (mapData)
     delete mapData;
   mapData = 0;
+  delete activeView;
 
   if (commandHistory)
     delete commandHistory;
 
   delete m_elementUtils;
-  
-  kDebug() << "CMapManager::~CMapManager() views - " << mapViewList.count();
-  
+
   kDebug() << "CMapManager::~CMapManager() end";
 }
 
@@ -325,10 +319,6 @@ void CMapManager::initMenus()
   actionCollection()->addAction ("toolsDeleteZone", m_toolsDeleteZone);
 
   // View menu
-  m_viewNewMapView = new KAction (this);
-  m_viewNewMapView->setText ( i18n("Open New Map View"));
-  connect  (m_viewNewMapView, SIGNAL (triggered()), this, SLOT(slotViewNewMap()));
-  actionCollection()->addAction ("viewNewMap", m_viewNewMapView);  
   m_viewUpperLevel = new KToggleAction (this);
   m_viewUpperLevel->setText ( i18n("Map Upper Level"));
   connect  (m_viewUpperLevel, SIGNAL (triggered()), this, SLOT(slotViewUpperLevel()));
@@ -532,13 +522,6 @@ void CMapManager::initPlugins()
      kDebug() << "XML File : " << xmlFile(); 
 }
 
-/** This is used ot get a pointer to the map view list
-  * @return Pointer to map view list */
-Q3PtrList<CMapViewBase> *CMapManager::getViewList(void)
-{
-  return &mapViewList;
-}
-
 void CMapManager::updateZoneListCombo(void)
 {
   QStringList lst;
@@ -577,34 +560,26 @@ CMapData *CMapManager::getMapData() const
 /** Used to create a new view of the map */
 void CMapManager::openMapView()
 {
-  CMapView *mapView = new CMapView(this,container,"mapView");
-  mapViewList.append(mapView);
+  activeView = new CMapView(this,container,"mapView");
 
   if (loginRoom)
-    mapView->showPosition(QPoint(loginRoom->getX(),loginRoom->getY()),loginRoom->getLevel());
+    activeView->showPosition(QPoint(loginRoom->getX(),loginRoom->getY()),loginRoom->getLevel());
   else
   {
     CMapRoom *firstRoom = findFirstRoom(NULL);
     if (firstRoom)
     {
-      ((CMapViewBase *)mapView)->showPosition(firstRoom->getLevel());
+      activeView->showPosition(firstRoom->getLevel());
     }
   }
   enableViewControls(true);
-  setActiveView(mapView);
 }
 
-/** Used to create a new view of the map */
 void CMapManager::openNewMapView(CMapLevel *level)
 {
-  CMapView *mapView = new CMapView(this,container,"mapView");
-  mapViewList.append(mapView);
-
-  ((CMapViewBase *)mapView)->showPosition(level);
-
+  CMapViewBase *mapView = getActiveView();
+  mapView->showPosition(level);
   enableViewControls(true);
-  setActiveView(mapView);
-  mapView->show();
 }
 
 /** This method is used to covert cords so that they snap to the grid */
@@ -626,55 +601,15 @@ QPoint CMapManager::cordsSnapGrid(QPoint oldPos)
  */
 void CMapManager::openNewMapView(QPoint pos,CMapLevel *level)
 {
-  CMapView *mapView = new CMapView(this,container,"mapView");
-  mapViewList.append(mapView);
-
-    ((CMapViewBase *)mapView)->showPosition(pos,level);
-
-  enableViewControls(true);
-  setActiveView(mapView);
-  mapView->show();
-}
-
-/** This is used to a view to the list of views that should be processed */
-void CMapManager::addView(CMapViewBase *view)
-{
-  mapViewList.append(view);
-}
-
-void CMapManager::viewChanged(void)
-{
-  for (CMapViewBase *view =mapViewList.first(); view!=0;view=mapViewList.next())
-  {
-    view->viewChanged(getActiveView()->getCurrentlyViewedLevel());
-  }
-
-  if (getCurrentTool())
-    getCurrentTool()->viewChangedEvent(getActiveView());
+  CMapViewBase *mapView = getActiveView();
+  mapView->showPosition(pos,level);
 }
 
 /** Used to set properties of the view widget */
 void CMapManager::setPropertiesAllViews(QCursor *cursor,bool mouseTracking)
 {  
-  for (CMapViewBase *view=mapViewList.first(); view!=0;view=mapViewList.next())
-  {
-    view->setCursor(*cursor);
-    view->setMouseTracking(mouseTracking);
-  }
-}
-
-/** Used to get the first view that can be selected
-  * @return The first selectedable view that is open if none are open return NULL */
-CMapViewBase *CMapManager::getFirstActivableView(void)
-{
-  CMapViewBase *result = NULL;
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    if (view->acceptFocus())
-      return view;
-  }
-
-  return result;
+  activeView->setCursor(*cursor);
+  activeView->setMouseTracking(mouseTracking);
 }
 
 /**
@@ -684,6 +619,7 @@ CMapViewBase *CMapManager::getFirstActivableView(void)
 void CMapManager::enableViewControls(bool enabled)
 {
   if (!mapData) return;  // if we don't have mapData, we're going down
+  enableNonViewActions(enabled);
   m_clipboard->enableActions(enabled);
   m_toolsUpLevel->setEnabled(enabled);
   m_toolsDownLevel->setEnabled(enabled);
@@ -704,47 +640,9 @@ void CMapManager::enableViewControls(bool enabled)
 void CMapManager::enableNonViewActions(bool enabled)
 {
   m_fileInfo->setEnabled(enabled);
-  m_viewNewMapView->setEnabled(enabled);
 
   m_toolsCreate->setEnabled(enabled);
   m_toolsGrid->setEnabled(enabled);
-}
-
-/** Used to delete a view of the map */
-void CMapManager::closeMapView(CMapViewBase *mapView)
-{
-  mapViewList.remove(mapView);
-
-  if (getActiveView()==mapView)
-  {
-    CMapViewBase *tempView = getFirstActivableView();
-    if (mapView!=tempView && tempView!=NULL )
-    {
-      setActiveView(getFirstActivableView());
-    }
-    else
-    {
-      bool found = false;
-      for (CMapViewBase *view = getFirstActivableView();
-         view!=0;
-                 view = mapViewList.next())
-      {
-        if (view->acceptFocus())
-        {
-          setActiveView(view);
-          found = true;
-          break;
-        }
-      }
-
-      if (!found)
-      {
-        enableViewControls(false);
-        activeView = NULL;
-      }
-    }
-  }
-
 }
 
 /** Used to unselect all the elements in a level */
@@ -981,10 +879,7 @@ void CMapManager::eraseMap(void)
   m_zoneCount = 0;
   m_levelCount = 0;
 
-  for (CMapViewBase *view = getViewList()->first(); view !=0; view = getViewList()->next())
-  {
-    view->setLevel(NULL);
-  }
+  activeView->setLevel(NULL);
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
   {
@@ -1123,19 +1018,11 @@ void CMapManager::createNewMap()
   setCurrentRoomWithoutUndo(room);
   setLoginRoomWithoutUndo(room);
 
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    view->showPosition(currentRoom->getLowPos(),zone->getLevels()->first());
-  }
+  activeView->showPosition(currentRoom->getLowPos(),zone->getLevels()->first());
   updateZoneListCombo();
 
-  for (CMapViewBase *view = getViewList()->first(); view!=0; view=getViewList()->next())
-  {
-    if (view->getCurrentlyViewedLevel()==NULL)  
-    {
-      view->showPosition(loginRoom,true);
-    }
-  }
+  if (activeView->getCurrentlyViewedLevel()==NULL)  
+    activeView->showPosition(loginRoom,true);
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
   {
@@ -1638,19 +1525,14 @@ void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
 
   setCurrentRoomWithoutUndo(loginRoom);
 
-  if (getLoginRoom())
+  if (loginRoom)
   {
-    for (CMapViewBase *view = getViewList()->first(); view!=0; view=getViewList()->next())
-    {
-      if (view->getCurrentlyViewedLevel()==NULL)  
-      {
-        view->showPosition(loginRoom,true);
-      }
-    }
-    setCurrentRoom(getLoginRoom());
+    if (activeView->getCurrentlyViewedLevel()==NULL)  
+      activeView->showPosition(loginRoom,true);
+    setCurrentRoom(loginRoom);
   }
 
-    updateZoneListCombo();
+  updateZoneListCombo();
   
   setUndoActive(true);
 }
@@ -1689,10 +1571,7 @@ void CMapManager::levelChanged(CMapLevel *level)
   if (level==NULL)
     return;
 
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    view->changedLevel(level);
-  }
+  activeView->changedLevel(level);
 }
 
 /** Used to inform the various parts of the mapper that a element has changed */
@@ -1711,10 +1590,7 @@ void CMapManager::changedElement(CMapElement *element)
     updateZoneListCombo();
   }
   
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    view->changedElement(element);
-  }
+  activeView->changedElement(element);
 }
 
 /** Used to inform the various parts of the mapper that a element has added */
@@ -1723,11 +1599,8 @@ void CMapManager::addedElement(CMapElement *element)
   if (element->getElementType()==ZONE)
     updateZoneListCombo();
 
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    if (view->getCurrentlyViewedLevel())
-      view->addedElement(element);
-  }
+  if (activeView->getCurrentlyViewedLevel())
+    activeView->addedElement(element);
 }
 
 
@@ -2156,11 +2029,8 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
   // Make sure that the room we are currently in is visible
   CMapRoom *tmpRoom = currentRoom;
 
-  for (CMapViewBase *view = mapViewList.first(); view!=0; view = mapViewList.next())
-  {
-    if (view->getCurrentlyViewedLevel() != currentRoom->getLevel() && view->getFollowMode())
-    view->showPosition(currentRoom->getLowPos(),currentRoom->getLevel());
-  }
+  if (activeView->getCurrentlyViewedLevel() != currentRoom->getLevel() && activeView->getFollowMode())
+  activeView->showPosition(currentRoom->getLowPos(),currentRoom->getLevel());
 
   currentRoom = tmpRoom;
   // Find the destination of the path that was traveled and if no path
@@ -2170,10 +2040,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
     if (path)
   {
     setCurrentRoom(path->getDestRoom());
-    for (CMapViewBase *view = mapViewList.first(); view!=0; view = mapViewList.next())
-    {
-      view->showPosition(currentRoom->getLowPos(),currentRoom->getLevel());
-    }
+    activeView->showPosition(currentRoom->getLowPos(),currentRoom->getLevel());
   }
   else
   {
@@ -2575,36 +2442,10 @@ CMapViewBase *CMapManager::getActiveView(void)
   return activeView;
 }                                                                    
 
-void CMapManager::setActiveView(CMapViewBase *view)
-{
-  // If this is the same view then don't need to do anything
-  if (activeView == view || view ==NULL) return;
-
-  // If there is an active view already set mark it as not active
-  if (activeView)
-  {
-    unselectElements(activeView->getCurrentlyViewedLevel());
-    activeView->setActive(false);
-    levelChanged(activeView->getCurrentlyViewedLevel());
-  }
-
-  // Make the new view active
-  view->setActive(true);
-  activeView = view;
-
-  // Update the overview window with the new active view
-  viewChanged();
-
-  activeViewChanged();
-}
-
 /** Used to repaint all the views */
 void CMapManager::redrawAllViews(void)
 {
-  for (CMapViewBase *view=mapViewList.first();view!=0; view=mapViewList.next())
-  {
-    view->redraw();
-  }
+  activeView->redraw();
 }
 
 /** This method is called to create a new map, when the new map menu option is selected */
@@ -2768,7 +2609,6 @@ void CMapManager::slotToolsLevelUp()
   {
     getActiveView()->showPosition(level,false);
     getActiveView()->redraw();
-    viewChanged();
   }
 }
 
@@ -2779,7 +2619,6 @@ void CMapManager::slotToolsLevelDown()
   {
     getActiveView()->showPosition(level,false);
     getActiveView()->redraw();
-    viewChanged();
   }
 }
 
@@ -2788,10 +2627,7 @@ void CMapManager::slotToolsLevelDelete()
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
 
   if (level)
-  {  
     deleteLevel(level);
-    viewChanged();
-  }
 }
 
 void CMapManager::slotToolsZoneUp()
@@ -2804,7 +2640,6 @@ void CMapManager::slotToolsZoneUp()
     {
       getActiveView()->showPosition(zone->getLowPos(),level);
       getActiveView()->redraw();
-      viewChanged();
     }
 
   }
@@ -2839,23 +2674,11 @@ void CMapManager::slotSelectZone()
   {
     if (zone->getLabel()==zoneMenu->currentText())
     {
-      if (getActiveView())
-      {
-        getActiveView()->showPosition(zone->getLevels()->first());
-        getActiveView()->redraw();
-      }
-      else
-      {
-        openNewMapView(zone->getLevels()->first());
-      }
+      getActiveView()->showPosition(zone->getLevels()->first());
+      getActiveView()->redraw();
       break;
     }
   }  
-}
-
-void CMapManager::slotViewNewMap()
-{
-  openMapView();
 }
 
 void CMapManager::slotViewUpperLevel()
@@ -3106,12 +2929,6 @@ void CMapManager::slotChangeLabelPos()
 
     addCommand(command);
   }
-}
-
-/** This is a debug function and not for genreal use */
-int CMapManager::getViewNumber(CMapViewBase *view)
-{
-  return mapViewList.find(view);
 }
 
 /** This is a debug function and not for genreal use */

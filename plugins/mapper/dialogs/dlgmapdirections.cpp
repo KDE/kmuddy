@@ -23,8 +23,11 @@
 #include "../cmapmanager.h"
 
 
-DlgMapDirections::DlgMapDirections(const CMapManager *mapManager, QWidget *parent) : DlgMapDirectionsBase(parent)
+DlgMapDirections::DlgMapDirections(const CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {
+  setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotOkPressed()));
+
 	m_mapManager = mapManager;
 
 	m_txtNorthLong->setText(m_mapManager->getMapData()->directions[NORTH]);

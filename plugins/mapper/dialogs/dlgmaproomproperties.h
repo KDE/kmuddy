@@ -18,8 +18,8 @@
 #ifndef DLGMAPROOMPROPERTIES_H
 #define DLGMAPROOMPROPERTIES_H
 
-#include <qwidget.h>
-#include "dlgmaproompropertiesbase.h"
+#include <QDialog>
+#include "ui_dlgmaproompropertiesbase.h"
 
 #include "../cmaproom.h"
 
@@ -27,7 +27,7 @@
   *@author KMud Development Team
   */
 
-class DlgMapRoomProperties : public DlgMapRoomPropertiesBase  {
+class DlgMapRoomProperties : public QDialog, private Ui::DlgMapRoomPropertiesBase  {
    Q_OBJECT
 public: 
 	DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent=0, const char *name=0);

@@ -21,13 +21,13 @@
 
 class CMapManager;
 
-#include "dlgmapdirectionsbase.h"
+#include "ui_dlgmapdirectionsbase.h"
 
 /**
   *@author Kmud Developer Team
   */
 
-class DlgMapDirections : public DlgMapDirectionsBase
+class DlgMapDirections : public QDialog, private Ui::DlgMapDirectionsBase
 {
 	Q_OBJECT
 public:

@@ -40,8 +40,11 @@
 #include "../cmapcmdtogglepathtwoway.h"
 
 DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent, const char *name )
-	: DlgMapPathPropertiesBase(parent,name,true)
+	: QDialog(parent,name)
 {
+  setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
+
 	useProperties = true;
 	properties = pathProperties;
 	pathUndoable = undoable;
@@ -94,8 +97,11 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 }
 
 DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathElement,bool undoable,QWidget *parent, const char *name )
-	: DlgMapPathPropertiesBase(parent,name,true)
+	: QDialog(parent,name)
 {
+  setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
+
 	useProperties = false;
 	pathUndoable = undoable;
 	path = pathElement;
@@ -371,9 +377,6 @@ void DlgMapPathProperties::slotAccept()
 		propertiesAccept(i18n("Changed Path Properties"));
 	else
 		pathAccept(i18n("Changed Path Properties"));
-
-	
-	accept();
 }
 
 void DlgMapPathProperties::slotDirectionChange()

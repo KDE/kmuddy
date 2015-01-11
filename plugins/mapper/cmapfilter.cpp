@@ -42,14 +42,8 @@ QString CMapFilter::processCommand (const QString &command)
   {
     bool found = false;
 
-    for (CMapViewBase *view = mapManager->getViewList()->first(); view !=0 ; view = mapManager->getViewList()->next())
-      if (view->getFollowMode())
-      {
-        found = true;
-        break;
-      }
-
-    if (found)
+    CMapViewBase *view = mapManager->getActiveView();
+    if (view->getFollowMode())
     {
       QString newStr;
       newStr += executeBeforeCommand (command);
@@ -111,18 +105,7 @@ void CMapFilter::processServerOutput(const QString &s)
 
   if ((dirCmd!=NULL))
   {
-    bool found = false;
-
-    for (CMapViewBase *view = mapManager->getViewList()->first(); view !=0 ; view = mapManager->getViewList()->next())
-    {
-      if (view->getFollowMode())
-      {
-        found = true;
-        break;
-      }
-    }
-
-    if (found)
+    if (mapManager->getActiveView()->getFollowMode())
     {
       bool movePlayer = true;
 

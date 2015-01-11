@@ -54,13 +54,6 @@ CMapViewManagerBase::~CMapViewManagerBase()
 {
 }
 
-/** This is used to show a view */
-void CMapViewManagerBase::showView(CMapViewBase *view)
-{
-	mapManager->addView(view);
-	emit newViewOpened(view);
-}
-
 /** Used to set the whats this text for the view */
 void CMapViewManagerBase::setWhatsThis(QString text)
 {

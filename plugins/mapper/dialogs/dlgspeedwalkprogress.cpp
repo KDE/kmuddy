@@ -21,8 +21,9 @@
 #include <qpushbutton.h>
 #include <kvbox.h>
 
-DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent, const char *name ) : DlgSpeedwalkProgressBase(parent,name)
+DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent, const char *name ) : QDialog(parent,name)
 {
+  setupUi (this);
 }
 
 DlgSpeedwalkProgress::~DlgSpeedwalkProgress()

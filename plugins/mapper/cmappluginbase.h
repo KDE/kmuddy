@@ -43,8 +43,6 @@ public:
 	CMapPluginBase(QObject *parent=0);
 	virtual ~CMapPluginBase();
 
-	/** Used to get a list of the view managers */
-	virtual Q3PtrList<CMapViewManagerBase> *getViewList(void);
 	/** Used to get a list of the tools */
 	virtual Q3PtrList<CMapToolBase> *getToolList(void);
 	/** Used to get a list of the property pages for a map element */
@@ -109,7 +107,6 @@ public:
 	
 protected:
 	Q3PtrList<CMapToolBase>            toolList;
-	Q3PtrList<CMapViewManagerBase>     viewList;
 	Q3PtrList<CMapPropertiesPaneBase>  paneList;
 
 	CMapManager *mapManager;

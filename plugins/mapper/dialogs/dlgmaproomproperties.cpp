@@ -43,8 +43,11 @@
 #include <kvbox.h>
 
 DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent, const char *name )
-	: DlgMapRoomPropertiesBase(parent,name,true)
+	: QDialog(parent,name)
 {
+  setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
+
 	room = roomElement;
 	mapManager = manager;
 
@@ -165,8 +168,6 @@ void DlgMapRoomProperties::slotAccept()
 	}
 
 	mapManager->addCommand(command);
-
-	accept();
 }
 
 void DlgMapRoomProperties::slotUseDefaultColor(bool useDefaultColor)

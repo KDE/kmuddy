@@ -20,14 +20,14 @@
 #define DLGMAPSPEEDWALK_H
 
 class CMapManager;
-
+#include <QWidget>
 #include "ui_dlgmapspeedwalkbase.h"
 
 /**
   *@author Kmud Developer Team
   */
 
-class DlgMapSpeedwalk : public QWidget, public Ui_DlgMapSpeedwalkBase
+class DlgMapSpeedwalk : public QWidget, public Ui::DlgMapSpeedwalkBase
 {
    Q_OBJECT
 public: 

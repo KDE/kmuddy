@@ -40,9 +40,6 @@ public:
 	CMapViewManagerBase(CMapManager *manager,QString actionName,QString description, KActionCollection *actionCollection,QIcon icon,QObject *parent=0, const char *name=0);
 	CMapViewManagerBase(CMapManager *manager,QString actionName,QString description, KActionCollection *actionCollection,QObject *parent=0, const char *name=0);
 	~CMapViewManagerBase();
-signals:
-	/** This is emited when a new view is opened */
-	void newViewOpened(CMapViewBase *view);
 
 protected:
 	/** Used to set the whats this text for the view */
@@ -50,7 +47,6 @@ protected:
 	/** Used to set the toop tip of the view */
 	void setToolTip(QString tip);
 	/** This is used to show a view */
-	void showView(CMapViewBase *view);
 
 protected slots:
 	/** This is called when the view is to be opended */

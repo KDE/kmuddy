@@ -152,13 +152,3 @@ void CMapToolText::toolUnselected(void)
 	mapManager->unsetEditElement();
 }
 
-/** This method is called when the active view changes */
-void CMapToolText::viewChangedEvent(CMapViewBase *view)
-{
-	if (view)
-	{
-		view->setCursor(QCursor(Qt::IBeamCursor));
-		view->setMouseTracking(false);
-	}
-}
-

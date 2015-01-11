@@ -58,9 +58,6 @@ public:
 	virtual void keyPressEvent(QKeyEvent *)                                            { }
 	virtual void keyReleaseEvent(QKeyEvent *)                                          { }
 
-	/** This method is called when the active view changes */
-	virtual void viewChangedEvent(CMapViewBase *view)=0;
-
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void)=0;
 	/** This function is called when a tool is unselected */

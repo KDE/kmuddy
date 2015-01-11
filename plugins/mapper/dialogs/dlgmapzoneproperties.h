@@ -19,10 +19,10 @@
 #define DLGMAPZONEPROPERTIES_H
 
 
-#include <qwidget.h>
+#include <QDialog>
 
 #include "../cmapzone.h"
-#include "dlgmapzonepropertiesbase.h"
+#include "ui_dlgmapzonepropertiesbase.h"
 
 class CMapManager;
 
@@ -30,7 +30,7 @@ class CMapManager;
   *@author Kmud Developer Team
   */
 
-class DlgMapZoneProperties : public DlgMapZonePropertiesBase
+class DlgMapZoneProperties : public QDialog, private Ui::DlgMapZonePropertiesBase
 {
    Q_OBJECT
 public: 

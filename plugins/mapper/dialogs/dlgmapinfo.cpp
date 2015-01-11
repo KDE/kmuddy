@@ -25,8 +25,10 @@
 #include "../cmapzone.h"
 #include "../cmaplevel.h"
 
-DlgMapInfo::DlgMapInfo(CMapManager *manager,QWidget *parent, const char *name ) : DlgMapInfoBase(parent,name,true)
+DlgMapInfo::DlgMapInfo(CMapManager *manager,QWidget *parent, const char *name ) : QDialog(parent, name)
 {
+  setupUi (this);
+
 	// FIXME_jp: need to get character and mud detials
 
 	// Starting position detials

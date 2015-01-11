@@ -19,7 +19,7 @@
 #define DLGMAPINFO_H
 
 #include <qwidget.h>
-#include "dlgmapinfobase.h"
+#include "ui_dlgmapinfobase.h"
 
 class CMapManager;
 
@@ -27,7 +27,7 @@ class CMapManager;
   *@author KMud Development Team
   */
 
-class DlgMapInfo : public DlgMapInfoBase
+class DlgMapInfo : public QDialog, private Ui_DlgMapInfoBase
 {
    Q_OBJECT
 public: 

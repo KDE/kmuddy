@@ -1,1459 +1,1080 @@
-<!DOCTYPE UI><UI>
-<class>DlgMapPathPropertiesBase</class>
-<widget>
-    <class>QDialog</class>
-    <property stdset="1">
-        <name>name</name>
-        <cstring>DlgMapPathPropertiesBase</cstring>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>DlgMapPathPropertiesBase</class>
+  <widget class="QDialog" name="DlgMapPathPropertiesBase">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>435</width>
+        <height>456</height>
+      </rect>
     </property>
-    <property stdset="1">
-        <name>geometry</name>
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>435</width>
-            <height>456</height>
-        </rect>
+    <property name="windowTitle">
+      <string>Path Properties</string>
     </property>
-    <property stdset="1">
-        <name>caption</name>
-        <string>Path Properties</string>
-    </property>
-    <vbox>
-        <property stdset="1">
-            <name>margin</name>
-            <number>11</number>
-        </property>
-        <property stdset="1">
-            <name>spacing</name>
-            <number>6</number>
-        </property>
-        <widget>
-            <class>QTabWidget</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>tabPaths</cstring>
-            </property>
-            <widget>
-                <class>QWidget</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>tabExits</cstring>
-                </property>
-                <attribute>
-                    <name>title</name>
-                    <string>Exits</string>
-                </attribute>
-                <grid>
-                    <property stdset="1">
-                        <name>margin</name>
-                        <number>11</number>
+    <layout class="QVBoxLayout">
+      <property name="margin">
+        <number>11</number>
+      </property>
+      <property name="spacing">
+        <number>6</number>
+      </property>
+      <item>
+        <widget class="QTabWidget" name="tabPaths">
+          <widget class="QWidget" name="tabExits">
+            <attribute name="title">
+              <string>Exits</string>
+            </attribute>
+            <layout class="QGridLayout">
+              <property name="margin">
+                <number>11</number>
+              </property>
+              <property name="spacing">
+                <number>6</number>
+              </property>
+              <item row="0" column="0">
+                <widget class="Q3ButtonGroup" name="grdExits">
+                  <property name="title">
+                    <string>Exit Details</string>
+                  </property>
+                  <layout class="QVBoxLayout">
+                    <property name="margin">
+                      <number>11</number>
                     </property>
-                    <property stdset="1">
-                        <name>spacing</name>
-                        <number>6</number>
+                    <property name="spacing">
+                      <number>6</number>
                     </property>
-                    <widget row="0"  column="0" >
-                        <class>QButtonGroup</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>grdExits</cstring>
+                    <item>
+                      <widget class="QRadioButton" name="chkNormal">
+                        <property name="text">
+                          <string>Normal exit</string>
                         </property>
-                        <property stdset="1">
-                            <name>title</name>
-                            <string>Exit Details</string>
+                        <property name="buttonGroupId">
+                          <number>1</number>
                         </property>
-                        <vbox>
-                            <property stdset="1">
-                                <name>margin</name>
-                                <number>11</number>
+                      </widget>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout">
+                        <property name="margin">
+                          <number>0</number>
+                        </property>
+                        <property name="spacing">
+                          <number>6</number>
+                        </property>
+                        <item>
+                          <layout class="QVBoxLayout">
+                            <property name="margin">
+                              <number>0</number>
                             </property>
-                            <property stdset="1">
-                                <name>spacing</name>
-                                <number>6</number>
+                            <property name="spacing">
+                              <number>6</number>
                             </property>
-                            <widget>
-                                <class>QRadioButton</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>chkNormal</cstring>
+                            <item>
+                              <widget class="QLabel" name="lblSrc">
+                                <property name="text">
+                                  <string>Source Directions</string>
                                 </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>Normal exit</string>
+                                <property name="wordWrap">
+                                  <bool>false</bool>
                                 </property>
-                                <property stdset="1">
-                                    <name>buttonGroupId</name>
-                                    <number>1</number>
+                              </widget>
+                            </item>
+                            <item>
+                              <layout class="QGridLayout">
+                                <property name="margin">
+                                  <number>0</number>
                                 </property>
-                            </widget>
-                            <widget>
-                                <class>QLayoutWidget</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>Layout11</cstring>
+                                <property name="spacing">
+                                  <number>6</number>
                                 </property>
-                                <hbox>
-                                    <property stdset="1">
-                                        <name>margin</name>
-                                        <number>0</number>
+                                <item row="4" column="0" rowspan="1" colspan="3">
+                                  <widget class="QPushButton" name="cmdSrcDown">
+                                    <property name="text">
+                                      <string>Down</string>
                                     </property>
-                                    <property stdset="1">
-                                        <name>spacing</name>
-                                        <number>6</number>
+                                    <property name="checkable">
+                                      <bool>true</bool>
                                     </property>
-                                    <widget>
-                                        <class>QLayoutWidget</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>Layout7</cstring>
-                                        </property>
-                                        <vbox>
-                                            <property stdset="1">
-                                                <name>margin</name>
-                                                <number>0</number>
-                                            </property>
-                                            <property stdset="1">
-                                                <name>spacing</name>
-                                                <number>6</number>
-                                            </property>
-                                            <widget>
-                                                <class>QLabel</class>
-                                                <property stdset="1">
-                                                    <name>name</name>
-                                                    <cstring>lblSrc</cstring>
-                                                </property>
-                                                <property stdset="1">
-                                                    <name>text</name>
-                                                    <string>Source Directions</string>
-                                                </property>
-                                            </widget>
-                                            <widget>
-                                                <class>QLayoutWidget</class>
-                                                <property stdset="1">
-                                                    <name>name</name>
-                                                    <cstring>Layout5</cstring>
-                                                </property>
-                                                <grid>
-                                                    <property stdset="1">
-                                                        <name>margin</name>
-                                                        <number>0</number>
-                                                    </property>
-                                                    <property stdset="1">
-                                                        <name>spacing</name>
-                                                        <number>6</number>
-                                                    </property>
-                                                    <widget row="4"  column="0"  rowspan="1"  colspan="3" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcDown</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>Down</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="2"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>E</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="1" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcS</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>S</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="0"  column="0"  rowspan="1"  colspan="3" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcUp</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>0</width>
-                                                                <height>0</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>32767</width>
-                                                                <height>32767</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>Up</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="2"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>W</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcNE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>NE</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcNW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>NW</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcSE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>SE</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="1" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcN</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>N</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdSrcSW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>SW</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                </grid>
-                                            </widget>
-                                        </vbox>
-                                    </widget>
-                                    <spacer>
-                                        <property>
-                                            <name>name</name>
-                                            <cstring>Spacer6</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>orientation</name>
-                                            <enum>Horizontal</enum>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>sizeType</name>
-                                            <enum>Expanding</enum>
-                                        </property>
-                                        <property>
-                                            <name>sizeHint</name>
-                                            <size>
-                                                <width>20</width>
-                                                <height>20</height>
-                                            </size>
-                                        </property>
-                                    </spacer>
-                                    <widget>
-                                        <class>QLayoutWidget</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>Layout8</cstring>
-                                        </property>
-                                        <vbox>
-                                            <property stdset="1">
-                                                <name>margin</name>
-                                                <number>0</number>
-                                            </property>
-                                            <property stdset="1">
-                                                <name>spacing</name>
-                                                <number>6</number>
-                                            </property>
-                                            <widget>
-                                                <class>QLabel</class>
-                                                <property stdset="1">
-                                                    <name>name</name>
-                                                    <cstring>lblDest</cstring>
-                                                </property>
-                                                <property stdset="1">
-                                                    <name>text</name>
-                                                    <string>Destination Direction</string>
-                                                </property>
-                                            </widget>
-                                            <widget>
-                                                <class>QLayoutWidget</class>
-                                                <property stdset="1">
-                                                    <name>name</name>
-                                                    <cstring>Layout6</cstring>
-                                                </property>
-                                                <grid>
-                                                    <property stdset="1">
-                                                        <name>margin</name>
-                                                        <number>0</number>
-                                                    </property>
-                                                    <property stdset="1">
-                                                        <name>spacing</name>
-                                                        <number>6</number>
-                                                    </property>
-                                                    <widget row="4"  column="0"  rowspan="1"  colspan="3" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestDown</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>Down</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestNE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>NE</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestSE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>SE</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="1" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestN</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>N</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="1"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestNW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>NW</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="2"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>W</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="2"  column="2" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestE</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>E</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="1" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestS</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>S</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="3"  column="0" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestSW</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>minimumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>maximumSize</name>
-                                                            <size>
-                                                                <width>30</width>
-                                                                <height>30</height>
-                                                            </size>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>SW</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                    <widget row="0"  column="0"  rowspan="1"  colspan="3" >
-                                                        <class>QPushButton</class>
-                                                        <property stdset="1">
-                                                            <name>name</name>
-                                                            <cstring>cmdDestUp</cstring>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>text</name>
-                                                            <string>Up</string>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                        <property stdset="1">
-                                                            <name>toggleButton</name>
-                                                            <bool>true</bool>
-                                                        </property>
-                                                    </widget>
-                                                </grid>
-                                            </widget>
-                                        </vbox>
-                                    </widget>
-                                    <spacer>
-                                        <property>
-                                            <name>name</name>
-                                            <cstring>Spacer5</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>orientation</name>
-                                            <enum>Horizontal</enum>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>sizeType</name>
-                                            <enum>Expanding</enum>
-                                        </property>
-                                        <property>
-                                            <name>sizeHint</name>
-                                            <size>
-                                                <width>20</width>
-                                                <height>20</height>
-                                            </size>
-                                        </property>
-                                    </spacer>
-                                </hbox>
-                            </widget>
-                            <widget>
-                                <class>QRadioButton</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>chkSpecial</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>Special Exit</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLabel</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>lblSpecial</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>Special Command</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLayoutWidget</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>Layout10</cstring>
-                                </property>
-                                <hbox>
-                                    <property stdset="1">
-                                        <name>margin</name>
-                                        <number>0</number>
+                                    <property name="checkable">
+                                      <bool>true</bool>
                                     </property>
-                                    <property stdset="1">
-                                        <name>spacing</name>
-                                        <number>6</number>
+                                  </widget>
+                                </item>
+                                <item row="2" column="2">
+                                  <widget class="QPushButton" name="cmdSrcE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
                                     </property>
-                                    <widget>
-                                        <class>QLabel</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>lblSrcToDest</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>text</name>
-                                            <string>Source To Destination:</string>
-                                        </property>
-                                    </widget>
-                                    <widget>
-                                        <class>QLineEdit</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>txtSpecialSrc</cstring>
-                                        </property>
-                                    </widget>
-                                </hbox>
-                            </widget>
-                            <widget>
-                                <class>QLayoutWidget</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>Layout11</cstring>
-                                </property>
-                                <hbox>
-                                    <property stdset="1">
-                                        <name>margin</name>
-                                        <number>0</number>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
                                     </property>
-                                    <property stdset="1">
-                                        <name>spacing</name>
-                                        <number>6</number>
+                                    <property name="text">
+                                      <string>E</string>
                                     </property>
-                                    <widget>
-                                        <class>QLabel</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>lblDestToSrc</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>text</name>
-                                            <string>Destination To Source:</string>
-                                        </property>
-                                    </widget>
-                                    <widget>
-                                        <class>QLineEdit</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>txtSpecialDest</cstring>
-                                        </property>
-                                    </widget>
-                                </hbox>
-                            </widget>
-                        </vbox>
-                    </widget>
-                </grid>
-            </widget>
-            <widget>
-                <class>QWidget</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>tabCommands</cstring>
-                </property>
-                <attribute>
-                    <name>title</name>
-                    <string>Commands</string>
-                </attribute>
-                <vbox>
-                    <property stdset="1">
-                        <name>margin</name>
-                        <number>11</number>
-                    </property>
-                    <property stdset="1">
-                        <name>spacing</name>
-                        <number>6</number>
-                    </property>
-                    <widget>
-                        <class>QGroupBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>fraSrcDestCommands</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>title</name>
-                            <string>Src To Destination Commands</string>
-                        </property>
-                        <vbox>
-                            <property stdset="1">
-                                <name>margin</name>
-                                <number>11</number>
-                            </property>
-                            <property stdset="1">
-                                <name>spacing</name>
-                                <number>6</number>
-                            </property>
-                            <widget>
-                                <class>QLabel</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>lblSrcBefore</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>Before walking path:</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLineEdit</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>txtSrcBefore</cstring>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLabel</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>lblSrcAfter</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>After walking path:</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLineEdit</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>txtSrcAfter</cstring>
-                                </property>
-                            </widget>
-                        </vbox>
-                    </widget>
-                    <widget>
-                        <class>QGroupBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>fraDestSrcCommands</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>title</name>
-                            <string>Destination To Source Commands</string>
-                        </property>
-                        <vbox>
-                            <property stdset="1">
-                                <name>margin</name>
-                                <number>11</number>
-                            </property>
-                            <property stdset="1">
-                                <name>spacing</name>
-                                <number>6</number>
-                            </property>
-                            <widget>
-                                <class>QLabel</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>lblDestBefore</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>Before walking path:</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLineEdit</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>txtDestBefore</cstring>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLabel</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>lblDestAfter</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>text</name>
-                                    <string>After walking path:</string>
-                                </property>
-                            </widget>
-                            <widget>
-                                <class>QLineEdit</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>txtDestAfter</cstring>
-                                </property>
-                            </widget>
-                        </vbox>
-                    </widget>
-                    <spacer>
-                        <property>
-                            <name>name</name>
-                            <cstring>Spacer12</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>orientation</name>
-                            <enum>Vertical</enum>
-                        </property>
-                        <property stdset="1">
-                            <name>sizeType</name>
-                            <enum>Expanding</enum>
-                        </property>
-                        <property>
-                            <name>sizeHint</name>
-                            <size>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="1">
+                                  <widget class="QPushButton" name="cmdSrcS">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>S</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="0" column="0" rowspan="1" colspan="3">
+                                  <widget class="QPushButton" name="cmdSrcUp">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>32767</width>
+                                        <height>32767</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>Up</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="2" column="0">
+                                  <widget class="QPushButton" name="cmdSrcW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>W</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="2">
+                                  <widget class="QPushButton" name="cmdSrcNE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>NE</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="0">
+                                  <widget class="QPushButton" name="cmdSrcNW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>NW</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="2">
+                                  <widget class="QPushButton" name="cmdSrcSE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>SE</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="1">
+                                  <widget class="QPushButton" name="cmdSrcN">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>N</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="0">
+                                  <widget class="QPushButton" name="cmdSrcSW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>SW</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                              </layout>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <spacer name="Spacer6">
+                            <property name="sizeHint">
+                              <size>
                                 <width>20</width>
                                 <height>20</height>
-                            </size>
-                        </property>
-                    </spacer>
-                </vbox>
-            </widget>
-            <widget>
-                <class>QWidget</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>tabDirections</cstring>
-                </property>
-                <attribute>
-                    <name>title</name>
-                    <string>Direction</string>
-                </attribute>
-                <vbox>
-                    <property stdset="1">
-                        <name>margin</name>
-                        <number>11</number>
-                    </property>
-                    <property stdset="1">
-                        <name>spacing</name>
-                        <number>6</number>
-                    </property>
-                    <widget>
-                        <class>QLayoutWidget</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>Layout3</cstring>
-                        </property>
-                        <vbox>
-                            <property stdset="1">
-                                <name>margin</name>
-                                <number>0</number>
+                              </size>
                             </property>
-                            <property stdset="1">
-                                <name>spacing</name>
-                                <number>6</number>
+                            <property name="sizeType">
+                              <enum>QSizePolicy::Expanding</enum>
                             </property>
-                            <widget>
-                                <class>QButtonGroup</class>
-                                <property stdset="1">
-                                    <name>name</name>
-                                    <cstring>grdDirs</cstring>
+                            <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                            </property>
+                          </spacer>
+                        </item>
+                        <item>
+                          <layout class="QVBoxLayout">
+                            <property name="margin">
+                              <number>0</number>
+                            </property>
+                            <property name="spacing">
+                              <number>6</number>
+                            </property>
+                            <item>
+                              <widget class="QLabel" name="lblDest">
+                                <property name="text">
+                                  <string>Destination Direction</string>
                                 </property>
-                                <property stdset="1">
-                                    <name>title</name>
-                                    <string>Path Directions</string>
+                                <property name="wordWrap">
+                                  <bool>false</bool>
                                 </property>
-                                <vbox>
-                                    <property stdset="1">
-                                        <name>margin</name>
-                                        <number>11</number>
+                              </widget>
+                            </item>
+                            <item>
+                              <layout class="QGridLayout">
+                                <property name="margin">
+                                  <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                  <number>6</number>
+                                </property>
+                                <item row="4" column="0" rowspan="1" colspan="3">
+                                  <widget class="QPushButton" name="cmdDestDown">
+                                    <property name="text">
+                                      <string>Down</string>
                                     </property>
-                                    <property stdset="1">
-                                        <name>spacing</name>
-                                        <number>6</number>
+                                    <property name="checkable">
+                                      <bool>true</bool>
                                     </property>
-                                    <widget>
-                                        <class>QRadioButton</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>optOneWay</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>text</name>
-                                            <string>One Way</string>
-                                        </property>
-                                    </widget>
-                                    <widget>
-                                        <class>QRadioButton</class>
-                                        <property stdset="1">
-                                            <name>name</name>
-                                            <cstring>optTwoWay</cstring>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>text</name>
-                                            <string>Two Way</string>
-                                        </property>
-                                        <property stdset="1">
-                                            <name>buttonGroupId</name>
-                                            <number>0</number>
-                                        </property>
-                                    </widget>
-                                </vbox>
-                            </widget>
-                            <spacer>
-                                <property>
-                                    <name>name</name>
-                                    <cstring>Spacer2</cstring>
-                                </property>
-                                <property stdset="1">
-                                    <name>orientation</name>
-                                    <enum>Vertical</enum>
-                                </property>
-                                <property stdset="1">
-                                    <name>sizeType</name>
-                                    <enum>Expanding</enum>
-                                </property>
-                                <property>
-                                    <name>sizeHint</name>
-                                    <size>
-                                        <width>20</width>
-                                        <height>20</height>
-                                    </size>
-                                </property>
-                            </spacer>
-                        </vbox>
-                    </widget>
-                </vbox>
-            </widget>
-        </widget>
-        <widget>
-            <class>QLayoutWidget</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>Layout2</cstring>
-            </property>
-            <hbox>
-                <property stdset="1">
-                    <name>margin</name>
-                    <number>0</number>
-                </property>
-                <property stdset="1">
-                    <name>spacing</name>
-                    <number>6</number>
-                </property>
-                <spacer>
-                    <property>
-                        <name>name</name>
-                        <cstring>Spacer1</cstring>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="2">
+                                  <widget class="QPushButton" name="cmdDestNE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>NE</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="2">
+                                  <widget class="QPushButton" name="cmdDestSE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>SE</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="1">
+                                  <widget class="QPushButton" name="cmdDestN">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>N</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="1" column="0">
+                                  <widget class="QPushButton" name="cmdDestNW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>NW</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="2" column="0">
+                                  <widget class="QPushButton" name="cmdDestW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>W</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="2" column="2">
+                                  <widget class="QPushButton" name="cmdDestE">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>E</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="1">
+                                  <widget class="QPushButton" name="cmdDestS">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>S</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="3" column="0">
+                                  <widget class="QPushButton" name="cmdDestSW">
+                                    <property name="minimumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                      <size>
+                                        <width>30</width>
+                                        <height>30</height>
+                                      </size>
+                                    </property>
+                                    <property name="text">
+                                      <string>SW</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                                <item row="0" column="0" rowspan="1" colspan="3">
+                                  <widget class="QPushButton" name="cmdDestUp">
+                                    <property name="text">
+                                      <string>Up</string>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                    <property name="checkable">
+                                      <bool>true</bool>
+                                    </property>
+                                  </widget>
+                                </item>
+                              </layout>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <spacer name="Spacer5">
+                            <property name="sizeHint">
+                              <size>
+                                <width>20</width>
+                                <height>20</height>
+                              </size>
+                            </property>
+                            <property name="sizeType">
+                              <enum>QSizePolicy::Expanding</enum>
+                            </property>
+                            <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                            </property>
+                          </spacer>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <widget class="QRadioButton" name="chkSpecial">
+                        <property name="text">
+                          <string>Special Exit</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="lblSpecial">
+                        <property name="text">
+                          <string>Special Command</string>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>false</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout">
+                        <property name="margin">
+                          <number>0</number>
+                        </property>
+                        <property name="spacing">
+                          <number>6</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="lblSrcToDest">
+                            <property name="text">
+                              <string>Source To Destination:</string>
+                            </property>
+                            <property name="wordWrap">
+                              <bool>false</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLineEdit" name="txtSpecialSrc"/>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout">
+                        <property name="margin">
+                          <number>0</number>
+                        </property>
+                        <property name="spacing">
+                          <number>6</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="lblDestToSrc">
+                            <property name="text">
+                              <string>Destination To Source:</string>
+                            </property>
+                            <property name="wordWrap">
+                              <bool>false</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLineEdit" name="txtSpecialDest"/>
+                        </item>
+                      </layout>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="tabCommands">
+            <attribute name="title">
+              <string>Commands</string>
+            </attribute>
+            <layout class="QVBoxLayout">
+              <property name="margin">
+                <number>11</number>
+              </property>
+              <property name="spacing">
+                <number>6</number>
+              </property>
+              <item>
+                <widget class="QGroupBox" name="fraSrcDestCommands">
+                  <property name="title">
+                    <string>Src To Destination Commands</string>
+                  </property>
+                  <layout class="QVBoxLayout">
+                    <property name="margin">
+                      <number>11</number>
                     </property>
-                    <property stdset="1">
-                        <name>orientation</name>
-                        <enum>Horizontal</enum>
+                    <property name="spacing">
+                      <number>6</number>
                     </property>
-                    <property stdset="1">
-                        <name>sizeType</name>
-                        <enum>Expanding</enum>
+                    <item>
+                      <widget class="QLabel" name="lblSrcBefore">
+                        <property name="text">
+                          <string>Before walking path:</string>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>false</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLineEdit" name="txtSrcBefore"/>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="lblSrcAfter">
+                        <property name="text">
+                          <string>After walking path:</string>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>false</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLineEdit" name="txtSrcAfter"/>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <widget class="QGroupBox" name="fraDestSrcCommands">
+                  <property name="title">
+                    <string>Destination To Source Commands</string>
+                  </property>
+                  <layout class="QVBoxLayout">
+                    <property name="margin">
+                      <number>11</number>
                     </property>
-                    <property>
-                        <name>sizeHint</name>
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
+                    <property name="spacing">
+                      <number>6</number>
                     </property>
+                    <item>
+                      <widget class="QLabel" name="lblDestBefore">
+                        <property name="text">
+                          <string>Before walking path:</string>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>false</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLineEdit" name="txtDestBefore"/>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="lblDestAfter">
+                        <property name="text">
+                          <string>After walking path:</string>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>false</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLineEdit" name="txtDestAfter"/>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <spacer name="Spacer12">
+                  <property name="sizeHint">
+                    <size>
+                      <width>20</width>
+                      <height>20</height>
+                    </size>
+                  </property>
+                  <property name="sizeType">
+                    <enum>QSizePolicy::Expanding</enum>
+                  </property>
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
                 </spacer>
-                <widget>
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>cmdOK</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>OK</string>
-                    </property>
-                </widget>
-                <widget>
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>cmdCancel</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Cancel</string>
-                    </property>
-                </widget>
-            </hbox>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="tabDirections">
+            <attribute name="title">
+              <string>Direction</string>
+            </attribute>
+            <layout class="QVBoxLayout">
+              <property name="margin">
+                <number>11</number>
+              </property>
+              <property name="spacing">
+                <number>6</number>
+              </property>
+              <item>
+                <layout class="QVBoxLayout">
+                  <property name="margin">
+                    <number>0</number>
+                  </property>
+                  <property name="spacing">
+                    <number>6</number>
+                  </property>
+                  <item>
+                    <widget class="Q3ButtonGroup" name="grdDirs">
+                      <property name="title">
+                        <string>Path Directions</string>
+                      </property>
+                      <layout class="QVBoxLayout">
+                        <property name="margin">
+                          <number>11</number>
+                        </property>
+                        <property name="spacing">
+                          <number>6</number>
+                        </property>
+                        <item>
+                          <widget class="QRadioButton" name="optOneWay">
+                            <property name="text">
+                              <string>One Way</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QRadioButton" name="optTwoWay">
+                            <property name="text">
+                              <string>Two Way</string>
+                            </property>
+                            <property name="buttonGroupId">
+                              <number>0</number>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <spacer name="Spacer2">
+                      <property name="sizeHint">
+                        <size>
+                          <width>20</width>
+                          <height>20</height>
+                        </size>
+                      </property>
+                      <property name="sizeType">
+                        <enum>QSizePolicy::Expanding</enum>
+                      </property>
+                      <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                      </property>
+                    </spacer>
+                  </item>
+                </layout>
+              </item>
+            </layout>
+          </widget>
         </widget>
-    </vbox>
-</widget>
-<connections>
+      </item>
+      <item>
+        <layout class="QHBoxLayout">
+          <property name="margin">
+            <number>0</number>
+          </property>
+          <property name="spacing">
+            <number>6</number>
+          </property>
+          <item>
+            <spacer name="Spacer1">
+              <property name="sizeHint">
+                <size>
+                  <width>20</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QPushButton" name="cmdOK">
+              <property name="text">
+                <string>OK</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="cmdCancel">
+              <property name="text">
+                <string>Cancel</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <connections>
     <connection>
-        <sender>cmdSrcUp</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcUp()</slot>
+      <sender>cmdSrcUp</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcUp()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcNW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcNW()</slot>
+      <sender>cmdSrcNW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcNW()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcN</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcN()</slot>
+      <sender>cmdSrcN</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcN()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcE()</slot>
+      <sender>cmdSrcE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcE()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcSW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcSW()</slot>
+      <sender>cmdSrcSW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcSW()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcS</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcS()</slot>
+      <sender>cmdSrcS</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcS()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcSE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcSE()</slot>
+      <sender>cmdSrcSE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcSE()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcDown</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcDown()</slot>
+      <sender>cmdSrcDown</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcDown()</slot>
     </connection>
     <connection>
-        <sender>cmdDestW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestW()</slot>
+      <sender>cmdDestW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestW()</slot>
     </connection>
     <connection>
-        <sender>cmdDestE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestE()</slot>
+      <sender>cmdDestE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestE()</slot>
     </connection>
     <connection>
-        <sender>cmdDestSW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestSW()</slot>
+      <sender>cmdDestSW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestSW()</slot>
     </connection>
     <connection>
-        <sender>cmdDestS</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestS()</slot>
+      <sender>cmdDestS</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestS()</slot>
     </connection>
     <connection>
-        <sender>cmdDestSE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestSE()</slot>
+      <sender>cmdDestSE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestSE()</slot>
     </connection>
     <connection>
-        <sender>cmdDestDown</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestDown()</slot>
+      <sender>cmdDestDown</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestDown()</slot>
     </connection>
     <connection>
-        <sender>cmdDestNW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestNW()</slot>
+      <sender>cmdDestNW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestNW()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcNE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcNE()</slot>
+      <sender>cmdSrcNE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcNE()</slot>
     </connection>
     <connection>
-        <sender>cmdDestN</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestN()</slot>
+      <sender>cmdDestN</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestN()</slot>
     </connection>
     <connection>
-        <sender>cmdDestNE</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestNE()</slot>
+      <sender>cmdDestNE</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestNE()</slot>
     </connection>
     <connection>
-        <sender>cmdSrcW</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotSrcW()</slot>
+      <sender>cmdSrcW</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotSrcW()</slot>
     </connection>
     <connection>
-        <sender>cmdDestUp</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDestUp()</slot>
+      <sender>cmdDestUp</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDestUp()</slot>
     </connection>
     <connection>
-        <sender>cmdOK</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotAccept()</slot>
+      <sender>cmdOK</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>accept()</slot>
     </connection>
     <connection>
-        <sender>cmdCancel</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>reject()</slot>
+      <sender>cmdCancel</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>reject()</slot>
     </connection>
     <connection>
-        <sender>chkNormal</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotExitTypeChange()</slot>
+      <sender>chkNormal</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotExitTypeChange()</slot>
     </connection>
     <connection>
-        <sender>chkSpecial</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotExitTypeChange()</slot>
+      <sender>chkSpecial</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotExitTypeChange()</slot>
     </connection>
     <connection>
-        <sender>optOneWay</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDirectionChange()</slot>
+      <sender>optOneWay</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDirectionChange()</slot>
     </connection>
     <connection>
-        <sender>optTwoWay</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgMapPathPropertiesBase</receiver>
-        <slot>slotDirectionChange()</slot>
+      <sender>optTwoWay</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgMapPathPropertiesBase</receiver>
+      <slot>slotDirectionChange()</slot>
     </connection>
-    <slot access="protected">slotAccept()</slot>
-    <slot access="protected">slotDestDown()</slot>
-    <slot access="protected">slotDestE()</slot>
-    <slot access="protected">slotDestN()</slot>
-    <slot access="protected">slotDestNE()</slot>
-    <slot access="protected">slotDestNW()</slot>
-    <slot access="protected">slotDestS()</slot>
-    <slot access="protected">slotDestSE()</slot>
-    <slot access="protected">slotDestSW()</slot>
-    <slot access="protected">slotDestUp()</slot>
-    <slot access="protected">slotDestW()</slot>
-    <slot access="protected">slotDirectionChange()</slot>
-    <slot access="protected">slotExitTypeChange()</slot>
-    <slot access="protected">slotSrcDown()</slot>
-    <slot access="protected">slotSrcE()</slot>
-    <slot access="protected">slotSrcN()</slot>
-    <slot access="protected">slotSrcNE()</slot>
-    <slot access="protected">slotSrcNW()</slot>
-    <slot access="protected">slotSrcS()</slot>
-    <slot access="protected">slotSrcSE()</slot>
-    <slot access="protected">slotSrcSW()</slot>
-    <slot access="protected">slotSrcUp()</slot>
-    <slot access="protected">slotSrcW()</slot>
-</connections>
-</UI>
+  </connections>
+</ui>

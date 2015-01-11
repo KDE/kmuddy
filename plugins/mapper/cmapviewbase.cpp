@@ -40,7 +40,6 @@ CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent, const char *nam
 
 CMapViewBase::~CMapViewBase()
 {
-  mapManager->closeMapView(this);
 }
 
 /** Used to get the currently viewed zone */
@@ -313,24 +312,18 @@ bool CMapViewBase::isElementVisibale(CMapElement *element)
 /** Used to set the view to active */
 void CMapViewBase::focusInEvent(QFocusEvent *)
 {
-  if (acceptFocus())
-    mapManager->setActiveView(this);
+//  if (acceptFocus())
+//    mapManager->setActiveView(this);
 }
 
 void CMapViewBase::closeEvent ( QCloseEvent *)
 {
-  mapManager->closeMapView(this);
-  emit viewClosed(this);
 }
 
 void CMapViewBase::slotWidgetBeingClosed()
 {
-  mapManager->closeMapView(this);
-  emit viewClosed(this);
 }
 
 void CMapViewBase::slotDockWindowClose()
 {
-  mapManager->closeMapView(this);
-  emit viewClosed(this);
 }

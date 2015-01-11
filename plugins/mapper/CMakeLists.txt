@@ -61,9 +61,6 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmapcolorbase.ui
    dialogs/dlgmapmovementbase.ui
    dialogs/dlgmapspeedwalkbase.ui
-   )
-
-kde4_add_ui3_files (kmuddymapper_PART_SRCS
    dialogs/dlgmapinfobase.ui
    dialogs/dlgmaptextpropertiesbase.ui
    dialogs/dlgmaproompropertiesbase.ui

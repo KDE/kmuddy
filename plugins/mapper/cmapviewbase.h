@@ -104,8 +104,6 @@ public:
 
 	/** Called to redraw the view */
 	virtual void redraw(void)                       { update(); }
-	/** This is called when a view changes. */
-	virtual void viewChanged(CMapLevel *)           { }
 
 	/** Used to find out if the ctrl key is being held down.
       * This is used by the select tool.                    */
@@ -123,9 +121,6 @@ public:
 	virtual void playerPositionChanged(CMapRoom *) {}
 	/** Used to set the current level. This is for internal use */
 	virtual void setLevel(CMapLevel *level);
-
-signals:
-	void viewClosed(CMapViewBase *view);
 
 protected:
 	virtual void slotWidgetBeingClosed();

@@ -99,13 +99,3 @@ void CMapToolZone::toolUnselected(void)
 		mapManager->getActiveView()->redraw();
 }
 
-/** This method is called when the active view changes */
-void CMapToolZone::viewChangedEvent(CMapViewBase *view)
-{
-	if (view)
-	{
-		view->setMouseTracking(true);
-		view->setCursor(Qt::ArrowCursor);
-	}
-}
-

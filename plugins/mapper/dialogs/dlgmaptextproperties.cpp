@@ -116,8 +116,10 @@ void CMapTextPreview::drawContents(QPainter *paint,int , int , int, int )
 }
 
 
-DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent, const char *name ) : DlgMapTextPropertiesBase(parent,name,true)
+DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent, const char *name ) : QDialog(parent,name)
 {
+  setupUi (this);
+
 	text = textElement;
 	mapManager = manager;
 	QString width;
@@ -253,8 +255,6 @@ void DlgMapTextProperties::slotAccept()
 	command->compare("Size",text->getSize(),QSize(width,height));
 
 	mapManager->addCommand(command);
-
-	accept();
 }
 
 void DlgMapTextProperties::slotUpdatePreview()

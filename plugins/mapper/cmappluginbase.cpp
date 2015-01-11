@@ -29,18 +29,11 @@ CMapPluginBase::CMapPluginBase(QObject *parent) : KParts::Plugin(parent)
 	mapManager = dynamic_cast<CMapManager *>(parent);
 
 	toolList.setAutoDelete(false);
-	viewList.setAutoDelete(false);
 	paneList.setAutoDelete(false);
 }
 
 CMapPluginBase::~CMapPluginBase()
 {
-}
-
-/** Used to get a list of the view managers */
-Q3PtrList<CMapViewManagerBase> *CMapPluginBase::getViewList(void)
-{
-	return &viewList;
 }
 
 /** Used to get a list of the tools */

@@ -427,10 +427,7 @@ void CMapRoom::loadProperties(KConfigGroup properties)
 	
 		if (current)
 		{
-			for (CMapViewBase *view =getManager()->getViewList()->first(); view!=0;view=getManager()->getViewList()->next())
-			{
-				view->playerPositionChanged(this);
-			}
+			getManager()->getActiveView()->playerPositionChanged(this);
 		}
 	}
 

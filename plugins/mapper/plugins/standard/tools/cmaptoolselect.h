@@ -47,9 +47,6 @@ public:
 	/** Called when the tool recives a mouse move event */
 	virtual void mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel);
 
-	/** This method is called when the active view changes */
-	virtual void viewChangedEvent(CMapViewBase *view);
-
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);
 	/** This function is called when a tool is unselected */

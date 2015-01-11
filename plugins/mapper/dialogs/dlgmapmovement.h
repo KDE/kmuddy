@@ -22,12 +22,13 @@
 class CMapManager;
 
 #include "ui_dlgmapmovementbase.h"
+#include <QDialog>
 
 /**
   *@author Kmud Developer Team
   */
 
-class DlgMapMovement : public QWidget, public Ui::DlgMapMovementBase
+class DlgMapMovement : public QDialog, public Ui::DlgMapMovementBase
 {
 	Q_OBJECT
 public: 

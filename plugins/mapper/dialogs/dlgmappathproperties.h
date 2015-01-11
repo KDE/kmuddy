@@ -18,9 +18,9 @@
 #ifndef DLGMAPPATHPROPERTIES_H
 #define DLGMAPPATHPROPERTIES_H
 
-#include <qwidget.h>
+#include <QDialog>
 
-#include "dlgmappathpropertiesbase.h"
+#include "ui_dlgmappathpropertiesbase.h"
 
 #include "../cmapelement.h"
 #include <kconfiggroup.h>
@@ -32,7 +32,7 @@ class CMapManager;
   *@author KMud Development Team
   */
 
-class DlgMapPathProperties : public DlgMapPathPropertiesBase
+class DlgMapPathProperties : public QDialog, private Ui::DlgMapPathPropertiesBase
 {
    Q_OBJECT
 public: 

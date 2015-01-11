@@ -42,9 +42,6 @@ public:
 	virtual void mouseLeaveEvent();
 	virtual void mouseEnterEvent();
 
-	/** This method is called when the active view changes */
-	virtual void viewChangedEvent(CMapViewBase *view);
-
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);
 	/** This function is called when a tool is unselected */

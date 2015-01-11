@@ -18,14 +18,14 @@
 #ifndef DLGSPEEDWALKPROGRESS_H
 #define DLGSPEEDWALKPROGRESS_H
 
-#include <qwidget.h>
-#include "dlgspeedwalkprogressbase.h"
+#include <QDialog>
+#include "ui_dlgspeedwalkprogressbase.h"
 
 /**
   *@author Kmud Developer Team
   */
 
-class DlgSpeedwalkProgress : public DlgSpeedwalkProgressBase
+class DlgSpeedwalkProgress : public QDialog, private Ui::DlgSpeedwalkProgressBase
 {
    Q_OBJECT
 public: 

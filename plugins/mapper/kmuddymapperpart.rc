@@ -45,7 +45,6 @@
 			</Menu>
 		</Menu>
 		<Menu name="Window"><Text>&amp;Window</Text>
-			<Action name = "viewNewMap"/>
 		</Menu>
 	</MenuBar>
 	<StatusBar/>

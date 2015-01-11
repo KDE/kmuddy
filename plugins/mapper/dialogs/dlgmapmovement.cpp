@@ -22,7 +22,7 @@
 
 #include <qcheckbox.h>
 #include <qpushbutton.h>
-#include <q3listbox.h>
+#include <QListWidget>
 #include <qinputdialog.h>
 
 #include <klocale.h>
@@ -30,9 +30,11 @@
 #include <kparts/componentfactory.h>
 #include <kvbox.h>
 
-DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QWidget (parent)
+DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotOkPressed()));
+
 	m_mapManager = mapManager;
 
 	m_chkEnableValidRoomChecking->setChecked(m_mapManager->getMapData()->validRoomCheck);
@@ -45,9 +47,7 @@ DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QWidg
 	{
 		QString str = *it;
 		if (!str.isEmpty())
-		{
-			new Q3ListBoxText(m_lstInvalidMoveStrs,str);
-		}
+                  m_lstInvalidMoveStrs->addItem(str);
 	}
 
 	connect(m_chkEnableValidRoomChecking,SIGNAL(toggled(bool)),this,SLOT(slotValidCheckStateChanged(bool)));
@@ -69,7 +69,7 @@ void DlgMapMovement::slotOkPressed()
 
 	for (int i=0; i< m_lstInvalidMoveStrs->count();i++)
 	{
-		m_mapManager->getMapData()->failedMoveMsg.append(m_lstInvalidMoveStrs->text(i));
+		m_mapManager->getMapData()->failedMoveMsg.append(m_lstInvalidMoveStrs->item(i)->text());
 	}
 }
 
@@ -111,14 +111,12 @@ void DlgMapMovement::slotAddClicked(void)
 	}
 
     if ( ok && !text.isEmpty() )
-    {
-		new Q3ListBoxText(m_lstInvalidMoveStrs,text);
-	}
+      m_lstInvalidMoveStrs->addItem(text);
 }
 
 void DlgMapMovement::slotEditClicked(void)
 {
-	int current =  m_lstInvalidMoveStrs->currentItem();
+	int current =  m_lstInvalidMoveStrs->currentRow();
 	if (current!=-1)
 	{
 		bool ok;
@@ -145,22 +143,20 @@ void DlgMapMovement::slotEditClicked(void)
 		{
 
 			text = QInputDialog::getText( i18n("Kmud"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal,
-		                                     m_lstInvalidMoveStrs->text(current), &ok, this );
+		                                     m_lstInvalidMoveStrs->item(current)->text(), &ok, this );
 		}
 
 		if ( ok && !text.isEmpty() )
 		{
-			m_lstInvalidMoveStrs->changeItem(text,current);
+			m_lstInvalidMoveStrs->item(current)->setText(text);
 		}
 	}
 }
 
 void DlgMapMovement::slotRemoveClicked(void)
 {
-	int current =  m_lstInvalidMoveStrs->currentItem();
-	if (current!=-1)
-	{
-		m_lstInvalidMoveStrs->removeItem(current);
-	}
+  QListWidgetItem *item = m_lstInvalidMoveStrs->currentItem();
+  if (item)
+    m_lstInvalidMoveStrs->removeItemWidget(item);
 }
 

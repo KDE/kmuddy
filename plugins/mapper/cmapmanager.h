@@ -107,8 +107,6 @@ public:
    * center the view on the given position.
    */
   void openNewMapView(QPoint pos,CMapLevel *level);
-  /** Used to delete a view of the map */
-  void closeMapView(CMapViewBase *mapView);
   /** Create new map */
   void createNewMap();
   /** Used to set properties of the view widget */
@@ -203,16 +201,12 @@ public:
 
   /** Get the level that has focues at the moment */
   CMapViewBase *getActiveView(void);
-  /** Used to make a differnt map view to active */
-  void setActiveView(CMapViewBase *view);
   /** Used to inform the various parts of the mapper that a element has changed */
   void changedElement(CMapElement *element);
   /** Used to inform the various parts of the mapper that a element has added */
   void addedElement(CMapElement *element);
   /** Used to walk the player in the mud to a given room */
   void walkPlayerTo(CMapRoom *toRoom);
-  /** This method is called when to inform the views that that active view has changed */
-  void viewChanged();
   /** Used to inform to change the state of the navigation tools */
   void activeViewChanged(void);
 
@@ -233,8 +227,6 @@ public:
   void unselectElements(CMapLevel *level);
   /** Used to tell that map views that a level has chaned */
   void levelChanged(CMapLevel *level);
-  /** This is used to a view to the list of views that should be processed */
-  void addView(CMapViewBase *view);
   /** This method puts a element into edit state */
   void setEditElement(CMapElement *element);
   /** This is used to remove edit state from element being edited */
@@ -247,9 +239,6 @@ public:
     * @param dirCmd The command that was typed
     * @return True, if a valid command otherwise false */
   bool validMoveCmd(QString dirCmd);
-  /** This is used ot get a pointer to the map view list
-    * @return Pointer to map view list */
-  Q3PtrList<CMapViewBase> *getViewList(void);
   /** This is used to find a level with a given id
     * @param id The id of the level to find
     * @return Null if no level is found otherwise a pointer to the level */
@@ -345,7 +334,6 @@ private slots:
   void slotToolsZoneProperties();
   void slotSelectZone();
 
-  void slotViewNewMap();
   void slotViewUpperLevel();
   void slotViewLowerLevel();
   void slotViewToolsToolbar();
@@ -414,9 +402,6 @@ private:
    * @param If true then enable the actions otherwise disable the actions
    */
   void enableNonViewActions(bool enabled);
-  /** Used to get the first view that can be selected
-      * @return The first selectedable view that is open if none are open return NULL */
-  CMapViewBase *getFirstActivableView(void);
   /** Used to repaint all the views */
   void redrawAllViews(void);
   
@@ -459,8 +444,6 @@ private:
   CMapRoom *loginRoom;
   /** A pointer to the map data */
   CMapData *mapData;
-  /** A list of all the map views */
-  Q3PtrList<CMapViewBase> mapViewList;
   /** A list of all the plugins */
   Q3PtrList<CMapPluginBase> pluginList;
   /** pointer to the speedwalk status indicaor */
@@ -491,7 +474,6 @@ private:
   KToggleAction *m_viewUpperLevel;
   KToggleAction *m_viewToolsToolbar;
   KToggleAction *m_viewNavToolbar;
-  KAction *m_viewNewMapView;
 
   KSelectAction *labelMenu;
 
@@ -516,8 +498,6 @@ private:
   void changeProperties(CMapElement *element,QString key,int oldData,int newData);
 
 public:
-  /** This is a debug function and not for genreal use */
-  int getViewNumber(CMapViewBase *view);
   /** This is a debug function and not for genreal use */
   void generateTestMap();
   void listZones(CMapZone *zone);

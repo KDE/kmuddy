@@ -18,13 +18,13 @@
 #ifndef DLGMAPTEXTPROPERTIES_H
 #define DLGMAPTEXTPROPERTIES_H
 
-#include <qwidget.h>
+#include <QDialog>
 #include <qfont.h>
 #include <qcolor.h>
 #include <q3scrollview.h>
 #include <qpixmap.h>
 #include <kvbox.h>
-#include "dlgmaptextpropertiesbase.h"
+#include "ui_dlgmaptextpropertiesbase.h"
 
 class CMapText;
 class CMapManager;
@@ -58,7 +58,7 @@ private:
   *@author KMud Development Team
   */
 
-class DlgMapTextProperties : public DlgMapTextPropertiesBase
+class DlgMapTextProperties : public QDialog, private Ui::DlgMapTextPropertiesBase
 {
    Q_OBJECT
 public: 

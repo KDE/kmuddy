@@ -383,16 +383,6 @@ void CMapToolSelect::toolUnselected(void)
 	}
 }
 
-/** This method is called when the active view changes */
-void CMapToolSelect::viewChangedEvent(CMapViewBase *view)
-{
-	if (view)
-	{
-		view->setMouseTracking(false);
-		view->setCursor(Qt::ArrowCursor);
-	}
-}
-
 /** Used to move elements */
 void CMapToolSelect::moveElement(QPoint mousePos,CMapLevel *currentLevel)
 {

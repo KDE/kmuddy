@@ -1,102 +1,78 @@
-<!DOCTYPE UI><UI>
-<class>DlgSpeedwalkProgressBase</class>
-<widget>
-    <class>QWidget</class>
-    <property stdset="1">
-        <name>name</name>
-        <cstring>DlgSpeedwalkProgressBase</cstring>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>DlgSpeedwalkProgressBase</class>
+  <widget class="QWidget" name="DlgSpeedwalkProgressBase">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>124</width>
+        <height>15</height>
+      </rect>
     </property>
-    <property stdset="1">
-        <name>geometry</name>
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>124</width>
-            <height>15</height>
-        </rect>
+    <property name="minimumSize">
+      <size>
+        <width>0</width>
+        <height>15</height>
+      </size>
     </property>
-    <property stdset="1">
-        <name>minimumSize</name>
-        <size>
-            <width>0</width>
-            <height>15</height>
-        </size>
+    <property name="maximumSize">
+      <size>
+        <width>32767</width>
+        <height>15</height>
+      </size>
     </property>
-    <property stdset="1">
-        <name>maximumSize</name>
-        <size>
-            <width>32767</width>
-            <height>15</height>
-        </size>
+    <property name="windowTitle">
+      <string>Speedwalk Progress</string>
     </property>
-    <property stdset="1">
-        <name>caption</name>
-        <string>Speedwalk Progress</string>
-    </property>
-    <property>
-        <name>layoutMargin</name>
-    </property>
-    <property>
-        <name>layoutSpacing</name>
-    </property>
-    <hbox>
-        <property stdset="1">
-            <name>margin</name>
-            <number>0</number>
-        </property>
-        <property stdset="1">
-            <name>spacing</name>
-            <number>6</number>
-        </property>
-        <widget>
-            <class>QPushButton</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>cmdAbort</cstring>
-            </property>
-            <property stdset="1">
-                <name>maximumSize</name>
-                <size>
-                    <width>30</width>
-                    <height>15</height>
-                </size>
-            </property>
-            <property stdset="1">
-                <name>text</name>
-                <string>x</string>
-            </property>
+    <layout class="QHBoxLayout">
+      <property name="margin">
+        <number>0</number>
+      </property>
+      <property name="spacing">
+        <number>6</number>
+      </property>
+      <item>
+        <widget class="QPushButton" name="cmdAbort">
+          <property name="maximumSize">
+            <size>
+              <width>30</width>
+              <height>15</height>
+            </size>
+          </property>
+          <property name="text">
+            <string>x</string>
+          </property>
         </widget>
-        <widget>
-            <class>QProgressBar</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>ProgressBar</cstring>
-            </property>
-            <property stdset="1">
-                <name>maximumSize</name>
-                <size>
-                    <width>32767</width>
-                    <height>15</height>
-                </size>
-            </property>
-            <property stdset="1">
-                <name>progress</name>
-                <number>100</number>
-            </property>
-            <property stdset="1">
-                <name>centerIndicator</name>
-                <bool>true</bool>
-            </property>
+      </item>
+      <item>
+        <widget class="Q3ProgressBar" name="ProgressBar">
+          <property name="maximumSize">
+            <size>
+              <width>32767</width>
+              <height>15</height>
+            </size>
+          </property>
+          <property name="progress">
+            <number>100</number>
+          </property>
+          <property name="centerIndicator">
+            <bool>true</bool>
+          </property>
         </widget>
-    </hbox>
-</widget>
-<connections>
+      </item>
+    </layout>
+  </widget>
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <connections>
     <connection>
-        <sender>cmdAbort</sender>
-        <signal>clicked()</signal>
-        <receiver>DlgSpeedwalkProgressBase</receiver>
-        <slot>slotAbort()</slot>
+      <sender>cmdAbort</sender>
+      <signal>clicked()</signal>
+      <receiver>DlgSpeedwalkProgressBase</receiver>
+      <slot>slotAbort()</slot>
     </connection>
-    <slot access="public">slotAbort()</slot>
-</connections>
-</UI>
+  </connections>
+</ui>

@@ -50,9 +50,6 @@ public:
 	/** This function is called when a tool is unselected */
 	virtual void toolUnselected(void);
 
-	/** This method is called when the active view changes */
-	virtual void viewChangedEvent(CMapViewBase *view);
-
 private:
 	/** The mouse cursor */
 	QCursor *textCursor;

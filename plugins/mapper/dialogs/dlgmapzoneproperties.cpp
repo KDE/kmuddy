@@ -40,8 +40,11 @@
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
 
-DlgMapZoneProperties::DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent, const char *name ) : DlgMapZonePropertiesBase(parent,name,true)
+DlgMapZoneProperties::DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent, const char *name ) : QDialog(parent,name)
 {
+  setupUi (this);
+  connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
+
 	mapManager = manager;
 	zone = zoneElement;
 
@@ -91,8 +94,6 @@ void DlgMapZoneProperties::slotAccept()
 	command->compare("DefaultBackground",zone->getUseDefaultBackground(),optDefaultBackground->isOn());
 
 	mapManager->addCommand(command);
-
-	accept();
 }
 
 void DlgMapZoneProperties::setLabelPos(CMapZone::labelPosTyp position)

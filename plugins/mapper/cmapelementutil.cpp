@@ -272,11 +272,7 @@ void CMapElementUtil::deleteZone(CMapZone *zone)
 	CMapLevel *deleteFromLevel = zone->getLevel();
 	deleteFromLevel->getZoneList()->remove(zone);
 
-	for (CMapViewBase *view = manager->getViewList()->first(); view!=0; view = manager->getViewList()->next())
-	{
-		view->deletedElement(deleteFromLevel);
-	}
-
+        manager->getActiveView()->deletedElement(deleteFromLevel);
 	manager->updateZoneListCombo();
 }
 
@@ -301,11 +297,7 @@ void CMapElementUtil::deleteText(CMapText *text)
 
 	deleteFromLevel->getTextList()->remove(text);
 
-	for (CMapViewBase *view = manager->getViewList()->first(); view!=0; view = manager->getViewList()->next())
-	{
-		view->deletedElement(deleteFromLevel);
-	}
-
+	manager->getActiveView()->deletedElement(deleteFromLevel);
 }
 
 /** Delete a room map element */
@@ -366,10 +358,7 @@ void CMapElementUtil::deleteRoom(CMapRoom *room)
 
 	roomLevel->getRoomList()->remove(room);
 
-	for (CMapViewBase *view = manager->getViewList()->first(); view!=0; view = manager->getViewList()->next())
-	{
-		view->deletedElement(deleteFromLevel);
-	}
+	manager->getActiveView()->deletedElement(deleteFromLevel);
 }
 
 /** Delete a path map element */
@@ -383,11 +372,8 @@ void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 	{
 		if (delOpsite)
 		{
-			for (CMapViewBase *view = manager->getViewList()->first(); view!=0; view = manager->getViewList()->next())
-			{
-				CMapLevel *deleteFromLevel = destRoom->getLevel();
-				view->deletedElement(deleteFromLevel);
-			}
+			CMapLevel *deleteFromLevel = destRoom->getLevel();
+			manager->getActiveView()->deletedElement(deleteFromLevel);
 	
 			opsitePath->getDestRoom()->getConnectingPathList()->remove(opsitePath);
 			opsitePath->getSrcRoom()->getPathList()->remove(opsitePath);
@@ -402,8 +388,5 @@ void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 	destRoom->getConnectingPathList()->remove(path);
 	srcRoom->getPathList()->remove(path);
 
-	for (CMapViewBase *view = manager->getViewList()->first(); view!=0; view = manager->getViewList()->next())
-	{
-		view->deletedElement(deleteFromLevel);
-	}
+	manager->getActiveView()->deletedElement(deleteFromLevel);
 }
