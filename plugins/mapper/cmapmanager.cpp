@@ -63,8 +63,6 @@
 #include "kmuddy_mapper.h"
 
 #include "filefilters/cmapfilefilterxml.h"
-#include "filefilters/cmapfilefilterkconfig.h"
-#include "filefilters/cmapfilefilterkmudone.h"
 
 #include "dialogs/dlgmaproomproperties.h"
 #include "dialogs/dlgmappathproperties.h"
@@ -81,8 +79,6 @@
 #include "cdialoglist.h"
 #include "cglobalsettings.h"
 #include "cstatus.h"
-
-#include <domconfig.h>
 
 CMapManager::CMapManager (KMuddyMapper *mapper) :
   KXmlGuiWindow (NULL),
@@ -264,13 +260,11 @@ void CMapManager::initFileFilters()
   m_fileFilter.setAutoDelete(true);
 
   m_fileFilter.append(new CMapFileFilterXML(this));
-  m_fileFilter.append(new CMapFileFilterKmudOne(this));
-  m_fileFilter.append(new CMapFileFilterKConfig(this));
 }
 
 void CMapManager::initMenus()
 {
-  kDebug() << "begisn initMenus";
+  kDebug() << "begin initMenus";
 
   // File menu
 
@@ -1635,44 +1629,6 @@ void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
   
   // Load the map using the correct filter
   filter->loadData(url);
-
-  /*
-  // Set the login room for the character
-  DomConfig *domConfig = getCharProfile();
-
-  if (domConfig)
-  {
-    KMemConfig *config = domConfig->config();
-    config->setGroup("Login");
-
-    int roomID = config->readNumEntry("Room",-1);
-    int levelID = config->readNumEntry("Login",-1);
-
-    if (roomID != -1 && levelID!=-1)
-    {
-      CMapLevel *level = findLevel(levelID);
-      if (level!=NULL)
-      {
-        CMapRoom *room = level->findRoom(roomID);
-
-        if (room!=NULL)
-        {
-          setLoginRoom(room);
-        }
-        else
-        {
-          kDebug() << "Unable to fund start room";
-        }
-      }
-      else
-      {
-        kDebug() << "Unable to find start level";
-      }
-    }
-  
-    delete domConfig;
-  }
-  */
 
   if (!getLoginRoom())
   {

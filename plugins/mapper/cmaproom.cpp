@@ -25,8 +25,6 @@
 //Added by qt3to4:
 #include <Q3PtrList>
 
-#include <domconfig.h>
-
 #include "cmapmanager.h"
 #include "cmappath.h"
 #include "cmaptext.h"
@@ -440,23 +438,6 @@ void CMapRoom::loadProperties(KConfigGroup properties)
 	{
 		bool login = properties.readEntry("Login",getLoginRoom());
 		setLoginRoom(login);
-                /*
-		if (login)
-		{
-			DomConfig *domConfig = getManager()->getCharProfile();
-			if (domConfig)
-			{
-				KMemConfig *config = domConfig->config();
-
-				config->setGroup("Login");
-				config->writeEntry("Level",getLevel()->getLevelID());
-				config->writeEntry("Room",m_ID);
-
-				domConfig->save();
-
-				delete domConfig;
-			}
-		}*/
 	}
 	setRoomID(properties.readEntry("RoomID",m_ID));
 

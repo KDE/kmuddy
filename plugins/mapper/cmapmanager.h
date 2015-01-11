@@ -47,8 +47,6 @@
 
 #include <kmuddy_export.h>
 
-class DomConfig;
-
 class CMapZone;
 class CMapPath;
 class CMapText;
@@ -63,8 +61,6 @@ class CMapCmdGroup;
 class CMapFileFilterBase;
 class CMapClipboard;
 class CMapElementUtil;
-
-class CMapFileFilterKmudOne;
 
 class DlgMapRoomProperties;
 class DlgMapTextProperties;

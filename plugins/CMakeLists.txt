@@ -1,6 +1,6 @@
 
 add_subdirectory( strings )
-add_subdirectory( scripting )
+# add_subdirectory( scripting )
 add_subdirectory( varviewer )
 add_subdirectory( vartrigs )
 add_subdirectory( mapper )

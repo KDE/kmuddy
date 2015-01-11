@@ -42,7 +42,6 @@ set(kmuddymapper_PART_SRCS
    cmapfilefilterbase.cpp 
    cmapcommand.cpp 
    cmapclipboard.cpp 
-   domconfig.cpp 
    kmemconfig.cpp 
    cmapmanager.cpp
    dialogs/dlgmapmovement.cpp
@@ -56,9 +55,6 @@ set(kmuddymapper_PART_SRCS
    dialogs/dlgmapspeedwalk.cpp
    dialogs/dlgmapdirections.cpp 
    filefilters/cmapfilefilterxml.cpp
-   filefilters/cmapfilefilterkmudone.cpp
-   filefilters/kcmapfile.cpp
-   filefilters/cmapfilefilterkconfig.cpp
    )
 
 kde4_add_ui_files (kmuddymapper_PART_SRCS

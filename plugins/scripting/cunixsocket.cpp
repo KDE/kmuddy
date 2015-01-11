@@ -41,7 +41,7 @@ cUnixSocket::cUnixSocket (int _sess, cRunningScript *rs) : sess(_sess)
   connected = false;
   
   //first of all, we need a file name
-  char *fname = tempnam ("/tmp", "km");
+  char *fname = tempnam("/tmp", "km");
   if (fname != 0)  //only if it didn't fail
   {
     name = fname;
