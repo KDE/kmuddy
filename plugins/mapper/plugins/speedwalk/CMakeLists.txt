@@ -2,7 +2,7 @@
 include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
 
 add_definitions (-DQT3_SUPPORT)
-# add_definitions (-DQT3_SUPPORT_WARNINGS)
+add_definitions (-DQT3_SUPPORT_WARNINGS)
 
 ########### next target ###############
 
@@ -13,7 +13,7 @@ set(kmuddymapper_speedwalk_PART_SRCS
    dlgmapspeedwalkcontainter.cpp 
    dlgmapspeedwalklist.cpp )
 
-kde4_add_ui3_files(kmuddymapper_speedwalk_PART_SRCS dlgmapspeedwalklistbase.ui )
+kde4_add_ui_files(kmuddymapper_speedwalk_PART_SRCS dlgmapspeedwalklistbase.ui )
 
 kde4_add_plugin(kmuddymapper_speedwalk WITH_PREFIX ${kmuddymapper_speedwalk_PART_SRCS})
 

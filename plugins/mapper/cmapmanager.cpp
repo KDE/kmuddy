@@ -140,6 +140,7 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
   m_levelCount = 0;
 
   setUndoActive (false);
+  activeView = new CMapView(this,container,"mapView");
   createNewMap();
   openMapView ();
   setUndoActive (true);
@@ -560,8 +561,6 @@ CMapData *CMapManager::getMapData() const
 /** Used to create a new view of the map */
 void CMapManager::openMapView()
 {
-  activeView = new CMapView(this,container,"mapView");
-
   if (loginRoom)
     activeView->showPosition(QPoint(loginRoom->getX(),loginRoom->getY()),loginRoom->getLevel());
   else

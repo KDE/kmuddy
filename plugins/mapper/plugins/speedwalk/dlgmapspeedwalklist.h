@@ -18,8 +18,8 @@
 #ifndef DLGMAPSPEEDWALKLIST_H
 #define DLGMAPSPEEDWALKLIST_H
 
-#include <qwidget.h>
-#include "dlgmapspeedwalklistbase.h"
+#include <QWidget>
+#include "ui_dlgmapspeedwalklistbase.h"
 
 class KAction;
 class KActionMenu;
@@ -35,7 +35,7 @@ class CMapPluginSpeedwalk;
   *@author Kmud Developer Team
   */
 
-class DlgMapSpeedwalkList : public DlgMapSpeedwalkListBase
+class DlgMapSpeedwalkList : public QWidget, private Ui::DlgMapSpeedwalkListBase
 {
    Q_OBJECT
 

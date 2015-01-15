@@ -2,7 +2,7 @@
 include_directories( ${CMAKE_SOURCE_DIR}/libs ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
 
 add_definitions (-DQT3_SUPPORT)
-# add_definitions (-DQT3_SUPPORT_WARNINGS)
+add_definitions (-DQT3_SUPPORT_WARNINGS)
 
 ########### next target ###############
 

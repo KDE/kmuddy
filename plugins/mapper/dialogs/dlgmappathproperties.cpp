@@ -18,7 +18,6 @@
 #include "dlgmappathproperties.h"
 
 #include <qlineedit.h>
-#include <q3groupbox.h>
 #include <qradiobutton.h>
 #include <qpushbutton.h>
 #include <qlabel.h>
