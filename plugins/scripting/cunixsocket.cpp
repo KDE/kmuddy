@@ -41,13 +41,14 @@ cUnixSocket::cUnixSocket (int _sess, cRunningScript *rs) : sess(_sess)
   connected = false;
   
   //first of all, we need a file name
-  char *fname = tempnam("/tmp", "km");
-  if (fname != 0)  //only if it didn't fail
+  char tmp_template[] = "/tmp/kmXXXXXX";
+  char *dirname = mkdtemp (tmp_template);
+  if (dirname != 0)  //only if it didn't fail
   {
-    name = fname;
-    free (fname);
+    name = dirname;
+    name += "/socket";
     //now that we have the name, we create a socket and set some parameters
-    id = socket (PF_UNIX, SOCK_STREAM, 0);
+    id = socket (AF_UNIX, SOCK_STREAM, 0);
     sa.sun_family = AF_UNIX;
     strcpy (sa.sun_path, name.toLatin1());
     fcntl (id, O_NONBLOCK);
@@ -56,6 +57,7 @@ cUnixSocket::cUnixSocket (int _sess, cRunningScript *rs) : sess(_sess)
       close (id);
       id = -1;
       unlink (name.toLatin1());
+      rmdir (dirname);
       return;
     }
 
@@ -83,6 +85,7 @@ cUnixSocket::~cUnixSocket ()
 
   //and remove its file
   unlink (name.toLatin1());
+  rmdir (name.left(strlen("/tmp/kmXXXXXX")).toLatin1());
 }
 
 const QString &cUnixSocket::getName ()
