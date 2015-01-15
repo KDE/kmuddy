@@ -21,6 +21,7 @@
 #include "cmapzone.h"
 #include "cmaptext.h"
 #include "cmaproom.h"
+#include "cmapviewbase.h"
 //Added by qt3to4:
 #include <Q3PtrList>
 
@@ -32,15 +33,47 @@ CMapLevel::CMapLevel(CMapManager *mapManager)
 
 	m_nextLevel = NULL;
 	m_prevLevel = NULL;
-	m_elementList[ROOM_LIST].setAutoDelete(true);
-	m_elementList[TEXT_LIST].setAutoDelete(true);
-	m_elementList[ZONE_LIST].setAutoDelete(true);
+	m_elementList[ROOM_LIST].setAutoDelete(false);
+	m_elementList[TEXT_LIST].setAutoDelete(false);
+	m_elementList[ZONE_LIST].setAutoDelete(false);
 	m_currentList = ROOM_LIST;
 	m_currentElement = NULL;
 }
 
 CMapLevel::~CMapLevel()
-{	
+{
+  CMapViewBase *view = m_mapManager->getActiveView();
+  if (view->getCurrentlyViewedLevel() == this)
+  {
+    if (getPrevLevel())
+    {
+      view->showPosition(getPrevLevel(),true);
+    }
+    else
+    {
+      if (getNextLevel())
+      {
+        view->showPosition(getNextLevel(),true);
+      }
+      else
+      {
+        view->showPosition(m_mapManager->getMapData()->rootZone->getLevels()->first(),true);
+      }
+    }
+  }
+  getZone()->getLevels()->remove(this);
+
+  QList<CMapElement *> lst;
+
+  for (CMapRoom *room = (CMapRoom *)m_elementList[ROOM_LIST].first(); room != NULL ; room = (CMapRoom *)m_elementList[ROOM_LIST].next())
+    lst.push_back(room);
+  for (CMapText *text = (CMapText *)m_elementList[TEXT_LIST].first(); text != NULL ; text = (CMapText *)m_elementList[TEXT_LIST].next())
+    lst.push_back(text);
+  for (CMapZone *zone = (CMapZone *)m_elementList[ZONE_LIST].first(); zone != NULL ; zone = (CMapZone *)m_elementList[ZONE_LIST].next())
+    lst.push_back(zone);
+
+  foreach (CMapElement *el, lst)
+    delete el;
 }
 
 /** Used to find a room with the ID */

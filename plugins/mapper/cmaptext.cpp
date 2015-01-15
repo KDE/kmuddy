@@ -32,46 +32,53 @@
 
 CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint pos,CMapLevel *level) : CMapElement(manager,level)
 {	
-	m_font = f;
-	setRect(QRect(pos,pos));
-	setText(str);
+  m_font = f;
+  setRect(QRect(pos,pos));
+  setText(str);
 
-	setColor(col);
+  setColor(col);
 
-	m_linkElement = NULL;
-	m_xscale = 0;
-	m_yscale = 0;
+  m_linkElement = NULL;
+  m_xscale = 0;
+  m_yscale = 0;
 
-	getZone()->m_text_id_count=getZone()->m_text_id_count+1;
-	m_ID = getZone()->m_text_id_count;	
+  getZone()->m_text_id_count=getZone()->m_text_id_count+1;
+  m_ID = getZone()->m_text_id_count;	
+
+  if (level)
+    level->getTextList()->append(this);
 }
 
 CMapText::CMapText(QString str,CMapManager *manager,QPoint pos,CMapLevel *level) : CMapElement(manager,level)
 {
-	m_font = manager->getMapData()->defaultTextFont;
-	setRect(QRect(pos,pos));
-	setText(str);
-	setColor(Qt::black);
-	m_linkElement = NULL;
+  m_font = manager->getMapData()->defaultTextFont;
+  setRect(QRect(pos,pos));
+  setText(str);
+  setColor(Qt::black);
+  m_linkElement = NULL;
 
-	getZone()->m_text_id_count=getZone()->m_text_id_count+1;
-	m_ID = getZone()->m_text_id_count;	
+  getZone()->m_text_id_count=getZone()->m_text_id_count+1;
+  m_ID = getZone()->m_text_id_count;	
+
+  if (level)
+    level->getTextList()->append(this);
 }
 
 CMapText::~CMapText()
 {
-	if (m_linkElement)
-	{
-		if (m_linkElement->getElementType()==ROOM)
-		{
-			((CMapRoom *)m_linkElement)->textRemove();
-		}
+  if (m_linkElement)
+  {
+    if (m_linkElement->getElementType()==ROOM)
+    {
+      ((CMapRoom *)m_linkElement)->textRemove();
+    }
 
-		if (m_linkElement->getElementType()==ZONE)
-		{
-			((CMapZone *)m_linkElement)->textRemove();
-		}
-	}
+    if (m_linkElement->getElementType()==ZONE)
+    {
+      ((CMapZone *)m_linkElement)->textRemove();
+    }
+  }
+  getLevel()->getTextList()->remove(this);
 }
 
 /** This is used to return the actual cords in the view of the cursor

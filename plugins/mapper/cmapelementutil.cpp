@@ -48,9 +48,9 @@ void CMapElementUtil::deleteElement(KConfigGroup grp,bool delOpsite)
 		switch (element->getElementType())
 		{
 			case PATH : deletePath((CMapPath *)element,delOpsite); break;
-			case ZONE : deleteZone((CMapZone *)element); break;
-			case TEXT : deleteText((CMapText *)element); break;
-			case ROOM : deleteRoom((CMapRoom *)element); break;
+			case ZONE : delete ((CMapZone *)element); break;
+			case TEXT : delete ((CMapText *)element); break;
+			case ROOM : delete ((CMapRoom *)element); break;
 			default: break;
 		}
 	}
@@ -161,27 +161,13 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 /** Used to create a new text label */
 CMapText *CMapElementUtil::createText(QPoint pos,CMapLevel *level,QString str)
 {
-	CMapText *text = new CMapText(str,manager,pos,level);
-
-	if (level)
-		level->getTextList()->append(text);
-
-	manager->addedElement(text);
-
-	return text;
+  return new CMapText(str,manager,pos,level);
 }
 
 /** Used to create a new text label */
 CMapText *CMapElementUtil::createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col)
 {
-	CMapText *text = new CMapText(str,font,col,manager,pos,level);
-
-	if (level)
-		level->getTextList()->append(text);
-
-	manager->addedElement(text);
-
-	return text;
+  return new CMapText(str,font,col,manager,pos,level);
 }
 
 /** Used to create a new room */
@@ -198,8 +184,6 @@ CMapRoom *CMapElementUtil::createRoom(QPoint pos,CMapLevel *level)
 
 	if (level)
 		level->getRoomList()->append(room);
-
-	manager->addedElement(room);
 
 	return room;
 }
@@ -220,10 +204,6 @@ CMapZone *CMapElementUtil::createZone(QPoint pos,CMapLevel *level)
 
 	if (level)
 		level->getZoneList()->append(zone);
-
-	//manager->createLevel(UP,zone);
-	if (zone != manager->getMapData()->rootZone)
-		manager->addedElement(zone);
 
 	return zone;
 }
@@ -252,141 +232,13 @@ CMapPath *CMapElementUtil::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMa
 		}
 	}
 
-	// Tell the views to redraw the new path
-	manager->addedElement(newPath);
-
 	return newPath;
-}
-
-/** Delete a zone map element */
-void CMapElementUtil::deleteZone(CMapZone *zone)
-{
-	//FIXME_jp : when this is undone there are extra levels, this needs fixing
-	// Delete the levels in the zone
-	while (zone->getLevels()->first()!=0)
-	{
-		kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
-		deleteLevel(zone->getLevels()->first());
-	}
-
-	CMapLevel *deleteFromLevel = zone->getLevel();
-	deleteFromLevel->getZoneList()->remove(zone);
-
-        manager->getActiveView()->deletedElement(deleteFromLevel);
-	manager->updateZoneListCombo();
-}
-
-/** Delete a text map element */
-void CMapElementUtil::deleteText(CMapText *text)
-{
-	CMapLevel *deleteFromLevel = text->getLevel();
-
-	CMapElement *elm = text->getLinkElement();
-	if (elm)
-	{
-		if (elm->getElementType()==ROOM)
-		{
-			((CMapRoom *)elm)->textRemove();
-		}
-
-		if (elm->getElementType()==ZONE)
-		{
-			((CMapZone *)elm)->textRemove();
-		}
-	}
-
-	deleteFromLevel->getTextList()->remove(text);
-
-	manager->getActiveView()->deletedElement(deleteFromLevel);
-}
-
-/** Delete a room map element */
-void CMapElementUtil::deleteRoom(CMapRoom *room)
-{
-	//FIXME_jp : Deleting a room with a visiale label causes a crash, this needs fixing
-	CMapLevel *roomLevel = room->getLevel();
-
-	if (room->getCurrentRoom())
-	{
-		if (room->getLevel()->getRoomList()->count()>1)
-		{
-			CMapRoom *lastRoom =room->getLevel()->getRoomList()->last();
-			CMapRoom *firstRoom =room->getLevel()->getRoomList()->first();
-
-			if (firstRoom==room)
-			{
-				manager->setCurrentRoom(lastRoom);
-			}
-			else
-			{
-				manager->setCurrentRoom(firstRoom);
-			}
-		}
-		else
-		{
-			manager->setCurrentRoom(manager->findFirstRoom(room));
-		}
-	}
-
-	if (room->getLoginRoom())
-	{
-		if (room->getLevel()->getRoomList()->count()>1)
-		{
-			if (room->getLevel()->getRoomList()->first()==room)
-			{
-				manager->setLoginRoom(room->getLevel()->getRoomList()->last());
-			}
-			else
-			{
-				manager->setLoginRoom(room->getLevel()->getRoomList()->first());
-			}
-		}
-		else
-			manager->setLoginRoom(manager->findFirstRoom(room));
-	}
-
-	// Delete the paths for the room
-	for (CMapPath *path=room->getPathList()->last(); path!=0; path=room->getPathList()->last())
-		deletePath(path);
-
-	// Delete any paths connecting with this room
-	for (CMapPath *path=room->getConnectingPathList()->last(); path!=0; path = room->getConnectingPathList()->last())
-		deletePath(path);
-
-	// delete the room
-	CMapLevel *deleteFromLevel = room->getLevel();
-
-	roomLevel->getRoomList()->remove(room);
-
-	manager->getActiveView()->deletedElement(deleteFromLevel);
 }
 
 /** Delete a path map element */
 void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 {
-	CMapRoom *srcRoom = path->getSrcRoom();
-	CMapRoom *destRoom = path->getDestRoom();
-	CMapPath *opsitePath = path->getOpsitePath();
+  if (delOpsite) path->setOpsitePath(NULL);
+  delete path;
 
-	if (opsitePath)
-	{
-		if (delOpsite)
-		{
-			CMapLevel *deleteFromLevel = destRoom->getLevel();
-			manager->getActiveView()->deletedElement(deleteFromLevel);
-	
-			opsitePath->getDestRoom()->getConnectingPathList()->remove(opsitePath);
-			opsitePath->getSrcRoom()->getPathList()->remove(opsitePath);
-		}
-		else
-		{
-			opsitePath->setOpsitePath(NULL);
-		}
-	}
-
-	CMapLevel *deleteFromLevel = srcRoom->getLevel();
-	destRoom->getConnectingPathList()->remove(path);
-	srcRoom->getPathList()->remove(path);
-
-	manager->getActiveView()->deletedElement(deleteFromLevel);
 }

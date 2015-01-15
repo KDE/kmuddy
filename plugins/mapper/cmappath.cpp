@@ -71,7 +71,17 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom)  :
 
 CMapPath::~CMapPath()
 {
-	delete m_twoWayLaterProperties;
+  if (opsitePath) {
+    opsitePath->setOpsitePath(NULL);  // needed to prevent endless looping
+    delete opsitePath;
+  }
+
+  if (destRoom)
+    destRoom->getConnectingPathList()->remove(this);
+  if (srcRoom)
+    srcRoom->getPathList()->remove(this);
+
+  delete m_twoWayLaterProperties;
 }
 
 void CMapPath::setDontPaintBend(int bend)

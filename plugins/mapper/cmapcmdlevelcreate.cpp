@@ -52,7 +52,7 @@ void CMapCmdLevelCreate::execute()
 void CMapCmdLevelCreate::unexecute()
 {
 	CMapLevel *level = m_mapManager->findLevel(m_levelID);
-	deleteLevel(level);
+	delete level;
 }
 
 CMapLevel *CMapCmdLevelCreate::getLevel(void)

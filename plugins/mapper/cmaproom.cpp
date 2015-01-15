@@ -51,11 +51,44 @@ CMapRoom::CMapRoom(CMapManager *manager,QRect rect,CMapLevel *level) : CMapEleme
 
 CMapRoom::~CMapRoom()
 {
-	if (textElement)
-	{
-		kDebug() << "CMapRoom room delete so delete text element";
-		getManager()->deleteElement(textElement);
-	}
+  CMapLevel *l = getLevel();
+  CMapManager *manager = getManager();
+
+  CMapRoom *swapRoom = manager->findFirstRoom(this);
+  if (l->getRoomList()->count() > 1) {
+    CMapRoom *firstRoom = l->getRoomList()->first();
+    CMapRoom *lastRoom = l->getRoomList()->last();
+    swapRoom = (firstRoom == this) ? lastRoom : firstRoom;
+  }
+
+  if (current)
+    manager->setCurrentRoom(swapRoom);
+
+  if (login)
+    manager->setLoginRoom(swapRoom);
+
+  // Delete the paths for the room
+  // First make a copy, as deleting rooms alters this list
+  QList<CMapPath *> paths;
+  for (CMapPath *path=getPathList()->first(); path!=0; path=getPathList()->last())
+    paths.push_back(path);
+  foreach (CMapPath *path, paths)
+    delete path;
+
+  // Same for paths connecting with this room
+  paths.clear();
+  for (CMapPath *path=getConnectingPathList()->first(); path!=0; path = getConnectingPathList()->last())
+    paths.push_back(path);
+  foreach (CMapPath *path, paths)
+    delete path;
+
+  l->getRoomList()->remove(this);
+
+  if (textElement)
+  {
+    kDebug() << "CMapRoom room delete so delete text element";
+    getManager()->deleteElement(textElement);
+  }
 }
 
 /** This is used to resize the element */

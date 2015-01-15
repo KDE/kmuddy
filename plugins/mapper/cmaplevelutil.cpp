@@ -33,35 +33,6 @@ CMapLevelUtil::~CMapLevelUtil()
 {
 }
 
-int CMapLevelUtil::deleteLevel(CMapLevel *level)
-{
-  CMapViewBase *view = m_mapManager->getActiveView();
-  if (view->getCurrentlyViewedLevel() == level)
-  {
-    if (level->getPrevLevel())
-    {
-      view->showPosition(level->getPrevLevel(),true);
-    }
-    else
-    {
-      if (level->getNextLevel())
-      {
-        view->showPosition(level->getNextLevel(),true);
-      }
-      else
-      {
-        view->showPosition(m_mapManager->getMapData()->rootZone->getLevels()->first(),true);
-      }
-    }
-
-  }
-
-  int index = level->getZone()->getLevels()->find(level);
-  level->getZone()->getLevels()->remove(level);
-
-  return index;
-}
-
 CMapLevel *CMapLevelUtil::createLevel(unsigned int index,CMapZone *intoZone)
 {
 	if (intoZone == NULL) return NULL;

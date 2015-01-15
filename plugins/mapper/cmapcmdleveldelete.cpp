@@ -35,8 +35,9 @@ CMapCmdLevelDelete::~CMapCmdLevelDelete()
 
 void CMapCmdLevelDelete::execute()
 {
-	CMapLevel *level = m_mapManager->findLevel(m_levelID);
-	m_index = deleteLevel(level);
+  CMapLevel *level = m_mapManager->findLevel(m_levelID);
+  m_index = level->getZone()->getLevels()->find(level);
+  delete level;
 }
 
 void CMapCmdLevelDelete::unexecute()

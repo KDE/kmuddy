@@ -26,6 +26,7 @@
 #include "cmaplevel.h"
 #include "cmapmanager.h"
 #include "cmapcmdelementproperties.h"
+#include "cmapviewbase.h"
 //Added by qt3to4:
 #include <Q3PtrList>
 #include <kvbox.h>
@@ -35,25 +36,33 @@
 
 CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QObject (NULL,"mapElement")
 {
-	mapManager = manager;
-	position = rect;
-	mapLevel = level;
-	selected = false;
-	editing = false;
-	resizePos.setAutoDelete(true);
-	doPaint = true;
+  mapManager = manager;
+  position = rect;
+  mapLevel = level;
+  selected = false;
+  editing = false;
+  resizePos.setAutoDelete(true);
+  doPaint = true;
 
-	connect(this,SIGNAL(deleteElement(CMapElement *,bool)),manager,SLOT(deleteElement(CMapElement *,bool)));
+  connect(this,SIGNAL(deleteElement(CMapElement *,bool)),manager,SLOT(deleteElement(CMapElement *,bool)));
 }
 
 CMapElement::CMapElement(CMapManager *manager,CMapLevel *level)
 {
-	mapManager = manager;
-	mapLevel = level;
-	selected = false;
-	editing = false;
-	doPaint = true;
-	resizePos.setAutoDelete(true);
+  mapManager = manager;
+  mapLevel = level;
+  selected = false;
+  editing = false;
+  doPaint = true;
+  resizePos.setAutoDelete(true);
+
+  mapManager->addedElement(this);
+}
+
+CMapElement::~CMapElement()
+{
+  if (mapLevel)
+    mapManager->getActiveView()->deletedElement(mapLevel);
 }
 
 /** This method is used to get the level that the element is in */
@@ -93,10 +102,6 @@ void CMapElement::paintResizeHandles(QPainter *p,Q3PtrList<QRect> *resizePos)
 	{
 		p->drawRect(*rect);
 	}
-}
-
-CMapElement::~CMapElement()
-{
 }
 
 CMapZone *CMapElement::getZone(void)

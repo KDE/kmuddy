@@ -35,7 +35,6 @@ public:
 
 public:
 	CMapLevel *createLevel(unsigned int index,CMapZone *intoZone);
-	int deleteLevel(CMapLevel *level);
 
 private:
 	CMapManager *m_mapManager;

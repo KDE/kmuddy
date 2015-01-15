@@ -19,7 +19,6 @@ set(kmuddymapper_PART_SRCS
    cmapviewbase.cpp 
    cmapdata.cpp 
    cmapelement.cpp 
-   cmapfile.cpp 
    cmappath.cpp 
    cmaproom.cpp 
    cmapzone.cpp 

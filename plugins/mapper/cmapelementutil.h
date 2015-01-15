@@ -59,12 +59,6 @@ public:
 	CMapText *createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col);
 	/** This is used to create a path between two rooms */
 	CMapPath *createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir);
-	/** Delete a room map element */
-	void deleteRoom(CMapRoom *room);
-	/** Delete a text map element */
-	void deleteText(CMapText *text);
-	/** Delete a zone map element */
-	void deleteZone(CMapZone *zone);
 	/** Delete a path map element */
 	void deletePath(CMapPath *path,bool delOpsite = true);
 

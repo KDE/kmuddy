@@ -27,6 +27,8 @@
 #include "cmaptext.h"
 #include "cmappath.h"
 
+#include <kdebug.h>
+
 CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
 {
 	label  = i18n("Unnamed Zone");
@@ -48,10 +50,19 @@ CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapEleme
 
 CMapZone::~CMapZone()
 {
-	if (textElement)
-	{
-		getManager()->deleteElement(textElement);
-	}
+  //FIXME_jp : when this is undone there are extra levels, this needs fixing
+  // Delete the levels in the zone
+  while (getLevels()->first()!=0)
+  {
+    kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
+    delete getLevels()->first();
+  }
+
+  getLevel()->getZoneList()->remove(this);
+  getManager()->updateZoneListCombo();
+ 
+  if (textElement)
+    getManager()->deleteElement(textElement);
 }
 
 void CMapZone::setLabel(QString zoneLabel)
