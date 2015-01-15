@@ -33,6 +33,7 @@ CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent, const char *nam
 {
   mapManager = manager;
   viewActive = false;
+  currentLevel = 0;
 
   setFocusPolicy(Qt::StrongFocus);
 
