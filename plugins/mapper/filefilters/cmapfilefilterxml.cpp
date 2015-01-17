@@ -36,7 +36,6 @@
 #include "../cmappluginbase.h"
 
 #include <kdebug.h>
-#include <kvbox.h>
 
 CMapFileFilterXML::CMapFileFilterXML(CMapManager *manager) : CMapFileFilterBase(manager)
 {
@@ -177,7 +176,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 	zone->saveQDomElement(doc,&zoneProperties);
 	savePluginPropertiesForElement(zone,doc,&zoneProperties);	
 	
-	for ( CMapLevel *level=zone->getLevels()->first(); level != 0; level=zone->getLevels()->next())
+	foreach (CMapLevel *level, *zone->getLevels())
 	{
 		QDomElement levelProperties = doc->createElement("Level");
 		levelProperties.setAttribute("ID",level->getLevelID());
@@ -187,7 +186,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		levelProperties.setAttribute("NumZones",level->getZoneList()->count());
 		
 		// Save Rooms
-		for ( CMapRoom* room=level->getRoomList()->first(); room != 0; room=level->getRoomList()->next() )
+		foreach (CMapRoom* room, *level->getRoomList())
 		{
 			QDomElement roomProperties = doc->createElement("Room");
 			room->saveQDomElement(doc,&roomProperties);
@@ -196,7 +195,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		}
 		
 		// Save Texts
-		for ( CMapText* text=level->getTextList()->first(); text != 0; text=level->getTextList()->next() )
+		foreach (CMapText* text, *level->getTextList())
 		{
 			QDomElement textProperties = doc->createElement("Text");
 			text->saveQDomElement(doc,&textProperties);
@@ -205,10 +204,8 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		}
 
 		// Save Sub Zones
-		for ( CMapZone* subZone=level->getZoneList()->first(); subZone != 0; subZone=level->getZoneList()->next() )
-		{
+		foreach (CMapZone* subZone, *level->getZoneList())
 			saveZone(doc,&levelProperties,subZone);
-		}
 		
 		zoneProperties.appendChild(levelProperties);
 	}
@@ -224,56 +221,54 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
   */
 void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,QDomElement *linksNode,CMapZone *zone)
 {
-	if (zone == NULL)
-		return;
+  if (zone == NULL)
+    return;
 
-                    
-	for ( CMapLevel *level=zone->getLevels()->first(); level != 0; level=zone->getLevels()->next())
-	{
-		for ( CMapRoom *room=level->getRoomList()->first(); room != 0; room=level->getRoomList()->next() )
-		{
-			for (CMapPath *path = room->getPathList()->first(); path != 0; path=room->getPathList()->next() )
-			{
-				QDomElement pathElement = doc->createElement("Path");
-				path->saveQDomElement(doc,&pathElement);
-				savePluginPropertiesForElement(path,doc,&pathElement);
-				pathsNode->appendChild(pathElement);
-			}
-		}
+  foreach (CMapLevel *level, *zone->getLevels())
+  {
+    foreach (CMapRoom *room, *level->getRoomList())
+    {
+      foreach (CMapPath *path, *room->getPathList())
+      {
+        QDomElement pathElement = doc->createElement("Path");
+        path->saveQDomElement(doc,&pathElement);
+        savePluginPropertiesForElement(path,doc,&pathElement);
+        pathsNode->appendChild(pathElement);
+      }
+    }
 
-		for ( CMapText *text=level->getTextList()->first(); text != 0; text=level->getTextList()->next())
-		{
-			CMapElement *element = text->getLinkElement();
-			if (element)
-			{
-				QDomElement linkElement = doc->createElement("Link");
-				
-				linkElement.setAttribute("SrcType",text->getElementType());
-				linkElement.setAttribute("SrcLevel",text->getLevel()->getLevelID());
-				linkElement.setAttribute("SrcID",text->getTextID());
-				linkElement.setAttribute("DestType",element->getElementType());
-				linkElement.setAttribute("DestLevel",element->getLevel()->getLevelID());
-				if (element->getElementType()==ROOM)
-				{
-					linkElement.setAttribute("DestID",((CMapRoom *)element)->getRoomID());
-					linkElement.setAttribute("LabelPos",(int)((CMapRoom *)element)->getLabelPosition());
-				}
-				if (element->getElementType()==ZONE)
-				{
-					linkElement.setAttribute("DestID",((CMapZone *)element)->getZoneID());
-					linkElement.setAttribute("LabelPos",(int)((CMapZone *)element)->getLabelPosition());
-				}
+    foreach (CMapText *text, *level->getTextList())
+    {
+      CMapElement *element = text->getLinkElement();
+      if (element)
+      {
+        QDomElement linkElement = doc->createElement("Link");
 
-				linksNode->appendChild(linkElement);
-				
-			}
-		}
-		
-		for ( CMapZone* subZone=level->getZoneList()->first(); subZone != 0; subZone=level->getZoneList()->next() )
-		{
-			saveZoneLinks(doc,pathsNode,linksNode,subZone);
-		}
-	}
+        linkElement.setAttribute("SrcType",text->getElementType());
+        linkElement.setAttribute("SrcLevel",text->getLevel()->getLevelID());
+        linkElement.setAttribute("SrcID",text->getTextID());
+        linkElement.setAttribute("DestType",element->getElementType());
+        linkElement.setAttribute("DestLevel",element->getLevel()->getLevelID());
+        if (element->getElementType()==ROOM)
+        {
+          linkElement.setAttribute("DestID",((CMapRoom *)element)->getRoomID());
+          linkElement.setAttribute("LabelPos",(int)((CMapRoom *)element)->getLabelPosition());
+        }
+        if (element->getElementType()==ZONE)
+        {
+          linkElement.setAttribute("DestID",((CMapZone *)element)->getZoneID());
+          linkElement.setAttribute("LabelPos",(int)((CMapZone *)element)->getLabelPosition());
+        }
+
+        linksNode->appendChild(linkElement);
+      }
+    }
+
+    foreach (CMapZone* subZone, *level->getZoneList())
+    {
+      saveZoneLinks(doc,pathsNode,linksNode,subZone);
+    }
+  }
 }
 
 /** This method should be reimplemeted if this is to be a import filter. It is

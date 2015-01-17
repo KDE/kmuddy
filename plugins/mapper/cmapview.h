@@ -27,7 +27,6 @@
 #include <QKeyEvent>
 
 #include <klocale.h>
-#include <kvbox.h>
 
 #include "cmapviewbase.h"
 

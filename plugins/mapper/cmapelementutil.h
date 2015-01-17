@@ -20,7 +20,6 @@
 
 #include <qpoint.h>
 
-#include "cmaplevelutil.h"
 #include "cmapelement.h"
 
 class CMapManager;
@@ -38,7 +37,7 @@ class CMapPath;
   * @author Kmud Developer Team
   */
 
-class CMapElementUtil : public CMapLevelUtil
+class CMapElementUtil
 {
 public: 
 	CMapElementUtil(CMapManager *mapManager);
@@ -53,12 +52,6 @@ public:
 	CMapRoom *createRoom(QPoint pos,CMapLevel *level);
 	/** Used to create a new zone */
 	CMapZone *createZone(QPoint pos,CMapLevel *level);
-	/** Used to create a new text label */
-	CMapText *createText(QPoint pos,CMapLevel *level,QString str);
-	/** Used to create a new text label */
-	CMapText *createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col);
-	/** This is used to create a path between two rooms */
-	CMapPath *createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir);
 	/** Delete a path map element */
 	void deletePath(CMapPath *path,bool delOpsite = true);
 

@@ -27,9 +27,6 @@
 #include "cmapmanager.h"
 #include "cmapcmdelementproperties.h"
 #include "cmapviewbase.h"
-//Added by qt3to4:
-#include <Q3PtrList>
-#include <kvbox.h>
 
 #define RESIZE_SIZE         10
 #define RESIZE_SIZE_HALF    5
@@ -41,7 +38,6 @@ CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QOb
   mapLevel = level;
   selected = false;
   editing = false;
-  resizePos.setAutoDelete(true);
   doPaint = true;
 
   connect(this,SIGNAL(deleteElement(CMapElement *,bool)),manager,SLOT(deleteElement(CMapElement *,bool)));
@@ -54,7 +50,6 @@ CMapElement::CMapElement(CMapManager *manager,CMapLevel *level)
   selected = false;
   editing = false;
   doPaint = true;
-  resizePos.setAutoDelete(true);
 
   mapManager->addedElement(this);
 }
@@ -86,22 +81,20 @@ void CMapElement::paint(QPainter *p,CMapZone *zone)
 	{
 		//FIXME_jp: Move this somewere else so that it's only caled when the element position changes
 		generateResizePositions();
-		paintResizeHandles (p,&resizePos);
+		paintResizeHandles (p, resizePos);
 	}
 }
 
 /** This method is used to paint the resize handles
   * @param p The painter used to do the painting
   * @param resizePos The positions of the handles to be painted */
-void CMapElement::paintResizeHandles(QPainter *p,Q3PtrList<QRect> *resizePos)
+void CMapElement::paintResizeHandles(QPainter *p, QList<QRect> &resizePos)
 {
-	p->setPen(getManager()->getMapData()->selectedColor);
-	p->setBrush(getManager()->getMapData()->selectedColor);
+  p->setPen(getManager()->getMapData()->selectedColor);
+  p->setBrush(getManager()->getMapData()->selectedColor);
 
-	for (QRect *rect = resizePos->first();rect!=0 ;rect = resizePos->next())
-	{
-		p->drawRect(*rect);
-	}
+  foreach (QRect rect, resizePos)
+    p->drawRect(rect);
 }
 
 CMapZone *CMapElement::getZone(void)
@@ -164,9 +157,9 @@ int CMapElement::mouseInResize(QPoint mousePos,CMapZone *)
 {
 	int num = 1;
 
-	for (QRect *rect = resizePos.first();rect!=0 ; rect = resizePos.next())
+	foreach (QRect rect, resizePos)
 	{
-		QRegion region(*rect,QRegion::Rectangle);
+		QRegion region(rect,QRegion::Rectangle);
 		if (region.contains(mousePos))
 			return num;
 		num++;
@@ -211,10 +204,9 @@ void CMapElement::resizePaint(QPoint offset,QPainter *p,CMapZone *currentZone,in
 	paintElementResize(p,pos,size,currentZone);
 	
 	// Paint resize handles
-	Q3PtrList<QRect> tmpResizePos;
-	tmpResizePos.setAutoDelete(true);
-	generateResizePositions(QRect(pos,size),&tmpResizePos);
-	paintResizeHandles(p,&tmpResizePos);
+	QList<QRect> tmpResizePos;
+	generateResizePositions(QRect(pos,size), tmpResizePos);
+	paintResizeHandles(p, tmpResizePos);
 }
 
 void CMapElement::calcResizeCords(QSize *size,QPoint *pos,signed int *offsetx,signed int *offsety,QPoint *offset,int resizeId)
@@ -374,16 +366,16 @@ void CMapElement::setLowPos(QPoint pos)
 
 
 /** This method is used to calculate the positions of the resize handles */
-void CMapElement::generateResizePositions(void)
+void CMapElement::generateResizePositions()
 {
-	generateResizePositions(getRect(),&resizePos);
+	generateResizePositions(getRect(), resizePos);
 }
 
 /** This method is used to calc the resize handle positions for a rectangle
    * object and add them to a list
    * @param rect The coridantes of the object
    * @param resizePos The list to add the positions too */
-void CMapElement::generateResizePositions(QRect rect, Q3PtrList<QRect> *resizePos)
+void CMapElement::generateResizePositions(QRect rect, QList<QRect> &resizePos)
 {
 	int width = rect.width();
 	int height = rect.height();
@@ -392,15 +384,15 @@ void CMapElement::generateResizePositions(QRect rect, Q3PtrList<QRect> *resizePo
 	int x2 = rect.right();
 	int y2 = rect.bottom();
 
-	resizePos->clear();
-	resizePos->append(new QRect(x1+(width/2)-5,y1-4,7,7));  // NORTH
-	resizePos->append(new QRect(x2-4,y1-4,7,7));            // NORTHEAST
-	resizePos->append(new QRect(x2-4,y1+(height/2)-5,7,7)); // EAST
-	resizePos->append(new QRect(x2-4,y2-4,7,7));            // SOUTHEAST
-	resizePos->append(new QRect(x1+(width/2)-5,y2-4,7,7));  // SOUTH
-	resizePos->append(new QRect(x1-4,y2-4,7,7));            // SOUTHWEST
-	resizePos->append(new QRect(x1-4,y1+(height/2)-5,7,7)); // WEST
-	resizePos->append(new QRect(x1-4,y1-4,7,7));            // NORTHWEST
+	resizePos.clear();
+	resizePos.append(QRect(x1+(width/2)-5,y1-4,7,7));  // NORTH
+	resizePos.append(QRect(x2-4,y1-4,7,7));            // NORTHEAST
+	resizePos.append(QRect(x2-4,y1+(height/2)-5,7,7)); // EAST
+	resizePos.append(QRect(x2-4,y2-4,7,7));            // SOUTHEAST
+	resizePos.append(QRect(x1+(width/2)-5,y2-4,7,7));  // SOUTH
+	resizePos.append(QRect(x1-4,y2-4,7,7));            // SOUTHWEST
+	resizePos.append(QRect(x1-4,y1+(height/2)-5,7,7)); // WEST
+	resizePos.append(QRect(x1-4,y1-4,7,7));            // NORTHWEST
 }
 
 /** Used to load the properties of the element from a list of properties */

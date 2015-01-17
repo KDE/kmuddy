@@ -23,8 +23,6 @@
 
 CMapData::CMapData()
 {
-	//zoneList.setAutoDelete(true);
-
 	gridSize.setWidth(20);
 	gridSize.setHeight(20);
 
@@ -56,57 +54,27 @@ CMapData::~CMapData()
 {
 }
 
-/** This is used to get the first zone in a list of zones */
-CMapZone *CMapData::getFirstZone(void)
+QList<CMapZone *> CMapData::getAllZones(CMapZone *zone)
 {
-	currentZone = rootZone;
+  QList<CMapZone *> res;
 
-	return currentZone;
-}
-
-/** This is used to get the next zone is a list of zones */
-CMapZone *CMapData::getNextZone(void)
-{
-	// Find next zone in current zone
-	CMapZone *zone = findFirstSubZone(currentZone);
-	if (zone)
-	{
-		currentZone = zone;
-		return zone;
-	}
-
-	// Find next zone in at the same level
-    // if no zones in the current zone
-	m_foundCurrentZone = false;
-	currentZone = getNextSameLevelZone(currentZone);
-
-	return currentZone;
-}
-
-
-/** This is used to get the current zone in a list of zones */
-CMapZone *CMapData::getCurrentZone(void)
-{
-	return currentZone;
+  if (!zone) zone = rootZone;
+  
+  res.append(zone);
+  
+  foreach (CMapLevel *level, *zone->getLevels())
+  {
+    CMapZone *zone = level->getZoneList()->first();
+    foreach (CMapZone *lzone, *level->getZoneList())
+      res.append(getAllZones(lzone));
+  }
+  return res;
 }
 
 signed int CMapData::getZoneNumber(CMapZone *findZone)
 {
-	int result = -1;
-	int count = 0;
-
-	for (CMapZone *zone = getFirstZone();zone!=0;zone = getNextZone())
-	{
-		if (zone  == findZone)
-		{
-			result = count;
-			break;
-		}
-
-		count++;
-	}
-
-	return result;
+  QList<CMapZone *> zones = getAllZones();
+  return zones.indexOf(findZone);
 }
 
 void CMapData::initDirections(void)
@@ -133,85 +101,6 @@ void CMapData::initDirections(void)
 	directions[UP+(NUM_DIRECTIONS/2)]        = "u";
 	directions[DOWN+(NUM_DIRECTIONS/2)]      = "d";
 
-}
-
-/** This is used to get a zone and the given index as if they
-  * were in a list. The current Zone is set to the one at the
-  * index */
-CMapZone *CMapData::getZoneAt(int index)
-{
-	int i = 0;
-	for (CMapZone *zone = getFirstZone(); zone !=0; zone=getNextZone())
-	{
-		if (i == index)
-			return zone;
-
-		i++;
-	}
-
-	currentZone = NULL;
-	return NULL;
-}
-
-/** This method is used to get the first sub zone of a parent zone
-  * @param parent The parent zone, it is the fist sub zone of the parent that is returned
-  * @return The first sub zone of the parent zone */
-CMapZone *CMapData::findFirstSubZone(CMapZone *parent)
-{
-	CMapZone *result = NULL;
-
-	m_foundCurrentZone = false;
-
-	// Check all the levels of the parent zone for a sub zone, make result equal
-    // the first zone that is found.
-	for (CMapLevel *level = parent->getLevels()->first();level!=0;level = parent->getLevels()->next())
-	{
-		CMapZone *zone = level->getZoneList()->first();
-		if (zone)
-		{
-			result = zone;
-			break;
-		}
-	}
-
-	return result;
-}
-
-CMapZone *CMapData::getNextSameLevelZone(CMapZone *current)
-{
-	CMapZone *parent = current->getZone();
-	CMapZone *result = NULL;
-
-	if (parent)
-	{
-		for (CMapLevel *level = parent->getLevels()->first();level!=0; level = parent->getLevels()->next())
-		{
-			for (CMapZone *zone = level->getZoneList()->first();zone!=0;zone = level->getZoneList()->next())
-			{
-				if (zone==current)
-				{
-					m_foundCurrentZone = true;
-					continue;
-				}
-
-				if (m_foundCurrentZone)
-				{
-					result = zone;
-					return zone;
-					break;
-				}
-			}
-		}
-
-		// Go up a zone and try again because a zone was not found at this level
-		if (result==NULL)
-		{
-			m_foundCurrentZone = false;
-			result = getNextSameLevelZone(parent);
-		}
-	}
-
-	return result;
 }
 
 

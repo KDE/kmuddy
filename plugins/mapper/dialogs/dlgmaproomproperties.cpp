@@ -34,13 +34,10 @@
 #include <qpushbutton.h>
 #include <q3listview.h>
 #include <qtabwidget.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include <kcolorbutton.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include <kvbox.h>
 
 DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent, const char *name )
 	: QDialog(parent,name)
@@ -71,17 +68,12 @@ DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomEl
 	lstContents->setColumnWidthMode(0,Q3ListView::Maximum);
 
 	// Get the extension panels from the plugins
-	for (CMapPluginBase *plugin=mapManager->getPluginList()->first();
-	     plugin!=0;
-	     plugin=mapManager->getPluginList()->next())
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(ROOM,(CMapElement*)roomElement,(QWidget *)RoomsTab);
+	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
-		Q3PtrList<CMapPropertiesPaneBase> paneList = plugin->getPropertyPanes(ROOM,(CMapElement*)roomElement,(QWidget *)RoomsTab);
-		for (CMapPropertiesPaneBase *pane = paneList.first();pane!=0;pane = paneList.next())
-		{
-			RoomsTab->addTab(pane,pane->getTitle());
-			connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));
-			connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
-		}
+		RoomsTab->addTab(pane,pane->getTitle());
+		connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));
+		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 }
 
@@ -93,7 +85,7 @@ void DlgMapRoomProperties::regenerateExits(void)
 {
 	Q3ListViewItem *exit =NULL;
 	lstPaths->clear();
-	for (CMapPath *path = room->getPathList()->first(); path !=0; path = room->getPathList()->next())
+	foreach (CMapPath *path, *room->getPathList())
 	{
 
 		QString direction;
@@ -148,7 +140,7 @@ void DlgMapRoomProperties::slotAccept()
 
 	command->compare("Contents",*room->getContentsList(),newContents);
 
-	for (CMapPath *path = room->getPathList()->first(); path!=0; path = room->getPathList()->next())
+	foreach (CMapPath *path, *room->getPathList())
 	{
 		QString name = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
 

@@ -22,7 +22,6 @@
 
 #include <q3valuelist.h>
 #include <qpoint.h>
-#include <kvbox.h>
 
 
 class CMapManager;

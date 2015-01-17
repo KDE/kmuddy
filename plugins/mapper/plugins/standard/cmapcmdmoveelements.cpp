@@ -19,7 +19,6 @@
 
 #include <kdebug.h>
 #include <klocale.h>
-#include <kvbox.h>
 
 #include "../../cmapmanager.h"
 #include "../../cmapelement.h"
@@ -77,60 +76,61 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 
 void CMapCmdMoveElements::execute()
 {
-	CMapLevel *level = NULL;	
-	for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
-	{
-		struct elemProp prop = *it;
-	
-		level = m_mapManager->findLevel(prop.level);
-		CMapElement *elm = m_mapManager->findElementAt(prop.pos,level);
-		elm->moveBy(m_offset);
+  CMapLevel *level = NULL;	
+  for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
+  {
+    struct elemProp prop = *it;
 
-		if (elm->getElementType()==TEXT)
-		{
-			CMapText *text = (CMapText *)elm;
-			if (text->getLinkElement()!=NULL)
-			{
-				if (text->getLinkElement()->getSelected()==false)
-				{
-					if (text->getLinkElement()->getElementType()==ROOM)
-					{
-						CMapRoom *room = (CMapRoom *)text->getLinkElement();
-						if (room->getLabelPosition()!=CMapRoom::HIDE)
-						{
-							room->setLabelPosition(CMapRoom::CUSTOM);
-						}	
-					}
-					if (text->getLinkElement()->getElementType()==ZONE)
-					{
-						CMapZone *zone = (CMapZone *)text->getLinkElement();
-						if (zone->getLabelPosition()!=CMapZone::HIDE)
-						{
-							zone->setLabelPosition(CMapZone::CUSTOM);
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	if (level)
-		m_mapManager->levelChanged(level);
+    level = m_mapManager->findLevel(prop.level);
+    CMapElement *elm = level->findElementAt(prop.pos);
+    if (!elm) continue;
+    elm->moveBy(m_offset);
+
+    if (elm->getElementType()==TEXT)
+    {
+      CMapText *text = (CMapText *)elm;
+      if (text->getLinkElement())
+      {
+        if (!text->getLinkElement()->getSelected())
+        {
+          if (text->getLinkElement()->getElementType()==ROOM)
+          {
+            CMapRoom *room = (CMapRoom *)text->getLinkElement();
+            if (room->getLabelPosition()!=CMapRoom::HIDE)
+            {
+              room->setLabelPosition(CMapRoom::CUSTOM);
+            }	
+          }
+          if (text->getLinkElement()->getElementType()==ZONE)
+          {
+            CMapZone *zone = (CMapZone *)text->getLinkElement();
+            if (zone->getLabelPosition()!=CMapZone::HIDE)
+            {
+              zone->setLabelPosition(CMapZone::CUSTOM);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (level)
+    m_mapManager->levelChanged(level);
 }
 
 void CMapCmdMoveElements::unexecute()
 {
-	CMapLevel *level = NULL;
-	for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
-	{
-		struct elemProp prop = *it;
-	
-		level = m_mapManager->findLevel(prop.level);
-		CMapElement *elm = m_mapManager->findElementAt(prop.pos + m_offset,level);
-		if (elm)
-			elm->moveBy(-m_offset);
-	}
-	
-	if (level)
-		m_mapManager->levelChanged(level);
+  CMapLevel *level = NULL;
+  for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
+  {
+    struct elemProp prop = *it;
+
+    level = m_mapManager->findLevel(prop.level);
+    CMapElement *elm = level->findElementAt(prop.pos + m_offset);
+    if (elm)
+      elm->moveBy(-m_offset);
+  }
+
+  if (level)
+    m_mapManager->levelChanged(level);
 }

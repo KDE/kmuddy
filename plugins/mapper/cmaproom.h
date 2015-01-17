@@ -19,9 +19,8 @@
 #define CMAPROOM_H
 
 #include <qcolor.h>
-#include <q3ptrlist.h>
 #include <qstringlist.h>
-#include <kvbox.h>
+#include <QList>
 
 #include "cmapelement.h"
 
@@ -44,6 +43,8 @@ public:
 
 	elementTyp getElementType(void)             { return ROOM ; }
 
+        virtual void setLevel(CMapLevel *level);
+
 	void setLabel(QString str);
 	QString getLabel(void)                      { return label; }
 	void setDescription (QString str)           { description = str; }
@@ -55,9 +56,9 @@ public:
 	    null is returned                                                             */
 	CMapPath *getPathDirection(directionTyp dir,QString specialCmd);
 	/** Get a list of the paths from this room */
-	Q3PtrList<CMapPath> *getPathList(void);
+	QList<CMapPath *> *getPathList() { return &pathList; }
 	/** Get a list of the paths connecting with this room */
-	Q3PtrList<CMapPath> *getConnectingPathList(void);
+	QList<CMapPath *> *getConnectingPathList() { return &connectingPaths; }
 	/** Get a pointer to the contents list */
 	QStringList *getContentsList(void)          { return &contentsList; }
 
@@ -126,8 +127,8 @@ protected:
 private:
 	int time;
 	/** Used to store details of all the paths from this room */
-	Q3PtrList<CMapPath> pathList;
-	Q3PtrList<CMapPath> connectingPaths;
+	QList<CMapPath *> pathList;
+	QList<CMapPath *> connectingPaths;
 
 	QStringList contentsList;
 

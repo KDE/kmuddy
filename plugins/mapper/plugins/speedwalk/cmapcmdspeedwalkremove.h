@@ -20,7 +20,6 @@
 
 #include <q3valuelist.h>
 #include <k3command.h>
-#include <kvbox.h>
 
 #include "../../cmapcommand.h"
 

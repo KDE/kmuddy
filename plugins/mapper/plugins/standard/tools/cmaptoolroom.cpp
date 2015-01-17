@@ -25,7 +25,6 @@
 #include <kiconloader.h>
 
 #include <qcursor.h>
-#include <kvbox.h>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmapviewbase.h"

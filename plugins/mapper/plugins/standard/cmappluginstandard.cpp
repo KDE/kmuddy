@@ -33,8 +33,6 @@
 #include "../../cmappath.h"
 
 #include <qicon.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -69,8 +67,6 @@ CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : 
 	actionCollection()->action("toolsText")->setEnabled(true);
 	actionCollection()->action("toolsZone")->setEnabled(true);
 
-
-	m_elementList.setAutoDelete(false);	
 	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_standard.rc"));
 }
 
@@ -79,16 +75,14 @@ CMapPluginStandard::~CMapPluginStandard()
 }
 
 /** Used to get a list of the property pages for a map element */
-Q3PtrList<CMapPropertiesPaneBase> CMapPluginStandard::getPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent)
+QList<CMapPropertiesPaneBase *> CMapPluginStandard::createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent)
 {
-	Q3PtrList<CMapPropertiesPaneBase> list;
+  QList<CMapPropertiesPaneBase *> list;
 
-	if (type == ROOM || type == ZONE)
-	{
-		list.append(new CMapNotesPane(this,i18n("Notes"),NULL,type,element,parent,"notesPane"));
-	}
+  if (type == ROOM || type == ZONE)
+    list.append(new CMapNotesPane(this,i18n("Notes"),NULL,type,element,parent,"notesPane"));
 
-	return list;
+  return list;
 }
 
 /** This is called when the character or mud profiles change */
@@ -109,13 +103,8 @@ void CMapPluginStandard::profileChanged(void)
  */
 void CMapPluginStandard::addNote(CMapElement *element,QString note)
 {
-	removeNote(element);
-
-	if (note != "" )
-	{
-		m_elementList.append(element);
-		m_noteList.append(note);
-	}
+  if (note.isEmpty()) removeNote(element);
+  else m_noteList[element] = note;
 }
 
 /** This method is used to remove a note
@@ -123,12 +112,7 @@ void CMapPluginStandard::addNote(CMapElement *element,QString note)
   */
 void CMapPluginStandard::removeNote(CMapElement *element)
 {
-	int index = m_elementList.find(element);
-	if (index!=-1)
-	{
-		m_elementList.remove(index);
-		m_noteList.remove(m_noteList.at(index));
-	}
+  m_noteList.remove(element);
 }
 
 /**
@@ -138,15 +122,7 @@ void CMapPluginStandard::removeNote(CMapElement *element)
  */
 QString CMapPluginStandard::getNote(CMapElement *element)
 {
-	int index = m_elementList.find(element);
-	if (index!=-1)
-	{	
-		return m_noteList.at(index);
-	}
-	else
-	{
-		return "";
-	}
+  return m_noteList.value(element);
 }
 
 /** This method is used to get a list of new properties for a element
@@ -156,12 +132,9 @@ QString CMapPluginStandard::getNote(CMapElement *element)
   */
 void CMapPluginStandard::saveElementProperties(CMapElement *element,KMemConfig *properties)
 {
-	QString note = getNote(element);
-
-	if (note!="")
-	{
-		properties->group("Properties").writeEntry("Note",note);
-	}
+  QString note = getNote(element);
+  if (note.isEmpty()) return;
+  properties->group("Properties").writeEntry("Note",note);
 }
 
 /** This method is used to update an element with the properties load from a file
@@ -171,40 +144,39 @@ void CMapPluginStandard::saveElementProperties(CMapElement *element,KMemConfig *
   */
 void CMapPluginStandard::loadElementProperties(CMapElement *element,KMemConfig *properties)
 {
-	if (properties->group("Properties").hasKey("Note"))
-	{
-		QString note = properties->group("Properties").readEntry("Note","");
-		addNote(element,note);
-	}
+  if (properties->group("Properties").hasKey("Note"))
+  {
+    QString note = properties->group("Properties").readEntry("Note","");
+    addNote(element,note);
+  }
 }
 
 /** This is called before a element is deleted
   * @param element The element about to be deleted */
 void CMapPluginStandard::beforeElementDeleted(CMapElement *element)
 {
-	QString note = getNote(element);
-	if (note!="")
-	{
-		DeletedElement e;
-		e.type = (int)element->getElementType();
-    
-		if (element->getElementType() == ROOM)
-		{
-			e.id = ((CMapRoom *)element)->getRoomID();
-			e.level = element->getLevel()->getLevelID();
-			e.note = note;
-			m_deletedElements.append(e);
-		}
-			
-		if (element->getElementType() == ZONE)
-		{
-			e.id = ((CMapZone *)element)->getZoneID();
-			e.note = note;
-			m_deletedElements.append(e);
-		}
-	}
-	
-	removeNote(element);
+  QString note = getNote(element);
+  if (note.isEmpty()) return;
+
+  DeletedElement e;
+  e.type = (int)element->getElementType();
+
+  if (element->getElementType() == ROOM)
+  {
+    e.id = ((CMapRoom *)element)->getRoomID();
+    e.level = element->getLevel()->getLevelID();
+    e.note = note;
+    m_deletedElements.append(e);
+  }
+
+  if (element->getElementType() == ZONE)
+  {
+    e.id = ((CMapZone *)element)->getZoneID();
+    e.note = note;
+    m_deletedElements.append(e);
+  }
+
+  removeNote(element);
 }
 
 /** This method is called after undoing a delete action
@@ -237,9 +209,8 @@ void CMapPluginStandard::afterElementUndeleted(CMapElement *element)
  */
 void CMapPluginStandard::loadAboutToStart()
 {
-	m_deletedElements.clear();
-	m_noteList.clear();
-	m_elementList.clear();
+  m_deletedElements.clear();
+  m_noteList.clear();
 }
 
 /**
@@ -247,7 +218,7 @@ void CMapPluginStandard::loadAboutToStart()
  */
 void CMapPluginStandard::saveAboutToStart(void)
 {
-	m_deletedElements.clear();
+  m_deletedElements.clear();
 }
 
 /**
@@ -255,9 +226,8 @@ void CMapPluginStandard::saveAboutToStart(void)
  */
 void CMapPluginStandard::newMapCreated(void)
 {
-	m_deletedElements.clear();
-	m_noteList.clear();
-	m_elementList.clear();
+  m_deletedElements.clear();
+  m_noteList.clear();
 }
 
 

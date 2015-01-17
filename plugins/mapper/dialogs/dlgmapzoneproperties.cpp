@@ -24,13 +24,10 @@
 #include <qcheckbox.h>
 #include <qradiobutton.h>
 #include <qtabwidget.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include <kcolorbutton.h>
 #include <kdebug.h>
 #include <klocale.h>
-#include <kvbox.h>
 
 #include "../cmapmanager.h"
 #include "../cmapcmdelementcreate.h"
@@ -62,17 +59,12 @@ DlgMapZoneProperties::DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneEl
 	slotBlackgroundOptChange();
 
 	// Get the extension panels from the plugins
-	for (CMapPluginBase *plugin=mapManager->getPluginList()->first();
-	     plugin!=0;
-	     plugin=mapManager->getPluginList()->next())
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(ZONE,(CMapElement*)zoneElement,(QWidget *)zoneTabs);
+	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
-		Q3PtrList<CMapPropertiesPaneBase> paneList = plugin->getPropertyPanes(ZONE,(CMapElement*)zoneElement,(QWidget *)zoneTabs);
-		for (CMapPropertiesPaneBase *pane = paneList.first();pane!=0;pane = paneList.next())
-		{
-			zoneTabs->addTab(pane,pane->getTitle());
-			connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
-			connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
-		}
+		zoneTabs->addTab(pane,pane->getTitle());
+		connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
+		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 
 }

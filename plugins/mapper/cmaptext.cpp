@@ -28,7 +28,6 @@
 #include "cmaplevel.h"
 
 #include <kdebug.h>
-#include <kvbox.h>
 
 CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint pos,CMapLevel *level) : CMapElement(manager,level)
 {	
@@ -78,7 +77,14 @@ CMapText::~CMapText()
       ((CMapZone *)m_linkElement)->textRemove();
     }
   }
-  getLevel()->getTextList()->remove(this);
+  getLevel()->getTextList()->removeAll(this);
+}
+
+void CMapText::setLevel(CMapLevel *level)
+{
+  if (getLevel()) getLevel()->getTextList()->removeAll(this);
+  level->getTextList()->append(this);
+  CMapElement::setLevel(level);
 }
 
 /** This is used to return the actual cords in the view of the cursor

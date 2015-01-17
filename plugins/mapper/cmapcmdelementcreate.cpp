@@ -27,16 +27,12 @@
 #include "cmapcmdelementproperties.h"
 
 #include <klocale.h>
-//Added by qt3to4:
-#include <Q3PtrList>
-#include <kvbox.h>
 
 CMapCmdElementCreate::CMapCmdElementCreate(CMapManager *mapManager,QString name) : CMapCommand(name),CMapElementUtil(mapManager)
 {
 	manager = mapManager;
 	properties = new KMemConfig();
 	groups = 0;
-	elements.setAutoDelete(false);
 }
 
 CMapCmdElementCreate::~CMapCmdElementCreate()
@@ -54,7 +50,7 @@ void CMapCmdElementCreate::execute()
 		if (*it != "<default>")
 		{
 			CMapElement *element = createElement(properties->group (*it));
-			elements.append(element);
+			if (element) elements.append(element);
 		}
 	}
 }
@@ -79,7 +75,7 @@ void CMapCmdElementCreate::secondStage(void)
 	bool active = manager->getUndoActive();
 	manager->setUndoActive(true);
 
-	for (CMapElement *element = elements.first();element!=NULL;element = elements.next())
+	foreach (CMapElement *element, elements)
 	{
 		if (element->getElementType()==PATH)
 		{
@@ -101,10 +97,6 @@ void CMapCmdElementCreate::secondStage(void)
 void CMapCmdElementCreate::addElement(KMemConfig *newElementProperties,QString grp)
 {
   KConfigGroup group = properties->group(QString::number(groups++));
-	newElementProperties->group(grp).copyTo(&group);
+  newElementProperties->group(grp).copyTo(&group);
 }
 
-Q3PtrList<CMapElement> *CMapCmdElementCreate::getElements(void)
-{
-	return &elements;
-}

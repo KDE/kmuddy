@@ -24,8 +24,7 @@
 #include <qregion.h>
 #include <qobject.h>
 #include <qdom.h>
-//Added by qt3to4:
-#include <Q3PtrList>
+#include <QList>
 
 #include "kmemconfig.h"
 #include <kconfiggroup.h>
@@ -133,7 +132,7 @@ public:
 	virtual void moveBy(QPoint offset);
 
 	/** This method is used to set the level that the element is in */
-	void setLevel(CMapLevel *level);
+	virtual void setLevel(CMapLevel *level);
 	/** This method is used to get the level that the element is in */
 	CMapLevel *getLevel(void);
 
@@ -156,7 +155,7 @@ protected:
 	  * @param zone The current zone being viewed */
 	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone)=0;
 	/** This method is used to calculate the positions of the resize handles */
-	virtual void generateResizePositions(void);
+	virtual void generateResizePositions();
 	/** Used to get the map manager */
 	CMapManager *getManager(void)                       { return mapManager; }
 	void geometryChanged(void)                          { }
@@ -167,7 +166,7 @@ protected:
 	/** This method is used to paint the resize handles
 	  * @param p The painter used to do the painting
 	  * @param resizePos The positions of the handles to be painted */
-	void paintResizeHandles(QPainter *p,Q3PtrList<QRect> *resizePos);
+	void paintResizeHandles(QPainter *p,QList<QRect> &resizePos);
 	/**
 	 * This is used to read a color value from a XML object
 	 * @param e The XML object
@@ -224,14 +223,14 @@ protected:
 
 protected:
 	/** This is used to store the cords of the resize handles */
-	Q3PtrList<QRect> resizePos;
+	QList<QRect> resizePos;
 
 private:
 	/** This method is used to calc the resize handle positions for a rectangle
     * object and add them to a list
     * @param rect The coridantes of the object
     * @param resizePos The list to add the positions too */
-	void generateResizePositions(QRect rect, Q3PtrList<QRect> *resizePos);
+	void generateResizePositions(QRect rect, QList<QRect> &resizePos);
 
 	void calcResizeCords(QSize *size,QPoint *pos,signed int *offsetx,signed int *offsety,QPoint *offset,int resizeId);
 

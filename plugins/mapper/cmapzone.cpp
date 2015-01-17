@@ -20,7 +20,6 @@
 #include <klocale.h>
 
 #include <qfontmetrics.h>
-#include <kvbox.h>
 
 #include "cmapmanager.h"
 #include "cmaplevel.h"
@@ -31,39 +30,51 @@
 
 CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
 {
-	label  = i18n("Unnamed Zone");
-	m_room_id_count = 0;
-	m_text_id_count = 0;	
-	manager->m_zoneCount ++;
-	m_ID = manager->m_zoneCount;
-	description = "";
+  label  = i18n("Unnamed Zone");
+  m_room_id_count = 0;
+  m_text_id_count = 0;	
+  manager->m_zoneCount ++;
+  m_ID = manager->m_zoneCount;
+  description = "";
 
-	color = QColor(192,192,192);
-	backgroundCol = QColor(192,192,192);
-	useDefaultCol = true;
-	useDefaultBackground = true;
+  color = QColor(192,192,192);
+  backgroundCol = QColor(192,192,192);
+  useDefaultCol = true;
+  useDefaultBackground = true;
 
-	mapLevelList.setAutoDelete(true);
+  textRemove();
 
-	textRemove();
+  if (level) level->getZoneList()->append(this);
+
+  // Set the root zone if not already set
+  if (!manager->getMapData()->rootZone)
+    manager->getMapData()->rootZone = this;
 }
 
 CMapZone::~CMapZone()
 {
   //FIXME_jp : when this is undone there are extra levels, this needs fixing
   // Delete the levels in the zone
-  while (getLevels()->first()!=0)
+  while (!mapLevelList.isEmpty())
   {
     kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
-    delete getLevels()->first();
+    delete mapLevelList.first();
   }
 
-  getLevel()->getZoneList()->remove(this);
+  if (getLevel()) getLevel()->getZoneList()->removeAll(this);
   getManager()->updateZoneListCombo();
  
   if (textElement)
     getManager()->deleteElement(textElement);
 }
+
+void CMapZone::setLevel(CMapLevel *level)
+{
+  if (getLevel()) getLevel()->getZoneList()->remove(this);
+  if (level) level->getZoneList()->append(this);
+  CMapElement::setLevel(level);
+}
+
 
 void CMapZone::setLabel(QString zoneLabel)
 {
@@ -189,65 +200,46 @@ CMapElement *CMapZone::copy(void)
 
 void CMapZone::copyPaths(void)
 {
-	for (CMapLevel *level = getLevels()->first();level!=0;level=getLevels()->next())
-	{
-		for (CMapZone *zone=level->getZoneList()->first();zone!=0;zone=level->getZoneList()->next())
-		{
-			zone->copyPaths();
-		}
+  foreach (CMapLevel *level, mapLevelList)
+  {
+    foreach (CMapZone *zone, *level->getZoneList())
+      zone->copyPaths();
 
-		for (CMapRoom *room = level->getRoomList()->first();room!=0; room = level->getRoomList()->next())
-		{
-			for (CMapPath *path = room->getPathList()->first();path!=0; path = room->getPathList()->next())
-			{
-				CMapPath *newPath = (CMapPath *)path->copy();
-				newPath->setSrcRoom(path->getSrcRoom()->getCopiedRoom());
-				newPath->setDestRoom(path->getDestRoom()->getCopiedRoom());
-			}
-		}
-	}
+    foreach (CMapRoom *room, *level->getRoomList())
+    {
+      foreach (CMapPath *path, *room->getPathList())
+      {
+        CMapPath *newPath = (CMapPath *)path->copy();
+        newPath->setSrcRoom(path->getSrcRoom()->getCopiedRoom());
+        newPath->setDestRoom(path->getDestRoom()->getCopiedRoom());
+      }
+    }
+  }
 }
 
 CMapZone *CMapZone::copyZone(void)
 {
-	CMapZone *newZone = new CMapZone(getManager(),getRect(),getLevel());
-	newZone->setLabel(getLabel());
-	newZone->setBackgroundColor(getBackgroundColor());
-	newZone->setColor(getColor());
-	newZone->setDescription(getDescription());
-	newZone->setUseDefaultBackground(getUseDefaultBackground());
-	newZone->setUseDefaultCol(getUseDefaultCol());
+  CMapZone *newZone = new CMapZone(getManager(),getRect(),getLevel());
+  newZone->setLabel(getLabel());
+  newZone->setBackgroundColor(getBackgroundColor());
+  newZone->setColor(getColor());
+  newZone->setDescription(getDescription());
+  newZone->setUseDefaultBackground(getUseDefaultBackground());
+  newZone->setUseDefaultCol(getUseDefaultCol());
 
-	for (CMapLevel *level = getLevels()->first();level!=0;level = getLevels()->next())
-	{
-		CMapLevel *newLevel = getManager()->createLevel(UP,newZone);
+  foreach (CMapLevel *level, mapLevelList)
+  {
+    CMapLevel *newLevel = getManager()->createLevel(UP,newZone);
 
-		//copy zones
-		for (CMapZone *zone=level->getZoneList()->first();zone!=0;zone=level->getZoneList()->next())
-		{
-			CMapZone *anotherNewZone = (CMapZone *)zone->copy();
-			anotherNewZone->setLevel(newLevel);
-		}
+    foreach (CMapElement *el, level->getAllElements()) {
+      CMapElement *el2 = el->copy();
+      el2->setLevel(newLevel);
+    }
+  }
 
-		//copy rooms
-		for (CMapRoom *room=level->getRoomList()->first();room!=0;room=level->getRoomList()->next())
-		{
-			CMapRoom *newRoom = (CMapRoom *)room->copy();
-			newRoom->setLevel(newLevel);
-		}
+  //FIXME_jp: Copy text label position
 
-		//copy texts
-		for (CMapText *text=level->getTextList()->first();text!=0;text=level->getTextList()->next())
-		{
-			CMapText *newText = (CMapText *)text->copy();
-			newText->setLevel(newLevel);
-		}
-
-	}
-
-	//FIXME_jp: Copy text label position
-
-	return newZone;
+  return newZone;
 }
 
 void CMapZone::setLabelPosition(labelPosTyp pos)
@@ -394,7 +386,7 @@ void CMapZone::saveQDomElement(QDomDocument *doc,QDomElement *properties)
 	properties->setAttribute("DefaultColor",getUseDefaultCol());
 	properties->setAttribute("LabelPos",(int)getLabelPosition());
 	properties->setAttribute("ZoneID",getZoneID());
-	properties->setAttribute("NumLevels",getLevels()->count());
+	properties->setAttribute("NumLevels",mapLevelList.count());
 	if (getUseDefaultCol())
 	{
 		properties->setAttribute("UseDefaultCol","true");
@@ -429,11 +421,6 @@ void CMapZone::setZoneID(unsigned int id)
 	  getManager()->m_zoneCount = id;
 
 	m_ID = id;
-}
-
-void CMapZone::resetCount(void)
-{
-	getManager()->m_zoneCount = 0;
 }
 
 void CMapZone::setUseDefaultCol(bool b)
@@ -475,3 +462,10 @@ QColor CMapZone::getBackgroundColor(void)
 {
 	return backgroundCol;
 }
+
+CMapLevel *CMapZone::firstLevel() const
+{
+  if (mapLevelList.isEmpty()) return 0;
+  return mapLevelList.first();
+}
+

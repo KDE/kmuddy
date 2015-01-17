@@ -36,6 +36,7 @@
 #include <q3valuelist.h>
 #include <QActionGroup>
 #include <Q3PtrList>
+#include <kvbox.h>
 
 #include "cmapzone.h"
 #include "cmappath.h"
@@ -235,6 +236,14 @@ void CMapManager::createGlobalConfigPanes ()
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
     plugin->createGlobalConfigPanes();
+}
+
+QList<CMapPropertiesPaneBase *> CMapManager::createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent)
+{
+  QList<CMapPropertiesPaneBase *> res;
+  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
+    res.append(plugin->createPropertyPanes(type, element, parent));
+  return res;
 }
 
 /** This method tells the plugins that the mapper wants to add a room to the speedwalk list
@@ -488,7 +497,7 @@ void CMapManager::initPlugins()
       pluginList.append(plugin);
   
       kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
-      for (CMapToolBase *tool =plugin->getToolList()-> first();tool!=0; tool= plugin->getToolList()->next())
+      foreach (CMapToolBase *tool, *plugin->getToolList())
       {
         kDebug() << "Add Tool : " << tool->name();
         toolList.append(tool);
@@ -527,10 +536,8 @@ void CMapManager::updateZoneListCombo(void)
 {
   QStringList lst;
 
-  for (CMapZone *zone = mapData->getFirstZone(); zone!=0; zone = mapData->getNextZone())
-  {
+  foreach (CMapZone *zone, mapData->getAllZones())
     lst.append(zone->getLabel());
-  }
 
   zoneMenu->clear();
   zoneMenu->setItems(lst);
@@ -541,7 +548,7 @@ void CMapManager::updateZoneListCombo(void)
 
     if (zone)
     {
-      zoneMenu->setCurrentItem(lst.findIndex(zone->getLabel()));
+      zoneMenu->setCurrentItem(lst.indexOf(zone->getLabel()));
     }
   }
 }
@@ -647,7 +654,8 @@ void CMapManager::enableNonViewActions(bool enabled)
 /** Used to unselect all the elements in a level */
 void CMapManager::unselectElements(CMapLevel *level)
 {
-  for (CMapElement *element = level->getFirstElement() ; element!=0; element=level->getNextElement())
+  QList<CMapElement *> lst = level->getAllElements();
+  foreach (CMapElement *element, lst)
   {
     element->setSelected(false);
     element->setEditMode(false);
@@ -757,42 +765,6 @@ CMapRoom *CMapManager::getCurrentRoom()
   return currentRoom;
 }
 
-/** Used to find any elements at the given location
-  * @param pos The location to look for the element
-  * @param level The level to look for the element on
-  * @return NULL if no element was found otherwise a pointer to the element */
-CMapElement *CMapManager::findElementAt(QPoint pos,CMapLevel *level)
-{
-  if (!level)
-    return NULL;
-
-  for ( CMapRoom *room=level->getRoomList()->first(); room != 0; room=level->getRoomList()->next() )
-  {
-    if (room->mouseInElement(pos,level->getZone()))
-    {
-      return (CMapElement *) room;
-    }
-  }
-
-  for ( CMapZone *zone=level->getZoneList()->first(); zone != 0; zone=level->getZoneList()->next() )
-  {
-    if (zone->mouseInElement(pos,level->getZone()))
-    {
-      return (CMapElement *)zone;
-    }
-  }
-
-  for ( CMapText *text=level->getTextList()->first(); text != 0; text = level->getTextList()->next())
-  {
-    if (text->mouseInElement(pos,level->getZone()))
-    {
-      return (CMapElement *)text;
-    }
-  }
-
-  return NULL;
-}
-
 /** This method is used to find a element from a list of properties
   * @param properties The list of proerties
   * @return The element if it's found otherwise NULL */
@@ -832,7 +804,7 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
           int x = properties.readEntry("X",-5);
           int y = properties.readEntry("Y",-5);
 
-          for ( CMapText *text=level->getTextList()->first(); text != 0; text = level->getTextList()->next())
+          foreach (CMapText *text, *level->getTextList())
           {
             if (text->getX()==x && text->getY()==y)
             {
@@ -846,26 +818,6 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
   }
 
   return result;
-}
-
-/** Used to find any rooms at the given location
-  * @param pos The location to look for the room
-  * @param level The level to look for the room on
-  * @return NULL if no room was found otherwise a pointer to the room */
-CMapRoom *CMapManager::findRoomAt(QPoint pos,CMapLevel *level)
-{
-  if (!level)
-    return NULL;
-
-  for ( CMapRoom *room=level->getRoomList()->first(); room != 0; room=level->getRoomList()->next() )
-  {
-    if (room->mouseInElement(pos,level->getZone()))
-    {
-      return room;
-    }
-  }  
-
-  return NULL;
 }
 
 /** Used to erase the map. This will erase all elements and can't be undone */
@@ -895,19 +847,18 @@ void CMapManager::eraseZone(CMapZone *zone)
   if (zone == 0)
     return;
   
-  for ( CMapLevel *level=zone->getLevels()->first(); level != 0; level=zone->getLevels()->next())
+  foreach (CMapLevel *level, *zone->getLevels())
   {
-    for ( CMapRoom *room=level->getRoomList()->first(); room != 0; room=level->getRoomList()->next() )
+    // TODO: this seems to not delete things correctly
+    foreach (CMapRoom *room, *level->getRoomList())
     {        
       room->getPathList()->clear();
       room->getConnectingPathList()->clear();
     }
     level->getRoomList()->clear();
     level->getTextList()->clear();
-    for ( CMapZone* subZone=level->getZoneList()->first(); subZone != 0; subZone=level->getZoneList()->next() )
-    {
+    foreach (CMapZone* subZone, *level->getZoneList())
       eraseZone(subZone);
-    }
     level->getZoneList()->clear();
   }
   zone->getLevels()->clear();
@@ -926,16 +877,10 @@ CMapLevel *CMapManager::createLevel(directionTyp dir,CMapZone *intoZone)
 
   CMapCmdLevelCreate *cmd = NULL;
 
+  int pos = (dir == UP) ? intoZone->getLevels()->count() : 0;
   if (getUndoActive())
   {
-    if (dir==UP)
-    {    
-      cmd = new CMapCmdLevelCreate(this,i18n("Create Level"),intoZone,intoZone->getLevels()->count());
-    }
-    else
-    {
-      cmd = new CMapCmdLevelCreate(this,i18n("Create Level"),intoZone,0);
-    }
+    cmd = new CMapCmdLevelCreate(this,i18n("Create Level"),intoZone,pos);
 
     addCommand(cmd);
     
@@ -943,14 +888,7 @@ CMapLevel *CMapManager::createLevel(directionTyp dir,CMapZone *intoZone)
   }
   else
   {
-    if (dir==UP)
-    {
-      result = m_elementUtils->createLevel(intoZone->getLevels()->count(),intoZone);
-    }
-    else
-    {
-      result = m_elementUtils->createLevel(0,intoZone);
-    }
+    result = new CMapLevel(this, intoZone, pos);
   }
   
   return result;
@@ -961,15 +899,10 @@ CMapLevel *CMapManager::createLevel(directionTyp dir,CMapZone *intoZone)
   * @return Null if no level is found otherwise a pointer to the level */
 CMapLevel *CMapManager::findLevel(unsigned int id)
 {
-  for (CMapZone *zone = getMapData()->getFirstZone();zone!=0;zone = getMapData()->getNextZone())
-  {
-    for (CMapLevel *level = zone->getLevels()->first();level!=0;level = zone->getLevels()->next())
-    {
-      
-      if (level->getLevelID()==id)
+  foreach (CMapZone *zone, getMapData()->getAllZones())
+    foreach (CMapLevel *level, *zone->getLevels())
+      if (level->getLevelID() == id)
         return level;
-    }
-  }
 
   return NULL;
 }
@@ -980,26 +913,12 @@ CMapLevel *CMapManager::findLevel(unsigned int id)
   * @param id The id of the zone to find
   * @return Null if no zone is found otherwise a pointer to the zone */
 CMapZone *CMapManager::findZone(unsigned int id)
-{  
-  for (CMapZone *zone = getMapData()->getFirstZone();zone!=0;zone = getMapData()->getNextZone())
-  {    
+{
+  foreach (CMapZone *zone, getMapData()->getAllZones())
     if (zone->getZoneID()==id)
       return zone;
-  }
   
   return NULL;
-}
-
-void CMapManager::listZones(CMapZone *zone)
-{  
-  for (CMapLevel *level = zone->getLevels()->first(); level!=0; level = zone->getLevels()->next())
-  {
-    for (CMapZone *z = level->getZoneList()->first(); z !=0; z = level->getZoneList()->next())
-    {
-      listZones(z);
-      
-    }
-  }
 }
 
 
@@ -1013,11 +932,11 @@ void CMapManager::createNewMap()
   CMapZone *zone = createZone(QPoint(-1,-1),NULL);
 
   // Create a empty room in the first level of the new zone
-  CMapRoom *room = createRoom(QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()),zone->getLevels()->first());
+  CMapRoom *room = createRoom(QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()),zone->firstLevel());
   setCurrentRoomWithoutUndo(room);
   setLoginRoomWithoutUndo(room);
 
-  activeView->showPosition(currentRoom->getLowPos(),zone->getLevels()->first());
+  activeView->showPosition(currentRoom->getLowPos(),zone->firstLevel());
   updateZoneListCombo();
 
   if (activeView->getCurrentlyViewedLevel()==NULL)  
@@ -1038,7 +957,6 @@ void CMapManager::createNewMap()
 CMapRoom *CMapManager::createRoom(QPoint pos,CMapLevel *level)
 {
   CMapRoom *result = NULL;
-
   if (getUndoActive())
   {
     KMemConfig properties;
@@ -1050,16 +968,11 @@ CMapRoom *CMapManager::createRoom(QPoint pos,CMapLevel *level)
     CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Room"));
     command->addElement(&properties);
     addCommand(command);
-    Q3PtrList<CMapElement> *elements=command->getElements();
-
+    QList<CMapElement *> *elements = command->getElements();
   
-    for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-    {
+    foreach (CMapElement *el, *elements)
       if (el->getElementType()==ROOM)
-      {
         result = (CMapRoom *)el;
-      }
-    }
   }
   else
   {
@@ -1093,15 +1006,11 @@ CMapZone *CMapManager::createZone(QPoint pos,CMapLevel *level,bool levelCreate)
 
   addCommand(command);  
 
-  Q3PtrList<CMapElement> *elements=command->getElements();
+  QList<CMapElement *> *elements = command->getElements();
   
-  for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-  {
+  foreach (CMapElement *el, *elements)
     if (el->getElementType()==ZONE)
-    {
       result = (CMapZone *)el;
-    }
-  }
 
   if (levelCreate)
   {
@@ -1135,19 +1044,15 @@ CMapText *CMapManager::createText(QPoint pos,CMapLevel *level,QString str)
     CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Text"));
     command->addElement(&properties);
     addCommand(command);
-    Q3PtrList<CMapElement> *elements=command->getElements();
-  
-    for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-    {
+    QList<CMapElement *> *elements=command->getElements();
+   
+    foreach (CMapElement *el, *elements)
       if (el->getElementType()==TEXT)
-      {
         result = (CMapText *)el;
-      }
-    }
   }
   else
   {
-    result = m_elementUtils->createText(pos,level,str);
+    result = new CMapText(str,this,pos,level);
   }
 
   return result;
@@ -1177,19 +1082,15 @@ CMapText *CMapManager::createText(QPoint pos,CMapLevel *level,QString str,QFont 
     CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Text"));
     command->addElement(&properties);
     addCommand(command);
-    Q3PtrList<CMapElement> *elements=command->getElements();
+    QList<CMapElement *> *elements=command->getElements();
   
-    for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-    {
+    foreach (CMapElement *el, *elements)
       if (el->getElementType()==TEXT)
-      {
         result = (CMapText *)el;
-      }
-    }
   }
   else
   {
-    result = m_elementUtils->createText(pos,level,str,font,col);
+    result = new CMapText(str,font,col,this,pos,level);
   }
 
   return result;
@@ -1207,7 +1108,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
   if (!srcLevel || !destLevel)
     return NULL;
 
-  for ( room=srcLevel->getRoomList()->first(); room != 0; room=srcLevel->getRoomList()->next() )
+  foreach (room, *srcLevel->getRoomList())
   {
     if (room->getLowPos() == srcPos)
     {
@@ -1216,7 +1117,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
     }
   }
 
-  for ( room=destLevel->getRoomList()->first(); room != 0; room=destLevel->getRoomList()->next() )
+  foreach (room, *destLevel->getRoomList())
   {
     if (room->getLowPos()  == destPos)
     {
@@ -1273,15 +1174,11 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
       command->secondStage();
 
 
-      Q3PtrList<CMapElement> *elements=command->getElements();
+      QList<CMapElement *> *elements=command->getElements();
 
-      for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-      {
+      foreach (CMapElement *el, *elements)
         if (el->getElementType()==PATH)
-        {
           result = (CMapPath *)el;
-        }
-      }
 
       if (result && d.getTwoWay())
       {
@@ -1345,16 +1242,10 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
     setUndoActive(active);
   }
 
-  Q3PtrList<CMapElement> *elements=command->getElements();
-
-  
-  for (CMapElement *el = elements->first(); el!=0; el = elements->next())
-  {
+  QList<CMapElement *> *elements=command->getElements();
+  foreach (CMapElement *el, *elements)
     if (el->getElementType()==PATH)
-    {
       result = (CMapPath *)el;
-    }
-  }
 
   return result;
 }
@@ -1363,23 +1254,16 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
 /** Find the first room in the map, if one can't be found then create one */
 CMapRoom *CMapManager::findFirstRoom(CMapRoom *exsitingRoom)
 {
+  QList<CMapZone *> zones = getMapData()->getAllZones();
   // Find the first room in the map
-  for (CMapZone *zone = getMapData()->getFirstZone();zone!=0;zone = getMapData()->getNextZone())
-  {
-    for (CMapLevel *level = zone->getLevels()->first();level!=0;level = zone->getLevels()->next())
-    {
-      for (CMapRoom *room =  level->getRoomList()->first(); room!=0; room = level->getRoomList()->next())
-      {
+  foreach (CMapZone *zone, zones)
+    foreach (CMapLevel *level, *zone->getLevels())
+      foreach (CMapRoom *room, *level->getRoomList())
         if (room!=exsitingRoom)
-        {
           return room;
-        }
-      }
-    }
-  }
 
   // If we get to this point then no room was found so create one
-  return  createRoom(QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()),getMapData()->getFirstZone()->getLevels()->first());
+  return createRoom(QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()), zones[0]->firstLevel());
 }
 
 void CMapManager::deleteLevel(CMapLevel *level)
@@ -1387,24 +1271,9 @@ void CMapManager::deleteLevel(CMapLevel *level)
   //FIXME_jp: Check to see what happens when all levels are deleted.
     //          It may be nessecary to create a new one.
 
-  openCommandGroup(i18n("Delete Level"));
-
-  for (CMapRoom *room = level->getRoomList()->last(); room!=0; room = level->getRoomList()->last())
-  {
-    deleteElement(room);
-  }
-
-  for (CMapText *text = level->getTextList()->last(); text!=0; text = level->getTextList()->last())
-    deleteElement(text);
-
-  for (CMapZone *zone = level->getZoneList()->last(); zone!=0; zone = level->getZoneList()->last())
-    deleteElement(zone);
-
   // Delete the level
-  CMapCmdLevelDelete *cmd = new CMapCmdLevelDelete(this,i18n("Delete Level Actual Command"),level);
+  CMapCmdLevelDelete *cmd = new CMapCmdLevelDelete(this,i18n("Delete Level"),level);
   addCommand(cmd);
-
-  closeCommandGroup();
 }
 
 
@@ -1413,37 +1282,19 @@ void CMapManager::deleteLevel(CMapLevel *level)
   * @return True, if a valid command otherwise false */
 bool CMapManager::validMoveCmd(QString dirCmd)
 {
-  bool result = false;
-
   if (dirCmd.isEmpty()) return false;
 
   // check for directions
   for (uint i = 0; i < NUM_DIRECTIONS; ++i)
-  {
     if (mapData->directions[i] == dirCmd)
-    {
-      result = true;
-      break;
-    }
-  }
+      return true;
   
-  if (!result)
-  {
-    if (currentRoom)
-    {
-      for (CMapPath *path=currentRoom->getPathList()->first(); path!=0; path=currentRoom->getPathList()->next())
-      {
-        if (path->getSpecialExit())
-          if (path->getSpecialCmd()==dirCmd)
-          {
-            result = true;
-            break;
-          }
-      }
-    }
-  }
+  if (currentRoom)
+    foreach (CMapPath *path, *currentRoom->getPathList())
+      if (path->getSpecialExit() && (path->getSpecialCmd()==dirCmd))
+        return true;
 
-  return result;
+  return false;
 }
 
 /** Used to delete a element from the map, should not be used by deleteElement as
@@ -1489,14 +1340,10 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
     // Delete the levels in the zone
     CMapZone *zone = (CMapZone *)element;
     if (zone->getLinkedElement())  
-    {
       deleteElementWithoutGroup(zone->getLinkedElement(),true);
-    }
 
-    while (zone->getLevels()->first()!=0)
-    {
-      deleteLevel(zone->getLevels()->first());
-    }
+    while (!zone->getLevels()->isEmpty())
+      deleteLevel(zone->firstLevel());
   }
 
   deleteElementWithoutGroup(element,delOpsite);
@@ -1552,7 +1399,7 @@ void CMapManager::activeViewChanged(void)
     if (zone)
     {
       QStringList lst = zoneMenu->items();
-      zoneMenu->setCurrentItem(lst.findIndex(zone->getLabel()));
+      zoneMenu->setCurrentItem(lst.indexOf(zone->getLabel()));
       m_toolsUpZone->setEnabled(zone->getZone());
     }
 
@@ -1858,14 +1705,12 @@ void CMapManager::getCounts(int *levels,int *rooms,int *paths,int *labels,int *z
   *paths = 0;
   *zones = 0;
 
-  for (CMapZone *zone = mapData->getFirstZone(); zone !=0 ; zone = mapData->getNextZone())
+  foreach (CMapZone *zone, mapData->getAllZones())
   {
-    for (CMapLevel *level = zone->getLevels()->first(); level !=0; level = zone->getLevels()->next())
+    foreach (CMapLevel *level, *zone->getLevels())
     {
-      for (CMapRoom *room = level->getRoomList()->first(); room!=0; room = level->getRoomList()->next())
-      {
+      foreach (CMapRoom *room, *level->getRoomList())
         *paths += room->getPathList()->count();
-      }
 
       *rooms += level->getRoomList()->count();
       *labels += level->getTextList()->count();
@@ -2052,7 +1897,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
 
     // Check to see if there is a path in the opsite direction that we should
     // be using
-    for (CMapPath *path2=srcRoom->getConnectingPathList()->first();path2!=0;path2=srcRoom->getConnectingPathList()->next())
+    foreach (CMapPath *path2, *srcRoom->getConnectingPathList())
     {
       if (path2->getDestDir() == dir)
       {
@@ -2126,7 +1971,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
     }
 
     // Check to see if the room already exists
-    CMapElement *elm = findElementAt(QPoint (x,y),destLevel);
+    CMapElement *elm = destLevel->findElementAt(QPoint (x,y));
     CMapRoom *newCurrentRoom = NULL;
 
 
@@ -2202,16 +2047,10 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   pathToWalk.clear();
 
   // Reset the seach count for all the rooms
-  for (CMapZone *zone = mapData->getFirstZone(); zone!=0; zone = mapData->getNextZone())
-  {
-    for (CMapLevel *level=zone->getLevels()->first(); level !=0;level = zone->getLevels()->next())
-    {
-      for (CMapRoom *room=level->getRoomList()->first();room !=0 ; room = level->getRoomList()->next())
-      {
+  foreach (CMapZone *zone, mapData->getAllZones())
+    foreach (CMapLevel *level, *zone->getLevels())
+      foreach (CMapRoom *room, *level->getRoomList())
         room->setMoveTime(-1);
-      }
-    }
-  }
 
   // Init things for the start room
   srcRoom = currentRoom;
@@ -2228,7 +2067,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
     foundRoom = roomsToVisit.dequeue();
 
     // for all neighbours of foundRoom
-    for (path=foundRoom->getPathList()->first(); path != 0; path=foundRoom->getPathList()->next())
+    foreach (path, *foundRoom->getPathList())
     {
       room = path->getDestRoom();
 
@@ -2266,7 +2105,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 
     // Find the room with the shortest time as this is the room we
     // should be moving to.
-    for (path=destRoom->getConnectingPathList()->first();path!=0; path=destRoom->getConnectingPathList()->next())
+    foreach (path, *destRoom->getConnectingPathList())
     {
       if (time == -1 || (path->getSrcRoom()->getMoveTime()<=time && path->getSrcRoom()->getMoveTime()!=-1))
       {
@@ -2669,11 +2508,11 @@ void CMapManager::slotToolsZoneProperties()
 
 void CMapManager::slotSelectZone()
 {
-  for (CMapZone *zone = mapData->getFirstZone();zone!=0; zone = mapData->getNextZone())
+  foreach (CMapZone *zone, mapData->getAllZones())
   {
     if (zone->getLabel()==zoneMenu->currentText())
     {
-      getActiveView()->showPosition(zone->getLevels()->first());
+      getActiveView()->showPosition(zone->firstLevel());
       getActiveView()->redraw();
       break;
     }
@@ -2849,14 +2688,14 @@ void CMapManager::slotTextProperties(void)
 void CMapManager::slotZoneOpen(void)
 {
   CMapZone *zone = (CMapZone *)m_selectedElement;
-  getActiveView()->showPosition(QPoint(1,1),zone->getLevels()->first(),true);  
+  getActiveView()->showPosition(QPoint(1,1),zone->firstLevel(),true);  
 }
 
 /** Used to open the zone under the mouse pointer */
 void CMapManager::slotZoneOpenNewView(void)
 {
   CMapZone *zone = (CMapZone *)m_selectedElement;
-  CMapLevel *level = zone->getLevels()->first();
+  CMapLevel *level = zone->firstLevel();
 
   openNewMapView (level);
 }
@@ -3019,11 +2858,9 @@ void CMapManager::generateTestMap()
 
   }
 
-  CMapLevel *level = getMapData()->getFirstZone()->getLevels()->first();
+  CMapLevel *level = getMapData()->getAllZones().first()->firstLevel();
   if (level->getNextLevel())
-  {
     level = level->getNextLevel();
-  }
 
   QFont font = QFont("times");
   font.setPointSize(25);
@@ -3071,7 +2908,7 @@ void CMapManager::generateTestMap()
     changeProperties(testZone,"Label","",i18n("Test Zone 2"));
     changeProperties(testZone,"LabelPos",CMapRoom::HIDE,CMapRoom::EAST);
 
-    CMapRoom *test5 = createRoom(QPoint(3*20,3*20),testZone->getLevels()->first());
+    CMapRoom *test5 = createRoom(QPoint(3*20,3*20),testZone->firstLevel());
     changeProperties(test5,"Label","",i18n("Test room 5"));
 
     CMapPath *interZonePath = createPath(test4,NORTH,test5,NORTH);
@@ -3083,7 +2920,7 @@ void CMapManager::generateTestMap()
 
     changedElement(testZone);
 
-    createZone(QPoint(6*20,6*20),testZone->getLevels()->first());
+    createZone(QPoint(6*20,6*20),testZone->firstLevel());
     font.setPointSize(8);
     createText(QPoint(20,300),level,"Multi line text lable\nThis is the second line\nThis is the third line",font,Qt::black);
 
@@ -3091,3 +2928,4 @@ void CMapManager::generateTestMap()
   closeCommandGroup();
   kDebug() << "test map created";
 }
+

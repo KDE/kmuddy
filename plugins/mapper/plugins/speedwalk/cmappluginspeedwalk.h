@@ -21,7 +21,7 @@
 #include "../../cmappluginbase.h"
 
 
-#include <q3ptrlist.h>
+#include <QList>
 
 class CMapManager;
 class CMapRoom;
@@ -56,8 +56,6 @@ public:
 
 	void setSpeedwalkCatogrize(int catogry);
 
-	Q3PtrList<CMapRoom> *getSpeedwalkRoomList();
-
 	void saveConfigOptions(void);
 	void loadConfigOptions(void);
 
@@ -91,10 +89,12 @@ public:
 	  * @param properties The properties being loaded from the file
 	  */
 	void loadElementProperties(CMapElement *element,KMemConfig *properties);
-	
+
+        QList<CMapRoom *> *getSpeedwalkRoomList() { return &m_speedwalkRoomList; }
+
 private:
 	/** Used to store a list of rooms in the speedwalk list */
-	Q3PtrList<CMapRoom> m_speedwalkRoomList;
+	QList<CMapRoom *> m_speedwalkRoomList;
 	/** Used to say what catogery is being used to display the speed walk list */
 	int m_speedwalkCatogrize;
 	/** The speedwalk list dialog */

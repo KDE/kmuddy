@@ -30,7 +30,7 @@
 
 #include <kdebug.h>
 
-CMapElementUtil::CMapElementUtil(CMapManager *mapManager) : CMapLevelUtil(mapManager)
+CMapElementUtil::CMapElementUtil(CMapManager *mapManager)
 {
 	manager = mapManager;
 }
@@ -74,12 +74,10 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 
 			directionTyp srcDir	 = (directionTyp)grp.readEntry("SrcDir",0);
 			directionTyp destDir = (directionTyp)grp.readEntry("DestDir",0);
-			result = createPath(srcRoom,srcDir,destRoom,destDir);
 
-			if (result)
-			{
-				((CMapPath *)result)->loadProperties(grp);
-			}
+			result = new CMapPath(manager,srcRoom,srcDir,destRoom,destDir);
+
+			((CMapPath *)result)->loadProperties(grp);
 		}
 		else
 		{	
@@ -115,23 +113,16 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 				                color=grp.readEntry("Color",color);
 				            	QFont font = manager->getMapData()->defaultTextFont;
 				            	font = grp.readEntry("Font",font);
-				            	result = createText(lowPos,level,text,font,color);
+				            	result = new CMapText(text, font, color, manager, lowPos, level);
 				            }
 				            else
 				            {
-				            	result = createText(lowPos,level,text);
+				            	result = new CMapText(text, manager, lowPos, level);
 				            }
-				            if (result)
-				            {
-								if (!grp.hasKey("TextID"))
-								{
-									grp.writeEntry("TextID",((CMapText *)result)->getTextID());									
-								}
-								else
-								{
-									((CMapText *)result)->setTextID(grp.readEntry("TextID",-1));
-								}
-				            }
+						if (!grp.hasKey("TextID"))
+							grp.writeEntry("TextID",((CMapText *)result)->getTextID());									
+						else
+							((CMapText *)result)->setTextID(grp.readEntry("TextID",-1));
 				            break;
 				case ZONE : result = createZone(lowPos,level);
 				            if (result)
@@ -158,81 +149,28 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 	return result;
 }
 
-/** Used to create a new text label */
-CMapText *CMapElementUtil::createText(QPoint pos,CMapLevel *level,QString str)
-{
-  return new CMapText(str,manager,pos,level);
-}
-
-/** Used to create a new text label */
-CMapText *CMapElementUtil::createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col)
-{
-  return new CMapText(str,font,col,manager,pos,level);
-}
-
 /** Used to create a new room */
 CMapRoom *CMapElementUtil::createRoom(QPoint pos,CMapLevel *level)
 {
-	if (manager->findElementAt(pos,level)!=NULL)
-	{
-		return NULL;	
-	}
+  if ((!level) || level->findElementAt(pos))
+    return NULL;
 
-	QRect rect(pos,manager->getMapData()->gridSize);
+  QRect rect(pos,manager->getMapData()->gridSize);
 
-	CMapRoom *room = new CMapRoom(manager,rect,level);
+  CMapRoom *room = new CMapRoom(manager,rect,level);
 
-	if (level)
-		level->getRoomList()->append(room);
-
-	return room;
+  return room;
 }
 
 /** Used to create a new zone */
 CMapZone *CMapElementUtil::createZone(QPoint pos,CMapLevel *level)
 {
-	if (manager->findElementAt(pos,level))
-		return NULL;
+  if (level && level->findElementAt(pos))
+    return NULL;
 
-	QRect rect(pos,manager->getMapData()->gridSize);
+  QRect rect(pos,manager->getMapData()->gridSize);
 
-	CMapZone *zone= new CMapZone (manager,rect,level);
-
-	// Set the root zone if not already set
-	if (!manager->getMapData()->rootZone)
-		manager->getMapData()->rootZone = zone;
-
-	if (level)
-		level->getZoneList()->append(zone);
-
-	return zone;
-}
-
-/** This is used to create a path between two rooms */
-CMapPath *CMapElementUtil::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir)
-{
-	// Create the path
-	CMapPath *newPath = new CMapPath (manager,srcRoom,srcDir,destRoom,destDir);
-
-	// Add the path to the src and dest room
-	srcRoom->addPath( newPath );
-	destRoom->getConnectingPathList()->append(newPath);
-
-	// Check to see if there is a a path in the opsite directon, if so make this a two way path
-	for (CMapPath *path =destRoom->getPathList()->first(); path!=0; path=destRoom->getPathList()->next())
-	{
-		// FIXME_jp : Fix this for multiple special paths between the same rooms with different cmd's
-		if (path->getDestRoom()==srcRoom &&
-		    path->getSrcDir() == destDir &&
-		    path->getDestDir() == srcDir &&
-			path->getSpecialCmd() == newPath->getSpecialCmd())
-		{
-			newPath->setOpsitePath(path);
-			path->setOpsitePath(newPath);
-		}
-	}
-
-	return newPath;
+  return new CMapZone (manager,rect,level);
 }
 
 /** Delete a path map element */

@@ -20,7 +20,6 @@
 
 #include <qrect.h>
 #include <q3valuelist.h>
-#include <kvbox.h>
 
 #include "cmapelement.h"
 

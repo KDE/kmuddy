@@ -18,12 +18,9 @@
 #ifndef CMAPCMDELEMENTDELETE_H
 #define CMAPCMDELEMENTDELETE_H
 
-#include <k3command.h>
-
 #include <qstringlist.h>
 #include <qfont.h>
 #include <qpoint.h>
-#include <kvbox.h>
 
 #include "cmapcommand.h"
 #include "cmapelementutil.h"

@@ -61,6 +61,7 @@ class CMapCmdGroup;
 class CMapFileFilterBase;
 class CMapClipboard;
 class CMapElementUtil;
+class CMapPropertiesPaneBase;
 
 class DlgMapRoomProperties;
 class DlgMapTextProperties;
@@ -155,18 +156,6 @@ public:
 
   /** Used to get a pointer to the map data */
   CMapData *getMapData() const;
-
-  /** Used to find any elements at the given location
-    * @param pos The location to look for the element
-    * @param level The level to look for the element on
-    * @return NULL if no element was found otherwise a pointer to the element */
-  CMapElement *findElementAt(QPoint pos,CMapLevel *level);
-  /** Used to find any rooms at the given location
-    * @param pos The location to look for the room
-    * @param level The level to look for the room on
-    * @return NULL if no room was found otherwise a pointer to the room */
-  CMapRoom *findRoomAt(QPoint pos,CMapLevel *level);
-
 
   /** Used to set the login room */
   void setLoginRoom(CMapRoom *room);
@@ -291,6 +280,9 @@ public:
 
   void createGlobalConfigPanes();
   void createProfileConfigPanes();
+
+  /** Return property panes from all the plugins */
+  virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
 
   QString defaultSavePath () const;
 
@@ -500,7 +492,6 @@ private:
 public:
   /** This is a debug function and not for genreal use */
   void generateTestMap();
-  void listZones(CMapZone *zone);
 };
 
 #endif

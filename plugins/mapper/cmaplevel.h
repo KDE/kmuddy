@@ -19,15 +19,10 @@
 #ifndef CMAPLEVEL_H
 #define CMAPLEVEL_H
 
-#include <q3ptrlist.h>
+#include <QList>
+#include <QPoint>
 
 #include <kmuddy_export.h>
-
-#define ROOM_LIST 0
-#define TEXT_LIST 1
-#define ZONE_LIST 2
-
-#define NUM_LISTS 3
 
 class CMapManager;
 class CMapRoom;
@@ -41,40 +36,29 @@ class CMapElement;
 class KMUDDY_EXPORT CMapLevel
 {
 public:
-	CMapLevel(CMapManager *mapManager);
+	CMapLevel(CMapManager *mapManager, CMapZone *zone, int pos);
 	~CMapLevel();
 
 	/** Get the list of rooms */
-	Q3PtrList<CMapRoom> *getRoomList(void)      { return (Q3PtrList<CMapRoom> *)&m_elementList[ROOM_LIST]; }
+	QList<CMapRoom *> *getRoomList() { return &m_roomList; }
 	/** Get the list of text elements */
-	Q3PtrList<CMapText> *getTextList(void)      { return (Q3PtrList<CMapText> *)&m_elementList[TEXT_LIST]; }
+	QList<CMapText *> *getTextList() { return &m_textList; }
 	/** Get the list of zones */
-	Q3PtrList<CMapZone> *getZoneList(void)      { return (Q3PtrList<CMapZone> *)&m_elementList[ZONE_LIST]; }
+	QList<CMapZone *> *getZoneList() { return &m_zoneList; }
 
-	/** Used to set the pointer to the previous level */
-	void setPrevLevel(CMapLevel *level);
 	/** Used to get the pointer to the previous level */
 	CMapLevel *getPrevLevel(void);
-	/** Used to set the pointer to the next level */
-	void setNextLevel(CMapLevel *level);
 	/** Used to get the pointer to the next level */
 	CMapLevel *getNextLevel(void);
 	/** Used to get the zone that the level is in */
 	CMapZone *getZone(void);
-	/** Used to set the zone that the level is in */
-	void setZone(CMapZone *zone);
 	/** Used to get the number of the level */
 	int getNumber(void);
 
-
-	/** Used to get the first element in a level */
-	CMapElement *getFirstElement(void);
-	/** Used to get the element after the current element in the level */
-	CMapElement *getNextElement(void);
-	/** Used to get the current element in the level */
-	CMapElement *getCurrentElement(void);
+        /** Retrieve all elements in the level */
+        QList<CMapElement *> getAllElements();
 	/** This is used to get a unique ID for the level */
-	uint getLevelID(void);
+	uint getLevelID(void) const;
 	/** This is used to set the level ID for the level */
 	void setLevelID(unsigned int id);
 	/** Used to find a room with the ID */
@@ -82,22 +66,19 @@ public:
 	/** Used to find a room with the ID */
 	CMapText *findText(unsigned int id);
 
-	void resetCount(void);
+	QList<CMapElement *> elementsUnderMouse(QPoint mousePos);
+	CMapElement *findElementAt(QPoint pos);
+	CMapRoom *findRoomAt(QPoint pos);
 
 private:
 	unsigned int m_ID;
 	CMapManager *m_mapManager;
 	CMapZone *m_mapZone;
-	CMapLevel *m_nextLevel;
-	CMapLevel *m_prevLevel;
 
 	/** An array of the elements in the level */
-	Q3PtrList<CMapElement> m_elementList[NUM_LISTS];
-
-	/** A pointer to the current element */
-	CMapElement *m_currentElement;
-
-	int m_currentList;
+	QList<CMapRoom *> m_roomList;
+	QList<CMapText *> m_textList;
+	QList<CMapZone *> m_zoneList;
 };
 
 #endif

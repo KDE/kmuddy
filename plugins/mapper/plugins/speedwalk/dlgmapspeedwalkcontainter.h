@@ -19,9 +19,6 @@
 #define DLGMAPSPEEDWALKCONTAINTER_H
 
 #include <kdialog.h>
-//Added by qt3to4:
-#include <QCloseEvent>
-#include <kvbox.h>
 
 class CMapPluginSpeedwalk;
 class DlgMapSpeedwalkList;

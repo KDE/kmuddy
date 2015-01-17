@@ -22,8 +22,7 @@
 #include <ksimpleconfig.h>
 
 #include <qstring.h>
-#include <q3ptrlist.h>
-#include <kvbox.h>
+#include <QList>
 
 #include "cmapcommand.h"
 
@@ -43,7 +42,7 @@ public:
 private:
 	CMapManager *m_mapManager;
 	/** A list of commands in the group */
-	Q3PtrList<K3Command> commands;
+	QList<K3Command *> commands;
 	/** A pointer to the group above this, NULL if it's the main history */
 	CMapCmdGroup *previousGroup;
 };

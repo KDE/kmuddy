@@ -18,9 +18,8 @@
 #ifndef CMAPZONE_H
 #define CMAPZONE_H
 
-#include <q3ptrlist.h>
 #include <qcolor.h>
-#include <kvbox.h>
+#include <QList>
 
 #include "cmapelement.h"
 
@@ -43,6 +42,7 @@ public:
 	~CMapZone();
 
 	elementTyp getElementType(void)                  { return ZONE ; }
+        virtual void setLevel(CMapLevel *level);
 
 	void setLabel(QString zoneLabel);
 	QString getLabel(void)                           { return label; }
@@ -58,7 +58,8 @@ public:
 	void setBackgroundColor(QColor col);
 	QColor getBackgroundColor(void);
 
-	Q3PtrList<CMapLevel> *getLevels(void)                { return &mapLevelList; }
+	QList<CMapLevel *> *getLevels() { return &mapLevelList; }
+        CMapLevel *firstLevel() const;
 
 	//void paint(QPainter *p,CMapZone *zone);
 	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone);
@@ -94,7 +95,6 @@ public:
 	void setZoneID(unsigned  int id);
 	/** Get the text element linked to this element */
 	CMapText *getLinkedElement(void)                         { return textElement; }
-	void resetCount(void);
 	
 protected:
 	void geometryChanged(void);
@@ -129,7 +129,7 @@ private:
 	CMapText *textElement;
 
 	/** This is a list of all the maps for this mud */
-	Q3PtrList<CMapLevel> mapLevelList;
+	QList<CMapLevel *> mapLevelList;
 };
 
 #endif

@@ -18,10 +18,7 @@
 #ifndef CMAPCMDSPEEDWALKADD_H
 #define CMAPCMDSPEEDWALKADD_H
 
-#include <k3command.h>
-
 #include <q3valuelist.h>
-#include <kvbox.h>
 #include "../../cmapcommand.h"
 
 class CMapRoom;

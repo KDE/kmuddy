@@ -33,8 +33,6 @@
 #include "cmapcmdelementproperties.h"
 
 #include "kmemconfig.h"
-//Added by qt3to4:
-#include <Q3PtrList>
 
 CMapClipboard::CMapClipboard(CMapManager *mapManager,QObject *parent, const char *name ) : QObject(parent,name)
 {
@@ -103,106 +101,105 @@ void CMapClipboard::enableActions(bool enabled)
 /** This method is called to copy the selected elements into the clipboard */
 void CMapClipboard::slotCopy()
 {
-	if (m_clipboard)
-		delete m_clipboard;
+  if (m_clipboard)
+    delete m_clipboard;
 
-	m_clipboard = new KMemConfig();
+  m_clipboard = new KMemConfig();
 
-	if (m_mapManager->getActiveView())
-	{
-		int group = 0;
-		// Copy all the elements except for paths that are selected
-		CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
-		for (CMapElement *element = level->getFirstElement() ; element!=0; element=level->getNextElement())
-		{
-			if (element->getSelected())
-			{
-				group++;
-				QString grp;
-				grp.sprintf("%d",group);
-                                KConfigGroup clipGroup = m_clipboard->group(grp);
+  if (m_mapManager->getActiveView())
+  {
+    int group = 0;
+    // Copy all the elements except for paths that are selected
+    CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
+    QList<CMapElement *> lst = level->getAllElements();
+    foreach (CMapElement *element, lst)
+    {
+      if (!element->getSelected()) continue;
+      group++;
+      QString grp;
+      grp.sprintf("%d",group);
+      KConfigGroup clipGroup = m_clipboard->group(grp);
 
-				switch (element->getElementType())
-				{
-					case ZONE : {
-					            	CMapZone *zone = (CMapZone *)element;
-					            	copyZone(&group,zone,clipGroup);
-					            	clipGroup.writeEntry("LabelPos",(int)CMapZone::HIDE);
-					            }
-					
-					            break;
-					case ROOM : {
-					            	CMapRoom *room = (CMapRoom *)element;
-					            	room->saveProperties(clipGroup);
-					            	clipGroup.deleteEntry("RoomID");
-					            	clipGroup.writeEntry("LabelPos",(int)CMapRoom::HIDE);
-					            }
-					            break;
-					case TEXT : if (!((CMapText *)element)->getLinkElement())
-					            {
-                                	element->saveProperties(clipGroup);
-									clipGroup.deleteEntry("TextID");
-					            }
-					            break;
-					default   : break;
-				}
-			}
-		}
-		
-		// Copy all the path elements into the clipboard
-		int pathGroup = 0;
+      switch (element->getElementType())
+      {
+        case ZONE : {
+                      CMapZone *zone = (CMapZone *)element;
+                      copyZone(&group,zone,clipGroup);
+                      clipGroup.writeEntry("LabelPos",(int)CMapZone::HIDE);
+                    }
 
-		for (CMapZone *zone = m_mapManager->getMapData()->getFirstZone(); zone!=0; zone=m_mapManager->getMapData()->getNextZone())
-		{
-			for (CMapLevel *level = zone->getLevels()->first(); level!=0; level=zone->getLevels()->next())
-			{
-				for (CMapRoom *room = level->getRoomList()->first(); room!=0; room=level->getRoomList()->next())
-				{
-					for (CMapPath *path = room->getPathList()->first(); path!=0; path = room->getPathList()->next())
-					{
-						if ((path->getSrcRoom()->getSelected() || path->getSrcRoom()->getZone()->getSelected()) &&
-						    (path->getDestRoom()->getSelected() || path->getDestRoom()->getZone()->getSelected()))
-						{	
-							copyPath (&pathGroup,path);
-						}
-					}
-				}
-			}
-		}
+                    break;
+        case ROOM : {
+                      CMapRoom *room = (CMapRoom *)element;
+                      room->saveProperties(clipGroup);
+                      clipGroup.deleteEntry("RoomID");
+                      clipGroup.writeEntry("LabelPos",(int)CMapRoom::HIDE);
+                    }
+                    break;
+        case TEXT : if (!((CMapText *)element)->getLinkElement())
+                    {
+                      element->saveProperties(clipGroup);
+                      clipGroup.deleteEntry("TextID");
+                    }
+                    break;
+        default   : break;
+      }
+    }
 
-		// Copy all the linked text elements
-		int linkGroup =0;
+    // Copy all the path elements into the clipboard
+    int pathGroup = 0;
 
-		for (CMapElement *element = level->getFirstElement() ; element!=0; element=level->getNextElement())
-		{
-			if (element->getSelected() && element->getElementType()==TEXT)
-			{
-				CMapText *text = (CMapText *)element;
-				CMapElement *link = text->getLinkElement();
-				if (link)
-				{
-					linkGroup++;
-					QString grp;
-					grp.sprintf("LINK%d",linkGroup);
-                                        KConfigGroup clipGroup = m_clipboard->group(grp);
+    foreach (CMapZone *zone, m_mapManager->getMapData()->getAllZones())
+    {
+      foreach (CMapLevel *level, *zone->getLevels())
+      {
+        foreach (CMapRoom *room, *level->getRoomList())
+        {
+          foreach (CMapPath *path, *room->getPathList())
+          {
+            if ((path->getSrcRoom()->getSelected() || path->getSrcRoom()->getZone()->getSelected()) &&
+                (path->getDestRoom()->getSelected() || path->getDestRoom()->getZone()->getSelected()))
+            {	
+              copyPath (&pathGroup,path);
+            }
+          }
+        }
+      }
+    }
 
-					text->saveProperties(clipGroup);
-					
-					clipGroup.writeEntry("LinkLevelNum",link->getLevel()->getNumber());
+    // Copy all the linked text elements
+    int linkGroup =0;
 
-					clipGroup.writeEntry("LinkX",link->getX());
-					clipGroup.writeEntry("LinkY",link->getY());
-					clipGroup.writeEntry("LinkZone",link->getZone()->getZoneID());
-				}
-			}
-		}
+    foreach (CMapElement *element, lst)
+    {
+      if (element->getSelected() && element->getElementType()==TEXT)
+      {
+        CMapText *text = (CMapText *)element;
+        CMapElement *link = text->getLinkElement();
+        if (link)
+        {
+          linkGroup++;
+          QString grp;
+          grp.sprintf("LINK%d",linkGroup);
+          KConfigGroup clipGroup = m_clipboard->group(grp);
 
-		// Copy the selected paths
-                KConfigGroup header = m_clipboard->group("Header");
-		header.writeEntry("Elements",group);
-		header.writeEntry("Paths",pathGroup);
-		header.writeEntry("Links",linkGroup);
-	}
+          text->saveProperties(clipGroup);
+
+          clipGroup.writeEntry("LinkLevelNum",link->getLevel()->getNumber());
+
+          clipGroup.writeEntry("LinkX",link->getX());
+          clipGroup.writeEntry("LinkY",link->getY());
+          clipGroup.writeEntry("LinkZone",link->getZone()->getZoneID());
+        }
+      }
+    }
+
+    // Copy the selected paths
+    KConfigGroup header = m_clipboard->group("Header");
+    header.writeEntry("Elements",group);
+    header.writeEntry("Paths",pathGroup);
+    header.writeEntry("Links",linkGroup);
+  }
 }
 
 /** This method is used to copy a path into the clipboard */                     	
@@ -231,10 +228,10 @@ void CMapClipboard::copyZone(int *group,CMapZone *orgZone, KConfigGroup configGr
 	orgZone->saveProperties(configGroup);
 
 	// Copy the elements of the zone
-	for (CMapLevel *level=orgZone->getLevels()->first(); level !=0;level = orgZone->getLevels()->next())
+	foreach (CMapLevel *level, *orgZone->getLevels())
 	{
 		// Copy any zones in the zone
-		for (CMapZone *zone=level->getZoneList()->first();zone !=0 ; zone = level->getZoneList()->next())
+		foreach (CMapZone *zone, *level->getZoneList())
 		{
 			(*group)++;
 			QString grp;
@@ -245,7 +242,7 @@ void CMapClipboard::copyZone(int *group,CMapZone *orgZone, KConfigGroup configGr
 		}
 
 		// Copy any rooms in the zone
-		for (CMapRoom *room=level->getRoomList()->first();room !=0 ; room = level->getRoomList()->next())
+		foreach (CMapRoom *room, *level->getRoomList())
 		{
 			(*group)++;
 			QString grp;
@@ -258,7 +255,7 @@ void CMapClipboard::copyZone(int *group,CMapZone *orgZone, KConfigGroup configGr
 		}
 
 		// Copy any text elements in the zone
-		for (CMapText *text=level->getTextList()->first();text !=0 ; text = level->getTextList()->next())
+		foreach (CMapText *text, *level->getTextList())
 		{
 			if (!text->getLinkElement())
 			{
@@ -387,9 +384,9 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
 			m_mapManager->addCommand(command);
 
 			// Check the created elements to see if a zone was created
-			Q3PtrList<CMapElement> *elements=command->getElements();
+			QList<CMapElement *> *elements = command->getElements();
 
-			for (CMapElement *el = elements->first(); el!=0; el = elements->next())
+			foreach (CMapElement *el, *elements)
 			{
 				// if a zone was created then save the origal id and the new id in the look table
 				// so element that are to be pasted into the zone can find the new id of the zone
@@ -502,8 +499,8 @@ void CMapClipboard::pastePaths(unsigned int currentZoneID)
 				}
 
 				// Update the clipboard with the new level that the element is to be pasted into
-				props.writeEntry("SrcRoom",m_mapManager->findRoomAt(QPoint(srcX,srcY),srcLevel)->getRoomID());
-				props.writeEntry("DestRoom",m_mapManager->findRoomAt(QPoint(destX,destY),destLevel)->getRoomID());
+				props.writeEntry("SrcRoom", srcLevel->findRoomAt(QPoint(srcX,srcY))->getRoomID());
+				props.writeEntry("DestRoom", destLevel->findRoomAt(QPoint(destX,destY))->getRoomID());
 				props.writeEntry("SrcLevel",srcLevel->getLevelID());
 				props.writeEntry("DestLevel",destLevel->getLevelID());
 
@@ -587,7 +584,7 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 				}
 
                 // Setup the properties so that the text element will be linked to the new element
-				CMapElement *link = m_mapManager->findElementAt(QPoint(x,y),linkLevel);
+				CMapElement *link = linkLevel->findElementAt(QPoint(x,y));
 				if (link->getElementType()==ZONE)
 				{
 					props.writeEntry("LinkedID",((CMapZone *)link)->getZoneID());
@@ -604,9 +601,9 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 				m_mapManager->addCommand(command);
 
 				// Check the created elements to see if a zone was created
-				Q3PtrList<CMapElement> *elements=command->getElements();
+				QList<CMapElement *> *elements=command->getElements();
 
-				for (CMapElement *el = elements->first(); el!=0; el = elements->next())
+				foreach (CMapElement *el, *elements)
 				{
 					// Update the elements properties
 					CMapCmdElementProperties *cmd = new CMapCmdElementProperties(m_mapManager,i18n("Update Properties"),el);
@@ -622,82 +619,53 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 /** This slot is called to delete all the selected objects in the current view */
 void CMapClipboard::slotDelete(void)
 {
-	m_mapManager->openCommandGroup(i18n("Delete Elements"));
-	CMapViewBase *currentView = m_mapManager->getActiveView();
-	if (currentView)
-	{
-		CMapLevel *level = currentView->getCurrentlyViewedLevel();
+  m_mapManager->openCommandGroup(i18n("Delete Elements"));
+  CMapViewBase *currentView = m_mapManager->getActiveView();
+  if (currentView)
+  {
+    CMapLevel *level = currentView->getCurrentlyViewedLevel();
 
-		if (level)
-		{
-			for (int i = level->getRoomList()->count()-1 ; i>=0 ; i--)
-			{
-				CMapRoom *room = level->getRoomList()->at(i);
+    if (level)
+    {
+      QList<CMapElement *> lst = level->getAllElements();
+      foreach (CMapElement *el, lst) {
+        CMapRoom *room = dynamic_cast<CMapRoom *>(el);
+        if (room) {
+          QList<CMapPath *> paths = *room->getPathList(); // create a copy
+          foreach (CMapPath *path, paths)
+          {
+            if (path->getSelected())
+              m_mapManager->deleteElement(path);
+          }
+          paths = *room->getConnectingPathList();
+          foreach (CMapPath *path, paths)
+          {
+            if (path->getSelected())
+              m_mapManager->deleteElement(path);
+          }
+        }
 
-				for (int i2 = room->getPathList()->count() -1; i2>=0 ; i2--)
-				{
-					CMapPath *path = room->getPathList()->at(i2);
+        if (el->getSelected())
+          m_mapManager->deleteElement(room);
+      }
+    }
+  }
 
-					if (path->getSelected())
-					{
-						m_mapManager->deleteElement(path);
-					}
-				}
-
-				for (int i2 = room->getConnectingPathList()->count() -1; i2>=0 ; i2--)
-				{
-					CMapPath *path = room->getConnectingPathList()->at(i2);
-					if (path->getSelected())
-					{
-						m_mapManager->deleteElement(path);
-					}
-				}
-
-				if (room->getSelected())
-				{
-					level->getRoomList()->next();
-					m_mapManager->deleteElement(room);
-				}
-				
-			}
-
-			for (int i = level->getTextList()->count()-1 ; i>=0 ; i --)
-			{	
-				CMapText *text = level->getTextList()->at(i);
-				if (text->getSelected())
-				{
-					m_mapManager->deleteElement(text);
-				}
-			}
-
-			for (int i = level->getZoneList()->count()-1 ; i>=0 ; i --)
-			{	
-				CMapZone *zone = level->getZoneList()->at(i);
-
-				if (zone->getSelected())
-				{
-					m_mapManager->deleteElement(zone);
-				}
-			}
-		}
-	}
-
-	m_mapManager->closeCommandGroup();
+  m_mapManager->closeCommandGroup();
 }
 
 /** This slot is called when the select all menu option is selected */
 void CMapClipboard::slotSelectAll(void)
 {
-	if (m_mapManager->getActiveView())
-	{
-		CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
-		for (CMapElement *element = level->getFirstElement() ; element!=0; element=level->getNextElement())
-		{
-			element->setSelected(true);
-		}	
+  if (m_mapManager->getActiveView())
+  {
+    CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
+    QList<CMapElement *> lst = level->getAllElements();
+    foreach (CMapElement *element, lst)
+      element->setSelected(true);
 
-		m_mapManager->levelChanged(level);
-	}	
+    m_mapManager->levelChanged(level);
+  }
 }
 
 /** This slot is called when the unselect all menu option is selected */
@@ -714,15 +682,13 @@ void CMapClipboard::slotUnselectAll(void)
 /** This slot is called when the invert selection menu option is called */
 void CMapClipboard::slotInvertSelection(void)
 {
-	if (m_mapManager->getActiveView())
-	{
-		CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
-		for (CMapElement *element = level->getFirstElement() ; element!=0; element=level->getNextElement())
-		{
-			element->setSelected(!element->getSelected());
-		}	
+  if (!m_mapManager->getActiveView()) return;
+  CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
 
-		m_mapManager->levelChanged(m_mapManager->getActiveView()->getCurrentlyViewedLevel());
-	}
+  QList<CMapElement *> lst = level->getAllElements();
+  foreach (CMapElement *element, lst)
+    element->setSelected(!element->getSelected());
+
+  m_mapManager->levelChanged(m_mapManager->getActiveView()->getCurrentlyViewedLevel());
 }
 

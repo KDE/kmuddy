@@ -18,7 +18,7 @@
 #ifndef CMAPPLUGINBASE_H
 #define CMAPPLUGINBASE_H
 
-#include <q3ptrlist.h>
+#include <QList>
 #include <kparts/plugin.h>
 
 #include "cmapelement.h"
@@ -44,9 +44,9 @@ public:
 	virtual ~CMapPluginBase();
 
 	/** Used to get a list of the tools */
-	virtual Q3PtrList<CMapToolBase> *getToolList(void);
+	virtual QList<CMapToolBase *> *getToolList(void);
 	/** Used to get a list of the property pages for a map element */
-	virtual Q3PtrList<CMapPropertiesPaneBase> getPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
+	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
 	virtual void createGlobalConfigPanes ();
 	virtual void createProfileConfigPanes ();
 
@@ -106,8 +106,7 @@ public:
 	
 	
 protected:
-	Q3PtrList<CMapToolBase>            toolList;
-	Q3PtrList<CMapPropertiesPaneBase>  paneList;
+	QList<CMapToolBase *>            toolList;
 
 	CMapManager *mapManager;
 };

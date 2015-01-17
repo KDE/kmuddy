@@ -20,11 +20,6 @@
 
 #include <qstring.h>
 
-#include <k3command.h>
-#include <kvbox.h>
-
-#include "cmaplevelutil.h"
-
 #include "cmapcommand.h"
 
 class CMapManager;
@@ -34,7 +29,7 @@ class CMapLevel;
   *@author Kmud Developer Team
   */
 
-class CMapCmdLevelDelete : public CMapCommand,CMapLevelUtil
+class CMapCmdLevelDelete : public CMapCommand
 {
 public: 
 	CMapCmdLevelDelete(CMapManager *manager,QString name, CMapLevel *level);

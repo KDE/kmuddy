@@ -25,7 +25,6 @@
 #include <Q3HBoxLayout>
 
 #include <klocale.h>
-#include <kvbox.h>
 
 CMapViewStatusbar::CMapViewStatusbar(QWidget *parent, const char *name ) : Q3Frame(parent,name)
 {

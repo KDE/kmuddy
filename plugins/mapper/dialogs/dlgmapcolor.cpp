@@ -22,7 +22,6 @@
 #include <kdebug.h>
 
 #include <qcolor.h>
-#include <kvbox.h>
 
 #include "../cmapmanager.h"
 

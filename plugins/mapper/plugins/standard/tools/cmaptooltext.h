@@ -23,7 +23,6 @@
 #include <qevent.h>
 //Added by qt3to4:
 #include <QKeyEvent>
-#include <kvbox.h>
 
 #include "../../../cmaptoolbase.h"
 

@@ -22,6 +22,7 @@
 #include <qcolor.h>
 #include <qfont.h>
 #include <qstringlist.h>
+#include <QList>
 
 #include "cmapzone.h"
 #include "cmaproom.h"
@@ -37,16 +38,9 @@ public:
 	CMapData();
 	~CMapData();
 
-	/** This is used to get the first zone in a list of zones */
-	CMapZone *getFirstZone(void);
-	/** This is used to get the next zone is a list of zones */
-	CMapZone *getNextZone(void);
-	/** This is used to get the current zone in a list of zones */
-	CMapZone *getCurrentZone(void);
-	/** This is used to get a zone and the given index as if they
-	  * were in a list. The current Zone is set to the one at the
-	  * index */
-	CMapZone *getZoneAt(int index);
+        /** Grab all the zones, recursively */
+        QList<CMapZone *> getAllZones(CMapZone *zone = 0);
+
 	/** Used to find the number of a zone */
 	signed int getZoneNumber(CMapZone *findZone);
 	/** Initialize the directions to their default values. */
@@ -102,19 +96,6 @@ public:
 	QStringList failedMoveMsg;
 	
 	QString directions[NUM_DIRECTIONS];
-
-private:
-	/** This method is used to get the first sub zone of a parent zone
-	  * @param parent The parent zone, it is the fist sub zone of the parent that is returned
-	  * @return The first sub zone of the parent zone */
-	CMapZone *findFirstSubZone(CMapZone *parent);
-	CMapZone *getNextSameLevelZone(CMapZone *current);
-
-private:
-	bool m_foundCurrentZone;
-	/** The current zone */
-	CMapZone *currentZone;
-
 };
 
 #endif

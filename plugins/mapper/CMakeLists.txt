@@ -11,7 +11,6 @@ add_definitions (-DQT3_SUPPORT_WARNINGS)
 
 set(kmuddymapper_PART_SRCS 
    kmuddy_mapper.cpp 
-   cmapelementutil.cpp 
    cmaptoolbase.cpp 
    cmaplevel.cpp 
    cmapview.cpp 
@@ -23,6 +22,7 @@ set(kmuddymapper_PART_SRCS
    cmaproom.cpp 
    cmapzone.cpp 
    cmaptext.cpp 
+   cmapelementutil.cpp
    cmapviewstatusbar.cpp 
    cmaplistviewitem.cpp 
    cmapcmdgroup.cpp 
@@ -33,7 +33,6 @@ set(kmuddymapper_PART_SRCS
    cmapcmdmovemap.cpp 
    cmapcmdleveldelete.cpp 
    cmapcmdlevelcreate.cpp 
-   cmaplevelutil.cpp 
    cmappropertiespanebase.cpp 
    cmappluginbase.cpp 
    cmapviewmanagerbase.cpp 

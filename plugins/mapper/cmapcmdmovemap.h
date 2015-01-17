@@ -21,8 +21,6 @@
 #include <qpoint.h>
 
 #include <k3command.h>
-#include <kvbox.h>
-
 #include "cmapcommand.h"
 
 class CMapZone;
@@ -50,9 +48,7 @@ private:
 	/** The zones elements which are to be moved */
 	int m_zoneId;
 	/** The offset to move the elements */
-	QPoint m_posOffset;
-	/** The offset to move the elementes when undoing */
-	QPoint m_negOffset;
+	QPoint m_Offset;
 
 };
 

@@ -21,7 +21,6 @@
 
 #include <q3ptrqueue.h>
 #include <qstring.h>
-#include <kvbox.h>
 
 class CMapManager;
 

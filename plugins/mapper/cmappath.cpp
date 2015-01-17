@@ -35,23 +35,40 @@
 
 CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir) : CMapElement(manager,NULL)
 {
-	setSrcRoom(srcRoom);
-	setDestRoom(destRoom);
-	setSrcDir(srcDir);
-	setDestDir(destDir);
-	setCords();
+  setSrcRoom(srcRoom);
+  setDestRoom(destRoom);
+  setSrcDir(srcDir);
+  setDestDir(destDir);
+  setCords();
 
-	beforeCommand = "";
-	afterCommand = "";
-	bSpecialExit = false;
-	specialCmd = "";
-	done = false;
-	opsitePath = NULL;
-	m_setTwoWayLater = false;
+  srcRoom->addPath(this);
+  destRoom->getConnectingPathList()->append(this);
 
-	m_twoWayLaterProperties = new KMemConfig;
+  // Check to see if there is a a path in the opsite directon, if so make this a two way path
+  foreach (CMapPath *path, *destRoom->getPathList())
+  {
+    // FIXME_jp : Fix this for multiple special paths between the same rooms with different cmd's
+    if (path->getDestRoom()==srcRoom &&
+        path->getSrcDir() == destDir &&
+        path->getDestDir() == srcDir &&
+        path->getSpecialCmd() == "")
+    {
+      setOpsitePath(path);
+      path->setOpsitePath(this);
+    }
+  }
 
-	m_dontPaintBend=0;
+  beforeCommand = "";
+  afterCommand = "";
+  bSpecialExit = false;
+  specialCmd = "";
+  done = false;
+  opsitePath = NULL;
+  m_setTwoWayLater = false;
+
+  m_twoWayLaterProperties = new KMemConfig;
+
+  m_dontPaintBend=0;
 }
 
 CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom)  : CMapElement(manager,NULL)
@@ -77,9 +94,9 @@ CMapPath::~CMapPath()
   }
 
   if (destRoom)
-    destRoom->getConnectingPathList()->remove(this);
+    destRoom->getConnectingPathList()->removeAll(this);
   if (srcRoom)
-    srcRoom->getPathList()->remove(this);
+    srcRoom->getPathList()->removeAll(this);
 
   delete m_twoWayLaterProperties;
 }
@@ -889,8 +906,8 @@ void CMapPath::moveBy(QPoint offset)
 void CMapPath::generateResizePositions(void)
 {
 	resizePos.clear();
-	resizePos.append(new QRect(tempPathCords.first().x()-3,tempPathCords.first().y()-3,7,7));
-	resizePos.append(new QRect(tempPathCords.last().x()-3,tempPathCords.last().y()-3,7,7));
+	resizePos.append(QRect(tempPathCords.first().x()-3,tempPathCords.first().y()-3,7,7));
+	resizePos.append(QRect(tempPathCords.last().x()-3,tempPathCords.last().y()-3,7,7));
 
 }
 

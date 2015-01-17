@@ -18,8 +18,6 @@
 #include "cmappluginspeedwalk.h"
 
 #include <qicon.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include <kstandarddirs.h>
 #include <kaction.h>
@@ -44,8 +42,6 @@ K_EXPORT_PLUGIN (KMuddyMapperSpeedwalkFactory("kmuddymapper"))
 
 CMapPluginSpeedwalk::CMapPluginSpeedwalk(QObject *parent, const QVariantList &) : CMapPluginBase(parent)
 {
-        CMapManager *manager = dynamic_cast<CMapManager *>(parent);
-
 	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_speedwalk.rc"));
 
 	m_showAction = new KAction (this);
@@ -57,7 +53,6 @@ CMapPluginSpeedwalk::CMapPluginSpeedwalk(QObject *parent, const QVariantList &) 
         connect (m_addAction, SIGNAL (triggered()), this, SLOT(slotRoomAddToSpeedwalk()));
         actionCollection()->addAction("roomAddToSpeedwalk", m_addAction);
 	
-	m_speedwalkRoomList.setAutoDelete(false);
 	m_speedwalkList = NULL;
 
 	m_showAction->setEnabled(true);
@@ -87,11 +82,6 @@ int CMapPluginSpeedwalk::getSpeedwalkCatogrize()
 void CMapPluginSpeedwalk::setSpeedwalkCatogrize(int catogry)
 {
 	m_speedwalkCatogrize = catogry;
-}
-
-Q3PtrList<CMapRoom> *CMapPluginSpeedwalk::getSpeedwalkRoomList()
-{
-	return &m_speedwalkRoomList;
 }
 
 void CMapPluginSpeedwalk::showSpeedwalkList()
@@ -132,7 +122,7 @@ void CMapPluginSpeedwalk::delSpeedwalkRoom(CMapRoom *room)
 /** Used to add a room to the speed walk list */
 void CMapPluginSpeedwalk::addSpeedwalkRoomNoCmd(CMapRoom *room,bool update)
 {
-	if (m_speedwalkRoomList.findRef(room)==-1)
+	if (!m_speedwalkRoomList.contains(room))
 	{
 		m_speedwalkRoomList.append(room);
 	}
@@ -181,7 +171,7 @@ void CMapPluginSpeedwalk::slotViewSpeedwalkList()
 /** This is called before a element menu is openend */
 void CMapPluginSpeedwalk::beforeOpenElementMenu(CMapElement *element)
 {
-	m_addAction->setEnabled(m_speedwalkRoomList.findRef((CMapRoom*)element)==-1);
+	m_addAction->setEnabled(!m_speedwalkRoomList.contains((CMapRoom*)element));
 }
 
 /** This is called before a element is deleted */
@@ -201,7 +191,7 @@ void CMapPluginSpeedwalk::elementChanged(CMapElement *element)
 		if (m_speedwalkList)
 		{
 			CMapZone *zone = (CMapZone *)element;
-			for (CMapRoom *room = m_speedwalkRoomList.first(); room !=0; room = m_speedwalkRoomList.next())
+			foreach (CMapRoom *room, m_speedwalkRoomList)
 			{
 				if (room->getZone()==zone)
 				{
@@ -216,7 +206,7 @@ void CMapPluginSpeedwalk::elementChanged(CMapElement *element)
 	{
 		if (m_speedwalkList)
 		{
-			if (m_speedwalkRoomList.find((CMapRoom *)element))
+			if (m_speedwalkRoomList.contains((CMapRoom *)element))
 				m_speedwalkList->getSpeedwalkList()->updateSpeedwalkList((CMapRoom *)element);
 		}
 	}

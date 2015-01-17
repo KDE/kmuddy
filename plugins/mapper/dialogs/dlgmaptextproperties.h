@@ -23,7 +23,6 @@
 #include <qcolor.h>
 #include <q3scrollview.h>
 #include <qpixmap.h>
-#include <kvbox.h>
 #include "ui_dlgmaptextpropertiesbase.h"
 
 class CMapText;

@@ -21,7 +21,6 @@
 #include <qobject.h>
 #include <qpoint.h>
 #include <qcursor.h>
-#include <kvbox.h>
 
 #include "../../../cmaptoolbase.h"
 

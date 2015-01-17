@@ -31,7 +31,6 @@
 #include <qfontmetrics.h>
 //Added by qt3to4:
 #include <QPixmap>
-#include <Q3PtrList>
 #include <Q3VBoxLayout>
 
 #include <kcolorbutton.h>
@@ -140,17 +139,12 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 	//FIXME_jp: set txtText background to background color of the map
 
 	// Get the extension panels from the plugins
-	for (CMapPluginBase *plugin=mapManager->getPluginList()->first();
-	     plugin!=0;
-	     plugin=mapManager->getPluginList()->next())
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(TEXT,(CMapElement*)textElement,(QWidget *)TextTabs);
+	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
-		Q3PtrList<CMapPropertiesPaneBase> paneList = plugin->getPropertyPanes(TEXT,(CMapElement*)textElement,(QWidget *)TextTabs);
-		for (CMapPropertiesPaneBase *pane = paneList.first();pane!=0;pane = paneList.next())
-		{
-			TextTabs->addTab(pane,pane->getTitle());
-			connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));
-			connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
-		}
+		TextTabs->addTab(pane,pane->getTitle());
+		connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));
+		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 
 	slotUpdatePreview();

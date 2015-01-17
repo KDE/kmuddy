@@ -28,7 +28,6 @@
 #include <klocale.h>
 #include <kregexpeditorinterface.h>
 #include <kparts/componentfactory.h>
-#include <kvbox.h>
 
 DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {

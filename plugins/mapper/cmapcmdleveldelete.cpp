@@ -21,7 +21,7 @@
 #include "cmaplevel.h"
 #include "cmapzone.h"
 
-CMapCmdLevelDelete::CMapCmdLevelDelete(CMapManager *manager,QString name, CMapLevel *level) : CMapCommand(name),CMapLevelUtil(manager)
+CMapCmdLevelDelete::CMapCmdLevelDelete(CMapManager *manager,QString name, CMapLevel *level) : CMapCommand(name)
 {
 	m_mapManager = manager;
 	m_levelID = level->getLevelID();
@@ -36,13 +36,13 @@ CMapCmdLevelDelete::~CMapCmdLevelDelete()
 void CMapCmdLevelDelete::execute()
 {
   CMapLevel *level = m_mapManager->findLevel(m_levelID);
-  m_index = level->getZone()->getLevels()->find(level);
+  m_index = level->getZone()->getLevels()->indexOf(level);
   delete level;
 }
 
 void CMapCmdLevelDelete::unexecute()
 {
-	CMapZone *zone = m_mapManager->findZone(m_zoneIntoID);
-	CMapLevel *level = createLevel(m_index,zone);
-	level->setLevelID(m_levelID);
+  CMapZone *zone = m_mapManager->findZone(m_zoneIntoID);
+  CMapLevel *level = new CMapLevel(m_mapManager, zone, m_index);
+  level->setLevelID(m_levelID);
 }

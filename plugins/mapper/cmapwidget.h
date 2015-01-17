@@ -31,7 +31,6 @@
 
 #include <kaction.h>
 #include <klocale.h>
-#include <kvbox.h>
 
 
 class CMapManager;

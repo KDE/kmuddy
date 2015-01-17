@@ -21,15 +21,10 @@
 #include "cmaptoolbase.h"
 #include "cmapviewmanagerbase.h"
 #include "cmapmanager.h"
-//Added by qt3to4:
-#include <Q3PtrList>
 
 CMapPluginBase::CMapPluginBase(QObject *parent) : KParts::Plugin(parent)
 {
 	mapManager = dynamic_cast<CMapManager *>(parent);
-
-	toolList.setAutoDelete(false);
-	paneList.setAutoDelete(false);
 }
 
 CMapPluginBase::~CMapPluginBase()
@@ -37,17 +32,15 @@ CMapPluginBase::~CMapPluginBase()
 }
 
 /** Used to get a list of the tools */
-Q3PtrList<CMapToolBase> *CMapPluginBase::getToolList(void)
+QList<CMapToolBase *> *CMapPluginBase::getToolList(void)
 {
 	return &toolList;
 }
 
 /** Used to get a list of the property pages for a map element */
-Q3PtrList<CMapPropertiesPaneBase> CMapPluginBase::getPropertyPanes(elementTyp ,CMapElement *,QWidget *)
+QList<CMapPropertiesPaneBase *> CMapPluginBase::createPropertyPanes(elementTyp ,CMapElement *,QWidget *)
 {
-	Q3PtrList<CMapPropertiesPaneBase> list;
-
-	return list;
+  return QList<CMapPropertiesPaneBase *>();
 }
 
 /** Used to tell the tool were to find the map manager */

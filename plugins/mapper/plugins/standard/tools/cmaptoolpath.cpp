@@ -22,7 +22,6 @@
 #include <kiconloader.h>
 
 #include <qbitmap.h>
-#include <kvbox.h>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmapviewbase.h"
@@ -61,43 +60,29 @@ CMapToolPath::~CMapToolPath()
 /** Called when the tool recives a mouse release event */
 void CMapToolPath::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 {
-	if (pathToolMode==1)
-	{
-		CMapRoom *destRoom = NULL;
+  if (!currentLevel) return;
+  CMapRoom *destRoom = currentLevel->findRoomAt(mousePos);
 
-		for (CMapRoom *room=currentLevel->getRoomList()->first(); room!=0; room = currentLevel->getRoomList()->next())
-		{
-			if (room->mouseInElement(mousePos,currentLevel->getZone()))
-			{
-				destRoom = room;
-				break;
-			}
-		}
+  if (pathToolMode==1)
+  {
+    if ((destRoom && pathStartRoom) && (pathStartRoom!=destRoom))
+      mapManager->createPath(pathStartRoom,destRoom);
 
-		if ((destRoom && pathStartRoom) && (pathStartRoom!=destRoom))
-		{
-			mapManager->createPath(pathStartRoom,destRoom);
-		}
-
-		pathToolMode = 0;
-		pathStartRoom = NULL;
-		currentCursor = pathStartCursor;
-		mapManager->setPropertiesAllViews(currentCursor,false);
-	}
-	else
-	{
-		for (CMapRoom *room=currentLevel->getRoomList()->first(); room!=0; room = currentLevel->getRoomList()->next())
-		{
-			if (room->mouseInElement(mousePos,currentLevel->getZone()))
-			{
-				pathStartRoom = room;
-				pathToolMode = 1;
-				currentCursor = pathEndCursor;
-				mapManager->setPropertiesAllViews(currentCursor,false);
-	            break;
-			}
-		}
-	}
+    pathToolMode = 0;
+    pathStartRoom = NULL;
+    currentCursor = pathStartCursor;
+    mapManager->setPropertiesAllViews(currentCursor,false);
+  }
+  else
+  {
+    if (destRoom)
+    {
+      pathStartRoom = destRoom;
+      pathToolMode = 1;
+      currentCursor = pathEndCursor;
+      mapManager->setPropertiesAllViews(currentCursor,false);
+    }
+  }
 }
 
 /** This function called when a tool is selected */

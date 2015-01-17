@@ -19,7 +19,6 @@
 
 #include <q3progressbar.h>
 #include <qpushbutton.h>
-#include <kvbox.h>
 
 DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent, const char *name ) : QDialog(parent,name)
 {

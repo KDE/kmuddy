@@ -22,11 +22,8 @@
 #include <qpushbutton.h>
 #include <qlabel.h>
 #include <qtabwidget.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include <klocale.h>
-#include <kvbox.h>
 
 #include "../cmapmanager.h"
 #include "../cmapcmdelementcreate.h"
@@ -81,17 +78,12 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 	slotExitTypeChange();
 
 	// Get the extension panels from the plugins
-	for (CMapPluginBase *plugin=mapManager->getPluginList()->first();
-	     plugin!=0;
-	     plugin=mapManager->getPluginList()->next())
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,NULL,(QWidget *)tabPaths);
+	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
-		Q3PtrList<CMapPropertiesPaneBase> paneList = plugin->getPropertyPanes(PATH,NULL,(QWidget *)tabPaths);
-		for (CMapPropertiesPaneBase *pane = paneList.first();pane!=0;pane = paneList.next())
-		{
-			tabPaths->addTab(pane,pane->getTitle());
-			connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
-			connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
-		}
+		tabPaths->addTab(pane,pane->getTitle());
+		connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
+		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 }
 
@@ -134,17 +126,12 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathEl
 	slotExitTypeChange();
 
 	// Get the extension panels from the plugins
-	for (CMapPluginBase *plugin=mapManager->getPluginList()->first();
-	     plugin!=0;
-	     plugin=mapManager->getPluginList()->next())
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,(CMapElement*)pathElement,(QWidget *)tabPaths);
+	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
-		Q3PtrList<CMapPropertiesPaneBase> paneList = plugin->getPropertyPanes(PATH,(CMapElement*)pathElement,(QWidget *)tabPaths);
-		for (CMapPropertiesPaneBase *pane = paneList.first();pane!=0;pane = paneList.next())
-		{
-			tabPaths->addTab(pane,pane->getTitle());
-			connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
-			connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
-		}
+		tabPaths->addTab(pane,pane->getTitle());
+		connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
+		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 
 }

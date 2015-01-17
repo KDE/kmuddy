@@ -21,49 +21,46 @@
 
 CMapCmdGroup::CMapCmdGroup(CMapManager *mapManager,QString name) : CMapCommand(name)
 {
-	m_mapManager = mapManager;
-	commands.setAutoDelete(true);
+m_mapManager = mapManager;
 }
 
 CMapCmdGroup::~CMapCmdGroup()
 {
+  foreach (K3Command *cmd, commands)
+    delete cmd;
 }
 
 void CMapCmdGroup::execute()
 {
-	for (K3Command *c = commands.first(); c!=NULL; c = commands.next())
-	{
-		c->execute();
-	}
+  foreach (K3Command *c, commands)
+    c->execute();
 }
 
 void CMapCmdGroup::unexecute()
 {
-	m_mapManager->setUndoActive(false);
+  m_mapManager->setUndoActive(false);
 
-	for (K3Command *c = commands.last(); c!=NULL; c = commands.prev())
-	{
-		c->unexecute();
-	}
+  foreach (K3Command *c, commands)
+    c->unexecute();
 
-	m_mapManager->setUndoActive(true);
+  m_mapManager->setUndoActive(true);
 }
 
 
 void CMapCmdGroup::addCommand(K3Command *command,bool execute)
 {
-	commands.append(command);
-	if (execute)
-		command->execute();
+  commands.append(command);
+  if (execute)
+    command->execute();
 }
 
 void CMapCmdGroup::setPreviousGroup(CMapCmdGroup *group)
 {
-	previousGroup = group;
+  previousGroup = group;
 }
 
 CMapCmdGroup *CMapCmdGroup::getPreviousGroup(void)
 {
-	return previousGroup;
+  return previousGroup;
 }
 

@@ -22,7 +22,6 @@
 #include <knuminput.h>
 
 #include <qcheckbox.h>
-#include <kvbox.h>
 
 DlgMapSpeedwalk::DlgMapSpeedwalk(CMapManager *mapManager, QWidget *parent) : QWidget (parent)
 {

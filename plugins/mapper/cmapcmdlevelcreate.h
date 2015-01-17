@@ -18,10 +18,6 @@
 #ifndef CMAPCMDLEVELCREATE_H
 #define CMAPCMDLEVELCREATE_H
 
-#include <k3command.h>
-#include <cmaplevelutil.h>
-#include <kvbox.h>
-
 #include "cmapcommand.h"
 
 class CMapManager;
@@ -32,7 +28,7 @@ class CMapZone;
   *@author Kmud Developer Team
   */
 
-class CMapCmdLevelCreate : public CMapCommand,CMapLevelUtil
+class CMapCmdLevelCreate : public CMapCommand
 {
 public: 
 	CMapCmdLevelCreate(CMapManager *manager,QString name,CMapZone *intoZone,int index);

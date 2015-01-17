@@ -29,7 +29,6 @@
 #include <kapplication.h>
 #include <kactioncollection.h>
 #include <kxmlguifactory.h>
-#include <kvbox.h>
 
 
 #include "cmapmanager.h"
@@ -120,8 +119,9 @@ bool CMapWidget::event (QEvent *e)
     QPoint point = helpEvent->pos();
 
     CMapViewBase *view = getView();
+    CMapLevel *level = view->getCurrentlyViewedLevel();
     QPoint pos1 = viewportToContents(point);
-    CMapElement *element = mapManager->findElementAt(pos1,view->getCurrentlyViewedLevel());
+    CMapElement *element = level ? level->findElementAt(pos1) : 0;
     QString s;
     if (element)
     {
@@ -311,36 +311,27 @@ void CMapWidget::showTextContextMenu(void)
 
 void CMapWidget::showContexMenu(QMouseEvent *e)
 {
-	int x, y;
-	viewportToContents( e->x(),  e->y(), x, y );
+  int x, y;
+  viewportToContents( e->x(),  e->y(), x, y );
 
-	bool found = false;
+  CMapLevel *level = viewWidget->getCurrentlyViewedLevel();
+  if (!level) return;
+  CMapElement *element = level->findElementAt (QPoint(x, y));
+  if (!element) return;
 
-	for ( CMapElement *element = viewWidget->getCurrentlyViewedLevel()->getFirstElement();
-          element != NULL;
-          element = viewWidget->getCurrentlyViewedLevel()->getNextElement())
-	{
-		if (element->mouseInElement(QPoint(x,y),viewWidget->getCurrentlyViewedZone()))
-		{
-			mapManager->setSelectedElement(element);
-			selectedPos = QPoint(e->x(),e->y());
-			mapManager->setSelectedPos(QPoint(x,y));
+  mapManager->setSelectedElement(element);
+  selectedPos = QPoint(e->x(),e->y());
+  mapManager->setSelectedPos(QPoint(x,y));
 
-			mapManager->unsetEditElement();
-			switch(element->getElementType())
-			{
-				case ROOM : showRoomContextMenu(); break;
-				case ZONE : showZoneContextMenu(); break;
-				case PATH : showPathContextMenu(); break;
-				case TEXT : showTextContextMenu(); break;
-				default   : break;
-			}
-
-			found = true;
-			break;
-
-		}
- 	}
+  mapManager->unsetEditElement();
+  switch(element->getElementType())
+  {
+    case ROOM : showRoomContextMenu(); break;
+    case ZONE : showZoneContextMenu(); break;
+    case PATH : showPathContextMenu(); break;
+    case TEXT : showTextContextMenu(); break;
+    case OTHER: break;
+  }
 }
 
 /** This method is used to tell the plugins a menu is about to open then open the menu */

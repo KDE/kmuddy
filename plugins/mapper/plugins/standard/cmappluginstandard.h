@@ -18,11 +18,9 @@
 #ifndef CMAPPLUGINSTANDARD_H
 #define CMAPPLUGINSTANDARD_H
 
-#include <q3ptrlist.h>
-#include <qstringlist.h>
+#include <QMap>
 //Added by qt3to4:
 #include <Q3ValueList>
-#include <kvbox.h>
 
 #include "../../cmappluginbase.h"
 
@@ -39,7 +37,7 @@ public:
 	CMapPluginStandard(QObject *, const QVariantList &);
 	~CMapPluginStandard();
 
-	virtual Q3PtrList<CMapPropertiesPaneBase> getPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
+	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
 
 	void profileChanged(void);
 	/** This is called before a element is deleted
@@ -113,11 +111,8 @@ private:
 	DeletedElementList::iterator findZone(int id,bool *found);	
 	
 private:
-	Q3PtrList<CMapElement> m_elementList;
-	QStringList m_noteList;
-
-	
-	DeletedElementList m_deletedElements;
+  QMap<CMapElement *, QString> m_noteList;
+  DeletedElementList m_deletedElements;
 };
 
 #endif

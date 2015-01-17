@@ -39,7 +39,6 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kstandarddirs.h>
-#include <kvbox.h>
 
 CMapView::CMapView(CMapManager *manager,QWidget *parent, const char *name) : CMapViewBase(manager,parent,name)
 {
@@ -130,7 +129,8 @@ void CMapView::changedLevel(CMapLevel *level)
   if (isLevelVisibale(level))
   {
     int maxx=0,maxy=0;
-    for (CMapElement *element=level->getFirstElement();element!=0;element=level->getNextElement())
+    QList<CMapElement *> lst = level->getAllElements();
+    foreach (CMapElement *element, lst)
     {      
       if (element->getHighX()>maxx)
         maxx =element->getHighX();
@@ -159,7 +159,8 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
 
   // Calc the size the widget should be
   // FIXME_jp : Add lower level elements
-  for (CMapElement *element =level->getFirstElement();element!=NULL;element=level->getNextElement())
+  QList<CMapElement *> lst = level->getAllElements();
+  foreach (CMapElement *element, lst)
   {
     if (element->getHighX()>size.x()) size.setX(element->getHighX());
     if (element->getHighY()>size.y()) size.setY(element->getHighY());
@@ -168,7 +169,8 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
   // FIXME_jp: Do a check to see if this needs to be done
   if (upperLevel  && mapManager->getMapData()->showUpperLevel)
   {
-    for (CMapElement *element =upperLevel->getFirstElement();element!=NULL;element=upperLevel->getNextElement())
+    lst = upperLevel->getAllElements();
+    foreach (CMapElement *element, lst)
     {
       if (element->getHighX()>size.x()) size.setX(element->getHighX());
       if (element->getHighY()>size.y()) size.setY(element->getHighY());
@@ -177,7 +179,8 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
 
   if (lowerLevel  && mapManager->getMapData()->showLowerLevel)
   {
-    for (CMapElement *element =lowerLevel->getFirstElement();element!=NULL;element=lowerLevel->getNextElement())
+    lst = lowerLevel->getAllElements();
+    foreach (CMapElement *element, lst)
     {
       if (element->getHighX()>size.x()) size.setX(element->getHighX());
       if (element->getHighY()>size.y()) size.setY(element->getHighY());

@@ -60,7 +60,7 @@ void CMapCmdTogglePathTwoWay::togglePath(CMapPath *path)
   }
   else
   {
-    CMapPath *newPath = createPath(path->getDestRoom(),path->getDestDir(),path->getSrcRoom(),path->getSrcDir());
+    CMapPath *newPath = new CMapPath(m_mapManager, path->getDestRoom(),path->getDestDir(),path->getSrcRoom(),path->getSrcDir());
     if (path->getSpecialExit())
     {
       newPath->setSpecialCmd(path->getSpecialCmd());

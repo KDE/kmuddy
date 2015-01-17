@@ -22,7 +22,6 @@
 #include <kiconloader.h>
 
 #include <qbitmap.h>
-#include <kvbox.h>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmapviewbase.h"
@@ -77,20 +76,16 @@ CMapToolEraser::~CMapToolEraser()
 /** Called when the tool recives a mouse release event */
 void CMapToolEraser::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 {
-	
-	for (CMapElement *element=currentLevel->getFirstElement(); element!=0; element=currentLevel->getNextElement())
-	{
-		if (element->mouseInElement(mousePos,currentLevel->getZone()))
-		{
-			mapManager->deleteElement(element);
-		}
-	}
+  if (!currentLevel) return;
+  CMapElement *element = currentLevel->findElementAt(mousePos);
+  if (element)
+    mapManager->deleteElement(element);
 }
 
 /** This function called when a tool is selected */
 void CMapToolEraser::toolSelected(void)
 {
-	mapManager->setPropertiesAllViews(deleteCursor,false);
+  mapManager->setPropertiesAllViews(deleteCursor,false);
 }
 
 /** This function is called when a tool is unselected */

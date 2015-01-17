@@ -32,7 +32,6 @@
 #include "../../../cmaptext.h"
 
 #include <kdebug.h>
-#include <kvbox.h>
 
 
 CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
@@ -52,29 +51,21 @@ CMapToolText::~CMapToolText()
 /** Called when the tool recives a mouse release event */
 void CMapToolText::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 {
-	bool found = false;
+  CMapText *text = 0;
+  QList<CMapElement *> lst = currentLevel->elementsUnderMouse(mousePos);
+  foreach (CMapElement *element, lst)
+  {
+    if (element->getElementType() != TEXT) continue;
+    text = (CMapText *) element;
+    text->setCursor(text->convertPosToCursor(mousePos));
+    break;
+  }
 
-	for (CMapElement *element=currentLevel->getFirstElement(); element!=0; element=currentLevel->getNextElement())
-	{
-		if (element->mouseInElement(mousePos,currentLevel->getZone()) && element->getElementType()==TEXT)
-		{
-			kDebug() << "Found";
-
-			CMapText *text = (CMapText *)element;
-			text->setCursor(text->convertPosToCursor(mousePos));
-			mapManager->setEditElement(text);
-			found = true;
-			break;
-		}
-	}
-
-	if (!found)
-	{
-		kDebug() << "Not Found";
-		CMapText *text = mapManager->createText(mousePos,currentLevel);
-		text->setCursor(QPoint(0,1));
-		mapManager->setEditElement(text);
-	}
+  if (!text) {
+    text = mapManager->createText(mousePos,currentLevel);
+    text->setCursor(QPoint(0,1));
+  }
+  mapManager->setEditElement(text);
 }
 
 /** This is called when a key is pressed */

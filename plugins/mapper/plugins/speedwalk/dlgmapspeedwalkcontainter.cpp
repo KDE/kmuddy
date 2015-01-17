@@ -23,7 +23,6 @@
 #include <QCloseEvent>
 #include <Q3GridLayout>
 #include <klocale.h>
-#include <kvbox.h>
 
 #include "dlgmapspeedwalklist.h"
 #include "cmappluginspeedwalk.h"

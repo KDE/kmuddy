@@ -40,6 +40,7 @@ public:
 	~CMapText();
 
 	elementTyp getElementType(void)             { return TEXT ; }
+        virtual void setLevel(CMapLevel *level);
 
 	/** Sets the text of the text element
 	  * @param str The new string that the text element should be set to

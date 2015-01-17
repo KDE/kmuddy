@@ -22,8 +22,6 @@
 #include <qfontmetrics.h>
 #include <qregion.h>
 #include <qsize.h>
-//Added by qt3to4:
-#include <Q3PtrList>
 
 #include "cmapmanager.h"
 #include "cmappath.h"
@@ -32,21 +30,22 @@
 #include "cmapviewbase.h"
 
 #include <kdebug.h>
-#include <kvbox.h>
 
 CMapRoom::CMapRoom(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
 {
-	color = QColor(192,192,192);
-	useDefaultCol = true;
-	login = false;
-	label = "";
-	labelPosition = HIDE;
-	description = "";
-	current = false;
-	getZone()->m_room_id_count=getZone()->m_room_id_count+1;
-	m_ID = getZone()->m_room_id_count;
-	
-	textRemove();
+  color = QColor(192,192,192);
+  useDefaultCol = true;
+  login = false;
+  label = "";
+  labelPosition = HIDE;
+  description = "";
+  current = false;
+  getZone()->m_room_id_count=getZone()->m_room_id_count+1;
+  m_ID = getZone()->m_room_id_count;
+
+  level->getRoomList()->append(this);
+
+  textRemove();
 }
 
 CMapRoom::~CMapRoom()
@@ -69,16 +68,12 @@ CMapRoom::~CMapRoom()
 
   // Delete the paths for the room
   // First make a copy, as deleting rooms alters this list
-  QList<CMapPath *> paths;
-  for (CMapPath *path=getPathList()->first(); path!=0; path=getPathList()->last())
-    paths.push_back(path);
+  QList<CMapPath *> paths = pathList;
   foreach (CMapPath *path, paths)
     delete path;
 
   // Same for paths connecting with this room
-  paths.clear();
-  for (CMapPath *path=getConnectingPathList()->first(); path!=0; path = getConnectingPathList()->last())
-    paths.push_back(path);
+  paths = connectingPaths;
   foreach (CMapPath *path, paths)
     delete path;
 
@@ -91,23 +86,25 @@ CMapRoom::~CMapRoom()
   }
 }
 
+void CMapRoom::setLevel(CMapLevel *level)
+{
+  if (getLevel()) getLevel()->getRoomList()->remove(this);
+  level->getRoomList()->append(this);
+  CMapElement::setLevel(level);
+}
+
 /** This is used to resize the element */
 void CMapRoom::resize(QPoint offset,int resizeId)
 {
-	CMapElement::resize(offset,resizeId);
+  CMapElement::resize(offset,resizeId);
 
+  foreach (CMapPath *path, pathList)
+    if (!path->getSelected())
+      path->setCords();
 
-	for (CMapPath *path = pathList.first(); path !=0; path = pathList.next())
-	{
-		if (!path->getSelected())
-			path->setCords();
-	}
-
-	for (CMapPath *path = connectingPaths.first(); path !=0 ; path = connectingPaths.next())
-	{
-		if (!path->getSelected())
-			path->setCords();
-	}
+  foreach (CMapPath *path, connectingPaths)
+    if (!path->getSelected())
+      path->setCords();
 }
 
 /** Used to paint the element at a given location and size
@@ -182,7 +179,7 @@ void CMapRoom::paint(QPainter *p,CMapZone *currentZone)
 
 
 	// Draw any special/up/down exits
-	for (CMapPath *path=pathList.first();path!=0;path = pathList.next())
+	foreach (CMapPath *path, pathList)
 	{
 		if (path->getSrcDir() == UP)
 		{
@@ -297,7 +294,7 @@ CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 	CMapPath *path;
 	if (dir!=SPECIAL)
 	{
-		for (path=pathList.first(); path!=0; path=pathList.next())
+		foreach (path, pathList)
 		{
 			if (path->getSrcDir()==dir)
 			{
@@ -307,7 +304,7 @@ CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 	}
 	else
 	{
-		for (path=pathList.first(); path!=0; path=pathList.next())
+		foreach (path, pathList)
 		{
 			if (path->getSrcDir()==dir)
 			{
@@ -320,18 +317,6 @@ CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 	}
 
 	return NULL;
-}
-
-/** Get a list of the paths from this room */
-Q3PtrList<CMapPath> *CMapRoom::getPathList(void)
-{
-	return &pathList;
-}
-
-/** Get a list of the paths connecting with this room */
-Q3PtrList<CMapPath> *CMapRoom::getConnectingPathList(void)
-{
-	return &connectingPaths;
 }
 
 CMapRoom::labelPosTyp CMapRoom::getLabelPosition(void)
@@ -570,15 +555,11 @@ void CMapRoom::moveBy(QPoint offset)
 {
 	CMapElement::moveBy(offset);
 
-	for (CMapPath *path = pathList.first(); path !=0; path = pathList.next())
-	{
+	foreach (CMapPath *path, pathList)
 		path->setCords();
-	}
 
-	for (CMapPath *path = connectingPaths.first(); path !=0 ; path = connectingPaths.next())
-	{
+	foreach (CMapPath *path, pathList)
 		path->setCords();
-	}
 }
 
 void CMapRoom::setRoomID(unsigned int id)

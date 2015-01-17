@@ -22,8 +22,6 @@
 #include <qfile.h>
 
 #include <kurl.h>
-#include <kvbox.h>
-
 
 class CMapManager;
 

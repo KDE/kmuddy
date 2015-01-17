@@ -24,7 +24,6 @@
 #include <qstringlist.h>
 #include <qfont.h>
 #include <qpoint.h>
-#include <kvbox.h>
 
 #include "cmapcommand.h"
 #include "cmapelementutil.h"

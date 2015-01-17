@@ -20,7 +20,6 @@
 
 #include <qobject.h>
 #include <qpoint.h>
-#include <kvbox.h>
 
 #include "../../../cmaptoolbase.h"
 

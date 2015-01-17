@@ -141,7 +141,7 @@ void DlgMapSpeedwalkList::updateSpeedwalkList(CMapRoom *updatedRoom)
 	if (catogry == 0)
 	{
 		m_lstSpeedwalk->setRootIsDecorated (false);
-		for (CMapRoom *room = m_plugin->getSpeedwalkRoomList()->first(); room != 0; room = m_plugin->getSpeedwalkRoomList()->next())
+		foreach (CMapRoom *room, *m_plugin->getSpeedwalkRoomList())
 		{
 			CMapListViewItem *newItem = new CMapListViewItem (m_lstSpeedwalk,getRoomName(room));
 			newItem->setElement(room);			
@@ -153,7 +153,7 @@ void DlgMapSpeedwalkList::updateSpeedwalkList(CMapRoom *updatedRoom)
 	if (catogry == 1)
 	{
 		m_lstSpeedwalk->setRootIsDecorated (true);
-		for (CMapRoom *room = m_plugin->getSpeedwalkRoomList()->first(); room != 0; room = m_plugin->getSpeedwalkRoomList()->next())		
+		foreach (CMapRoom *room, *m_plugin->getSpeedwalkRoomList())
 		{
 			CMapListViewItem *roomItem = new CMapListViewItem (findZone(room),getRoomName(room));
 			roomItem->setElement(room);
@@ -166,7 +166,7 @@ void DlgMapSpeedwalkList::updateSpeedwalkList(CMapRoom *updatedRoom)
 	if (catogry == 2)
 	{
 		m_lstSpeedwalk->setRootIsDecorated (true);
-		for (CMapRoom *room = m_plugin->getSpeedwalkRoomList()->first(); room != 0; room = m_plugin->getSpeedwalkRoomList()->next())		
+		foreach (CMapRoom *room, *m_plugin->getSpeedwalkRoomList())
 		{			
 			CMapListViewItem *roomItem = new CMapListViewItem (findLevel(room),getRoomName(room));
 			roomItem->setElement(room);
@@ -320,72 +320,70 @@ signed int DlgMapSpeedwalkList::getLevelOfItem(CMapListViewItem *item)
 /** Delete all the elements based on the zone */
 bool DlgMapSpeedwalkList::deleteZone(CMapListViewItem *zoneItem)
 {
-	bool found = false;
-	CMapCmdSpeedwalkRemove *cmd = new CMapCmdSpeedwalkRemove(m_plugin);
+  bool found = false;
+  CMapCmdSpeedwalkRemove *cmd = new CMapCmdSpeedwalkRemove(m_plugin);
 
-	if (zoneItem->getElement()->getElementType()==ZONE)
-	{
-		CMapZone *zone = (CMapZone *)zoneItem->getElement();
-		CMapRoom *room = m_plugin->getSpeedwalkRoomList()->last();
-		while(room!=0)
-		{
-			if (room->getZone()==zone)
-			{
-				cmd->addRoom(room);
-				m_plugin->getSpeedwalkRoomList()->remove(room);
-				found = true;
-				room = m_plugin->getSpeedwalkRoomList()->last();
-			}
-			else
-			{
-				room = m_plugin->getSpeedwalkRoomList()->prev();
-			}
-		}
-	}
+  if (zoneItem->getElement()->getElementType()==ZONE)
+  {
+    CMapZone *zone = (CMapZone *)zoneItem->getElement();
 
-	if (found)
-		m_plugin->getManager()->addCommand(cmd);
-	else
-		delete cmd;
+    QList<CMapRoom *> *rooms = m_plugin->getSpeedwalkRoomList();
+    QList<CMapRoom *>::iterator it;
+    for (it = rooms->begin(); it != rooms->end(); ) {
+      CMapRoom *room = *it;
+      if (room->getZone()==zone)
+      {
+        cmd->addRoom(room);
+        it = rooms->erase(it);
+        found = true;
+      }
+      else
+      {
+        ++it;
+      }
+    }
+  }
 
-	return found;
+  if (found)
+    m_plugin->getManager()->addCommand(cmd);
+  else
+    delete cmd;
+
+  return found;
 }
 
 /** Delete all the elements based on the level and zone */
 bool DlgMapSpeedwalkList::deleteLevel(CMapListViewItem *levelItem)
 {
-	CMapCmdSpeedwalkRemove *cmd = new CMapCmdSpeedwalkRemove(m_plugin);
-	bool found = false;
-	if (levelItem->getLevel()!=NULL)
-	{
-		CMapRoom *room =m_plugin->getSpeedwalkRoomList()->last();
-		while(room!=0)
-		{
-			if (room->getLevel()==levelItem->getLevel())
-			{
-				cmd->addRoom(room);
-				m_plugin->getSpeedwalkRoomList()->remove(room);
-				found = true;
-				room = m_plugin->getSpeedwalkRoomList()->last();
-			}
-			else
-			{
-				room = m_plugin->getSpeedwalkRoomList()->prev();
-			}
-		}
-	}
+  CMapCmdSpeedwalkRemove *cmd = new CMapCmdSpeedwalkRemove(m_plugin);
+  bool found = false;
+  if (levelItem->getLevel())
+  {
+    QList<CMapRoom *> *rooms = m_plugin->getSpeedwalkRoomList();
+    QList<CMapRoom *>::iterator it;
+    for (it = rooms->begin(); it != rooms->end(); ) {
+      CMapRoom *room = *it;
+      if (room->getLevel()==levelItem->getLevel())
+      {
+        cmd->addRoom(room);
+        it = rooms->erase(it);
+        found = true;
+      }
+      else
+        it++;
+    }
+  }
 
+  if (found)
+  {
+    m_manager->addCommand(cmd);
+  }
+  else
+  {
+    delete cmd;
+  }
 
-	if (found)
-	{
-		m_manager->addCommand(cmd);
-	}
-	else
-	{
-		delete cmd;
-	}
-
-	return found;
+  return found;
 }
 
 /** Used to delete a room from the speedwalk list */

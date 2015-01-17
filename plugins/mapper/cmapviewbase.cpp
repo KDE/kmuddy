@@ -27,7 +27,6 @@
 //Added by qt3to4:
 #include <QCloseEvent>
 #include <QFocusEvent>
-#include <kvbox.h>
 
 CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent, const char *name) : QWidget(parent,name)
 {
@@ -72,73 +71,39 @@ void CMapViewBase::drawElements(QPainter *p)
   CMapLevel *upperLevel = getCurrentlyViewedLevel()->getNextLevel();
 
   // Mark all paths as undrawn
-  for ( CMapRoom *room =getCurrentlyViewedLevel()->getRoomList()->first();
-        room!=0;
-        room =getCurrentlyViewedLevel()->getRoomList()->next())
-  {
-    for (CMapPath *path = room->getPathList()->first();path!=0; path = room->getPathList()->next())
-    {
+  foreach (CMapRoom *room, *getCurrentlyViewedLevel()->getRoomList())
+    foreach (CMapPath *path, *room->getPathList())
       path->setDone(false);
-    }
-  }
 
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
   {
-    for ( CMapRoom *room =lowerLevel->getRoomList()->first();
-              room!=0;
-               room =lowerLevel->getRoomList()->next())
-    {
-      for (CMapPath *path = room->getPathList()->first();path!=0; path = room->getPathList()->next())
-      {
+    foreach (CMapRoom *room, *lowerLevel->getRoomList())
+      foreach (CMapPath *path, *room->getPathList())
         path->setDone(false);
-      }
-    }
   }
 
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
-    for ( CMapRoom *room =upperLevel->getRoomList()->first();
-              room!=0;
-               room =upperLevel->getRoomList()->next())
-    {
-      for (CMapPath *path = room->getPathList()->first();path!=0; path = room->getPathList()->next())
-      {
+    foreach (CMapRoom *room, *upperLevel->getRoomList())
+      foreach (CMapPath *path, *room->getPathList())
         path->setDone(false);
-      }
-    }
   }
 
   // Draw the upper map elements
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
-  {
-    for ( CMapElement *element = lowerLevel->getFirstElement();
-              element != NULL;
-               element = lowerLevel->getNextElement())
-    {
+    foreach (CMapElement *element, lowerLevel->getAllElements())
       element->lowerPaint(p,getCurrentlyViewedZone());
-    }
-  }
 
   // Paint the map elements of the current map
-  for ( CMapElement *element = getCurrentlyViewedLevel()->getFirstElement();
-             element != NULL;
-             element = getCurrentlyViewedLevel()->getNextElement())
-  {
+  foreach (CMapElement *element, getCurrentlyViewedLevel()->getAllElements())
     if (element->getDoPaint())
-    {
       element->paint(p,getCurrentlyViewedZone());
-    }
-  }
 
   // Draw the upper map elements
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
-    for ( CMapElement *element = upperLevel->getFirstElement();
-             element != NULL;
-              element = upperLevel->getNextElement())
-    {
+    foreach (CMapElement *element, upperLevel->getAllElements())
       element->higherPaint(p,getCurrentlyViewedZone());
-    }
   }
 }
 

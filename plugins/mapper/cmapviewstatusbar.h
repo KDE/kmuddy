@@ -22,7 +22,6 @@
 //Added by qt3to4:
 #include <QLabel>
 #include <Q3HBoxLayout>
-#include <kvbox.h>
 
 class QLabel;
 class QPushButton;

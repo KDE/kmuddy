@@ -23,7 +23,6 @@
 
 #include <qfile.h>
 #include <qstring.h>
-#include <kvbox.h>
 
 class CMapManager;
 

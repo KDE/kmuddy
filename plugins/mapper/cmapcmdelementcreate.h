@@ -20,12 +20,11 @@
 
 #include <k3command.h>
 
-#include <q3ptrlist.h>
+#include <QList>
 #include <qstringlist.h>
 #include <qfont.h>
 #include <qpoint.h>
 #include <qstring.h>
-#include <kvbox.h>
 
 #include "cmapcommand.h"
 #include "cmapelementutil.h"
@@ -50,7 +49,7 @@ public:
 
 	void addElement(KMemConfig *newElementProperties,QString grp = "Properties");
 
-	Q3PtrList<CMapElement> *getElements(void);
+	QList<CMapElement *> *getElements() { return &elements; }
 
 	void secondStage(void);
 
@@ -62,7 +61,7 @@ private:
 	/** Contains all the properties need to create the element */
 	KMemConfig *properties;
 	/** This contains a list of elements that have been create by the execute method */
-	Q3PtrList<CMapElement> elements;
+	QList<CMapElement *> elements;
 };
 
 #endif

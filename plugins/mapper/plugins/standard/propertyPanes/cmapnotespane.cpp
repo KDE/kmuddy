@@ -25,7 +25,6 @@
 //Added by qt3to4:
 #include <Q3VBoxLayout>
 #include <QLabel>
-#include <kvbox.h>
 
 CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent, const char *name)
 	: CMapPropertiesPaneBase(title,icon,panelType,element,parent,name)
