@@ -108,11 +108,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos,CMapLevel *currentLevel)
       }
     }
 
-    mapManager->getActiveView()->redraw();
-    //mapManager->getActiveView()->generateContents();
-
-    // Now Draw the map elements that need resizeing
-    QPixmap background(*mapManager->getActiveView()->getViewportBackground());
+    mapManager->redrawAllViews();
   }
 
   if (moveDrag || resizeDrag > 0 || m_editDrag > 0)
@@ -246,7 +242,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 
     }
 
-    mapManager->getActiveView()->redraw();
+    mapManager->getActiveView()->changed();
 
   }
 }
@@ -366,10 +362,7 @@ void CMapToolSelect::toolUnselected(void)
 {
 	CMapViewBase *view = mapManager->getActiveView();
 	if (view)
-	{
 		mapManager->unselectElements(view->getCurrentlyViewedLevel());
-		view->redraw();
-	}
 }
 
 /** Used to move elements */
@@ -411,7 +404,6 @@ void CMapToolSelect::resizeElements(QPoint mousePos,CMapLevel *currentLevel)
       element->resize(offset,resizeDrag);
       element->setDoPaint(true);
     }
-  mapManager->getActiveView()->redraw();
 
   resizeDrag = 0;
   mapManager->levelChanged(currentLevel);

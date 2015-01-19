@@ -238,18 +238,11 @@ void CMapRoom::lowerPaint(QPainter *p,CMapZone *)
 
 void CMapRoom::higherPaint(QPainter *p,CMapZone *)
 {
-	signed int y1,x1,x2,y2;
-
-	x1 = getX()+6;
-	y1 = getY()+6;
-	x2 = getHighX()+5;
-	y2 = getHighY()+5;
-
 	p->setPen(getManager()->getMapData()->higherRoomColor);
 	QBrush brush(getManager()->getMapData()->higherRoomColor);
 	brush.setStyle(Qt::Dense7Pattern);
 	p->setBrush(brush);
-	p->drawRect(x1,y1,getWidth()-2,getHeight()-2);
+	p->drawRect(getX()+6,getX()+6,getWidth()-2,getHeight()-2);
 
 }
 

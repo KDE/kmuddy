@@ -41,8 +41,6 @@ public:
 
 	/** This method called when a tool is selected */
 	virtual void toolSelected(void);
-	/** This method is called when a tool is unselected */
-	virtual void toolUnselected(void);
 
 private:
 	QPoint lastPos;

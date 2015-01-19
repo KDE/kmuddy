@@ -41,6 +41,7 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CM
   setDestDir(destDir);
   setCords();
 
+  setLevel(srcRoom->getLevel());
   srcRoom->addPath(this);
   destRoom->getConnectingPathList()->append(this);
 

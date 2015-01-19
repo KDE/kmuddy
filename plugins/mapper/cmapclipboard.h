@@ -36,7 +36,7 @@ class CMapClipboard : public QObject
 {
    Q_OBJECT
 public: 
-	CMapClipboard(CMapManager *mapManager,QObject *parent=0, const char *name=0);
+	CMapClipboard(CMapManager *mapManager,QObject *parent=0);
 	~CMapClipboard();
 
 public:

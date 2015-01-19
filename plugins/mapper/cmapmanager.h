@@ -268,6 +268,9 @@ public:
   /** Used to erase the map. This will erase all elements and can't be undone */
   void eraseMap(void);
 
+  /** Used to repaint all the views */
+  void redrawAllViews(void);
+
   /** This method tells the plugins that the mapper wants to add a room to the speedwalk list
     * @param room The room to add to the speedwalk list
     */
@@ -394,8 +397,6 @@ private:
    * @param If true then enable the actions otherwise disable the actions
    */
   void enableNonViewActions(bool enabled);
-  /** Used to repaint all the views */
-  void redrawAllViews(void);
   
   virtual bool queryClose ();
 

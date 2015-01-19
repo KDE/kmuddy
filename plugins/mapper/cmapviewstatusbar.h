@@ -21,11 +21,10 @@
 #include <q3frame.h>
 //Added by qt3to4:
 #include <QLabel>
-#include <Q3HBoxLayout>
 
 class QLabel;
 class QPushButton;
-class Q3HBoxLayout;
+class QHBoxLayout;
 
 /**
   *@author Kmud Developer Team
@@ -46,7 +45,7 @@ public:
 	void addFollowButton(QPushButton *button);
 
 private:
-	Q3HBoxLayout *layout;
+	QHBoxLayout *layout;
 
 	QLabel *lblRoomLabel;
 	QLabel *lblRoomStatus;

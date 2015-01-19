@@ -40,8 +40,6 @@ QString CMapFilter::processCommand (const QString &command)
 {
   if (mapManager->validMoveCmd(command))
   {
-    bool found = false;
-
     CMapViewBase *view = mapManager->getActiveView();
     if (view->getFollowMode())
     {

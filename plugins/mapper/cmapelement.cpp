@@ -40,6 +40,7 @@ CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QOb
   editing = false;
   doPaint = true;
 
+  mapManager->addedElement(this);
   connect(this,SIGNAL(deleteElement(CMapElement *,bool)),manager,SLOT(deleteElement(CMapElement *,bool)));
 }
 
@@ -69,7 +70,8 @@ CMapLevel *CMapElement::getLevel(void)
 /** This method is used to set the level that the element is in */
 void CMapElement::setLevel(CMapLevel *level)
 {
-	mapLevel = level;
+  mapLevel = level;
+  mapManager->changedElement(this);
 }
 
 void CMapElement::paint(QPainter *p,CMapZone *zone)
@@ -476,7 +478,8 @@ void CMapElement::loadQDomElement(QDomElement *properties)
   * @param sel The selected state to set the element too */
 void CMapElement::setSelected(bool sel)
 {
-	selected = sel;
+  selected = sel;
+  mapManager->changedElement(this);
 }
 
 /** This method is used to get the selected state of the element

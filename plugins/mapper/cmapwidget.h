@@ -43,23 +43,15 @@ class CMapViewBase;
 /**This is that map widget used for displaying a view of the map
   *@author Kmud Developer Team
   */
-class CMapWidget : public Q3ScrollView
+class CMapWidget : public QWidget
 {
    Q_OBJECT
 public:
-	CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent=0, const char *name=0);
+	CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent=0);
 	virtual ~CMapWidget();
 
-	/** Used to redraw the mapwidget with out flicker */
-	void redraw(void);
-	/** Paint the map */
-	void paint(void);
 	/** Used to get the views */
 	CMapViewBase *getView(void);
-	/** Get the background of the view port */
-	QPixmap *getViewportBackground(void);
-	/** This is used to generate the conents of the view */
-	virtual void generateContents(void);
 
 protected:
         /** This is used to display custop tooltips. */
@@ -69,15 +61,13 @@ protected:
 	/** This is called when the mouse enters the widget */
 	void enterEvent(QEvent *e);
 	/** draw the map widget */
-	void viewportPaintEvent(QPaintEvent *);
+	void paintEvent(QPaintEvent *);
 	/** The mouse release event */
-	void viewportMouseReleaseEvent(QMouseEvent *e);
+	void mouseReleaseEvent(QMouseEvent *e);
 	/** The mouse press event */
-	void viewportMousePressEvent(QMouseEvent *e);
+	void mousePressEvent(QMouseEvent *e);
 	/** Called when the mouse is being moved */
-	void viewportMouseMoveEvent(QMouseEvent *e);
-	/** the resize event which has been over riddent to risze the map correctly */
-	void resizeEvent(QResizeEvent *e);
+	void mouseMoveEvent(QMouseEvent *e);
 
 	/** Used to display the text context menu */
 	void showTextContextMenu(void);
@@ -87,6 +77,11 @@ protected:
 	void showZoneContextMenu(void);
 	/** Used to display the Room context menu */
 	void showRoomContextMenu(void);
+
+	/** Draw the map elements */
+	virtual void drawElements(QPainter *p);
+	/** Draw the grid if it's visible */
+	virtual void drawGrid(QPainter* p);
 
 private:
 	/** Show the context menus */
@@ -114,8 +109,6 @@ private:
 
 	/** A pointer to the map manager */
 	CMapManager *mapManager;
-	/** The double buffer used for painting */
-	QPixmap *buffer;
 	/** A pointer to the mapview */
 	CMapView *viewWidget;
 };

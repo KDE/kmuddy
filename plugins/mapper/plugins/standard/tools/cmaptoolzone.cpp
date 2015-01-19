@@ -91,10 +91,3 @@ void CMapToolZone::toolSelected(void)
 	lastPos=QPoint(-100,-100);
 }
 
-/** This function is called when a tool is unselected */
-void CMapToolZone::toolUnselected(void)
-{
-	if (mapManager->getActiveView())
-		mapManager->getActiveView()->redraw();
-}
-

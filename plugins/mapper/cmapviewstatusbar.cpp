@@ -17,12 +17,9 @@
 
 #include "cmapviewstatusbar.h"
 
-#include <qlayout.h>
 #include <qlabel.h>
 #include <qpushbutton.h>
-//Added by qt3to4:
-#include <Q3Frame>
-#include <Q3HBoxLayout>
+#include <QHBoxLayout>
 
 #include <klocale.h>
 
@@ -30,7 +27,7 @@ CMapViewStatusbar::CMapViewStatusbar(QWidget *parent, const char *name ) : Q3Fra
 {
 	setFocusProxy(parent);
 	setFrameStyle( Box | Sunken );
-	layout = new Q3HBoxLayout(this);
+	layout = new QHBoxLayout(this);
 	layout->setMargin(3);
 
 	lblRoomLabel = new QLabel(i18n("Current Room : "),this);

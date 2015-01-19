@@ -103,10 +103,3 @@ void CMapToolRoom::toolSelected(void)
 	lastPos=QPoint(-100,-100);
 }
 
-/** This function is called when a tool is unselected */
-void CMapToolRoom::toolUnselected(void)
-{
-	if (mapManager->getActiveView())
-		mapManager->getActiveView()->redraw();
-}
-

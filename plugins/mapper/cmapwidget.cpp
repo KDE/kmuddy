@@ -17,15 +17,9 @@
 
 #include "cmapwidget.h"
 
-#include <qbitmap.h>
-//Added by qt3to4:
-#include <QPaintEvent>
-#include <QResizeEvent>
-#include <Q3Frame>
-#include <QPixmap>
-#include <QMouseEvent>
+#include <QBitmap>
 #include <Q3PopupMenu>
-#include <QEvent>
+#include <QScrollArea>
 #include <kapplication.h>
 #include <kactioncollection.h>
 #include <kxmlguifactory.h>
@@ -45,8 +39,7 @@ static unsigned char move_bits[] = {
    0x86, 0x61, 0xff, 0xff, 0xff, 0xff, 0x86, 0x61, 0x84, 0x21, 0x80, 0x01,
    0x80, 0x01, 0xe0, 0x07, 0xc0, 0x03, 0x80, 0x01};
 
-CMapWidget::CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent, const char *name )
-	: Q3ScrollView(parent,name,Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
+CMapWidget::CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent) : QWidget(parent)
 {
 	// Setup vars
 	viewWidget = view;
@@ -54,41 +47,20 @@ CMapWidget::CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent, cons
 	QBitmap mouseDragCursorShape(16,16, move_bits,TRUE);
 	mouseDragCursor = new QCursor( mouseDragCursorShape, mouseDragCursorShape, -1,-1);
 	mapManager = manager;
-	buffer = NULL;
 
 	initContexMenus();
 
 	// FIXME_jp : set to proper size instead of test size
 
-
 	// Setup scrollview
 	setFocusPolicy(Qt::StrongFocus);   	
-	setFocusProxy(parent);
-	viewport()->setFocusProxy(parent);
-	viewport()->setFocusPolicy(Qt::StrongFocus);
-	viewport()->setMouseTracking(true);
 	setMouseTracking(true);
 	setFocus();
-//	viewport()->setBackgroundMode(QWidget::NoBackground);
-	setFrameStyle(Q3Frame::NoFrame);
-	setVScrollBarMode(Q3ScrollView::AlwaysOn);
-	setHScrollBarMode(Q3ScrollView::AlwaysOn);
-
-	redraw();
 }
 
 CMapWidget::~CMapWidget()
 {
-	if (buffer)
-		delete buffer;
-
 	viewWidget = NULL;
-}
-
-void CMapWidget::redraw(void)
-{
-	update();
-	viewport()->update();
 }
 
 /** Used to create the element context menus */
@@ -107,12 +79,18 @@ CMapViewBase *CMapWidget::getView(void)
 }
 
 /** draw the map widget */
-void CMapWidget::viewportPaintEvent (QPaintEvent *)
+void CMapWidget::paintEvent(QPaintEvent *ev)
 {
-	paint();
+  QPainter p(this);
+  CMapZone *zone = viewWidget->getCurrentlyViewedZone();
+  QColor color = zone->getUseDefaultBackground() ? mapManager->getMapData()->backgroundColor : zone->getBackgroundColor();
+  p.fillRect(ev->rect(), color);
+
+  drawGrid(&p);
+  drawElements(&p);
 }
 
-bool CMapWidget::event (QEvent *e)
+bool CMapWidget::event(QEvent *e)
 {
   if (e->type() == QEvent::ToolTip) {
     QHelpEvent *helpEvent = static_cast<QHelpEvent *>(e);
@@ -120,8 +98,7 @@ bool CMapWidget::event (QEvent *e)
 
     CMapViewBase *view = getView();
     CMapLevel *level = view->getCurrentlyViewedLevel();
-    QPoint pos1 = viewportToContents(point);
-    CMapElement *element = level ? level->findElementAt(pos1) : 0;
+    CMapElement *element = level ? level->findElementAt(point) : 0;
     QString s;
     if (element)
     {
@@ -143,72 +120,84 @@ bool CMapWidget::event (QEvent *e)
   return QWidget::event(e);
 }
 
-void CMapWidget::paint()
-{
-	generateContents();
 
-	bitBlt(viewport(), 0, 0, buffer);
+
+/** Draw the grid if it's visible */
+void CMapWidget::drawGrid(QPainter* p)
+{
+  if (!mapManager->getMapData()->gridVisable) return;
+
+  p->setPen(mapManager->getMapData()->gridColor);
+
+  QSize gridSize = mapManager->getMapData()->gridSize;
+  int maxx = width();
+  int maxy = height();
+
+   // Draw the lines going across
+  for (int y = 0; y <= maxy; y += gridSize.width())
+    p->drawLine(0, y, maxx, y);
+  // Draw the lines going down
+  for (int x = 0; x <= maxx; x += gridSize.height())
+    p->drawLine(x, 0, x, maxy);
 }
 
-void CMapWidget::generateContents(void)
+/** Used to draw all the elments */
+void CMapWidget::drawElements(QPainter *p)
 {
-	QRect drawArea(contentsX(), contentsY(),viewport()->width(), viewport()->height());
+  CMapLevel *level = viewWidget->getCurrentlyViewedLevel();
+  if (!level) return;
 
-	// delete the buffer only when we need one with a different size
-	if (buffer && (buffer->size() != drawArea.size()))
-	{
-		delete buffer;
-		buffer = NULL;
-	}
+  CMapLevel *lowerLevel = level->getPrevLevel();
+  CMapLevel *upperLevel = level->getNextLevel();
 
-	if (!buffer)
-	{
-		buffer = new QPixmap(drawArea.size());
-	}
+  // Mark all paths as undrawn
+  foreach (CMapRoom *room, *level->getRoomList())
+    foreach (CMapPath *path, *room->getPathList())
+      path->setDone(false);
 
-	QPainter p;
+  if (lowerLevel && mapManager->getMapData()->showLowerLevel)
+  {
+    foreach (CMapRoom *room, *lowerLevel->getRoomList())
+      foreach (CMapPath *path, *room->getPathList())
+        path->setDone(false);
+  }
 
-	p.begin(buffer);
+  if (upperLevel && mapManager->getMapData()->showUpperLevel)
+  {
+    foreach (CMapRoom *room, *upperLevel->getRoomList())
+      foreach (CMapPath *path, *room->getPathList())
+        path->setDone(false);
+  }
 
-	p.translate(-drawArea.x(), -drawArea.y());
-	
-	if (viewWidget->getCurrentlyViewedZone()->getUseDefaultBackground())
-	{
-		p.fillRect(drawArea,mapManager->getMapData()->backgroundColor);
-	}
-	else
-	{
-		p.fillRect(drawArea,viewWidget->getCurrentlyViewedZone()->getBackgroundColor());
-	}
+  // Draw the upper map elements
+  if (lowerLevel && mapManager->getMapData()->showLowerLevel)
+    foreach (CMapElement *element, lowerLevel->getAllElements())
+      element->lowerPaint(p, viewWidget->getCurrentlyViewedZone());
 
-	viewWidget->drawGrid(&p);
-	viewWidget->drawElements(&p);
+  // Paint the map elements of the current map
+  foreach (CMapElement *element, level->getAllElements())
+    if (element->getDoPaint())
+      element->paint(p, viewWidget->getCurrentlyViewedZone());
 
-	p.end();
+  // Draw the upper map elements
+  if (upperLevel && mapManager->getMapData()->showUpperLevel)
+  {
+    foreach (CMapElement *element, upperLevel->getAllElements())
+      element->higherPaint(p, viewWidget->getCurrentlyViewedZone());
+  }
 }
 
-/** Get the background of the view port */
-QPixmap *CMapWidget::getViewportBackground(void)
-{
-	return buffer;
-}
 
 /** The mouse release event */
-void CMapWidget::viewportMouseReleaseEvent(QMouseEvent *e)
+void CMapWidget::mouseReleaseEvent(QMouseEvent *e)
 {
-	int x, y;
-	viewportToContents( e->x(),  e->y(), x, y );
     QCursor* oldCursor;
-	//QPainter p;
 
 	switch (e->button())
 	{
           case Qt::LeftButton:
 			// Send the mouse event to the current tool
-			//p.begin(viewport());
-			//p.translate(-contentsX(), -contentsY());
-			mapManager->getCurrentTool()->mouseReleaseEvent(QPoint (x,y),viewWidget->getCurrentlyViewedLevel());
-			//p.end();
+			mapManager->getCurrentTool()->mouseReleaseEvent(e->pos(),viewWidget->getCurrentlyViewedLevel());
 			break;
 
           case Qt::MidButton:
@@ -293,8 +282,8 @@ void CMapWidget::showPathContextMenu(void)
 	pathTwoWay->setChecked(twoWay);
 	pathOneWay->setChecked(!twoWay);
 
-	CMapView *view = (CMapView *)parentWidget();
-	pathDelBend->setEnabled(path->mouseInPathSeg(viewportToContents( selectedPos ),view->getCurrentlyViewedZone())!=-1);
+	CMapView *view = (CMapView *) viewWidget;
+	pathDelBend->setEnabled(path->mouseInPathSeg(selectedPos,view->getCurrentlyViewedZone())!=-1);
 	pathEditBends->setEnabled(path->getBendCount() > 0);
 	pathAddBend->setEnabled(path->getSrcRoom()->getZone()==path->getDestRoom()->getZone());
 
@@ -311,17 +300,14 @@ void CMapWidget::showTextContextMenu(void)
 
 void CMapWidget::showContexMenu(QMouseEvent *e)
 {
-  int x, y;
-  viewportToContents( e->x(),  e->y(), x, y );
-
   CMapLevel *level = viewWidget->getCurrentlyViewedLevel();
   if (!level) return;
-  CMapElement *element = level->findElementAt (QPoint(x, y));
+  CMapElement *element = level->findElementAt (e->pos());
   if (!element) return;
 
   mapManager->setSelectedElement(element);
-  selectedPos = QPoint(e->x(),e->y());
-  mapManager->setSelectedPos(QPoint(x,y));
+  mapManager->setSelectedPos(e->pos());
+  selectedPos = e->pos();
 
   mapManager->unsetEditElement();
   switch(element->getElementType())
@@ -348,31 +334,20 @@ void CMapWidget::popupMenu(CMapElement *element,Q3PopupMenu *menu,QPoint pos)
 void CMapWidget::leaveEvent(QEvent *)
 {
 	// Send the mouse event to the current tool
-	//QPainter p;
-	//p.begin(viewport());
-	//p.translate(-contentsX(), -contentsY());
 	mapManager->getCurrentTool()->mouseLeaveEvent();
-	//p.end();
 }
 
 /** This is called when the mouse enters the widget */
 void CMapWidget::enterEvent(QEvent *)
 {
 	// Send the mouse event to the current tool
-	//QPainter p;
-	//p.begin(viewport());
-	//p.translate(-contentsX(), -contentsY());
 	mapManager->getCurrentTool()->mouseEnterEvent();
-	//p.end();
 }
 
 /** The mouse press event */
-void CMapWidget::viewportMousePressEvent(QMouseEvent *e)
+void CMapWidget::mousePressEvent(QMouseEvent *e)
 {
 	QCursor* oldCursor;
-	int x, y;
-	//QPainter p;
-	viewportToContents( e->x(),  e->y(), x, y );
 
 	switch (e->button())
 	{
@@ -394,7 +369,7 @@ void CMapWidget::viewportMousePressEvent(QMouseEvent *e)
 			// Send the mouse event to the current tool
 			//p.begin(viewport());
 			//p.translate(-contentsX(),-contentsY());
-			mapManager->getCurrentTool()->mousePressEvent(QPoint(x,y),viewWidget->getCurrentlyViewedLevel());
+			mapManager->getCurrentTool()->mousePressEvent(e->pos(),viewWidget->getCurrentlyViewedLevel());
 			//p.end();
 
 		default:
@@ -404,36 +379,26 @@ void CMapWidget::viewportMousePressEvent(QMouseEvent *e)
 }
 
 /** Called when the mouse is being moved */
-void CMapWidget::viewportMouseMoveEvent(QMouseEvent *e)
+void CMapWidget::mouseMoveEvent(QMouseEvent *e)
 {
-	int x, y;
-	viewportToContents( e->x(),  e->y(), x, y );
-
 	if (bMouseDrag)
  	{
 		int dx, dy;
  		dx = e->globalX() - nMouseDragPosX;
 		dy = e->globalY() - nMouseDragPosY;
-		nMouseDragPosX += dx;
-		nMouseDragPosY += dy;
-		scrollBy(dx*3, dy*3);
+		nMouseDragPosX = e->globalX();
+		nMouseDragPosY = e->globalY();
+		QScrollArea *parent = (QScrollArea *) parentWidget();
+                QScrollBar *sx = parent->horizontalScrollBar();
+                QScrollBar *sy = parent->verticalScrollBar();
+                sx->setValue(sx->value() + dx*3);
+                sy->setValue(sy->value() + dy*3);
 	}
 	else
 	{
 		// Send the mouse event to the current tool
-		//QPainter p;
-		//p.begin(viewport());
-		//p.translate(-contentsX(), -contentsY());
-		mapManager->getCurrentTool()->mouseMoveEvent(QPoint (x,y),e->button(),viewWidget->getCurrentlyViewedLevel());
-		//p.end();
+		mapManager->getCurrentTool()->mouseMoveEvent(e->pos(),e->button(),viewWidget->getCurrentlyViewedLevel());
   	}
-}
-
-/** the resize event which has been over riddent to risze the map correctly */
-void CMapWidget::resizeEvent(QResizeEvent *e)
-{
-	viewWidget->checkSize(QPoint(viewWidget->getMaxX(),viewWidget->getMaxY()));
-	Q3ScrollView::resizeEvent(e);
 }
 
 

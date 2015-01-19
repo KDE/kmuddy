@@ -19,18 +19,15 @@
 #define CMAPVIEW_H
 
 #include <qwidget.h>
-#include <qpushbutton.h>
 #include <qlayout.h>
-//Added by qt3to4:
-#include <QPixmap>
-#include <QLabel>
-#include <QKeyEvent>
 
 #include <klocale.h>
 
 #include "cmapviewbase.h"
 
 class QLabel;
+class QScrollArea;
+class QPushButton;
 
 class CMapWidget;
 class CMapManager;
@@ -51,7 +48,7 @@ class CMapView : public CMapViewBase
    Q_OBJECT
 
 public:
-	CMapView(CMapManager *manager,QWidget *parent, const char *name);
+	CMapView(CMapManager *manager,QWidget *parent);
 
 	~CMapView();
 
@@ -73,6 +70,8 @@ public:
 	virtual void changedElement(CMapElement *element);
 	/** This method is called when a map level is changed */
 	virtual void changedLevel(CMapLevel *level);
+        /** This method is called when something else is changed, it should trigger a repaint */
+        virtual void changed();
 	/** Get the max x cord of all elements */
 	int getMaxX(void);
 	/** Get the max y cord of all elements */
@@ -84,22 +83,11 @@ public:
 	/** Used to set the view to active */
 	virtual void setActive(bool active);
 
-	/** This view supports a view area */
-	virtual bool getSupportsViewArea(void)                               { return true; }
-
-	virtual QRect getViewArea(void);
-
-	virtual void redraw(void);
 	/** Used to find out if ctrl is being pressed */
 	virtual bool getCtrlPressed(void);
 	/** This is used ensure a location is visiable for views that scroll */
 	virtual void ensureVisible(QPoint pos);
 
-	/** This is used to get the background of the current viewport
-	  * This should be null if there is no background pixmap for the view */
-	virtual QPixmap *getViewportBackground(void);
-	/** This is used to generate the conents of the view */
-	virtual void generateContents(void);
 	/** This will pass cursor changes to the mapWidet */
 	void setCursor ( const QCursor & cursor);
 
@@ -112,6 +100,7 @@ protected:
 	virtual void keyPressEvent(QKeyEvent *e);
 	/** Called when a key is released */
 	virtual void keyReleaseEvent(QKeyEvent *e);
+        virtual void resizeEvent (QResizeEvent *);
 
 private:
 	/** This is true if the ctrl key is being pressed */
@@ -125,6 +114,8 @@ private:
 	QLabel *lblActive;
 	/** A toggle button to tell the map view to follow the player */
 	QPushButton *cmdFollowMode;
+        /** The scrolling area wrapping the map widget */
+        QScrollArea *scroller;
 	/** The Widget used to draw the map */
 	CMapWidget *mapWidget;
 	/** The status bar */

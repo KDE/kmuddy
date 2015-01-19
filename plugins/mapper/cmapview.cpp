@@ -18,12 +18,10 @@
 
 #include "cmapview.h"
 
-#include <qwidget.h>
-#include <qlabel.h>
-//Added by qt3to4:
-#include <QPixmap>
-#include <QKeyEvent>
-#include <Q3VBoxLayout>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QScrollArea>
 
 #include "cmapmanager.h"
 #include "cmapzone.h"
@@ -40,16 +38,23 @@
 #include <kiconloader.h>
 #include <kstandarddirs.h>
 
-CMapView::CMapView(CMapManager *manager,QWidget *parent, const char *name) : CMapViewBase(manager,parent,name)
+CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,parent)
 {
   kDebug() << "CMapView::CMapView create view";
 
   activeLed = UserIcon ("kmud_active.png");
   inactiveLed = UserIcon ("kmud_inactive.png");
 
-  Q3VBoxLayout *vbox = new Q3VBoxLayout((QWidget *)this);
-  mapWidget = new CMapWidget(this,manager,(QWidget *)this,"mapwidget");
-  vbox->addWidget( mapWidget);
+  QVBoxLayout *vbox = new QVBoxLayout((QWidget *)this);
+
+  scroller = new QScrollArea(this);
+  vbox->addWidget(scroller);
+  scroller->setWidgetResizable(true);
+  scroller->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+  scroller->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+
+  mapWidget = new CMapWidget(this,manager,scroller);
+  scroller->setWidget(mapWidget);
   mapWidget->show();
 
   statusbar = new CMapViewStatusbar(this,"statusbar");
@@ -69,8 +74,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent, const char *name) : CMa
   //FIXME_jp : get settings for status bar instead of defaults
 
   //FIXME_jp : Add proper resize instead of test size
-  maxSize = QSize(0,0);
-  checkSize(QPoint(300,300));
+  changed();
   bCtrlPressed = false;
 }
 
@@ -82,10 +86,10 @@ CMapView::~CMapView()
 /** This method is called when an element is added */
 void CMapView::addedElement(CMapElement *element)
 {
-  if (isElementVisibale(element))
+  if (isElementVisible(element))
   {
     checkSize(element->getHighPos());
-    redraw();
+    mapWidget->update();
   }
 }
 
@@ -95,28 +99,25 @@ void CMapView::deletedElement(CMapLevel *deletedFromLevel)
   CMapLevel *upperLevel = getCurrentlyViewedLevel()->getNextLevel();
   CMapLevel *lowerLevel = getCurrentlyViewedLevel()->getPrevLevel();
 
-
   if (deletedFromLevel == getCurrentlyViewedLevel())
-  {
-    redraw();
-  }
+    mapWidget->update();
 
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
     if (deletedFromLevel == upperLevel)
-      redraw();
+      mapWidget->update();
 
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
     if (deletedFromLevel == lowerLevel)
-      redraw();
+      mapWidget->update();
 }
 
 /** This method is called when an element is changed */
 void CMapView::changedElement(CMapElement *element)
 {
-  if (isElementVisibale(element))
+  if (isElementVisible(element))
   {
     checkSize(element->getHighPos());
-    redraw();
+    mapWidget->update();
   }
 
   if (element == mapManager->getCurrentRoom())
@@ -126,31 +127,20 @@ void CMapView::changedElement(CMapElement *element)
 /** This method is called when a map level is changed */
 void CMapView::changedLevel(CMapLevel *level)
 {
-  if (isLevelVisibale(level))
-  {
-    int maxx=0,maxy=0;
-    QList<CMapElement *> lst = level->getAllElements();
-    foreach (CMapElement *element, lst)
-    {      
-      if (element->getHighX()>maxx)
-        maxx =element->getHighX();
+  if (!isLevelVisible(level)) return;
+  changed();
 
-      if (element->getHighY()>maxx)
-        maxx = element->getHighY();
-    
-    }
-
-    redraw();
-    checkSize(QPoint(maxx,maxy));
-  }
 }
 
-/** Tell this map widget to display a different zone */
-void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
+void CMapView::changed()
 {
-  if (!level) return;
+  maxSize = QSize(0,0);
 
-  setLevel(level);
+  CMapLevel *level = getCurrentlyViewedLevel();
+  if (!level) {
+    mapWidget->update();
+    return;
+  }
 
   CMapLevel *upperLevel = level->getNextLevel();
   CMapLevel *lowerLevel = level->getPrevLevel();
@@ -158,7 +148,6 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
   QPoint size(0,0);
 
   // Calc the size the widget should be
-  // FIXME_jp : Add lower level elements
   QList<CMapElement *> lst = level->getAllElements();
   foreach (CMapElement *element, lst)
   {
@@ -166,8 +155,7 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
     if (element->getHighY()>size.y()) size.setY(element->getHighY());
   }
 
-  // FIXME_jp: Do a check to see if this needs to be done
-  if (upperLevel  && mapManager->getMapData()->showUpperLevel)
+  if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
     lst = upperLevel->getAllElements();
     foreach (CMapElement *element, lst)
@@ -177,7 +165,7 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
     }
   }
 
-  if (lowerLevel  && mapManager->getMapData()->showLowerLevel)
+  if (lowerLevel && mapManager->getMapData()->showLowerLevel)
   {
     lst = lowerLevel->getAllElements();
     foreach (CMapElement *element, lst)
@@ -187,13 +175,23 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
     }
   }
 
-  // Resize the widget
-  maxSize = QSize(0,0);
   checkSize(size);
+  mapWidget->update();
+}
+
+
+/** Tell this map widget to display a different zone */
+void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
+{
+  if (!level) { changed(); return; }
+
+  setLevel(level);
+
+  changed();
 
   // Center on the position
   if (centerView)
-    mapWidget->center(pos.x(),pos.y());
+    scroller->ensureVisible(pos.x(),pos.y(), width()/2, height()/2);
 
   // Update the status bar
   statusbar->setRoom(mapManager->getCurrentRoom()->getLabel());
@@ -201,15 +199,13 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
   statusbar->setLevel(level->getNumber());
 
   if (getActive())
-  {
     mapManager->activeViewChanged();
-  }
 }
 
 /** This is used ensure a location is visiable for views that scroll */
 void CMapView::ensureVisible(QPoint pos)
 {
-  mapWidget->ensureVisible(pos.x(),pos.y(),10,10);
+  scroller->ensureVisible(pos.x(),pos.y(),10,10);
 }
 
 /** Used to calculate the correct size for the widget */
@@ -218,33 +214,21 @@ void CMapView::checkSize(QPoint pos)
   if (pos.x() > maxSize.width()) maxSize.setWidth(pos.x());
   if (pos.y() > maxSize.height()) maxSize.setHeight(pos.y());
 
-  int view_x =mapWidget->viewport()->width();
-  int view_y =mapWidget->viewport()->height();
-  int newx;
-  int newy;                                                             
+  int view_x = width();
+  int view_y = height();
 
   if (maxSize.width() > view_x)
-  {
-    newx = maxSize.width();
-  }
-  else
-  {
-    newx = view_x;
-  }
+    view_x = maxSize.width();
 
   if (maxSize.height() > view_y)
-  {
-    newy = maxSize.height();
-  }
-  else
-  {
-    newy = view_y;
-  }
+    view_y = maxSize.height();
 
-  if (newy != mapWidget->contentsHeight() || newx !=mapWidget->contentsWidth())
-  {
-    mapWidget->resizeContents(newx + (mapManager->getMapData()->gridSize.width() * 3),newy + (mapManager->getMapData()->gridSize.height() * 3));
-  }
+  QSize grid = mapManager->getMapData()->gridSize;
+  view_x += grid.width() * 3;
+  view_y += grid.height() * 3;
+
+  if (view_y != mapWidget->height() || view_x != mapWidget->width())
+    mapWidget->setFixedSize(view_x, view_y);
 }
 
 /** Get the max x cord of all elements */
@@ -273,14 +257,9 @@ bool CMapView::getFollowMode(void)
 
 int CMapView::getWidth(void)
 {
-  int width;
-
-  if (mapWidget->contentsWidth()>mapWidget->viewport()->width())
-    width = mapWidget->contentsWidth();
-  else
-    width = mapWidget->viewport()->width();
-
-  return width;
+  if (mapWidget->width() > scroller->viewport()->width())
+    return mapWidget->width();
+  return scroller->viewport()->width();
 }
 
 /** Used to find out if ctrl is being pressed */
@@ -291,48 +270,16 @@ bool CMapView::getCtrlPressed(void)
 
 int CMapView::getHeight(void)
 {
-  int height;
-
-  if (mapWidget->contentsHeight()>mapWidget->viewport()->height())
-    height = mapWidget->contentsHeight();
-  else
-    height = mapWidget->viewport()->height();
-
-  return height;
+  if (mapWidget->height() > scroller->viewport()->height())
+    return mapWidget->height();
+  return scroller->viewport()->height();
 }
 
 /** Used to set the view to active */
 void CMapView::setActive(bool active)
 {
   CMapViewBase::setActive(active);
-  if (active)
-    lblActive->setPixmap(activeLed);
-  else
-       lblActive->setPixmap(inactiveLed);
-}
-
-QRect CMapView::getViewArea(void)
-{
-  QRect rect(mapWidget->contentsX(),mapWidget->contentsY(),mapWidget->contentsWidth(),mapWidget->contentsHeight());
-  
-  return rect;
-}
-
-QPixmap *CMapView::getViewportBackground(void)
-{
-  return mapWidget->getViewportBackground();
-}
-
-/** This is used to generate the conents of the view */
-void CMapView::generateContents(void)
-{
-  return mapWidget->generateContents();
-}
-
-
-void CMapView::redraw(void)
-{
-  mapWidget->redraw();
+  lblActive->setPixmap(active ? activeLed : inactiveLed);
 }
 
 void CMapView::setCursor ( const QCursor & cursor)
@@ -356,3 +303,9 @@ void CMapView::keyReleaseEvent(QKeyEvent *e)
 
   mapManager->getCurrentTool()->keyReleaseEvent(e);
 }
+
+void CMapView::resizeEvent (QResizeEvent *)
+{
+  changed();
+}
+

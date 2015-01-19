@@ -24,11 +24,8 @@
 #include "cmappath.h"
 #include "cmapelement.h"
 #include "cmaproom.h"
-//Added by qt3to4:
-#include <QCloseEvent>
-#include <QFocusEvent>
 
-CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent, const char *name) : QWidget(parent,name)
+CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent) : QWidget(parent)
 {
   mapManager = manager;
   viewActive = false;
@@ -45,105 +42,13 @@ CMapViewBase::~CMapViewBase()
 /** Used to get the currently viewed zone */
 CMapZone *CMapViewBase::getCurrentlyViewedZone(void)
 {
-  if (currentLevel)
-  {
-    return currentLevel->getZone();
-  }    
-  else
-  {
-    return NULL;
-  }    
+  return currentLevel ? currentLevel->getZone() : 0;
 }
 
 /** Used to get the currently viewed level */
 CMapLevel *CMapViewBase::getCurrentlyViewedLevel(void)
 {
   return currentLevel;
-}
-
-/** Used to draw all the elments */
-void CMapViewBase::drawElements(QPainter *p)
-{
-  if (!getCurrentlyViewedLevel())
-    return;
-
-  CMapLevel *lowerLevel = getCurrentlyViewedLevel()->getPrevLevel();
-  CMapLevel *upperLevel = getCurrentlyViewedLevel()->getNextLevel();
-
-  // Mark all paths as undrawn
-  foreach (CMapRoom *room, *getCurrentlyViewedLevel()->getRoomList())
-    foreach (CMapPath *path, *room->getPathList())
-      path->setDone(false);
-
-  if (lowerLevel && mapManager->getMapData()->showLowerLevel)
-  {
-    foreach (CMapRoom *room, *lowerLevel->getRoomList())
-      foreach (CMapPath *path, *room->getPathList())
-        path->setDone(false);
-  }
-
-  if (upperLevel && mapManager->getMapData()->showUpperLevel)
-  {
-    foreach (CMapRoom *room, *upperLevel->getRoomList())
-      foreach (CMapPath *path, *room->getPathList())
-        path->setDone(false);
-  }
-
-  // Draw the upper map elements
-  if (lowerLevel && mapManager->getMapData()->showLowerLevel)
-    foreach (CMapElement *element, lowerLevel->getAllElements())
-      element->lowerPaint(p,getCurrentlyViewedZone());
-
-  // Paint the map elements of the current map
-  foreach (CMapElement *element, getCurrentlyViewedLevel()->getAllElements())
-    if (element->getDoPaint())
-      element->paint(p,getCurrentlyViewedZone());
-
-  // Draw the upper map elements
-  if (upperLevel && mapManager->getMapData()->showUpperLevel)
-  {
-    foreach (CMapElement *element, upperLevel->getAllElements())
-      element->higherPaint(p,getCurrentlyViewedZone());
-  }
-}
-
-/** Draw the grid if it's visable */
-void CMapViewBase::drawGrid(QPainter* p)
-{
-  int x=0,y=0;
-  signed int x1,x2,y1,y2;
-
-  int maxx = getWidth();
-  int maxy = getHeight();
-
-  // Is the grid visable
-  // FIXME_jp: had var for the gird
-  if (mapManager->getMapData()->gridVisable)
-  {
-    p->setPen(mapManager->getMapData()->gridColor);
-
-     // Draw the lines going across
-    for (y=0;y<=maxy;y+=mapManager->getMapData()->gridSize.width())
-    {
-      x1 = 0;
-      y1 = y;
-      x2 = maxx;
-      y2 = y;
-
-      p->drawLine(x1,y1,x2,y2);
-    }
-
-    // Draw the lines going down
-    for (x=0;x<=maxx;x+=mapManager->getMapData()->gridSize.height())
-    {
-      x1 = x;
-      y1 = 0;
-      x2 = x;
-      y2 = maxy;
-
-      p->drawLine(x1,y1,x2,y2);
-    }
-  }
 }
 
 
@@ -186,93 +91,30 @@ void CMapViewBase::showPosition(CMapRoom *room,bool centerView)
   }  
 }
 
-/** Used to find out if a level is visiable in the view */
-bool CMapViewBase::isLevelVisibale(CMapLevel *level)
+/** Used to find out if a level is visible in the view */
+bool CMapViewBase::isLevelVisible(CMapLevel *level)
 {
   if (getCurrentlyViewedLevel()==NULL)
     return false;
 
-  bool found = false;
-
   if (level == getCurrentlyViewedLevel())
-    found = true;
+    return true;
 
-  if (getCurrentlyViewedLevel()->getPrevLevel()!=NULL)
+  if (getCurrentlyViewedLevel()->getPrevLevel())
     if (level == getCurrentlyViewedLevel()->getPrevLevel())
-      found = true;
+      return true;
 
-  if (getCurrentlyViewedLevel()->getNextLevel()!=NULL)
+  if (getCurrentlyViewedLevel()->getNextLevel())
     if (level == getCurrentlyViewedLevel()->getNextLevel())
-      found = true;
+      return true;
 
-  return found;
+  return false;
 }
 
 /** Used to find out if a element is visiable in the view */
-bool CMapViewBase::isElementVisibale(CMapElement *element)
+bool CMapViewBase::isElementVisible(CMapElement *element)
 {
-  if (getCurrentlyViewedLevel()==NULL)
-    return false;
-
-  bool found = false;
-
-  if (element->getElementType()!=PATH)
-  {
-    if (element->getLevel()==getCurrentlyViewedLevel())
-    {
-      found = true;
-    }
-
-    if (mapManager->getMapData()->showLowerLevel)
-    {
-      if (element->getLevel()==getCurrentlyViewedLevel()->getPrevLevel())
-      {
-        found = true;
-      }
-    }
-
-    if (mapManager->getMapData()->showUpperLevel)
-    {
-      if (element->getLevel()==getCurrentlyViewedLevel()->getNextLevel())
-      {
-        found = true;
-      }
-    }
-
-    if (element->getElementType()==ZONE)
-    {
-      if (element==getCurrentlyViewedZone())
-      {
-        found = true;
-      }
-    }
-  }
-  else
-  {
-    CMapPath *path = (CMapPath *)element;
-    if (mapManager->getMapData()->showLowerLevel)
-    {
-      if (path->getSrcRoom()->getLevel() == getCurrentlyViewedLevel()->getPrevLevel())
-      {
-        found = true;
-      }
-    }
-
-    if (mapManager->getMapData()->showUpperLevel)
-    {
-      if (path->getSrcRoom()->getLevel() == getCurrentlyViewedLevel()->getNextLevel())
-      {
-        found = true;
-      }
-    }
-
-    if (path->getSrcRoom()->getLevel() == getCurrentlyViewedLevel())
-    {
-      found = true;
-    }
-  }
-
-  return found;
+  return isLevelVisible(element->getLevel());
 }
 
 /** Used to set the view to active */

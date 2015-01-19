@@ -34,7 +34,7 @@
 
 #include "kmemconfig.h"
 
-CMapClipboard::CMapClipboard(CMapManager *mapManager,QObject *parent, const char *name ) : QObject(parent,name)
+CMapClipboard::CMapClipboard(CMapManager *mapManager,QObject *parent) : QObject(parent)
 {
 	kDebug() << "CMapClipboard::CMapClipboard constructor begins";
 

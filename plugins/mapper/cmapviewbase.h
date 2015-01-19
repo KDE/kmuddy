@@ -42,7 +42,7 @@ class KMUDDY_EXPORT CMapViewBase : public QWidget
 {
 	Q_OBJECT
 public:
-	CMapViewBase(CMapManager *manager,QWidget *parent, const char *name);
+	CMapViewBase(CMapManager *manager,QWidget *parent);
 	virtual ~CMapViewBase();
 
 	/** This method is called when an element is added */
@@ -53,6 +53,8 @@ public:
 	virtual void changedElement(CMapElement *element)=0;
 	/** This method is called when a map level is changed */
 	virtual void changedLevel(CMapLevel *level)=0;
+        /** This method is called when something else is changed, it should trigger a repaint */
+        virtual void changed()=0;
 	/** Tell this map view to display a different level */
 	virtual void showPosition(QPoint pos,CMapLevel *level,bool centerView=true)=0;
 	/** Tell this map view to display a different level. view wiil
@@ -68,16 +70,10 @@ public:
 	/** Used to find the height of the widget */
 	virtual int getHeight(void)=0;
 
-	/** Draw the map elements */
-	virtual void drawElements(QPainter *p);
-	/** Draw the grid if it's visable */
-	virtual void drawGrid(QPainter* p);
-
 	/** Used to get the currently viewed zone */
 	virtual CMapZone *getCurrentlyViewedZone(void);
 	/** Used to get the currently viewed level */
 	virtual CMapLevel *getCurrentlyViewedLevel(void);
-
 
 	/** Used to set the follow mode */
 	virtual void setFollowMode(bool follow) =0;
@@ -91,19 +87,10 @@ public:
 	virtual void setActive(bool active)             { viewActive = active; }
 	virtual bool getActive(void)                    { return viewActive; }
 
-	/** Used to find out if a element is visiable in the view */
-	virtual bool isElementVisibale(CMapElement *element);
-    /** Used to find out if a level is visiable in the view */
-	virtual bool isLevelVisibale(CMapLevel *level);
-
-	/** Used to tell if the view supports view area */
-	virtual bool getSupportsViewArea(void) = 0;
-	/** This is used to find the viewport position. If the view does not have
-	  * a scrollable area, then the size of the view should be returned */
-	virtual QRect getViewArea(void)                 { return QRect(0,0,0,0); }
-
-	/** Called to redraw the view */
-	virtual void redraw(void)                       { update(); }
+	/** Used to find out if a element is visible in the view */
+	virtual bool isElementVisible(CMapElement *element);
+    /** Used to find out if a level is visible in the view */
+	virtual bool isLevelVisible(CMapLevel *level);
 
 	/** Used to find out if the ctrl key is being held down.
       * This is used by the select tool.                    */
@@ -112,11 +99,6 @@ public:
 	/** This is used ensure a location is visiable for views that scroll */
 	virtual void ensureVisible(QPoint)              { }
 
-	/** This is used to get the background of the current viewport
-	  * This should be null if there is no background pixmap for the view */
-	virtual QPixmap *getViewportBackground(void)    { return NULL; }
-	/** This is used to generate the conents of the view */
-	virtual void generateContents(void)=0;
 	/** This method is called when the current position of the player changes */
 	virtual void playerPositionChanged(CMapRoom *) {}
 	/** Used to set the current level. This is for internal use */

@@ -109,7 +109,7 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
   container->show ();
   setCentralWidget (container);
 
-  m_clipboard = new CMapClipboard(this,actionCollection(),"mapClipboard");
+  m_clipboard = new CMapClipboard(this,actionCollection());
 
   activeView = 0;
 
@@ -141,7 +141,7 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
   m_levelCount = 0;
 
   setUndoActive (false);
-  activeView = new CMapView(this,container,"mapView");
+  activeView = new CMapView(this,container);
   createNewMap();
   openMapView ();
   setUndoActive (true);
@@ -947,6 +947,7 @@ void CMapManager::createNewMap()
     plugin->newMapCreated();
   }
 
+  activeView->changed();
 }
 
 /** Used to create a new room that can be undone/redone
@@ -1752,6 +1753,8 @@ void CMapManager::setCurrentTool(CMapToolBase *tool)
 
   if (currentTool)
     currentTool->toolSelected();
+
+  activeView->changed();
 }
 
 /** Usd to get the current tool */
@@ -2283,7 +2286,7 @@ CMapViewBase *CMapManager::getActiveView(void)
 /** Used to repaint all the views */
 void CMapManager::redrawAllViews(void)
 {
-  activeView->redraw();
+  activeView->changed();
 }
 
 /** This method is called to create a new map, when the new map menu option is selected */
@@ -2444,20 +2447,14 @@ void CMapManager::slotToolsLevelUp()
 {
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel()->getNextLevel();
   if (level)
-  {
     getActiveView()->showPosition(level,false);
-    getActiveView()->redraw();
-  }
 }
 
 void CMapManager::slotToolsLevelDown()
 {
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel()->getPrevLevel();
   if (level)
-  {
     getActiveView()->showPosition(level,false);
-    getActiveView()->redraw();
-  }
 }
 
 void CMapManager::slotToolsLevelDelete()
@@ -2475,11 +2472,7 @@ void CMapManager::slotToolsZoneUp()
   {
     CMapLevel *level = zone->getLevel();
     if (level)
-    {
       getActiveView()->showPosition(zone->getLowPos(),level);
-      getActiveView()->redraw();
-    }
-
   }
 }
 
@@ -2487,9 +2480,7 @@ void CMapManager::slotToolsDeleteZone()
 {
   CMapZone *zone = getActiveView()->getCurrentlyViewedZone();
   if (zone)
-  {
     deleteElement(zone);
-  }
 }
 
 void CMapManager::slotToolsCreateMode()
@@ -2513,7 +2504,6 @@ void CMapManager::slotSelectZone()
     if (zone->getLabel()==zoneMenu->currentText())
     {
       getActiveView()->showPosition(zone->firstLevel());
-      getActiveView()->redraw();
       break;
     }
   }  
