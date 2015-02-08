@@ -88,6 +88,7 @@ void CMapWidget::paintEvent(QPaintEvent *ev)
 
   drawGrid(&p);
   drawElements(&p);
+  mapManager->getCurrentTool()->paint(&p);
 }
 
 bool CMapWidget::event(QEvent *e)

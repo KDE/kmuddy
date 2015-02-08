@@ -44,6 +44,8 @@ public:
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);
 
+        virtual void paint(QPainter *);
+
 private:
 	QPoint lastPos;
 };

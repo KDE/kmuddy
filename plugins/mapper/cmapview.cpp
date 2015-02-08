@@ -132,6 +132,11 @@ void CMapView::changedLevel(CMapLevel *level)
 
 }
 
+void CMapView::requestPaint()
+{
+  mapWidget->update();
+}
+
 void CMapView::changed()
 {
   maxSize = QSize(0,0);

@@ -72,6 +72,8 @@ public:
 	virtual void changedLevel(CMapLevel *level);
         /** This method is called when something else is changed, it should trigger a repaint */
         virtual void changed();
+        /** Asks the widget to repaint itself */
+        virtual void requestPaint();
 	/** Get the max x cord of all elements */
 	int getMaxX(void);
 	/** Get the max y cord of all elements */

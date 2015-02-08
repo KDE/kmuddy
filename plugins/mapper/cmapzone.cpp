@@ -87,8 +87,8 @@ void CMapZone::setLabel(QString zoneLabel)
 
 void CMapZone::dragPaint(QPoint offset,QPainter *p,CMapZone *)
 {
-	p->setPen(Qt::black);
-	p->setBrush(Qt::black);
+  p->setPen(QColor(255, 255, 255, 128));
+  p->setBrush(QColor(0, 255, 255, 64));
 	p->drawRect(getX() + offset.x(),getY() + offset.y(),getWidth(),getHeight());
 }
 

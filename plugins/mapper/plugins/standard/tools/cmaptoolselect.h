@@ -51,6 +51,8 @@ public:
 	/** This function is called when a tool is unselected */
 	virtual void toolUnselected(void);
 
+        virtual void paint(QPainter *);
+
 private slots:
 	/** Called when a rectange drag opertion is performed */
 	void slotStartDraging(void);

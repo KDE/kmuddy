@@ -58,6 +58,9 @@ public:
 	virtual void keyPressEvent(QKeyEvent *)                                            { }
 	virtual void keyReleaseEvent(QKeyEvent *)                                          { }
 
+        /** Called when painting the widget */
+        virtual void paint(QPainter *)   { }
+
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void)=0;
 	/** This function is called when a tool is unselected */

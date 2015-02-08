@@ -52,6 +52,55 @@ CMapToolSelect::~CMapToolSelect()
 {
 }
 
+void CMapToolSelect::paint(QPainter *p)
+{
+  if (!bDragging) return;
+
+  int gridWidth = mapManager->getMapData()->gridSize.width();
+  int gridHeight = mapManager->getMapData()->gridSize.height();
+
+  CMapLevel *currentLevel = mapManager->getActiveView()->getCurrentlyViewedLevel();
+  QList<CMapElement *> lst = currentLevel->getAllElements();
+  if (moveDrag)
+  {
+    // This is a element move/drag operation
+    p->setPen(Qt::black);
+
+    QPoint offset;
+
+    offset.setX((((int)(lastDrag.x() / gridWidth)) * gridWidth) - (((int)(mouseDrag.x()/gridWidth))*gridWidth));
+    offset.setY((((int)(lastDrag.y() / gridHeight)) * gridHeight) - (((int)(mouseDrag.y()/gridHeight))*gridHeight));
+
+    foreach (CMapElement *element, lst)
+      if (element->getSelected())
+        element->dragPaint(offset,p,currentLevel->getZone());
+  }
+  else if (resizeDrag > 0)
+  {
+    QPoint offset;
+
+    offset.setX(((((int)(lastDrag.x() / gridWidth)) * gridWidth) - (((int)((mouseDrag.x()-6)/gridWidth))*gridWidth))-gridWidth);
+    offset.setY(((((int)(lastDrag.y() / gridHeight)) * gridHeight) - (((int)((mouseDrag.y()-6)/gridHeight))*gridHeight))-gridHeight);			
+
+    foreach (CMapElement *element, lst)
+      if (element->getSelected())
+        element->resizePaint(offset,p,currentLevel->getZone(),resizeDrag);
+  }
+  else if (m_editDrag > 0)
+  {
+    foreach (CMapElement *element, lst)
+      if (element->getElementType()==PATH && element->getEditMode())
+        ((CMapPath *)element)->editPaint(lastDrag,p,currentLevel->getZone(),m_editDrag);
+  }
+  else
+  {
+    // This is a element move/drag operation
+    p->setPen(QColor(128, 128, 128, 64));
+    p->setBrush(QColor(0, 128, 255, 32));
+    p->drawRect(mouseDrag.x(),mouseDrag.y(),lastDrag.x()-mouseDrag.x(),lastDrag.y()-mouseDrag.y());
+  }
+}
+
 /** Called when the tool recives a mouse press event */
 void CMapToolSelect::mousePressEvent(QPoint mousePos,CMapLevel *currentLevel)
 {
@@ -199,14 +248,6 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
           found = true;
         }
       }
-      // TODO: this must be done using a repaint
-#if 0
-      // Erase the rectangle
-      p->setPen(Qt::black);
-      // p->setRasterOp(Qt::NotROP);  // TODO: what with this?
-      p->drawRect(mouseDrag.x(),mouseDrag.y(),mousePos.x()-mouseDrag.x(),mousePos.y()-mouseDrag.y());
-#endif
-
       if (found)
       {
         mapManager->levelChanged(currentLevel);
@@ -256,93 +297,8 @@ void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *c
   // Make sure this is not the same position as the last one
   if (lastDrag!=mousePos)
   {
-    // TODO: all this must be done in a repaint event
-#if 0
-    QList<CMapElement *> lst = currentLevel->getAllElements();
-    if (moveDrag)
-    {
-      // This is a element move/drag operation
-      //p->setRasterOp(NotROP);  // TODO: what with this?
-      p->setPen(Qt::black);
-
-      QPoint offset;
-      int gridWidth = mapManager->getMapData()->gridSize.width();
-      int gridHeight = mapManager->getMapData()->gridSize.height();
-
-      offset.setX((((int)(lastDrag.x() / gridWidth)) * gridWidth) - (((int)(mouseDrag.x()/gridWidth))*gridWidth));
-      offset.setY((((int)(lastDrag.y() / gridHeight)) * gridHeight) - (((int)(mouseDrag.y()/gridHeight))*gridHeight));
-
-      foreach (CMapElement *element, lst)
-        if (element->getSelected())
-          element->dragPaint(offset,p,currentLevel->getZone());
-
-      offset.setX((((int)(mousePos.x() / gridWidth)) * gridWidth) - (((int)(mouseDrag.x()/gridWidth))*gridWidth));
-      offset.setY((((int)(mousePos.y() / gridHeight)) * gridHeight) - (((int)(mouseDrag.y()/gridHeight))*gridHeight));
-
-      foreach (CMapElement *element, lst)
-        if (element->getSelected())
-          element->dragPaint(offset,p,currentLevel->getZone());
-    }
-    else if (resizeDrag > 0)
-    {
-      QPixmap background(*mapManager->getActiveView()->getViewportBackground());
-
-      QPoint offset;
-      int gridWidth = mapManager->getMapData()->gridSize.width();
-      int gridHeight = mapManager->getMapData()->gridSize.height();
-
-      QPainter p2;
-
-      p2.begin(&background);
-
-
-      QRect drawArea = mapManager->getActiveView()->getViewArea();
-      p2.translate(-drawArea.x(), -drawArea.y());
-
-      offset.setX(((((int)(mousePos.x() / gridWidth)) * gridWidth) - (((int)((mouseDrag.x()-6)/gridWidth))*gridWidth))-gridWidth);
-      offset.setY(((((int)(mousePos.y() / gridHeight)) * gridHeight) - (((int)((mouseDrag.y()-6)/gridHeight))*gridHeight))-gridHeight);			
-
-      foreach (CMapElement *element, lst)
-        if (element->getSelected())
-          element->resizePaint(offset,&p2,currentLevel->getZone(),resizeDrag);
-
-      p2.end();
-
-      bitBlt(p->device(), 0, 0, &background);
-    }
-    else if (m_editDrag > 0)
-    {
-      QPixmap background(*mapManager->getActiveView()->getViewportBackground());
-
-      QPainter p2;
-
-      p2.begin(&background);
-
-      QRect drawArea = mapManager->getActiveView()->getViewArea();
-      p2.translate(-drawArea.x(), -drawArea.y());
-
-      foreach (CMapElement *element, lst)
-        if (element->getElementType()==PATH && element->getEditMode())
-          ((CMapPath *)element)->editPaint(mousePos,&p2,currentLevel->getZone(),m_editDrag);
-
-      p2.end();
-
-      bitBlt(p->device(), 0, 0, &background);
-    }
-    else
-    {
-      //p->setRasterOp(NotROP);  // TODO: what with this?
-      // This is a element move/drag operation
-      p->setPen(QPen(Qt::DotLine));
-
-      // Erase Old Rectangle
-      p->drawRect(mouseDrag.x(),mouseDrag.y(),lastDrag.x()-mouseDrag.x(),lastDrag.y()-mouseDrag.y());
-
-      // Draw New Rectangle
-      p->drawRect(mouseDrag.x(),mouseDrag.y(),mousePos.x()-mouseDrag.x(),mousePos.y()-mouseDrag.y());
-    }
-#endif
     lastDrag=mousePos;
+    mapManager->getActiveView()->requestPaint();
   }
 }
 

@@ -39,6 +39,8 @@ public:
 	/** Called when the tool recives a mouse move event */
 	virtual void mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel);
 
+        virtual void paint(QPainter *);
+
 	/** This method called when a tool is selected */
 	virtual void toolSelected(void);
 
