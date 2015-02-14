@@ -34,7 +34,7 @@ CMapCmdElementProperties::~CMapCmdElementProperties()
 	delete m_properties;
 }
 
-void CMapCmdElementProperties::execute()
+void CMapCmdElementProperties::redo()
 {
 	int active = m_manager->getUndoActive();	
 	m_manager->setUndoActive(false);
@@ -49,7 +49,7 @@ void CMapCmdElementProperties::execute()
 	m_manager->setUndoActive(active);
 }
 
-void CMapCmdElementProperties::unexecute()
+void CMapCmdElementProperties::undo()
 {
 	int active = m_manager->getUndoActive();	
 	m_manager->setUndoActive(false);

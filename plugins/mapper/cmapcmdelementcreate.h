@@ -18,8 +18,6 @@
 #ifndef CMAPCMDELEMENTCREATE_H
 #define CMAPCMDELEMENTCREATE_H
 
-#include <k3command.h>
-
 #include <QList>
 #include <qstringlist.h>
 #include <qfont.h>
@@ -44,8 +42,8 @@ class CMapCmdElementCreate : public CMapCommand,CMapElementUtil
 public:
 	CMapCmdElementCreate(CMapManager *mapManager,QString name);
 	~CMapCmdElementCreate();
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 	void addElement(KMemConfig *newElementProperties,QString grp = "Properties");
 

@@ -20,7 +20,6 @@
 
 #include <qpoint.h>
 
-#include <k3command.h>
 #include "cmapcommand.h"
 
 class CMapZone;
@@ -35,8 +34,8 @@ public:
 	CMapCmdMoveMap(CMapManager *manager,QPoint offset,CMapZone *zone,QString name);
 	~CMapCmdMoveMap();
 
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 private:
 	/** This method is used to move the elements in a zone by the given vector */

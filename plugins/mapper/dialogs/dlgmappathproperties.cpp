@@ -286,7 +286,7 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 			if (pathUndoable)
 				mapManager->addCommand(cmd);
 			else
-				cmd->execute();
+				cmd->redo();
 		}
 	}
 	else
@@ -297,7 +297,7 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 			if (pathUndoable)
 				mapManager->addCommand(cmd);
 			else
-				cmd->execute();
+				cmd->redo();
 		}
 	}
 
@@ -329,7 +329,7 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 	if (pathUndoable)
 		mapManager->addCommand(command);
 	else
-		command->execute();
+		command->redo();
 
 	if (pathUndoable)
 		mapManager->closeCommandGroup();

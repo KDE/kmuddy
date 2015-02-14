@@ -40,7 +40,7 @@ CMapCmdElementCreate::~CMapCmdElementCreate()
 	delete properties;
 }
 
-void CMapCmdElementCreate::execute()
+void CMapCmdElementCreate::redo()
 {
 	QStringList groupList = properties->groupList();
 	elements.clear();
@@ -55,7 +55,7 @@ void CMapCmdElementCreate::execute()
 	}
 }
 
-void CMapCmdElementCreate::unexecute()
+void CMapCmdElementCreate::undo()
 {
 	QStringList groupList = properties->groupList();
 

@@ -36,12 +36,12 @@ CMapCMDNotes::~CMapCMDNotes()
 {
 }
 
-void CMapCMDNotes::execute()
+void CMapCMDNotes::redo()
 {
 	m_plugin->addNote(m_element,m_newNote);
 }
 
-void CMapCMDNotes::unexecute()
+void CMapCMDNotes::undo()
 {
 	m_plugin->addNote(m_element,m_oldNote);
 }

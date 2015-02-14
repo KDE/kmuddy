@@ -38,8 +38,8 @@ public:
 	CMapCmdTogglePathTwoWay(CMapManager *mapManager,QString name,CMapPath *path);
 	~CMapCmdTogglePathTwoWay();
 	
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 private:
 	void togglePath(CMapPath *path);

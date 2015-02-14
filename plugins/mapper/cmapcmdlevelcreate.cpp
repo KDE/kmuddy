@@ -34,7 +34,7 @@ CMapCmdLevelCreate::~CMapCmdLevelCreate()
 {
 }
 
-void CMapCmdLevelCreate::execute()
+void CMapCmdLevelCreate::redo()
 {
   CMapZone *zone = m_mapManager->findZone(m_intoZone);
   m_level = new CMapLevel(m_mapManager, zone, m_index);
@@ -49,7 +49,7 @@ void CMapCmdLevelCreate::execute()
   }
 }
 
-void CMapCmdLevelCreate::unexecute()
+void CMapCmdLevelCreate::undo()
 {
 	CMapLevel *level = m_mapManager->findLevel(m_levelID);
 	delete level;

@@ -36,28 +36,21 @@ CMapCmdSpeedwalkAdd::~CMapCmdSpeedwalkAdd()
 {
 }
 
-void CMapCmdSpeedwalkAdd::execute()
+void CMapCmdSpeedwalkAdd::redo()
 {
-	CMapLevel *level = m_plugin->getManager()->findLevel(m_levelID);
-	if (level)
-	{
-		CMapRoom *room = level->findRoom(m_roomID);
-    	if (room)
-		{
-			m_plugin->addSpeedwalkRoomNoCmd(room);
-		}
-	}
+  CMapLevel *level = m_plugin->getManager()->findLevel(m_levelID);
+  if (!level) return;
+  CMapRoom *room = level->findRoom(m_roomID);
+  if (!room) return;
+  m_plugin->addSpeedwalkRoomNoCmd(room);
 }
 
-void CMapCmdSpeedwalkAdd::unexecute()
+void CMapCmdSpeedwalkAdd::undo()
 {
-	CMapLevel *level = m_plugin->getManager()->findLevel(m_levelID);
-	if (level)
-	{
-		CMapRoom *room = level->findRoom(m_roomID);
-    	if (room)
-		{
-			m_plugin->delSpeedwalkRoomNoCmd(room);
-		}
-	}
+  CMapLevel *level = m_plugin->getManager()->findLevel(m_levelID);
+  if (!level) return;
+  CMapRoom *room = level->findRoom(m_roomID);
+  if (!room) return;
+  m_plugin->delSpeedwalkRoomNoCmd(room);
 }
+

@@ -34,8 +34,8 @@ public:
 	CMapCmdLevelCreate(CMapManager *manager,QString name,CMapZone *intoZone,int index);
 	~CMapCmdLevelCreate();
 
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 	CMapLevel *getLevel(void);
 

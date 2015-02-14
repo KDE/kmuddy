@@ -27,9 +27,9 @@
 
 CMapCmdSpeedwalkRemove::CMapCmdSpeedwalkRemove(CMapPluginSpeedwalk *plugin)  : CMapCommand (i18n("Remove Room(s) from speedwalk list"))
 {
-	m_plugin = plugin;
-	m_levelList.clear();
-	m_roomList.clear();
+  m_plugin = plugin;
+  m_levelList.clear();
+  m_roomList.clear();
 }
 
 CMapCmdSpeedwalkRemove::~CMapCmdSpeedwalkRemove()
@@ -38,42 +38,35 @@ CMapCmdSpeedwalkRemove::~CMapCmdSpeedwalkRemove()
 
 void CMapCmdSpeedwalkRemove::addRoom(CMapRoom *room)
 {
-	m_levelList.append(room->getLevel()->getLevelID());
-	m_roomList.append(room->getRoomID());
+  m_levelList.append(room->getLevel()->getLevelID());
+  m_roomList.append(room->getRoomID());
 }
 
-void CMapCmdSpeedwalkRemove::execute()
+void CMapCmdSpeedwalkRemove::redo()
 {
-	for (unsigned int i=0;i<m_levelList.count();i++)
-	{	
-		CMapLevel *level = m_plugin->getManager()->findLevel(*m_levelList.at(i));
-		if (level)
-		{
-			CMapRoom *room = level->findRoom(*m_roomList.at(i));
-	    	if (room)
-			{
-				m_plugin->delSpeedwalkRoomNoCmd(room,false);
-			}
-		}	
-	}
+  for (unsigned int i=0;i<m_levelList.count();i++)
+  {	
+    CMapLevel *level = m_plugin->getManager()->findLevel(*m_levelList.at(i));
+    if (!level) continue;
+    CMapRoom *room = level->findRoom(*m_roomList.at(i));
+    if (!room) continue;
+    m_plugin->delSpeedwalkRoomNoCmd(room,false);
+  }
 
-	m_plugin->updateSpeedwalkList();
+  m_plugin->updateSpeedwalkList();
 }
 
-void CMapCmdSpeedwalkRemove::unexecute()
+void CMapCmdSpeedwalkRemove::undo()
 {
-	for (unsigned int i=0;i<m_levelList.count();i++)
-	{	
-		CMapLevel *level = m_plugin->getManager()->findLevel(*m_levelList.at(i));
-		if (level)
-		{
-			CMapRoom *room = level->findRoom(*m_roomList.at(i));
-	    	if (room)
-			{
-				m_plugin->addSpeedwalkRoomNoCmd(room,false);
-			}
-		}	
-	}
+  for (unsigned int i=0;i<m_levelList.count();i++)
+  {	
+    CMapLevel *level = m_plugin->getManager()->findLevel(*m_levelList.at(i));
+    if (!level) continue;
+    CMapRoom *room = level->findRoom(*m_roomList.at(i));
+    if (!room) continue;
+    m_plugin->addSpeedwalkRoomNoCmd(room,false);
+  }
 
-	m_plugin->updateSpeedwalkList();
+  m_plugin->updateSpeedwalkList();
 }
+

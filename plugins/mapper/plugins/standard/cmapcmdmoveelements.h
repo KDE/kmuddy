@@ -39,8 +39,8 @@ public:
 
 	void addElement(CMapElement *element);
 
-	void unexecute();
-	void execute();
+	void redo();
+	void undo();
 
 private:
 	struct elemProp

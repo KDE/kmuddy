@@ -36,7 +36,7 @@ CMapCmdTogglePathTwoWay::~CMapCmdTogglePathTwoWay()
 {
 }
 
-void CMapCmdTogglePathTwoWay::execute()
+void CMapCmdTogglePathTwoWay::redo()
 {
 	CMapLevel *srcLevel = m_mapManager->findLevel(m_srcLevel);
 	CMapRoom *srcRoom = srcLevel->findRoom(m_srcRoom);
@@ -44,7 +44,7 @@ void CMapCmdTogglePathTwoWay::execute()
 	togglePath (path);
 }
 
-void CMapCmdTogglePathTwoWay::unexecute()
+void CMapCmdTogglePathTwoWay::undo()
 {
 	CMapLevel *srcLevel = m_mapManager->findLevel(m_srcLevel);
 	CMapRoom *srcRoom = srcLevel->findRoom(m_srcRoom);

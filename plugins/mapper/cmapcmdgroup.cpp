@@ -26,32 +26,30 @@ m_mapManager = mapManager;
 
 CMapCmdGroup::~CMapCmdGroup()
 {
-  foreach (K3Command *cmd, commands)
+  foreach (CMapCommand *cmd, commands)
     delete cmd;
 }
 
-void CMapCmdGroup::execute()
+void CMapCmdGroup::redo()
 {
-  foreach (K3Command *c, commands)
-    c->execute();
+  foreach (CMapCommand *c, commands)
+    c->redo();
 }
 
-void CMapCmdGroup::unexecute()
+void CMapCmdGroup::undo()
 {
   m_mapManager->setUndoActive(false);
 
-  foreach (K3Command *c, commands)
-    c->unexecute();
+  foreach (CMapCommand *c, commands)
+    c->undo();
 
   m_mapManager->setUndoActive(true);
 }
 
 
-void CMapCmdGroup::addCommand(K3Command *command,bool execute)
+void CMapCmdGroup::addCommand(CMapCommand *command)
 {
   commands.append(command);
-  if (execute)
-    command->execute();
 }
 
 void CMapCmdGroup::setPreviousGroup(CMapCmdGroup *group)

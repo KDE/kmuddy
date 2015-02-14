@@ -18,23 +18,24 @@
 #ifndef CMAPCOMMAND_H
 #define CMAPCOMMAND_H
 
-#include <k3command.h>
-#include <qstring.h>
+#include <QUndoCommand>
+#include <QString>
 #include <kmuddy_export.h>
 
 /**
   *@author Kmud Developer Team
   */
 
-class KMUDDY_EXPORT CMapCommand : public K3Command
+class KMUDDY_EXPORT CMapCommand : public QUndoCommand
 {
-public: 
-	CMapCommand(QString name);
-	~CMapCommand();
+  public: 
+    CMapCommand(QString name);
+    ~CMapCommand();
 
-	QString name() const { return m_name; }
-private:
-	QString m_name;
+    QString name() const { return m_name; }
+
+  private:
+    QString m_name;
 };
 
 #endif

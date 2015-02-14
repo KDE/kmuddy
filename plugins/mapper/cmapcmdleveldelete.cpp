@@ -33,14 +33,14 @@ CMapCmdLevelDelete::~CMapCmdLevelDelete()
 {
 }
 
-void CMapCmdLevelDelete::execute()
+void CMapCmdLevelDelete::redo()
 {
   CMapLevel *level = m_mapManager->findLevel(m_levelID);
   m_index = level->getZone()->getLevels()->indexOf(level);
   delete level;
 }
 
-void CMapCmdLevelDelete::unexecute()
+void CMapCmdLevelDelete::undo()
 {
   CMapZone *zone = m_mapManager->findZone(m_zoneIntoID);
   CMapLevel *level = new CMapLevel(m_mapManager, zone, m_index);

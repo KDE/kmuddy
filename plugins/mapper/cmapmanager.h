@@ -35,7 +35,6 @@
 #include <kaction.h>
 #include <kselectaction.h>
 #include <ktoggleaction.h>
-#include <k3command.h>
 #include <kxmlguiwindow.h>
 #include <ksimpleconfig.h>
 #include <kstatusbar.h>
@@ -43,6 +42,7 @@
 
 #include "cactionbase.h"
 
+#include "cmapcommand.h"
 #include "cmapdata.h"
 
 #include <kmuddy_export.h>
@@ -77,6 +77,7 @@ class KMuddyMapper;
 class KVBox;
 class KComponentData;
 class QActionGroup;
+class QUndoStack;
 
 /**This is used to make the mapper perform different tasks
   *@author KMud Development Team
@@ -206,7 +207,7 @@ public:
   directionTyp getOpsiteDirection(directionTyp dir);
 
   /** Used to add a command to the command history */
-  void addCommand(K3Command *command,bool execute = true);
+  void addCommand(CMapCommand *command,bool execute = true);
 
   /** Used to set the current tool */
   void setCurrentTool(CMapToolBase *tool);
@@ -422,7 +423,7 @@ private:
   /** A list of all loaded tools */
   Q3PtrList<CMapToolBase> toolList;
   /** The undo/redo history */
-  K3CommandHistory *commandHistory;
+  QUndoStack *commandHistory;
   /** Points the the command history currently being used */
   CMapCmdGroup *historyGroup;
   /** Used to store the amount of steps taken in the speedwalk */

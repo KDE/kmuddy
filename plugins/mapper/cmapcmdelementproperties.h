@@ -19,8 +19,6 @@
 #define CMAPCMDELEMENTPROPERTIES_H
 
 
-#include <k3command.h>
-
 #include <qstringlist.h>
 #include <qfont.h>
 #include <qpoint.h>
@@ -44,8 +42,8 @@ class CMapCmdElementProperties : public CMapCommand
 public:
 	CMapCmdElementProperties(CMapManager *mapManager,QString name,CMapElement *element);
 	~CMapCmdElementProperties();
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 	KConfigGroup getOrgProperties(void);
 	KConfigGroup getNewProperties(void);
 

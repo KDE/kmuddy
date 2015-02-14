@@ -18,10 +18,6 @@
 #ifndef CMAPCMDGROUP_H
 #define CMAPCMDGROUP_H
 
-#include <k3command.h>
-#include <ksimpleconfig.h>
-
-#include <qstring.h>
 #include <QList>
 
 #include "cmapcommand.h"
@@ -33,16 +29,16 @@ class CMapCmdGroup : public CMapCommand
 public:
 	CMapCmdGroup(CMapManager *mapManager,QString name);
 	~CMapCmdGroup();
-	virtual void execute();
-	virtual void unexecute();
-	void addCommand(K3Command *command,bool execute = true);
+	virtual void redo();
+	virtual void undo();
+	void addCommand(CMapCommand *command);
 	CMapCmdGroup *getPreviousGroup(void);
 	void setPreviousGroup(CMapCmdGroup *group);
 
 private:
 	CMapManager *m_mapManager;
 	/** A list of commands in the group */
-	QList<K3Command *> commands;
+	QList<CMapCommand *> commands;
 	/** A pointer to the group above this, NULL if it's the main history */
 	CMapCmdGroup *previousGroup;
 };

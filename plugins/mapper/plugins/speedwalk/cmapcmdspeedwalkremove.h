@@ -18,10 +18,8 @@
 #ifndef CMAPCMDSPEEDWALKREMOVE_H
 #define CMAPCMDSPEEDWALKREMOVE_H
 
-#include <q3valuelist.h>
-#include <k3command.h>
-
 #include "../../cmapcommand.h"
+#include <q3valuelist.h>
 
 class CMapRoom;
 class CMapManager;
@@ -37,8 +35,8 @@ public:
 	CMapCmdSpeedwalkRemove(CMapPluginSpeedwalk *plugin);
 	~CMapCmdSpeedwalkRemove();
 
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 	void addRoom(CMapRoom *room);
 

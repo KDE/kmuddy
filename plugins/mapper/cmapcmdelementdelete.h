@@ -38,8 +38,8 @@ class CMapCmdElementDelete : public CMapCommand,CMapElementUtil
 public:
 	CMapCmdElementDelete(CMapManager *mapManager,QString name,bool delOpsite = true);
 	~CMapCmdElementDelete();
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 	void addElement(KMemConfig *newElementProperties);
 	

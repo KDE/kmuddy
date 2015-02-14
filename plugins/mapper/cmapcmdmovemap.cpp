@@ -34,13 +34,13 @@ CMapCmdMoveMap::~CMapCmdMoveMap()
 }
 
 
-void CMapCmdMoveMap::execute()
+void CMapCmdMoveMap::redo()
 {
   CMapZone *zone = m_manager->findZone(m_zoneId);
   moveMap(m_Offset,zone);
 }
 
-void CMapCmdMoveMap::unexecute()
+void CMapCmdMoveMap::undo()
 {
   CMapZone *zone = m_manager->findZone(m_zoneId);
   moveMap(QPoint(0, 0) - m_Offset,zone);

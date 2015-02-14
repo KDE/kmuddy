@@ -74,7 +74,7 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 	kDebug() << "CMapCmdMoveElements::addElement 4";
 }
 
-void CMapCmdMoveElements::execute()
+void CMapCmdMoveElements::redo()
 {
   CMapLevel *level = NULL;	
   for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
@@ -118,7 +118,7 @@ void CMapCmdMoveElements::execute()
     m_mapManager->levelChanged(level);
 }
 
-void CMapCmdMoveElements::unexecute()
+void CMapCmdMoveElements::undo()
 {
   CMapLevel *level = NULL;
   for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )

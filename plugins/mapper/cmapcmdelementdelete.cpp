@@ -41,7 +41,7 @@ CMapCmdElementDelete::~CMapCmdElementDelete()
 	delete properties;
 }
 
-void CMapCmdElementDelete::execute()
+void CMapCmdElementDelete::redo()
 {
 	QStringList groupList = properties->groupList();
 
@@ -60,7 +60,7 @@ void CMapCmdElementDelete::execute()
 	}
 }
 
-void CMapCmdElementDelete::unexecute()
+void CMapCmdElementDelete::undo()
 {
 	bool zone = false;
 	QStringList groupList = properties->groupList();

@@ -20,7 +20,7 @@
 #include <kapplication.h>
 
 
-CMapCommand::CMapCommand(QString name) : K3Command()
+CMapCommand::CMapCommand(QString name) : QUndoCommand()
 
 {
 	m_name = name;

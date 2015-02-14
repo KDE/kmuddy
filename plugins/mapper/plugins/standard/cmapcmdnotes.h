@@ -37,8 +37,8 @@ public:
 	CMapCMDNotes(CMapPluginStandard *plugin,CMapElement *element,QString note);
 	~CMapCMDNotes();
 
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 	
 private:
 	/** The element being used */

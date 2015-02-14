@@ -18,7 +18,6 @@
 #ifndef CMAPCMDSPEEDWALKADD_H
 #define CMAPCMDSPEEDWALKADD_H
 
-#include <q3valuelist.h>
 #include "../../cmapcommand.h"
 
 class CMapRoom;
@@ -35,8 +34,8 @@ public:
 	CMapCmdSpeedwalkAdd(CMapPluginSpeedwalk *plugin,CMapRoom *room);
 	~CMapCmdSpeedwalkAdd();
 
-	virtual void execute();
-	virtual void unexecute();
+	virtual void redo();
+	virtual void undo();
 
 private:
 

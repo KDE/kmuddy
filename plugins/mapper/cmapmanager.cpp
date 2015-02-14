@@ -31,7 +31,8 @@
 #include <kcomponentdata.h>
 #include <kxmlguifactory.h>
 
-#include <q3ptrqueue.h>
+#include <QQueue>
+#include <QUndoStack>
 #include <qtimer.h>
 #include <q3valuelist.h>
 #include <QActionGroup>
@@ -129,10 +130,9 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
   createGUI (KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
 
   /** Create undo/redo history */
-  commandHistory = new K3CommandHistory(actionCollection(),true);
+  commandHistory = new QUndoStack();
   //FIXME_jp: Needs to be configurable
   commandHistory->setUndoLimit(30);
-  commandHistory->setRedoLimit(30);
   commandHistory->clear();
   historyGroup = NULL;
   m_commandsActive = true;
@@ -1388,7 +1388,7 @@ void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
 void CMapManager::exportMap(const KUrl& url,CMapFileFilterBase *filter)
 {  
   filter->saveData(url);
-  commandHistory->documentSaved ();
+  commandHistory->setClean();
 }
 
 /** Used to inform to change the state of the navigation tools */
@@ -1816,22 +1816,23 @@ void CMapManager::setUndoActive(bool active)
 }
 
 /** Used to add a command to the command history */
-void CMapManager::addCommand(K3Command *command,bool execute)
+void CMapManager::addCommand(CMapCommand *command,bool execute)
 {
   if (m_commandsActive)
   {
     if (historyGroup)
     {
-      historyGroup->addCommand(command,execute);
+      // If there is a history group, it will -not- execute anything. That will happen once the group gets closed.
+      historyGroup->addCommand(command);
     }
     else
     {
-      commandHistory->addCommand(command,execute);
+      commandHistory->push(command);
     }
   }
   else
   {
-    command->execute();
+    command->redo();
   }
 }
 
@@ -1842,12 +1843,12 @@ void CMapManager::openCommandGroup(QString name)
   historyGroup = group;
 }
 
-void CMapManager::closeCommandGroup(void)
+void CMapManager::closeCommandGroup()
 {
   CMapCmdGroup *currentGroup = historyGroup;
   CMapCmdGroup *oldGroup =historyGroup->getPreviousGroup();
   historyGroup = oldGroup;
-  addCommand(currentGroup,false);
+  addCommand(currentGroup);
 }
 
 /** move the player relative to the current position of the player
@@ -2026,7 +2027,7 @@ void CMapManager::movePlayerBy(directionTyp dir,bool create,QString specialCmd)
 /** Used to walk the player in the mud to a given room */
 void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 {
-  Q3PtrQueue<CMapRoom> roomsToVisit;
+  QQueue<CMapRoom *> roomsToVisit;
   CMapRoom *destRoom;
   CMapRoom *srcRoom;
   CMapPath *path;
@@ -2092,9 +2093,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   // Check to see if we were unable to find any paths
   if (!bFound)
   {
-    roomsToVisit.clear();
-    KMessageBox::information (NULL,i18n("The automapper was unable to find a path to requested room"),i18n("Kmud Mapper"));
-
+    KMessageBox::information (NULL,i18n("The automapper was unable to find a path to requested room"),i18n("KMuddy Mapper"));
     return;
   }
 
@@ -2145,9 +2144,6 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 
   // Start walking path
   slotWalkPlayerAlongPath();
-
-  // Tidy up
-  roomsToVisit.clear();
 }
 
 void CMapManager::slotAbortSpeedwalk(void)
