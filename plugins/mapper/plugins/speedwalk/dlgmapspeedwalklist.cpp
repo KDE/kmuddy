@@ -40,11 +40,11 @@
 
 DlgMapSpeedwalkList::DlgMapSpeedwalkList(CMapPluginSpeedwalk *plugin,QWidget *parent, const char *name ) : QWidget(parent,name)
 {
+  setupUi(this);
 	m_manager = plugin->getManager();
 	m_plugin = plugin;
 
 	initContexMenus();
-
 	m_cmdDelete->setPixmap(UserIcon("kmud_delete.png"));
 	m_cmdProperties->setPixmap(UserIcon("kmud_properties.png"));
 	m_cmdSpeedwalk->setPixmap(UserIcon("kmud_follow.png"));

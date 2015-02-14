@@ -162,14 +162,6 @@ public:
 	  * @param textList The list to add the text to
 	  */
 	static void stringToList(QString str,QStringList *textList);
-	/**
-	 * This method is used to calcualte the scale that the text should be scale by
-	 * @param text A pointer to the text list
-	 * @param requiredSize The size of the text
-	 * @param xscale Used to return the x axis scale value
-	 * @param yscale Used to return the y axis scale value
-	 */
-	static void getScale(QFont font,QStringList *text,QSize requiredSize,double *xscale,double *yscale);
 	/** This is used to get a unique ID for the text */
 	unsigned int getTextID(void)                                   { return m_ID; }
 	/** This is used to set the ID of the text */
@@ -203,10 +195,6 @@ private:
 	void setTextSize(void);
 
 private:
-	/** Used to store the last x scale value that was used when painting */
-	double m_xscale;
-	/** Used to store the last y scale value that was used when painting */
-	double m_yscale;
 	QString m_orgText;
 	QColor m_col;
 	QStringList m_text;

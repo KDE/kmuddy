@@ -38,8 +38,6 @@ CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint po
   setColor(col);
 
   m_linkElement = NULL;
-  m_xscale = 0;
-  m_yscale = 0;
 
   getZone()->m_text_id_count=getZone()->m_text_id_count+1;
   m_ID = getZone()->m_text_id_count;	
@@ -162,7 +160,6 @@ int CMapText::getActualToFontSize(QSize size,QFont font,QStringList *text)
   */
 void CMapText::paint(QPainter *p,CMapZone *zone)
 {
-	getScale(getFont(),&m_text,getSize(),&m_xscale,&m_yscale);
 	CMapElement::paint(p,zone);
 
 	if (getEditMode())
@@ -170,7 +167,6 @@ void CMapText::paint(QPainter *p,CMapZone *zone)
 		p->save();
 
 		p->translate(getX(),getY());
-		p->scale(m_xscale,m_yscale);
 
 		QFontMetrics fm(m_font);
 
@@ -206,17 +202,12 @@ void CMapText::paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *)
   * @param size The size of the text */
 void CMapText::paintText(QPainter *p,QColor col,QPoint pos,QFont font,QStringList *text,QSize size)
 {
-	double xscale;
-	double yscale;
 	QFont tmpFont = font;
 	int fontSize = getActualToFontSize(size,font,text);
-
 	tmpFont.setPointSize(fontSize);
 
 	p->save();
-	getScale(tmpFont,text,size,&xscale,&yscale);
 	p->translate(pos.x(),pos.y());
-	p->scale(xscale,yscale);
 	paintText(p,col,QPoint(0,0),tmpFont,text);
 	p->restore();
 }
@@ -259,40 +250,13 @@ void CMapText::setCursor(QPoint pos)
 	setActualCursorPosition();
 }
 
-/**
- * This method is used to calcualte the scale that the text should be scale by
- * @param text A pointer to the text list
- * @param requiredSize The size of the text
- * @param xscale Used to return the x axis scale value
- * @param yscale Used to return the y axis scale value
- */
-void CMapText::getScale(QFont font,QStringList *text,QSize requiredSize,double *xscale,double *yscale)
-{
-	QFontMetrics fm(font);
-	int tmpWidth = 0;
-	for (QStringList::iterator it = text->begin(); it != text->end(); ++it)
-	{
-		if (fm.width(*it) > tmpWidth)
-			tmpWidth = fm.width(*it);
-	}
-	int tmpHeight = fm.height()*text->count();
-
-	*xscale = ((double)requiredSize.width())/((double)tmpWidth);
-	*yscale = ((double)requiredSize.height())/((double)tmpHeight);
-}
-
 /** This is used to conver a offset from the element orgin into a cursor position
   * @param offset The offset of the curosr */
 QPoint CMapText::convertOffsetToCursor(QPoint offset)
 {
 	QFontMetrics fm(m_font);
 
-	double m_xscale;
-	double m_yscale;
-
-	getScale(getFont(),&m_text,getSize(),&m_xscale,&m_yscale);
-
-	int y = (int)(offset.y()  / (fm.height() * m_yscale));
+	int y = (int)(offset.y()  / fm.height());
 	int x = 0;
 
 	QString s = m_text.at(y);
@@ -304,7 +268,7 @@ QPoint CMapText::convertOffsetToCursor(QPoint offset)
 		for (int pos = 0 ; pos <=(int)s.length() ; pos ++)
 		{
 			int charWidth =fm.width(s.left(pos));
-			if (charWidth * m_xscale >offset.x())
+			if (charWidth>offset.x())
 			{
 				x = pos -1;
 				found = true;
@@ -314,7 +278,7 @@ QPoint CMapText::convertOffsetToCursor(QPoint offset)
 
 		if (!found)
 		{
-			x = (int)((double)fm.width(s) * m_xscale);
+			x = (int)fm.width(s);
 		}
 	}
 
@@ -341,28 +305,7 @@ void CMapText::editModeUnsetEvent(void)
 		if (QString(m_text.first()).trimmed().length()==0 && m_text.count() == 1)
 			emit deleteElement((CMapElement *)this,true);
 
-	// If the text is bigger than the curent size the make the bound box bigger
-	QFontMetrics fm(m_font);
-	int width = 0;
-	int height = 0;
-
-	for (QStringList::iterator it = m_text.begin(); it != m_text.end(); ++it)
-	{
-		if (fm.width(*it)>width)
-			width = fm.width(*it);
-
-		height+=fm.height();
-	}
-
-	QRect rect = getRect();
-	if (rect.width()<width)
-		rect.setWidth(width);
-	if (rect.height()<height)
-		rect.setHeight(height);
-	setRect(rect);
-
-	// Update cursor position
-	setActualCursorPosition();
+        setTextSize();
 
 	// Update any elements linked with this one (zones/rooms with labels)
 	updateLinkElements();
@@ -378,7 +321,6 @@ void CMapText::editModeSetEvent(void)
 void CMapText::insertString(QString s)
 {
 	QFontMetrics fm(m_font);
-	//int oldHeight = (int)((fm.height() * text.count()) * yscale);
 	QString str = m_text.at(m_cursorPos.y()-1);
 	QString newStr;
 
@@ -394,17 +336,7 @@ void CMapText::insertString(QString s)
 	m_text.removeAt(m_cursorPos.y()-1);
 	m_text.insert(m_cursorPos.y()-1,newStr);
 	m_cursorPos.setX(m_cursorPos.x()+s.length());
-	setActualCursorPosition();
-
-	int newWidth = 	(int)((fm.width(str) * m_xscale) + (fm.width(s) * m_xscale));
-	int newHeight = (int)((fm.height() * m_text.count()) * m_yscale);
-	// FIXME_jp: Calc new height too
-
-	if (newWidth>getWidth())
-		setWidth(newWidth);
-
-	if (newHeight>getHeight())
-		setHeight(newHeight);
+        setTextSize();
 }
 
 /** This will delete a character behind the cursor */
