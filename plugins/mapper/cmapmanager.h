@@ -77,7 +77,7 @@ class KMuddyMapper;
 class KVBox;
 class KComponentData;
 class QActionGroup;
-class QUndoStack;
+class KUndoStack;
 
 /**This is used to make the mapper perform different tasks
   *@author KMud Development Team
@@ -423,7 +423,7 @@ private:
   /** A list of all loaded tools */
   Q3PtrList<CMapToolBase> toolList;
   /** The undo/redo history */
-  QUndoStack *commandHistory;
+  KUndoStack *commandHistory;
   /** Points the the command history currently being used */
   CMapCmdGroup *historyGroup;
   /** Used to store the amount of steps taken in the speedwalk */

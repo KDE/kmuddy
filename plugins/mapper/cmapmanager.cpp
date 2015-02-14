@@ -30,9 +30,9 @@
 #include <kpagedialog.h>
 #include <kcomponentdata.h>
 #include <kxmlguifactory.h>
+#include <kundostack.h>
 
 #include <QQueue>
-#include <QUndoStack>
 #include <qtimer.h>
 #include <q3valuelist.h>
 #include <QActionGroup>
@@ -102,6 +102,14 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
 
   m_elementUtils = new CMapElementUtil(this);
 
+  /** Create undo/redo history */
+  commandHistory = new KUndoStack();
+  //FIXME_jp: Needs to be configurable
+  commandHistory->setUndoLimit(30);
+  commandHistory->clear();
+  historyGroup = NULL;
+  m_commandsActive = true;
+
   initMenus();
   initPlugins();
   initFileFilters();
@@ -128,14 +136,6 @@ CMapManager::CMapManager (KMuddyMapper *mapper) :
 
   // set up the menus
   createGUI (KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
-
-  /** Create undo/redo history */
-  commandHistory = new QUndoStack();
-  //FIXME_jp: Needs to be configurable
-  commandHistory->setUndoLimit(30);
-  commandHistory->clear();
-  historyGroup = NULL;
-  m_commandsActive = true;
 
   m_zoneCount = 0;
   m_levelCount = 0;
@@ -288,6 +288,10 @@ void CMapManager::initMenus()
   m_fileInfo->setText (i18n("Information"));
   connect  (m_fileInfo, SIGNAL (triggered()), this, SLOT (slotFileInfo()));
   actionCollection()->addAction ("fileInfo", m_fileInfo);
+
+  // Edit menu
+  commandHistory->createUndoAction(actionCollection(), "editUndo");
+  commandHistory->createRedoAction(actionCollection(), "editRedo");
 
   // Tools menu
   m_toolsCreate = new KToggleAction (this);

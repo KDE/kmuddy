@@ -10,8 +10,8 @@
 			<Action name = "fileInfo"/>
 		</Menu>
 		<Menu name = "Edit"><Text>&amp;Edit</Text>
-			<Action name = "edit_undo"/>
-			<Action name = "edit_redo"/>
+			<Action name = "editUndo"/>
+			<Action name = "editRedo"/>
 			<Separator/>
 			<Action name = "editCut" />		
 			<Action name = "editCopy"/>
@@ -52,8 +52,8 @@
 		<Action name = "toolsCreate"/>
 		<Action name = "toolsGrid"/>
 		<Separator/>
-		<Action name = "edit_undo"/>
-		<Action name = "edit_redo"/>
+		<Action name = "editUndo"/>
+		<Action name = "editRedo"/>
 	</ToolBar>
 	<ToolBar fullWidth="false" name="navigation"><Text>Navigation</Text>
 		<Action name = "toolsLevelUp"/>
