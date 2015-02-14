@@ -226,7 +226,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
       bool found = false;
 
       // A rectangle selection operation was performed
-      if (!mapManager->getActiveView()->getCtrlPressed())
+      if (!(QApplication::keyboardModifiers() & Qt::ControlModifier))
       {				
         //FIXME_jp: unselectElements should return a bool like in kmud1
         mapManager->unselectElements(currentLevel);
@@ -265,14 +265,8 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
       if (element->mouseInElement(mousePos,currentLevel->getZone()))
       {
         found = true;
-        if (!mapManager->getActiveView()->getCtrlPressed() )
-        {
-          element->setSelected(!element->getSelected());
-        }
-        else
-        {
-          element->setSelected(true);
-        }
+        bool sel = (QApplication::keyboardModifiers() & Qt::ControlModifier) ? true : (!element->getSelected());
+        element->setSelected(sel);
       }
 
     }

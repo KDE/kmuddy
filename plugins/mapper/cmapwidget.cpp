@@ -402,4 +402,16 @@ void CMapWidget::mouseMoveEvent(QMouseEvent *e)
   	}
 }
 
+/** Called when a key is pressed */
+void CMapWidget::keyPressEvent(QKeyEvent *e)
+{
+  mapManager->getCurrentTool()->keyPressEvent(e);
+}
+
+/** Called when a key is released */
+void CMapWidget::keyReleaseEvent(QKeyEvent *e)
+{
+  mapManager->getCurrentTool()->keyReleaseEvent(e);
+}
+
 

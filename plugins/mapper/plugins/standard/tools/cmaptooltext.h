@@ -42,7 +42,7 @@ public:
 	/** Called when the tool recives a mouse release event */
 	virtual void mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel);
 	/** This is called when a key is pressed */
-	virtual void keyReleaseEvent(QKeyEvent *e);
+	virtual void keyPressEvent(QKeyEvent *e);
 
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);

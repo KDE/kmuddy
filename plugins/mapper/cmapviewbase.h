@@ -92,10 +92,6 @@ public:
     /** Used to find out if a level is visible in the view */
 	virtual bool isLevelVisible(CMapLevel *level);
 
-	/** Used to find out if the ctrl key is being held down.
-      * This is used by the select tool.                    */
-	virtual bool getCtrlPressed(void)               { return false; }
-
 	/** This is used ensure a location is visiable for views that scroll */
 	virtual void ensureVisible(QPoint)              { }
 

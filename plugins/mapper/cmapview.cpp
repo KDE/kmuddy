@@ -75,7 +75,6 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
 
   //FIXME_jp : Add proper resize instead of test size
   changed();
-  bCtrlPressed = false;
 }
 
 CMapView::~CMapView()
@@ -267,12 +266,6 @@ int CMapView::getWidth(void)
   return scroller->viewport()->width();
 }
 
-/** Used to find out if ctrl is being pressed */
-bool CMapView::getCtrlPressed(void)
-{
-  return bCtrlPressed;
-}
-
 int CMapView::getHeight(void)
 {
   if (mapWidget->height() > scroller->viewport()->height())
@@ -291,22 +284,6 @@ void CMapView::setCursor ( const QCursor & cursor)
 {
   if (mapWidget)
     mapWidget->setCursor(cursor);
-}
-
-/** Called when a key is pressed */
-void CMapView::keyPressEvent(QKeyEvent *e)
-{
-  if (e->key() == Qt::Key_Control) bCtrlPressed = true;
-
-  mapManager->getCurrentTool()->keyPressEvent(e);
-}
-
-/** Called when a key is released */
-void CMapView::keyReleaseEvent(QKeyEvent *e)
-{
-  if (e->key() == Qt::Key_Control) bCtrlPressed = false;
-
-  mapManager->getCurrentTool()->keyReleaseEvent(e);
 }
 
 void CMapView::resizeEvent (QResizeEvent *)

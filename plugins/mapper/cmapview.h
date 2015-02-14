@@ -85,8 +85,6 @@ public:
 	/** Used to set the view to active */
 	virtual void setActive(bool active);
 
-	/** Used to find out if ctrl is being pressed */
-	virtual bool getCtrlPressed(void);
 	/** This is used ensure a location is visiable for views that scroll */
 	virtual void ensureVisible(QPoint pos);
 
@@ -98,15 +96,9 @@ protected:
 	virtual int getWidth(void);
 	/** Used to gt the height of the widget */
 	virtual int getHeight(void);
-	/** Called when a key is pressed */
-	virtual void keyPressEvent(QKeyEvent *e);
-	/** Called when a key is released */
-	virtual void keyReleaseEvent(QKeyEvent *e);
         virtual void resizeEvent (QResizeEvent *);
 
 private:
-	/** This is true if the ctrl key is being pressed */
-	bool bCtrlPressed;
 	HVBoxLayout *layout;
 	/** The active view indicatior */
 	QPixmap activeLed;

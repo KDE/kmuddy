@@ -68,6 +68,10 @@ protected:
 	void mousePressEvent(QMouseEvent *e);
 	/** Called when the mouse is being moved */
 	void mouseMoveEvent(QMouseEvent *e);
+	/** Called when a key is pressed */
+	virtual void keyPressEvent(QKeyEvent *e);
+	/** Called when a key is released */
+	virtual void keyReleaseEvent(QKeyEvent *e);
 
 	/** Used to display the text context menu */
 	void showTextContextMenu(void);

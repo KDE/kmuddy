@@ -69,7 +69,7 @@ void CMapToolText::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 }
 
 /** This is called when a key is pressed */
-void CMapToolText::keyReleaseEvent(QKeyEvent *e)
+void CMapToolText::keyPressEvent(QKeyEvent *e)
 {
 	CMapElement *element = mapManager->getEditElement();
 
@@ -128,6 +128,7 @@ void CMapToolText::keyReleaseEvent(QKeyEvent *e)
 		mapManager->changedElement(text);
 
 		mapManager->getActiveView()->ensureVisible(text->getCursorCords());
+                e->accept();
 	}
 }
 
