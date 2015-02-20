@@ -99,8 +99,8 @@ void dlgWindows::createDialog()
 
 void dlgWindows::wshow()
 {
+  if (!box->count()) return;
   QString name;
-  
   name = box->currentItem()->text();
   
   if(!winlist->exists(name))
@@ -114,7 +114,7 @@ void dlgWindows::wshow()
 
 void dlgWindows::whide()
 {
-  
+  if (!box->count()) return;
   QString name;
   
   name = box->currentItem()->text();
@@ -130,6 +130,7 @@ void dlgWindows::whide()
 
 void dlgWindows::remove()
 {
+  if (!box->count()) return;
   QString name;
   
   name = box->currentItem()->text();

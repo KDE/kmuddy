@@ -204,6 +204,9 @@ void cInputLine::handleEnter (const QString &text)
 
 void cInputLine::keyPressEvent (QKeyEvent *e)
 {
+  if ((e->key() == Qt::Key_Return) || (e->key() == Qt::Key_Enter))
+    returnPressed (text());
+
   //looks like auto-completion widget receives this event before I do, so
   //I don't have to care about possible conflicts...
   if (arrowshistory)
