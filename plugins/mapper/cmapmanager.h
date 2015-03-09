@@ -351,7 +351,7 @@ private slots:
   void slotRoomProperties(void);
   /** Used to make  the path under the pointer one way */
   void slotPathOneWay(void);
-  /** Used to make the the path under the pointer two way */
+  /** Used to make the path under the pointer two way */
   void slotPathTwoWay(void);
   /** Used to add a bend to the path under the pointer */
   void slotPathAddBend(void);
@@ -424,7 +424,7 @@ private:
   Q3PtrList<CMapToolBase> toolList;
   /** The undo/redo history */
   KUndoStack *commandHistory;
-  /** Points the the command history currently being used */
+  /** Points the command history currently being used */
   CMapCmdGroup *historyGroup;
   /** Used to store the amount of steps taken in the speedwalk */
   int speedwalkProgress;

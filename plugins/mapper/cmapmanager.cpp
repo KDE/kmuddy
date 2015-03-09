@@ -2596,7 +2596,7 @@ void CMapManager::slotPathOneWay(void)
   makePathOneWay((CMapPath *)m_selectedElement);
 }
 
-/** Used to make the the path under the pointer two way */
+/** Used to make the path under the pointer two way */
 void CMapManager::slotPathTwoWay(void)
 {
   makePathTwoWay((CMapPath *)m_selectedElement);
