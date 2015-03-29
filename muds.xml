@@ -4819,7 +4819,7 @@
     <port>23</port>
     <ip>64.81.226.10</ip>
     <www>http://www.legendmud.org/</www>
-    <desc>For as long as mankind has been forming even the simplest of civilizations, powerful legends and myths have been built to help us live with the the unexplainable.</desc>
+    <desc>For as long as mankind has been forming even the simplest of civilizations, powerful legends and myths have been built to help us live with the unexplainable.</desc>
     <desc>The ancient Greeks constructed a pantheon of powerful gods and goddesses. The people of feudal Japan saw demons and magic at work in the world around them. Even in Victorian London common folk spoke in hushed tones about the possibility of vampires and other supernatural beings living in the crowded streets beside them.</desc>
     <desc>Imagine an entire world created to breathe life into dozens upon dozens of these amazing legends and myths from our past.  Now imagine walking through time and interacting with each one of them.</desc>
     <desc>LegendMUD is now well into its 17th year and continues to offer a rich landscape and a completely original environment. LegendMUD hosts over 60 individual but seamlessly interconnected areas within three eras of time, with areas ranging from Feudal Japan, Imperial Rome, Ancient Ireland, Anasazi America, 19th century Paris, Pirate Tortuga, and many more.</desc>
@@ -12317,7 +12317,7 @@
     <ip>86.26.9.7</ip>
     <www>http://netruns.org</www>
     <desc>The year is 2030. Nanotechnology has improved our society in many ways. Nanobots are active in our bodies to fight diseases and enable us to wirelessly interface with devices such as cars, planes, robots and computer networks.</desc>
-    <desc>When your nanobots log you onto the the net, you leave your body behind and your mind enters cyberspace, a visual representations of computer systems and data. You can navigate this space with your computer persona, an avatar in this world. Your programs and all other programs in this space look like real objects and people, the design only limited by the creator’s creativity.</desc>
+    <desc>When your nanobots log you onto the net, you leave your body behind and your mind enters cyberspace, a visual representations of computer systems and data. You can navigate this space with your computer persona, an avatar in this world. Your programs and all other programs in this space look like real objects and people, the design only limited by the creator’s creativity.</desc>
     <desc>Everything in Cyberspace is created by the players and their organizations. Every player can create their own organization or join an existing one. Organizations offer a wage and the ability to team work to take on bigger targets.</desc>
     <desc>Join one of these organizations, create your own computer systems and populate it with offensive and defensive programs to earn money, information and to protect it from other hackers.</desc>
     <desc>If you prefer to support your organization with custom made offensive and defensive programs, you can also just hang out in your organization’s systems and code modules for them.</desc>
@@ -12991,7 +12991,7 @@
     <name>Ten Nations</name>
     <codebase>[Dikumud] mod</codebase>
     <www>http://www.tennations.mudhosting.net</www>
-    <desc>After years of rest, Ten Nations is back up and running ! we are still doing some building and coding changes. we are a 50 level Diku based mud based on Robert Jordans Wheel of Time books. Following the Breaking of the World ten nations emerged as roughly equal powers in the Westlands. The threat of darkfriends and the fear that shadowspawn could once more pour forth from the The Blight led to a general feeling that an overarching organisation was needed. The memories of the utopian Second Age were still fresh, but none would relinquish sovereignty. In 209 AB, ten nations came togeather to sign a mutual defence pact that would become the Compact of the Ten Nations. We have an auto Questor, Guilds and friendly Admins. We are still updating the Areas and building more, come by and visit us !</desc>
+    <desc>After years of rest, Ten Nations is back up and running ! we are still doing some building and coding changes. we are a 50 level Diku based mud based on Robert Jordans Wheel of Time books. Following the Breaking of the World ten nations emerged as roughly equal powers in the Westlands. The threat of darkfriends and the fear that shadowspawn could once more pour forth from The Blight led to a general feeling that an overarching organisation was needed. The memories of the utopian Second Age were still fresh, but none would relinquish sovereignty. In 209 AB, ten nations came togeather to sign a mutual defence pact that would become the Compact of the Ten Nations. We have an auto Questor, Guilds and friendly Admins. We are still updating the Areas and building more, come by and visit us !</desc>
   </mud>
   <mud>
     <name>Erra Pater: The Burning Post</name>
@@ -14516,7 +14516,7 @@
     <host>grotto.hopto.org</host>
     <port>4100</port>
     <www>http://grottomud.narakka.org</www>
-    <desc>Welcome The the Hidden Grotto Reborn! We are back after a 4 year hiatus with a new direction for the future. A world were non-playing RP chatters and gamers co-exist in a well written , well balanced and challenging enviornment. Role Play is not only encouraged but enforced. Clans , Homes and Guild are player ownable. 12 races 6 Light 6 Dark and several classes.</desc>
+    <desc>Welcome The Hidden Grotto Reborn! We are back after a 4 year hiatus with a new direction for the future. A world were non-playing RP chatters and gamers co-exist in a well written , well balanced and challenging enviornment. Role Play is not only encouraged but enforced. Clans , Homes and Guild are player ownable. 12 races 6 Light 6 Dark and several classes.</desc>
     <desc>For the gamers we offer challenging areas in all levels great eq, loads of spells and skills, 100 levels with the possibility of 200 with remort. For chatters we offer an amazingly realistic virtual world to fulfill your Role Playing desires, who knows you might even learn to play an incredibly social and fun game. We are adult oriented So players 18 and up. Here you will find an unusual mix of sword and sorcery fantasy with some Gorean theme added in nicely.</desc>
     <desc>The Hidden Grotto is Newbie friendly for gamers as well as non-gamers, helpful Immortals and plentiful help files. Soon we will be implementing newbie guides,MPS code and many new additions and features. Come give us try you won't be disappointed!</desc>
   </mud>
@@ -16081,7 +16081,7 @@
     <desc>Focusing on the planets orbiting the star Katarra, everyday life is rarely simple.</desc>
     <desc>Explore the jungle-laden planet of Viridis and come face-to-face with its natives, the Gahreia and the Aellirin.</desc>
     <desc>If the fires that tempt you, head to Coniecto and meet the Oryne and the Wahfertin.</desc>
-    <desc>The icy planet of Kaldur offers the the Yeslehc and the Hydraumi for company.</desc>
+    <desc>The icy planet of Kaldur offers the Yeslehc and the Hydraumi for company.</desc>
     <desc>Provectus harbours technology unmatched, courtesy of the Prescient and Covozak.</desc>
     <desc>Atran is shrouded in darkness, inhabited by the virus-ridden Dirth and the Havlin.</desc>
     <desc>Bellator lacks the means to sustain life on the surface, hence the underground-dwelling Kernai and Krothen.</desc>
