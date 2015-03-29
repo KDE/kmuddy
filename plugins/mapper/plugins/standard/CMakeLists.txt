@@ -13,7 +13,6 @@ set(kmuddymapper_standard_PART_SRCS
    tools/cmaptoolselect.cpp
    tools/cmaptoolroom.cpp
    tools/cmaptoolpath.cpp
-   tools/cmaptoolzone.cpp
    tools/cmaptooltext.cpp
    tools/cmaptooleraser.cpp
    propertyPanes/cmapnotespane.cpp )
@@ -29,5 +28,5 @@ install(TARGETS kmuddymapper_standard DESTINATION ${PLUGIN_INSTALL_DIR} )
 
 install( FILES kmuddymapper_standard.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install( FILES kmuddymapper_standard.rc DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
-install( FILES tools/kmud_select.png tools/kmud_room.png tools/kmud_text.png tools/kmud_zone.png tools/kmud_path.png tools/kmud_eraser.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
+install( FILES tools/kmud_select.png tools/kmud_room.png tools/kmud_text.png tools/kmud_path.png tools/kmud_eraser.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
 

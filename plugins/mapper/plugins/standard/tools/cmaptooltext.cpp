@@ -51,21 +51,15 @@ CMapToolText::~CMapToolText()
 /** Called when the tool recives a mouse release event */
 void CMapToolText::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 {
-  CMapText *text = 0;
-  QList<CMapElement *> lst = currentLevel->elementsUnderMouse(mousePos);
-  foreach (CMapElement *element, lst)
-  {
-    if (element->getElementType() != TEXT) continue;
-    text = (CMapText *) element;
-    text->setCursor(text->convertPosToCursor(mousePos));
-    break;
-  }
-
+  CMapText *text = (CMapText *) currentLevel->findElementAt(mousePos, TEXT);
   if (!text) {
-    text = mapManager->createText(mousePos,currentLevel);
-    text->setCursor(QPoint(0,1));
+    mapManager->createText(mousePos,currentLevel);
+    text = (CMapText *) currentLevel->findElementAt(mousePos, TEXT);
   }
-  mapManager->setEditElement(text);
+  if (text) {
+    text->setCursor(text->convertPosToCursor(mousePos));
+    mapManager->setEditElement(text);
+  }
 }
 
 /** This is called when a key is pressed */

@@ -22,10 +22,9 @@
 #include "cmappath.h"
 #include "cmapmanager.h"
 
-CMapCmdMoveMap::CMapCmdMoveMap(CMapManager *manager,QPoint offset,CMapZone *zone,QString name) : CMapCommand(name)
+CMapCmdMoveMap::CMapCmdMoveMap(CMapManager *manager,QPoint offset,QString name) : CMapCommand(name)
 {
   m_Offset = offset;
-  m_zoneId = zone->getZoneID();
   m_manager = manager;
 }
 
@@ -36,20 +35,18 @@ CMapCmdMoveMap::~CMapCmdMoveMap()
 
 void CMapCmdMoveMap::redo()
 {
-  CMapZone *zone = m_manager->findZone(m_zoneId);
-  moveMap(m_Offset,zone);
+  moveMap(m_Offset);
 }
 
 void CMapCmdMoveMap::undo()
 {
-  CMapZone *zone = m_manager->findZone(m_zoneId);
-  moveMap(QPoint(0, 0) - m_Offset,zone);
+  moveMap(QPoint(0, 0) - m_Offset);
 }
 
 /** This method is used to move the elements in a zone by the given vector */
-void CMapCmdMoveMap::moveMap(QPoint inc,CMapZone *zone)
+void CMapCmdMoveMap::moveMap(QPoint inc)
 {
-  foreach (CMapLevel *level, *zone->getLevels())
+  foreach (CMapLevel *level, *m_manager->getZone()->getLevels())
   {
     foreach (CMapElement *el, level->getAllElements())
     {

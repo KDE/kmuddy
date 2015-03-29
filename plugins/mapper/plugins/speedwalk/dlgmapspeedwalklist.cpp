@@ -98,9 +98,6 @@ void DlgMapSpeedwalkList::initContexMenus(void)
 	m_zoneRemove = new KAction (this);
 	m_zoneRemove->setText (i18n("&Remove from list"));
 	connect  (m_zoneRemove, SIGNAL (triggered()), this, SLOT(slotZoneRemove()));
-	m_zoneProperties = new KAction (this);
-	m_zoneProperties->setText (i18n("&Properties"));
-	connect  (m_zoneProperties, SIGNAL (triggered()), this, SLOT(slotZoneProperties()));
 
 	// Setup the menus
         QAction *sep1 = new QAction (this); sep1->setSeparator (true);
@@ -127,7 +124,6 @@ void DlgMapSpeedwalkList::initContexMenus(void)
 	m_zone_menu = new KActionMenu(KIcon("zone_menu"),i18n("&Zone"),this);
 	m_zone_menu->addAction(m_zoneRemove);
 	m_zone_menu->addAction(sep4);
-	m_zone_menu->addAction(m_zoneProperties);
 }
 
 void DlgMapSpeedwalkList::updateSpeedwalkList(CMapRoom *updatedRoom)
@@ -478,12 +474,6 @@ void DlgMapSpeedwalkList::slotProperties()
 			m_manager->propertiesRoom((CMapRoom *)elm);
 			updateSpeedwalkList((CMapRoom *)elm);
 		}
-
-		if (elm->getElementType()==ZONE)
-		{
-			m_manager->propertiesZone((CMapZone *)elm);
-			updateSpeedwalkList();
-		}
 	}
 }
 
@@ -637,18 +627,6 @@ void DlgMapSpeedwalkList::slotZoneRemove()
 		if (m_selectedItem->getElement()->getElementType()==ZONE)
 		{
 			deleteZone(m_selectedItem);
-		}
-	}
-}
-
-void DlgMapSpeedwalkList::slotZoneProperties()
-{
-	if (m_selectedItem->getElement()!=NULL)
-	{
-		if (m_selectedItem->getElement()->getElementType()==ZONE)
-		{
-			CMapZone *zone =(CMapZone *)(m_selectedItem->getElement());
-			m_manager->propertiesZone(zone);
 		}
 	}
 }

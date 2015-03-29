@@ -122,13 +122,6 @@ void CMapClipboard::slotCopy()
 
       switch (element->getElementType())
       {
-        case ZONE : {
-                      CMapZone *zone = (CMapZone *)element;
-                      copyZone(&group,zone,clipGroup);
-                      clipGroup.writeEntry("LabelPos",(int)CMapZone::HIDE);
-                    }
-
-                    break;
         case ROOM : {
                       CMapRoom *room = (CMapRoom *)element;
                       room->saveProperties(clipGroup);
@@ -149,19 +142,16 @@ void CMapClipboard::slotCopy()
     // Copy all the path elements into the clipboard
     int pathGroup = 0;
 
-    foreach (CMapZone *zone, m_mapManager->getMapData()->getAllZones())
+    foreach (CMapLevel *level, *m_mapManager->getZone()->getLevels())
     {
-      foreach (CMapLevel *level, *zone->getLevels())
+      foreach (CMapRoom *room, *level->getRoomList())
       {
-        foreach (CMapRoom *room, *level->getRoomList())
+        foreach (CMapPath *path, *room->getPathList())
         {
-          foreach (CMapPath *path, *room->getPathList())
-          {
-            if ((path->getSrcRoom()->getSelected() || path->getSrcRoom()->getZone()->getSelected()) &&
-                (path->getDestRoom()->getSelected() || path->getDestRoom()->getZone()->getSelected()))
-            {	
-              copyPath (&pathGroup,path);
-            }
+          if ((path->getSrcRoom()->getSelected() || path->getSrcRoom()->getZone()->getSelected()) &&
+              (path->getDestRoom()->getSelected() || path->getDestRoom()->getZone()->getSelected()))
+          {	
+            copyPath (&pathGroup,path);
           }
         }
       }
@@ -221,57 +211,6 @@ void CMapClipboard::copyPath(int *pathGroup,CMapPath *path)
 	pGroup.writeEntry("DestZone",path->getDestRoom()->getZone()->getZoneID());
 }
 
-/** This method is used to copy a zone */
-void CMapClipboard::copyZone(int *group,CMapZone *orgZone, KConfigGroup configGroup)
-{
-	// Save the zone
-	orgZone->saveProperties(configGroup);
-
-	// Copy the elements of the zone
-	foreach (CMapLevel *level, *orgZone->getLevels())
-	{
-		// Copy any zones in the zone
-		foreach (CMapZone *zone, *level->getZoneList())
-		{
-			(*group)++;
-			QString grp;
-			grp.sprintf("%d",*group);
-			copyZone(group,zone,m_clipboard->group(grp));
-			m_clipboard->group(grp).writeEntry("LevelNum",zone->getLevel()->getNumber());
-			m_clipboard->group(grp).writeEntry("LabelPos",(int)CMapZone::HIDE);
-		}
-
-		// Copy any rooms in the zone
-		foreach (CMapRoom *room, *level->getRoomList())
-		{
-			(*group)++;
-			QString grp;
-			grp.sprintf("%d",*group);
-
-			room->saveProperties(m_clipboard->group(grp));
-			m_clipboard->group(grp).writeEntry("LevelNum",room->getLevel()->getNumber());
-			m_clipboard->group(grp).deleteEntry("RoomID");
-			m_clipboard->group(grp).writeEntry("LabelPos",(int)CMapRoom::HIDE);
-		}
-
-		// Copy any text elements in the zone
-		foreach (CMapText *text, *level->getTextList())
-		{
-			if (!text->getLinkElement())
-			{
-				(*group)++;
-				QString grp;
-				grp.sprintf("%d",*group);
-
-				text->saveProperties(m_clipboard->group(grp));
-				m_clipboard->group(grp).writeEntry("LevelNum",text->getLevel()->getNumber());
-				m_clipboard->group(grp).deleteEntry("TextID");	
-			}
-		}
-	}
-}
-
-
 /** This method is called to copy the selected elements into the clipboard, then delete them */
 void CMapClipboard::slotCut()
 {
@@ -282,18 +221,13 @@ void CMapClipboard::slotCut()
 /** This method is called to paste the elements in the clipboard onto the current map */
 void CMapClipboard::slotPaste()
 {	
-	m_zoneListOrg.clear();
-	m_zoneListNew.clear();
-
-	unsigned int currentZoneID = m_mapManager->getActiveView()->getCurrentlyViewedZone()->getZoneID();
-
 	m_mapManager->openCommandGroup("Paste");
 	
 	if (m_clipboard && m_mapManager->getActiveView())
 	{
-		pasteElements(currentZoneID);
-		pastePaths(currentZoneID);
-		pasteLinks(currentZoneID);
+		pasteElements();
+		pastePaths();
+		pasteLinks();
 	}
 
 
@@ -301,7 +235,7 @@ void CMapClipboard::slotPaste()
 }
 
 /** This method is used to paste elements that are not paths or linked text elements */
-void CMapClipboard::pasteElements(unsigned int currentZoneID)
+void CMapClipboard::pasteElements()
 {
 
 	// Paste the non path elements
@@ -330,24 +264,13 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
 			}
 			else
 			{
-    			// Lookup witch zone the element is to be pasted into
-			    CMapZone *zone = NULL;
-				int count= 0;
-				for (IntList::Iterator it = m_zoneListOrg.begin(); it != m_zoneListOrg.end(); ++it )
-				{
-					if ((*it)==orgZone)
-					{
-						zone = m_mapManager->findZone(m_zoneListNew[count]);
-						break;
-					}
-					count++;
-				}
+			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
 				CMapLevel *level = NULL;
 				if (levelNum>=(int)zone->getLevels()->count())
 				{
-					level = m_mapManager->createLevel(UP,zone);
+					level = m_mapManager->createLevel(UP);
 				}
 				else
 				{
@@ -363,17 +286,11 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
                         KConfigGroup props = properties.group("Properties");
 			group.copyTo(&props);
 
-			props.deleteEntry("ZoneID");
+			int x = props.readEntry("X",-5);
+			int y = props.readEntry("Y",-5);
 
-			// if this is element is to be pated into the current zone then offset the elments
-			if (((unsigned int)props.readEntry("Zone",-1))==currentZoneID)
-			{
-				int x = props.readEntry("X",-5);
-				int y = props.readEntry("Y",-5);
-
-				props.writeEntry("X",x + m_mapManager->getMapData()->gridSize.width());
-				props.writeEntry("Y",y + m_mapManager->getMapData()->gridSize.height());
-			}
+			props.writeEntry("X",x + m_mapManager->getMapData()->gridSize.width());
+			props.writeEntry("Y",y + m_mapManager->getMapData()->gridSize.height());
 
 			// Create the command used to add a new element
 			CMapCmdElementCreate *command = new CMapCmdElementCreate(m_mapManager,i18n("Paste Element"));
@@ -388,16 +305,6 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
 
 			foreach (CMapElement *el, *elements)
 			{
-				// if a zone was created then save the origal id and the new id in the look table
-				// so element that are to be pasted into the zone can find the new id of the zone
-				if (el->getElementType()==ZONE)
-				{
-					int zoneID = group.readEntry("ZoneID",-5);
-
-					m_zoneListOrg.append(zoneID);
-					m_zoneListNew.append(((CMapZone *)el)->getZoneID());
-				}
-
 				// Update the elements properties
 				CMapCmdElementProperties *cmd = new CMapCmdElementProperties(m_mapManager,i18n("Update Properties"),el);
 				cmd->setNewProperties(props);
@@ -408,7 +315,7 @@ void CMapClipboard::pasteElements(unsigned int currentZoneID)
 }
 
 /** This method is used to paste path elements */
-void CMapClipboard::pastePaths(unsigned int currentZoneID)
+void CMapClipboard::pastePaths()
 {
 	// Paste the path elements
 	// Get the number of elements in the clipboard	
@@ -434,47 +341,12 @@ void CMapClipboard::pastePaths(unsigned int currentZoneID)
 			}
 			else
 			{
-				// Get the zone that the element came from
-				int srcOrgZone = group.readEntry("SrcZone",-5);
-				int destOrgZone = group.readEntry("DestZone",-5);
-
 				// Lookup witch zone the element is to be pasted into
-			    CMapZone *srcZone = NULL;
-				CMapZone *destZone = NULL;
-
-				int count= 0;
-				for (IntList::Iterator it = m_zoneListOrg.begin(); it != m_zoneListOrg.end(); ++it )
-				{
-					if ((*it)==srcOrgZone)
-					{
-						srcZone = m_mapManager->findZone(m_zoneListNew[count]);
-					}
-
-					if ((*it)==destOrgZone)
-					{
-						destZone = m_mapManager->findZone(m_zoneListNew[count]);
-					}
-
-					if (srcZone && destZone)
-					{
-						break;
-					}
-					count++;
-				}
-
-				if (!srcZone)
-				{
-					srcZone = m_mapManager->getActiveView()->getCurrentlyViewedZone();
-				}
-
-				if (!destZone)
-				{
-					destZone = m_mapManager->getActiveView()->getCurrentlyViewedZone();
-				}
+			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
-				CMapLevel *srcLevel = srcZone->getLevels()->at(srcLevelNum);
-				CMapLevel *destLevel = destZone->getLevels()->at(destLevelNum);
+				CMapLevel *srcLevel = zone->getLevels()->at(srcLevelNum);
+				CMapLevel *destLevel = zone->getLevels()->at(destLevelNum);
 
 				KMemConfig properties;
                                 KConfigGroup props = properties.group("Properties");
@@ -483,20 +355,14 @@ void CMapClipboard::pastePaths(unsigned int currentZoneID)
 				int srcX = props.readEntry("SrcX",-5);
 				int srcY = props.readEntry("SrcY",-5);
 
-				if (srcZone->getZoneID()==currentZoneID)
-				{
-					srcX+=m_mapManager->getMapData()->gridSize.width();
-					srcY+=m_mapManager->getMapData()->gridSize.height();
-				}
+				srcX+=m_mapManager->getMapData()->gridSize.width();
+				srcY+=m_mapManager->getMapData()->gridSize.height();
 
 				int destX = props.readEntry("DestX",-5);
 				int destY = props.readEntry("DestY",-5);
 
-				if (destZone->getZoneID()==currentZoneID)
-				{
-					destX+=m_mapManager->getMapData()->gridSize.width();
-					destY+=m_mapManager->getMapData()->gridSize.height();
-				}
+				destX+=m_mapManager->getMapData()->gridSize.width();
+				destY+=m_mapManager->getMapData()->gridSize.height();
 
 				// Update the clipboard with the new level that the element is to be pasted into
 				props.writeEntry("SrcRoom", srcLevel->findRoomAt(QPoint(srcX,srcY))->getRoomID());
@@ -514,7 +380,7 @@ void CMapClipboard::pastePaths(unsigned int currentZoneID)
 }
 
 /** This method is used to update linked text elements with the correct properties from the clibboard */
-void CMapClipboard::pasteLinks(unsigned int currentZoneID)
+void CMapClipboard::pasteLinks()
 {
 	// Update link elements with the correct properties
         KConfigGroup header = m_clipboard->group("Header");
@@ -539,29 +405,10 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 			else
 			{
 				// Get the zone that the element came from
-				int linkOrgZone = group.readEntry("LinkZone",-5);
-
-				// Lookup witch zone the element is to be pasted into
-			    CMapZone *linkZone = NULL;
-
-				int count= 0;
-				for (IntList::Iterator it = m_zoneListOrg.begin(); it != m_zoneListOrg.end(); ++it )
-				{
-					if ((*it)==linkOrgZone)
-					{
-						linkZone = m_mapManager->findZone(m_zoneListNew[count]);
-						break;
-					}
-					count++;
-				}
-
-				if (!linkZone)
-				{
-					linkZone = m_mapManager->getActiveView()->getCurrentlyViewedZone();
-				}
+			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
-				CMapLevel *linkLevel = linkZone->getLevels()->at(linkLevelNum);	
+				CMapLevel *linkLevel = zone->getLevels()->at(linkLevelNum);	
 
 				// Copy link text element properties to new properties
 				KMemConfig properties;
@@ -572,16 +419,13 @@ void CMapClipboard::pasteLinks(unsigned int currentZoneID)
 				int x = props.readEntry("LinkX",-5);
 				int y = props.readEntry("LinkY",-5);
 
-				if (linkZone->getZoneID()==currentZoneID)
-				{
-					x+=m_mapManager->getMapData()->gridSize.width();
-					y+=m_mapManager->getMapData()->gridSize.height();
+				x+=m_mapManager->getMapData()->gridSize.width();
+				y+=m_mapManager->getMapData()->gridSize.height();
 
-					int textX = props.readEntry("X",-5);
-					int textY = props.readEntry("Y",-5);
-					props.writeEntry("X",textX + m_mapManager->getMapData()->gridSize.width());
-					props.writeEntry("Y",textY + m_mapManager->getMapData()->gridSize.height());
-				}
+				int textX = props.readEntry("X",-5);
+				int textY = props.readEntry("Y",-5);
+				props.writeEntry("X",textX + m_mapManager->getMapData()->gridSize.width());
+				props.writeEntry("Y",textY + m_mapManager->getMapData()->gridSize.height());
 
                 // Setup the properties so that the text element will be linked to the new element
 				CMapElement *link = linkLevel->findElementAt(QPoint(x,y));

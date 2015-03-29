@@ -53,29 +53,6 @@ CMapData::~CMapData()
 {
 }
 
-QList<CMapZone *> CMapData::getAllZones(CMapZone *zone)
-{
-  QList<CMapZone *> res;
-
-  if (!zone) zone = rootZone;
-  
-  res.append(zone);
-  
-  foreach (CMapLevel *level, *zone->getLevels())
-  {
-    CMapZone *zone = level->getZoneList()->first();
-    foreach (CMapZone *lzone, *level->getZoneList())
-      res.append(getAllZones(lzone));
-  }
-  return res;
-}
-
-signed int CMapData::getZoneNumber(CMapZone *findZone)
-{
-  QList<CMapZone *> zones = getAllZones();
-  return zones.indexOf(findZone);
-}
-
 void CMapData::initDirections(void)
 {
 	directions[NORTH]     = "north";

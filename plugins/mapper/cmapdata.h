@@ -22,7 +22,6 @@
 #include <qcolor.h>
 #include <qfont.h>
 #include <qstringlist.h>
-#include <QList>
 
 #include "cmapzone.h"
 #include "cmaproom.h"
@@ -38,11 +37,6 @@ public:
 	CMapData();
 	~CMapData();
 
-        /** Grab all the zones, recursively */
-        QList<CMapZone *> getAllZones(CMapZone *zone = 0);
-
-	/** Used to find the number of a zone */
-	signed int getZoneNumber(CMapZone *findZone);
 	/** Initialize the directions to their default values. */
 	void initDirections(void);
 

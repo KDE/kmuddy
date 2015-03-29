@@ -41,6 +41,7 @@ CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint po
 
   getZone()->m_text_id_count=getZone()->m_text_id_count+1;
   m_ID = getZone()->m_text_id_count;	
+  setCursor(QPoint(0,1));
 
   if (level)
     level->getTextList()->append(this);
@@ -56,6 +57,7 @@ CMapText::CMapText(QString str,CMapManager *manager,QPoint pos,CMapLevel *level)
 
   getZone()->m_text_id_count=getZone()->m_text_id_count+1;
   m_ID = getZone()->m_text_id_count;	
+  setCursor(QPoint(0,1));
 
   if (level)
     level->getTextList()->append(this);
@@ -662,12 +664,6 @@ void CMapText::loadProperties(KConfigGroup properties)
 			{
 				CMapRoom *room = level->findRoom(properties.readEntry("LinkedID",-1));
 				room->setLabelPosition((CMapRoom::labelPosTyp)properties.readEntry("LabelPos",(int)CMapRoom::HIDE),this);
-			}
-
-			if (typ == ZONE)
-			{
-				CMapZone *zone = getManager()->findZone(properties.readEntry("LinkedID",-1));
-				zone->setLabelPosition((CMapZone::labelPosTyp)properties.readEntry("LabelPos",(int)CMapZone::HIDE),this);
 			}
 		}
 	}

@@ -23,13 +23,13 @@
 #include "cmaproom.h"
 #include "cmapviewbase.h"
 
-CMapLevel::CMapLevel(CMapManager *mapManager, CMapZone *zone, int pos): m_mapManager(mapManager), m_mapZone(zone)
+CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 {
   m_mapManager->m_levelCount++;
   setLevelID(mapManager->m_levelCount);
 
   // insert the level at the requested location
-  QList<CMapLevel *> *lvls = m_mapZone->getLevels();
+  QList<CMapLevel *> *lvls = getZone()->getLevels();
   if ((pos < 0) || (pos > lvls->size()))
     lvls->append(this);
   else
@@ -53,7 +53,7 @@ CMapLevel::~CMapLevel()
       }
       else
       {
-        view->showPosition(m_mapManager->getMapData()->rootZone->getLevels()->first(),true);
+        view->showPosition(getZone()->getLevels()->first(),true);
       }
     }
   }
@@ -109,8 +109,6 @@ QList<CMapElement *> CMapLevel::getAllElements()
     lst.push_back(room);
   foreach (CMapText *text, m_textList)
     lst.push_back(text);
-  foreach (CMapZone *zone, m_zoneList)
-    lst.push_back(zone);
 
   return lst;
 }
@@ -118,7 +116,7 @@ QList<CMapElement *> CMapLevel::getAllElements()
 /** Used to get the pointer to the previous level */
 CMapLevel *CMapLevel::getPrevLevel(void)
 {
-  QList<CMapLevel *> *lvls = m_mapZone->getLevels();
+  QList<CMapLevel *> *lvls = getZone()->getLevels();
   int idx = lvls->indexOf(this);
   if (idx <= 0) return 0;
   if (idx > lvls->count() - 1) return 0;
@@ -128,7 +126,7 @@ CMapLevel *CMapLevel::getPrevLevel(void)
 /** Used to get the pointer to the next level */
 CMapLevel *CMapLevel::getNextLevel(void)
 {
-  QList<CMapLevel *> *lvls = m_mapZone->getLevels();
+  QList<CMapLevel *> *lvls = getZone()->getLevels();
   int idx = lvls->indexOf(this);
   if (idx < 0) return 0;
   if (idx >= lvls->count() - 1) return 0;
@@ -138,7 +136,7 @@ CMapLevel *CMapLevel::getNextLevel(void)
 /** Used to get the zone that the level is in */
 CMapZone *CMapLevel::getZone(void)
 {
-  return m_mapZone;
+  return m_mapManager->getZone();
 }
 
 QList<CMapElement *> CMapLevel::elementsUnderMouse(QPoint mousePos)
@@ -146,23 +144,28 @@ QList<CMapElement *> CMapLevel::elementsUnderMouse(QPoint mousePos)
   QList<CMapElement *> opts = getAllElements();
   QList<CMapElement *> res;
   foreach (CMapElement *el, opts)
-    if (el->mouseInElement(mousePos, m_mapZone))
+    if (el->mouseInElement(mousePos))
       res.push_back(el);
 
   return res;
 }
 
-CMapElement *CMapLevel::findElementAt(QPoint pos)
+CMapElement *CMapLevel::findElementAt(QPoint pos, int type)
 {
   QList<CMapElement *> lst = elementsUnderMouse(pos);
   if (lst.empty()) return NULL;
-  return lst.first();
+  foreach (CMapElement *el, lst)
+  {
+    if ((type >= 0) && (el->getElementType() != type)) continue;
+    return el;
+  }
+  return NULL;
 }
 
 CMapRoom *CMapLevel::findRoomAt(QPoint pos)
 {
   foreach (CMapRoom *room, m_roomList)
-    if (room->mouseInElement(pos, m_mapZone))
+    if (room->mouseInElement(pos))
       return room;
 
   return NULL;

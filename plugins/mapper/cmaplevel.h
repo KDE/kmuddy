@@ -36,15 +36,13 @@ class CMapElement;
 class KMUDDY_EXPORT CMapLevel
 {
 public:
-	CMapLevel(CMapManager *mapManager, CMapZone *zone, int pos);
+	CMapLevel(CMapManager *mapManager, int pos);
 	~CMapLevel();
 
 	/** Get the list of rooms */
 	QList<CMapRoom *> *getRoomList() { return &m_roomList; }
 	/** Get the list of text elements */
 	QList<CMapText *> *getTextList() { return &m_textList; }
-	/** Get the list of zones */
-	QList<CMapZone *> *getZoneList() { return &m_zoneList; }
 
 	/** Used to get the pointer to the previous level */
 	CMapLevel *getPrevLevel(void);
@@ -67,18 +65,16 @@ public:
 	CMapText *findText(unsigned int id);
 
 	QList<CMapElement *> elementsUnderMouse(QPoint mousePos);
-	CMapElement *findElementAt(QPoint pos);
+	CMapElement *findElementAt(QPoint pos, int type = -1);
 	CMapRoom *findRoomAt(QPoint pos);
 
 private:
 	unsigned int m_ID;
 	CMapManager *m_mapManager;
-	CMapZone *m_mapZone;
 
 	/** An array of the elements in the level */
 	QList<CMapRoom *> m_roomList;
 	QList<CMapText *> m_textList;
-	QList<CMapZone *> m_zoneList;
 };
 
 #endif

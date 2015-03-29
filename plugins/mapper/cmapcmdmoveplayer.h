@@ -1,9 +1,9 @@
 /***************************************************************************
-                               cmapcmdleveldelete.cpp
+                             cmapcmdmoveplayer.h
                              -------------------
-    begin                : Mon Mar 4 2002
-    copyright            : (C) 2002 by Kmud Developer Team
-    email                : kmud-devel@kmud.de
+    begin                : Sun Mar 29 2015
+    copyright            : (C) 2015 by Tomas Mecir
+    email                : mecirt@gmail.com
  ***************************************************************************/
 
 /***************************************************************************
@@ -15,31 +15,35 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "cmapcmdleveldelete.h"
+#ifndef CMAPCMDMOVEPLAYEAR_H
+#define CMAPCMDMOVEPLAYEAR_H
 
-#include "cmapmanager.h"
-#include "cmaplevel.h"
+#include "cmapcommand.h"
+#include "cmapelement.h"
 
-CMapCmdLevelDelete::CMapCmdLevelDelete(CMapManager *manager,QString name, CMapLevel *level) : CMapCommand(name)
+class CMapRoom;
+class CMapPath;
+class CMapLevel;
+class CMapManager;
+
+class CMapCmdMovePlayer : public CMapCommand
 {
-	m_mapManager = manager;
-	m_levelID = level->getLevelID();
-	m_index = -1;
-}
+public:
+  CMapCmdMovePlayer(CMapManager *mapManager, directionTyp direction, QString specialCmd, bool create);
+  ~CMapCmdMovePlayer();
+  virtual void redo();
+  virtual void undo();
 
-CMapCmdLevelDelete::~CMapCmdLevelDelete()
-{
-}
+private:
+  CMapManager *m_manager;
+  bool m_create;
+  QString m_special;
+  directionTyp m_direction;
 
-void CMapCmdLevelDelete::redo()
-{
-  CMapLevel *level = m_mapManager->findLevel(m_levelID);
-  m_index = level->getZone()->getLevels()->indexOf(level);
-  delete level;
-}
+  CMapRoom *m_origroom, *m_newroom;
+  CMapPath *m_newpath;
+  CMapLevel *m_createdlevel;
+};
 
-void CMapCmdLevelDelete::undo()
-{
-  CMapLevel *level = new CMapLevel(m_mapManager, m_index);
-  level->setLevelID(m_levelID);
-}
+
+#endif

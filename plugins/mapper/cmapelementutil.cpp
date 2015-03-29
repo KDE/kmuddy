@@ -3,6 +3,7 @@
                              -------------------
     begin                : Thu Jan 10 2002
     copyright            : (C) 2002 by Kmud Developer Team
+                           (C) 2014-2015 by Tomas Mecir <mecirt@gmail.com>
     email                : kmud-devel@kmud.de
  ***************************************************************************/
 
@@ -93,7 +94,7 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 
 			switch (type)
 			{
-				case ROOM : result = createRoom(lowPos,level);
+				case ROOM : result = createRoom(manager,lowPos,level);
 				            if (result)
 				            {
 				            	if (!grp.hasKey("RoomID"))
@@ -113,29 +114,16 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 				                color=grp.readEntry("Color",color);
 				            	QFont font = manager->getMapData()->defaultTextFont;
 				            	font = grp.readEntry("Font",font);
-				            	result = new CMapText(text, font, color, manager, lowPos, level);
+                                                result = createText(manager, lowPos, level, text, font, color);
 				            }
 				            else
 				            {
-				            	result = new CMapText(text, manager, lowPos, level);
+                                                result = createText(manager, lowPos, level, text);
 				            }
 						if (!grp.hasKey("TextID"))
 							grp.writeEntry("TextID",((CMapText *)result)->getTextID());									
 						else
 							((CMapText *)result)->setTextID(grp.readEntry("TextID",-1));
-				            break;
-				case ZONE : result = createZone(lowPos,level);
-				            if (result)
-				            {
-				            	if (!grp.hasKey("ZoneID"))
-				            	{
-				            		grp.writeEntry("ZoneID",((CMapZone *)result)->getZoneID());
-				            	}
-				            	else
-				            	{
-				            		((CMapZone *)result)->setZoneID(grp.readEntry("ZoneID",-1));
-				            	}
-				            }
 				            break;
 				default : ;
 			}
@@ -150,7 +138,7 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 }
 
 /** Used to create a new room */
-CMapRoom *CMapElementUtil::createRoom(QPoint pos,CMapLevel *level)
+CMapRoom *CMapElementUtil::createRoom(CMapManager *manager, QPoint pos, CMapLevel *level)
 {
   if ((!level) || level->findElementAt(pos))
     return NULL;
@@ -162,15 +150,14 @@ CMapRoom *CMapElementUtil::createRoom(QPoint pos,CMapLevel *level)
   return room;
 }
 
-/** Used to create a new zone */
-CMapZone *CMapElementUtil::createZone(QPoint pos,CMapLevel *level)
+CMapText *CMapElementUtil::createText(CMapManager *manager, QPoint pos, CMapLevel *level, QString str)
 {
-  if (level && level->findElementAt(pos))
-    return NULL;
+  return new CMapText(str, manager, pos, level);
+}
 
-  QRect rect(pos,manager->getMapData()->gridSize);
-
-  return new CMapZone (manager,rect,level);
+CMapText *CMapElementUtil::createText(CMapManager *manager, QPoint pos, CMapLevel *level, QString str, QFont f, QColor col)
+{
+  return new CMapText(str, f, col, manager, pos, level);
 }
 
 /** Delete a path map element */
@@ -178,5 +165,4 @@ void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 {
   if (delOpsite) path->setOpsitePath(NULL);
   delete path;
-
 }

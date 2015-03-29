@@ -47,7 +47,6 @@
 
 #include <kmuddy_export.h>
 
-class CMapZone;
 class CMapPath;
 class CMapText;
 class CMapRoom;
@@ -114,9 +113,9 @@ public:
   /** Used to set properties of the view widget */
   void setPropertiesAllViews(QCursor *cursor,bool mouseTracking);
   /** Create new bottom or top level depending on the given direction */
-  CMapLevel *createLevel(directionTyp dir,CMapZone *intoZone);
+  CMapLevel *createLevel(directionTyp dir);
   /** Used to create a new room */
-  CMapRoom *createRoom(QPoint pos,CMapLevel *level);
+  void createRoom(QPoint pos,CMapLevel *level);
   /** Used to create a new path, this method will display the path properties
    * dialog to obtain the porperties of the path to be created               */
   CMapPath *createPath(CMapRoom *srcRoom,CMapRoom *destRoom);
@@ -125,12 +124,10 @@ public:
                        QPoint destPos,CMapLevel *destLevel,directionTyp destDir);
   /** Used to create a new path*/
   CMapPath *createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir,bool undoable = true);
-  /** Used to create a new zone */
-  CMapZone *createZone(QPoint pos,CMapLevel *level,bool levelCreate=true);
   /** Used to create a new text label */
-  CMapText *createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col);
+  void createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col);
   /** Used to create a new text label */
-  CMapText *createText(QPoint pos,CMapLevel *level,QString str="");
+  void createText(QPoint pos,CMapLevel *level,QString str="");
 
   /** Used to load a map */
   void importMap(const KUrl& url,CMapFileFilterBase *filter);
@@ -147,8 +144,6 @@ public:
   bool propertiesPath(CMapPath *path);
   /** Used to alter the room properties */
   bool propertiesRoom(CMapRoom *room);
-  /** Used to alter the zone properties */
-  bool propertiesZone(CMapZone *zone);
   /** Used to alter the text properties */
   bool propertiesText(CMapText *text);
 
@@ -157,6 +152,8 @@ public:
 
   /** Used to get a pointer to the map data */
   CMapData *getMapData() const;
+  /** Pointer to the zone info that stores levels */
+  CMapZone *getZone();
 
   /** Used to set the login room */
   void setLoginRoom(CMapRoom *room);
@@ -201,7 +198,7 @@ public:
   void activeViewChanged(void);
 
   /** Used to cound the diffent elements of the map */
-  void getCounts(int *levels,int *rooms,int *paths,int *labels,int *zones);
+  void getCounts(int *levels,int *rooms,int *paths,int *labels);
 
   /** Get the opsite direction */
   directionTyp getOpsiteDirection(directionTyp dir);
@@ -233,10 +230,6 @@ public:
     * @param id The id of the level to find
     * @return Null if no level is found otherwise a pointer to the level */
   CMapLevel *findLevel(unsigned int id);
-  /** This is used to find a zone with a given id
-    * @param id The id of the zone to find
-    * @return Null if no zone is found otherwise a pointer to the zone */
-  CMapZone *findZone(unsigned int id);
   /** Used to create a new command group */
   void openCommandGroup(QString name);
   /** Used to close a command group */
@@ -247,8 +240,6 @@ public:
   void setLoginRoomWithoutUndo(CMapRoom *room);
   /** Delete a level from the map */
   void deleteLevel(CMapLevel *level);
-  /** Update Zone List */
-  void updateZoneListCombo(void);
   /** Find the first room in the map,if one can't be found then create one */
   CMapRoom *findFirstRoom(CMapRoom *exsitingRoom);
   /**
@@ -268,6 +259,7 @@ public:
   int getUndoActive(void);
   /** Used to erase the map. This will erase all elements and can't be undone */
   void eraseMap(void);
+  void eraseZone(CMapZone *zone);
 
   /** Used to repaint all the views */
   void redrawAllViews(void);
@@ -324,11 +316,7 @@ private slots:
   void slotToolsLevelUp();
   void slotToolsLevelDown();
   void slotToolsLevelDelete();
-  void slotToolsZoneUp();
-  void slotToolsDeleteZone();
   void slotToolsCreateMode();
-  void slotToolsZoneProperties();
-  void slotSelectZone();
 
   void slotViewUpperLevel();
   void slotViewLowerLevel();
@@ -367,18 +355,8 @@ private slots:
   void slotTextDelete(void);
   /** Used to display the text properties of the text element under the pointer */
   void slotTextProperties(void);
-  /** Used to open the zone under the mouse pointer */
-  void slotZoneOpen(void);
-  /** Used to delete the zone under the mouse pointer */
-  void slotZoneDelete(void);
-  /** Used to display the properties of the zone under the pointer */
-  void slotZoneProperties(void);
-  /** Used to open a zone into a new view */
-  void slotZoneOpenNewView(void);
   
 private:
-  /** Used to erase a zone recursively */
-  void eraseZone(CMapZone *zone);
   /** Used to delete a element from the map, should only be used by the deleteElementMethod() */
   void deleteElementWithoutGroup(CMapElement *element,bool delOpsite = true);
   /** Used to setup the menus */
@@ -402,8 +380,6 @@ private:
   virtual bool queryClose ();
 
 private:
-  /** This is used to add and delete map elements and levels */
-  CMapElementUtil *m_elementUtils;
   /** This is the map clipboard used for copy and paste actions */
   CMapClipboard *m_clipboard;
   /** A list of import/export filters */
@@ -460,9 +436,6 @@ private:
   KAction *m_toolsUpLevel;
   KAction *m_toolsDownLevel;
   KAction *m_toolsDeleteLevel;
-  KAction *m_toolsUpZone;
-  KAction *m_toolsZoneProp;
-  KAction *m_toolsDeleteZone;
 
   KToggleAction *m_viewLowerLevel;
   KToggleAction *m_viewUpperLevel;

@@ -38,11 +38,6 @@
 				<Action name = "toolsLevelDown"/>
 				<Action name = "toolsLevelDelete"/>
 			</Menu>
-			<Menu name = "Zone Tools"><Text>&amp;Zone Tools</Text>
-				<Action name = "toolsZoneUp"/>
-				<Action name = "toolsDeleteZone"/>
-				<Action name = "toolsZoneProperties"/>
-			</Menu>
 		</Menu>
 		<Menu name="Window"><Text>&amp;Window</Text>
 		</Menu>
@@ -58,10 +53,6 @@
 	<ToolBar fullWidth="false" name="navigation"><Text>Navigation</Text>
 		<Action name = "toolsLevelUp"/>
 		<Action name = "toolsLevelDown"/>
-		<Separator/>
-		<Action name = "toolsZoneUp"/>
-		<Separator/>
-		<Action name = "toolsZoneList"/>
 	</ToolBar>
 	<Menu name = "room_popup">
 		<Action name = "roomCurrentPos"/>
@@ -89,14 +80,6 @@
 		<Action name = "textDelete"/>
 		<Separator/>
 		<Action name = "textProperties"/>
-	</Menu>
-	<Menu name = "zone_popup">
-		<Action name = "zoneOpen"/>
-		<Separator/>
-		<Action name = "zoneDelete"/>
-		<Separator/>
-		<Action name = "labelMenu"/>
-		<Action name = "zoneProperties"/>
 	</Menu>
 </kpartgui>
 

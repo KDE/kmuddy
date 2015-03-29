@@ -22,7 +22,6 @@
 
 #include "cmapcommand.h"
 
-class CMapZone;
 class CMapManager;
 
 /**This command is used to move all elements in the current zone
@@ -31,7 +30,7 @@ class CMapManager;
 class CMapCmdMoveMap : public CMapCommand
 {
 public:
-	CMapCmdMoveMap(CMapManager *manager,QPoint offset,CMapZone *zone,QString name);
+	CMapCmdMoveMap(CMapManager *manager,QPoint offset,QString name);
 	~CMapCmdMoveMap();
 
 	virtual void redo();
@@ -39,13 +38,11 @@ public:
 
 private:
 	/** This method is used to move the elements in a zone by the given vector */
-	void moveMap(QPoint inc,CMapZone *zone);
+	void moveMap(QPoint inc);
 
 private:
 	/** The map manager */
 	CMapManager *m_manager;
-	/** The zones elements which are to be moved */
-	int m_zoneId;
 	/** The offset to move the elements */
 	QPoint m_Offset;
 

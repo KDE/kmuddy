@@ -41,7 +41,6 @@ public:
 private:
 	int m_index;
 	int m_levelID;
-	int m_zoneIntoID;
 	CMapManager *m_mapManager;
 };
 

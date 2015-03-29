@@ -6,7 +6,6 @@
                         <Action name="toolsRoom"/>
                         <Action name="toolsPath"/>
                         <Action name="toolsText"/>
-                        <Action name="toolsZone"/>
                         <Action name="toolsEraser"/>
                         <Separator/>
                 </Menu>
@@ -16,7 +15,6 @@
 		<Action name="toolsRoom"/>
 		<Action name="toolsPath"/>
 		<Action name="toolsText"/>
-		<Action name="toolsZone"/>
 		<Action name="toolsEraser"/>
 		<Separator/>
 	</ToolBar>

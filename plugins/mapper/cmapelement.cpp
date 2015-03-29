@@ -108,9 +108,8 @@ CMapZone *CMapElement::getZone(void)
 }
 
 /** Used to find out if the mouse is in the element */
-bool CMapElement::mouseInElement(QPoint mousePos,CMapZone *)
+bool CMapElement::mouseInElement(QPoint mousePos)
 {
-
 	QRect rect = position;
 
 	if (rect.left() == rect.right())

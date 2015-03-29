@@ -31,6 +31,7 @@ set(kmuddymapper_PART_SRCS
    cmapcmdelementdelete.cpp 
    cmapcmdtogglepathtwoway.cpp 
    cmapcmdmovemap.cpp 
+   cmapcmdmoveplayer.cpp 
    cmapcmdleveldelete.cpp 
    cmapcmdlevelcreate.cpp 
    cmappropertiespanebase.cpp 

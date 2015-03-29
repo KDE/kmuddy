@@ -204,8 +204,13 @@ void cInputLine::handleEnter (const QString &text)
 
 void cInputLine::keyPressEvent (QKeyEvent *e)
 {
+  // apparently newer versions of Qt don't send this event, so we need to
   if ((e->key() == Qt::Key_Return) || (e->key() == Qt::Key_Enter))
+  {
     returnPressed (text());
+    e->accept();
+    return;
+  }
 
   //looks like auto-completion widget receives this event before I do, so
   //I don't have to care about possible conflicts...

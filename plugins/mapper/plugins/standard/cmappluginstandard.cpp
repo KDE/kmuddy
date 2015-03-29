@@ -21,7 +21,6 @@
 #include "tools/cmaptoolroom.h"
 #include "tools/cmaptoolpath.h"
 #include "tools/cmaptooltext.h"
-#include "tools/cmaptoolzone.h"
 #include "tools/cmaptooleraser.h"
 #include "propertyPanes/cmapnotespane.h"
 
@@ -56,7 +55,6 @@ CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : 
 	toolList.append(new CMapToolRoom(actionCollection(),manager,parent));
 	toolList.append(new CMapToolPath(actionCollection(),manager,parent));
 	toolList.append(new CMapToolText(actionCollection(),manager,parent));
-	toolList.append(new CMapToolZone(actionCollection(),manager,parent));
 	toolList.append(new CMapToolEraser(actionCollection(),manager,parent));
 	kDebug() << "CMapPluginStandard::CMapPluginStandard Tools Created";
 
@@ -65,7 +63,6 @@ CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : 
 	actionCollection()->action("toolsRoom")->setEnabled(true);
 	actionCollection()->action("toolsSelect")->setEnabled(true);
 	actionCollection()->action("toolsText")->setEnabled(true);
-	actionCollection()->action("toolsZone")->setEnabled(true);
 
 	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_standard.rc"));
 }
@@ -93,7 +90,6 @@ void CMapPluginStandard::profileChanged(void)
 	actionCollection()->action("toolsRoom")->setEnabled(true);
 	actionCollection()->action("toolsSelect")->setEnabled(true);
 	actionCollection()->action("toolsText")->setEnabled(true);
-	actionCollection()->action("toolsZone")->setEnabled(true);
 }
 
 /**

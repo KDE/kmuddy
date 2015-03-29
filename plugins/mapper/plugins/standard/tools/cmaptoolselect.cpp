@@ -134,7 +134,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos,CMapLevel *currentLevel)
     else
     {
       resizeDrag = 0;
-      if (element->mouseInElement(mousePos,currentLevel->getZone()))
+      if (element->mouseInElement(mousePos))
       {
         moveDrag = true;
       }
@@ -262,7 +262,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
 
     foreach (CMapElement *element, lst)
     {
-      if (element->mouseInElement(mousePos,currentLevel->getZone()))
+      if (element->mouseInElement(mousePos))
       {
         found = true;
         bool sel = (QApplication::keyboardModifiers() & Qt::ControlModifier) ? true : (!element->getSelected());

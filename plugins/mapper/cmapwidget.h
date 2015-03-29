@@ -35,7 +35,6 @@
 
 class CMapManager;
 class CMapElement;
-class CMapZone;
 class CMapLevel;
 class CMapView;
 class CMapViewBase;
@@ -77,8 +76,6 @@ protected:
 	void showTextContextMenu(void);
 	/** Used to display the path context menu */
 	void showPathContextMenu(void);
-	/** Used to display the zone context menu */
-	void showZoneContextMenu(void);
 	/** Used to display the Room context menu */
 	void showRoomContextMenu(void);
 
@@ -109,7 +106,6 @@ private:
 	Q3PopupMenu *room_menu;
 	Q3PopupMenu *path_menu;
 	Q3PopupMenu *text_menu;
-	Q3PopupMenu *zone_menu;
 
 	/** A pointer to the map manager */
 	CMapManager *mapManager;

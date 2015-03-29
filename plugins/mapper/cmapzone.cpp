@@ -25,10 +25,11 @@
 #include "cmaplevel.h"
 #include "cmaptext.h"
 #include "cmappath.h"
+#include "cmapelementutil.h"
 
 #include <kdebug.h>
 
-CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
+CMapZone::CMapZone(CMapManager *manager) : CMapElement(manager,QRect(-1,-1,0,0),0)
 {
   label  = i18n("Unnamed Zone");
   m_room_id_count = 0;
@@ -44,34 +45,25 @@ CMapZone::CMapZone(CMapManager *manager,QRect rect,CMapLevel *level) : CMapEleme
 
   textRemove();
 
-  if (level) level->getZoneList()->append(this);
-
   // Set the root zone if not already set
-  if (!manager->getMapData()->rootZone)
+  if (!manager->getMapData()->rootZone)  // can't use getZone() here, as we'd end up in a loop
     manager->getMapData()->rootZone = this;
+  manager->createLevel(UP);
 }
 
 CMapZone::~CMapZone()
 {
   //FIXME_jp : when this is undone there are extra levels, this needs fixing
   // Delete the levels in the zone
-  while (!mapLevelList.isEmpty())
-  {
+  QList<CMapLevel *> levels = mapLevelList;
+  foreach (CMapLevel *level, levels) {
     kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
-    delete mapLevelList.first();
+    delete level;
   }
-
-  if (getLevel()) getLevel()->getZoneList()->removeAll(this);
-  getManager()->updateZoneListCombo();
- 
-  if (textElement)
-    getManager()->deleteElement(textElement);
 }
 
 void CMapZone::setLevel(CMapLevel *level)
 {
-  if (getLevel()) getLevel()->getZoneList()->remove(this);
-  if (level) level->getZoneList()->append(this);
   CMapElement::setLevel(level);
 }
 
@@ -79,10 +71,6 @@ void CMapZone::setLevel(CMapLevel *level)
 void CMapZone::setLabel(QString zoneLabel)
 {
 	label = zoneLabel;
-	if (textElement)
-	{
-		textElement->setText(zoneLabel);
-	}
 }
 
 void CMapZone::dragPaint(QPoint offset,QPainter *p,CMapZone *)
@@ -189,57 +177,7 @@ void CMapZone::higherPaint(QPainter *p,CMapZone *)
 
 CMapElement *CMapZone::copy(void)
 {
-	// Copy all but the paths
-	CMapZone *newZone = copyZone();
-
-	// Copy the paths
-	copyPaths();
-
-	return newZone;
-}
-
-void CMapZone::copyPaths(void)
-{
-  foreach (CMapLevel *level, mapLevelList)
-  {
-    foreach (CMapZone *zone, *level->getZoneList())
-      zone->copyPaths();
-
-    foreach (CMapRoom *room, *level->getRoomList())
-    {
-      foreach (CMapPath *path, *room->getPathList())
-      {
-        CMapPath *newPath = (CMapPath *)path->copy();
-        newPath->setSrcRoom(path->getSrcRoom()->getCopiedRoom());
-        newPath->setDestRoom(path->getDestRoom()->getCopiedRoom());
-      }
-    }
-  }
-}
-
-CMapZone *CMapZone::copyZone(void)
-{
-  CMapZone *newZone = new CMapZone(getManager(),getRect(),getLevel());
-  newZone->setLabel(getLabel());
-  newZone->setBackgroundColor(getBackgroundColor());
-  newZone->setColor(getColor());
-  newZone->setDescription(getDescription());
-  newZone->setUseDefaultBackground(getUseDefaultBackground());
-  newZone->setUseDefaultCol(getUseDefaultCol());
-
-  foreach (CMapLevel *level, mapLevelList)
-  {
-    CMapLevel *newLevel = getManager()->createLevel(UP,newZone);
-
-    foreach (CMapElement *el, level->getAllElements()) {
-      CMapElement *el2 = el->copy();
-      el2->setLevel(newLevel);
-    }
-  }
-
-  //FIXME_jp: Copy text label position
-
-  return newZone;
+  return 0;
 }
 
 void CMapZone::setLabelPosition(labelPosTyp pos)
@@ -252,14 +190,7 @@ void CMapZone::setLabelPosition(labelPosTyp pos)
 	    QPoint p;
 
 		QFont font;
-		if (textElement)
-		{
-			font = textElement->getFont();
-		}
-		else
-		{
-			font = kapp->font();
-		}
+		font = kapp->font();
 
 		QFontMetrics fm(font);
 		int width = fm.width(getLabel());
@@ -267,7 +198,7 @@ void CMapZone::setLabelPosition(labelPosTyp pos)
 
 		switch (pos)
 		{
-			case CUSTOM    : p = textElement->getLowPos(); break;
+			case CUSTOM    : break;
 			case NORTH     : p.setX((getX()+(getWidth()/2)) -(width /2)); p.setY(getY() - height -  10); break;
 			case NORTHEAST : p.setX(getHighX()+10); p.setY(getY() - height - 10); break;
 			case EAST      : p.setX(getHighX()+10); p.setY((getY()+(getHeight()/2)) - (height/2)); break;
@@ -276,54 +207,16 @@ void CMapZone::setLabelPosition(labelPosTyp pos)
 			case SOUTHWEST : p.setX(getX()-width-10); p.setY(getHighY() + 10); break;
 			case WEST      : p.setX(getX()-width-10); p.setY((getY()+(getHeight()/2)) - (height/2)); break;
 			case NORTHWEST : p.setX(getX()-width-10); p.setY(getY() - height -  10); break;
-			default        : if (textElement)
-			                 {
-			                 	getManager()->deleteElement(textElement);
-		                     }
-			                 textRemove();
+                        default :
 			                 return;
 		}
 
-		if (!textElement)
-		{
-			textElement = getManager()->createText(p,getLevel(),getLabel());
-			textElement->setLinkElement(this);
-		}
-		else
-		{
-			QRect rect;
-			rect.setX(p.x());
-			rect.setY(p.y());
-			rect.setWidth(width);
-			rect.setHeight(height);
-
-			textElement->setRect(rect);
-		}
-
-	}
-	else
-	{
-		if (textElement)
-		{
-			getManager()->deleteElement(textElement);
-
-		}
-		textRemove();
 	}
 }
 
 void CMapZone::setLabelPosition(labelPosTyp pos,CMapText *text)
 {
 	if (getLabel()=="" || text == NULL) pos=HIDE;
-
-	if (textElement)
-	{
-		getManager()->deleteElement(textElement);
-    }
-	textRemove();
-	textElement = text;	
-	textElement->setLinkElement(this);
-
 	setLabelPosition(pos);
 }
 
@@ -334,7 +227,6 @@ void CMapZone::geometryChanged(void)
 
 void CMapZone::textRemove(void)
 {
-	textElement=NULL;
 	labelPosition = HIDE;
 }
 

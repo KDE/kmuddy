@@ -34,21 +34,18 @@ DlgMapInfo::DlgMapInfo(CMapManager *manager,QWidget *parent, const char *name ) 
 	// Starting position detials
 	CMapRoom *loginRoom = manager->getLoginRoom();
 
-	txtZone->setText(intToStr(manager->getMapData()->getZoneNumber(loginRoom->getZone())));
 	txtX->setText(intToStr(loginRoom->getX()));
 	txtY->setText(intToStr(loginRoom->getY()));
 	txtLvl->setText(intToStr(loginRoom->getLevel()->getNumber()));
 
 	// Element detials
-	int levels,rooms,paths,labels,zones;
+	int levels,rooms,paths,labels;
 
-	manager->getCounts(&levels,&rooms,&paths,&labels,&zones);
+	manager->getCounts(&levels,&rooms,&paths,&labels);
 
 	txtLvls->setText(intToStr(levels));
 	txtRooms->setText(intToStr(rooms));
 	txtPaths->setText(intToStr(paths));
-	txtZones->setText(intToStr(labels));
-	txtTexts->setText(intToStr(zones));
 }
 
 DlgMapInfo::~DlgMapInfo()

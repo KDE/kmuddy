@@ -68,7 +68,6 @@ private slots:
 
 	
 	void slotZoneRemove();
-	void slotZoneProperties();
 
 private:
 	void initContexMenus(void);
@@ -102,7 +101,6 @@ private:
 
 	KActionMenu *m_zone_menu;
 	KAction *m_zoneRemove;
-	KAction *m_zoneProperties;
 };
 
 #endif

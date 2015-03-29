@@ -54,7 +54,8 @@ public:
 	void addPath(CMapPath *path);
 	/** Used to find the path for the give direction. If a path can't be found then
 	    null is returned                                                             */
-	CMapPath *getPathDirection(directionTyp dir,QString specialCmd);
+        CMapPath *getPathDirection(directionTyp dir,QString specialCmd);
+	CMapRoom *getPathTarget(directionTyp dir,QString specialCmd);
 	/** Get a list of the paths from this room */
 	QList<CMapPath *> *getPathList() { return &pathList; }
 	/** Get a list of the paths connecting with this room */

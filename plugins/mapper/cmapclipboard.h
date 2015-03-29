@@ -64,21 +64,15 @@ private:
 	void initActions(void);
 	/** This method is used to copy a path to the clipboard */
 	void copyPath(int *pathGroup,CMapPath *path);
-    /** This method is used to copy a zone */
-	void copyZone(int *group,CMapZone *orgZone,KConfigGroup configGroup);
 	/** This method is used to paste elements that are not paths or linked text elements */
-	void pasteElements(unsigned int currentZoneID);
+	void pasteElements();
 	/** This method is used to paste path elements */
-	void pastePaths(unsigned int currentZoneID);
+	void pastePaths();
 	/** This method is used to update linked text elements with the correct properties from the clibboard */
-	void pasteLinks(unsigned int currentZoneID);
+	void pasteLinks();
 
 
 private:
-	typedef Q3ValueList<int> IntList;
-	IntList m_zoneListOrg;
-	IntList m_zoneListNew;
-
 	KMemConfig *m_clipboard;
 	CMapManager *m_mapManager;
 	QObject *m_parent;

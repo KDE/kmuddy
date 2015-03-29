@@ -18,14 +18,12 @@
 #include "cmapcmdlevelcreate.h"
 
 #include "cmapmanager.h"
-#include "cmapzone.h"
 #include "cmaplevel.h"
 
-CMapCmdLevelCreate::CMapCmdLevelCreate(CMapManager *manager,QString name,CMapZone *intoZone,int index)  : CMapCommand(name)
+CMapCmdLevelCreate::CMapCmdLevelCreate(CMapManager *manager,QString name,int index)  : CMapCommand(name)
 {
 	m_mapManager = manager;
 	m_index = index;
-	m_intoZone = intoZone->getZoneID();
 	m_levelID = -1;
 	m_level = NULL;
 }
@@ -36,8 +34,7 @@ CMapCmdLevelCreate::~CMapCmdLevelCreate()
 
 void CMapCmdLevelCreate::redo()
 {
-  CMapZone *zone = m_mapManager->findZone(m_intoZone);
-  m_level = new CMapLevel(m_mapManager, zone, m_index);
+  m_level = new CMapLevel(m_mapManager, m_index);
 
   if (m_levelID == -1)
   {

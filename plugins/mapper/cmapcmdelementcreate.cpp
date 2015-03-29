@@ -27,17 +27,26 @@
 #include "cmapcmdelementproperties.h"
 
 #include <klocale.h>
+#include <QDebug>
 
 CMapCmdElementCreate::CMapCmdElementCreate(CMapManager *mapManager,QString name) : CMapCommand(name),CMapElementUtil(mapManager)
 {
 	manager = mapManager;
 	properties = new KMemConfig();
 	groups = 0;
+        executed = false;
 }
 
 CMapCmdElementCreate::~CMapCmdElementCreate()
 {
 	delete properties;
+}
+
+QList<CMapElement *> *CMapCmdElementCreate::getElements()
+{
+  if (!executed) qWarning() << "CMapCmdElementCreate::getElements called without actually executing the command, this will not work!" << endl;
+
+  return &elements;
 }
 
 void CMapCmdElementCreate::redo()
@@ -53,6 +62,7 @@ void CMapCmdElementCreate::redo()
 			if (element) elements.append(element);
 		}
 	}
+        executed = true;
 }
 
 void CMapCmdElementCreate::undo()
@@ -68,6 +78,7 @@ void CMapCmdElementCreate::undo()
 	}	
 
 	elements.clear();
+        executed = false;
 }
 
 void CMapCmdElementCreate::secondStage(void)

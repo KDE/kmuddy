@@ -47,7 +47,7 @@ public:
 
 	void addElement(KMemConfig *newElementProperties,QString grp = "Properties");
 
-	QList<CMapElement *> *getElements() { return &elements; }
+	QList<CMapElement *> *getElements();
 
 	void secondStage(void);
 
@@ -60,6 +60,7 @@ private:
 	KMemConfig *properties;
 	/** This contains a list of elements that have been create by the execute method */
 	QList<CMapElement *> elements;
+        bool executed;
 };
 
 #endif

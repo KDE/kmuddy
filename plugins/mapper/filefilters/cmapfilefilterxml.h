@@ -117,7 +117,7 @@ private:
 	  * @return  0 , The file was loaded without problems
 	  *         -2 , If the file is corrupt
 	  */
-	int loadZone(QDomElement *zoneNode,CMapLevel *intoLevel);
+	int loadZone(QDomElement *zoneNode);
 
 	/** This method is used to load all of the paths
 	  * @param pathsNode The XML node to load the paths from

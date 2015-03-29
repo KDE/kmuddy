@@ -68,7 +68,6 @@ void CMapWidget::initContexMenus(void)
 {
         room_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("room_popup",mapManager);
 	text_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("text_popup",mapManager);
-	zone_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("zone_popup",mapManager);
 	path_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("path_popup",mapManager);	
 }
 
@@ -245,29 +244,6 @@ void CMapWidget::showRoomContextMenu(void)
 	popupMenu((CMapElement *)room,room_menu,selectedPos);
 }
 
-void CMapWidget::showZoneContextMenu(void)
-{	
-	CMapZone *zone = (CMapZone*)mapManager->getSelectedElement();
-
-	KSelectAction *labelMenu= (KSelectAction *)mapManager->actionCollection()->action("labelMenu");
-	
-	switch(zone->getLabelPosition())
-	{
-		case CMapZone::HIDE      : labelMenu->setCurrentItem(0); break;
-		case CMapZone::NORTH     : labelMenu->setCurrentItem(1); break;
-		case CMapZone::NORTHEAST : labelMenu->setCurrentItem(2); break;
-		case CMapZone::EAST      : labelMenu->setCurrentItem(3); break;
-		case CMapZone::SOUTHEAST : labelMenu->setCurrentItem(4); break;
-		case CMapZone::SOUTH     : labelMenu->setCurrentItem(5); break;
-		case CMapZone::SOUTHWEST : labelMenu->setCurrentItem(6); break;
-		case CMapZone::WEST      : labelMenu->setCurrentItem(7); break;
-		case CMapZone::NORTHWEST : labelMenu->setCurrentItem(8); break;
-		case CMapZone::CUSTOM    : labelMenu->setCurrentItem(9); break;
-	}
-
-	popupMenu((CMapElement *)zone,zone_menu,selectedPos);
-}
-
 void CMapWidget::showPathContextMenu(void)
 {
 	CMapPath *path = (CMapPath *)mapManager->getSelectedElement();
@@ -314,7 +290,6 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
   switch(element->getElementType())
   {
     case ROOM : showRoomContextMenu(); break;
-    case ZONE : showZoneContextMenu(); break;
     case PATH : showPathContextMenu(); break;
     case TEXT : showTextContextMenu(); break;
     case OTHER: break;

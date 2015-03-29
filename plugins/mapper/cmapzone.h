@@ -29,7 +29,7 @@ class CMapLevel;
 class CMapText;
 class CMapManager;
 
-/**The class used to store zone information
+/** The zone holds a list of levels in the zone. There's only one per map.
   *@author Kmud Developer Team
   */
 class KMUDDY_EXPORT CMapZone : public CMapElement
@@ -38,7 +38,7 @@ public:
 	enum labelPosTyp { NORTH , SOUTH , WEST , EAST , NORTHWEST, NORTHEAST, SOUTHEAST , SOUTHWEST, HIDE, CUSTOM };	
 
 public:
-	CMapZone(CMapManager *manager,QRect rect,CMapLevel *level);
+	CMapZone(CMapManager *manager);
 	~CMapZone();
 
 	elementTyp getElementType(void)                  { return ZONE ; }
@@ -77,9 +77,6 @@ public:
 
 	void textRemove(void);
 
-	CMapZone *copyZone(void);
-	void copyPaths(void);
-
 	/** Used to load the properties of the element from a list of properties */
 	virtual void loadProperties(KConfigGroup properties);
 	/** Used to save the properties of the element to a list of properties */
@@ -93,8 +90,6 @@ public:
 	virtual void loadQDomElement(QDomElement *properties);
 		
 	void setZoneID(unsigned  int id);
-	/** Get the text element linked to this element */
-	CMapText *getLinkedElement(void)                         { return textElement; }
 	
 protected:
 	void geometryChanged(void);
@@ -125,8 +120,6 @@ private:
 
 	QColor color;
 	QColor backgroundCol;
-
-	CMapText *textElement;
 
 	/** This is a list of all the maps for this mud */
 	QList<CMapLevel *> mapLevelList;

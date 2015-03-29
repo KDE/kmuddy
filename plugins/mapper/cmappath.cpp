@@ -139,6 +139,7 @@ void CMapPath::setCords(void)
 
 	QRect rect(pos1,pos2);
 	setRect(rect);
+        setDone(false);
 }
 
 /** Used to draw an arrow head */
@@ -204,71 +205,6 @@ int CMapPath::getDistance (int x,int y,int x1,int x2,int y1,int y2)
 	return abs(d);
 }
 
-void CMapPath::getZonePathCords(bool *drawZoneTerminator,directionTyp *destDir,
-                                QPoint *start, QPoint *end,QPoint *zonepos,CMapZone *zone)
-{
-	*drawZoneTerminator = false;
-
-	// FIXME_jp : Handle Zone paths
-	if (getDestRoom()->getZone()!=zone)
-	{
-		// If we get here then this is a zone path
-		CMapZone *zoneIn;
-
-		if (getDestRoom()->getZone())
-		{
-			zoneIn = getDestRoom()->getZone()->getZone();
-		}
-		else
-		{
-			zoneIn = NULL;
-		}
-
-
-		if (zoneIn==zone)
-		{
-			// QSize gridSize = getManager()->getMapData()->gridSize;
-			QSize halfZoneSize = QSize(destRoom->getZone()->getWidth()/2,destRoom->getZone()->getHeight()/2);
-
-			*destDir = getDestDir();
-			*end = getDestRoom()->getZone()->getLowPos();
-
-			QPoint end2,pos2;
-
-			end2.setX(end->x() + (destRoom->getZone()->getWidth()/2));
-			end2.setY(end->y() + (destRoom->getZone()->getHeight()/2));
-
-			getManager()->directionToCord(*destDir,halfZoneSize,&pos2);
-
-			pos2+=end2;
-
-			*end = pos2;
-		}
-		else
-		{
-			switch (getSrcDir())
-			{
-				case NORTH     : end->setX(start->x());      end->setY(start->y() - 10); zonepos->setX(end->x()-3); zonepos->setY(end->y()-7); *destDir = SOUTH; break;
-				case SOUTH     : end->setX(start->x());      end->setY(start->y() + 10); zonepos->setX(end->x()-3); zonepos->setY(end->y()+1);   *destDir = NORTH;break;
-				case WEST      : end->setX(start->x() - 10); end->setY(start->y());      zonepos->setX(end->x()-7); zonepos->setY(end->y()-3); *destDir = EAST ;break;
-				case EAST      : end->setX(start->x() + 10); end->setY(start->y());      zonepos->setX(end->x()+1);   zonepos->setY(end->y()-3); *destDir = WEST; break;
-				case NORTHEAST : end->setX(start->x() + 9);  end->setY(start->y() - 9);  zonepos->setX(end->x()+1); zonepos->setY(end->y()-7); *destDir = SOUTHWEST; break;
-				case SOUTHEAST : end->setX(start->x() + 9);  end->setY(start->y() + 9);  zonepos->setX(end->x()+1); zonepos->setY(end->y()+1); *destDir = NORTHWEST; break;
-				case SOUTHWEST : end->setX(start->x() - 9);  end->setY(start->y() + 9);  zonepos->setX(end->x()-7); zonepos->setY(end->y()+1); *destDir = NORTHEAST; break;
-				case NORTHWEST : end->setX(start->x() - 9);  end->setY(start->y() - 9);  zonepos->setX(end->x()-7); zonepos->setY(end->y()-7); *destDir = SOUTHEAST; break;
-				case UP        : break;
-				case DOWN      : break;
-				case SPECIAL   : break;
-			}
-
-			*drawZoneTerminator = true;
-		}
-	}
-	else
-		*destDir = getDestDir();
-
-}
-
 /** Set a pointer to the destination room */
 void CMapPath::setDestRoom(CMapRoom *DestRoom)
 {
@@ -293,24 +229,19 @@ void CMapPath::setDestDir(directionTyp DestDir)
 }
 
 
-bool CMapPath::generatePath(directionTyp *destDir,QPoint *zonepos,CMapZone *currentZone)
+directionTyp CMapPath::generatePath()
 {
 	bool result = false;
 	tempPathCords.clear();
 
 	QPoint start = getLowPos();
-	QPoint end = getHighPos();
+        QPoint end = getHighPos();
 
-	getZonePathCords(&result,destDir,&start,&end,zonepos,currentZone);
+        directionTyp destDir = getDestDir();
 
 	QPoint indent1 = getIndent(getSrcDir(),start);
 
-	if (getSrcRoom()->getZone()!=currentZone)
-	{
-		return false;
-	}
-
-	QPoint indent2 = getIndent(*destDir,end);
+	QPoint indent2 = getIndent(destDir,end);
 
     tempPathCords.append(start);
 	tempPathCords.append(indent1);
@@ -323,15 +254,13 @@ bool CMapPath::generatePath(directionTyp *destDir,QPoint *zonepos,CMapZone *curr
 	tempPathCords.append(indent2);
 	tempPathCords.append(end);
 
-	return result;
+	return destDir;
 }
 
 /** Used to draw the path */
 void CMapPath::drawPath(QPainter *p,CMapZone *zone,QPoint offset,QColor color,int editBox,QPoint editPos)
 {
-	directionTyp tempDestDir;
-	QPoint zonepos;
-	bool drawZoneTerminator = generatePath(&tempDestDir,&zonepos,zone);
+	directionTyp tempDestDir = generatePath();
 
 	p->setPen(color);
 	p->setBrush(color);
@@ -373,13 +302,6 @@ void CMapPath::drawPath(QPainter *p,CMapZone *zone,QPoint offset,QColor color,in
 				temp = *point;
 				count++;
 			}
-		}
-
-		if (drawZoneTerminator)
-		{
-			p->setPen(color);
-			p->setBrush(color);
-			p->drawRect(zonepos.x() + offset.x(),zonepos.y() + offset.y() ,7,7);
 		}
 
 		if (getEditMode())
@@ -461,14 +383,12 @@ void CMapPath::paintElementResize(QPainter *p,QPoint,QSize,CMapZone *zone)
 }
 
 /** Used to find out if the mouse is in the element */
-bool CMapPath::mouseInElement(QPoint mousePos,CMapZone *currentZone)
+bool CMapPath::mouseInElement(QPoint mousePos)
 {
 	if (srcDir == UP || srcDir == DOWN || srcDir==SPECIAL) return false;
 
 	//FIXME_jp: Handle zone paths that have been termintated
-	directionTyp tempDestDir;
-	QPoint zonepos;
-	bool drawZoneTerminator = generatePath(&tempDestDir,&zonepos,currentZone);
+	directionTyp tempDestDir = generatePath();
 
 	if (tempPathCords.count()>1)
 	{

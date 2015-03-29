@@ -27,6 +27,7 @@
 #include "cmappath.h"
 #include "cmaptext.h"
 #include "cmaplevel.h"
+#include "cmapelementutil.h"
 #include "cmapviewbase.h"
 
 #include <kdebug.h>
@@ -99,11 +100,11 @@ void CMapRoom::resize(QPoint offset,int resizeId)
   CMapElement::resize(offset,resizeId);
 
   foreach (CMapPath *path, pathList)
-    if (!path->getSelected())
+//    if (!path->getSelected())
       path->setCords();
 
   foreach (CMapPath *path, connectingPaths)
-    if (!path->getSelected())
+//    if (!path->getSelected())
       path->setCords();
 }
 
@@ -177,10 +178,10 @@ void CMapRoom::paint(QPainter *p,CMapZone *currentZone)
 		p->drawEllipse(x1+4,y1+4,getWidth() - 9,getHeight() -9);
 	}
 
-
-	// Draw any special/up/down exits
+	// Draw exits
 	foreach (CMapPath *path, pathList)
 	{
+          path->paint(p, currentZone);
 		if (path->getSrcDir() == UP)
 		{
 			p->setPen(Qt::black);
@@ -220,7 +221,7 @@ void CMapRoom::dragPaint(QPoint offset,QPainter *p,CMapZone *)
 	p->drawRect(getX() + offset.x(),getY() + offset.y(),getWidth(),getHeight());
 }
 
-void CMapRoom::lowerPaint(QPainter *p,CMapZone *)
+void CMapRoom::lowerPaint(QPainter *p,CMapZone *z)
 {
 	signed int y1,x1,x2,y2;
 
@@ -234,9 +235,12 @@ void CMapRoom::lowerPaint(QPainter *p,CMapZone *)
 	brush.setStyle(Qt::Dense3Pattern);
 	p->setBrush(brush);
 	p->drawRect(x1,y1,getWidth()-2,getHeight()-2);
+
+        foreach (CMapPath *path, *getPathList())
+          path->lowerPaint(p, z);
 }
 
-void CMapRoom::higherPaint(QPainter *p,CMapZone *)
+void CMapRoom::higherPaint(QPainter *p,CMapZone *z)
 {
 	p->setPen(getManager()->getMapData()->higherRoomColor);
 	QBrush brush(getManager()->getMapData()->higherRoomColor);
@@ -244,6 +248,8 @@ void CMapRoom::higherPaint(QPainter *p,CMapZone *)
 	p->setBrush(brush);
 	p->drawRect(getX()+6,getX()+6,getWidth()-2,getHeight()-2);
 
+        foreach (CMapPath *path, *getPathList())
+          path->higherPaint(p, z);
 }
 
 void CMapRoom::setLabel(QString str)
@@ -312,6 +318,13 @@ CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 	return NULL;
 }
 
+CMapRoom *CMapRoom::getPathTarget(directionTyp dir,QString specialCmd)
+{
+  CMapPath *path = getPathDirection(dir, specialCmd);
+  if (!path) return 0;
+  return path->getDestRoom();
+}
+
 CMapRoom::labelPosTyp CMapRoom::getLabelPosition(void)
 {
 	return labelPosition;
@@ -363,7 +376,7 @@ void CMapRoom::setLabelPosition(labelPosTyp pos)
 
 		if (!textElement)
 		{
-			textElement = getManager()->createText(p,getLevel(),getLabel());
+			textElement = CMapElementUtil::createText(getManager(), p, getLevel(), getLabel());
 			textElement->setLinkElement(this);
 		}
 		else
@@ -551,7 +564,7 @@ void CMapRoom::moveBy(QPoint offset)
 	foreach (CMapPath *path, pathList)
 		path->setCords();
 
-	foreach (CMapPath *path, pathList)
+	foreach (CMapPath *path, connectingPaths)
 		path->setCords();
 }
 

@@ -22,6 +22,7 @@
 #include <klocale.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
+#include <QDebug>
 
 K_PLUGIN_FACTORY (KMuddyMapperFactory, registerPlugin<KMuddyMapper>();)
 K_EXPORT_PLUGIN (KMuddyMapperFactory("kmuddy"))

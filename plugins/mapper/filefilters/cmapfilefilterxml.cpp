@@ -28,11 +28,11 @@
 #include <q3textstream.h>
 
 #include "../cmaproom.h"
-#include "../cmapzone.h"
 #include "../cmappath.h"
 #include "../cmaptext.h"
 #include "../cmapmanager.h"
 #include "../cmaplevel.h"
+#include "../cmapelementutil.h"
 #include "../cmappluginbase.h"
 
 #include <kdebug.h>
@@ -140,10 +140,9 @@ QString CMapFileFilterXML::saveXMLFile()
 
 	// Write main header
 	
-	// Write Zones
-	CMapZone *rootZone = m_mapManager->getMapData()->rootZone;
+	// Write the zone
+	CMapZone *rootZone = m_mapManager->getZone();
 	saveZone(&doc,&root,rootZone);
-
 
 	// Write Path Header
 	QDomElement paths = doc.createElement("Paths");
@@ -152,10 +151,9 @@ QString CMapFileFilterXML::saveXMLFile()
 	// Write Links Header
 	QDomElement links = doc.createElement("Links");
 	root.appendChild(links);
-	
 
 	// Write Paths
-	saveZoneLinks(&doc,&paths,&links,m_mapManager->getMapData()->rootZone);
+	saveZoneLinks(&doc,&paths,&links,m_mapManager->getZone());
 
 	// Write Speedwalk list
 
@@ -183,7 +181,6 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		levelProperties.setAttribute("Number",level->getNumber());
 		levelProperties.setAttribute("NumRooms",level->getRoomList()->count());
 		levelProperties.setAttribute("NumTexts",level->getTextList()->count());
-		levelProperties.setAttribute("NumZones",level->getZoneList()->count());
 		
 		// Save Rooms
 		foreach (CMapRoom* room, *level->getRoomList())
@@ -203,10 +200,6 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 			levelProperties.appendChild(textProperties);	
 		}
 
-		// Save Sub Zones
-		foreach (CMapZone* subZone, *level->getZoneList())
-			saveZone(doc,&levelProperties,subZone);
-		
 		zoneProperties.appendChild(levelProperties);
 	}
 
@@ -254,19 +247,9 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
           linkElement.setAttribute("DestID",((CMapRoom *)element)->getRoomID());
           linkElement.setAttribute("LabelPos",(int)((CMapRoom *)element)->getLabelPosition());
         }
-        if (element->getElementType()==ZONE)
-        {
-          linkElement.setAttribute("DestID",((CMapZone *)element)->getZoneID());
-          linkElement.setAttribute("LabelPos",(int)((CMapZone *)element)->getLabelPosition());
-        }
 
         linksNode->appendChild(linkElement);
       }
-    }
-
-    foreach (CMapZone* subZone, *level->getZoneList())
-    {
-      saveZoneLinks(doc,pathsNode,linksNode,subZone);
     }
   }
 }
@@ -365,7 +348,7 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
     }
 
     // Load Root Zone
-    int errorZone =loadZone(&rootZoneNode,NULL);
+    int errorZone =loadZone(&rootZoneNode);
     
     if (errorZone!=0)
     {
@@ -463,12 +446,6 @@ int CMapFileFilterXML::loadLinks(QDomElement *pathsNode)
 					CMapRoom *destElement = destLevel->findRoom(destID);
 					destElement->setLabelPosition((CMapRoom::labelPosTyp)labelPos,text);
 				}
-
-				if (destTyp==(int)ZONE)
-				{
-					CMapZone *destElement = m_mapManager->findZone(destID);
-					destElement->setLabelPosition((CMapZone::labelPosTyp)labelPos,text);
-				}
 			}            
 		}
 
@@ -551,35 +528,14 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
   * @return  0 , The file was loaded without problems
   *         -2 , If the file is corrupt
   */  
-int CMapFileFilterXML::loadZone(QDomElement *zoneNode,CMapLevel *intoLevel)
+int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 {
 	int gridWidth = m_mapManager->getMapData()->gridSize.width();
 	int gridHeight = m_mapManager->getMapData()->gridSize.height();
 
 	
-	CMapZone *zone = NULL;
+	CMapZone *zone = m_mapManager->getZone();
 
-	if (intoLevel == NULL)
-	{
-		zone = m_mapManager->createZone(QPoint(-1,-1),NULL,false);
-	}
-	else
-	{
-		int x = zoneNode->attribute("X",QString::number(-1)).toInt();
-		int y = zoneNode->attribute("Y",QString::number(-1)).toInt();
-
-		if (x==-1 || y==-1)
-		{
-			kDebug() << "Unable to find zone pos ";
-			return -2;
-		}
-		
-		zone = m_mapManager->createZone(QPoint (x * gridWidth,y * gridHeight),intoLevel,false);
-		zone->loadQDomElement(zoneNode);
-		loadPluginPropertiesForElement(zone,zoneNode);
-	}
-
-	
 	QDomNode n = zoneNode->firstChild();
 	while (!n.isNull() )
 	{
@@ -593,7 +549,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode,CMapLevel *intoLevel)
 
 		if (e.tagName()=="Level")
 		{
-			CMapLevel *level = m_mapManager->createLevel(UP,zone);
+			CMapLevel *level = m_mapManager->createLevel(UP);
 			QString id = e.attribute("ID","-2");
 			if (id=="-2")
 			{
@@ -622,20 +578,16 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode,CMapLevel *intoLevel)
 					return -2;
 				}
 
-				if (e2.tagName()=="Zone")
+				if (e2.tagName()=="Room")
 				{
-					loadZone(&e2,level);
-				}
-				else if (e2.tagName()=="Room")
-				{
-					CMapRoom *room = m_mapManager->createRoom(QPoint(x1 * gridWidth,y1 * gridHeight),level);
+					CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 * gridWidth,y1 * gridHeight),level);
 					
 					room->loadQDomElement(&e2);
 					loadPluginPropertiesForElement(room,&e2);
 				}
 				else if (e2.tagName()=="Text")
 				{
-					CMapText *text = m_mapManager->createText(QPoint (x1,y1),level,"");
+					CMapText *text = CMapElementUtil::createText(m_mapManager, QPoint (x1,y1),level,"");
 					text->loadQDomElement(&e2);
 					loadPluginPropertiesForElement(text,&e2);
 				}

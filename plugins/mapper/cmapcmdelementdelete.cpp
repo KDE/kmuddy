@@ -62,7 +62,6 @@ void CMapCmdElementDelete::redo()
 
 void CMapCmdElementDelete::undo()
 {
-	bool zone = false;
 	QStringList groupList = properties->groupList();
 
 	for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
@@ -73,11 +72,6 @@ void CMapCmdElementDelete::undo()
 
 			CMapElement *elm = createElement(group);
 			elm->loadProperties(group);
-
-			if (elm->getElementType()==ZONE)
-			{
-				zone = true;
-			}
 
 			if (elm->getElementType()==PATH)
 			{
@@ -100,13 +94,6 @@ void CMapCmdElementDelete::undo()
 			}
 		}
 	}
-	
-	if (zone)
-	{
-		manager->updateZoneListCombo();
-	}
-
-	
 }
 
 void CMapCmdElementDelete::addElement(KMemConfig *newElementProperties)

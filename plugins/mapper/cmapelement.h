@@ -105,7 +105,7 @@ public:
 
 	// Mouse functions
 	/** Used to find out if the mouse is in the element */
-	virtual bool mouseInElement(QPoint mousePos,CMapZone *currentZone);
+	virtual bool mouseInElement(QPoint mousePos);
 	/** Used to find out if the mouse is in the resize box
 	  * @param mousePos The position of the mouse pointer
 	  * @param currentZone A pointer to the current zone

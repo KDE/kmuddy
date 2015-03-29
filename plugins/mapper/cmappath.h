@@ -54,7 +54,7 @@ public:
 	void editPaint(QPoint pos,QPainter *p,CMapZone *,int editBox);
 
 	/** Used to find out if the mouse is in the element */
-	bool mouseInElement(QPoint mousePos,CMapZone *currentZone);
+	bool mouseInElement(QPoint mousePos);
 
 	/** Used to create a deep copy of the path */
 	CMapElement *copy(void);
@@ -172,13 +172,9 @@ protected:
 	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone);
 
 private:
-	/** Used to get the zone path start and end points */
-	void getZonePathCords(bool *drawZoneTerminator,directionTyp *destDir,
-	                      QPoint *start,QPoint *end,QPoint *zonepos, CMapZone *zone);
-
 	/** This method is used to calcualte the distance from a path segment */
 	int getDistance (int x,int y,int x1,int x2,int y1,int y2);
-	bool generatePath(directionTyp *destDir,QPoint *zonepos,CMapZone *currentZone);
+	directionTyp generatePath();
 	/** Used to draw an arrow head */
 	void drawArrow(directionTyp dir,QPainter *p,QPoint end);
 	QPoint getIndent(directionTyp dir,QPoint pos);

@@ -31,7 +31,7 @@ class CMapZone;
 class CMapCmdLevelCreate : public CMapCommand
 {
 public: 
-	CMapCmdLevelCreate(CMapManager *manager,QString name,CMapZone *intoZone,int index);
+	CMapCmdLevelCreate(CMapManager *manager,QString name,int index);
 	~CMapCmdLevelCreate();
 
 	virtual void redo();
@@ -44,7 +44,6 @@ private:
 	CMapLevel *m_level;
 	int m_levelID;
 	int m_index;
-	int m_intoZone;
 };
 
 #endif
