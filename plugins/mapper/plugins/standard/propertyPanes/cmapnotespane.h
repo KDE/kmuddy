@@ -39,7 +39,7 @@ class CMapPluginStandard;
 class CMapNotesPane : public CMapPropertiesPaneBase
 {
 public: 
-	CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent, const char *name);
+	CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent);
 	~CMapNotesPane();
 
 public slots:

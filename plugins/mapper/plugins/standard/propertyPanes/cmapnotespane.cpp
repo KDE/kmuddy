@@ -26,8 +26,8 @@
 #include <Q3VBoxLayout>
 #include <QLabel>
 
-CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent, const char *name)
-	: CMapPropertiesPaneBase(title,icon,panelType,element,parent,name)
+CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent)
+	: CMapPropertiesPaneBase(title,icon,panelType,element,parent)
 {
 	m_plugin = plugin;
 	m_element = element;
@@ -35,11 +35,11 @@ CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *ico
     notesLayout->setSpacing( 6 );
     notesLayout->setMargin( 11 );
 
-	lblNotes = new QLabel( this, "lblNotes" );
+	lblNotes = new QLabel( this);
     lblNotes->setText( i18n( "Notes:" ) );
     notesLayout->addWidget( lblNotes );
 
-	txtNotes = new Q3MultiLineEdit( this, "txtNotes" );
+	txtNotes = new Q3MultiLineEdit( this );
 	notesLayout->addWidget( txtNotes );
 
 	txtNotes->setText(m_plugin->getNote(element));

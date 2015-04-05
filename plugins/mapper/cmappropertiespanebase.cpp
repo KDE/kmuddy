@@ -17,8 +17,8 @@
 
 #include "cmappropertiespanebase.h"
 
-CMapPropertiesPaneBase::CMapPropertiesPaneBase(QString title,QIcon * icon,elementTyp panelType,CMapElement *element,QWidget *parent, const char *name )
-	: QWidget(parent,name)
+CMapPropertiesPaneBase::CMapPropertiesPaneBase(QString title,QIcon * icon,elementTyp panelType,CMapElement *element,QWidget *parent)
+	: QWidget(parent)
 {
 	setIcon(icon);
 	setPanelType(panelType);

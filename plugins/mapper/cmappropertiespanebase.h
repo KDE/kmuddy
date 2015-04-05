@@ -32,7 +32,7 @@ class KMUDDY_EXPORT CMapPropertiesPaneBase : public QWidget
 {
    Q_OBJECT
 public: 
-	CMapPropertiesPaneBase(QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent=0, const char *name=0);
+	CMapPropertiesPaneBase(QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent=0);
 	~CMapPropertiesPaneBase()             {}
 
 	/** Set the panel title */
