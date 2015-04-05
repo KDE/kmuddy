@@ -34,8 +34,8 @@
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
 
-DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent, const char *name )
-	: QDialog(parent,name)
+DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent)
+	: QDialog(parent)
 {
   setupUi (this);
   connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
@@ -78,8 +78,8 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 	}
 }
 
-DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathElement,bool undoable,QWidget *parent, const char *name )
-	: QDialog(parent,name)
+DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathElement,bool undoable,QWidget *parent)
+	: QDialog(parent)
 {
   setupUi (this);
   connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
@@ -133,58 +133,58 @@ DlgMapPathProperties::~DlgMapPathProperties()
 
 void DlgMapPathProperties::setSrcDirection(directionTyp direction)
 {
-	cmdSrcN->setOn(false);
-	cmdSrcS->setOn(false);
-	cmdSrcE->setOn(false);
-	cmdSrcW->setOn(false);
-	cmdSrcSE->setOn(false);
-	cmdSrcNE->setOn(false);
-	cmdSrcSW->setOn(false);
-	cmdSrcNW->setOn(false);
-	cmdSrcUp->setOn(false);
-	cmdSrcDown->setOn(false);
+	cmdSrcN->setChecked(false);
+	cmdSrcS->setChecked(false);
+	cmdSrcE->setChecked(false);
+	cmdSrcW->setChecked(false);
+	cmdSrcSE->setChecked(false);
+	cmdSrcNE->setChecked(false);
+	cmdSrcSW->setChecked(false);
+	cmdSrcNW->setChecked(false);
+	cmdSrcUp->setChecked(false);
+	cmdSrcDown->setChecked(false);
 
 	switch (direction)
 	{
-		case NORTH     : cmdSrcN->setOn(true); break;
-		case SOUTH     : cmdSrcS->setOn(true); break;
-		case EAST      : cmdSrcE->setOn(true); break;
-		case WEST      : cmdSrcW->setOn(true); break;
-		case SOUTHEAST : cmdSrcSE->setOn(true); break;
-		case NORTHEAST : cmdSrcNE->setOn(true); break;
-		case SOUTHWEST : cmdSrcSW->setOn(true); break;
-		case NORTHWEST : cmdSrcNW->setOn(true); break;
-		case UP        : cmdSrcUp->setOn(true); break;
-		case DOWN      : cmdSrcDown->setOn(true); break;
+		case NORTH     : cmdSrcN->setChecked(true); break;
+		case SOUTH     : cmdSrcS->setChecked(true); break;
+		case EAST      : cmdSrcE->setChecked(true); break;
+		case WEST      : cmdSrcW->setChecked(true); break;
+		case SOUTHEAST : cmdSrcSE->setChecked(true); break;
+		case NORTHEAST : cmdSrcNE->setChecked(true); break;
+		case SOUTHWEST : cmdSrcSW->setChecked(true); break;
+		case NORTHWEST : cmdSrcNW->setChecked(true); break;
+		case UP        : cmdSrcUp->setChecked(true); break;
+		case DOWN      : cmdSrcDown->setChecked(true); break;
 		case SPECIAL   : break;
 	}
 }
 
 void DlgMapPathProperties::setDestDirection(directionTyp direction)
 {
-	cmdDestN->setOn(false);
-	cmdDestS->setOn(false);
-	cmdDestE->setOn(false);
-	cmdDestW->setOn(false);
-	cmdDestSE->setOn(false);
-	cmdDestNE->setOn(false);
-	cmdDestSW->setOn(false);
-	cmdDestNW->setOn(false);
-	cmdDestUp->setOn(false);
-	cmdDestDown->setOn(false);
+	cmdDestN->setChecked(false);
+	cmdDestS->setChecked(false);
+	cmdDestE->setChecked(false);
+	cmdDestW->setChecked(false);
+	cmdDestSE->setChecked(false);
+	cmdDestNE->setChecked(false);
+	cmdDestSW->setChecked(false);
+	cmdDestNW->setChecked(false);
+	cmdDestUp->setChecked(false);
+	cmdDestDown->setChecked(false);
 
 	switch (direction)
 	{
-		case NORTH     : cmdDestN->setOn(true); break;
-		case SOUTH     : cmdDestS->setOn(true); break;
-		case EAST      : cmdDestE->setOn(true); break;
-		case WEST      : cmdDestW->setOn(true); break;
-		case SOUTHEAST : cmdDestSE->setOn(true); break;
-		case NORTHEAST : cmdDestNE->setOn(true); break;
-		case SOUTHWEST : cmdDestSW->setOn(true); break;
-		case NORTHWEST : cmdDestNW->setOn(true); break;
-		case UP        : cmdDestUp->setOn(true); break;
-		case DOWN      : cmdDestDown->setOn(true); break;
+		case NORTH     : cmdDestN->setChecked(true); break;
+		case SOUTH     : cmdDestS->setChecked(true); break;
+		case EAST      : cmdDestE->setChecked(true); break;
+		case WEST      : cmdDestW->setChecked(true); break;
+		case SOUTHEAST : cmdDestSE->setChecked(true); break;
+		case NORTHEAST : cmdDestNE->setChecked(true); break;
+		case SOUTHWEST : cmdDestSW->setChecked(true); break;
+		case NORTHWEST : cmdDestNW->setChecked(true); break;
+		case UP        : cmdDestUp->setChecked(true); break;
+		case DOWN      : cmdDestDown->setChecked(true); break;
 		case SPECIAL   : break;
 	}
 }
@@ -192,32 +192,32 @@ void DlgMapPathProperties::setDestDirection(directionTyp direction)
 directionTyp DlgMapPathProperties::getSrcDirection(void)
 {
 	if (chkSpecial->isChecked()) return SPECIAL;
-	if (cmdSrcNE->isOn()) return NORTHEAST;
-	if (cmdSrcE->isOn()) return EAST;
-	if (cmdSrcSE->isOn()) return SOUTHEAST;
-	if (cmdSrcS->isOn()) return SOUTH;
-	if (cmdSrcSW->isOn()) return SOUTHWEST;
-	if (cmdSrcW->isOn()) return WEST;
-	if (cmdSrcNW->isOn()) return NORTHWEST;
-	if (cmdSrcN->isOn()) return NORTH;
-	if (cmdSrcDown->isOn()) return DOWN;
-	if (cmdSrcUp->isOn()) return UP;
+	if (cmdSrcNE->isChecked()) return NORTHEAST;
+	if (cmdSrcE->isChecked()) return EAST;
+	if (cmdSrcSE->isChecked()) return SOUTHEAST;
+	if (cmdSrcS->isChecked()) return SOUTH;
+	if (cmdSrcSW->isChecked()) return SOUTHWEST;
+	if (cmdSrcW->isChecked()) return WEST;
+	if (cmdSrcNW->isChecked()) return NORTHWEST;
+	if (cmdSrcN->isChecked()) return NORTH;
+	if (cmdSrcDown->isChecked()) return DOWN;
+	if (cmdSrcUp->isChecked()) return UP;
 	return SPECIAL;
 }
 
 directionTyp DlgMapPathProperties::getDestDirection(void)
 {
 	if (chkSpecial->isChecked()) return SPECIAL;
-	if (cmdDestNE->isOn()) return NORTHEAST;
-	if (cmdDestE->isOn()) return EAST;
-	if (cmdDestSE->isOn()) return SOUTHEAST;
-	if (cmdDestS->isOn()) return SOUTH;
-	if (cmdDestSW->isOn()) return SOUTHWEST;
-	if (cmdDestW->isOn()) return WEST;
-	if (cmdDestNW->isOn()) return NORTHWEST;
-	if (cmdDestN->isOn()) return NORTH;
-	if (cmdDestDown->isOn()) return DOWN;
-	if (cmdDestUp->isOn()) return UP;
+	if (cmdDestNE->isChecked()) return NORTHEAST;
+	if (cmdDestE->isChecked()) return EAST;
+	if (cmdDestSE->isChecked()) return SOUTHEAST;
+	if (cmdDestS->isChecked()) return SOUTH;
+	if (cmdDestSW->isChecked()) return SOUTHWEST;
+	if (cmdDestW->isChecked()) return WEST;
+	if (cmdDestNW->isChecked()) return NORTHWEST;
+	if (cmdDestN->isChecked()) return NORTH;
+	if (cmdDestDown->isChecked()) return DOWN;
+	if (cmdDestUp->isChecked()) return UP;
 	return SPECIAL;
 }
 
