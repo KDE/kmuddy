@@ -2067,7 +2067,7 @@ void CMapManager::saveMap(void)
 /** This methid is called to display map information when the information menu option is selected */
 void CMapManager::slotFileInfo()
 {
-  DlgMapInfo d(this,NULL,"infoDialog");
+  DlgMapInfo d(this,NULL);
   
   d.exec();
 }

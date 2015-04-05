@@ -50,8 +50,8 @@
 
 #include <kdebug.h>
 
-CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent, const char *name)
-	: Q3ScrollView(parent,name, Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
+CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent)
+	: Q3ScrollView(parent, 0, Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
 {
 	buffer = NULL;
 	mapManager = manager;
@@ -115,7 +115,7 @@ void CMapTextPreview::drawContents(QPainter *paint,int , int , int, int )
 }
 
 
-DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent, const char *name ) : QDialog(parent,name)
+DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
 
@@ -124,7 +124,7 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 	QString width;
 	QString height;
 	Q3VBoxLayout *vbox = new Q3VBoxLayout((QWidget *)fraPreview);
-	textScrollView = new CMapTextPreview(mapManager,fraPreview,"textPreview");
+	textScrollView = new CMapTextPreview(mapManager,fraPreview);
 	vbox->addWidget( textScrollView);
 	textScrollView->show();
 	fillFamilyList();

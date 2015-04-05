@@ -250,13 +250,13 @@ int CMapView::getMaxY(void)
 /** Used to set the follow mode */
 void CMapView::setFollowMode(bool follow)
 {
-  cmdFollowMode->setOn(follow);
+  cmdFollowMode->setChecked(follow);
 }
 
 /** Used to get the follow mode */
 bool CMapView::getFollowMode(void)
 {
-  return cmdFollowMode->isOn();
+  return cmdFollowMode->isChecked();
 }
 
 int CMapView::getWidth(void)

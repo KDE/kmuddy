@@ -29,7 +29,7 @@ class DlgSpeedwalkProgress : public QDialog, private Ui::DlgSpeedwalkProgressBas
 {
    Q_OBJECT
 public: 
-	DlgSpeedwalkProgress(QWidget *parent=0, const char *name=0);
+	DlgSpeedwalkProgress(QWidget *parent=0);
 	~DlgSpeedwalkProgress();
 
 	void setProgress(int progress);

@@ -20,7 +20,7 @@
 #include <q3progressbar.h>
 #include <qpushbutton.h>
 
-DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent, const char *name ) : QDialog(parent,name)
+DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
 }

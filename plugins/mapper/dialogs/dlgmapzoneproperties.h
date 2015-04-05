@@ -34,7 +34,7 @@ class DlgMapZoneProperties : public QDialog, private Ui::DlgMapZonePropertiesBas
 {
    Q_OBJECT
 public: 
-	DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent=0, const char *name=0);
+	DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent=0);
 	~DlgMapZoneProperties();
 
 private slots:

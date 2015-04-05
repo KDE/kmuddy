@@ -39,8 +39,8 @@
 #include <klocale.h>
 #include <kdebug.h>
 
-DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent, const char *name )
-	: QDialog(parent,name)
+DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent )
+	: QDialog(parent)
 {
   setupUi (this);
   connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
@@ -172,62 +172,62 @@ void DlgMapRoomProperties::slotUseDefaultColor(bool useDefaultColor)
 
 void DlgMapRoomProperties::setLabelPos(CMapRoom::labelPosTyp position)
 {
-	cmdN->setOn(false);
-	cmdNE->setOn(false);
-	cmdE->setOn(false);
-	cmdSE->setOn(false);
-	cmdS->setOn(false);
-	cmdSW->setOn(false);
-	cmdW->setOn(false);
-	cmdNW->setOn(false);
-	cmdHide->setOn(false);
-	cmdCustom->setOn(false);
+	cmdN->setChecked(false);
+	cmdNE->setChecked(false);
+	cmdE->setChecked(false);
+	cmdSE->setChecked(false);
+	cmdS->setChecked(false);
+	cmdSW->setChecked(false);
+	cmdW->setChecked(false);
+	cmdNW->setChecked(false);
+	cmdHide->setChecked(false);
+	cmdCustom->setChecked(false);
 
 	switch (position)
 	{
-		case CMapRoom::NORTH     : cmdN->setOn(true); break;
-		case CMapRoom::NORTHEAST : cmdNE->setOn(true); break;
-		case CMapRoom::EAST      : cmdE->setOn(true); break;
-		case CMapRoom::SOUTHEAST : cmdSE->setOn(true); break;
-		case CMapRoom::SOUTH     : cmdS->setOn(true); break;
-		case CMapRoom::SOUTHWEST : cmdSW->setOn(true); break;
-		case CMapRoom::WEST      : cmdW->setOn(true); break;
-		case CMapRoom::NORTHWEST : cmdNW->setOn(true); break;
-		case CMapRoom::HIDE      : cmdHide->setOn(true); break;
-		case CMapRoom::CUSTOM    : cmdCustom->setOn(true); break;
+		case CMapRoom::NORTH     : cmdN->setChecked(true); break;
+		case CMapRoom::NORTHEAST : cmdNE->setChecked(true); break;
+		case CMapRoom::EAST      : cmdE->setChecked(true); break;
+		case CMapRoom::SOUTHEAST : cmdSE->setChecked(true); break;
+		case CMapRoom::SOUTH     : cmdS->setChecked(true); break;
+		case CMapRoom::SOUTHWEST : cmdSW->setChecked(true); break;
+		case CMapRoom::WEST      : cmdW->setChecked(true); break;
+		case CMapRoom::NORTHWEST : cmdNW->setChecked(true); break;
+		case CMapRoom::HIDE      : cmdHide->setChecked(true); break;
+		case CMapRoom::CUSTOM    : cmdCustom->setChecked(true); break;
 	}
 }
 
 CMapRoom::labelPosTyp DlgMapRoomProperties::getLabelPos(void)
 {
-	if (cmdN->isOn())
+	if (cmdN->isChecked())
 		return CMapRoom::NORTH;
 
-	if (cmdE->isOn())
+	if (cmdE->isChecked())
 		return CMapRoom::EAST;
 
-	if (cmdS->isOn())
+	if (cmdS->isChecked())
 		return CMapRoom::SOUTH;
 
-	if (cmdW->isOn())
+	if (cmdW->isChecked())
 		return CMapRoom::WEST;
 
-	if (cmdNE->isOn())
+	if (cmdNE->isChecked())
 		return CMapRoom::NORTHEAST;
 
-	if (cmdSE->isOn())
+	if (cmdSE->isChecked())
 		return CMapRoom::SOUTHEAST;
 
-	if (cmdSW->isOn())
+	if (cmdSW->isChecked())
 		return CMapRoom::SOUTHWEST;
 
-	if (cmdNW->isOn())
+	if (cmdNW->isChecked())
 		return CMapRoom::NORTHWEST;
 
-	if (cmdHide->isOn())
+	if (cmdHide->isChecked())
 		return CMapRoom::HIDE;
 
-	if (cmdCustom->isOn())
+	if (cmdCustom->isChecked())
 		return CMapRoom::CUSTOM;
 
 	return CMapRoom::HIDE;

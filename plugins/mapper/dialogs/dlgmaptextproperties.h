@@ -31,7 +31,7 @@ class CMapManager;
 class CMapTextPreview : public Q3ScrollView
 {
 public:
-	CMapTextPreview(CMapManager *manager,QWidget *parent=0, const char *name=0);
+	CMapTextPreview(CMapManager *manager,QWidget *parent=0);
 	~CMapTextPreview();
 
 	void setColor(QColor textColor)           { color = textColor; }
@@ -61,7 +61,7 @@ class DlgMapTextProperties : public QDialog, private Ui::DlgMapTextPropertiesBas
 {
    Q_OBJECT
 public: 
-	DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent=0, const char *name=0);
+	DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent=0);
 	~DlgMapTextProperties();
 
 private:

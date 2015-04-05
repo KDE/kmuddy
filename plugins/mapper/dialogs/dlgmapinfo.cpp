@@ -25,7 +25,7 @@
 #include "../cmapzone.h"
 #include "../cmaplevel.h"
 
-DlgMapInfo::DlgMapInfo(CMapManager *manager,QWidget *parent, const char *name ) : QDialog(parent, name)
+DlgMapInfo::DlgMapInfo(CMapManager *manager,QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
 

@@ -37,7 +37,7 @@
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
 
-DlgMapZoneProperties::DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent, const char *name ) : QDialog(parent,name)
+DlgMapZoneProperties::DlgMapZoneProperties(CMapManager *manager,CMapZone *zoneElement,QWidget *parent ) : QDialog(parent)
 {
   setupUi (this);
   connect(this, SIGNAL(accepted()), this, SLOT(slotAccept()));
@@ -83,69 +83,69 @@ void DlgMapZoneProperties::slotAccept()
 	command->compare("DefaultColor",zone->getUseDefaultCol(),chkUseDefaltColor->isChecked());
 	command->compare("LabelPos",(int)zone->getLabelPosition(),(int)getLabelPos());
 	command->compare("BackgroundColor",zone->getBackgroundColor(),cmdBackgroundColor->color());
-	command->compare("DefaultBackground",zone->getUseDefaultBackground(),optDefaultBackground->isOn());
+	command->compare("DefaultBackground",zone->getUseDefaultBackground(),optDefaultBackground->isChecked());
 
 	mapManager->addCommand(command);
 }
 
 void DlgMapZoneProperties::setLabelPos(CMapZone::labelPosTyp position)
 {
-	cmdN->setOn(false);
-	cmdNE->setOn(false);
-	cmdE->setOn(false);
-	cmdSE->setOn(false);
-	cmdS->setOn(false);
-	cmdSW->setOn(false);
-	cmdW->setOn(false);
-	cmdNW->setOn(false);
-	cmdHide->setOn(false);
-	cmdCustom->setOn(false);
+	cmdN->setChecked(false);
+	cmdNE->setChecked(false);
+	cmdE->setChecked(false);
+	cmdSE->setChecked(false);
+	cmdS->setChecked(false);
+	cmdSW->setChecked(false);
+	cmdW->setChecked(false);
+	cmdNW->setChecked(false);
+	cmdHide->setChecked(false);
+	cmdCustom->setChecked(false);
 
 	switch (position)
 	{
-		case CMapZone::NORTH     : cmdN->setOn(true); break;
-		case CMapZone::NORTHEAST : cmdNE->setOn(true); break;
-		case CMapZone::EAST      : cmdE->setOn(true); break;
-		case CMapZone::SOUTHEAST : cmdSE->setOn(true); break;
-		case CMapZone::SOUTH     : cmdS->setOn(true); break;
-		case CMapZone::SOUTHWEST : cmdSW->setOn(true); break;
-		case CMapZone::WEST      : cmdW->setOn(true); break;
-		case CMapZone::NORTHWEST : cmdNW->setOn(true); break;
-		case CMapZone::HIDE      : cmdHide->setOn(true); break;
-		case CMapZone::CUSTOM    : cmdCustom->setOn(true); break;
+		case CMapZone::NORTH     : cmdN->setChecked(true); break;
+		case CMapZone::NORTHEAST : cmdNE->setChecked(true); break;
+		case CMapZone::EAST      : cmdE->setChecked(true); break;
+		case CMapZone::SOUTHEAST : cmdSE->setChecked(true); break;
+		case CMapZone::SOUTH     : cmdS->setChecked(true); break;
+		case CMapZone::SOUTHWEST : cmdSW->setChecked(true); break;
+		case CMapZone::WEST      : cmdW->setChecked(true); break;
+		case CMapZone::NORTHWEST : cmdNW->setChecked(true); break;
+		case CMapZone::HIDE      : cmdHide->setChecked(true); break;
+		case CMapZone::CUSTOM    : cmdCustom->setChecked(true); break;
 	}
 }
 
 CMapZone::labelPosTyp DlgMapZoneProperties::getLabelPos(void)
 {
-	if (cmdN->isOn())
+	if (cmdN->isChecked())
 		return CMapZone::NORTH;
 
-	if (cmdE->isOn())
+	if (cmdE->isChecked())
 		return CMapZone::EAST;
 
-	if (cmdS->isOn())
+	if (cmdS->isChecked())
 		return CMapZone::SOUTH;
 
-	if (cmdW->isOn())
+	if (cmdW->isChecked())
 		return CMapZone::WEST;
 
-	if (cmdNE->isOn())
+	if (cmdNE->isChecked())
 		return CMapZone::NORTHEAST;
 
-	if (cmdSE->isOn())
+	if (cmdSE->isChecked())
 		return CMapZone::SOUTHEAST;
 
-	if (cmdSW->isOn())
+	if (cmdSW->isChecked())
 		return CMapZone::SOUTHWEST;
 
-	if (cmdNW->isOn())
+	if (cmdNW->isChecked())
 		return CMapZone::NORTHWEST;
 
-	if (cmdHide->isOn())
+	if (cmdHide->isChecked())
 		return CMapZone::HIDE;
 
-	if (cmdCustom->isOn())
+	if (cmdCustom->isChecked())
 		return CMapZone::CUSTOM;
 
 	return CMapZone::HIDE;

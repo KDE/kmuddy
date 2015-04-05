@@ -30,7 +30,7 @@
 class DlgMapRoomProperties : public QDialog, private Ui::DlgMapRoomPropertiesBase  {
    Q_OBJECT
 public: 
-	DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent=0, const char *name=0);
+	DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent=0);
 	~DlgMapRoomProperties();
 
 private slots:

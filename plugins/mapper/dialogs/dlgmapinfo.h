@@ -31,7 +31,7 @@ class DlgMapInfo : public QDialog, private Ui_DlgMapInfoBase
 {
    Q_OBJECT
 public: 
-	DlgMapInfo(CMapManager *,QWidget *parent=0, const char *name=0);
+	DlgMapInfo(CMapManager *,QWidget *parent=0);
 	~DlgMapInfo();
 
 	QString intToStr(int num);
