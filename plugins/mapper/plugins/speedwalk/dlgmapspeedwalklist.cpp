@@ -38,7 +38,7 @@
 #include "cmappluginspeedwalk.h"
 #include "cmapcmdspeedwalkremove.h"
 
-DlgMapSpeedwalkList::DlgMapSpeedwalkList(CMapPluginSpeedwalk *plugin,QWidget *parent, const char *name ) : QWidget(parent,name)
+DlgMapSpeedwalkList::DlgMapSpeedwalkList(CMapPluginSpeedwalk *plugin,QWidget *parent) : QWidget(parent)
 {
   setupUi(this);
 	m_manager = plugin->getManager();

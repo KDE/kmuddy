@@ -34,7 +34,7 @@ class CMapViewStatusbar : public Q3Frame
 {
    Q_OBJECT
 public: 
-	CMapViewStatusbar(QWidget *parent=0, const char *name=0);
+	CMapViewStatusbar(QWidget *parent=0);
 	~CMapViewStatusbar();
 
 	void setLevel(int level);

@@ -25,7 +25,6 @@
 
 #include <kmuddy_export.h>
 
-class CMapViewManagerBase;
 class CMapToolBase;
 class CMapPropertiesPaneBase;
 class CMapManager;

@@ -57,7 +57,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
   scroller->setWidget(mapWidget);
   mapWidget->show();
 
-  statusbar = new CMapViewStatusbar(this,"statusbar");
+  statusbar = new CMapViewStatusbar(this);
   vbox->addWidget(statusbar);
 
   lblActive = new QLabel(i18n("Active"),statusbar);

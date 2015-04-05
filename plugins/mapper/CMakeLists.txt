@@ -36,7 +36,6 @@ set(kmuddymapper_PART_SRCS
    cmapcmdlevelcreate.cpp 
    cmappropertiespanebase.cpp 
    cmappluginbase.cpp 
-   cmapviewmanagerbase.cpp 
    cmapfilter.cpp 
    cmapfilefilterbase.cpp 
    cmapcommand.cpp 

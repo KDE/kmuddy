@@ -40,7 +40,7 @@ class DlgMapSpeedwalkList : public QWidget, private Ui::DlgMapSpeedwalkListBase
    Q_OBJECT
 
 public: 
-	DlgMapSpeedwalkList(CMapPluginSpeedwalk *plugin,QWidget *parent=0, const char *name=0);
+	DlgMapSpeedwalkList(CMapPluginSpeedwalk *plugin,QWidget *parent=0);
 	~DlgMapSpeedwalkList();
 
 	/** Used to update the speedwalk list */

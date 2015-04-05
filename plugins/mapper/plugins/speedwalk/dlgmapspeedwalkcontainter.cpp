@@ -36,7 +36,7 @@ DlgMapSpeedwalkContainter::DlgMapSpeedwalkContainter(CMapPluginSpeedwalk *plugin
 
   Q3GridLayout *vbox = new Q3GridLayout(this,1,1);
 
-  list = new DlgMapSpeedwalkList(plugin,this,"speedlist");
+  list = new DlgMapSpeedwalkList(plugin,this);
 
   vbox->addWidget(list,0,0);
 }

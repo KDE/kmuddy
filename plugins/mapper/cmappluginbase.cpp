@@ -19,7 +19,6 @@
 
 #include "cmappropertiespanebase.h"
 #include "cmaptoolbase.h"
-#include "cmapviewmanagerbase.h"
 #include "cmapmanager.h"
 
 CMapPluginBase::CMapPluginBase(QObject *parent) : KParts::Plugin(parent)

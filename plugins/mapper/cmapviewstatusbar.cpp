@@ -23,7 +23,7 @@
 
 #include <klocale.h>
 
-CMapViewStatusbar::CMapViewStatusbar(QWidget *parent, const char *name ) : Q3Frame(parent,name)
+CMapViewStatusbar::CMapViewStatusbar(QWidget *parent) : Q3Frame(parent,0)
 {
 	setFocusProxy(parent);
 	setFrameStyle( Box | Sunken );
