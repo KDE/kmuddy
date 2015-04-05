@@ -24,13 +24,13 @@
 #include <qlayout.h>
 #include <qlabel.h>
 #include <q3multilineedit.h>
-//Added by qt3to4:
-#include <Q3VBoxLayout>
 
 #include "../../../cmapelement.h"
 #include "../../../cmappropertiespanebase.h"
 
 class CMapPluginStandard;
+
+class QVBoxLayout;
 
 /**This pane adds the ability to save notes for rooms and zones
   *@author Kmud Developer Team
@@ -51,7 +51,7 @@ public slots:
 private:
 	CMapElement *m_element;
 	/** The components of the pane */
-	Q3VBoxLayout *notesLayout;	
+	QVBoxLayout *notesLayout;	
 	QLabel *lblNotes;
 	Q3MultiLineEdit *txtNotes;
 	CMapPluginStandard *m_plugin;

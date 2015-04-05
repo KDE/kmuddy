@@ -22,8 +22,7 @@
 #include "../../../cmapmanager.h"
 
 #include <klocale.h>
-//Added by qt3to4:
-#include <Q3VBoxLayout>
+#include <QVBoxLayout>
 #include <QLabel>
 
 CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent)
@@ -31,7 +30,7 @@ CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *ico
 {
 	m_plugin = plugin;
 	m_element = element;
-	notesLayout = new Q3VBoxLayout( this );
+	notesLayout = new QVBoxLayout( this );
     notesLayout->setSpacing( 6 );
     notesLayout->setMargin( 11 );
 

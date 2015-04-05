@@ -29,9 +29,8 @@
 #include <qtabwidget.h>
 #include <qlayout.h>
 #include <qfontmetrics.h>
-//Added by qt3to4:
 #include <QPixmap>
-#include <Q3VBoxLayout>
+#include <QVBoxLayout>
 
 #include <kcolorbutton.h>
 #include <knuminput.h>
@@ -123,7 +122,7 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 	mapManager = manager;
 	QString width;
 	QString height;
-	Q3VBoxLayout *vbox = new Q3VBoxLayout((QWidget *)fraPreview);
+	QVBoxLayout *vbox = new QVBoxLayout((QWidget *)fraPreview);
 	textScrollView = new CMapTextPreview(mapManager,fraPreview);
 	vbox->addWidget( textScrollView);
 	textScrollView->show();
