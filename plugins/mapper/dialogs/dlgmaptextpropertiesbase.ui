@@ -63,7 +63,7 @@
                         </widget>
                       </item>
                       <item>
-                        <widget class="Q3ListBox" name="lstFamily">
+                        <widget class="QListWidget" name="lstFamily">
                           <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                           </property>
@@ -510,9 +510,9 @@
     </connection>
     <connection>
       <sender>lstFamily</sender>
-      <signal>highlighted(int)</signal>
+      <signal>itemSelectionChanged()</signal>
       <receiver>DlgMapTextPropertiesBase</receiver>
-      <slot>slotFamilySelected(int)</slot>
+      <slot>slotFamilySelected()</slot>
     </connection>
     <connection>
       <sender>cmdSetSize</sender>

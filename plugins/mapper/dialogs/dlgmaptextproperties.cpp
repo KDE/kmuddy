@@ -155,13 +155,11 @@ DlgMapTextProperties::~DlgMapTextProperties()
 
 void DlgMapTextProperties::fillFamilyList(void)
 {
-  lstFamily->insertStringList (QFontDatabase().families());
+  lstFamily->insertItems (0, QFontDatabase().families());
 }
 
 void DlgMapTextProperties::setFont(QFont font)
 {
-	unsigned int i;
-
 	textFont = font;
 	
 	QString family = font.family();
@@ -169,19 +167,19 @@ void DlgMapTextProperties::setFont(QFont font)
 	QString size;
 	size.sprintf("%d",font.pointSize());	
 	
-	for (i = 0 ; i<lstFamily->count();i++)
+	for (int i = 0 ; i<lstFamily->count();i++)
 	{
-		QString s = lstFamily->text(i);
+		QString s = lstFamily->item(i)->text();
 		if (s == family)
 		{
-			lstFamily->setCurrentItem(i);
+			lstFamily->setCurrentRow(i);
 			break;
 		}
 	}	
 
 	chkBold->setChecked(font.bold());
 	chkItalic->setChecked(font.italic());
-	lstFamily->centerCurrentItem();	
+	lstFamily->scrollToItem(lstFamily->currentItem());
 	slotUpdatePreview();
 }
 
@@ -222,9 +220,9 @@ void DlgMapTextProperties::slotItalicClicked(void)
 	slotUpdatePreview();
 }
 
-void DlgMapTextProperties::slotFamilySelected(int index)						
+void DlgMapTextProperties::slotFamilySelected()						
 {
-	textFont.setFamily(lstFamily->text(index));
+	textFont.setFamily(lstFamily->currentItem()->text());
 	slotUpdatePreview();
 }
 

@@ -70,7 +70,7 @@ private:
 
 private slots:
 	void slotSetSize(void);
-	void slotFamilySelected(int index);
+	void slotFamilySelected();
 	void slotItalicClicked(void);
 	void slotBoldClicked(void);
 	void slotColorChanged(const QColor &color);
