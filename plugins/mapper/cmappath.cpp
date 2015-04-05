@@ -33,19 +33,22 @@
 #include "cmaplevel.h"
 #include "cmapcmdelementproperties.h"
 
-CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir) : CMapElement(manager,NULL)
+CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir, bool twoWay) : CMapElement(manager,NULL)
 {
   setSrcRoom(srcRoom);
   setDestRoom(destRoom);
   setSrcDir(srcDir);
   setDestDir(destDir);
   setCords();
+  bSpecialExit = false;
+  specialCmd = "";
 
   setLevel(srcRoom->getLevel());
   srcRoom->addPath(this);
   destRoom->getConnectingPathList()->append(this);
 
   // Check to see if there is a a path in the opsite directon, if so make this a two way path
+  bool found = false;
   foreach (CMapPath *path, *destRoom->getPathList())
   {
     // FIXME_jp : Fix this for multiple special paths between the same rooms with different cmd's
@@ -56,18 +59,15 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CM
     {
       setOpsitePath(path);
       path->setOpsitePath(this);
+      found = true;
     }
   }
+  if (twoWay && (!found)) makeTwoWay();
 
   beforeCommand = "";
   afterCommand = "";
-  bSpecialExit = false;
-  specialCmd = "";
   done = false;
   opsitePath = NULL;
-  m_setTwoWayLater = false;
-
-  m_twoWayLaterProperties = new KMemConfig;
 
   m_dontPaintBend=0;
 }
@@ -98,8 +98,6 @@ CMapPath::~CMapPath()
     destRoom->getConnectingPathList()->removeAll(this);
   if (srcRoom)
     srcRoom->getPathList()->removeAll(this);
-
-  delete m_twoWayLaterProperties;
 }
 
 void CMapPath::setDontPaintBend(int bend)
@@ -228,6 +226,21 @@ void CMapPath::setDestDir(directionTyp DestDir)
 	destDir = DestDir;
 }
 
+void CMapPath::makeOneWay() {
+  CMapPath *path = getOpsitePath();
+  if (!path) return;
+  path->setOpsitePath(NULL);  // so it doesn't delete us too
+  delete path;
+}
+
+void CMapPath::makeTwoWay()
+{
+  CMapPath *newPath = new CMapPath(getManager(), destRoom, destDir, srcRoom, srcDir, false);
+  setOpsitePath(newPath);
+  newPath->setOpsitePath(this);
+  if (bSpecialExit)
+    newPath->setSpecialCmd(specialCmd);
+}
 
 directionTyp CMapPath::generatePath()
 {
@@ -507,7 +520,7 @@ void CMapPath::higherPaint(QPainter *p,CMapZone *zone)
 /** Used to create a deep copy of the path */
 CMapElement *CMapPath::copy(void)
 {
-	CMapPath *path = new CMapPath(getManager(),getSrcRoom(),getSrcDir(),getDestRoom(),getDestDir());
+	CMapPath *path = new CMapPath(getManager(),getSrcRoom(),getSrcDir(),getDestRoom(),getDestDir(),getOpsitePath());
 
 	path->setAfterCommand(getAfterCommand());
 	path->setBeforeCommand(getBeforeCommand());
@@ -639,15 +652,21 @@ void CMapPath::loadProperties(KConfigGroup grp)
 	setDestDir((directionTyp)grp.readEntry("DestDir",(int)getDestDir()));
 	setCords();
 
-	if (getOpsitePath())
+        if (grp.readEntry("PathTwoWay", getManager()->getMapData()->defaultPathTwoWay))
+          makeTwoWay();
+        else
+          makeOneWay();
+
+        CMapPath *opposite = getOpsitePath();
+	if (opposite)
 	{
-		getOpsitePath()->setAfterCommand(grp.readEntry("DestAfterCommand",getOpsitePath()->getAfterCommand()));
-		getOpsitePath()->setBeforeCommand(grp.readEntry("DestBeforeCommand",getOpsitePath()->getBeforeCommand()));
-		getOpsitePath()->setSrcDir((directionTyp)grp.readEntry("DestDir",(int)getOpsitePath()->getSrcDir()));
-		getOpsitePath()->setDestDir((directionTyp)grp.readEntry("SrcDir",(int)getOpsitePath()->getDestDir()));
-		getOpsitePath()->setSpecialCmd(grp.readEntry("SpecialCmdDest",getOpsitePath()->getSpecialCmd()));
-		getOpsitePath()->setSpecialExit(grp.readEntry("SpecialExit",getOpsitePath()->getSpecialExit()));
-		getOpsitePath()->setCords();
+		opposite->setAfterCommand(grp.readEntry("DestAfterCommand",opposite->getAfterCommand()));
+		opposite->setBeforeCommand(grp.readEntry("DestBeforeCommand",opposite->getBeforeCommand()));
+		opposite->setSrcDir((directionTyp)grp.readEntry("DestDir",(int)opposite->getSrcDir()));
+		opposite->setDestDir((directionTyp)grp.readEntry("SrcDir",(int)opposite->getDestDir()));
+		opposite->setSpecialCmd(grp.readEntry("SpecialCmdDest",opposite->getSpecialCmd()));
+		opposite->setSpecialExit(grp.readEntry("SpecialExit",opposite->getSpecialExit()));
+		opposite->setCords();
 	}
 
 	if (grp.hasKey("AddBend"))
@@ -698,21 +717,16 @@ void CMapPath::saveProperties(KConfigGroup grp)
 	grp.writeEntry("DestZone",getDestRoom()->getZone()->getZoneID());
 	grp.writeEntry("DestLevel",getDestRoom()->getLevel()->getLevelID());
 
-	if (m_setTwoWayLater)
-	{
-		grp.writeEntry("MakePathTwoWayLater","");
-	}
-
 	if (getOpsitePath())
 	{
-		grp.writeEntry("PathTwoWay","");
+		grp.writeEntry("PathTwoWay",true);
 		grp.writeEntry("DestAfterCommand",getOpsitePath()->getAfterCommand());
 		grp.writeEntry("DestBeforeCommand",getOpsitePath()->getBeforeCommand());
 		grp.writeEntry("SpecialCmdDest",getOpsitePath()->getSpecialCmd());
 	}
 	else
 	{
-		grp.writeEntry("PathOneWay","");
+		grp.writeEntry("PathTwoWay",false);
 	}
 }
 
@@ -788,27 +802,6 @@ void CMapPath::loadQDomElement(QDomElement *properties)
 
 	//TODO_jp : write path bends
 
-}
-
-
-void CMapPath::addTwoWayLaterProperites(QString key,QString data)
-{
-	m_twoWayLaterProperties->group("Properties").writeEntry(key,data);
-}
-
-KConfigGroup CMapPath::getTwoWayLaterProperties(void)
-{
-	return m_twoWayLaterProperties->group("Properties");
-}
-
-void CMapPath::setTwoWayLater(bool setTwoWay)
-{
-	m_setTwoWayLater = setTwoWay;
-}
-
-bool CMapPath::getTwoWayLater(void)
-{
-	return m_setTwoWayLater;
 }
 
 void CMapPath::moveBy(QPoint offset)

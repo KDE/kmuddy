@@ -33,7 +33,6 @@
 #include "../cmappath.h"
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
-#include "../cmapcmdtogglepathtwoway.h"
 
 DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent, const char *name )
 	: QDialog(parent,name)
@@ -48,25 +47,17 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 
 	txtSrcBefore->setText(properties.readEntry("SrcBeforeCommand",""));
 	txtSrcAfter->setText(properties.readEntry("SrcAfterCommand",""));
+	txtDestBefore->setText(properties.readEntry("DestBeforeCommand",""));
+	txtDestAfter->setText(properties.readEntry("DestAfterCommand",""));
 
-	if (properties.hasKey("PathTwoWay"))
-	{
-		txtDestBefore->setText(properties.readEntry("DestBeforeCommand",""));
-		txtDestAfter->setText(properties.readEntry("DestAfterCommand",""));
-		optTwoWay->setChecked(true);
-	}
-	else
-	{
-		fraDestSrcCommands->setEnabled(false);
-		txtSpecialSrc->setEnabled(false);
-		optOneWay->setChecked(true);
-	}
+        bool twoWay = properties.readEntry("PathTwoWay", manager->getMapData()->defaultPathTwoWay);
+        directionTyp srcDir = (directionTyp) properties.readEntry("SrcDir", (int) SPECIAL);
+        if (srcDir != SPECIAL) setSrcDirection(srcDir);
+        directionTyp destDir = (directionTyp) properties.readEntry("DestDir", (int) SPECIAL);
+        if (destDir != SPECIAL) setDestDirection(destDir);
 
-	if (!(pathProperties.hasKey("SrcDir") && pathProperties.hasKey("DestDir")))
-	{
-		optTwoWay->setChecked(manager->getMapData()->defaultPathTwoWay);
-		slotDirectionChange();
-	}
+	optTwoWay->setChecked(twoWay);
+	slotDirectionChange();
 
 	txtSpecialSrc->setText(properties.readEntry("SpecialCmdSrc"));
 	txtSpecialDest->setText(properties.readEntry("SpecialCmdDest"));
@@ -239,67 +230,17 @@ void DlgMapPathProperties::propertiesAccept(QString)
 	properties.writeEntry("SpecialExit",chkSpecial->isChecked(),false);
 	properties.writeEntry("SpecialCmdSrc",txtSpecialSrc->text().trimmed());
 
-	if (properties.hasKey("PathTwoWay"))
-	{
-		if (optOneWay->isChecked())
-		{
-			properties.writeEntry("PathOneWay","");
-			properties.deleteEntry("PathTwoWay");
-		}
-	}
-	else
-	{
-		if (optTwoWay->isChecked())
-		{
-			properties.deleteEntry("PathOneWay");
-			properties.writeEntry("PathTwoWay","");
-		}
-	}
+        properties.writeEntry("PathTwoWay", optTwoWay->isChecked());
 
-	if (properties.hasKey("PathTwoWay"))
-	{
-		properties.writeEntry("DestBeforeCommand",txtDestBefore->text().trimmed());
-		properties.writeEntry("DestAfterCommand",txtDestAfter->text().trimmed());
-		properties.writeEntry("SpecialCmdDest",txtSpecialDest->text().trimmed());
-	}
-	else
-	{
-		if (optTwoWay->isChecked())
-		{
-			properties.writeEntry("DestBeforeCommand",txtDestBefore->text().trimmed());
-			properties.writeEntry("DestAfterCommand",txtDestAfter->text().trimmed());
-			properties.writeEntry("SpecialCmdDest",txtSpecialDest->text().trimmed());
-		}
-	}
+	properties.writeEntry("DestBeforeCommand",txtDestBefore->text().trimmed());
+	properties.writeEntry("DestAfterCommand",txtDestAfter->text().trimmed());
+	properties.writeEntry("SpecialCmdDest",txtSpecialDest->text().trimmed());
 }
 
 void DlgMapPathProperties::pathAccept(QString cmdName)
 {
 	if (pathUndoable)
 		mapManager->openCommandGroup(cmdName);
-
-	if (path->getOpsitePath())
-	{
-		if (optOneWay->isChecked())
-		{
-			CMapCmdTogglePathTwoWay *cmd =  new CMapCmdTogglePathTwoWay(mapManager,i18n("Make Path Oneway"),path);
-			if (pathUndoable)
-				mapManager->addCommand(cmd);
-			else
-				cmd->redo();
-		}
-	}
-	else
-	{
-		if (optTwoWay->isChecked())
-		{
-			CMapCmdTogglePathTwoWay *cmd =  new CMapCmdTogglePathTwoWay(mapManager,i18n("Make Path Twoway"),path);
-			if (pathUndoable)
-				mapManager->addCommand(cmd);
-			else
-				cmd->redo();
-		}
-	}
 
 	CMapCmdElementProperties *command = new CMapCmdElementProperties(mapManager,cmdName,path);
 
@@ -309,22 +250,11 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 	command->compare("DestDir",(int)path->getDestDir(),(int)getDestDirection());
 	command->compare("SpecialExit",path->getSpecialExit(),chkSpecial->isChecked());
 	command->compare("SpecialCmdSrc",path->getSpecialCmd(),txtSpecialSrc->text().trimmed());
+	command->compare("PathTwoWay", path->getOpsitePath() != 0, optTwoWay->isChecked());
 
-	if (path->getOpsitePath())
-	{
-		command->compare("DestBeforeCommand",path->getOpsitePath()->getBeforeCommand(),txtDestBefore->text().trimmed());
-		command->compare("DestAfterCommand",path->getOpsitePath()->getAfterCommand(),txtDestAfter->text().trimmed());
-		command->compare("SpecialCmdDest",path->getOpsitePath()->getSpecialCmd(),txtSpecialDest->text().trimmed());
-	}
-	else
-	{
-		if (optTwoWay->isChecked())
-		{
-			command->getNewProperties().writeEntry("DestBeforeCommand",txtDestBefore->text().trimmed());
-			command->getNewProperties().writeEntry("DestAfterCommand",txtDestAfter->text().trimmed());
-			command->getNewProperties().writeEntry("SpecialCmdDest",txtSpecialDest->text().trimmed());
-		}
-	}
+	command->compare("DestBeforeCommand",path->getOpsitePath()->getBeforeCommand(),txtDestBefore->text().trimmed());
+	command->compare("DestAfterCommand",path->getOpsitePath()->getAfterCommand(),txtDestAfter->text().trimmed());
+	command->compare("SpecialCmdDest",path->getOpsitePath()->getSpecialCmd(),txtSpecialDest->text().trimmed());
 
 	if (pathUndoable)
 		mapManager->addCommand(command);

@@ -73,21 +73,6 @@ void CMapCmdElementDelete::undo()
 			CMapElement *elm = createElement(group);
 			elm->loadProperties(group);
 
-			if (elm->getElementType()==PATH)
-			{
-				bool undo = manager->getUndoActive();
-				manager->setUndoActive(false);
-				CMapPath *path = (CMapPath *)elm;
-				if (group.hasKey("PathTwoWay"))
-				{
-					manager->makePathTwoWay(path);
-
-					path->getOpsitePath()->setAfterCommand(group.readEntry("DestAfterCommand",""));
-					path->getOpsitePath()->setBeforeCommand(group.readEntry("DestBeforeCommand",""));
-				}
-				manager->setUndoActive(undo);
-			}
-
 			for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
 			{
 				plugin->afterElementUndeleted(elm);

@@ -34,7 +34,7 @@ class CMapRoom;
 class KMUDDY_EXPORT CMapPath : public CMapElement
 {
 public:
-	CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir);
+	CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir, bool twoWay);
 	CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom);
 	~CMapPath();
 
@@ -79,6 +79,9 @@ public:
 	void setDestRoom(CMapRoom *DestRoom);
 	/** Set a pointer to the source room */
 	void setSrcRoom(CMapRoom *SrcRoom);
+
+        void makeOneWay();
+        void makeTwoWay();
 
 	/** Set the special exit command string */
 	void setSpecialCmd(QString cmd)              { specialCmd = cmd; }
@@ -131,11 +134,6 @@ public:
 	 */
 	int mouseInPathSeg(QPoint mousePos,CMapZone *currentZone);
 
-	void setTwoWayLater(bool setTwoWay);
-
-	void addTwoWayLaterProperites(QString key,QString data);
-	KConfigGroup getTwoWayLaterProperties(void);
-	bool getTwoWayLater(void);
 	/** Used to find out if the mosuse is in the edit box of the path
 	  * @param mousePos The position of the mouse pointer
 	  * @param currentZone A pointer to the current zone
@@ -189,8 +187,6 @@ private:
 	/** If this is greater than 0 then the bend will not be painted */
 	int m_dontPaintBend;
 
-	KMemConfig *m_twoWayLaterProperties;
-	bool m_setTwoWayLater;
 	/** This is used to store a tempray list of path cords */
 	PointList tempPathCords;
 

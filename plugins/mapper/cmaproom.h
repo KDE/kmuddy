@@ -56,6 +56,7 @@ public:
 	    null is returned                                                             */
         CMapPath *getPathDirection(directionTyp dir,QString specialCmd);
 	CMapRoom *getPathTarget(directionTyp dir,QString specialCmd);
+        directionTyp bestDirectionToRoom(CMapRoom *room);
 	/** Get a list of the paths from this room */
 	QList<CMapPath *> *getPathList() { return &pathList; }
 	/** Get a list of the paths connecting with this room */

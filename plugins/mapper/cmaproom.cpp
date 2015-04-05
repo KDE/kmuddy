@@ -18,6 +18,7 @@
 #include "cmaproom.h"
 
 #include <stdlib.h>
+#include <math.h>
 
 #include <qfontmetrics.h>
 #include <qregion.h>
@@ -323,6 +324,35 @@ CMapRoom *CMapRoom::getPathTarget(directionTyp dir,QString specialCmd)
   CMapPath *path = getPathDirection(dir, specialCmd);
   if (!path) return 0;
   return path->getDestRoom();
+}
+
+directionTyp CMapRoom::bestDirectionToRoom(CMapRoom *room)
+{
+  int x1 = (getHighX() + getX()) / 2;
+  int y1 = (getHighY() + getY()) / 2;
+  int x2 = (room->getHighX() + room->getX()) / 2;
+  int y2 = (room->getHighY() + room->getY()) / 2;
+  CMapLevel *level1 = getLevel();
+  CMapLevel *level2 = room->getLevel();
+
+  directionTyp res = SPECIAL;
+  if (level1 != level2) {
+    if ((x1 != x2) || (y1 != y2)) res = ::SPECIAL;
+    else if (level1->getPrevLevel() == level2) res = ::DOWN;
+    else if (level1->getNextLevel() == level2) res = ::UP;
+    return res;
+  }
+
+  double angle = atan2 (x2 - x1, y2 - y1) * 180 / M_PI;
+  if ((angle <= 22.5) && (angle >= -22.5)) res = ::SOUTH;
+  else if ((angle <= 67.5) && (angle >= 22.5)) res = ::SOUTHEAST;
+  else if ((angle <= 112.5) && (angle >= 67.5)) res = ::EAST;
+  else if ((angle <= 157.5) && (angle >= 112.5)) res = ::NORTHEAST;
+  else if ((angle <= -22.5) && (angle >= -67.5)) res = ::SOUTHWEST;
+  else if ((angle <= -67.5) && (angle >= -112.5)) res = ::WEST;
+  else if ((angle <= -112.5) && (angle >= -157.5)) res = ::NORTHWEST;
+  else res = ::NORTH;
+  return res;
 }
 
 CMapRoom::labelPosTyp CMapRoom::getLabelPosition(void)

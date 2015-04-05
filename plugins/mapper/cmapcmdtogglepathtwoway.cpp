@@ -56,16 +56,10 @@ void CMapCmdTogglePathTwoWay::togglePath(CMapPath *path)
 {
   if (path->getOpsitePath())
   {
-    delete path->getOpsitePath();
+    path->makeOneWay();
   }
   else
   {
-    CMapPath *newPath = new CMapPath(m_mapManager, path->getDestRoom(),path->getDestDir(),path->getSrcRoom(),path->getSrcDir());
-    if (path->getSpecialExit())
-    {
-      newPath->setSpecialCmd(path->getSpecialCmd());
-      path->setOpsitePath(newPath);
-      newPath->setOpsitePath(path);
-    }
+    path->makeTwoWay();
   }
 }

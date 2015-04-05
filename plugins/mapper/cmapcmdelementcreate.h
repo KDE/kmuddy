@@ -49,8 +49,6 @@ public:
 
 	QList<CMapElement *> *getElements();
 
-	void secondStage(void);
-
 private:
 	/** The number of elements stored in the command */
 	int groups;

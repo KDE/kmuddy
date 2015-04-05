@@ -75,8 +75,9 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 
 			directionTyp srcDir	 = (directionTyp)grp.readEntry("SrcDir",0);
 			directionTyp destDir = (directionTyp)grp.readEntry("DestDir",0);
+			bool twoWay = grp.readEntry("PathTwoWay", manager->getMapData()->defaultPathTwoWay);
 
-			result = new CMapPath(manager,srcRoom,srcDir,destRoom,destDir);
+			result = new CMapPath(manager,srcRoom,srcDir,destRoom,destDir,twoWay);
 
 			((CMapPath *)result)->loadProperties(grp);
 		}

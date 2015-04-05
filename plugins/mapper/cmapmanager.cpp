@@ -981,72 +981,61 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
 
 CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 {
-  openCommandGroup(i18n("Create Path"));
-  
   CMapPath *result = NULL;
 
   KMemConfig properties;
   KConfigGroup props = properties.group("Properties");
-  DlgMapPathProperties d(this,props,false);
-
-  if (d.exec())
-  {
-    kDebug() << "createPath 1";
-      
-    directionTyp srcDir = (directionTyp)props.readEntry("SrcDir",0);
-    directionTyp destDir = (directionTyp)props.readEntry("DestDir",0);
-    QString specialCmdSrc = props.readEntry("SpecialCmdSrc");
-    QString specialCmdDest = props.readEntry("SpecialCmdDest");
-
-    if (srcRoom->getPathDirection(srcDir,specialCmdSrc)==NULL &&
-      destRoom->getPathDirection(destDir,specialCmdDest)==NULL)
-    {
-      kDebug() << "createPath 2";
-      // create
-      props.writeEntry("Type",(int)PATH);
-      props.writeEntry("SrcRoom",srcRoom->getRoomID());
-      props.writeEntry("SrcDir",(int)srcDir);
-      props.writeEntry("SrcLevel",srcRoom->getLevel()->getLevelID());
-      props.writeEntry("DestRoom",destRoom->getRoomID());
-      props.writeEntry("DestDir",(int)destDir);        
-      props.writeEntry("DestLevel",destRoom->getLevel()->getLevelID());
-      
-      CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Path"));
-      command->addElement(&properties);
-
-      addCommand(command);
-
-      command->secondStage();
-
-      QList<CMapElement *> *elements=command->getElements();
-
-      foreach (CMapElement *el, *elements)
-        if (el->getElementType()==PATH)
-          result = (CMapPath *)el;
-
-      if (result && d.getTwoWay())
-      {
-        makePathTwoWay(result);
-
-        CMapCmdElementProperties *cmd = new CMapCmdElementProperties(this,i18n("Set Path properties"),result->getOpsitePath());
-        cmd->getOrgProperties().writeEntry("SrcAfterCommand","");
-        cmd->getOrgProperties().writeEntry("SrcBeforeCommand","");  
-        cmd->getOrgProperties().writeEntry("SpecialCmdSrc","");
-        cmd->getNewProperties().writeEntry("SrcAfterCommand",props.readEntry("DestAfterCommand",""));
-        cmd->getNewProperties().writeEntry("SrcBeforeCommand",props.readEntry("DestBeforeCommand",""));
-        cmd->getNewProperties().writeEntry("SpecialCmdSrc",specialCmdDest);
-        addCommand(cmd);
-      }
-  
-    }
-    else
-    {
-      KMessageBox::information (NULL,i18n("A path already exists at this location"),i18n("KMuddy Mapper"));
-    }
-    
+  // Auto-set the directions if possible
+  directionTyp srcDir = srcRoom->bestDirectionToRoom(destRoom);
+  directionTyp destDir = getOpsiteDirection(srcDir);
+  if (srcDir != SPECIAL) {
+    // nothing if there is an exit already
+    if (srcRoom->getPathDirection(srcDir, QString())) srcDir = SPECIAL;
+    if (destRoom->getPathDirection(destDir, QString())) destDir = SPECIAL;
+  }
+  if ((srcDir != SPECIAL) && (destDir != SPECIAL)) {
+    props.writeEntry("SrcDir", (int) srcDir);
+    props.writeEntry("DestDir", (int) destDir);
   }
 
-  closeCommandGroup();
+  DlgMapPathProperties d(this,props,false);
+
+  if (!d.exec()) return NULL;
+
+  kDebug() << "createPath 1";
+
+  srcDir = (directionTyp)props.readEntry("SrcDir",0);
+  destDir = (directionTyp)props.readEntry("DestDir",0);
+  QString specialCmdSrc = props.readEntry("SpecialCmdSrc");
+  QString specialCmdDest = props.readEntry("SpecialCmdDest");
+
+  if (srcRoom->getPathDirection(srcDir,specialCmdSrc) || destRoom->getPathDirection(destDir,specialCmdDest))
+  {
+    KMessageBox::information (NULL,i18n("A path already exists at this location"),i18n("KMuddy Mapper"));
+    return NULL;
+  }
+
+  kDebug() << "createPath 2";
+  // create
+  props.writeEntry("Type",(int)PATH);
+  props.writeEntry("SrcRoom",srcRoom->getRoomID());
+  props.writeEntry("SrcDir",(int)srcDir);
+  props.writeEntry("SrcLevel",srcRoom->getLevel()->getLevelID());
+  props.writeEntry("DestRoom",destRoom->getRoomID());
+  props.writeEntry("DestDir",(int)destDir);        
+  props.writeEntry("DestLevel",destRoom->getLevel()->getLevelID());
+
+  CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Path"));
+  command->addElement(&properties);
+
+  addCommand(command);
+
+  QList<CMapElement *> *elements=command->getElements();
+
+  foreach (CMapElement *el, *elements)
+    if (el->getElementType()==PATH)
+      result = (CMapPath *)el;
+
   return result;
 }
 
@@ -1078,8 +1067,6 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
   }
     
   addCommand(command);
-
-  command->secondStage();
 
   if (!undoable)
   {

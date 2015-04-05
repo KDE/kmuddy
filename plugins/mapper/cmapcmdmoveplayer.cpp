@@ -139,7 +139,7 @@ void CMapCmdMovePlayer::redo()
 
   // Make the path two way if the default path type is two way
   if (m_manager->getMapData()->defaultPathTwoWay && (!oppositePath))
-    m_manager->makePathTwoWay(newPath);
+    newPath->makeTwoWay();
 
   m_manager->setCurrentRoom(tgroom);
   m_manager->setUndoActive(undo);

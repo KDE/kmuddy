@@ -81,30 +81,6 @@ void CMapCmdElementCreate::undo()
         executed = false;
 }
 
-void CMapCmdElementCreate::secondStage(void)
-{
-	bool active = manager->getUndoActive();
-	manager->setUndoActive(true);
-
-	foreach (CMapElement *element, elements)
-	{
-		if (element->getElementType()==PATH)
-		{
-			CMapPath *path = (CMapPath *)element;
-			if (path->getTwoWayLater())
-			{
-				manager->makePathTwoWay(path);
-
-				CMapCmdElementProperties *cmd = new CMapCmdElementProperties(manager,i18n("Set Element Properties"),path);
-				cmd->setNewProperties(path->getTwoWayLaterProperties());
-				manager->addCommand(cmd);
-			}
-		}
-	}
-
-	manager->setUndoActive(active);
-}
-
 void CMapCmdElementCreate::addElement(KMemConfig *newElementProperties,QString grp)
 {
   KConfigGroup group = properties->group(QString::number(groups++));
