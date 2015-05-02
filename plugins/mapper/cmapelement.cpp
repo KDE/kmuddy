@@ -31,7 +31,7 @@
 #define RESIZE_SIZE         10
 #define RESIZE_SIZE_HALF    5
 
-CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QObject (NULL,"mapElement")
+CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QObject (NULL)
 {
   mapManager = manager;
   position = rect;
@@ -183,7 +183,7 @@ bool CMapElement::elementIn(QRect rect,CMapZone *)
 /** Used to move the element relative to it's current position */
 void CMapElement::moveBy(QPoint offset)
 {
-	position.moveBy(offset.x(),offset.y());
+	position.translate(offset.x(),offset.y());
 }
 
 /** This is used to paint a element while it is being resized
@@ -582,16 +582,7 @@ void CMapElement::writeInt(QDomDocument *,QDomElement *e,QString key,int i)
  */
 bool CMapElement::readBool(QDomElement *e,QString key,bool b)
 {
-	QString defaultStr;
-	if (b)
-	{
-		defaultStr = "true";
-	}
-	else
-	{
-		defaultStr = "false";
-	}
-	
+	QString defaultStr = b ? "true" : "false";
 	return (e->attribute(key,defaultStr)=="true");
 }
 
@@ -602,16 +593,9 @@ bool CMapElement::readBool(QDomElement *e,QString key,bool b)
  * @param key The key of the boolean to write
  * @param b The bolean value to write
  */
-void CMapElement::writeBool(QDomDocument *doc,QDomElement *e,QString key,bool b)
+void CMapElement::writeBool(QDomElement *e,QString key,bool b)
 {
-	if (b)
-	{
-		e->setAttribute(key,"true");   
-	}
-	else
-	{
-		e->setAttribute(key,"false");
-	}
+  e->setAttribute(key, b ? "true" : "false");
 }
 
                                                   

@@ -44,7 +44,7 @@ CMapWidget::CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent) : QW
 	// Setup vars
 	viewWidget = view;
 	bMouseDrag = false;
-	QBitmap mouseDragCursorShape(16,16, move_bits,TRUE);
+	QBitmap mouseDragCursorShape = QBitmap::fromData (QSize(16,16), move_bits);
 	mouseDragCursor = new QCursor( mouseDragCursorShape, mouseDragCursorShape, -1,-1);
 	mapManager = manager;
 

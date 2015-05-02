@@ -45,7 +45,7 @@ int CMapFileFilterBase::saveData(const KUrl &url)
 	int result = -3;
 	KTemporaryFile file;
 
-	QString tempfile = file.name();
+	QString tempfile = file.fileName();
 	result = saveData(tempfile);
 
 	if (result == 0)

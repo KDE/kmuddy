@@ -77,7 +77,7 @@ void CMapToolBase::setToolTip(QString tip)
 	action->setToolTip(tip);
 }
 
-void CMapToolBase::plug (QWidget *w, int index)
+void CMapToolBase::plug (QWidget *w)
 {
 	w->addAction(action);
 }

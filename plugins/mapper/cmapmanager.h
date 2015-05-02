@@ -204,7 +204,7 @@ public:
   directionTyp getOpsiteDirection(directionTyp dir);
 
   /** Used to add a command to the command history */
-  void addCommand(CMapCommand *command,bool execute = true);
+  void addCommand(CMapCommand *command);
 
   /** Used to set the current tool */
   void setCurrentTool(CMapToolBase *tool);
@@ -288,9 +288,9 @@ public:
 
 public:
   /** A count of the number of levels created */
-  int m_levelCount;
+  unsigned int m_levelCount;
   /** A count of the number of zones created */
-  int m_zoneCount;
+  unsigned int m_zoneCount;
 
 signals:
   void closed ();

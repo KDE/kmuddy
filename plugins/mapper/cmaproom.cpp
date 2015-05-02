@@ -79,7 +79,7 @@ CMapRoom::~CMapRoom()
   foreach (CMapPath *path, paths)
     delete path;
 
-  l->getRoomList()->remove(this);
+  l->getRoomList()->removeAll(this);
 
   if (textElement)
   {
@@ -90,7 +90,7 @@ CMapRoom::~CMapRoom()
 
 void CMapRoom::setLevel(CMapLevel *level)
 {
-  if (getLevel()) getLevel()->getRoomList()->remove(this);
+  if (getLevel()) getLevel()->getRoomList()->removeAll(this);
   level->getRoomList()->append(this);
   CMapElement::setLevel(level);
 }
@@ -163,12 +163,10 @@ void CMapRoom::paint(QPainter *p,CMapZone *currentZone)
 	// This will paint the room
 	CMapElement::paint(p,currentZone);
 
-	signed int y1,x1,x2,y2;
+	signed int y1,x1;
 
 	x1 = getX()+1;
 	y1 = getY()+1;
-	x2 = getHighX();
-	y2 = getHighY();
 
 	// If this is the current room the user is in
 	// then draw the symbol to show that.
@@ -224,12 +222,10 @@ void CMapRoom::dragPaint(QPoint offset,QPainter *p,CMapZone *)
 
 void CMapRoom::lowerPaint(QPainter *p,CMapZone *z)
 {
-	signed int y1,x1,x2,y2;
+	signed int y1,x1;
 
 	x1 = getX()+1-5;
 	y1 = getY()+1-5;
-	x2 = getHighX()-5;
-	y2 = getHighY()-5;
 
 	p->setPen(getManager()->getMapData()->lowerRoomColor);
 	QBrush brush(getManager()->getMapData()->lowerRoomColor);

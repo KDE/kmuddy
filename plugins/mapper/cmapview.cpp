@@ -66,8 +66,8 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
   statusbar->addViewIndicator(lblActive);
 
   cmdFollowMode = new QPushButton(i18n("Follow Mode"),statusbar);
-  cmdFollowMode->setPixmap(UserIcon("kmud_follow.png"));
-  cmdFollowMode->setToggleButton(true);
+  cmdFollowMode->setIcon(UserIcon("kmud_follow.png"));
+  cmdFollowMode->setCheckable(true);
   cmdFollowMode->setFocusProxy(this);
   statusbar->addFollowButton(cmdFollowMode);
 

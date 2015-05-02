@@ -70,7 +70,7 @@ public:
 	/** Used to set the checked state of the tool */	
 	void setChecked(bool checked);
 
-	void plug (QWidget *w, int index=-1);
+	void plug (QWidget *w);
 
 protected:
 	/** Used to set the whats this text for the tool */

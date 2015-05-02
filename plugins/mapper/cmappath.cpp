@@ -165,7 +165,7 @@ void CMapPath::drawArrow(directionTyp dir,QPainter *p,QPoint end)
 	cords.setPoint(0,end);
 	cords.setPoint(1,x1,y1);
 	cords.setPoint(2,x2,y2);
-	p->drawPolygon(cords,FALSE,0,3);
+        p->drawPolygon(cords.constData(), 3, Qt::OddEvenFill);
 }
 
 QPoint CMapPath::getIndent(directionTyp dir,QPoint pos)
@@ -244,7 +244,6 @@ void CMapPath::makeTwoWay()
 
 directionTyp CMapPath::generatePath()
 {
-	bool result = false;
 	tempPathCords.clear();
 
 	QPoint start = getLowPos();
@@ -401,7 +400,7 @@ bool CMapPath::mouseInElement(QPoint mousePos)
 	if (srcDir == UP || srcDir == DOWN || srcDir==SPECIAL) return false;
 
 	//FIXME_jp: Handle zone paths that have been termintated
-	directionTyp tempDestDir = generatePath();
+	generatePath();
 
 	if (tempPathCords.count()>1)
 	{
@@ -636,7 +635,7 @@ void CMapPath::deletePathSegWithUndo(int seg)
 
 void CMapPath::deleteBend(QPoint bend)
 {
-	bendList.remove(bendList.find(bend));
+	bendList.removeAll(bend);
 }
 
 /** Used to load the properties of the element from a list of properties */
@@ -740,7 +739,7 @@ void CMapPath::saveQDomElement(QDomDocument *doc,QDomElement *properties)
     properties->setAttribute("AfterCommand",getAfterCommand());
 	properties->setAttribute("BeforeCommand",getBeforeCommand());
 	properties->setAttribute("SpecialCmd",getSpecialCmd());
-	writeBool(doc,properties,"SpecialExit",getSpecialExit());
+	writeBool(properties,"SpecialExit",getSpecialExit());
 	writeInt(doc,properties,"SrcDir",(int)getSrcDir());
 	writeInt(doc,properties,"DestDir",(int)getDestDir());
 	writeInt(doc,properties,"SrcRoom",getSrcRoom()->getRoomID());
@@ -883,14 +882,11 @@ QPoint CMapPath::deletePathSeg(int seg)
 	{
 		pos =bendList.at(bendList.count()-1);
 		deletedPos = (*pos);
-		// bendList.remove(pos);
-		
 	}
 	else
 	{
 		pos =bendList.at(seg-1);
 		deletedPos = (*pos);
-		//bendList.remove(pos);
 	}
 
 	return deletedPos;

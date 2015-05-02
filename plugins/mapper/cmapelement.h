@@ -214,12 +214,11 @@ protected:
 
 	/**
 	 * This metod is used to write a boolean value to a XML object
-	 * @param doc The XML document
 	 * @param e The XML object
 	 * @param key The key of the boolean to write
 	 * @param i The boolean value to write
 	 */
-	static void writeBool(QDomDocument *doc,QDomElement *e,QString key,bool b);
+	static void writeBool(QDomElement *e,QString key,bool b);
 
 protected:
 	/** This is used to store the cords of the resize handles */

@@ -194,7 +194,7 @@ void CMapManager::eventStringHandler (QString event, int, QString &par1, const Q
 
 void CMapManager::createProfileConfigPanes ()
 {
-  KPageDialog *dlg = (KPageDialog *) cDialogList::self()->getDialog ("profile-prefs");
+  /*KPageDialog *dlg = */(KPageDialog *) cDialogList::self()->getDialog ("profile-prefs");
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
     plugin->createProfileConfigPanes();
@@ -457,13 +457,11 @@ void CMapManager::initPlugins()
     }
     else
     {
-      kDebug() << "Add Plugin : " << plugin->name();
       pluginList.append(plugin);
   
       kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
       foreach (CMapToolBase *tool, *plugin->getToolList())
       {
-        kDebug() << "Add Tool : " << tool->name();
         toolList.append(tool);
       }
 
@@ -1169,7 +1167,7 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
     CMapZone *zone = (CMapZone *)element;
     QList<CMapLevel *> levels = *zone->getLevels();
     foreach (CMapLevel *level, levels)
-      deleteLevel(zone->firstLevel());
+      deleteLevel(level);
   }
 
   deleteElementWithoutGroup(element,delOpsite);
@@ -1603,7 +1601,7 @@ void CMapManager::setUndoActive(bool active)
 }
 
 /** Used to add a command to the command history */
-void CMapManager::addCommand(CMapCommand *command,bool execute)
+void CMapManager::addCommand(CMapCommand *command)
 {
   if (getUndoActive())
   {
@@ -1778,7 +1776,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   cActionManager *am = cActionManager::self();
   cStatus *status = dynamic_cast<cStatus *>(am->object ("status", am->activeSession()));
   if (status)
-    status->statusBar()->addWidget(speedwalkProgressDlg,0,true);
+    status->statusBar()->addPermanentWidget(speedwalkProgressDlg,0);
   speedwalkProgressDlg->show();
   speedwalkProgress = 0;
 

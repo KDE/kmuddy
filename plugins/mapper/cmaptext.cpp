@@ -227,7 +227,7 @@ void CMapText::paintText(QPainter *p,QColor col,QPoint pos,QFont font,QStringLis
 
 	for (QStringList::iterator it = text->begin(); it != text->end(); ++it)
 	{
-		p->drawText(pos,*it,-1);
+		p->drawText(pos,*it);
 
 		pos.setY(pos.y()+fm.height());
 	}
@@ -568,14 +568,14 @@ void CMapText::stringToList(QString str,QStringList *textList)
 	else
 	{
 		int oldIndex = 0;
-		int index = str.find('\n');
+		int index = str.indexOf('\n');
 
 		while(index!=-1)
 		{
 			textList->append(str.mid(oldIndex,index-oldIndex ));
 
-			oldIndex = index +1 ;
-			index = str.find('\n',index+1);
+			oldIndex = index + 1;
+			index = str.indexOf('\n', oldIndex);
 		}
 
 		textList->append(str.right(str.length()-oldIndex));
