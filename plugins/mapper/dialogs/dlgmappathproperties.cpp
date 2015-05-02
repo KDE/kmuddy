@@ -225,9 +225,9 @@ void DlgMapPathProperties::propertiesAccept(QString)
 {
 	properties.writeEntry("SrcBeforeCommand",txtSrcBefore->text().trimmed());
 	properties.writeEntry("SrcAfterCommand",txtSrcAfter->text().trimmed());
-	properties.writeEntry("SrcDir",(int)getSrcDirection(),0);
-	properties.writeEntry("DestDir",(int)getDestDirection(),0);
-	properties.writeEntry("SpecialExit",chkSpecial->isChecked(),false);
+	properties.writeEntry("SrcDir",(int)getSrcDirection());
+	properties.writeEntry("DestDir",(int)getDestDirection());
+	properties.writeEntry("SpecialExit",chkSpecial->isChecked());
 	properties.writeEntry("SpecialCmdSrc",txtSpecialSrc->text().trimmed());
 
         properties.writeEntry("PathTwoWay", optTwoWay->isChecked());

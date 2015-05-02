@@ -105,8 +105,7 @@ void DlgMapMovement::slotAddClicked(void)
 	}
 	else
 	{
-		text = QInputDialog::getText( i18n("KMuddy"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal,
-	                                      QString(), &ok, this );
+		text = QInputDialog::getText(this, i18n("KMuddy"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, QString(), &ok);
 	}
 
     if ( ok && !text.isEmpty() )
@@ -141,8 +140,7 @@ void DlgMapMovement::slotEditClicked(void)
 		else
 		{
 
-			text = QInputDialog::getText( i18n("Kmud"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal,
-		                                     m_lstInvalidMoveStrs->item(current)->text(), &ok, this );
+			text = QInputDialog::getText(this, i18n("Kmud"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, m_lstInvalidMoveStrs->item(current)->text(), &ok);
 		}
 
 		if ( ok && !text.isEmpty() )

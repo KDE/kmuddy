@@ -264,5 +264,5 @@ void DlgMapTextProperties::slotUpdatePreview()
 	textScrollView->setSize(QSize(width,height));
 	textScrollView->setText(txtText->text());
 	textScrollView->resizeContents(txtWidth->text().toInt(),txtHeight->text().toInt());
-	textScrollView->viewport()->repaint(false);
+	textScrollView->viewport()->update();
 }

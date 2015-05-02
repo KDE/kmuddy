@@ -533,9 +533,6 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 	int gridWidth = m_mapManager->getMapData()->gridSize.width();
 	int gridHeight = m_mapManager->getMapData()->gridSize.height();
 
-	
-	CMapZone *zone = m_mapManager->getZone();
-
 	QDomNode n = zoneNode->firstChild();
 	while (!n.isNull() )
 	{
@@ -687,7 +684,7 @@ void CMapFileFilterXML::loadPluginPropertiesForElement(CMapElement *element,QDom
 
 						QDomNamedNodeMap attribs = e.attributes();
 
-						for (int i=0; i<attribs.length();i++)
+						for (unsigned int i=0; i<attribs.length();i++)
 						{
 							QDomNode n2 = attribs.item(i);
 
