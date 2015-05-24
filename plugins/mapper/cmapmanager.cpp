@@ -81,8 +81,8 @@
 #include "cglobalsettings.h"
 #include "cstatus.h"
 
-CMapManager::CMapManager (KMuddyMapper *mapper) :
-  KXmlGuiWindow (NULL),
+CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper) :
+  KXmlGuiWindow (parent),
   cActionBase ("map-manager", 0),
   mapperPlugin (mapper)
 {

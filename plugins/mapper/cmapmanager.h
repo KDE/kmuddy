@@ -87,7 +87,7 @@ class KMUDDY_EXPORT CMapManager : public KXmlGuiWindow, public cActionBase
         Q_OBJECT
 public:
   /** Constructor used to creat the map manager */
-  CMapManager (KMuddyMapper *mapper);
+  CMapManager (QWidget *parent, KMuddyMapper *mapper);
   ~CMapManager();
 
   void eventStringHandler (QString event, int, QString &par1, const QString &);

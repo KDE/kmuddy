@@ -23,6 +23,7 @@
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <QDebug>
+#include <QDockWidget>
 
 K_PLUGIN_FACTORY (KMuddyMapperFactory, registerPlugin<KMuddyMapper>();)
 K_EXPORT_PLUGIN (KMuddyMapperFactory("kmuddy"))
@@ -32,6 +33,7 @@ struct KMuddyMapperPrivate {
   CMapFilter *filter;
   KToggleAction *showmapper;
   KComponentData componentData;
+  QDockWidget *docker;
 };
 
 KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
@@ -43,10 +45,22 @@ KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
   _priority = 200;
 
   // we need to create an instance of CMapManager, which is the main class
-  d->manager = new CMapManager (this);
-  d->filter = new CMapFilter (d->manager);
+  // The class is stored inside a docker, for now - we may want to get rid of all the xmlgui there
+  KMainWindow *mainWindow = cActionManager::self()->mainWindow ();
+  d->docker = new QDockWidget (mainWindow);
 
-  connect (d->manager, SIGNAL (closed()), this, SLOT (mapperClosed()));
+  d->docker->hide ();
+  d->docker->setWindowTitle (i18n ("Mapper"));
+  d->docker->setObjectName ("mapper");
+  mainWindow->addDockWidget (Qt::RightDockWidgetArea, d->docker);
+  d->docker->setFloating (true);
+  connect (d->docker, SIGNAL (visibilityChanged(bool)), this, SLOT (mapperClosed()));
+
+  d->manager = new CMapManager (d->docker, this);
+  d->manager->setWindowFlags (Qt::Widget);
+  d->docker->setWidget (d->manager);
+
+  d->filter = new CMapFilter (d->manager);
 
   KActionCollection *acol = cActionManager::self()->getACol ();
   d->showmapper = new KToggleAction (this);
@@ -127,11 +141,11 @@ void KMuddyMapper::processCommand (int, QString &command, bool &) {
 
 void KMuddyMapper::showMapper (bool b)
 {
-  b ? d->manager->show() : d->manager->hide();
+  b ? d->docker->show() : d->docker->hide();
 }
 
 void KMuddyMapper::mapperClosed ()
 {
-  d->showmapper->setChecked (false);
+  d->showmapper->setChecked (d->docker->isVisible());
 }
 
