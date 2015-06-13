@@ -134,6 +134,7 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper) :
   connect(speedwalkProgressDlg,SIGNAL(abortSpeedwalk()),this,SLOT(slotAbortSpeedwalk()));
 
   // set up the menus
+  setHelpMenuEnabled (false);
   createGUI (KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
 
   m_zoneCount = 0;
@@ -2076,19 +2077,28 @@ void CMapManager::slotToolsGrid()
   redrawAllViews();
 }
 
+void CMapManager::levelShift(bool up)
+{
+  CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
+  level = up ? level->getNextLevel() : level->getPrevLevel();
+  if (level) {
+    getActiveView()->showPosition(level, false);
+    return;
+  }
+
+  if (KMessageBox::warningYesNo (NULL, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+
+  createLevel(up ? UP : DOWN);
+}
 
 void CMapManager::slotToolsLevelUp()
 {
-  CMapLevel *level = getActiveView()->getCurrentlyViewedLevel()->getNextLevel();
-  if (level)
-    getActiveView()->showPosition(level,false);
+  levelShift(true);
 }
 
 void CMapManager::slotToolsLevelDown()
 {
-  CMapLevel *level = getActiveView()->getCurrentlyViewedLevel()->getPrevLevel();
-  if (level)
-    getActiveView()->showPosition(level,false);
+  levelShift(false);
 }
 
 void CMapManager::slotToolsLevelDelete()

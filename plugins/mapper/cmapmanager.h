@@ -376,6 +376,9 @@ private:
    * @param If true then enable the actions otherwise disable the actions
    */
   void enableNonViewActions(bool enabled);
+
+  /** Used by slotToolsLevel(Up/Down) */
+  void levelShift(bool up);
   
   virtual bool queryClose ();
 

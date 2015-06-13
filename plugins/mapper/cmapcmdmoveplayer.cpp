@@ -22,6 +22,7 @@
 #include "cmaplevel.h"
 #include "cmappath.h"
 #include "cmaproom.h"
+#include "cmapview.h"
 #include "cmapmanager.h"
 
 CMapCmdMovePlayer::CMapCmdMovePlayer(CMapManager *mapManager, directionTyp direction, QString specialCmd, bool create) :

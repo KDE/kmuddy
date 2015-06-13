@@ -19,6 +19,7 @@
 
 #include "cmapmanager.h"
 #include "cmaplevel.h"
+#include "cmapview.h"
 
 CMapCmdLevelCreate::CMapCmdLevelCreate(CMapManager *manager,QString name,int index)  : CMapCommand(name)
 {
@@ -35,6 +36,7 @@ CMapCmdLevelCreate::~CMapCmdLevelCreate()
 void CMapCmdLevelCreate::redo()
 {
   m_level = new CMapLevel(m_mapManager, m_index);
+  m_mapManager->getActiveView()->showPosition(m_level, false);
 
   if (m_levelID == -1)
   {

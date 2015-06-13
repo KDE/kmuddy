@@ -69,9 +69,9 @@ bool CMapViewBase::acceptFocus(void)
 void CMapViewBase::showPosition(CMapLevel *level,bool centerView)
 {
   QPoint pos(0,0);
-  CMapRoom *room =level->getRoomList()->first();
-  if (room)  
+  if (!level->getRoomList()->isEmpty())
   {
+    CMapRoom *room = level->getRoomList()->first();
     pos.setX(room->getX());
     pos.setY(room->getY());
   }
@@ -89,6 +89,13 @@ void CMapViewBase::showPosition(CMapRoom *room,bool centerView)
     setLevel(room->getLevel());
     showPosition(pos,room->getLevel(),centerView);
   }  
+}
+
+void CMapViewBase::playerPositionChanged(CMapRoom *room)
+{
+  if (!room) return;
+  if (room->getLevel() != currentLevel)
+    showPosition(room->getLevel(), false);
 }
 
 /** Used to find out if a level is visible in the view */

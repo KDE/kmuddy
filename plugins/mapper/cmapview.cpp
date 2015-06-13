@@ -187,6 +187,8 @@ void CMapView::changed()
 /** Tell this map widget to display a different zone */
 void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
 {
+  if ((!centerView) && (getCurrentlyViewedLevel() == level)) return;
+
   if (!level) { changed(); return; }
 
   setLevel(level);

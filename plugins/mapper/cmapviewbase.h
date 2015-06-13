@@ -96,7 +96,7 @@ public:
 	virtual void ensureVisible(QPoint)              { }
 
 	/** This method is called when the current position of the player changes */
-	virtual void playerPositionChanged(CMapRoom *) {}
+	virtual void playerPositionChanged(CMapRoom *);
 	/** Used to set the current level. This is for internal use */
 	virtual void setLevel(CMapLevel *level);
         virtual void requestPaint() = 0;
