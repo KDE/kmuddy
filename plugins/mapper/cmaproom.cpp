@@ -71,13 +71,17 @@ CMapRoom::~CMapRoom()
   // Delete the paths for the room
   // First make a copy, as deleting rooms alters this list
   QList<CMapPath *> paths = pathList;
-  foreach (CMapPath *path, paths)
+  foreach (CMapPath *path, paths) {
+    path->setOpsitePath(0);  // prevents a crash
     delete path;
+  }
 
   // Same for paths connecting with this room
   paths = connectingPaths;
-  foreach (CMapPath *path, paths)
+  foreach (CMapPath *path, paths) {
+    path->setOpsitePath(0);  // prevents a crash
     delete path;
+  }
 
   l->getRoomList()->removeAll(this);
 

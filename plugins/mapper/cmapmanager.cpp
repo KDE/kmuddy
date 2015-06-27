@@ -326,16 +326,6 @@ void CMapManager::initMenus()
   m_viewLowerLevel->setText ( i18n("Map Lower Level"));
   connect  (m_viewLowerLevel, SIGNAL (triggered()), this, SLOT(slotViewLowerLevel()));
   actionCollection()->addAction ("viewLowerLevel", m_viewLowerLevel);
-  m_viewToolsToolbar = new KToggleAction (this);
-  m_viewToolsToolbar->setText ( i18n("Tools Toolbar"));
-  connect  (m_viewToolsToolbar, SIGNAL (triggered()), this, SLOT(slotViewToolsToolbar()));
-  actionCollection()->addAction ("viewToolsToolbar", m_viewToolsToolbar);
-  m_viewToolsToolbar->setChecked(true);
-  m_viewNavToolbar = new KToggleAction (this);
-  m_viewNavToolbar->setText ( i18n("Navigation Toolbar"));
-  connect  (m_viewNavToolbar, SIGNAL (triggered()), this, SLOT(slotViewNavToolbar()));
-  actionCollection()->addAction ("viewNavToolbar", m_viewNavToolbar);
-  m_viewNavToolbar->setChecked(true);
 
   // Room Popup Actions
   KAction *action;
@@ -2104,9 +2094,12 @@ void CMapManager::slotToolsLevelDown()
 void CMapManager::slotToolsLevelDelete()
 {
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
+  if (!level) return;
+  int count = getZone()->getLevels()->count();
+  if (count <= 1) return;
 
-  if (level)
-    deleteLevel(level);
+  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  deleteLevel(level);
 }
 
 void CMapManager::slotToolsCreateMode()
@@ -2124,38 +2117,6 @@ void CMapManager::slotViewLowerLevel()
 {
   mapData->showLowerLevel = m_viewLowerLevel->isChecked();
   redrawAllViews();
-}
-
-void CMapManager::slotViewToolsToolbar()
-{
-  QWidget* toolBar = factory()->container("tools", this);
-  if (toolBar == 0 || !toolBar->inherits("QToolBar"))
-    return;
-
-  if(!m_viewToolsToolbar->isChecked())
-  {
-    toolBar->hide();
-  }
-  else
-  {
-    toolBar->show();
-  }
-}
-
-void CMapManager::slotViewNavToolbar()
-{
-  QWidget* toolBar = factory()->container("navigation", this);
-  if (toolBar == 0 || !toolBar->inherits("QToolBar"))
-    return;
-
-  if(!m_viewNavToolbar->isChecked())
-  {
-    toolBar->hide();
-  }
-  else
-  {
-    toolBar->show();
-  }
 }
 
 bool CMapManager::queryClose()

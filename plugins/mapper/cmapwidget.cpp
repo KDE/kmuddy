@@ -66,9 +66,10 @@ CMapWidget::~CMapWidget()
 /** Used to create the element context menus */
 void CMapWidget::initContexMenus(void)
 {
-        room_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("room_popup",mapManager);
-	text_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("text_popup",mapManager);
-	path_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("path_popup",mapManager);	
+  room_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("room_popup",mapManager);
+  text_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("text_popup",mapManager);
+  path_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("path_popup",mapManager);
+  empty_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("empty_popup",mapManager);
 }
 
 /** Used to get the views */
@@ -241,7 +242,7 @@ void CMapWidget::showRoomContextMenu(void)
 	}
 	
 
-	popupMenu((CMapElement *)room,room_menu,selectedPos);
+  showContextMenu (room_menu);
 }
 
 void CMapWidget::showPathContextMenu(void)
@@ -264,27 +265,42 @@ void CMapWidget::showPathContextMenu(void)
 	pathEditBends->setEnabled(path->getBendCount() > 0);
 	pathAddBend->setEnabled(path->getSrcRoom()->getZone()==path->getDestRoom()->getZone());
 
-	popupMenu((CMapElement *)path,path_menu,selectedPos);
+  showContextMenu (path_menu);
 }
 
 
 void CMapWidget::showTextContextMenu(void)
 {
-	CMapText *text = (CMapText *)mapManager->getSelectedElement();
-	popupMenu((CMapElement *)text,text_menu,selectedPos);
+  showContextMenu (text_menu);
 }
 
+void CMapWidget::showOtherContextMenu(void)
+{
+  showContextMenu (empty_menu);
+}
+
+void CMapWidget::showContextMenu(Q3PopupMenu *menu)
+{
+  CMapElement *el = mapManager->getSelectedElement();
+  popupMenu(el, menu, selectedPos);
+}
 
 void CMapWidget::showContexMenu(QMouseEvent *e)
 {
   CMapLevel *level = viewWidget->getCurrentlyViewedLevel();
   if (!level) return;
-  CMapElement *element = level->findElementAt (e->pos());
-  if (!element) return;
 
-  mapManager->setSelectedElement(element);
   mapManager->setSelectedPos(e->pos());
   selectedPos = e->pos();
+
+  mapManager->setSelectedElement(0);
+  CMapElement *element = level->findElementAt (e->pos());
+  if (!element) {
+    showOtherContextMenu();
+    return;
+  }
+
+  mapManager->setSelectedElement(element);
 
   mapManager->unsetEditElement();
   switch(element->getElementType())
@@ -292,25 +308,25 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
     case ROOM : showRoomContextMenu(); break;
     case PATH : showPathContextMenu(); break;
     case TEXT : showTextContextMenu(); break;
-    case OTHER: break;
+    default   : showOtherContextMenu(); break;
   }
 }
 
 /** This method is used to tell the plugins a menu is about to open then open the menu */
 void CMapWidget::popupMenu(CMapElement *element,Q3PopupMenu *menu,QPoint pos)
 {
-	for (CMapPluginBase *plugin = mapManager->getPluginList()->first();plugin!=0;plugin = mapManager->getPluginList()->next())
-	{
-		plugin->beforeOpenElementMenu(element);
-	}
-	menu->popup(mapToGlobal(pos));
+  if (element) {
+    for (CMapPluginBase *plugin = mapManager->getPluginList()->first();plugin!=0;plugin = mapManager->getPluginList()->next())
+      plugin->beforeOpenElementMenu(element);
+  }
+  menu->popup(mapToGlobal(pos));
 }
 
 /** This is called when the mouse leaves the widget */
 void CMapWidget::leaveEvent(QEvent *)
 {
-	// Send the mouse event to the current tool
-	mapManager->getCurrentTool()->mouseLeaveEvent();
+  // Send the mouse event to the current tool
+  mapManager->getCurrentTool()->mouseLeaveEvent();
 }
 
 /** This is called when the mouse enters the widget */

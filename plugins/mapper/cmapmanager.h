@@ -320,8 +320,6 @@ private slots:
 
   void slotViewUpperLevel();
   void slotViewLowerLevel();
-  void slotViewToolsToolbar();
-  void slotViewNavToolbar();
 
   void slotWalkPlayerAlongPath(void);
 
@@ -442,8 +440,6 @@ private:
 
   KToggleAction *m_viewLowerLevel;
   KToggleAction *m_viewUpperLevel;
-  KToggleAction *m_viewToolsToolbar;
-  KToggleAction *m_viewNavToolbar;
 
   KSelectAction *labelMenu;
 
