@@ -42,19 +42,6 @@ cInputLine::cInputLine (int sess, QString objName, QWidget *parent)
   KCompletion *comp = completionObject();
   comp->setOrder (KCompletion::Weighted);
   comp->setSoundsEnabled (false);
-  connect (this, SIGNAL (returnPressed (const QString &)), comp, SLOT (addItem (const QString &)));
-
-  //put some commands to completion to prevent unwanted expansion
-  comp->addItem ("n");
-  comp->addItem ("w");
-  comp->addItem ("s");
-  comp->addItem ("e");
-  comp->addItem ("nw");
-  comp->addItem ("ne");
-  comp->addItem ("sw");
-  comp->addItem ("se");
-  comp->addItem ("d");
-  comp->addItem ("u");
 
   //and the context menu
   menuitems = false;
@@ -191,6 +178,10 @@ void cInputLine::handleEnter (const QString &text)
 {
   // send the command
   invokeEvent ("command", sess(), text);
+
+  // Add to auto-complete, but only if the text is at least 5 character long
+  KCompletion *comp = completionObject();
+  if (text.length() > 4) comp->addItem (text);
 
   //history position is 0 again, so that we can use arrows correctly
   historypos = 0;
