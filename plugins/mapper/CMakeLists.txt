@@ -47,7 +47,6 @@ set(kmuddymapper_PART_SRCS
    dialogs/dlgmaptextproperties.cpp
    dialogs/dlgmaproomproperties.cpp
    dialogs/dlgmappathproperties.cpp
-   dialogs/dlgmapzoneproperties.cpp
    dialogs/dlgspeedwalkprogress.cpp
    dialogs/dlgmapcolor.cpp
    dialogs/dlgmapspeedwalk.cpp
@@ -63,7 +62,6 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmaptextpropertiesbase.ui
    dialogs/dlgmaproompropertiesbase.ui
    dialogs/dlgmappathpropertiesbase.ui
-   dialogs/dlgmapzonepropertiesbase.ui
    dialogs/dlgspeedwalkprogressbase.ui
    dialogs/dlgmapdirectionsbase.ui
    )

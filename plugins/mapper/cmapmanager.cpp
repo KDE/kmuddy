@@ -68,7 +68,6 @@
 #include "dialogs/dlgmaproomproperties.h"
 #include "dialogs/dlgmappathproperties.h"
 #include "dialogs/dlgmaptextproperties.h"
-#include "dialogs/dlgmapzoneproperties.h"
 #include "dialogs/dlgspeedwalkprogress.h"
 #include "dialogs/dlgmapinfo.h"
 #include "dialogs/dlgmapspeedwalk.h"
