@@ -30,6 +30,21 @@
 #include <QTextCursor>
 #include <kglobalsettings.h>
 
+class cCompletion : public KCompletion {
+ public:
+  cCompletion() {
+    setOrder (KCompletion::Weighted);
+    setSoundsEnabled (false);
+  }
+
+  /** Overridden completion function that ensures that short strings do not get expanded at all
+   This is because we don't store short commands, and don't want the client to auto-complete them to somethign undesirable */
+  virtual QString makeCompletion (const QString &string) {
+    if (string.length() < 5) return QString();
+    return KCompletion::makeCompletion(string);
+  }
+};
+
 cInputLine::cInputLine (int sess, QString objName, QWidget *parent)
 : KLineEdit(parent), cActionBase (objName, sess)
 {
@@ -39,9 +54,9 @@ cInputLine::cInputLine (int sess, QString objName, QWidget *parent)
   ss = sl = 0;
 
   //enable completion
-  KCompletion *comp = completionObject();
-  comp->setOrder (KCompletion::Weighted);
-  comp->setSoundsEnabled (false);
+  KCompletion *comp = new cCompletion();
+  setCompletionObject(comp);
+  setAutoDeleteCompletionObject(true);
 
   //and the context menu
   menuitems = false;
