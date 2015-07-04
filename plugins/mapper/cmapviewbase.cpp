@@ -28,7 +28,6 @@
 CMapViewBase::CMapViewBase(CMapManager *manager,QWidget *parent) : QWidget(parent)
 {
   mapManager = manager;
-  viewActive = false;
   currentLevel = 0;
 
   setFocusPolicy(Qt::StrongFocus);
@@ -75,7 +74,6 @@ void CMapViewBase::showPosition(CMapLevel *level,bool centerView)
     pos.setX(room->getX());
     pos.setY(room->getY());
   }
-  setLevel(level);
   showPosition(pos,level,centerView);
 }
 
@@ -86,7 +84,6 @@ void CMapViewBase::showPosition(CMapRoom *room,bool centerView)
   {
     pos.setX(room->getX());
     pos.setY(room->getY());
-    setLevel(room->getLevel());
     showPosition(pos,room->getLevel(),centerView);
   }  
 }
@@ -127,8 +124,6 @@ bool CMapViewBase::isElementVisible(CMapElement *element)
 /** Used to set the view to active */
 void CMapViewBase::focusInEvent(QFocusEvent *)
 {
-//  if (acceptFocus())
-//    mapManager->setActiveView(this);
 }
 
 void CMapViewBase::closeEvent ( QCloseEvent *)

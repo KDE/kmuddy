@@ -83,10 +83,6 @@ public:
 	/** Used to let the map manager know if it should register the focus of this widget */
 	virtual bool acceptFocus(void);
 
-	/** Used to set the view to active */
-	virtual void setActive(bool active)             { viewActive = active; }
-	virtual bool getActive(void)                    { return viewActive; }
-
 	/** Used to find out if a element is visible in the view */
 	virtual bool isElementVisible(CMapElement *element);
     /** Used to find out if a level is visible in the view */
@@ -113,7 +109,6 @@ protected:
 	CMapManager *mapManager;
 	/** A pointer to the current level for this map widget */
 	CMapLevel *currentLevel;
-	bool viewActive;
 };
 
 #endif

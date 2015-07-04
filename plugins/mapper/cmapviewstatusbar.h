@@ -18,8 +18,7 @@
 #ifndef CMAPMUDVIEWSTATUSBAR_H
 #define CMAPMUDVIEWSTATUSBAR_H
 
-#include <q3frame.h>
-//Added by qt3to4:
+#include <QStatusBar>
 #include <QLabel>
 
 class QLabel;
@@ -30,29 +29,22 @@ class QHBoxLayout;
   *@author Kmud Developer Team
   */
 
-class CMapViewStatusbar : public Q3Frame
+class CMapViewStatusbar : public QStatusBar
 {
    Q_OBJECT
 public: 
-	CMapViewStatusbar(QWidget *parent=0);
-	~CMapViewStatusbar();
+  CMapViewStatusbar(QWidget *parent=0);
+  ~CMapViewStatusbar();
 
-	void setLevel(int level);
-	void setZone(QString zone);
-	void setRoom(QString room);
+  void setLevel(int level);
+  void setZone(QString zone);
+  void setRoom(QString room);
 
-	void addViewIndicator(QLabel *indicator);
-	void addFollowButton(QPushButton *button);
+  void addFollowButton(QPushButton *button);
 
 private:
-	QHBoxLayout *layout;
-
-	QLabel *lblRoomLabel;
-	QLabel *lblRoomStatus;
-	QLabel *lblLevelLabel;
-	QLabel *lblLevelStatus;
-	QLabel *lblZoneLabel;
-	QLabel *lblZoneStatus;
+  struct Private;
+  Private *d;
 };
 
 #endif

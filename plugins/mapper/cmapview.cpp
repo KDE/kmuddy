@@ -42,9 +42,6 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
 {
   kDebug() << "CMapView::CMapView create view";
 
-  activeLed = UserIcon ("kmud_active.png");
-  inactiveLed = UserIcon ("kmud_inactive.png");
-
   QVBoxLayout *vbox = new QVBoxLayout((QWidget *)this);
 
   scroller = new QScrollArea(this);
@@ -59,11 +56,6 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
 
   statusbar = new CMapViewStatusbar(this);
   vbox->addWidget(statusbar);
-
-  lblActive = new QLabel(i18n("Active"),statusbar);
-  lblActive->setPixmap(inactiveLed);
-  lblActive->setFocusProxy(this);
-  statusbar->addViewIndicator(lblActive);
 
   cmdFollowMode = new QPushButton(i18n("Follow Mode"),statusbar);
   cmdFollowMode->setIcon(UserIcon("kmud_follow.png"));
@@ -204,8 +196,7 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
   statusbar->setZone(level->getZone()->getLabel());
   statusbar->setLevel(level->getNumber());
 
-  if (getActive())
-    mapManager->activeViewChanged();
+  mapManager->activeViewChanged();
 }
 
 /** This is used ensure a location is visiable for views that scroll */
@@ -273,13 +264,6 @@ int CMapView::getHeight(void)
   if (mapWidget->height() > scroller->viewport()->height())
     return mapWidget->height();
   return scroller->viewport()->height();
-}
-
-/** Used to set the view to active */
-void CMapView::setActive(bool active)
-{
-  CMapViewBase::setActive(active);
-  lblActive->setPixmap(active ? activeLed : inactiveLed);
 }
 
 void CMapView::setCursor ( const QCursor & cursor)

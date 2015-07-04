@@ -82,9 +82,6 @@ public:
     /* Used to calculate the correct size for the widget */
 	void checkSize(QPoint pos);
 
-	/** Used to set the view to active */
-	virtual void setActive(bool active);
-
 	/** This is used ensure a location is visiable for views that scroll */
 	virtual void ensureVisible(QPoint pos);
 
@@ -100,12 +97,6 @@ protected:
 
 private:
 	HVBoxLayout *layout;
-	/** The active view indicatior */
-	QPixmap activeLed;
-	/** The inactive view pixmap */
-	QPixmap inactiveLed;
-	/** The active view indicator */
-	QLabel *lblActive;
 	/** A toggle button to tell the map view to follow the player */
 	QPushButton *cmdFollowMode;
         /** The scrolling area wrapping the map widget */

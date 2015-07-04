@@ -1205,15 +1205,11 @@ void CMapManager::exportMap(const KUrl& url,CMapFileFilterBase *filter)
 /** Used to inform to change the state of the navigation tools */
 void CMapManager::activeViewChanged(void)
 {
-  if (activeView)
-  {
-    CMapLevel *level = activeView->getCurrentlyViewedLevel();
-    if (level)
-    {
-      m_toolsUpLevel->setEnabled(level->getNextLevel());
-      m_toolsDownLevel->setEnabled(level->getPrevLevel());
-    }
-  }
+  if (!activeView) return;
+  CMapLevel *level = activeView->getCurrentlyViewedLevel();
+  if (!level) return;
+
+  // nothing here at this time
 }
 
 void CMapManager::levelChanged(CMapLevel *level)

@@ -23,76 +23,66 @@
 
 #include <klocale.h>
 
-CMapViewStatusbar::CMapViewStatusbar(QWidget *parent) : Q3Frame(parent,0)
+struct CMapViewStatusbar::Private {
+  QLabel *lblRoomLabel;
+  QLabel *lblRoomStatus;
+  QLabel *lblLevelLabel;
+  QLabel *lblLevelStatus;
+  QLabel *lblZoneLabel;
+  QLabel *lblZoneStatus;
+};
+
+CMapViewStatusbar::CMapViewStatusbar(QWidget *parent) : QStatusBar(parent)
 {
-	setFocusProxy(parent);
-	setFrameStyle( Box | Sunken );
-	layout = new QHBoxLayout(this);
-	layout->setMargin(3);
+  d = new Private;
 
-	lblRoomLabel = new QLabel(i18n("Current Room : "),this);
-	lblRoomLabel->setFocusProxy(parent);
-	QFont f = lblRoomLabel->font();
-	f.setItalic(true);
-	lblRoomStatus = new QLabel(i18n("Unknown"),this);
-	lblRoomStatus->setFont(f);
-	lblRoomStatus->setFocusProxy(parent);
-	lblLevelLabel = new QLabel(i18n("Level : "),this);
-	lblLevelLabel->setFocusProxy(parent);
-	lblLevelStatus = new QLabel(i18n("1"),this);
-	lblLevelStatus->setFont(f);
-	lblLevelStatus->setFocusProxy(parent);
-	lblZoneLabel = new QLabel(i18n("Zone : "),this);
-	lblZoneLabel->setFocusProxy(parent);
-	lblZoneStatus = new QLabel(i18n("Unnamed"),this);
-	lblZoneStatus->setFont(f);
-	lblZoneStatus->setFocusProxy(parent);
+  // labels
+  d->lblRoomLabel = new QLabel(i18n("Current Room : "), this);
+  d->lblLevelLabel = new QLabel(i18n("Level : "),this);
+  d->lblZoneLabel = new QLabel(i18n("Zone : "),this);
 
-	layout->addSpacing(5);
-	layout->addWidget(lblZoneLabel);
-	layout->addWidget(lblZoneStatus);
-	layout->addSpacing(5);
-	layout->addWidget(lblLevelLabel);
-	layout->addWidget(lblLevelStatus);
-	layout->addSpacing(5);
-	layout->addWidget(lblRoomLabel);
-	layout->addWidget(lblRoomStatus);
-	layout->addStretch(1);
-	layout->addSpacing(5);
+  QFont f = d->lblRoomLabel->font();
+  f.setItalic(true);
+  d->lblRoomStatus = new QLabel(i18n("Unknown"),this);
+  d->lblRoomStatus->setFont(f);
+  d->lblLevelStatus = new QLabel(i18n("1"),this);
+  d->lblLevelStatus->setFont(f);
+  d->lblZoneStatus = new QLabel(i18n("Unnamed"),this);
+  d->lblZoneStatus->setFont(f);
+
+  addWidget(d->lblZoneLabel);
+  addWidget(d->lblZoneStatus);
+  addWidget(d->lblLevelLabel);
+  addWidget(d->lblLevelStatus);
+  addWidget(d->lblRoomLabel);
+  addWidget(d->lblRoomStatus);
 }
 
 CMapViewStatusbar::~CMapViewStatusbar()
 {
+  delete d;
 }
 
 void CMapViewStatusbar::setLevel(int lvl)
 {
-	lblLevelStatus->setText(QString::number(lvl));
+  d->lblLevelStatus->setText(QString::number(lvl));
 }
 
 void CMapViewStatusbar::setZone(QString zone)
 {
-	if (zone.isEmpty())
-		zone = "Unknown";
-		
-	lblZoneStatus->setText(zone);
+  if (zone.isEmpty())
+    zone = "Unknown";
+  d->lblZoneStatus->setText(zone);
 }
 
 void CMapViewStatusbar::setRoom(QString room)
 {
-	if (room.isEmpty())
-		room = "Unknown";
-
-	lblRoomStatus->setText(room);
+  if (room.isEmpty()) room = "Unknown";
+  d->lblRoomStatus->setText(room);
 }	
-
-void CMapViewStatusbar::addViewIndicator(QLabel *indicator)
-{
-	layout->insertWidget(0,indicator);
-}
 
 void CMapViewStatusbar::addFollowButton(QPushButton *button)
 {
-	layout->addWidget(button);
+  addPermanentWidget(button);
 }
 
