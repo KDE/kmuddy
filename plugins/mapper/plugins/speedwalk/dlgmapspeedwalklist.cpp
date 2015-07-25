@@ -608,7 +608,7 @@ void DlgMapSpeedwalkList::slotLevelOpenNew()
 {
 	if (m_selectedItem->getLevel()!=NULL)
 	{
-		m_manager->openNewMapView(m_selectedItem->getLevel());
+		m_manager->displayLevel(m_selectedItem->getLevel(), true);
 	}
 }
 

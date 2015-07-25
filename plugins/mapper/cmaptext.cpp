@@ -684,14 +684,6 @@ void CMapText::saveProperties(KConfigGroup properties)
 	{
 		properties.writeEntry("LinkedType",(int)m_linkElement->getElementType());
 
-		if (m_linkElement->getElementType()==ZONE)
-		{
-			CMapZone *zone = (CMapZone *)m_linkElement;
-			properties.writeEntry("LinkedLevel",zone->getLevel()->getLevelID());
-			properties.writeEntry("LinkedID",zone->getZoneID());
-			properties.writeEntry("LabelPos",(int)zone->getLabelPosition());
-		}
-
 		if (m_linkElement->getElementType()==ROOM)
 		{
 			CMapRoom *room = (CMapRoom *)m_linkElement;

@@ -499,7 +499,9 @@ CMapData *CMapManager::getMapData() const
 CMapZone *CMapManager::getZone()
 {
   CMapZone *zone = mapData->rootZone;
-  if (!zone) zone = new CMapZone(this);
+  if (!zone)
+    zone = new CMapZone(this);
+
   return zone;
 }
 
@@ -512,17 +514,15 @@ void CMapManager::openMapView()
   {
     CMapRoom *firstRoom = findFirstRoom(NULL);
     if (firstRoom)
-    {
-      activeView->showPosition(firstRoom->getLevel());
-    }
+      displayLevel(firstRoom->getLevel(), true);
   }
   enableViewControls(true);
 }
 
-void CMapManager::openNewMapView(CMapLevel *level)
+void CMapManager::displayLevel(CMapLevel *level, bool centerView)
 {
   CMapViewBase *mapView = getActiveView();
-  mapView->showPosition(level);
+  mapView->showPosition(level, centerView);
   enableViewControls(true);
 }
 
@@ -777,8 +777,11 @@ void CMapManager::eraseZone(CMapZone *zone)
 {
   if (zone == 0)
     return;
-  
-  foreach (CMapLevel *level, *zone->getLevels())
+
+  QList<CMapLevel *> levels;
+  for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
+    levels.append(zone->getLevel(idx));
+  foreach (CMapLevel *level, levels)
   {
     // TODO: this seems to not delete things correctly
     foreach (CMapRoom *room, *level->getRoomList())
@@ -788,8 +791,9 @@ void CMapManager::eraseZone(CMapZone *zone)
     }
     level->getRoomList()->clear();
     level->getTextList()->clear();
+
+    delete level;
   }
-  zone->getLevels()->clear();
 }
 
 /** Create new bottom or top level depending on the given direction */
@@ -799,7 +803,7 @@ CMapLevel *CMapManager::createLevel(directionTyp dir)
 
   CMapCmdLevelCreate *cmd = NULL;
 
-  int pos = (dir == UP) ? getZone()->getLevels()->count() : 0;
+  int pos = (dir == UP) ? getZone()->levelCount() : 0;
   if (getUndoActive())
   {
     cmd = new CMapCmdLevelCreate(this,i18n("Create Level"),pos);
@@ -820,9 +824,13 @@ CMapLevel *CMapManager::createLevel(directionTyp dir)
   * @return Null if no level is found otherwise a pointer to the level */
 CMapLevel *CMapManager::findLevel(unsigned int id)
 {
-  foreach (CMapLevel *level, *getZone()->getLevels())
+  CMapZone *zone = getZone();
+  for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
+  {
+    CMapLevel *level = zone->getLevel(idx);
     if (level->getLevelID() == id)
       return level;
+  }
 
   return NULL;
 }
@@ -1073,10 +1081,14 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
 /** Find the first room in the map, if one can't be found then create one */
 CMapRoom *CMapManager::findFirstRoom(CMapRoom *existingRoom)
 {
-  foreach (CMapLevel *level, *getZone()->getLevels())
+  CMapZone *zone = getZone();
+  for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
+  {
+    CMapLevel *level = zone->getLevel(idx);
     foreach (CMapRoom *room, *level->getRoomList())
       if (room!=existingRoom)
         return room;
+  }
 
   // If we get to this point then no room was found so create one
   return CMapElementUtil::createRoom(this, QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()), getZone()->firstLevel());
@@ -1151,11 +1163,13 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
       deleteElementWithoutGroup(path,false);
   }
 
-  if (element->getElementType()==ZONE)
+  if (element->getElementType() == ZONE)
   {
     // Delete the levels in the zone
     CMapZone *zone = (CMapZone *)element;
-    QList<CMapLevel *> levels = *zone->getLevels();
+    QList<CMapLevel *> levels;
+    for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
+      levels.append(zone->getLevel(idx));
     foreach (CMapLevel *level, levels)
       deleteLevel(level);
   }
@@ -1481,10 +1495,13 @@ void CMapManager::getCounts(int *levels,int *rooms,int *paths,int *labels)
   *rooms = 0;
   *labels = 0;
   *paths = 0;
+  CMapZone *zone = getZone();
+  *levels = zone->levelCount();
 
-  *levels = getZone()->getLevels()->count();
-  foreach (CMapLevel *level, *getZone()->getLevels())
+  for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
   {
+    CMapLevel *level = zone->getLevel(idx);
+
     foreach (CMapRoom *room, *level->getRoomList())
       *paths += room->getPathList()->count();
 
@@ -1676,9 +1693,12 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   pathToWalk.clear();
 
   // Reset the seach count for all the rooms
-  foreach (CMapLevel *level, *getZone()->getLevels())
+  for (unsigned int idx = 0; idx < getZone()->levelCount(); ++idx)
+  {
+    CMapLevel *level = getZone()->getLevel(idx);
     foreach (CMapRoom *room, *level->getRoomList())
       room->setMoveTime(-1);
+  }
 
   // Init things for the start room
   srcRoom = currentRoom;
@@ -2067,7 +2087,7 @@ void CMapManager::levelShift(bool up)
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
   level = up ? level->getNextLevel() : level->getPrevLevel();
   if (level) {
-    getActiveView()->showPosition(level, false);
+    displayLevel(level, false);
     return;
   }
 
@@ -2090,7 +2110,7 @@ void CMapManager::slotToolsLevelDelete()
 {
   CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
   if (!level) return;
-  int count = getZone()->getLevels()->count();
+  int count = getZone()->levelCount();
   if (count <= 1) return;
 
   if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;

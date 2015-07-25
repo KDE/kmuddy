@@ -19,8 +19,7 @@
 #define CMAPZONE_H
 
 #include <qcolor.h>
-#include <QList>
-
+#include <QStandardItemModel>
 #include "cmapelement.h"
 
 #include "kmemconfig.h"
@@ -58,8 +57,16 @@ public:
 	void setBackgroundColor(QColor col);
 	QColor getBackgroundColor(void);
 
-	QList<CMapLevel *> *getLevels() { return &mapLevelList; }
-        CMapLevel *firstLevel() const;
+	QStandardItemModel *levelsModel() { return &mapLevelModel; }
+        unsigned int levelCount() const;
+        CMapLevel *firstLevel() const { return getLevel(0); };
+        CMapLevel *getLevel(int idx) const;
+        int levelIndex(const CMapLevel *level) const;
+        void addLevel(CMapLevel *level);
+        void insertLevel(CMapLevel *level, int pos);
+        void setLevelName(CMapLevel *level, const QString &name);
+        /** Removes a level, doesn't delete it */
+        void removeLevel(CMapLevel *level);
 
 	//void paint(QPainter *p,CMapZone *zone);
 	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone);
@@ -121,8 +128,8 @@ private:
 	QColor color;
 	QColor backgroundCol;
 
-	/** This is a list of all the maps for this mud */
-	QList<CMapLevel *> mapLevelList;
+	/** This is a list of all the map levels for this zone */
+	QStandardItemModel mapLevelModel;
 };
 
 #endif

@@ -88,7 +88,7 @@ void CMapCmdMovePlayer::redo()
 
     if ((m_direction == UP) || (m_direction == DOWN))
     {
-      int pos = (m_direction == UP) ? destLevel->getZone()->getLevels()->count() : 0;
+      int pos = (m_direction == UP) ? destLevel->getZone()->levelCount() : 0;
       destLevel = (m_direction == UP) ? destLevel->getNextLevel() : destLevel->getPrevLevel();
       if (!destLevel) {
         destLevel = new CMapLevel (m_manager, pos);

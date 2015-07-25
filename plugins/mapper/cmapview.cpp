@@ -54,7 +54,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : CMapViewBase(manager,
   scroller->setWidget(mapWidget);
   mapWidget->show();
 
-  statusbar = new CMapViewStatusbar(this);
+  statusbar = new CMapViewStatusbar(manager, this);
   vbox->addWidget(statusbar);
 
   cmdFollowMode = new QPushButton(i18n("Follow Mode"),statusbar);
@@ -192,9 +192,9 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
     scroller->ensureVisible(pos.x(),pos.y(), width()/2, height()/2);
 
   // Update the status bar
+  statusbar->setZone(mapManager->getZone());
+  statusbar->setLevel(level);
   statusbar->setRoom(mapManager->getCurrentRoom()->getLabel());
-  statusbar->setZone(level->getZone()->getLabel());
-  statusbar->setLevel(level->getNumber());
 
   mapManager->activeViewChanged();
 }

@@ -19,11 +19,12 @@
 #define CMAPMUDVIEWSTATUSBAR_H
 
 #include <QStatusBar>
-#include <QLabel>
 
-class QLabel;
 class QPushButton;
-class QHBoxLayout;
+
+class CMapZone;
+class CMapLevel;
+class CMapManager;
 
 /**
   *@author Kmud Developer Team
@@ -33,15 +34,17 @@ class CMapViewStatusbar : public QStatusBar
 {
    Q_OBJECT
 public: 
-  CMapViewStatusbar(QWidget *parent=0);
+  CMapViewStatusbar(CMapManager *manager, QWidget *parent=0);
   ~CMapViewStatusbar();
 
-  void setLevel(int level);
-  void setZone(QString zone);
+  void setLevel(CMapLevel *level);
+  void setZone(CMapZone *zone);
   void setRoom(QString room);
 
   void addFollowButton(QPushButton *button);
-
+private slots:
+  void changeLevel(int index);
+  void renameLevel(const QString &name);
 private:
   struct Private;
   Private *d;

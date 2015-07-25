@@ -55,10 +55,9 @@ CMapZone::~CMapZone()
 {
   //FIXME_jp : when this is undone there are extra levels, this needs fixing
   // Delete the levels in the zone
-  QList<CMapLevel *> levels = mapLevelList;
-  foreach (CMapLevel *level, levels) {
+  while (levelCount()) {
     kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
-    delete level;
+    delete firstLevel();
   }
 }
 
@@ -278,7 +277,7 @@ void CMapZone::saveQDomElement(QDomDocument *doc,QDomElement *properties)
 	properties->setAttribute("DefaultColor",getUseDefaultCol());
 	properties->setAttribute("LabelPos",(int)getLabelPosition());
 	properties->setAttribute("ZoneID",getZoneID());
-	properties->setAttribute("NumLevels",mapLevelList.count());
+	properties->setAttribute("NumLevels",levelCount());
 	if (getUseDefaultCol())
 	{
 		properties->setAttribute("UseDefaultCol","true");
@@ -355,9 +354,57 @@ QColor CMapZone::getBackgroundColor(void)
 	return backgroundCol;
 }
 
-CMapLevel *CMapZone::firstLevel() const
+unsigned int CMapZone::levelCount() const
 {
-  if (mapLevelList.isEmpty()) return 0;
-  return mapLevelList.first();
+  return mapLevelModel.rowCount();
+}
+
+CMapLevel *CMapZone::getLevel(int idx) const
+{
+  QModelIndex index = mapLevelModel.index(idx, 0);
+  if (!index.isValid()) return 0;
+  CMapLevel *lvl = static_cast<CMapLevel*>(index.data(Qt::UserRole + 1).value<void *>());
+  return lvl;
+}
+
+int CMapZone::levelIndex(const CMapLevel *level) const
+{
+  for (unsigned int i = 0; i < levelCount(); ++i)
+    if (getLevel(i) == level)
+      return i;
+  return -1;
+}
+
+void CMapZone::addLevel(CMapLevel *level)
+{
+  insertLevel(level, -1);
+}
+
+void CMapZone::insertLevel(CMapLevel *level, int pos)
+{
+  QStandardItem *item = new QStandardItem(level->getName());
+  item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+  item->setData(QVariant(qVariantFromValue((void *) level)), Qt::UserRole + 1);
+
+  if ((pos >= 0) && (pos < (int)levelCount()))
+    mapLevelModel.insertRow(pos, item);
+  else
+    mapLevelModel.appendRow(item);
+}
+
+void CMapZone::removeLevel(CMapLevel *level)
+{
+  int idx = levelIndex(level);
+  if (idx < 0) return;
+  mapLevelModel.removeRows(idx, 1);
+}
+
+void CMapZone::setLevelName(CMapLevel *level, const QString &name)
+{
+  int idx = levelIndex(level);
+  if (idx < 0) return;
+
+  QStandardItem *item = mapLevelModel.item(idx);
+  if (item && (item->text() != name)) item->setText(name);
 }
 

@@ -17,24 +17,38 @@
 
 #include "cmapviewstatusbar.h"
 
-#include <qlabel.h>
-#include <qpushbutton.h>
+#include <QLabel>
+#include <QComboBox>
+#include <QPushButton>
 #include <QHBoxLayout>
 
 #include <klocale.h>
 
+#include "cmapzone.h"
+#include "cmapviewbase.h"
+#include "cmapmanager.h"
+
 struct CMapViewStatusbar::Private {
+  CMapManager *manager;
+
   QLabel *lblRoomLabel;
-  QLabel *lblRoomStatus;
   QLabel *lblLevelLabel;
-  QLabel *lblLevelStatus;
   QLabel *lblZoneLabel;
+
+  QLabel *lblRoomStatus;
+  QComboBox *levelPicker;
   QLabel *lblZoneStatus;
+
+  CMapZone *zone;
+  CMapLevel *level;
 };
 
-CMapViewStatusbar::CMapViewStatusbar(QWidget *parent) : QStatusBar(parent)
+CMapViewStatusbar::CMapViewStatusbar(CMapManager *manager, QWidget *parent) : QStatusBar(parent)
 {
   d = new Private;
+  d->manager = manager;
+  d->zone = 0;
+  d->level = 0;
 
   // labels
   d->lblRoomLabel = new QLabel(i18n("Current Room : "), this);
@@ -45,15 +59,18 @@ CMapViewStatusbar::CMapViewStatusbar(QWidget *parent) : QStatusBar(parent)
   f.setItalic(true);
   d->lblRoomStatus = new QLabel(i18n("Unknown"),this);
   d->lblRoomStatus->setFont(f);
-  d->lblLevelStatus = new QLabel(i18n("1"),this);
-  d->lblLevelStatus->setFont(f);
+  d->levelPicker = new QComboBox(this);
+  d->levelPicker->setFont(f);
+  d->levelPicker->setEditable(true);
+  connect(d->levelPicker, SIGNAL(activated(int)), this, SLOT(changeLevel(int)));
+  connect(d->levelPicker, SIGNAL(editTextChanged(const QString &)), this, SLOT(renameLevel(const QString &)));
   d->lblZoneStatus = new QLabel(i18n("Unnamed"),this);
   d->lblZoneStatus->setFont(f);
 
   addWidget(d->lblZoneLabel);
   addWidget(d->lblZoneStatus);
   addWidget(d->lblLevelLabel);
-  addWidget(d->lblLevelStatus);
+  addWidget(d->levelPicker);
   addWidget(d->lblRoomLabel);
   addWidget(d->lblRoomStatus);
 }
@@ -63,16 +80,24 @@ CMapViewStatusbar::~CMapViewStatusbar()
   delete d;
 }
 
-void CMapViewStatusbar::setLevel(int lvl)
+void CMapViewStatusbar::setLevel(CMapLevel *lvl)
 {
-  d->lblLevelStatus->setText(QString::number(lvl));
+  d->level = lvl;
+  int idx = d->zone->levelIndex(lvl);
+  d->levelPicker->setCurrentIndex(idx);
 }
 
-void CMapViewStatusbar::setZone(QString zone)
+void CMapViewStatusbar::setZone(CMapZone *zone)
 {
-  if (zone.isEmpty())
-    zone = "Unknown";
-  d->lblZoneStatus->setText(zone);
+  if (d->zone == zone) return;
+  d->zone = zone;
+
+  d->levelPicker->setModel(zone->levelsModel());
+  QString lbl = zone->getLabel();
+  // TODO: have the zone picker here instead
+  d->lblZoneStatus->setText(lbl.isEmpty() ? i18n("Unknown") : lbl);
+
+  setLevel(d->manager->getActiveView()->getCurrentlyViewedLevel());
 }
 
 void CMapViewStatusbar::setRoom(QString room)
@@ -84,5 +109,23 @@ void CMapViewStatusbar::setRoom(QString room)
 void CMapViewStatusbar::addFollowButton(QPushButton *button)
 {
   addPermanentWidget(button);
+}
+
+void CMapViewStatusbar::changeLevel(int index)
+{
+  CMapLevel *level = d->zone->getLevel(index);
+  if (!level) return;
+  d->manager->displayLevel(level, false);
+}
+
+void CMapViewStatusbar::renameLevel(const QString &name)
+{
+  if (!d->zone) return;
+
+  // apparently this also gets called when we switch to a new level - then we do not want to rename anything
+  int idx = d->zone->levelIndex(d->level);
+  if (idx != d->levelPicker->currentIndex()) return;
+
+  d->zone->setLevelName(d->level, name);
 }
 

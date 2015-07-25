@@ -46,8 +46,10 @@ void CMapCmdMoveMap::undo()
 /** This method is used to move the elements in a zone by the given vector */
 void CMapCmdMoveMap::moveMap(QPoint inc)
 {
-  foreach (CMapLevel *level, *m_manager->getZone()->getLevels())
+  for (unsigned int idx = 0; idx < m_manager->getZone()->levelCount(); ++idx)
   {
+    CMapLevel *level = m_manager->getZone()->getLevel(idx);
+
     foreach (CMapElement *el, level->getAllElements())
     {
       el->moveBy(inc);

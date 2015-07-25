@@ -21,6 +21,7 @@
 
 #include <QList>
 #include <QPoint>
+#include <QString>
 
 #include <kmuddy_export.h>
 
@@ -44,14 +45,17 @@ public:
 	/** Get the list of text elements */
 	QList<CMapText *> *getTextList() { return &m_textList; }
 
+        QString getName() const;
+        void setName(const QString &name);
+
 	/** Used to get the pointer to the previous level */
 	CMapLevel *getPrevLevel(void);
 	/** Used to get the pointer to the next level */
 	CMapLevel *getNextLevel(void);
 	/** Used to get the zone that the level is in */
-	CMapZone *getZone(void);
+	CMapZone *getZone(void) const;
 	/** Used to get the number of the level */
-	int getNumber(void);
+	int getNumber(void) const;
 
         /** Retrieve all elements in the level */
         QList<CMapElement *> getAllElements();
@@ -75,6 +79,7 @@ private:
 	/** An array of the elements in the level */
 	QList<CMapRoom *> m_roomList;
 	QList<CMapText *> m_textList;
+        QString name;
 };
 
 #endif

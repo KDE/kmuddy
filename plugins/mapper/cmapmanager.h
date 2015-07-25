@@ -100,9 +100,9 @@ public:
    */
   void openMapView();
   /**
-   * Used to create a new view of the a given level
+   * Used to change the view to the given level
    */
-  void openNewMapView(CMapLevel *level);
+  void displayLevel(CMapLevel *level, bool centerView);
   /**
    * Used to create a new view of the a given level and
    * center the view on the given position.

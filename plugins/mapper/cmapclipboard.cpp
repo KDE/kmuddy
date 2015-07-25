@@ -142,8 +142,10 @@ void CMapClipboard::slotCopy()
     // Copy all the path elements into the clipboard
     int pathGroup = 0;
 
-    foreach (CMapLevel *level, *m_mapManager->getZone()->getLevels())
+    for (unsigned int idx = 0; idx < m_mapManager->getZone()->levelCount(); ++idx)
     {
+      CMapLevel *level = m_mapManager->getZone()->getLevel(idx);
+
       foreach (CMapRoom *room, *level->getRoomList())
       {
         foreach (CMapPath *path, *room->getPathList())
@@ -268,13 +270,13 @@ void CMapClipboard::pasteElements()
 
 				// Check to see if the level exists and if not create it
 				CMapLevel *level = NULL;
-				if (levelNum>=(int)zone->getLevels()->count())
+				if (levelNum >= (int)zone->levelCount())
 				{
 					level = m_mapManager->createLevel(UP);
 				}
 				else
 				{
-					level = zone->getLevels()->at(levelNum);
+					level = zone->getLevel(levelNum);
 				}
 
 				// Update the clipboard with the new level that the element is to be pasted into
@@ -345,8 +347,8 @@ void CMapClipboard::pastePaths()
 			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
-				CMapLevel *srcLevel = zone->getLevels()->at(srcLevelNum);
-				CMapLevel *destLevel = zone->getLevels()->at(destLevelNum);
+				CMapLevel *srcLevel = zone->getLevel(srcLevelNum);
+				CMapLevel *destLevel = zone->getLevel(destLevelNum);
 
 				KMemConfig properties;
                                 KConfigGroup props = properties.group("Properties");
@@ -408,7 +410,7 @@ void CMapClipboard::pasteLinks()
 			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
-				CMapLevel *linkLevel = zone->getLevels()->at(linkLevelNum);	
+				CMapLevel *linkLevel = zone->getLevel(linkLevelNum);	
 
 				// Copy link text element properties to new properties
 				KMemConfig properties;

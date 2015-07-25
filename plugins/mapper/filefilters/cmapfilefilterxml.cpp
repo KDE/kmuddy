@@ -174,11 +174,13 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 	zone->saveQDomElement(doc,&zoneProperties);
 	savePluginPropertiesForElement(zone,doc,&zoneProperties);	
 	
-	foreach (CMapLevel *level, *zone->getLevels())
+	for (int idx = 0; idx < zone->levelCount(); ++idx)
 	{
+                CMapLevel *level = zone->getLevel(idx);
 		QDomElement levelProperties = doc->createElement("Level");
 		levelProperties.setAttribute("ID",level->getLevelID());
 		levelProperties.setAttribute("Number",level->getNumber());
+		levelProperties.setAttribute("Name",level->getName());
 		levelProperties.setAttribute("NumRooms",level->getRoomList()->count());
 		levelProperties.setAttribute("NumTexts",level->getTextList()->count());
 		
@@ -217,8 +219,9 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
   if (zone == NULL)
     return;
 
-  foreach (CMapLevel *level, *zone->getLevels())
+  for (int idx = 0; idx < zone->levelCount(); ++idx)
   {
+    CMapLevel *level = zone->getLevel(idx);
     foreach (CMapRoom *room, *level->getRoomList())
     {
       foreach (CMapPath *path, *room->getPathList())
@@ -554,6 +557,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 				return -2;
 			}
 			level->setLevelID(id.toInt());
+		        level->setName(e.attribute("Name", ""));
 
 			QDomNode n2 = e.firstChild();
 			while (!n2.isNull() )

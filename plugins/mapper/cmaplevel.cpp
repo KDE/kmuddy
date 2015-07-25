@@ -23,17 +23,15 @@
 #include "cmaproom.h"
 #include "cmapviewbase.h"
 
+#include <klocale.h>
+
 CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 {
   m_mapManager->m_levelCount++;
   setLevelID(mapManager->m_levelCount);
 
   // insert the level at the requested location
-  QList<CMapLevel *> *lvls = getZone()->getLevels();
-  if ((pos < 0) || (pos > lvls->size()))
-    lvls->append(this);
-  else
-    lvls->insert(pos, this);
+  getZone()->insertLevel(this, pos);
 }
 
 CMapLevel::~CMapLevel()
@@ -41,23 +39,12 @@ CMapLevel::~CMapLevel()
   CMapViewBase *view = m_mapManager->getActiveView();
   if (view->getCurrentlyViewedLevel() == this)
   {
-    if (getPrevLevel())
-    {
-      view->showPosition(getPrevLevel(),true);
-    }
-    else
-    {
-      if (getNextLevel())
-      {
-        view->showPosition(getNextLevel(),true);
-      }
-      else
-      {
-        view->showPosition(getZone()->getLevels()->first(),true);
-      }
-    }
+    CMapLevel *show = getPrevLevel();
+    if (!show) show = getNextLevel();
+    if (!show) show = getZone()->firstLevel();
+    view->showPosition(show,true);
   }
-  getZone()->getLevels()->removeAll(this);
+  getZone()->removeLevel(this);
 
   QList<CMapElement *> lst = getAllElements();
   foreach (CMapElement *el, lst)
@@ -83,9 +70,9 @@ CMapText *CMapLevel::findText(unsigned int id)
 }
 
 /** Used to get the number of the level */
-int CMapLevel::getNumber(void)
+int CMapLevel::getNumber(void) const
 {
-  return getZone()->getLevels()->indexOf(this);
+  return getZone()->levelIndex(this);
 }
 
 unsigned int CMapLevel::getLevelID(void) const
@@ -99,6 +86,18 @@ void CMapLevel::setLevelID(unsigned int id)
     m_mapManager->m_zoneCount = id;
 
   m_ID = id;
+}
+
+QString CMapLevel::getName() const
+{
+  if (this->name.length()) return this->name;
+  return i18n("Level %1").arg(getLevelID());
+}
+
+void CMapLevel::setName(const QString &name)
+{
+  this->name = name;
+  getZone()->setLevelName(this, getName());
 }
 
 QList<CMapElement *> CMapLevel::getAllElements()
@@ -116,25 +115,21 @@ QList<CMapElement *> CMapLevel::getAllElements()
 /** Used to get the pointer to the previous level */
 CMapLevel *CMapLevel::getPrevLevel(void)
 {
-  QList<CMapLevel *> *lvls = getZone()->getLevels();
-  int idx = lvls->indexOf(this);
+  int idx = getZone()->levelIndex(this);
   if (idx <= 0) return 0;
-  if (idx > lvls->count() - 1) return 0;
-  return lvls->at(idx - 1);
+  return getZone()->getLevel(idx - 1);
 }
 
 /** Used to get the pointer to the next level */
 CMapLevel *CMapLevel::getNextLevel(void)
 {
-  QList<CMapLevel *> *lvls = getZone()->getLevels();
-  int idx = lvls->indexOf(this);
+  int idx = getZone()->levelIndex(this);
   if (idx < 0) return 0;
-  if (idx >= lvls->count() - 1) return 0;
-  return lvls->at(idx + 1);
+  return getZone()->getLevel(idx + 1);
 }
 
 /** Used to get the zone that the level is in */
-CMapZone *CMapLevel::getZone(void)
+CMapZone *CMapLevel::getZone(void) const
 {
   return m_mapManager->getZone();
 }
