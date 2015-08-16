@@ -40,10 +40,10 @@ set(kmuddymapper_PART_SRCS
    cmapfilefilterbase.cpp 
    cmapcommand.cpp 
    cmapclipboard.cpp 
+   cmapzonemanager.cpp 
    kmemconfig.cpp 
    cmapmanager.cpp
    dialogs/dlgmapmovement.cpp
-   dialogs/dlgmapinfo.cpp
    dialogs/dlgmaptextproperties.cpp
    dialogs/dlgmaproomproperties.cpp
    dialogs/dlgmappathproperties.cpp
@@ -58,7 +58,6 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmapcolorbase.ui
    dialogs/dlgmapmovementbase.ui
    dialogs/dlgmapspeedwalkbase.ui
-   dialogs/dlgmapinfobase.ui
    dialogs/dlgmaptextpropertiesbase.ui
    dialogs/dlgmaproompropertiesbase.ui
    dialogs/dlgmappathpropertiesbase.ui

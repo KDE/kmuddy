@@ -98,19 +98,14 @@ void CMapViewBase::playerPositionChanged(CMapRoom *room)
 /** Used to find out if a level is visible in the view */
 bool CMapViewBase::isLevelVisible(CMapLevel *level)
 {
-  if (getCurrentlyViewedLevel()==NULL)
-    return false;
-
-  if (level == getCurrentlyViewedLevel())
+  CMapLevel *vlevel = getCurrentlyViewedLevel();
+  if (!vlevel) return false;
+  if (level == vlevel)
     return true;
-
-  if (getCurrentlyViewedLevel()->getPrevLevel())
-    if (level == getCurrentlyViewedLevel()->getPrevLevel())
-      return true;
-
-  if (getCurrentlyViewedLevel()->getNextLevel())
-    if (level == getCurrentlyViewedLevel()->getNextLevel())
-      return true;
+  if (level == vlevel->getPrevLevel())
+    return true;
+  if (level == vlevel->getNextLevel())
+    return true;
 
   return false;
 }

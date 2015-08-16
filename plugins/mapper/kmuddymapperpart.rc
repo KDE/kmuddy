@@ -1,14 +1,6 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
 <kpartgui name="KmuddyMapperPart" version="2.0">
   <MenuBar>
-    <Menu name = "File"><Text>&amp;File</Text>
-      <Action name = "fileNew"/>
-      <Separator/>
-      <Action name = "fileLoad"/>
-      <Action name = "fileSave"/>
-      <Separator/>
-      <Action name = "fileInfo"/>
-    </Menu>
     <Menu name="View"><Text>&amp;View</Text>
       <Action name = "viewUpperLevel"/>
       <Action name = "viewLowerLevel"/>
@@ -25,6 +17,8 @@
     <Action name = "editRedo"/>
   </ToolBar>
   <ToolBar fullWidth="false" name="navigation"><Text>Navigation</Text>
+    <Action name = "toolsZoneCreate"/>
+    <Action name = "toolsZoneDelete"/>
     <Action name = "toolsLevelUp"/>
     <Action name = "toolsLevelDown"/>
     <Action name = "toolsLevelDelete"/>

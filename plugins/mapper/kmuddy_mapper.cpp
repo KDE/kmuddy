@@ -13,9 +13,11 @@
 
 #include "cactionmanager.h"
 #include "cmenumanager.h"
+#include "cprofilemanager.h"
 
 #include "cmapmanager.h"
 #include "cmapfilter.h"
+#include "cmapzonemanager.h"
 
 #include <kactioncollection.h>
 #include <kcomponentdata.h>
@@ -24,16 +26,28 @@
 #include <kpluginloader.h>
 #include <QDebug>
 #include <QDockWidget>
+#include <map>
 
 K_PLUGIN_FACTORY (KMuddyMapperFactory, registerPlugin<KMuddyMapper>();)
 K_EXPORT_PLUGIN (KMuddyMapperFactory("kmuddy"))
 
-struct KMuddyMapperPrivate {
+struct MapperSession {
   CMapManager *manager;
   CMapFilter *filter;
+};
+
+struct KMuddyMapperPrivate {
+  CMapManager *manager;  // and this!
+  CMapFilter *filter;  // get rid of this!
   KToggleAction *showmapper;
   KComponentData componentData;
   QDockWidget *docker;
+  std::map<int, MapperSession *> sessions;
+  int currentSession;
+
+  CMapManager *curManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager : 0; };
+  CMapZoneManager *curZoneManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager->zoneManager() : 0; };
+  CMapFilter *curFilter() { return sessions.count(currentSession) ? sessions[currentSession]->filter : 0; };
 };
 
 KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
@@ -55,12 +69,9 @@ KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
   mainWindow->addDockWidget (Qt::RightDockWidgetArea, d->docker);
   d->docker->setFloating (true);
   connect (d->docker, SIGNAL (visibilityChanged(bool)), this, SLOT (mapperClosed()));
+  d->docker->setWidget (0);
 
-  d->manager = new CMapManager (d->docker, this);
-  d->manager->setWindowFlags (Qt::Widget);
-  d->docker->setWidget (d->manager);
-
-  d->filter = new CMapFilter (d->manager);
+  d->currentSession = 0;
 
   KActionCollection *acol = cActionManager::self()->getACol ();
   d->showmapper = new KToggleAction (this);
@@ -80,8 +91,12 @@ KMuddyMapper::~KMuddyMapper()
   cMenuManager *menu = cMenuManager::self();
   menu->unplug (d->showmapper);
   delete d->showmapper;
-  delete d->filter;
-  delete d->manager;
+  std::map<int, MapperSession *>::iterator it;
+  for (it = d->sessions.begin(); it != d->sessions.end(); ++it) {
+    delete it->second->filter;
+    delete it->second->manager;
+    delete it->second;
+  }
   delete d;
 }
 
@@ -91,52 +106,94 @@ KComponentData KMuddyMapper::componentData () const {
 
 /** Called when a session has been added. If the session has existed before, fresh is set
 to false. This can happen if the plug-in is loaded manually. */
-void KMuddyMapper::sessionAdd (int, bool) {
-  // TODO: do things if needed
+void KMuddyMapper::sessionAdd (int sess, bool) {
+  if (d->sessions.count(sess)) return;
+  MapperSession *mp = new MapperSession;
+  mp->manager = new CMapManager (d->docker, this, sess);
+  mp->filter = new CMapFilter (mp->manager);
+  d->sessions[sess] = mp;
 }
 
 /** Called when a session should be removed. Closed is false, if the session isn't being
 closed. This hapens when the plug-in is being unloaded manually. */
-void KMuddyMapper::sessionRemove (int, bool) {
+void KMuddyMapper::sessionRemove (int sess, bool) {
+  if (!d->sessions.count(sess)) return;
+
   // TODO: do things if needed, like closing maps
+
+  // delete the filter and manager
+  MapperSession *mp = d->sessions[sess];
+  delete mp->filter;
+  delete mp->manager;
+  delete mp;
+  d->sessions.erase(sess);
+
+  if (sess == d->currentSession) d->currentSession = 0;
 }
 
 /** called when the user switches to another session. Sess is the number of the new session. */
-void KMuddyMapper::sessionSwitch (int) {
-  // TODO: switch to the map for the now-active session
+void KMuddyMapper::sessionSwitch (int sess) {
+  if (!d->sessions.count(sess)) sessionAdd(sess, false);
+  CMapManager *manager = d->curManager();
+  if (manager) manager->hide();
+  if (!cProfileManager::self()->settings (sess)) {  // this means that it's a profile connection
+    d->currentSession = 0;
+    return;
+  }
+
+  d->currentSession = sess;
+  manager = d->curManager();
+  if (manager) {
+    manager->show();
+    d->docker->setWidget (manager);
+  }
 }
 
 /** The session has just been connected. Not called when manually loading the plug-in. */
-void KMuddyMapper::connected (int) {
-  // TODO: activate the map perhaps ?
+void KMuddyMapper::connected (int sess) {
+  if (cActionManager::self()->activeSession() != sess) return;
+  sessionSwitch(sess);
+  d->sessions[sess]->manager->zoneManager()->loadMapList();
 }
 
 /** The session has just been disconnected. Not called when manually unloading the plug-in. */
-void KMuddyMapper::disconnected (int) {
+void KMuddyMapper::disconnected (int sess) {
   // TODO: deactivate the map perhaps ?
+  if (sess != d->currentSession) return;
+  CMapManager *manager = d->curManager();
+  manager->hide();
+  d->docker->setWidget (0);
 }
 
 /** Request to load data. */
-void KMuddyMapper::load (int) {
-  // TODO: load the map for the given session
+void KMuddyMapper::load (int sess) {
+  if (!d->sessions.count(sess)) return;
+  d->sessions[sess]->manager->zoneManager()->loadMapList();
+  // TODO: load the current map? First map? Some map?
 }
 
 /** Request to save data. */
-void KMuddyMapper::save (int) {
-  // TODO: save the map of the given session
+void KMuddyMapper::save (int sess) {
+  if (!d->sessions.count(sess)) return;
+  d->sessions[sess]->manager->zoneManager()->saveMapList();
+  // TODO: save the current map, too
 }
 
-void KMuddyMapper::processInput (int, int phase, cTextChunk * chunk, bool) {
+void KMuddyMapper::processInput (int sess, int phase, cTextChunk * chunk, bool) {
   if (phase != 1) return;  // don't do things twice
-  d->filter->processServerOutput (chunk->toText());
+  if (sess != d->currentSession) return;
+  CMapFilter *filter = d->curFilter();
+  if (filter) filter->processServerOutput (chunk->toText());
 }
 
 /** Command that is to be sent to the MUD. Aliases have already been expanded.
 Command can be modified if desired. If you set dontSend to true, the command won't be
 sent and plug-ins with lower priority won't receive this command either. */
-void KMuddyMapper::processCommand (int, QString &command, bool &) {
+void KMuddyMapper::processCommand (int sess, QString &command, bool &) {
   // TODO: send the command for further processing, and handle the situation when the command is to be blocked
-  command = d->filter->processCommand (command);
+  if (sess != d->currentSession) return;
+  CMapFilter *filter = d->curFilter();
+  if (filter) command = filter->processCommand (command);
 }
 
 void KMuddyMapper::showMapper (bool b)

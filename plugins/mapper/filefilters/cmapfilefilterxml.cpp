@@ -49,14 +49,14 @@ CMapFileFilterXML::~CMapFileFilterXML()
   * @return The Name of the filter */
 QString CMapFileFilterXML::getName(void)
 {
-	return "Kmud 2 map xml filles (*.mapxml)";
+	return "KMuddy map xml filles (*.mapxml)";
 }
 
 /** This returns a discription of the import/export filter
   * @return The discription */
 QString CMapFileFilterXML::getDescription(void)
 {
-	return "Kmud 2 save/load filter";
+	return "KMuddy save/load filter";
 }
 
 /** This returns the extension  of the filename that will be loaded,created
@@ -73,19 +73,7 @@ QString CMapFileFilterXML::getPatternExtension(void)
 	return "*" + getExtension();
 }
 
-/** This method will return true or false depending on if it's a export filter
-  * @return True if this is a export filter, otherwise false */
-bool CMapFileFilterXML::supportSave(void)
-{
-	return true;
-}
-
-/** This method will return true or false depending on if it's a import filter
-  * @return True if this is a import filter, otherwise false */
-bool CMapFileFilterXML::supportLoad(void)
-{
-	return true;
-}
+#include <iostream>
 
 /** This method should be reimplemented if this is a to be a export filter. It
   * is called to save the map data
@@ -93,7 +81,7 @@ bool CMapFileFilterXML::supportLoad(void)
   * @return 0, The file was saved succesfully
   * @return -1, The file could not be created
   */
-int CMapFileFilterXML::saveData(QString filename)
+int CMapFileFilterXML::saveData(const QString &filename)
 {
 	// Create the archive
 	KZip zip(filename);	
@@ -265,7 +253,7 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
   *         -2 , If the file is corrupt
   *         -4 , Wrong version
   */
-int CMapFileFilterXML::loadData(QString filename)
+int CMapFileFilterXML::loadData(const QString &filename)
 {
 	KZip zip(filename);
 	if ( !zip.open( QIODevice::ReadOnly ) )

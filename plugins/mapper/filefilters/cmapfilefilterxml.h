@@ -52,19 +52,20 @@ public:
 
 	/** This method will return true or false depending on if it's a export filter
       * @return True if this is a export filter, otherwise false */
-	bool supportSave(void);
+	bool supportSave(void) { return true; };
 	/** This method will return true or false depending on if it's a import filter
       * @return True if this is a import filter, otherwise false */
-	bool supportLoad(void);
+	bool supportLoad(void) { return true; };
+        /** Is this the native format? */
+        virtual bool isNative() { return true; };
 
-protected:
 	/** This method should be reimplemented if this is a to be a export filter. It
 	  * is called to save the map data
 	  * @param url The url of the file to be saved
 	  * @return 0, The file was saved succesfully
 	  * @return -1, The file could not be created
 	  */
-	int saveData(QString filename);
+	int saveData(const QString &filename);
 	/** This method should be reimplemeted if this is to be a import filter. It is
 	  * called to load the map data
 	  * @param filename The url of the file to be loaded
@@ -72,7 +73,7 @@ protected:
 	  *         -1 , Could not open the file
 	  *         -2 , If the file is corrupt
 	  */
-	int loadData(QString filename);
+	int loadData(const QString &filename);
 
 private:
 	int loadXMLData(const QByteArray & buffer);	

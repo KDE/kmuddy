@@ -45,6 +45,8 @@ public:
 private slots:
   void changeLevel(int index);
   void renameLevel(const QString &name);
+  void changeZone(int index);
+  void renameZone(const QString &name);
 private:
   struct Private;
   Private *d;

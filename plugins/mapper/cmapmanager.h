@@ -61,6 +61,7 @@ class CMapFileFilterBase;
 class CMapClipboard;
 class CMapElementUtil;
 class CMapPropertiesPaneBase;
+class CMapZoneManager;
 
 class DlgMapRoomProperties;
 class DlgMapTextProperties;
@@ -87,7 +88,7 @@ class KMUDDY_EXPORT CMapManager : public KXmlGuiWindow, public cActionBase
         Q_OBJECT
 public:
   /** Constructor used to creat the map manager */
-  CMapManager (QWidget *parent, KMuddyMapper *mapper);
+  CMapManager (QWidget *parent, KMuddyMapper *mapper, int sess);
   ~CMapManager();
 
   void eventStringHandler (QString event, int, QString &par1, const QString &);
@@ -129,10 +130,12 @@ public:
   /** Used to create a new text label */
   void createText(QPoint pos,CMapLevel *level,QString str="");
 
+  bool isClean() const;
+  CMapFileFilterBase *nativeFilter(bool isLoad = true);
   /** Used to load a map */
-  void importMap(const KUrl& url,CMapFileFilterBase *filter);
+  void importMap(const QString& url,CMapFileFilterBase *filter);
   /** Used to save a map */
-  void exportMap(const KUrl& url,CMapFileFilterBase *filter);
+  void exportMap(const QString& url,CMapFileFilterBase *filter);
 
   void setDefaultOptions();
   /** Used to read the map options */
@@ -153,7 +156,7 @@ public:
   /** Used to get a pointer to the map data */
   CMapData *getMapData() const;
   /** Pointer to the zone info that stores levels */
-  CMapZone *getZone();
+  CMapZone *getZone(bool noCreate = false);
 
   /** Used to set the login room */
   void setLoginRoom(CMapRoom *room);
@@ -261,6 +264,8 @@ public:
   void eraseMap(void);
   void eraseZone(CMapZone *zone);
 
+  CMapZoneManager *zoneManager() { return m_zoneManager; }
+
   /** Used to repaint all the views */
   void redrawAllViews(void);
 
@@ -303,19 +308,12 @@ public slots:
   
 
 private slots:
-  /** This method is called to create a new map, when the new map menu option is selected */
-  void slotFileNew();
-  /** This method is called to load a map from a file when the load menu option is selected */
-  void slotFileLoad();
-  /** This method is called to save the map to a file when the "save as" menu option is selected */
-  void slotFileSave();
-  /** This methid is called to display map information when the information menu option is selected */
-  void slotFileInfo();
-
   void slotToolsGrid();
   void slotToolsLevelUp();
   void slotToolsLevelDown();
   void slotToolsLevelDelete();
+  void slotToolsZoneCreate();
+  void slotToolsZoneDelete();
   void slotToolsCreateMode();
 
   void slotViewUpperLevel();
@@ -393,6 +391,10 @@ private:
   bool m_commandsActive;
   /** The filter used to proces mud input/output */
   CMapFilter *filter;
+  /** list of all the zones */
+  CMapZoneManager *m_zoneManager;
+  /** out session */
+  int m_sessId;
   /** The element currenly being edited */
   CMapElement *elementEdit;
   /** The current tool */
@@ -427,16 +429,13 @@ private:
   DlgMapSpeedwalk *mapSpeedwalk;
 
   //Actions
-  KAction *m_fileNew;
-  KAction *m_fileLoad;
-  KAction *m_fileSave;
-  KAction *m_fileInfo;
-
   KToggleAction *m_toolsGrid;
   KToggleAction *m_toolsCreate;
   KAction *m_toolsUpLevel;
   KAction *m_toolsDownLevel;
   KAction *m_toolsDeleteLevel;
+  KAction *m_toolsCreateZone;
+  KAction *m_toolsDeleteZone;
 
   KToggleAction *m_viewLowerLevel;
   KToggleAction *m_viewUpperLevel;

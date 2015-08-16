@@ -25,6 +25,7 @@
 #include <klocale.h>
 
 #include "cmapzone.h"
+#include "cmapzonemanager.h"
 #include "cmapviewbase.h"
 #include "cmapmanager.h"
 
@@ -37,7 +38,7 @@ struct CMapViewStatusbar::Private {
 
   QLabel *lblRoomStatus;
   QComboBox *levelPicker;
-  QLabel *lblZoneStatus;
+  QComboBox *zonePicker;
 
   CMapZone *zone;
   CMapLevel *level;
@@ -64,11 +65,15 @@ CMapViewStatusbar::CMapViewStatusbar(CMapManager *manager, QWidget *parent) : QS
   d->levelPicker->setEditable(true);
   connect(d->levelPicker, SIGNAL(activated(int)), this, SLOT(changeLevel(int)));
   connect(d->levelPicker, SIGNAL(editTextChanged(const QString &)), this, SLOT(renameLevel(const QString &)));
-  d->lblZoneStatus = new QLabel(i18n("Unnamed"),this);
-  d->lblZoneStatus->setFont(f);
+
+  d->zonePicker = new QComboBox(this);
+  d->zonePicker->setFont(f);
+  d->zonePicker->setEditable(true);
+  connect(d->zonePicker, SIGNAL(activated(int)), this, SLOT(changeZone(int)));
+  connect(d->zonePicker, SIGNAL(editTextChanged(const QString &)), this, SLOT(renameZone(const QString &)));
 
   addWidget(d->lblZoneLabel);
-  addWidget(d->lblZoneStatus);
+  addWidget(d->zonePicker);
   addWidget(d->lblLevelLabel);
   addWidget(d->levelPicker);
   addWidget(d->lblRoomLabel);
@@ -89,14 +94,18 @@ void CMapViewStatusbar::setLevel(CMapLevel *lvl)
 
 void CMapViewStatusbar::setZone(CMapZone *zone)
 {
+  // this is because we can't set the model in the constructor, as the zone manager doesn't yet exist
+  CMapZoneManager *zones = d->manager->zoneManager();
+  if (zones) {
+    if (d->zonePicker->model() != zones->zonesModel())
+      d->zonePicker->setModel(zones->zonesModel());
+    d->zonePicker->setCurrentIndex(zones->activeZone());
+  }
+
   if (d->zone == zone) return;
   d->zone = zone;
 
   d->levelPicker->setModel(zone->levelsModel());
-  QString lbl = zone->getLabel();
-  // TODO: have the zone picker here instead
-  d->lblZoneStatus->setText(lbl.isEmpty() ? i18n("Unknown") : lbl);
-
   setLevel(d->manager->getActiveView()->getCurrentlyViewedLevel());
 }
 
@@ -127,5 +136,19 @@ void CMapViewStatusbar::renameLevel(const QString &name)
   if (idx != d->levelPicker->currentIndex()) return;
 
   d->zone->setLevelName(d->level, name);
+}
+
+void CMapViewStatusbar::changeZone(int index)
+{
+  d->manager->zoneManager()->loadZone(index);
+}
+
+void CMapViewStatusbar::renameZone(const QString &name)
+{
+  // apparently this also gets called when we switch to a new zone - then we do not want to rename anything
+  int idx = d->manager->zoneManager()->activeZone();
+  if (idx != d->zonePicker->currentIndex()) return;
+
+  d->manager->zoneManager()->renameZone(idx, name);
 }
 

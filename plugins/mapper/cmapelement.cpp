@@ -40,7 +40,9 @@ CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QOb
   editing = false;
   doPaint = true;
 
-  mapManager->addedElement(this);
+  if (mapManager->getZone(true))
+    mapManager->addedElement(this);
+
   connect(this,SIGNAL(deleteElement(CMapElement *,bool)),manager,SLOT(deleteElement(CMapElement *,bool)));
 }
 

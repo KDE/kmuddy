@@ -31,6 +31,7 @@
 #include <kcomponentdata.h>
 #include <kxmlguifactory.h>
 #include <kundostack.h>
+#include <kinputdialog.h>
 
 #include <QQueue>
 #include <qtimer.h>
@@ -49,6 +50,7 @@
 #include "cmaptoolbase.h"
 #include "cmappluginbase.h"
 #include "cmapclipboard.h"
+#include "cmapzonemanager.h"
 
 #include "cmapcmdelementcreate.h"
 #include "cmapcmdelementdelete.h"
@@ -69,7 +71,6 @@
 #include "dialogs/dlgmappathproperties.h"
 #include "dialogs/dlgmaptextproperties.h"
 #include "dialogs/dlgspeedwalkprogress.h"
-#include "dialogs/dlgmapinfo.h"
 #include "dialogs/dlgmapspeedwalk.h"
 #include "dialogs/dlgmapcolor.h"
 #include "dialogs/dlgmapdirections.h"
@@ -80,9 +81,10 @@
 #include "cglobalsettings.h"
 #include "cstatus.h"
 
-CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper) :
+CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   KXmlGuiWindow (parent),
   cActionBase ("map-manager", 0),
+  m_sessId (sessId),
   mapperPlugin (mapper)
 {
   kDebug() << "constructor begins";
@@ -138,12 +140,20 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper) :
 
   m_zoneCount = 0;
   m_levelCount = 0;
+  m_zoneManager = NULL;
 
   setUndoActive (false);
+  createNewMap();  // because some things break if a map doesn't exist
   activeView = new CMapView(this,container);
-  createNewMap();
+
+  m_zoneManager = new CMapZoneManager(sessId, this);
+  if (!m_zoneManager->zonesModel()->rowCount())
+    m_zoneManager->createZone (i18n ("Map #1"));
+  m_zoneManager->loadZone(0);
+
   openMapView ();
   setUndoActive (true);
+  setWindowFlags (Qt::Widget);
 
   kDebug() << "constructor ends";
 }
@@ -157,6 +167,7 @@ CMapManager::~CMapManager()
   if (mapData)
     delete mapData;
   mapData = 0;
+  delete m_zoneManager;
   delete activeView;
 
   if (commandHistory)
@@ -267,25 +278,6 @@ void CMapManager::initMenus()
 {
   kDebug() << "begin initMenus";
 
-  // File menu
-
-  m_fileNew = new KAction (this);
-  m_fileNew->setText (i18n("New Map"));
-  connect  (m_fileNew, SIGNAL (triggered()), this, SLOT (slotFileNew()));
-  actionCollection()->addAction ("fileNew", m_fileNew);
-  m_fileLoad = new KAction (this);
-  m_fileLoad->setText (i18n("Load"));
-  connect  (m_fileLoad, SIGNAL (triggered()), this, SLOT (slotFileLoad()));
-  actionCollection()->addAction ("fileLoad", m_fileLoad);
-  m_fileSave = new KAction (this);
-  m_fileSave->setText (i18n("Save As"));
-  connect  (m_fileSave, SIGNAL (triggered()), this, SLOT (slotFileSave()));
-  actionCollection()->addAction ("fileSave", m_fileSave);
-  m_fileInfo = new KAction (this);
-  m_fileInfo->setText (i18n("Information"));
-  connect  (m_fileInfo, SIGNAL (triggered()), this, SLOT (slotFileInfo()));
-  actionCollection()->addAction ("fileInfo", m_fileInfo);
-
   // Edit menu
   commandHistory->createUndoAction(actionCollection(), "editUndo");
   commandHistory->createRedoAction(actionCollection(), "editRedo");
@@ -313,8 +305,16 @@ void CMapManager::initMenus()
   actionCollection()->addAction ("toolsLevelDown", m_toolsDownLevel);
   m_toolsDeleteLevel = new KAction (this);
   m_toolsDeleteLevel->setText ( i18n("Delete Current Level"));
-  connect  (m_toolsDeleteLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDelete()));
+  connect (m_toolsDeleteLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDelete()));
   actionCollection()->addAction ("toolsLevelDelete", m_toolsDeleteLevel);
+  m_toolsCreateZone = new KAction (this);
+  m_toolsCreateZone->setText ( i18n("Create New Zone"));
+  connect (m_toolsCreateZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneCreate()));
+  actionCollection()->addAction ("toolsZoneCreate", m_toolsCreateZone);
+  m_toolsDeleteZone = new KAction (this);
+  m_toolsDeleteZone->setText ( i18n("Delete Current Zone"));
+  connect (m_toolsDeleteZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneDelete()));
+  actionCollection()->addAction ("toolsZoneDelete", m_toolsDeleteZone);
 
   // View menu
   m_viewUpperLevel = new KToggleAction (this);
@@ -496,10 +496,10 @@ CMapData *CMapManager::getMapData() const
   return mapData;
 }
 
-CMapZone *CMapManager::getZone()
+CMapZone *CMapManager::getZone(bool noCreate)
 {
   CMapZone *zone = mapData->rootZone;
-  if (!zone)
+  if ((!zone) && (!noCreate))
     zone = new CMapZone(this);
 
   return zone;
@@ -568,10 +568,8 @@ void CMapManager::enableViewControls(bool enabled)
   m_toolsUpLevel->setEnabled(enabled);
   m_toolsDownLevel->setEnabled(enabled);
   m_toolsDeleteLevel->setEnabled(enabled);
-  
-  m_fileNew->setEnabled(enabled);
-  m_fileSave->setEnabled(enabled);
-  m_fileLoad->setEnabled(enabled);
+  m_toolsCreateZone->setEnabled(enabled);
+  m_toolsDeleteZone->setEnabled(enabled);
 }
 
 /**
@@ -580,8 +578,6 @@ void CMapManager::enableViewControls(bool enabled)
  */
 void CMapManager::enableNonViewActions(bool enabled)
 {
-  m_fileInfo->setEnabled(enabled);
-
   m_toolsCreate->setEnabled(enabled);
   m_toolsGrid->setEnabled(enabled);
 }
@@ -754,6 +750,8 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
 /** Used to erase the map. This will erase all elements and can't be undone */
 void CMapManager::eraseMap(void)
 {
+  if (!mapData->rootZone) return;
+
   eraseZone(mapData->rootZone);
   delete mapData->rootZone;
   mapData->rootZone = NULL;
@@ -761,7 +759,7 @@ void CMapManager::eraseMap(void)
   m_zoneCount = 0;
   m_levelCount = 0;
 
-  activeView->setLevel(NULL);
+  if (activeView) activeView->setLevel(NULL);
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
   {
@@ -847,6 +845,8 @@ void CMapManager::createNewMap()
   CMapRoom *room = CMapElementUtil::createRoom(this, QPoint(2 * mapData->gridSize.width(),2 * mapData->gridSize.height()),zone->firstLevel());
   setCurrentRoomWithoutUndo(room);
   setLoginRoomWithoutUndo(room);
+
+  if (!activeView) return;
 
   if (currentRoom) activeView->showPosition(currentRoom->getLowPos(),zone->firstLevel());
 
@@ -1179,17 +1179,28 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
   closeCommandGroup();
 }
 
-/** Used to load a map */
-void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
+bool CMapManager::isClean() const
 {
+  return commandHistory->isClean();
+}
+
+/** Used to load a map */
+void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
+{
+  QFile f(file);
+  if (!f.exists()) {
+    createNewMap();
+    return;
+  }
+
   setUndoActive(false);
   commandHistory->clear();
   historyGroup = NULL;
 
-    eraseMap();
-  
+  eraseMap();
+
   // Load the map using the correct filter
-  filter->loadData(url);
+  filter->loadData(file);
 
   if (!getLoginRoom())
   {
@@ -1199,7 +1210,7 @@ void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
 
   setCurrentRoomWithoutUndo(loginRoom);
 
-  if (loginRoom)
+  if (loginRoom && activeView)
   {
     if (activeView->getCurrentlyViewedLevel()==NULL)  
       activeView->showPosition(loginRoom,true);
@@ -1210,8 +1221,8 @@ void CMapManager::importMap(const KUrl& url,CMapFileFilterBase *filter)
 }
 
 /** Used to save a map */
-void CMapManager::exportMap(const KUrl& url,CMapFileFilterBase *filter)
-{  
+void CMapManager::exportMap(const QString& url,CMapFileFilterBase *filter)
+{
   filter->saveData(url);
   commandHistory->setClean();
 }
@@ -1239,6 +1250,7 @@ void CMapManager::changedElement(CMapElement *element)
 {
   if (element==NULL)
     return;
+  if (!activeView) return;
 
   for (CMapPluginBase *plugin = getPluginList()->first();plugin!=0; plugin= getPluginList()->next())
   {
@@ -1251,6 +1263,7 @@ void CMapManager::changedElement(CMapElement *element)
 /** Used to inform the various parts of the mapper that a element has added */
 void CMapManager::addedElement(CMapElement *element)
 {
+  if (!activeView) return;
   if (activeView->getCurrentlyViewedLevel())
     activeView->addedElement(element);
 }
@@ -1929,103 +1942,15 @@ void CMapManager::redrawAllViews(void)
   activeView->changed();
 }
 
-/** This method is called to create a new map, when the new map menu option is selected */
-void CMapManager::slotFileNew()
+CMapFileFilterBase *CMapManager::nativeFilter(bool isLoad)
 {
-  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure you want to create a new map?\nThis action can not be undone"),i18n("KMuddy Mapper"))== KMessageBox::Yes)
-  {
-    setUndoActive(false);
-    commandHistory->clear();
-    historyGroup = NULL;
-    eraseMap();
-    createNewMap();
-    setUndoActive(true);
-  }
-}
-
-/** This method is called to load a map from a file when the load menu option is selected */
-void CMapManager::slotFileLoad()
-{
-  int found = 0;
-  QString filterStr = "";
-
   for (CMapFileFilterBase *filter = m_fileFilter.first();filter!=0;filter=m_fileFilter.next())
   {
-    if (filter->supportLoad())
-    {
-         filterStr = filterStr + filter->getPatternExtension() + "|"+filter->getName();
-      filterStr += "\n";
-      found++;
-    }
+    if (isLoad && (!filter->supportLoad())) continue;
+    if ((!isLoad) && (!filter->supportSave())) continue;
+    if (filter->isNative()) return filter;
   }
-
-  if (found>0)
-  {
-    filterStr = filterStr.remove(filterStr.length()-1,1);
-
-    KFileDialog dlg(KUrl(":"), filterStr, 0);
-      dlg.setOperationMode( KFileDialog::Opening );
-
-    dlg.setCaption(i18n("Load Map File"));
-    dlg.setMode( KFile::File );
-    if (dlg.exec())
-    {
-
-      for (CMapFileFilterBase *filter = m_fileFilter.first();filter!=0;filter=m_fileFilter.next())
-      {
-        if (filter->getPatternExtension()==dlg.currentFilter() && filter->supportLoad())
-        {
-          importMap(dlg.selectedUrl(),filter);
-          break;
-        }
-      }
-    }
-  }
-}
-
-/** This method is called to save the map to a file when the "save as" menu option is selected */
-void CMapManager::slotFileSave()
-{
-  int found = 0;
-  QString filterStr = "";
-  
-  for (CMapFileFilterBase *filter = m_fileFilter.first();filter!=0;filter=m_fileFilter.next())
-  {
-    if (filter->supportSave())
-    {
-      filterStr = filterStr + filter->getPatternExtension() + "|"+filter->getName();
-      filterStr += "\n";
-      found++;
-    }
-  }
-
-  if (found>0)
-  {
-    filterStr = filterStr.remove(filterStr.length()-1,1);    
-    KFileDialog dlg(KUrl(":"), filterStr,0);
-      dlg.setOperationMode( KFileDialog::Saving );
-
-    dlg.setCaption(i18n("Save Map File"));
-    dlg.setMode( KFile::File );
-    if (dlg.exec())
-    {
-
-      for (CMapFileFilterBase *filter = m_fileFilter.first();filter!=0;filter=m_fileFilter.next())
-      {  
-        if (filter->getPatternExtension()==dlg.currentFilter())
-        {
-          KUrl url = dlg.selectedUrl();
-          if (!url.path().endsWith(filter->getExtension()))
-          {
-            url.setPath(url.path()+filter->getExtension());
-          }
-          exportMap(url,filter);
-        
-          break;
-        }
-      }
-    }
-  }
+  return 0;
 }
 
 QString CMapManager::defaultSavePath () const
@@ -2046,9 +1971,7 @@ void CMapManager::loadMap(void)
   if (file.exists())
   {
     kDebug() << "Loading map.....";
-    KUrl url;
-    url.setPath(filename);
-    importMap(url,filter);
+    importMap(filename,filter);
   }
   else
   {
@@ -2063,17 +1986,7 @@ void CMapManager::saveMap(void)
   QString mapDir = defaultSavePath();
   CMapFileFilterBase *filter = m_fileFilter.first();
 
-  KUrl url;
-  url.setPath(mapDir + "/" + "map"+ filter->getExtension());
-  exportMap(url,filter);
-}
-
-/** This methid is called to display map information when the information menu option is selected */
-void CMapManager::slotFileInfo()
-{
-  DlgMapInfo d(this,NULL);
-  
-  d.exec();
+  exportMap(mapDir + "/" + "map"+ filter->getExtension(), filter);
 }
 
 void CMapManager::slotToolsGrid()
@@ -2115,6 +2028,21 @@ void CMapManager::slotToolsLevelDelete()
 
   if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
   deleteLevel(level);
+}
+
+void CMapManager::slotToolsZoneCreate()
+{
+  bool ok;
+  QString name = KInputDialog::getText(i18n("KMuddy Mapper"), i18n("Please enter the name of the new zone:"), QString(), &ok);
+  if (!ok) return;
+  if (!name.length()) return;
+  m_zoneManager->createZone(name);
+}
+
+void CMapManager::slotToolsZoneDelete()
+{
+  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  m_zoneManager->deleteZone(m_zoneManager->activeZone());
 }
 
 void CMapManager::slotToolsCreateMode()
