@@ -26,19 +26,19 @@
 #include <QKeyEvent>
 
 #include "../../../cmapmanager.h"
-#include "../../../cmapviewbase.h"
 #include "../../../cmaplevel.h"
 #include "../../../cmapelement.h"
 #include "../../../cmaptext.h"
+#include "../../../cmapview.h"
 
 #include <kdebug.h>
 
 
-CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
+CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Text"),
                    BarIcon("kmud_text.png"),
-                   manager,"toolsText",0,parent)
+                   manager,"toolsText",0)
 {
 	textCursor = new QCursor(Qt::IBeamCursor);
 }

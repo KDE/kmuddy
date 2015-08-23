@@ -19,7 +19,7 @@
 #include "cmapfilter.h"
 
 #include "cmapmanager.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 #include "cmaproom.h"
 #include "cmappath.h"
 
@@ -40,7 +40,7 @@ QString CMapFilter::processCommand (const QString &command)
 {
   if (mapManager->validMoveCmd(command))
   {
-    CMapViewBase *view = mapManager->getActiveView();
+    CMapView *view = mapManager->getActiveView();
     if (view->getFollowMode())
     {
       QString newStr;

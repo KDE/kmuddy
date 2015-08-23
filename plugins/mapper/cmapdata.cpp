@@ -30,7 +30,6 @@ CMapData::CMapData()
 	defaultPathTwoWay = true;
 	showUpperLevel = true;
 	showLowerLevel = true;
-	createModeActive = true;
 	gridVisable = true;
 
 	speedwalkAbortActive = false;

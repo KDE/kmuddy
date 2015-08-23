@@ -23,8 +23,6 @@
 
 #include "../../../cmaptoolbase.h"
 
-class CMapViewBase;
-
 /**This tool is used to delete map elements
   *@author Kmud Developer Team
   */
@@ -33,7 +31,7 @@ class CMapToolEraser : public CMapToolBase
 {
    Q_OBJECT
 public: 
-	CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager,QObject *parent=0);
+	CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager);
 	~CMapToolEraser();
 
 	/** Called when the tool recives a mouse release event */

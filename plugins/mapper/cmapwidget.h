@@ -37,7 +37,6 @@ class CMapManager;
 class CMapElement;
 class CMapLevel;
 class CMapView;
-class CMapViewBase;
 
 /**This is that map widget used for displaying a view of the map
   *@author Kmud Developer Team
@@ -50,7 +49,7 @@ public:
 	virtual ~CMapWidget();
 
 	/** Used to get the views */
-	CMapViewBase *getView(void);
+	CMapView *getView(void);
 
 protected:
         /** This is used to display custop tooltips. */

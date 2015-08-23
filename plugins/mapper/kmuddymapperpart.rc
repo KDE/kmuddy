@@ -10,13 +10,12 @@
   </MenuBar>
   <StatusBar/>
   <ToolBar fullWidth="false" name="tools" position="left"><Text>Tools</Text>
-    <Action name = "toolsCreate"/>
     <Action name = "toolsGrid"/>
     <Separator/>
     <Action name = "editUndo"/>
     <Action name = "editRedo"/>
   </ToolBar>
-  <ToolBar fullWidth="false" name="navigation"><Text>Navigation</Text>
+  <ToolBar fullWidth="false" name="navigation" position="left"><Text>Navigation</Text>
     <Action name = "toolsZoneCreate"/>
     <Action name = "toolsZoneDelete"/>
     <Action name = "toolsLevelUp"/>

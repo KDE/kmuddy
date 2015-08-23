@@ -24,7 +24,6 @@
 #include <qbitmap.h>
 
 #include "../../../cmapmanager.h"
-#include "../../../cmapviewbase.h"
 #include "../../../cmaplevel.h"
 #include "../../../cmapelement.h"
 
@@ -55,11 +54,11 @@ static unsigned char delete_cm_bits[] = {       // delete cursor bitmap mask
    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
-CMapToolEraser::CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
+CMapToolEraser::CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Eraser"),
                    BarIcon("kmud_eraser.png"),
-                   manager,"toolsEraser",0,parent)
+                   manager,"toolsEraser",0)
 {
 
 	QBitmap delete_cb( 32, 32, delete_cb_bits, TRUE );

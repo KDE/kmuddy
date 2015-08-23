@@ -32,7 +32,6 @@
 
 class CMapManager;
 class CMapLevel;
-class CMapViewBase;
 
 class QActionGroup;
 class KActionCollection;
@@ -46,7 +45,7 @@ class KMUDDY_EXPORT CMapToolBase : public QObject
         Q_OBJECT
 public:
 	/** The construtor for the tool */
-	CMapToolBase(KActionCollection *actionCollection,QString description,QIcon icon,CMapManager *manager,QString actionName,QActionGroup *group, QObject *parent=0);
+	CMapToolBase(KActionCollection *actionCollection,QString description,QIcon icon,CMapManager *manager,QString actionName,QActionGroup *group);
 	virtual ~CMapToolBase();
 
 	// Mouse events for the tool

@@ -66,14 +66,14 @@ CMapWidget::~CMapWidget()
 /** Used to create the element context menus */
 void CMapWidget::initContexMenus(void)
 {
-  room_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("room_popup",mapManager);
-  text_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("text_popup",mapManager);
-  path_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("path_popup",mapManager);
-  empty_menu = (Q3PopupMenu *)mapManager->guiFactory()->container("empty_popup",mapManager);
+  room_menu = (Q3PopupMenu *)getView()->guiFactory()->container("room_popup",getView());
+  text_menu = (Q3PopupMenu *)getView()->guiFactory()->container("text_popup",getView());
+  path_menu = (Q3PopupMenu *)getView()->guiFactory()->container("path_popup",getView());
+  empty_menu = (Q3PopupMenu *)getView()->guiFactory()->container("empty_popup",getView());
 }
 
 /** Used to get the views */
-CMapViewBase *CMapWidget::getView(void)
+CMapView *CMapWidget::getView(void)
 {
 	return viewWidget;
 }
@@ -97,7 +97,7 @@ bool CMapWidget::event(QEvent *e)
     QHelpEvent *helpEvent = static_cast<QHelpEvent *>(e);
     QPoint point = helpEvent->pos();
 
-    CMapViewBase *view = getView();
+    CMapView *view = getView();
     CMapLevel *level = view->getCurrentlyViewedLevel();
     CMapElement *element = level ? level->findElementAt(point) : 0;
     QString s;
@@ -218,52 +218,54 @@ void CMapWidget::mouseReleaseEvent(QMouseEvent *e)
 
 void CMapWidget::showRoomContextMenu(void)
 {
-    CMapRoom *room = (CMapRoom *)mapManager->getSelectedElement();
+  CMapRoom *room = (CMapRoom *) getView()->getSelectedElement();
 
-	QAction *roomSetCurrentPos = mapManager->actionCollection()->action("roomCurrentPos");
-	QAction *roomSetLogin = mapManager->actionCollection()->action("roomLoginPoint");	
-	KSelectAction *labelMenu=(KSelectAction *)mapManager->actionCollection()->action("labelMenu");
+  KActionCollection *acol = getView()->actionCollection();
+  QAction *roomSetCurrentPos = acol->action("roomCurrentPos");
+  QAction *roomSetLogin = acol->action("roomLoginPoint");	
+  KSelectAction *labelMenu=(KSelectAction *) acol->action("labelMenu");
 
-	roomSetCurrentPos->setEnabled(!room->getCurrentRoom());
-	roomSetLogin->setEnabled(!room->getLoginRoom());
+  roomSetCurrentPos->setEnabled(!room->getCurrentRoom());
+  roomSetLogin->setEnabled(!room->getLoginRoom());
 
-	switch(room->getLabelPosition())
-	{
-		case CMapRoom::HIDE      : labelMenu->setCurrentItem(0); break;
-		case CMapRoom::NORTH     : labelMenu->setCurrentItem(1); break;
-		case CMapRoom::NORTHEAST : labelMenu->setCurrentItem(2); break;
-		case CMapRoom::EAST      : labelMenu->setCurrentItem(3); break;
-		case CMapRoom::SOUTHEAST : labelMenu->setCurrentItem(4); break;
-		case CMapRoom::SOUTH     : labelMenu->setCurrentItem(5); break;
-		case CMapRoom::SOUTHWEST : labelMenu->setCurrentItem(6); break;
-		case CMapRoom::WEST      : labelMenu->setCurrentItem(7); break;
-		case CMapRoom::NORTHWEST : labelMenu->setCurrentItem(8); break;
-		case CMapRoom::CUSTOM    : labelMenu->setCurrentItem(9); break;
-	}
-	
+  switch(room->getLabelPosition())
+  {
+    case CMapRoom::HIDE      : labelMenu->setCurrentItem(0); break;
+    case CMapRoom::NORTH     : labelMenu->setCurrentItem(1); break;
+    case CMapRoom::NORTHEAST : labelMenu->setCurrentItem(2); break;
+    case CMapRoom::EAST      : labelMenu->setCurrentItem(3); break;
+    case CMapRoom::SOUTHEAST : labelMenu->setCurrentItem(4); break;
+    case CMapRoom::SOUTH     : labelMenu->setCurrentItem(5); break;
+    case CMapRoom::SOUTHWEST : labelMenu->setCurrentItem(6); break;
+    case CMapRoom::WEST      : labelMenu->setCurrentItem(7); break;
+    case CMapRoom::NORTHWEST : labelMenu->setCurrentItem(8); break;
+    case CMapRoom::CUSTOM    : labelMenu->setCurrentItem(9); break;
+  }
+
 
   showContextMenu (room_menu);
 }
 
 void CMapWidget::showPathContextMenu(void)
 {
-	CMapPath *path = (CMapPath *)mapManager->getSelectedElement();
-	
-	bool twoWay = path->getOpsitePath();
+  CMapPath *path = (CMapPath *) getView()->getSelectedElement();
 
-	KToggleAction *pathTwoWay = (KToggleAction *)mapManager->actionCollection()->action("pathTwoWay");
-	KToggleAction *pathOneWay = (KToggleAction *)mapManager->actionCollection()->action("pathOneWay");
-    QAction *pathEditBends = mapManager->actionCollection()->action("pathEditBends");
-	QAction *pathDelBend = mapManager->actionCollection()->action("pathDelBend");
-	QAction *pathAddBend = mapManager->actionCollection()->action("pathAddBend");
-	
-	pathTwoWay->setChecked(twoWay);
-	pathOneWay->setChecked(!twoWay);
+  bool twoWay = path->getOpsitePath();
 
-	CMapView *view = (CMapView *) viewWidget;
-	pathDelBend->setEnabled(path->mouseInPathSeg(selectedPos,view->getCurrentlyViewedZone())!=-1);
-	pathEditBends->setEnabled(path->getBendCount() > 0);
-	pathAddBend->setEnabled(path->getSrcRoom()->getZone()==path->getDestRoom()->getZone());
+  KActionCollection *acol = getView()->actionCollection();
+  KToggleAction *pathTwoWay = (KToggleAction *)acol->action("pathTwoWay");
+  KToggleAction *pathOneWay = (KToggleAction *)acol->action("pathOneWay");
+  QAction *pathEditBends = acol->action("pathEditBends");
+  QAction *pathDelBend = acol->action("pathDelBend");
+  QAction *pathAddBend = acol->action("pathAddBend");
+
+  pathTwoWay->setChecked(twoWay);
+  pathOneWay->setChecked(!twoWay);
+
+  CMapView *view = (CMapView *) viewWidget;
+  pathDelBend->setEnabled(path->mouseInPathSeg(selectedPos,view->getCurrentlyViewedZone())!=-1);
+  pathEditBends->setEnabled(path->getBendCount() > 0);
+  pathAddBend->setEnabled(path->getSrcRoom()->getZone()==path->getDestRoom()->getZone());
 
   showContextMenu (path_menu);
 }
@@ -281,7 +283,8 @@ void CMapWidget::showOtherContextMenu(void)
 
 void CMapWidget::showContextMenu(Q3PopupMenu *menu)
 {
-  CMapElement *el = mapManager->getSelectedElement();
+  CMapView *view = mapManager->getActiveView();
+  CMapElement *el = view->getSelectedElement();
   popupMenu(el, menu, selectedPos);
 }
 
@@ -290,17 +293,18 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
   CMapLevel *level = viewWidget->getCurrentlyViewedLevel();
   if (!level) return;
 
-  mapManager->setSelectedPos(e->pos());
+  CMapView *view = mapManager->getActiveView();
+  view->setSelectedPos(e->pos());
   selectedPos = e->pos();
 
-  mapManager->setSelectedElement(0);
+  view->setSelectedElement(0);
   CMapElement *element = level->findElementAt (e->pos());
   if (!element) {
     showOtherContextMenu();
     return;
   }
 
-  mapManager->setSelectedElement(element);
+  view->setSelectedElement(element);
 
   mapManager->unsetEditElement();
   switch(element->getElementType())

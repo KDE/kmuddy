@@ -19,9 +19,10 @@
 #define CMAPPLUGINBASE_H
 
 #include <QList>
-#include <kparts/plugin.h>
+#include <kxmlguiclient.h>
 
 #include "cmapelement.h"
+#include "cmapview.h"
 
 #include <kmuddy_export.h>
 
@@ -35,7 +36,7 @@ class KMemConfig;
 /**This is the base class for mapper plugins
   *@author Kmud Developer Team
   */
-class KMUDDY_EXPORT CMapPluginBase : public KParts::Plugin
+class KMUDDY_EXPORT CMapPluginBase : public QObject, public KXMLGUIClient
 {
    Q_OBJECT
 public: 

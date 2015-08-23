@@ -35,7 +35,6 @@
 #include <kaction.h>
 #include <kselectaction.h>
 #include <ktoggleaction.h>
-#include <kxmlguiwindow.h>
 #include <ksimpleconfig.h>
 #include <kstatusbar.h>
 #include <kconfiggroup.h>
@@ -51,7 +50,6 @@ class CMapPath;
 class CMapText;
 class CMapRoom;
 class CMapView;
-class CMapViewBase;
 class CMapLevel;
 class CMapToolBase;
 class CMapPluginBase;
@@ -74,7 +72,6 @@ class DlgMapSpeedwalk;
 
 class KMuddyMapper;
 
-class KVBox;
 class KComponentData;
 class QActionGroup;
 class KUndoStack;
@@ -83,7 +80,7 @@ class KUndoStack;
   *@author KMud Development Team
   */
 
-class KMUDDY_EXPORT CMapManager : public KXmlGuiWindow, public cActionBase
+class KMUDDY_EXPORT CMapManager : public QObject, public cActionBase
 {
         Q_OBJECT
 public:
@@ -97,7 +94,7 @@ public:
   Q3PtrList<CMapPluginBase> *getPluginList();
   /**
    * Used to create a new view of the map
-   * actually returns a CMapViewBase*,  dynamic_cast if necessary
+   * actually returns a CMapView*,  dynamic_cast if necessary
    */
   void openMapView();
   /**
@@ -190,7 +187,7 @@ public:
   QString directionToText(directionTyp dir,QString specialCmd);
 
   /** Get the level that has focues at the moment */
-  CMapViewBase *getActiveView(void);
+  CMapView *getActiveView();
   /** Used to inform the various parts of the mapper that a element has changed */
   void changedElement(CMapElement *element);
   /** Used to inform the various parts of the mapper that a element has added */
@@ -233,6 +230,9 @@ public:
     * @param id The id of the level to find
     * @return Null if no level is found otherwise a pointer to the level */
   CMapLevel *findLevel(unsigned int id);
+
+  /** Obtain the command history */
+  KUndoStack *getCommandHistory() { return commandHistory; };
   /** Used to create a new command group */
   void openCommandGroup(QString name);
   /** Used to close a command group */
@@ -245,18 +245,6 @@ public:
   void deleteLevel(CMapLevel *level);
   /** Find the first room in the map,if one can't be found then create one */
   CMapRoom *findFirstRoom(CMapRoom *exsitingRoom);
-  /**
-     * This method is used to set the element when that a popup menu is to be showed for
-     */
-  void setSelectedElement(CMapElement *element);
-  /**
-   * This methid is used to set the position that a element was selected when the contex menu is shown
-     */
-  void setSelectedPos(QPoint pos);
-  /**
-     * This method is used to get the element that a popup menu is being displayed for
-     */
-  CMapElement *getSelectedElement(void);
   /** This is used to tell the mapper if commands should be added to the history list */
   void setUndoActive(bool active);
   int getUndoActive(void);
@@ -289,16 +277,11 @@ public:
 
   KComponentData instance ();
 
-  QActionGroup *toolGroup () { return m_toolGroup; }
-
 public:
   /** A count of the number of levels created */
   unsigned int m_levelCount;
   /** A count of the number of zones created */
   unsigned int m_zoneCount;
-
-signals:
-  void closed ();
 
 public slots:
   /** Used to delete a element from the map */
@@ -308,85 +291,19 @@ public slots:
   
 
 private slots:
-  void slotToolsGrid();
-  void slotToolsLevelUp();
-  void slotToolsLevelDown();
-  void slotToolsLevelDelete();
-  void slotToolsZoneCreate();
-  void slotToolsZoneDelete();
-  void slotToolsCreateMode();
-
-  void slotViewUpperLevel();
-  void slotViewLowerLevel();
-
   void slotWalkPlayerAlongPath(void);
-
-  /** Used to change the position of room/zone labels */
-  void slotChangeLabelPos();
-  /** Used to room under the point the current room */
-  void slotRoomSetCurrentPos(void);
-  /** Used to room under the point the login room */
-  void slotRoomSetLogin(void);
-  /** Used to set speedwalk to the room under the pointer */
-  void slotRoomSpeedwalkTo(void);
-  /** Used to delete the room under the pointer */
-  void slotRoomDelete(void);
-  /** Used to display the properties of the room under the pointer */
-  void slotRoomProperties(void);
-  /** Used to make  the path under the pointer one way */
-  void slotPathOneWay(void);
-  /** Used to make the path under the pointer two way */
-  void slotPathTwoWay(void);
-  /** Used to add a bend to the path under the pointer */
-  void slotPathAddBend(void);
-  /** Used to delete the path segment under the pointer */
-  void slotPathDelBend(void);
-  /** Used to edit the bends of the path under the pointer */
-  void slotPathEditBends(void);
-  /** Used to delete the path under the pointer */
-  void slotPathDelete(void);
-  /** Used to display the properties of the path under the pointer */
-  void slotPathProperties(void);
-  /** Used to delete the text element under the pointer */
-  void slotTextDelete(void);
-  /** Used to display the text properties of the text element under the pointer */
-  void slotTextProperties(void);
   
 private:
   /** Used to delete a element from the map, should only be used by the deleteElementMethod() */
   void deleteElementWithoutGroup(CMapElement *element,bool delOpsite = true);
-  /** Used to setup the menus */
-  void initMenus();
-  /** Used to create the plugins */
-  void initPlugins();
   /** This will setup the import/export file filters */
   void initFileFilters();
-
-  /**
-   * Used to enable/disable the view actions
-   * @param If true then enable the actions otherwise disable the actions
-   */
-  void enableViewControls(bool enable);
-  /**
-   * This method is used to disable/enable mapper actions that are not done by enableViewControls()
-   * @param If true then enable the actions otherwise disable the actions
-   */
-  void enableNonViewActions(bool enabled);
-
-  /** Used by slotToolsLevel(Up/Down) */
-  void levelShift(bool up);
-  
-  virtual bool queryClose ();
+  /** Used to create the plugins */
+  void initPlugins();
 
 private:
-  /** This is the map clipboard used for copy and paste actions */
-  CMapClipboard *m_clipboard;
   /** A list of import/export filters */
   Q3PtrList<CMapFileFilterBase> m_fileFilter;
-  /** The element that is selected ( when the right mouse button menu is show for it) */
-  CMapElement *m_selectedElement;
-  /** The position that the mouse is in when the context menu is show for a element */
-  QPoint m_selectedPos;
   /** If this is true then commands are added to the history, otherwise they are not */
   bool m_commandsActive;
   /** The filter used to proces mud input/output */
@@ -408,7 +325,7 @@ private:
   /** Used to store the amount of steps taken in the speedwalk */
   int speedwalkProgress;
   /** A pointer to the active map view */
-  CMapViewBase *activeView;
+  CMapView *activeView;
   /** The zone combo box */
   KSelectAction *zoneMenu;
   /** A pointer to the current room */
@@ -428,29 +345,12 @@ private:
   DlgMapColor *mapColor;
   DlgMapSpeedwalk *mapSpeedwalk;
 
-  //Actions
-  KToggleAction *m_toolsGrid;
-  KToggleAction *m_toolsCreate;
-  KAction *m_toolsUpLevel;
-  KAction *m_toolsDownLevel;
-  KAction *m_toolsDeleteLevel;
-  KAction *m_toolsCreateZone;
-  KAction *m_toolsDeleteZone;
-
-  KToggleAction *m_viewLowerLevel;
-  KToggleAction *m_viewUpperLevel;
-
-  KSelectAction *labelMenu;
-
-  QActionGroup *m_toolGroup;
-
   /** Used to tell if speedwalk is active */
   bool speedwalkActive;
   /** The rooms that are to be speed walked */
   Q3PtrStack<QString> pathToWalk;
 
   KMuddyMapper *mapperPlugin;
-  KVBox *container;
 private:
   /** This method is used to save the map to the default location */
   void loadMap(void);

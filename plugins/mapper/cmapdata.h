@@ -80,7 +80,6 @@ public:
 	bool showLowerLevel;
 
 	// Tool options
-	bool createModeActive;
 	bool gridVisable;
 
 	QSize gridSize;

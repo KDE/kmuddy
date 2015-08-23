@@ -19,9 +19,7 @@
 #include "cmapmanager.h"
 
 #include <kdebug.h>
-#include <kactioncollection.h>
 #include <kstandarddirs.h>
-#include <kiconloader.h>
 #include <klocale.h>
 #include <kservicetypetrader.h>
 #include <kmessagebox.h>
@@ -29,16 +27,12 @@
 #include <kfiledialog.h>
 #include <kpagedialog.h>
 #include <kcomponentdata.h>
-#include <kxmlguifactory.h>
 #include <kundostack.h>
-#include <kinputdialog.h>
 
 #include <QQueue>
 #include <qtimer.h>
 #include <q3valuelist.h>
-#include <QActionGroup>
 #include <Q3PtrList>
-#include <kvbox.h>
 
 #include "cmapzone.h"
 #include "cmappath.h"
@@ -46,10 +40,9 @@
 #include "cmaproom.h"
 #include "cmapview.h"
 #include "cmaplevel.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 #include "cmaptoolbase.h"
 #include "cmappluginbase.h"
-#include "cmapclipboard.h"
 #include "cmapzonemanager.h"
 
 #include "cmapcmdelementcreate.h"
@@ -82,14 +75,11 @@
 #include "cstatus.h"
 
 CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
-  KXmlGuiWindow (parent),
   cActionBase ("map-manager", 0),
   m_sessId (sessId),
   mapperPlugin (mapper)
 {
   kDebug() << "constructor begins";
-  setCaption (i18n ("Mapper"));
-  setAttribute (Qt::WA_DeleteOnClose, false);  // do not delete on close
 
   // register action handlers
   addEventHandler ("dialog-create", 50, PT_STRING);
@@ -110,22 +100,11 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   historyGroup = NULL;
   m_commandsActive = true;
 
-  initMenus();
-  initPlugins();
   initFileFilters();
-
-  container = new KVBox (this);
-  container->show ();
-  setCentralWidget (container);
-
-  m_clipboard = new CMapClipboard(this,actionCollection());
 
   activeView = 0;
 
   setDefaultOptions();
-  readOptions();
-
-  enableViewControls(false);
 
   speedwalkActive = false;
   pathToWalk.setAutoDelete(true);
@@ -134,26 +113,26 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   speedwalkProgressDlg->hide();
   connect(speedwalkProgressDlg,SIGNAL(abortSpeedwalk()),this,SLOT(slotAbortSpeedwalk()));
 
-  // set up the menus
-  setHelpMenuEnabled (false);
-  createGUI (KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
-
   m_zoneCount = 0;
   m_levelCount = 0;
   m_zoneManager = NULL;
 
   setUndoActive (false);
   createNewMap();  // because some things break if a map doesn't exist
-  activeView = new CMapView(this,container);
+  activeView = new CMapView(this, parent);
 
   m_zoneManager = new CMapZoneManager(sessId, this);
   if (!m_zoneManager->zonesModel()->rowCount())
     m_zoneManager->createZone (i18n ("Map #1"));
   m_zoneManager->loadZone(0);
 
+  initPlugins();
+  activeView->initGUI();
+
+  readOptions();
+
   openMapView ();
   setUndoActive (true);
-  setWindowFlags (Qt::Widget);
 
   kDebug() << "constructor ends";
 }
@@ -216,16 +195,16 @@ void CMapManager::createGlobalConfigPanes ()
   KPageDialog *dlg = (KPageDialog *) cDialogList::self()->getDialog ("app-prefs");
 
   KPageWidgetItem *item;
-  QFrame *frmdir = new QFrame (this);
+  QFrame *frmdir = new QFrame (dlg);
   item = dlg->addPage (frmdir, i18n ("Mapper: Directions"));
   item->setIcon (KIcon ("gear"));
-  QFrame *frmmovement = new QFrame (this);
+  QFrame *frmmovement = new QFrame (dlg);
   item = dlg->addPage (frmmovement, i18n ("Mapper: Movement"));
   item->setIcon (KIcon ("run"));
-  QFrame *frmcolor = new QFrame (this);
+  QFrame *frmcolor = new QFrame (dlg);
   item = dlg->addPage (frmcolor, i18n ("Mapper: Colors"));
   item->setIcon (KIcon ("colorize"));
-  QFrame *frmspeedwalk = new QFrame (this);
+  QFrame *frmspeedwalk = new QFrame (dlg);
   item = dlg->addPage (frmspeedwalk, i18n ("Mapper: Speedwalk"));
   item->setIcon (KIcon ("launch"));
 
@@ -274,144 +253,6 @@ void CMapManager::initFileFilters()
   m_fileFilter.append(new CMapFileFilterXML(this));
 }
 
-void CMapManager::initMenus()
-{
-  kDebug() << "begin initMenus";
-
-  // Edit menu
-  commandHistory->createUndoAction(actionCollection(), "editUndo");
-  commandHistory->createRedoAction(actionCollection(), "editRedo");
-
-  // Tools menu
-  m_toolsCreate = new KToggleAction (this);
-  m_toolsCreate->setText ( i18n("&Create Mode"));
-  m_toolsCreate->setIcon (BarIcon("kmud_create.png"));
-  connect  (m_toolsCreate, SIGNAL (triggered()), this, SLOT(slotToolsCreateMode()));
-  actionCollection()->addAction ("toolsCreate", m_toolsCreate);
-  m_toolsGrid = new KToggleAction (this);
-  m_toolsGrid->setText ( i18n("&Grid"));
-  m_toolsGrid->setIcon (BarIcon("kmud_grid.png"));
-  connect (m_toolsGrid, SIGNAL (triggered()), this, SLOT(slotToolsGrid()));
-  actionCollection()->addAction ("toolsGrid", m_toolsGrid);
-  m_toolsUpLevel = new KAction (this);
-  m_toolsUpLevel->setText ( i18n("Display Upper Level"));
-  m_toolsUpLevel->setIcon (BarIcon("kmud_lvlup.png"));
-  connect (m_toolsUpLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelUp()));
-  actionCollection()->addAction ("toolsLevelUp", m_toolsUpLevel);
-  m_toolsDownLevel = new KAction (this);
-  m_toolsDownLevel->setText ( i18n("Display Lower Level"));
-  m_toolsDownLevel->setIcon (BarIcon("kmud_lvldown.png"));
-  connect (m_toolsDownLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDown()));
-  actionCollection()->addAction ("toolsLevelDown", m_toolsDownLevel);
-  m_toolsDeleteLevel = new KAction (this);
-  m_toolsDeleteLevel->setText ( i18n("Delete Current Level"));
-  connect (m_toolsDeleteLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDelete()));
-  actionCollection()->addAction ("toolsLevelDelete", m_toolsDeleteLevel);
-  m_toolsCreateZone = new KAction (this);
-  m_toolsCreateZone->setText ( i18n("Create New Zone"));
-  connect (m_toolsCreateZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneCreate()));
-  actionCollection()->addAction ("toolsZoneCreate", m_toolsCreateZone);
-  m_toolsDeleteZone = new KAction (this);
-  m_toolsDeleteZone->setText ( i18n("Delete Current Zone"));
-  connect (m_toolsDeleteZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneDelete()));
-  actionCollection()->addAction ("toolsZoneDelete", m_toolsDeleteZone);
-
-  // View menu
-  m_viewUpperLevel = new KToggleAction (this);
-  m_viewUpperLevel->setText ( i18n("Map Upper Level"));
-  connect  (m_viewUpperLevel, SIGNAL (triggered()), this, SLOT(slotViewUpperLevel()));
-  actionCollection()->addAction ("viewUpperLevel", m_viewUpperLevel);
-  m_viewLowerLevel = new KToggleAction (this);
-  m_viewLowerLevel->setText ( i18n("Map Lower Level"));
-  connect  (m_viewLowerLevel, SIGNAL (triggered()), this, SLOT(slotViewLowerLevel()));
-  actionCollection()->addAction ("viewLowerLevel", m_viewLowerLevel);
-
-  // Room Popup Actions
-  KAction *action;
-  action = new KAction (this);
-  action->setText (i18n("Set &Current Position"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSetCurrentPos()));
-  actionCollection()->addAction ("roomCurrentPos", action);
-  action = new KAction (this);
-  action->setText (i18n("Set Room to &Login Point"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSetLogin()));
-  actionCollection()->addAction ("roomLoginPoint", action);
-  action = new KAction (this);
-  action->setText (i18n("&Speed walk to room"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSpeedwalkTo()));
-  actionCollection()->addAction ("roomWalkTo", action);
-  action = new KAction (this);
-  action->setText (i18n("&Delete room"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotRoomDelete()));
-  actionCollection()->addAction ("roomDelete", action);
-  action = new KAction (this);
-  action->setText (i18n("&Properties"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotRoomProperties()));
-  actionCollection()->addAction ("roomProperties", action);
-
-    // Text Popup Actions
-  action = new KAction (this);
-  action->setText (i18n("&Delete Text"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotTextDelete()));
-  actionCollection()->addAction ("textDelete", action);
-  action = new KAction (this);
-  action->setText (i18n("&Properties"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotTextProperties()));
-  actionCollection()->addAction ("textProperties", action);
-
-  // Path Popup Actions
-  action = new KToggleAction (this);
-  action->setText (i18n("&One way"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathOneWay()));
-  actionCollection()->addAction ("pathOneWay", action);
-  action = new KToggleAction (this);
-  action->setText (i18n("&Two way"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathTwoWay()));
-  actionCollection()->addAction ("pathTwoWay", action);
-  action = new KAction (this);
-  action->setText (i18n("&Add Bend"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathAddBend()));
-  actionCollection()->addAction ("pathAddBend", action);
-  action = new KAction (this);
-  action->setText (i18n("&Remove Segment"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathDelBend()));
-  actionCollection()->addAction ("pathDelBend", action);
-  action = new KAction (this);
-  action->setText (i18n("&Edit Bends"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathEditBends()));
-  actionCollection()->addAction ("pathEditBends", action);
-  action = new KAction (this);
-  action->setText (i18n("&Delete Path"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathDelete()));
-  actionCollection()->addAction ("pathDelete", action);
-  action = new KAction (this);
-  action->setText (i18n("&Properties"));
-  connect (action, SIGNAL (triggered()), this, SLOT(slotPathProperties()));
-  actionCollection()->addAction ("pathPorperties", action);
-
-
-  QStringList labelPos;
-  labelPos.append(i18n("Hide"));
-  labelPos.append(directionToText(NORTH,""));
-  labelPos.append(directionToText(NORTHEAST,""));
-  labelPos.append(directionToText(EAST,""));
-  labelPos.append(directionToText(SOUTHEAST,""));
-  labelPos.append(directionToText(SOUTH,""));
-  labelPos.append(directionToText(SOUTHWEST,""));
-  labelPos.append(directionToText(WEST,""));
-  labelPos.append(directionToText(NORTHWEST,""));
-  labelPos.append(i18n("Custom"));
-  
-  labelMenu = new KSelectAction (this);
-  labelMenu->setText (i18n("&Label"));
-  connect (labelMenu, SIGNAL (triggered()), this, SLOT(slotChangeLabelPos()));
-  actionCollection()->addAction ("labelMenu", labelMenu);
-  labelMenu->setItems(labelPos);
-
-  // tool action group
-  m_toolGroup = new QActionGroup (this);
-}
-
 /** Used to create the plugins */
 void CMapManager::initPlugins()
 {
@@ -439,7 +280,7 @@ void CMapManager::initPlugins()
       kWarning() << "Obtaining factory failed!";
       continue;
     }
-    plugin = factory->create<CMapPluginBase> (this);
+    plugin = factory->create<CMapPluginBase> (activeView);
 
     if (!plugin)
     {
@@ -455,7 +296,7 @@ void CMapManager::initPlugins()
         toolList.append(tool);
       }
 
-      insertChildClient(plugin);
+//      getActiveView()->insertChildClient(plugin);
       
       pluginCount++;
     }
@@ -481,7 +322,7 @@ void CMapManager::initPlugins()
     kWarning() << "No plugins loaded!\n";
     }
 
-     kDebug() << "XML File : " << xmlFile(); 
+     kDebug() << "XML File : " << activeView->xmlFile(); 
 }
 
 /** Used to get a list of the plugins */
@@ -516,14 +357,12 @@ void CMapManager::openMapView()
     if (firstRoom)
       displayLevel(firstRoom->getLevel(), true);
   }
-  enableViewControls(true);
 }
 
 void CMapManager::displayLevel(CMapLevel *level, bool centerView)
 {
-  CMapViewBase *mapView = getActiveView();
+  CMapView *mapView = getActiveView();
   mapView->showPosition(level, centerView);
-  enableViewControls(true);
 }
 
 /** This method is used to covert cords so that they snap to the grid */
@@ -545,7 +384,7 @@ QPoint CMapManager::cordsSnapGrid(QPoint oldPos)
  */
 void CMapManager::openNewMapView(QPoint pos,CMapLevel *level)
 {
-  CMapViewBase *mapView = getActiveView();
+  CMapView *mapView = getActiveView();
   mapView->showPosition(pos,level);
 }
 
@@ -554,32 +393,6 @@ void CMapManager::setPropertiesAllViews(QCursor *cursor,bool mouseTracking)
 {  
   activeView->setCursor(*cursor);
   activeView->setMouseTracking(mouseTracking);
-}
-
-/**
- * Used to enable/disable the view actions
- * @param If true then enable the actions otherwise disable the actions
- */
-void CMapManager::enableViewControls(bool enabled)
-{
-  if (!mapData) return;  // if we don't have mapData, we're going down
-  enableNonViewActions(enabled);
-  m_clipboard->enableActions(enabled);
-  m_toolsUpLevel->setEnabled(enabled);
-  m_toolsDownLevel->setEnabled(enabled);
-  m_toolsDeleteLevel->setEnabled(enabled);
-  m_toolsCreateZone->setEnabled(enabled);
-  m_toolsDeleteZone->setEnabled(enabled);
-}
-
-/**
- * This method is used to disable/enable mapper actions that are not done by enableViewControls()
- * @param If true then enable the actions otherwise disable the actions
- */
-void CMapManager::enableNonViewActions(bool enabled)
-{
-  m_toolsCreate->setEnabled(enabled);
-  m_toolsGrid->setEnabled(enabled);
 }
 
 /** Used to unselect all the elements in a level */
@@ -1422,11 +1235,7 @@ void CMapManager::readOptions()
   mapData->speedwalkAbortLimit = gs->getInt ("mapper-speedwalk-abort-limit");
   mapData->speedwalkDelay = gs->getInt ("mapper-speedwalk-delay");
 
-  // Set menu options
-  m_toolsGrid->setChecked(mapData->gridVisable);
-  m_toolsCreate->setChecked(mapData->createModeActive);
-  m_viewLowerLevel->setChecked(mapData->showLowerLevel);
-  m_viewUpperLevel->setChecked(mapData->showUpperLevel);
+  activeView->readOptions();
 
   for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
   {
@@ -1662,7 +1471,7 @@ void CMapManager::movePlayerBy(QString cmd)
   if (dir == SPECIAL)
     specialCmd = cmd;
 
-  movePlayerBy(dir,mapData->createModeActive,specialCmd);
+  movePlayerBy(dir, getActiveView()->getCreateMode(), specialCmd);
 }
 
 /** move the player relative to the current position of the player
@@ -1879,30 +1688,6 @@ void CMapManager::directionToCord(directionTyp dir, QSize distance,QPoint *pos)
   pos->setY(y);
 }
 
-/**
- * This method is used to set the element when that a popup menu is to be showed for
- */
-void CMapManager::setSelectedElement(CMapElement *element)
-{
-  m_selectedElement = element;  
-}
-
-/**
- * This methid is used to set the position that a element was selected when the contex menu is shown
- */
-void CMapManager::setSelectedPos(QPoint pos)
-{
-  m_selectedPos = pos;
-}
-
-/**
- * This method is used to get the element that a popup menu is being displayed for
- */
-CMapElement *CMapManager::getSelectedElement(void)
-{
-  return m_selectedElement;
-}
-
 /** This method is used to move the elements in a zone by the given vector */
 void CMapManager::moveMap(QPoint inc,CMapZone *)
 {
@@ -1930,8 +1715,8 @@ void CMapManager::makePathOneWay(CMapPath *path)
   }
 }
 
-/** Get the level that has focues at the moment */
-CMapViewBase *CMapManager::getActiveView(void)
+/** Get the main window */
+CMapView *CMapManager::getActiveView()
 {  
   return activeView;
 }                                                                    
@@ -1987,256 +1772,6 @@ void CMapManager::saveMap(void)
   CMapFileFilterBase *filter = m_fileFilter.first();
 
   exportMap(mapDir + "/" + "map"+ filter->getExtension(), filter);
-}
-
-void CMapManager::slotToolsGrid()
-{
-  getMapData()->gridVisable = m_toolsGrid->isChecked();
-  redrawAllViews();
-}
-
-void CMapManager::levelShift(bool up)
-{
-  CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
-  level = up ? level->getNextLevel() : level->getPrevLevel();
-  if (level) {
-    displayLevel(level, false);
-    return;
-  }
-
-  if (KMessageBox::warningYesNo (NULL, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
-
-  createLevel(up ? UP : DOWN);
-}
-
-void CMapManager::slotToolsLevelUp()
-{
-  levelShift(true);
-}
-
-void CMapManager::slotToolsLevelDown()
-{
-  levelShift(false);
-}
-
-void CMapManager::slotToolsLevelDelete()
-{
-  CMapLevel *level = getActiveView()->getCurrentlyViewedLevel();
-  if (!level) return;
-  int count = getZone()->levelCount();
-  if (count <= 1) return;
-
-  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
-  deleteLevel(level);
-}
-
-void CMapManager::slotToolsZoneCreate()
-{
-  bool ok;
-  QString name = KInputDialog::getText(i18n("KMuddy Mapper"), i18n("Please enter the name of the new zone:"), QString(), &ok);
-  if (!ok) return;
-  if (!name.length()) return;
-  m_zoneManager->createZone(name);
-}
-
-void CMapManager::slotToolsZoneDelete()
-{
-  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
-  m_zoneManager->deleteZone(m_zoneManager->activeZone());
-}
-
-void CMapManager::slotToolsCreateMode()
-{
-  getMapData()->createModeActive = m_toolsCreate->isChecked();
-}
-
-void CMapManager::slotViewUpperLevel()
-{
-  mapData->showUpperLevel = m_viewUpperLevel->isChecked();
-  redrawAllViews();
-}
-
-void CMapManager::slotViewLowerLevel()
-{
-  mapData->showLowerLevel = m_viewLowerLevel->isChecked();
-  redrawAllViews();
-}
-
-bool CMapManager::queryClose()
-{
-  // TODO: ask if really
-  emit closed();
-  return true;
-}
-
-/** Used to room under the point the current room */
-void CMapManager::slotRoomSetCurrentPos(void)
-{
-  setCurrentRoom((CMapRoom *)m_selectedElement);
-}
-
-/** Used to room under the point the login room */
-void CMapManager::slotRoomSetLogin(void)
-{
-  setLoginRoom((CMapRoom *)m_selectedElement);
-}
-
-/** Used to set speedwalk to the room under the pointer */
-void CMapManager::slotRoomSpeedwalkTo(void)
-{
-  walkPlayerTo((CMapRoom *)m_selectedElement);
-}
-
-/** Used to delete the room under the pointer */
-void CMapManager::slotRoomDelete(void)
-{
-  deleteElement(m_selectedElement);
-}
-
-/** Used to display the properties of the room under the pointer */
-void CMapManager::slotRoomProperties(void)
-{
-  propertiesRoom((CMapRoom *)m_selectedElement);
-}
-
-/** Used to make the path under the pointer one way */
-void CMapManager::slotPathOneWay(void)
-{
-  makePathOneWay((CMapPath *)m_selectedElement);
-}
-
-/** Used to make the path under the pointer two way */
-void CMapManager::slotPathTwoWay(void)
-{
-  makePathTwoWay((CMapPath *)m_selectedElement);
-}
-
-/** Used to add a bend to the path under the pointer */
-void CMapManager::slotPathAddBend(void)
-{
-  kDebug() << "CMapManager::CMapManager slotPathAddBend";
-  openCommandGroup(i18n("Add Bend"));
-  CMapPath *path = (CMapPath *)m_selectedElement;
-
-  path->addBendWithUndo(m_selectedPos);
-  if (path->getOpsitePath())
-  {
-    path->getOpsitePath()->addBendWithUndo(m_selectedPos);
-  }
-  m_clipboard->slotUnselectAll();
-  path->setEditMode(true);
-  changedElement(path);
-
-  closeCommandGroup();
-}
-
-/** Used to delete the path segment under the pointer */
-void CMapManager::slotPathDelBend(void)
-{
-  openCommandGroup(i18n("Delete Path Segment"));
-  CMapPath *path = (CMapPath *)m_selectedElement;
-
-  int seg = path->mouseInPathSeg(m_selectedPos,getActiveView()->getCurrentlyViewedZone());
-
-  path->deletePathSegWithUndo(seg);
-  if (path->getOpsitePath())
-  {
-    int seg = path->getOpsitePath()->mouseInPathSeg(m_selectedPos,getActiveView()->getCurrentlyViewedZone());
-    path->getOpsitePath()->deletePathSegWithUndo(seg);
-  }
-
-  changedElement(path);  
-  closeCommandGroup();
-}
-
-/** Used to edit the bends of the path under the pointer */
-void CMapManager::slotPathEditBends(void)
-{
-  CMapPath *path = (CMapPath *)m_selectedElement;
-
-  m_clipboard->slotUnselectAll();
-  path->setEditMode(true);
-  changedElement(path);
-}
-
-/** Used to delete the path under the pointer */
-void CMapManager::slotPathDelete(void)
-{
-  deleteElement(m_selectedElement);
-}
-
-/** Used to display the properties of the path under the pointer */
-void CMapManager::slotPathProperties(void)
-{
-  propertiesPath((CMapPath *)m_selectedElement);
-}
-
-/** Used to delete the text element under the pointer */
-void CMapManager::slotTextDelete(void)
-{
-  deleteElement(m_selectedElement);
-}
-
-/** Used to display the text properties of the text element under the pointer */
-void CMapManager::slotTextProperties(void)
-{
-  propertiesText((CMapText *)m_selectedElement);
-}
-
-/** Used to change the position of room/zone labels */
-void CMapManager::slotChangeLabelPos()
-{
-  if (m_selectedElement->getElementType()==ROOM)
-  {
-    CMapRoom *room = (CMapRoom *)m_selectedElement;
-
-    CMapCmdElementProperties *command = new CMapCmdElementProperties(this,i18n("Change room label position"),room);
-
-    command->getOrgProperties().writeEntry("LabelPos",(int)room->getLabelPosition());
-
-    switch(labelMenu->currentItem())
-    {
-      case 0 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::HIDE); break;
-      case 1 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::NORTH); break;
-      case 2 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::NORTHEAST); break;
-      case 3 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::EAST); break;
-      case 4 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::SOUTHEAST); break;
-      case 5 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::SOUTH); break;
-      case 6 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::SOUTHWEST); break;
-      case 7 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::WEST); break;
-      case 8 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::NORTHWEST); break;
-      case 9 : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::CUSTOM); break;
-      default : command->getNewProperties().writeEntry("LabelPos",(int)CMapRoom::HIDE); break;
-    }
-
-    addCommand(command);
-  }
-
-  if (m_selectedElement->getElementType()==ZONE)
-  {
-    CMapZone *zone = (CMapZone *)m_selectedElement;
-
-    CMapCmdElementProperties *command = new CMapCmdElementProperties(this,i18n("Change zone label position"),zone);
-
-    command->getOrgProperties().writeEntry("LabelPos",(int)zone->getLabelPosition());
-
-    switch(labelMenu->currentItem())
-    {
-      case 0 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::HIDE); break;
-      case 1 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::NORTH); break;
-      case 2 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::NORTHEAST); break;
-      case 3 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::EAST); break;
-      case 4 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::SOUTHEAST); break;
-      case 5 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::SOUTH); break;
-      case 6 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::SOUTHWEST); break;
-      case 7 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::WEST); break;
-      case 8 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::NORTHWEST); break;
-      case 9 : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::CUSTOM); break;
-      default : command->getNewProperties().writeEntry("LabelPos",(int)CMapZone::HIDE); break;
-    }
-
-    addCommand(command);
-  }
 }
 
 /** This is a debug function and not for genreal use */

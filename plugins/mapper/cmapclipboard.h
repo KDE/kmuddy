@@ -27,6 +27,7 @@ class CMapManager;
 class KMemConfig;
 class CMapZone;
 class CMapPath;
+class CMapView;
 
 /**This class contains all the mapper clipboard code
   *@author Kmud Developer Team
@@ -36,7 +37,7 @@ class CMapClipboard : public QObject
 {
    Q_OBJECT
 public: 
-	CMapClipboard(CMapManager *mapManager,QObject *parent=0);
+	CMapClipboard(CMapManager *mapManager, CMapView *view, QObject *parent=0);
 	~CMapClipboard();
 
 public:
@@ -73,17 +74,18 @@ private:
 
 
 private:
-	KMemConfig *m_clipboard;
-	CMapManager *m_mapManager;
-	QObject *m_parent;
+  KMemConfig *m_clipboard;
+  CMapManager *m_mapManager;
+  CMapView *m_view;
+  QObject *m_parent;
 
-	KAction *m_editSelectAll;
-	KAction *m_editUnselectAll;
-	KAction *m_editSelectInvert;
-	KAction *m_editDelete;
-	KAction *m_editCopy;
-	KAction *m_editCut;
-	KAction *m_editPaste;
+  KAction *m_editSelectAll;
+  KAction *m_editUnselectAll;
+  KAction *m_editSelectInvert;
+  KAction *m_editDelete;
+  KAction *m_editCopy;
+  KAction *m_editCut;
+  KAction *m_editPaste;
 
 };
 

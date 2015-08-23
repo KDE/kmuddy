@@ -33,7 +33,7 @@
 #include "../../cmapzone.h"
 #include "../../cmaplevel.h"
 #include "../../cmaplistviewitem.h"
-#include "../../cmapviewbase.h"
+#include "../../cmapview.h"
 
 #include "cmappluginspeedwalk.h"
 #include "cmapcmdspeedwalkremove.h"

@@ -38,6 +38,7 @@
 
 #include "../cmaptext.h"
 #include "../cmapmanager.h"
+#include "../cmapview.h"
 #include "../cmapcmdelementcreate.h"
 #include "../cmapcmdelementdelete.h"
 #include "../cmapcmdelementproperties.h"
@@ -45,7 +46,6 @@
 
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
-#include "../cmapviewbase.h"
 
 #include <kdebug.h>
 

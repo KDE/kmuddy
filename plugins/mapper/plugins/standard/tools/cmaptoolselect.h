@@ -36,7 +36,7 @@ class CMapToolSelect : public CMapToolBase
 {
         Q_OBJECT
 public:
-	CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager,QObject *parent=0);
+	CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager);
 	virtual ~CMapToolSelect();
 
 	/** Called when the tool recives a mouse press event */

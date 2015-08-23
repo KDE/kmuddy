@@ -29,7 +29,7 @@
 #include "cmaptext.h"
 #include "cmaplevel.h"
 #include "cmapelementutil.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 
 #include <kdebug.h>
 

@@ -26,7 +26,7 @@
 
 #include "cmapzone.h"
 #include "cmapzonemanager.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 #include "cmapmanager.h"
 
 struct CMapViewStatusbar::Private {

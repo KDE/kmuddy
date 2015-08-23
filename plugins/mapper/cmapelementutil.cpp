@@ -25,7 +25,7 @@
 #include "cmapzone.h"
 #include "cmappath.h"
 #include "cmapelement.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 
 #include "dialogs/dlgmappathproperties.h"
 

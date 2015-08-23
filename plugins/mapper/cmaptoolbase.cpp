@@ -18,23 +18,22 @@
 #include "cmaptoolbase.h"
 
 #include "cmapmanager.h"
+#include "cmapview.h"
 
 #include <kstandarddirs.h>
 #include <qactiongroup.h>
 #include <kactioncollection.h>
 
 /** The construtor for the tool */
-CMapToolBase::CMapToolBase(KActionCollection *actionCollection,QString description,QIcon icon,CMapManager *manager,QString actionName,QActionGroup *group,QObject *parent)
-	: QObject (parent)
+CMapToolBase::CMapToolBase(KActionCollection *actionCollection,QString description,QIcon icon,CMapManager *manager,QString actionName,QActionGroup *group)
 {
-	
   mapManager = manager;
 
   action = new KToggleAction (this);
   action->setText (description);
   action->setIcon (icon);
   connect (action, SIGNAL (triggered (bool)), this, SLOT (slotActionSelected ()));
-  if (!group) group = manager->toolGroup();
+  if (!group) group = manager->getActiveView()->toolGroup();
   group->addAction (action);
   actionCollection->addAction (actionName, action);
 }

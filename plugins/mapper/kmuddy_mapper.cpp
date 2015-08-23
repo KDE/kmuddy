@@ -16,6 +16,7 @@
 #include "cprofilemanager.h"
 
 #include "cmapmanager.h"
+#include "cmapview.h"
 #include "cmapfilter.h"
 #include "cmapzonemanager.h"
 
@@ -135,7 +136,7 @@ void KMuddyMapper::sessionRemove (int sess, bool) {
 void KMuddyMapper::sessionSwitch (int sess) {
   if (!d->sessions.count(sess)) sessionAdd(sess, false);
   CMapManager *manager = d->curManager();
-  if (manager) manager->hide();
+  if (manager && manager->getActiveView()) manager->getActiveView()->hide();
   if (!cProfileManager::self()->settings (sess)) {  // this means that it's a profile connection
     d->currentSession = 0;
     return;
@@ -144,8 +145,8 @@ void KMuddyMapper::sessionSwitch (int sess) {
   d->currentSession = sess;
   manager = d->curManager();
   if (manager) {
-    manager->show();
-    d->docker->setWidget (manager);
+    manager->getActiveView()->show();
+    d->docker->setWidget (manager->getActiveView());
   }
 }
 
@@ -161,7 +162,7 @@ void KMuddyMapper::disconnected (int sess) {
   // TODO: deactivate the map perhaps ?
   if (sess != d->currentSession) return;
   CMapManager *manager = d->curManager();
-  manager->hide();
+  if (manager) manager->getActiveView()->hide();
   d->docker->setWidget (0);
 }
 

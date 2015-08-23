@@ -28,18 +28,19 @@
 #include "cmaptext.h"
 #include "cmaproom.h"
 #include "cmaplevel.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 #include "cmapcmdelementcreate.h"
 #include "cmapcmdelementproperties.h"
 
 #include "kmemconfig.h"
 
-CMapClipboard::CMapClipboard(CMapManager *mapManager,QObject *parent) : QObject(parent)
+CMapClipboard::CMapClipboard(CMapManager *mapManager, CMapView *view, QObject *parent) :
+  QObject(parent),
+  m_mapManager(mapManager),
+  m_view(view),
+  m_parent(parent)
 {
 	kDebug() << "CMapClipboard::CMapClipboard constructor begins";
-
-	m_parent = parent;
-	m_mapManager = mapManager;
 
 	m_clipboard = NULL;
 	initActions();
@@ -56,34 +57,36 @@ CMapClipboard::~CMapClipboard()
 void CMapClipboard::initActions(void)
 {
   // Edit menu
+  KActionCollection *acol = m_view->actionCollection();
+
   m_editSelectAll = new KAction (m_parent);
   m_editSelectAll->setText (i18n ("Select All"));
   connect (m_editSelectAll, SIGNAL (triggered ()), this, SLOT (slotSelectAll ()));
-  m_mapManager->actionCollection()->addAction ("editSelectAll", m_editSelectAll);
+  acol->addAction ("editSelectAll", m_editSelectAll);
   m_editUnselectAll = new KAction (m_parent);
   m_editUnselectAll->setText (i18n ("Unselect All"));
   connect (m_editUnselectAll, SIGNAL (triggered ()), this, SLOT (slotUnselectAll ()));
-  m_mapManager->actionCollection()->addAction ("editUnselectAll", m_editUnselectAll);
+  acol->addAction ("editUnselectAll", m_editUnselectAll);
   m_editSelectInvert = new KAction (m_parent);
   m_editSelectInvert->setText (i18n ("Invert Selection"));
   connect (m_editSelectInvert, SIGNAL (triggered ()), this, SLOT (slotInvertSelection ()));
-  m_mapManager->actionCollection()->addAction ("editSelectInvert", m_editSelectInvert);
+  acol->addAction ("editSelectInvert", m_editSelectInvert);
   m_editDelete = new KAction (m_parent);
   m_editDelete->setText (i18n ("Delete"));
   connect (m_editDelete, SIGNAL (triggered ()), this, SLOT (slotDelete ()));
-  m_mapManager->actionCollection()->addAction ("editDelete", m_editDelete);
+  acol->addAction ("editDelete", m_editDelete);
   m_editCopy = new KAction (m_parent);
   m_editCopy->setText (i18n ("Copy"));
   connect (m_editCopy, SIGNAL (triggered ()), this, SLOT (slotCopy ()));
-  m_mapManager->actionCollection()->addAction ("editCopy", m_editCopy);
+  acol->addAction ("editCopy", m_editCopy);
   m_editCut = new KAction (m_parent);
   m_editCut->setText (i18n ("Cut"));
   connect (m_editCut, SIGNAL (triggered ()), this, SLOT (slotCut ()));
-  m_mapManager->actionCollection()->addAction ("editCut", m_editCut);
+  acol->addAction ("editCut", m_editCut);
   m_editPaste = new KAction (m_parent);
   m_editPaste->setText (i18n ("Paste"));
   connect (m_editPaste, SIGNAL (triggered ()), this, SLOT (slotPaste ()));
-  m_mapManager->actionCollection()->addAction ("editPaste", m_editPaste);
+  acol->addAction ("editPaste", m_editPaste);
 }
 
 /** This method is used to set the enabled start of the actions */
@@ -466,7 +469,7 @@ void CMapClipboard::pasteLinks()
 void CMapClipboard::slotDelete(void)
 {
   m_mapManager->openCommandGroup(i18n("Delete Elements"));
-  CMapViewBase *currentView = m_mapManager->getActiveView();
+  CMapView *currentView = m_mapManager->getActiveView();
   if (currentView)
   {
     CMapLevel *level = currentView->getCurrentlyViewedLevel();

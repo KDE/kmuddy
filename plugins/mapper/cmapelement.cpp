@@ -26,7 +26,7 @@
 #include "cmaplevel.h"
 #include "cmapmanager.h"
 #include "cmapcmdelementproperties.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 
 #define RESIZE_SIZE         10
 #define RESIZE_SIZE_HALF    5

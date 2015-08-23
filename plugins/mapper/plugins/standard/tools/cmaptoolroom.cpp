@@ -27,13 +27,13 @@
 #include <qcursor.h>
 
 #include "../../../cmapmanager.h"
-#include "../../../cmapviewbase.h"
+#include "../../../cmapview.h"
 
-CMapToolRoom::CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
+CMapToolRoom::CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Create Room"),
                    BarIcon("kmud_room.png"),
-                   manager,"toolsRoom",0,parent)
+                   manager,"toolsRoom",0)
 
 {
 }
@@ -88,7 +88,7 @@ void CMapToolRoom::mouseLeaveEvent()
 /** This function called when a tool is selected */
 void CMapToolRoom::toolSelected(void)
 {
-	CMapViewBase *view = mapManager->getActiveView();
+	CMapView *view = mapManager->getActiveView();
 	if (view)
 	{
 		view->setMouseTracking(true);

@@ -24,7 +24,6 @@
 #include <qbitmap.h>
 
 #include "../../../cmapmanager.h"
-#include "../../../cmapviewbase.h"
 #include "../../../cmaproom.h"
 #include "../../../cmaplevel.h"
 
@@ -38,11 +37,11 @@ static unsigned char path2_bits[] = {			// second path cursor bitmap
    0xf0, 0x07, 0xf0, 0x0f, 0xf0, 0x01, 0xf0, 0x03, 0xb0, 0x07, 0x12, 0x0f,
    0x05, 0x06, 0x04, 0x02, 0x02, 0x00, 0x07, 0x00};
 
-CMapToolPath::CMapToolPath(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
+CMapToolPath::CMapToolPath(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Create Path"),
                    BarIcon(("kmud_path.png")),
-                   manager,"toolsPath",0,parent)
+                   manager,"toolsPath",0)
 {
 		QBitmap pathStart_cb(16,16, path1_bits,TRUE);
 		pathStartCursor = new QCursor( pathStart_cb,pathStart_cb, 4,0);	

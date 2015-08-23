@@ -30,6 +30,7 @@
 #include "../../cmaproom.h"
 #include "../../cmaptext.h"
 #include "../../cmappath.h"
+#include "../../cmapview.h"
 
 #include <qicon.h>
 
@@ -46,25 +47,27 @@ K_EXPORT_PLUGIN (KMuddyMapperStandardFactory("kmuddymapper"))
 
 CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : CMapPluginBase(parent)
 {
-        CMapManager *manager = dynamic_cast<CMapManager *>(parent);
+        CMapManager *manager = (dynamic_cast<CMapView *>(parent))->getManager();
 	kDebug() << "CMapPluginStandard::CMapPluginStandard";
 	kDebug() << "CMapPluginStandard::CMapPluginStandard Create Tools";
+        KActionCollection *acol = actionCollection();
+        kDebug() << "Plugin collection is "<<acol;
 
 	// Create and Add the tools to the tools list
-	toolList.append(new CMapToolSelect(actionCollection(),manager,parent));
-	toolList.append(new CMapToolRoom(actionCollection(),manager,parent));
-	toolList.append(new CMapToolPath(actionCollection(),manager,parent));
-	toolList.append(new CMapToolText(actionCollection(),manager,parent));
-	toolList.append(new CMapToolEraser(actionCollection(),manager,parent));
+	toolList.append(new CMapToolSelect(acol,manager));
+	toolList.append(new CMapToolRoom(acol,manager));
+	toolList.append(new CMapToolPath(acol,manager));
+	toolList.append(new CMapToolText(acol,manager));
+	toolList.append(new CMapToolEraser(acol,manager));
 	kDebug() << "CMapPluginStandard::CMapPluginStandard Tools Created";
 
-	actionCollection()->action("toolsEraser")->setEnabled(true);
-	actionCollection()->action("toolsPath")->setEnabled(true);
-	actionCollection()->action("toolsRoom")->setEnabled(true);
-	actionCollection()->action("toolsSelect")->setEnabled(true);
-	actionCollection()->action("toolsText")->setEnabled(true);
+	acol->action("toolsEraser")->setEnabled(true);
+	acol->action("toolsPath")->setEnabled(true);
+	acol->action("toolsRoom")->setEnabled(true);
+	acol->action("toolsSelect")->setEnabled(true);
+	acol->action("toolsText")->setEnabled(true);
 
-	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_standard.rc"));
+	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_standard.rc"), true);
 }
 
 CMapPluginStandard::~CMapPluginStandard()

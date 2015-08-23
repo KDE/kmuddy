@@ -21,7 +21,7 @@
 #include "cmapzone.h"
 #include "cmaptext.h"
 #include "cmaproom.h"
-#include "cmapviewbase.h"
+#include "cmapview.h"
 
 #include <klocale.h>
 
@@ -36,7 +36,7 @@ CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 
 CMapLevel::~CMapLevel()
 {
-  CMapViewBase *view = m_mapManager->getActiveView();
+  CMapView *view = m_mapManager->getActiveView();
   if (view->getCurrentlyViewedLevel() == this)
   {
     CMapLevel *show = getPrevLevel();

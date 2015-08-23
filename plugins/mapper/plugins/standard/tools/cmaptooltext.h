@@ -26,8 +26,6 @@
 
 #include "../../../cmaptoolbase.h"
 
-class CMapViewBase;
-
 /**This tool is used to delete map elements
   *@author Kmud Developer Team
   */
@@ -36,7 +34,7 @@ class CMapToolText : public CMapToolBase
 {
    Q_OBJECT
 public:
-	CMapToolText(KActionCollection *actionCollection,CMapManager *manager,QObject *parent=0);
+	CMapToolText(KActionCollection *actionCollection,CMapManager *manager);
 	~CMapToolText();
 
 	/** Called when the tool recives a mouse release event */

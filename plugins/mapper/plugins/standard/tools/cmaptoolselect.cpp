@@ -21,7 +21,6 @@
 #include "../../../cmapelement.h"
 #include "../../../cmapview.h"
 #include "../../../cmaplevel.h"
-#include "../../../cmapviewbase.h"
 #include "../../../cmappath.h"
 #include "../cmapcmdmoveelements.h"
 
@@ -34,11 +33,11 @@
 #include <klocale.h>
 #include <kdebug.h>
 
-CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager,QObject *parent)
+CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager)
         : CMapToolBase(actionCollection,
                        i18n("Select"),
                        BarIcon("kmud_select.png"),
-                       manager,"toolsSelect",0,parent)
+                       manager,"toolsSelect",0)
 {
 	kDebug() << "CMapToolSelect: constructor begins";
 
@@ -299,7 +298,7 @@ void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *c
 /** This function called when a tool is selected */
 void CMapToolSelect::toolSelected(void)
 {
-	CMapViewBase *view = mapManager->getActiveView();
+	CMapView *view = mapManager->getActiveView();
 	if (view)
 	{
 		view->setMouseTracking(false);
@@ -310,7 +309,7 @@ void CMapToolSelect::toolSelected(void)
 /** This function is called when a tool is unselected */
 void CMapToolSelect::toolUnselected(void)
 {
-	CMapViewBase *view = mapManager->getActiveView();
+	CMapView *view = mapManager->getActiveView();
 	if (view)
 		mapManager->unselectElements(view->getCurrentlyViewedLevel());
 }
@@ -368,7 +367,7 @@ void CMapToolSelect::slotStartDraging(void)
   bDragging = true;
   mouseDownTimer.stop();
 
-  CMapViewBase *view =  mapManager->getActiveView();    
+  CMapView *view =  mapManager->getActiveView();    
   CMapLevel *currentLevel = view->getCurrentlyViewedLevel();
 
   if (!currentLevel) return;

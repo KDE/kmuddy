@@ -31,7 +31,7 @@ class CMapToolRoom : public CMapToolBase
 {
    Q_OBJECT
 public: 
-	CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager,QObject *parent=0);
+	CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager);
 	~CMapToolRoom();
 
 	/** Called when the tool recives a mouse release event */

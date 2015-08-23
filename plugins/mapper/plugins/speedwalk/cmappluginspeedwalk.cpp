@@ -31,6 +31,7 @@
 
 #include "../../cmapmanager.h"
 #include "../../cmaproom.h"
+#include "../../cmapview.h"
 
 #include "cglobalsettings.h"
 
@@ -160,7 +161,7 @@ void CMapPluginSpeedwalk::delSpeedwalkRoomNoCmd(CMapRoom *room,bool update)
 /** Used to add the room under the point to the speedwalk list */
 void CMapPluginSpeedwalk::slotRoomAddToSpeedwalk()
 {
-	addSpeedwalkRoom((CMapRoom *)mapManager->getSelectedElement());
+  addSpeedwalkRoom((CMapRoom *)mapManager->getActiveView()->getSelectedElement());
 }
 
 void CMapPluginSpeedwalk::slotViewSpeedwalkList()

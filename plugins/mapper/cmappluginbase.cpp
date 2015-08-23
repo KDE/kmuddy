@@ -20,10 +20,11 @@
 #include "cmappropertiespanebase.h"
 #include "cmaptoolbase.h"
 #include "cmapmanager.h"
+#include "cmapview.h"
 
-CMapPluginBase::CMapPluginBase(QObject *parent) : KParts::Plugin(parent)
+CMapPluginBase::CMapPluginBase(QObject *parent) : KXMLGUIClient((CMapView *)parent)
 {
-	mapManager = dynamic_cast<CMapManager *>(parent);
+  mapManager = (dynamic_cast<CMapView *>(parent))->getManager();
 }
 
 CMapPluginBase::~CMapPluginBase()
