@@ -3,6 +3,8 @@ This is a TODO list for KMuddy.
 TODO-list:
 ----------
 
+add zlib checks to cmakefile
+
 Keyboard shortcuts not loaded properly?
 
 Fix bell to go through knotify. Make other things (global notify etc) go through knotify as well.
@@ -99,4 +101,6 @@ Notation:
 - add "Paste as trigger" somewhere (16.3.2007 by Chaosone)
 - timers with float value timeouts
 - ability to add comments to objects
+-256color support (1025)
+
 

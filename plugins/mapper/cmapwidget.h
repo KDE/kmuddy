@@ -93,6 +93,7 @@ private:
 	void initContexMenus(void);
     /** This method is used to tell the plugins a menu is about to open then open the menu */
 	void popupMenu(CMapElement *element,Q3PopupMenu *menu,QPoint pos);
+        friend class CMapView;
 private:
 	QPoint selectedPos;
  	/** true when the map is being moved by mouse */

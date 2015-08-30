@@ -73,7 +73,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : KXmlGuiWindow(parent)
   scroller->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
   setCentralWidget(scroller);
 
-  mapWidget = new CMapWidget(this,manager,scroller);
+  mapWidget = new CMapWidget(this, mapManager, scroller);
   scroller->setWidget(mapWidget);
   mapWidget->show();
 
@@ -107,6 +107,7 @@ CMapView::~CMapView()
 void CMapView::initGUI()
 {
   createGUI(KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
+  mapWidget->initContexMenus();
   enableViewControls(false);
 }
 
