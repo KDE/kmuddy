@@ -500,7 +500,8 @@ void CMapView::showPosition(QPoint pos,CMapLevel *level,bool centerView)
   // Update the status bar
   statusbar->setZone(mapManager->getZone());
   statusbar->setLevel(level);
-  statusbar->setRoom(mapManager->getCurrentRoom()->getLabel());
+  CMapRoom *cur = mapManager->getCurrentRoom();
+  statusbar->setRoom(cur ? cur->getLabel() : "");
 
   mapManager->activeViewChanged();
 }

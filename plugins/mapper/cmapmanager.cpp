@@ -125,7 +125,6 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   if (!m_zoneManager->zonesModel()->rowCount())
     m_zoneManager->createZone (i18n ("Map #1"));
   m_zoneManager->loadZone(0);
-  kWarning()<<"We have "<<m_zoneManager->zonesModel()->rowCount()<<" zones.";
 
   initPlugins();
   activeView->initGUI();

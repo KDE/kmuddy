@@ -63,12 +63,14 @@ CMapViewStatusbar::CMapViewStatusbar(CMapManager *manager, QWidget *parent) : QS
   d->levelPicker = new QComboBox(this);
   d->levelPicker->setFont(f);
   d->levelPicker->setEditable(true);
+  d->levelPicker->setInsertPolicy(QComboBox::NoInsert);
   connect(d->levelPicker, SIGNAL(activated(int)), this, SLOT(changeLevel(int)));
   connect(d->levelPicker, SIGNAL(editTextChanged(const QString &)), this, SLOT(renameLevel(const QString &)));
 
   d->zonePicker = new QComboBox(this);
   d->zonePicker->setFont(f);
   d->zonePicker->setEditable(true);
+  d->zonePicker->setInsertPolicy(QComboBox::NoInsert);
   connect(d->zonePicker, SIGNAL(activated(int)), this, SLOT(changeZone(int)));
   connect(d->zonePicker, SIGNAL(editTextChanged(const QString &)), this, SLOT(renameZone(const QString &)));
 

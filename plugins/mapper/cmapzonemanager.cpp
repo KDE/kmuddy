@@ -154,6 +154,8 @@ void CMapZoneManager::createZone(const QString &name, const QString &file)
 
 void CMapZoneManager::renameZone(int idx, const QString &name)
 {
+  QStandardItem *item = d->zones.item(idx, 0);
+  if (item && (item->text() != name)) item->setText(name);
   cZoneInformation *i = getZoneEntry(idx);
   if (i) i->name = name;
 }
