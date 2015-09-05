@@ -811,8 +811,6 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 
   if (!d.exec()) return NULL;
 
-  kDebug() << "createPath 1";
-
   srcDir = (directionTyp)props.readEntry("SrcDir",0);
   destDir = (directionTyp)props.readEntry("DestDir",0);
   QString specialCmdSrc = props.readEntry("SpecialCmdSrc");
@@ -824,7 +822,6 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
     return NULL;
   }
 
-  kDebug() << "createPath 2";
   // create
   props.writeEntry("Type",(int)PATH);
   props.writeEntry("SrcRoom",srcRoom->getRoomID());
@@ -1001,10 +998,6 @@ bool CMapManager::isClean() const
 void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
 {
   QFile f(file);
-  if (!f.exists()) {
-    createNewMap();
-    return;
-  }
 
   setUndoActive(false);
   commandHistory->clear();
@@ -1012,8 +1005,12 @@ void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
 
   eraseMap();
 
-  // Load the map using the correct filter
-  filter->loadData(file);
+  if (!f.exists())
+    createNewMap();
+  else {
+    // Load the map using the correct filter
+    filter->loadData(file);
+  }
 
   if (!getLoginRoom())
   {

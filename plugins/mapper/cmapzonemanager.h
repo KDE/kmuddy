@@ -37,6 +37,7 @@ class CMapZoneManager {
 
     QStandardItemModel *zonesModel();
     QString getPath(int idx);
+    void save(bool always = false);
     void loadZone(int idx);
     void deleteZone(int idx);
     void createZone(const QString &name, const QString &file = QString());

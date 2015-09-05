@@ -443,17 +443,6 @@ void CMapElement::saveQDomElement(QDomDocument *,QDomElement *properties)
 		properties->setAttribute("Y",getY());
 		properties->setAttribute("Width",getWidth());
 		properties->setAttribute("Height",getHeight());
-
-		if (getZone())
-			properties->setAttribute("Zone",getZone()->getZoneID());
-		else
-			properties->setAttribute("Zone",-1);
-
-		CMapLevel *level = getLevel();
-		if (level)
-		{
-			properties->setAttribute("Level",level->getLevelID());
-		}
 	}
 	else
 	{

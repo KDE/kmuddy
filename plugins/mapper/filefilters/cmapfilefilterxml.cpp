@@ -521,79 +521,83 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
   */  
 int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 {
-	int gridWidth = m_mapManager->getMapData()->gridSize.width();
-	int gridHeight = m_mapManager->getMapData()->gridSize.height();
+  int gridWidth = m_mapManager->getMapData()->gridSize.width();
+  int gridHeight = m_mapManager->getMapData()->gridSize.height();
 
-	QDomNode n = zoneNode->firstChild();
-	while (!n.isNull() )
-	{
-		QDomElement e = n.toElement();
+  // Wipe the default level.
+  while (m_mapManager->getZone()->levelCount())
+    delete m_mapManager->getZone()->firstLevel();
 
-		if (e.isNull() )
-		{
-			kDebug() << "Unable to find element ";
-			return -2;
-		}
+  QDomNode n = zoneNode->firstChild();
+  while (!n.isNull() )
+  {
+    QDomElement e = n.toElement();
 
-		if (e.tagName()=="Level")
-		{
-			CMapLevel *level = m_mapManager->createLevel(UP);
-			QString id = e.attribute("ID","-2");
-			if (id=="-2")
-			{
-				kDebug() << "Unable to find level ID";
-				return -2;
-			}
-			level->setLevelID(id.toInt());
-		        level->setName(e.attribute("Name", ""));
+    if (e.isNull() )
+    {
+      kDebug() << "Unable to find element ";
+      return -2;
+    }
 
-			QDomNode n2 = e.firstChild();
-			while (!n2.isNull() )
-			{
-				QDomElement e2 = n2.toElement();
+    if (e.tagName()=="Level")
+    {
+      CMapLevel *level = m_mapManager->createLevel(UP);
+      QString id = e.attribute("ID","-2");
+      if (id=="-2")
+      {
+        kDebug() << "Unable to find level ID";
+        return -2;
+      }
+      level->setLevelID(id.toInt());
+      level->setName(e.attribute("Name", ""));
 
-				if (e2.isNull() )
-				{
-					kDebug() << "Unable to find element ";
-					return -2;
-				}
-			
-				int x1 = e2.attribute("X",QString::number(-1)).toInt();
-				int y1 = e2.attribute("Y",QString::number(-1)).toInt();			
-				
-				if (x1==-1 || y1==-1)
-				{
-					kDebug() << "Unable to find pos ";
-					return -2;
-				}
+      QDomNode n2 = e.firstChild();
+      while (!n2.isNull() )
+      {
+        QDomElement e2 = n2.toElement();
 
-				if (e2.tagName()=="Room")
-				{
-					CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 * gridWidth,y1 * gridHeight),level);
-					
-					room->loadQDomElement(&e2);
-					loadPluginPropertiesForElement(room,&e2);
-				}
-				else if (e2.tagName()=="Text")
-				{
-					CMapText *text = CMapElementUtil::createText(m_mapManager, QPoint (x1,y1),level,"");
-					text->loadQDomElement(&e2);
-					loadPluginPropertiesForElement(text,&e2);
-				}
-				else
-				{
-					kDebug() << "Unknown Type :  " << e2.tagName();
-				}
-				
-				n2 = n2.nextSibling();
-			}
-		}
-				
+        if (e2.isNull() )
+        {
+          kDebug() << "Unable to find element ";
+          return -2;
+        }
 
-		n = n.nextSibling();
-	}
-	
-	return 0;
+        int x1 = e2.attribute("X",QString::number(-1)).toInt();
+        int y1 = e2.attribute("Y",QString::number(-1)).toInt();			
+
+        if (x1==-1 || y1==-1)
+        {
+          kDebug() << "Unable to find pos ";
+          return -2;
+        }
+
+        if (e2.tagName()=="Room")
+        {
+          CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 * gridWidth,y1 * gridHeight),level);
+
+          room->loadQDomElement(&e2);
+          loadPluginPropertiesForElement(room,&e2);
+        }
+        else if (e2.tagName()=="Text")
+        {
+          CMapText *text = CMapElementUtil::createText(m_mapManager, QPoint (x1,y1),level,"");
+          text->loadQDomElement(&e2);
+          loadPluginPropertiesForElement(text,&e2);
+        }
+        else
+        {
+          kDebug() << "Unknown Type :  " << e2.tagName();
+        }
+
+        n2 = n2.nextSibling();
+      }
+    }
+
+
+    n = n.nextSibling();
+  }
+
+  return 0;
 }
 
 /**

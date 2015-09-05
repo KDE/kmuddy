@@ -136,7 +136,8 @@ void CMapCmdMovePlayer::redo()
   // TODO: move path creation to utils!
   bool undo = m_manager->getUndoActive();
   m_manager->setUndoActive(false);
-  CMapPath *newPath = m_manager->createPath(srcRoom, m_direction, tgroom, destDir);
+
+  CMapPath *newPath = m_manager->createPath(srcRoom, m_direction, tgroom, destDir, false);
   m_newpath = newPath;
 
   // Make the path two way if the default path type is two way

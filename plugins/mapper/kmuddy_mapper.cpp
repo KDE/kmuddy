@@ -176,8 +176,9 @@ void KMuddyMapper::load (int sess) {
 /** Request to save data. */
 void KMuddyMapper::save (int sess) {
   if (!d->sessions.count(sess)) return;
-  d->sessions[sess]->manager->zoneManager()->saveMapList();
-  // TODO: save the current map, too
+  CMapZoneManager *zones = d->sessions[sess]->manager->zoneManager();
+  zones->saveMapList();
+  zones->save();
 }
 
 void KMuddyMapper::processInput (int sess, int phase, cTextChunk * chunk, bool) {

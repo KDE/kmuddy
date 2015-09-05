@@ -96,6 +96,7 @@ protected:
   void passSessionSwitch (int sess);
   void passConnected (int sess);
   void passDisconnected (int sess);
+  void passSave (int sess);
   void passRawData (int sess, char *);
   void passDecompressedData (int sess, char *);
   void passInput (int sess, int phase, cTextChunk *chunk, bool gagged);

@@ -65,6 +65,7 @@ cPluginManager::cPluginManager () : cActionBase ("pluginmanager", 0)
   addEventHandler ("will-gag", 20, PT_NOTHING);
   addEventHandler ("connected", 20, PT_NOTHING);
   addEventHandler ("disconnected", 20, PT_NOTHING);
+  addEventHandler ("save", 20, PT_NOTHING);
   addEventHandler ("session-activated", 20, PT_INT);
   addEventHandler ("session-created", 20, PT_INT);
   addEventHandler ("session-destroyed", 20, PT_INT);  
@@ -87,6 +88,7 @@ cPluginManager::~cPluginManager ()
   removeEventHandler ("will-gag");
   removeEventHandler ("connected");
   removeEventHandler ("disconnected");
+  removeEventHandler ("save");
   removeEventHandler ("session-activated");
   removeEventHandler ("session-created");
   removeEventHandler ("session-destroyed");
@@ -136,6 +138,9 @@ void cPluginManager::eventNothingHandler (QString event, int session)
   }
   else if (event == "disconnected") {
     passDisconnected (session);
+  }
+  else if (event == "save") {
+    passSave (session);
   }
 }
 
@@ -351,6 +356,12 @@ void cPluginManager::passDisconnected (int sess)
 {
   for (it = plugins.begin(); it != plugins.end(); ++it)
     it->second->disconnected (sess);
+}
+
+void cPluginManager::passSave (int sess)
+{
+  for (it = plugins.begin(); it != plugins.end(); ++it)
+    it->second->save (sess);
 }
 
 void cPluginManager::passRawData (int sess, char *data)

@@ -61,6 +61,8 @@ public:
   virtual void connected (int /*sess*/) {};
   /** The session has just been disconnected. Not called when manually unloading the plug-in. */
   virtual void disconnected (int /*sess*/) {};
+  /** Request to save data. */
+  virtual void save (int /*sess*/) {};
   
   /** raw data from the socket, before any processing; data can be modified by the plug-in
   if desired */

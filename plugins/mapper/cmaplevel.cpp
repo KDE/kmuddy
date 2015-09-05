@@ -28,7 +28,8 @@
 CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 {
   m_mapManager->m_levelCount++;
-  setLevelID(pos + 1);
+  setLevelID(m_mapManager->m_levelCount);
+  name = i18n("Level %1").arg(pos+1);
 
   // insert the level at the requested location
   getZone()->insertLevel(this, pos);

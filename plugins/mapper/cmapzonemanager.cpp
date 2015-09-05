@@ -73,20 +73,22 @@ QString CMapZoneManager::getPath(int idx)
   return path + "/" + i->file;
 }
 
+void CMapZoneManager::save(bool always)
+{
+  // first save the current zone
+  QString savePath = getPath (d->currentZone);
+  if (!savePath.length()) return;
+
+  CMapFileFilterBase *filter = d->manager->nativeFilter(false);
+  if (filter && (always || (!d->manager->isClean())))
+    d->manager->exportMap (savePath, filter);
+}
+
 void CMapZoneManager::loadZone(int idx)
 {
   if (d->currentZone == idx) return;
 
-  // first save the current zone
-  QString savePath = getPath (d->currentZone);
-  if (savePath.length()) {
-    CMapFileFilterBase *filter = d->manager->nativeFilter(false);
-    if (filter && (!d->manager->isClean())) {
-      // TODO: hmm, maybe simply always save by default?
-      if (KMessageBox::warningYesNo (NULL, i18n("Do you want to save the changes to the current map?"), i18n("KMuddy Mapper")) == KMessageBox::Yes)
-        d->manager->exportMap (savePath, filter);
-    }
-  }
+  save(true);
   
   // and load, replacing the existing data
   QString loadPath = getPath(idx);
