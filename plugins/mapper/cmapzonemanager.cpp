@@ -115,11 +115,13 @@ void CMapZoneManager::deleteZone(int idx)
   d->zones.removeRows(idx, 1);
   delete i;
 
-  // and load whichever zone is next, if this one was the current one
-  // TODO: won't this happen automatically?
-
   if (!d->zones.rowCount())
     createZone (i18n ("Map #1"));
+
+  // and load whichever zone is next, if this one was the current one
+  // TODO: won't this happen automatically?
+  d->currentZone = -1;
+  loadZone(0);
 
   saveMapList();
 }
