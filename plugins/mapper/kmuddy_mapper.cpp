@@ -38,8 +38,6 @@ struct MapperSession {
 };
 
 struct KMuddyMapperPrivate {
-  CMapManager *manager;  // and this!
-  CMapFilter *filter;  // get rid of this!
   KToggleAction *showmapper;
   KComponentData componentData;
   QDockWidget *docker;
@@ -153,6 +151,8 @@ void KMuddyMapper::sessionSwitch (int sess) {
 /** The session has just been connected. Not called when manually loading the plug-in. */
 void KMuddyMapper::connected (int sess) {
   if (cActionManager::self()->activeSession() != sess) return;
+  // Whatever data was loaded previously is now invalid, we need to do that anew.
+  sessionRemove(sess);
   sessionSwitch(sess);
   d->sessions[sess]->manager->zoneManager()->loadMapList();
 }

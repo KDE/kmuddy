@@ -125,6 +125,7 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   if (!m_zoneManager->zonesModel()->rowCount())
     m_zoneManager->createZone (i18n ("Map #1"));
   m_zoneManager->loadZone(0);
+  kWarning()<<"We have "<<m_zoneManager->zonesModel()->rowCount()<<" zones.";
 
   initPlugins();
   activeView->initGUI();
@@ -1145,13 +1146,13 @@ void CMapManager::setDefaultOptions()
   // move check
   gs->setDefaultBool ("mapper-movement-validcheck", false);
 
-  gs->setDefaultColor ("mapper-color-Background",QColor(201,167,55));
-  gs->setDefaultColor ("mapper-color-Grid",QColor(213,178,88));
+  gs->setDefaultColor ("mapper-color-Background", QColor(224,224,224));
+  gs->setDefaultColor ("mapper-color-Grid",QColor(160,160,160));
   gs->setDefaultColor ("mapper-color-LowerRoom", Qt::darkGray);
   gs->setDefaultColor ("mapper-color-LowerZone", Qt::darkGray);
   gs->setDefaultColor ("mapper-color-LowerText", Qt::darkGray);
-  gs->setDefaultColor ("mapper-color-DefaultRoom", QColor(192,192,192));
-  gs->setDefaultColor ("mapper-color-DefaultZone", QColor(192,192,192));
+  gs->setDefaultColor ("mapper-color-DefaultRoom", QColor(32,255,0));
+  gs->setDefaultColor ("mapper-color-DefaultZone", QColor(32,255,0));
   gs->setDefaultColor ("mapper-color-HigherRoom", Qt::white);
   gs->setDefaultColor ("mapper-color-HigherZone", Qt::white);
   gs->setDefaultColor ("mapper-color-HigherText", Qt::white);
