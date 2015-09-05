@@ -28,7 +28,7 @@
 CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 {
   m_mapManager->m_levelCount++;
-  setLevelID(mapManager->m_levelCount);
+  setLevelID(pos + 1);
 
   // insert the level at the requested location
   getZone()->insertLevel(this, pos);
@@ -90,7 +90,7 @@ void CMapLevel::setLevelID(unsigned int id)
 
 QString CMapLevel::getName() const
 {
-  if (this->name.length()) return this->name;
+  if (name.length()) return name;
   return i18n("Level %1").arg(getLevelID());
 }
 

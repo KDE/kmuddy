@@ -76,6 +76,5 @@ install(TARGETS kmuddymapper DESTINATION ${PLUGIN_INSTALL_DIR} )
 install( FILES kmuddymapper.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install( FILES kmuddymapperpart.rc DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
 install( FILES kmuddymapperplugin.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
-install( FILES kmud_directions.png kmud_grid.png kmud_lvldown.png kmud_lvlup.png kmud_zoneup.png kmud_create.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
-install( FILES kmud_inactive.png kmud_active.png kmud_follow.png kmud_delete.png kmud_properties.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/pics )
+install( FILES kmud_grid.png kmud_create.png kmud_follow.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
 

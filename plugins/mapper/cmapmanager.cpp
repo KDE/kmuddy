@@ -1146,7 +1146,7 @@ void CMapManager::setDefaultOptions()
   // move check
   gs->setDefaultBool ("mapper-movement-validcheck", false);
 
-  gs->setDefaultColor ("mapper-color-Background", QColor(224,224,224));
+  gs->setDefaultColor ("mapper-color-Background", QColor(12*16,12*16,12*16));
   gs->setDefaultColor ("mapper-color-Grid",QColor(160,160,160));
   gs->setDefaultColor ("mapper-color-LowerRoom", Qt::darkGray);
   gs->setDefaultColor ("mapper-color-LowerZone", Qt::darkGray);
