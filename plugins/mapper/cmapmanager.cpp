@@ -847,7 +847,7 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 
 
 /** Used to create a new path*/
-CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir,bool undoable)
+CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir,bool undoable, bool twoWay)
 {
   // FIXME_jp : Allow this to call lowlevel mapper methods when undo is not active
   //            but becarefull of second stage stuff
@@ -863,6 +863,7 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
   props.writeEntry("DestRoom",destRoom->getRoomID());
   props.writeEntry("DestLevel",destRoom->getLevel()->getLevelID());
   props.writeEntry("DestDir",(int)destDir);
+  props.writeEntry("PathTwoWay",twoWay);
 
   CMapCmdElementCreate *command = new CMapCmdElementCreate(this,i18n("Create Path"));
   command->addElement(&properties);
@@ -964,12 +965,16 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
       deleteElementWithoutGroup(room->getLinkedElement(),true);
     }
 
+    QList<CMapPath *> wipePaths;
     // Delete the paths for the room
-    for (CMapPath *path=room->getPathList()->last(); path!=0; path=room->getPathList()->last())
-      deleteElementWithoutGroup(path,false);
-
+    foreach (CMapPath *path, *room->getPathList())
+      if (!wipePaths.contains(path))
+        wipePaths.push_back(path);
     // Delete any paths connecting with this room
-    for (CMapPath *path=room->getConnectingPathList()->last(); path!=0; path = room->getConnectingPathList()->last())
+    foreach (CMapPath *path, *room->getConnectingPathList())
+      if (!wipePaths.contains(path))
+        wipePaths.push_back(path);
+    foreach (CMapPath *path, wipePaths)
       deleteElementWithoutGroup(path,false);
   }
 
@@ -1463,7 +1468,7 @@ void CMapManager::closeCommandGroup()
 void CMapManager::movePlayerBy(QString cmd)
 {
   QString specialCmd = "";
-  directionTyp dir  = textToDirection(cmd);
+  directionTyp dir = textToDirection(cmd);
 
   if (dir == SPECIAL)
     specialCmd = cmd;

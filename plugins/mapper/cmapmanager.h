@@ -121,7 +121,7 @@ public:
   CMapPath *createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp srcDir,
                        QPoint destPos,CMapLevel *destLevel,directionTyp destDir);
   /** Used to create a new path*/
-  CMapPath *createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir,bool undoable = true);
+  CMapPath *createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir,bool undoable = true,bool twoWay = true);
   /** Used to create a new text label */
   void createText(QPoint pos,CMapLevel *level,QString str,QFont font,QColor col);
   /** Used to create a new text label */

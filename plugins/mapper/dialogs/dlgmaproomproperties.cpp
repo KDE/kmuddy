@@ -119,47 +119,50 @@ CMapPath *DlgMapRoomProperties::itemToPath(Q3ListViewItem *item)
 
 void DlgMapRoomProperties::slotAccept()
 {
-	CMapCmdElementProperties *command = new CMapCmdElementProperties(mapManager,i18n("Changed Room Properties"),room);
+  CMapCmdElementProperties *command = new CMapCmdElementProperties(mapManager,i18n("Changed Room Properties"),room);
 
-	command->compare("Label",room->getLabel(),txtLabel->text().trimmed());
-	command->compare("Description",room->getDescription(),txtDescription->text().trimmed());
-	command->compare("Color",room->getColor(),cmdRoomColor->color());
-	command->compare("DefaultColor",room->getUseDefaultCol(),chkUseDefaltColor->isChecked());
-	command->compare("LabelPos",(int)room->getLabelPosition(),(int)getLabelPos());
+  command->compare("Label",room->getLabel(),txtLabel->text().trimmed());
+  command->compare("Description",room->getDescription(),txtDescription->text().trimmed());
+  command->compare("Color",room->getColor(),cmdRoomColor->color());
+  command->compare("DefaultColor",room->getUseDefaultCol(),chkUseDefaltColor->isChecked());
+  command->compare("LabelPos",(int)room->getLabelPosition(),(int)getLabelPos());
 
-	QStringList newContents;
+  QStringList newContents;
 
-	Q3ListViewItemIterator it( lstContents );
-    for ( ; it.current(); ++it )
-	{
-		QString item = it.current()->text(0).trimmed();
-	
-		if (item!="")
-			newContents+=item;
-	}
+  Q3ListViewItemIterator it( lstContents );
+  for ( ; it.current(); ++it )
+  {
+    QString item = it.current()->text(0).trimmed();
 
-	command->compare("Contents",*room->getContentsList(),newContents);
+    if (item!="")
+      newContents+=item;
+  }
 
-	foreach (CMapPath *path, *room->getPathList())
-	{
-		QString name = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
+  command->compare("Contents",*room->getContentsList(),newContents);
 
-		bool found = false;
+  QList<CMapPath*> wipe;
+  foreach (CMapPath *path, *room->getPathList())
+  {
+    QString name = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
 
-		Q3ListViewItemIterator exits (lstPaths);
-		for (; exits.current(); ++exits)
-		{
-			if (exits.current()->text(0)==name)
-			{	
-				found = true;
-			}
-		}
+    bool found = false;
 
-		if (!found)
-			mapManager->deleteElement(path);
-	}
+    Q3ListViewItemIterator exits (lstPaths);
+    for (; exits.current(); ++exits)
+    {
+      if (exits.current()->text(0)==name)
+      {	
+        found = true;
+      }
+    }
 
-	mapManager->addCommand(command);
+    if (!found)
+      wipe.push_back(path);
+  }
+  foreach (CMapPath *path, wipe)
+    mapManager->deleteElement(path);
+
+  mapManager->addCommand(command);
 }
 
 void DlgMapRoomProperties::slotUseDefaultColor(bool useDefaultColor)
@@ -331,14 +334,14 @@ void DlgMapRoomProperties::slotPathDelete()
 
 void DlgMapRoomProperties::slotPathProperties()
 {
-	Q3ListViewItem *item = lstPaths->selectedItem();
-        if (!item) return;
+  Q3ListViewItem *item = lstPaths->selectedItem();
+  if (!item) return;
 
-	CMapPath *path = itemToPath(item);
+  CMapPath *path = itemToPath(item);
 
-	mapManager->propertiesPath(path);
+  mapManager->propertiesPath(path);
 
-	item->setText(0,mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd()));
-	item->setText(1,path->getBeforeCommand());
-	item->setText(2,path->getAfterCommand());
+  item->setText(0,mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd()));
+  item->setText(1,path->getBeforeCommand());
+  item->setText(2,path->getAfterCommand());
 }

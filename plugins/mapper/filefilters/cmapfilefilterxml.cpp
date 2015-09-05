@@ -27,6 +27,8 @@
 #include <qfileinfo.h>
 #include <q3textstream.h>
 
+#include <set>
+
 #include "../cmaproom.h"
 #include "../cmappath.h"
 #include "../cmaptext.h"
@@ -162,7 +164,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 	zone->saveQDomElement(doc,&zoneProperties);
 	savePluginPropertiesForElement(zone,doc,&zoneProperties);	
 	
-	for (int idx = 0; idx < zone->levelCount(); ++idx)
+	for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
 	{
                 CMapLevel *level = zone->getLevel(idx);
 		QDomElement levelProperties = doc->createElement("Level");
@@ -207,17 +209,20 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
   if (zone == NULL)
     return;
 
-  for (int idx = 0; idx < zone->levelCount(); ++idx)
+  std::set<CMapPath *> saved; // this ensures that we don't save bi-dir paths twice
+  for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
   {
     CMapLevel *level = zone->getLevel(idx);
     foreach (CMapRoom *room, *level->getRoomList())
     {
       foreach (CMapPath *path, *room->getPathList())
       {
+        if (saved.count(path)) continue;
         QDomElement pathElement = doc->createElement("Path");
         path->saveQDomElement(doc,&pathElement);
         savePluginPropertiesForElement(path,doc,&pathElement);
         pathsNode->appendChild(pathElement);
+        saved.insert(path);
       }
     }
 
@@ -454,62 +459,62 @@ int CMapFileFilterXML::loadLinks(QDomElement *pathsNode)
   */  
 int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
 {
-	QDomNode n = pathsNode->firstChild();
-	while (!n.isNull() )
-	{
-		QDomElement e = n.toElement();
+  bool first = true;
+  QDomNode n;
+  do {
+    n = first ? pathsNode->firstChild() : n.nextSibling();
+    if (n.isNull()) break;
+    first = false;
+    QDomElement e = n.toElement();
 
-		if (e.isNull() )
-		{
-			kDebug() << "Unable to find path element ";
-			return -2;
-		}
+    if (e.tagName() != "Path") continue;
 
-		if (e.tagName()=="Path")
-		{
-			int srcLevelID = e.attribute("SrcLevel","-2").toInt();
-			int destLevelID = e.attribute("DestLevel","-2").toInt();
+    int srcLevelID = e.attribute("SrcLevel","-2").toInt();
+    int destLevelID = e.attribute("DestLevel","-2").toInt();
 
-			if (srcLevelID == -2 || destLevelID == -2)
-			{
-				kDebug() << "Unable to find path end points";
-				return -2;
-			}
-			CMapLevel *srcLevel = m_mapManager->findLevel(srcLevelID);
-			CMapLevel *destLevel = m_mapManager->findLevel(destLevelID);
+    if (srcLevelID == -2 || destLevelID == -2)
+    {
+      kDebug() << "Unable to find path end points";
+      continue;
+    }
+    CMapLevel *srcLevel = m_mapManager->findLevel(srcLevelID);
+    CMapLevel *destLevel = m_mapManager->findLevel(destLevelID);
 
-			int srcRoomID = e.attribute("SrcRoom","-2").toInt();
-			int destRoomID = e.attribute("DestRoom","-2").toInt();
+    int srcRoomID = e.attribute("SrcRoom","-2").toInt();
+    int destRoomID = e.attribute("DestRoom","-2").toInt();
 
-			if (destRoomID == -2 || srcRoomID == -2)
-			{
-				kDebug() << "Unable to find path end points";
-				return -2;
-			}
+    if (destRoomID == -2 || srcRoomID == -2)
+    {
+      kDebug() << "Unable to find path end points";
+      continue;
+    }
 
-			CMapRoom *srcRoom = srcLevel->findRoom(srcRoomID);
-			CMapRoom *destRoom = destLevel->findRoom(destRoomID);			
+    CMapRoom *srcRoom = srcLevel->findRoom(srcRoomID);
+    CMapRoom *destRoom = destLevel->findRoom(destRoomID);
 
-			if (srcRoom==NULL || destRoom==NULL)
-			{				
-				kDebug() << "Src or Dest room is NULL while creating path";
-                
-				return -2;
-			}
+    if (srcRoom==NULL || destRoom==NULL)
+    {				
+      kDebug() << "Src or Dest room is NULL while creating path";
+      continue;
+    }
 
-			directionTyp srcDir = (directionTyp)e.attribute("SrcDir","0").toInt();
-			directionTyp destDir = (directionTyp)e.attribute("DestDir","0").toInt();
+    directionTyp srcDir = (directionTyp)e.attribute("SrcDir","0").toInt();
+    directionTyp destDir = (directionTyp)e.attribute("DestDir","0").toInt();
+    QString specialCmd = e.attribute("SpecialCmd", QString());
 
-			CMapPath *path = m_mapManager->createPath(srcRoom,srcDir,destRoom,destDir);
-			path->loadQDomElement(&e);
-			loadPluginPropertiesForElement(path,&e);
-		}
+    if (srcRoom->getPathTarget(srcDir, specialCmd))
+    {
+      kDebug() << "Duplicate path, ignoring";
+      continue;
+    }
 
-		n = n.nextSibling();
-	}
-	kDebug() << "loadPaths Here 4";	
+    CMapPath *path = m_mapManager->createPath(srcRoom,srcDir,destRoom,destDir,false,false);
+    path->loadQDomElement(&e);
+    loadPluginPropertiesForElement(path,&e);
+  } while (!n.isNull());
+  kDebug() << "loadPaths Here 4";	
 
-	return 0;
+  return 0;
 }
 
 /**

@@ -164,6 +164,6 @@ CMapText *CMapElementUtil::createText(CMapManager *manager, QPoint pos, CMapLeve
 /** Delete a path map element */
 void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 {
-  if (delOpsite) path->setOpsitePath(NULL);
+  if (!delOpsite) path->setOpsitePath(NULL);
   delete path;
 }
