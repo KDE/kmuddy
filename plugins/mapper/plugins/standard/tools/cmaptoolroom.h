@@ -35,7 +35,7 @@ public:
 	~CMapToolRoom();
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel);
+	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 	/** Called when the tool recives a mouse move event */
 	virtual void mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel);
 	virtual void mouseLeaveEvent();

@@ -73,7 +73,7 @@ CMapToolEraser::~CMapToolEraser()
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolEraser::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolEraser::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
 {
   if (!currentLevel) return;
   CMapElement *element = currentLevel->findElementAt(mousePos);

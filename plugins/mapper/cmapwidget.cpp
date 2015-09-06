@@ -198,7 +198,7 @@ void CMapWidget::mouseReleaseEvent(QMouseEvent *e)
 	{
           case Qt::LeftButton:
 			// Send the mouse event to the current tool
-			mapManager->getCurrentTool()->mouseReleaseEvent(e->pos(),viewWidget->getCurrentlyViewedLevel());
+			mapManager->getCurrentTool()->mouseReleaseEvent(e->pos(),e,viewWidget->getCurrentlyViewedLevel());
 			break;
 
           case Qt::MidButton:
@@ -365,7 +365,7 @@ void CMapWidget::mousePressEvent(QMouseEvent *e)
 			// Send the mouse event to the current tool
 			//p.begin(viewport());
 			//p.translate(-contentsX(),-contentsY());
-			mapManager->getCurrentTool()->mousePressEvent(e->pos(),viewWidget->getCurrentlyViewedLevel());
+			mapManager->getCurrentTool()->mousePressEvent(e->pos(),e,viewWidget->getCurrentlyViewedLevel());
 			//p.end();
 
 		default:

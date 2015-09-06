@@ -101,7 +101,7 @@ void CMapToolSelect::paint(QPainter *p)
 }
 
 /** Called when the tool recives a mouse press event */
-void CMapToolSelect::mousePressEvent(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *currentLevel)
 {
   moveDrag = false;
   resizeDrag = 0;
@@ -178,7 +178,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos,CMapLevel *currentLevel)
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
 {
   QList<CMapElement *> lst = currentLevel->getAllElements();
 
@@ -254,31 +254,24 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
     }
 
     bDragging = false;
+    return;
   }
-  else
+
+  // If we are shift-clicking, toggle whatever is clicked on. Otherwise unselect everything, then select what got clicked on.
+  bool shift = e->modifiers() & Qt::ShiftModifier;
+
+  if (!shift)
+    mapManager->unselectElements(currentLevel);
+
+  foreach (CMapElement *element, lst)
   {
-    bool found = false;
-
-    foreach (CMapElement *element, lst)
-    {
-      if (element->mouseInElement(mousePos))
-      {
-        found = true;
-        bool sel = (QApplication::keyboardModifiers() & Qt::ControlModifier) ? true : (!element->getSelected());
-        element->setSelected(sel);
-      }
-
-    }
-
-    if (!found)
-    {
-      mapManager->unselectElements(currentLevel);
-
-    }
-
-    mapManager->getActiveView()->changed();
-
+    if (!element->mouseInElement(mousePos)) continue;
+    bool sel = shift ? (!element->getSelected()) : true;
+    element->setSelected(sel);
+    break;
   }
+
+  mapManager->getActiveView()->changed();
 }
 
 /** Called when the tool recives a mouse move event */

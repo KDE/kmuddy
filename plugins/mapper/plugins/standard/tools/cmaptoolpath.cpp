@@ -57,7 +57,7 @@ CMapToolPath::~CMapToolPath()
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolPath::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolPath::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
 {
   if (!currentLevel) return;
   CMapRoom *destRoom = currentLevel->findRoomAt(mousePos);

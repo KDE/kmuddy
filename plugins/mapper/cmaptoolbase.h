@@ -49,8 +49,8 @@ public:
 	virtual ~CMapToolBase();
 
 	// Mouse events for the tool
-	virtual void mousePressEvent(QPoint ,CMapLevel *)                       { }
-	virtual void mouseReleaseEvent(QPoint ,CMapLevel *)                     { }
+	virtual void mousePressEvent(QPoint, QMouseEvent *, CMapLevel *)                       { }
+	virtual void mouseReleaseEvent(QPoint, QMouseEvent *, CMapLevel *)                     { }
 	virtual void mouseMoveEvent(QPoint ,Qt::ButtonState,CMapLevel *)        { }
 	virtual void mouseLeaveEvent()                                           { }
 	virtual void mouseEnterEvent()                                           { }

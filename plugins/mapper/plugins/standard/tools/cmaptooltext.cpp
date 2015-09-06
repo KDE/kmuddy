@@ -49,7 +49,7 @@ CMapToolText::~CMapToolText()
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolText::mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolText::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
 {
   CMapText *text = (CMapText *) currentLevel->findElementAt(mousePos, TEXT);
   if (!text) {

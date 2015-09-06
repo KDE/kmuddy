@@ -35,7 +35,7 @@ public:
 	~CMapToolEraser();
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel);
+	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);

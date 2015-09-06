@@ -38,7 +38,7 @@ public:
 	~CMapToolText();
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos,CMapLevel *currentLevel);
+	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 	/** This is called when a key is pressed */
 	virtual void keyPressEvent(QKeyEvent *e);
 
