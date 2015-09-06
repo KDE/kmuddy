@@ -192,7 +192,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
     {
       kDebug() << "CMapToolSelect: move drag";
       // An element was draged to a new position so move it
-      moveElement(mousePos,currentLevel);
+      moveElement(mousePos - mouseDrag, currentLevel);
     }
     else if (resizeDrag > 0)
     {
@@ -275,7 +275,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
 }
 
 /** Called when the tool recives a mouse move event */
-void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel)
+void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *)
 {
   // If a drag operation is not in progress then return
   if (!bDragging) return;
@@ -286,6 +286,23 @@ void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *c
     lastDrag=mousePos;
     mapManager->getActiveView()->requestPaint();
   }
+}
+
+/** This is called when a key is pressed */
+void CMapToolSelect::keyPressEvent(QKeyEvent *e)
+{
+  int x = 0, y = 0;
+  if (e->key() == Qt::Key_Left) x = -1;
+  else if (e->key() == Qt::Key_Right) x = 1;
+  else if (e->key() == Qt::Key_Up) y = -1;
+  else if (e->key() == Qt::Key_Down) y = 1;
+  else return;
+
+  int gridWidth = mapManager->getMapData()->gridSize.width();
+  int gridHeight = mapManager->getMapData()->gridSize.height();
+
+  QPoint offset(gridWidth * x, gridHeight * y);
+  moveElement(offset, mapManager->getActiveView()->getCurrentlyViewedLevel());
 }
 
 /** This function called when a tool is selected */
@@ -308,25 +325,30 @@ void CMapToolSelect::toolUnselected(void)
 }
 
 /** Used to move elements */
-void CMapToolSelect::moveElement(QPoint mousePos,CMapLevel *currentLevel)
+void CMapToolSelect::moveElement(QPoint offset, CMapLevel *currentLevel)
 {
   moveDrag = false;
 
   int gridWidth = mapManager->getMapData()->gridSize.width();
   int gridHeight = mapManager->getMapData()->gridSize.height();
 
-  QPoint offset;
-  offset.setX((((int)(mousePos.x() / gridWidth)) * gridWidth) - (((int)((mouseDrag.x()-6)/gridWidth))*gridWidth));
-  offset.setY((((int)(mousePos.y() / gridHeight)) * gridHeight) - (((int)((mouseDrag.y()-6)/gridHeight))*gridHeight));
+  offset.setX(offset.x() - offset.x() % gridWidth);
+  offset.setY(offset.y() - offset.y() % gridHeight);
 
-  CMapCmdMoveElements *cmd = new CMapCmdMoveElements(mapManager,offset);
+  CMapCmdMoveElements *cmd = new CMapCmdMoveElements(mapManager, offset);
 
+  bool found = false;
   QList<CMapElement *> lst = currentLevel->getAllElements();
   foreach (CMapElement *element, lst)
-    if (element->getSelected())
+    if (element->getSelected()) {
       cmd->addElement(element);
+      found = true;
+    }
 
-  mapManager->addCommand(cmd);
+  if (found)
+    mapManager->addCommand(cmd);
+  else
+    delete cmd;
 }
 
 /** Used to resize the selected elements */

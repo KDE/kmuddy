@@ -45,6 +45,8 @@ public:
 	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 	/** Called when the tool recives a mouse move event */
 	virtual void mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel);
+	/** This is called when a key is pressed */
+	virtual void keyPressEvent(QKeyEvent *e);
 
 	/** This function called when a tool is selected */
 	virtual void toolSelected(void);
@@ -59,7 +61,7 @@ private slots:
 
 private:
 	/** Used to move elements */
-	void moveElement(QPoint mousePos,CMapLevel *currentLevel);
+	void moveElement(QPoint offset, CMapLevel *currentLevel);
 	/** Used to resize the selected elements */
 	void resizeElements(QPoint mousePos,CMapLevel *currentLevel);
 

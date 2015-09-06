@@ -17,8 +17,7 @@ The Enabled/Disabled function for macro keys doesn't appear to work. Whether the
 
 /notify can't handle UTF8.
 
-Segfault fix:
-http://www.kmuddy.com/mercuryboard/index.php?a=topic&t=1246
+Saving shortcuts supposedly doesn't work, check it out.
 
 Document advanced transcript !!!
 
@@ -27,8 +26,6 @@ file should be randomly chosen for each iteration. Currently, it's chosen
 only once.
 
 MSP: directory creation does not work !!!
-
-4dimensions.org 6000 - nothing displayed iff both MCCP and MXP on
 
 variables should not get expanded in the password for auto-login (hmpf)
 
