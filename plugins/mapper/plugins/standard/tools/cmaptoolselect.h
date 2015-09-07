@@ -64,7 +64,7 @@ private:
 	void moveElement(QPoint offset, CMapLevel *currentLevel);
 	/** Used to resize the selected elements */
 	void resizeElements(QPoint mousePos,CMapLevel *currentLevel);
-
+        QPoint alignToGrid(QPoint offset);
 
 private:
 	/** Used to mesure how long a mouse putton is held down */

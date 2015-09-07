@@ -177,6 +177,17 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *
   mouseDownTimer.start(150,false);
 }
 
+QPoint CMapToolSelect::alignToGrid(QPoint offset)
+{
+  int gridWidth = mapManager->getMapData()->gridSize.width();
+  int gridHeight = mapManager->getMapData()->gridSize.height();
+
+  offset.setX(offset.x() - offset.x() % gridWidth);
+  offset.setY(offset.y() - offset.y() % gridHeight);
+
+  return offset;
+}
+
 /** Called when the tool recives a mouse release event */
 void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
 {
@@ -192,7 +203,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
     {
       kDebug() << "CMapToolSelect: move drag";
       // An element was draged to a new position so move it
-      moveElement(mousePos - mouseDrag, currentLevel);
+      moveElement(alignToGrid(mousePos) - alignToGrid(mouseDrag), currentLevel);
     }
     else if (resizeDrag > 0)
     {
@@ -329,11 +340,7 @@ void CMapToolSelect::moveElement(QPoint offset, CMapLevel *currentLevel)
 {
   moveDrag = false;
 
-  int gridWidth = mapManager->getMapData()->gridSize.width();
-  int gridHeight = mapManager->getMapData()->gridSize.height();
-
-  offset.setX(offset.x() - offset.x() % gridWidth);
-  offset.setY(offset.y() - offset.y() % gridHeight);
+  offset = alignToGrid(offset);
 
   CMapCmdMoveElements *cmd = new CMapCmdMoveElements(mapManager, offset);
 
