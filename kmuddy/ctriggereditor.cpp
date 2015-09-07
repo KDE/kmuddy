@@ -103,22 +103,49 @@ struct cTriggerEditor::Private {
 };
 
 //color list
-QString cltextk[18] = { i18n("Keep"), i18n("Black"), i18n("Red"), i18n("Green"),
-    i18n("Yellow"), i18n("Blue"), i18n("Magenta"), i18n("Cyan"), i18n("Gray"),
-    i18n("Dark gray"), i18n("Bright red"), i18n("Bright green"),
-    i18n("Bright yellow"), i18n("Bright blue"), i18n("Bright magenta"),
-    i18n("Bright cyan"), i18n("White"), i18n ("Other") };
-
-QString ltype[7] = { i18n("Whole line"), i18n("Matching text"),
-    i18n("Prefix"), i18n("Suffix"), i18n("Full prefix"),
-    i18n("Full suffix"), i18n ("Backreference") };
-
+QString *cltextk;
+// type list
+QString *ltype;
 
 cTriggerEditor::cTriggerEditor (QWidget *parent)
   : cListEditor (parent)
 {
   d = new Private;
   d->regExpDialog = 0;
+
+  if (!cltextk) {
+    cltextk = new QString[18];
+    int i = 0;
+    cltextk[i++] = i18n("Keep");
+    cltextk[i++] = i18n("Black");
+    cltextk[i++] = i18n("Red");
+    cltextk[i++] = i18n("Green");
+    cltextk[i++] = i18n("Yellow");
+    cltextk[i++] = i18n("Blue");
+    cltextk[i++] = i18n("Magenta");
+    cltextk[i++] = i18n("Cyan");
+    cltextk[i++] = i18n("Gray");
+    cltextk[i++] = i18n("Dark gray");
+    cltextk[i++] = i18n("Bright red");
+    cltextk[i++] = i18n("Bright green");
+    cltextk[i++] = i18n("Bright yellow");
+    cltextk[i++] = i18n("Bright blue");
+    cltextk[i++] = i18n("Bright magenta");
+    cltextk[i++] = i18n("Bright cyan");
+    cltextk[i++] = i18n("White");
+    cltextk[i++] = i18n("Other");
+  }
+  if (!ltype) {
+    ltype = new QString[7];
+    int i = 0;
+    ltype[i++] = i18n("Whole line");
+    ltype[i++] = i18n("Matching text");
+    ltype[i++] = i18n("Prefix");
+    ltype[i++] = i18n("Suffix");
+    ltype[i++] = i18n("Full prefix");
+    ltype[i++] = i18n("Full suffix");
+    ltype[i++] = i18n ("Backreference");
+  }
 }
 
 cTriggerEditor::~cTriggerEditor ()

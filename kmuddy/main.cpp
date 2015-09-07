@@ -27,10 +27,7 @@
 #include "kmuddy.h"
 #include "cglobalsettings.h"
 
-#define DESCRIPTION ki18n("KMuddy is a MUD (Multi-User Dungeon) client for KDE.\n\n\
-It already contains various interesting features, more advanced features \
-are being added constantly. \n\nMaybe one day KMuddy will be the best client out there \
-(for KDE at least...).")
+#define DESCRIPTION ki18n("KMuddy is a MUD (Multi-User Dungeon) client for KDE with a variety of features.")
 
 int main(int argc, char *argv[])
 {
