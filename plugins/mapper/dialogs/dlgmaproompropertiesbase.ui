@@ -463,38 +463,23 @@
           </widget>
          </item>
          <item>
-          <widget class="Q3ListView" name="lstPaths">
+          <widget class="QTreeWidget" name="lstPaths">
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
            <column>
             <property name="text">
              <string>Direction</string>
             </property>
-            <property name="clickable">
-             <bool>true</bool>
-            </property>
-            <property name="resizable">
-             <bool>true</bool>
+           </column>
+           <column>
+            <property name="text">
+             <string>Before command</string>
             </property>
            </column>
            <column>
             <property name="text">
-             <string>Before Command</string>
-            </property>
-            <property name="clickable">
-             <bool>true</bool>
-            </property>
-            <property name="resizable">
-             <bool>true</bool>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>After Command</string>
-            </property>
-            <property name="clickable">
-             <bool>true</bool>
-            </property>
-            <property name="resizable">
-             <bool>true</bool>
+             <string>After command</string>
             </property>
            </column>
           </widget>
@@ -573,21 +558,10 @@
           </widget>
          </item>
          <item>
-          <widget class="Q3ListView" name="lstContents">
-           <property name="showSortIndicator">
+          <widget class="QListWidget" name="lstContents">
+           <property name="showSortIndicator" stdset="0">
             <bool>false</bool>
            </property>
-           <column>
-            <property name="text">
-             <string>Items</string>
-            </property>
-            <property name="clickable">
-             <bool>true</bool>
-            </property>
-            <property name="resizable">
-             <bool>true</bool>
-            </property>
-           </column>
           </widget>
          </item>
          <item>
@@ -694,21 +668,10 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Q3Frame</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3Frame</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>Q3ButtonGroup</class>
    <extends>Q3GroupBox</extends>
    <header>Qt3Support/Q3ButtonGroup</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Q3ListView</class>
-   <extends>Q3Frame</extends>
-   <header>q3listview.h</header>
   </customwidget>
   <customwidget>
    <class>KColorButton</class>
@@ -968,9 +931,9 @@
   </connection>
   <connection>
    <sender>lstContents</sender>
-   <signal>selectionChanged(Q3ListViewItem*)</signal>
+   <signal>itemSelectionChanged()</signal>
    <receiver>DlgMapRoomPropertiesBase</receiver>
-   <slot>slotNewItemSelected(Q3ListViewItem*)</slot>
+   <slot>slotNewItemSelected()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>20</x>

@@ -44,6 +44,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 	properties = pathProperties;
 	pathUndoable = undoable;
 	mapManager = manager;
+        path = 0;
 
 	txtSrcBefore->setText(properties.readEntry("SrcBeforeCommand",""));
 	txtSrcAfter->setText(properties.readEntry("SrcAfterCommand",""));
@@ -250,11 +251,12 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 	command->compare("DestDir",(int)path->getDestDir(),(int)getDestDirection());
 	command->compare("SpecialExit",path->getSpecialExit(),chkSpecial->isChecked());
 	command->compare("SpecialCmdSrc",path->getSpecialCmd(),txtSpecialSrc->text().trimmed());
-	command->compare("PathTwoWay", path->getOpsitePath() != 0, optTwoWay->isChecked());
+        CMapPath *op = path->getOpsitePath();
+	command->compare("PathTwoWay", op != 0, optTwoWay->isChecked());
 
-	command->compare("DestBeforeCommand",path->getOpsitePath()->getBeforeCommand(),txtDestBefore->text().trimmed());
-	command->compare("DestAfterCommand",path->getOpsitePath()->getAfterCommand(),txtDestAfter->text().trimmed());
-	command->compare("SpecialCmdDest",path->getOpsitePath()->getSpecialCmd(),txtSpecialDest->text().trimmed());
+	command->compare("DestBeforeCommand", op ? op->getBeforeCommand() : QString(), txtDestBefore->text().trimmed());
+	command->compare("DestAfterCommand", op ? op->getAfterCommand() : QString(), txtDestAfter->text().trimmed());
+	command->compare("SpecialCmdDest", op ? op->getSpecialCmd() : QString(), txtSpecialDest->text().trimmed());
 
 	if (pathUndoable)
 		mapManager->addCommand(command);

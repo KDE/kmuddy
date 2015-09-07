@@ -235,6 +235,8 @@ void CMapPath::makeOneWay() {
 
 void CMapPath::makeTwoWay()
 {
+  if (opsitePath) return;
+
   CMapPath *newPath = new CMapPath(getManager(), destRoom, destDir, srcRoom, srcDir, false);
   setOpsitePath(newPath);
   newPath->setOpsitePath(this);
@@ -651,7 +653,7 @@ void CMapPath::loadProperties(KConfigGroup grp)
 	setDestDir((directionTyp)grp.readEntry("DestDir",(int)getDestDir()));
 	setCords();
 
-        if (grp.readEntry("PathTwoWay", getManager()->getMapData()->defaultPathTwoWay))
+        if (grp.readEntry("PathTwoWay", getOpsitePath() != 0))
           makeTwoWay();
         else
           makeOneWay();

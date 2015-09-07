@@ -39,7 +39,7 @@ private slots:
 
     void slotRemoveItem();
 	void slotAddItem();
-	void slotNewItemSelected(Q3ListViewItem *item);
+	void slotNewItemSelected();
 	void slotEditItemName(const QString & name);
 
     void slotPathDelete();
@@ -57,8 +57,6 @@ private slots:
     void slotCustom();
 
 private:
-	/** Used to get the path that a item responds to */
-	CMapPath *itemToPath(Q3ListViewItem *item);
 	void setLabelPos(CMapRoom::labelPosTyp position);
 	CMapRoom::labelPosTyp getLabelPos(void);
 	void regenerateExits(void);

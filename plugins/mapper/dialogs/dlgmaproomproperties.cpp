@@ -32,8 +32,9 @@
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qpushbutton.h>
-#include <q3listview.h>
+#include <qlistwidget.h>
 #include <qtabwidget.h>
+#include <qtreewidget.h>
 
 #include <kcolorbutton.h>
 #include <klocale.h>
@@ -55,17 +56,9 @@ DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomEl
 	slotUseDefaultColor(room->getUseDefaultCol());
 	setLabelPos(room->getLabelPosition());
 
-	for ( QStringList::Iterator it = room->getContentsList()->begin(); it != room->getContentsList()->end(); ++it )
-	{
-		(void) new Q3ListViewItem(lstContents,*it);
-	}
-
-	Q3ListViewItem *blankItem= new Q3ListViewItem(lstContents,"");
-	lstContents->setSelected(blankItem,true);
+	lstContents->addItems(*room->getContentsList());
 
 	regenerateExits();
-
-	lstContents->setColumnWidthMode(0,Q3ListView::Maximum);
 
 	// Get the extension panels from the plugins
 	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(ROOM,(CMapElement*)roomElement,(QWidget *)RoomsTab);
@@ -83,38 +76,21 @@ DlgMapRoomProperties::~DlgMapRoomProperties()
 
 void DlgMapRoomProperties::regenerateExits(void)
 {
-	Q3ListViewItem *exit =NULL;
-	lstPaths->clear();
-	foreach (CMapPath *path, *room->getPathList())
-	{
+  lstPaths->clear();
+  QTreeWidgetItem *item;
+  foreach (CMapPath *path, *room->getPathList())
+  {
+    QString direction = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
+    kDebug() << "Path : " << path->getSrcDir() << "," << path->getSpecialCmd() << "," << direction;	
 
-		QString direction;
+    item = new QTreeWidgetItem();
+    item->setText(0, direction);
+    item->setText(1, path->getBeforeCommand());
+    item->setText(2, path->getAfterCommand());
+    lstPaths->addTopLevelItem(item);
+  }
 
-		direction = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
-		kDebug() << "Path : " << path->getSrcDir() << "," << path->getSpecialCmd() << "," << direction;	
-		
-		exit = new Q3ListViewItem(lstPaths,direction,path->getBeforeCommand(),path->getAfterCommand());
-	}
-
-	lstPaths->setSelected(exit,true);
-}
-
-/** Used to get the path that a item responds to */
-CMapPath *DlgMapRoomProperties::itemToPath(Q3ListViewItem *item)
-{
-	if (item)
-	{
-		QString textDir = item->text(0);
-		
-		directionTyp direction = mapManager->textToDirection(textDir);
-
-		if (direction!=SPECIAL)
-			textDir = "";
-
-		return room->getPathDirection(direction,textDir);
-	}
-	
-	return NULL;
+  lstPaths->setCurrentItem(item);
 }
 
 void DlgMapRoomProperties::slotAccept()
@@ -128,14 +104,10 @@ void DlgMapRoomProperties::slotAccept()
   command->compare("LabelPos",(int)room->getLabelPosition(),(int)getLabelPos());
 
   QStringList newContents;
-
-  Q3ListViewItemIterator it( lstContents );
-  for ( ; it.current(); ++it )
+  for (int i = 0; i < lstContents->count(); ++i)
   {
-    QString item = it.current()->text(0).trimmed();
-
-    if (item!="")
-      newContents+=item;
+    QString text = lstContents->item(i)->text().trimmed();
+    if (text.length()) newContents += text;
   }
 
   command->compare("Contents",*room->getContentsList(),newContents);
@@ -147,15 +119,9 @@ void DlgMapRoomProperties::slotAccept()
 
     bool found = false;
 
-    Q3ListViewItemIterator exits (lstPaths);
-    for (; exits.current(); ++exits)
-    {
-      if (exits.current()->text(0)==name)
-      {	
+    for (int i = 0; i < lstPaths->topLevelItemCount(); ++i)
+      if (lstPaths->topLevelItem(i)->text(0) == name)
         found = true;
-      }
-    }
-
     if (!found)
       wipe.push_back(path);
   }
@@ -288,60 +254,46 @@ void DlgMapRoomProperties::slotCustom()
 
 void DlgMapRoomProperties::slotRemoveItem()
 {
-	Q3ListViewItem *item = lstContents->selectedItem();
-
-	if (item)
-		delete item;
+  QListWidgetItem *item = lstContents->takeItem(lstContents->currentRow());
+  if (item) delete item;
 }
 
 void DlgMapRoomProperties::slotAddItem()
-{	
-	Q3ListViewItem *firstItem = lstContents->firstChild();
-	if (firstItem)
-	{
-		QString name = firstItem->text(0).trimmed();
-
-		if (name!="")
-		{
-			Q3ListViewItem *blankItem = new Q3ListViewItem(lstContents,"");
-			lstContents->setSelected(blankItem,true);
-		}
-	}
+{
+  lstContents->addItem(QString());
+  lstContents->setCurrentRow(lstContents->count() - 1);
 }
 
-void DlgMapRoomProperties::slotNewItemSelected(Q3ListViewItem *item)
+void DlgMapRoomProperties::slotNewItemSelected()
 {
-	txtItemName->setText(item->text(0).trimmed());
+  QList<QListWidgetItem *> sel = lstContents->selectedItems();
+  if (!sel.count()) return;
+  txtItemName->setText(sel.at(0)->text());
 }
 
 void DlgMapRoomProperties::slotEditItemName(const QString & name)
 {
-	Q3ListViewItem *item = lstContents->selectedItem();
-
-	if (item)
-	{
-		item->setText(0,name);
-	}
+  QListWidgetItem *item = lstContents->currentItem();
+  if (item) item->setText(name);
 }
 
 void DlgMapRoomProperties::slotPathDelete()
 {
-	Q3ListViewItem *item = lstPaths->selectedItem();
-
-	if (item)
-		delete item;
+  QList<QTreeWidgetItem *> sel = lstPaths->selectedItems();
+  foreach (QTreeWidgetItem *item, sel)
+    delete item;
 }
 
 void DlgMapRoomProperties::slotPathProperties()
 {
-  Q3ListViewItem *item = lstPaths->selectedItem();
-  if (!item) return;
-
-  CMapPath *path = itemToPath(item);
+  QTreeWidgetItem *item = lstPaths->currentItem();
+  int idx = lstPaths->indexOfTopLevelItem(item);
+  if ((idx < 0) || (idx >= room->getPathList()->count())) return;
+  CMapPath *path = room->getPathList()->at(idx);
 
   mapManager->propertiesPath(path);
 
-  item->setText(0,mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd()));
-  item->setText(1,path->getBeforeCommand());
-  item->setText(2,path->getAfterCommand());
+  item->setText(0, mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd()));
+  item->setText(1, path->getBeforeCommand());
+  item->setText(2, path->getAfterCommand());
 }

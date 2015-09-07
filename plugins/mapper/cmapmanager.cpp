@@ -802,10 +802,8 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
     if (srcRoom->getPathDirection(srcDir, QString())) srcDir = SPECIAL;
     if (destRoom->getPathDirection(destDir, QString())) destDir = SPECIAL;
   }
-  if ((srcDir != SPECIAL) && (destDir != SPECIAL)) {
-    props.writeEntry("SrcDir", (int) srcDir);
-    props.writeEntry("DestDir", (int) destDir);
-  }
+  props.writeEntry("SrcDir", (int) srcDir);
+  props.writeEntry("DestDir", (int) destDir);
 
   DlgMapPathProperties d(this,props,false);
 
