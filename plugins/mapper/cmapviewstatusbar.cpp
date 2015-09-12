@@ -28,6 +28,7 @@
 #include "cmapzonemanager.h"
 #include "cmapview.h"
 #include "cmapmanager.h"
+#include "cmaplevel.h"
 
 struct CMapViewStatusbar::Private {
   CMapManager *manager;
@@ -137,7 +138,7 @@ void CMapViewStatusbar::renameLevel(const QString &name)
   int idx = d->zone->levelIndex(d->level);
   if (idx != d->levelPicker->currentIndex()) return;
 
-  d->zone->setLevelName(d->level, name);
+  d->level->setName (name);
 }
 
 void CMapViewStatusbar::changeZone(int index)
