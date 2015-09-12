@@ -407,10 +407,11 @@ void CMapManager::unselectElements(CMapLevel *level)
 }
 
 /** Used to convert a text direction to a direction type */
-QString CMapManager::directionToText(directionTyp dir,QString specialCmd)
+QString CMapManager::directionToText(directionTyp dir, QString specialCmd, bool shortName)
 {
   if ((uint)dir < NUM_DIRECTIONS)
   {
+    if (shortName && ((uint)dir < NUM_DIRECTIONS / 2)) dir = (directionTyp) ((int)dir + NUM_DIRECTIONS / 2);
     return mapData->directions[dir];
   }
   else

@@ -50,6 +50,15 @@ void CMapCmdMovePlayer::redo()
   m_origroom = m_manager->getCurrentRoom();
   if (!m_origroom) return;
   CMapRoom *tgroom = m_origroom->getPathTarget(m_direction, m_special);
+
+  if ((!tgroom) && (m_direction != SPECIAL))
+  {
+    // try a special exit with the directional name
+    tgroom = m_origroom->getPathTarget(SPECIAL, m_manager->directionToText(m_direction, ""));
+    // short direction too
+    if (!tgroom) tgroom = m_origroom->getPathTarget(SPECIAL, m_manager->directionToText(m_direction, "", true));
+  }
+
   if (tgroom) {
     m_manager->setCurrentRoom(tgroom);
     return;

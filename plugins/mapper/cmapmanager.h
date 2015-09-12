@@ -184,7 +184,7 @@ public:
   /** Used to convert a text direction to a direction type */
   directionTyp textToDirection(QString text);
   /** Used to convert a direction type to a text direction */
-  QString directionToText(directionTyp dir,QString specialCmd);
+  QString directionToText(directionTyp dir, QString specialCmd, bool shortName = false);
 
   /** Get the level that has focues at the moment */
   CMapView *getActiveView();
