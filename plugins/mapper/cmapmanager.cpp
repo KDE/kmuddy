@@ -1185,7 +1185,7 @@ void CMapManager::readOptions()
   getMapData()->directions[EAST] = gs->getString ("mapper-direction-east");
   getMapData()->directions[SOUTHEAST] = gs->getString ("mapper-direction-southeast");
   getMapData()->directions[SOUTH] = gs->getString ("mapper-direction-south");
-  getMapData()->directions[SOUTHWEST] = gs->getString ("mapper-direction-southeast");
+  getMapData()->directions[SOUTHWEST] = gs->getString ("mapper-direction-southwest");
   getMapData()->directions[WEST] = gs->getString ("mapper-direction-west");
   getMapData()->directions[NORTHWEST] = gs->getString ("mapper-direction-northwest");
   getMapData()->directions[UP] = gs->getString ("mapper-direction-up");
