@@ -1127,7 +1127,7 @@ void CMapManager::setDefaultOptions()
   gs->setDefaultString ("mapper-direction-east", "east");
   gs->setDefaultString ("mapper-direction-southeast", "southeast");
   gs->setDefaultString ("mapper-direction-south", "south");
-  gs->setDefaultString ("mapper-direction-southeast", "southwest");
+  gs->setDefaultString ("mapper-direction-southwest", "southwest");
   gs->setDefaultString ("mapper-direction-west", "west");
   gs->setDefaultString ("mapper-direction-northwest", "northwest");
   gs->setDefaultString ("mapper-direction-up", "up");
@@ -1742,37 +1742,6 @@ CMapFileFilterBase *CMapManager::nativeFilter(bool isLoad)
 QString CMapManager::defaultSavePath () const
 {
   return KStandardDirs::locateLocal ("appdata", "maps/");
-}
-
-/** This method is used to save the map to the default location */
-void CMapManager::loadMap(void)
-{
-  QString mapDir = defaultSavePath();
-
-  CMapFileFilterBase *filter = m_fileFilter.first();
-
-  QString filename = mapDir + "/" + "map" + filter->getExtension();
-  QFile file(filename);
-
-  if (file.exists())
-  {
-    kDebug() << "Loading map.....";
-    importMap(filename,filter);
-  }
-  else
-  {
-    kDebug() << "Creating new map....";
-    createNewMap();
-  }
-}
-
-/** This method is used to load the map from the default location */
-void CMapManager::saveMap(void)
-{
-  QString mapDir = defaultSavePath();
-  CMapFileFilterBase *filter = m_fileFilter.first();
-
-  exportMap(mapDir + "/" + "map"+ filter->getExtension(), filter);
 }
 
 /** This is a debug function and not for genreal use */

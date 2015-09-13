@@ -352,10 +352,6 @@ private:
 
   KMuddyMapper *mapperPlugin;
 private:
-  /** This method is used to save the map to the default location */
-  void loadMap(void);
-  /** This method is used to load the map from the default location */
-  void saveMap(void);
 
   /** This is a debug function and not for genreal use */
   void changeProperties(CMapElement *element,QString key,QString oldData,QString newData);
