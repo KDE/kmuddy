@@ -164,57 +164,60 @@ void CMapRoom::paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *)
 
 void CMapRoom::paint(QPainter *p,CMapZone *currentZone)
 {
-	// This will paint the room
-	CMapElement::paint(p,currentZone);
+  // This will paint the room
+  CMapElement::paint(p,currentZone);
 
-	signed int y1,x1;
+  signed int y1,x1;
 
-	x1 = getX()+1;
-	y1 = getY()+1;
+  x1 = getX()+1;
+  y1 = getY()+1;
 
-	// If this is the current room the user is in
-	// then draw the symbol to show that.
-	if (getCurrentRoom())
-	{
-		p->setPen( getManager()->getMapData()->currentColor );
-		p->setBrush( getManager()->getMapData()->currentColor );
-		p->drawEllipse(x1+4,y1+4,getWidth() - 9,getHeight() -9);
-	}
+  // If this is the current room the user is in
+  // then draw the symbol to show that.
+  if (getCurrentRoom())
+  {
+    QColor curColor = getManager()->getMapData()->currentColor;
+    // If the marker color is similar to the background one, use a different one to ensure that it's seen
+    if ((!getUseDefaultCol()) && abs (getColor().hue() - curColor.hue()) < 30) curColor.setHsl((curColor.hue() + 180) % 360, curColor.saturation(), curColor.lightness());
+    p->setPen(curColor);
+    p->setBrush(curColor);
+    p->drawEllipse(x1+4,y1+4,getWidth() - 9,getHeight() -9);
+  }
 
-	// Draw exits
-	foreach (CMapPath *path, pathList)
-	{
-          path->paint(p, currentZone);
-		if (path->getSrcDir() == UP)
-		{
-			p->setPen(Qt::black);
-			p->setBrush(Qt::black);
+  // Draw exits
+  foreach (CMapPath *path, pathList)
+  {
+    path->paint(p, currentZone);
+    if (path->getSrcDir() == UP)
+    {
+      p->setPen(Qt::black);
+      p->setBrush(Qt::black);
 
-			p->drawPoint(x1+4,y1+3);
-			p->drawPoint(x1+3,y1+4);
-			p->drawPoint(x1+4,y1+4);
-			p->drawPoint(x1+5,y1+4);
-		}
+      p->drawPoint(x1+4,y1+3);
+      p->drawPoint(x1+3,y1+4);
+      p->drawPoint(x1+4,y1+4);
+      p->drawPoint(x1+5,y1+4);
+    }
 
-		if (path->getSrcDir() == DOWN)
-		{
-			p->setPen(Qt::black);
-			p->setBrush(Qt::black);
+    if (path->getSrcDir() == DOWN)
+    {
+      p->setPen(Qt::black);
+      p->setBrush(Qt::black);
 
-			p->drawPoint(x1+4,y1+getHeight()-5);
-			p->drawPoint(x1+3,y1+getHeight()-6);
-			p->drawPoint(x1+4,y1+getHeight()-6);
-			p->drawPoint(x1+5,y1+getHeight()-6);
-		}
+      p->drawPoint(x1+4,y1+getHeight()-5);
+      p->drawPoint(x1+3,y1+getHeight()-6);
+      p->drawPoint(x1+4,y1+getHeight()-6);
+      p->drawPoint(x1+5,y1+getHeight()-6);
+    }
 
-		if (path->getSrcDir() == SPECIAL)
-		{
-			p->setPen(getManager()->getMapData()->specialColor);
-			p->setBrush(getManager()->getMapData()->specialColor);
+    if (path->getSrcDir() == SPECIAL)
+    {
+      p->setPen(getManager()->getMapData()->specialColor);
+      p->setBrush(getManager()->getMapData()->specialColor);
 
-			p->drawEllipse(x1+getWidth()-10,y1+5,5,getHeight()-10);
-		}
-	}
+      p->drawEllipse(x1+getWidth()-10,y1+5,5,getHeight()-10);
+    }
+  }
 }
 
 void CMapRoom::dragPaint(QPoint offset,QPainter *p,CMapZone *)
