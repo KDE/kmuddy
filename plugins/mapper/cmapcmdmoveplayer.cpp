@@ -131,11 +131,12 @@ void CMapCmdMovePlayer::redo()
     }
 
     // Check to see if the room already exists
-    tgroom = (CMapRoom *) destLevel->findElementAt(QPoint (x,y), ROOM);
+    tgroom = dynamic_cast<CMapRoom *>(destLevel->findElementAt(QPoint (x,y), ROOM));
 
     // if it doesn't, we need to create one
     if (!tgroom) {
       tgroom = CMapElementUtil::createRoom(m_manager, QPoint (x,y),destLevel);
+      if (!tgroom) return;
       m_newroom = tgroom;
     }
   }
