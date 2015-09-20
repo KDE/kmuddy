@@ -239,6 +239,8 @@ void CMapZoneManager::loadMapList()
                             reader->errorString());
   }
 
+  d->zones.sort(0);  // not perfect, we should sort on the go, but as this class operates by indexes, it'll have to do for now
+
   f.close ();
   delete reader;
 }
