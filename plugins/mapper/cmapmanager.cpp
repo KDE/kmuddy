@@ -515,50 +515,38 @@ CMapRoom *CMapManager::getCurrentRoom()
   * @return The element if it's found otherwise NULL */
 CMapElement *CMapManager::findElement(KConfigGroup properties)
 {
-  CMapElement *result = NULL;
-
   elementTyp type = (elementTyp)properties.readEntry("Type",(uint)OTHER);
 
-  if (type!=OTHER)
+  if (type == OTHER) return NULL;
+
+  if (type==PATH)
   {
-    if (type==PATH)
-    {
-      CMapLevel *srcLevel = findLevel(properties.readEntry("SrcLevel",-1));
-      CMapRoom *srcRoom = srcLevel->findRoom(properties.readEntry("SrcRoom",-1));
-      directionTyp srcDir = (directionTyp)properties.readEntry("SrcDir",0);
+    CMapLevel *srcLevel = findLevel(properties.readEntry("SrcLevel",-1));
+    CMapRoom *srcRoom = srcLevel->findRoom(properties.readEntry("SrcRoom",-1));
+    if (!srcRoom) return NULL;
+    directionTyp srcDir = (directionTyp)properties.readEntry("SrcDir",0);
 
-      QString specialCommand = properties.readEntry("SpecialCmdSrc","");
-      result = srcRoom->getPathDirection(srcDir,specialCommand);
-
-    }
-    else
-    {
-      CMapLevel *level = findLevel(properties.readEntry("Level",-5));
-      if (level)
-      {
-        if (type==ROOM)
-        {
-          result = level->findRoom(properties.readEntry("RoomID",-5));
-        }
-        else
-        {
-          int x = properties.readEntry("X",-5);
-          int y = properties.readEntry("Y",-5);
-
-          foreach (CMapText *text, *level->getTextList())
-          {
-            if (text->getX()==x && text->getY()==y)
-            {
-              result = text;
-              break;
-            }
-          }
-        }
-      }
-    }
+    QString specialCommand = properties.readEntry("SpecialCmdSrc","");
+    return srcRoom->getPathDirection(srcDir,specialCommand);
   }
 
-  return result;
+  CMapLevel *level = findLevel(properties.readEntry("Level",-5));
+  if (!level) return NULL;
+
+  if (type == ROOM)
+  {
+    CMapRoom *room = level->findRoom(properties.readEntry("RoomID",-5));
+    return room;
+  }
+
+  int x = properties.readEntry("X",-5);
+  int y = properties.readEntry("Y",-5);
+
+  foreach (CMapText *text, *level->getTextList())
+    if ((text->getX()==x) && (text->getY()==y))
+      return text;
+
+  return NULL;
 }
 
 /** Used to erase the map. This will erase all elements and can't be undone */
@@ -955,7 +943,7 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
 {
   openCommandGroup(i18n("Delete Element"));
 
-  // If the element is a room, then we also need to delete all it's paths
+  // If the element is a room, then we also need to delete all its paths
   if (element->getElementType()==ROOM)
   {
     CMapRoom *room = (CMapRoom *)element;

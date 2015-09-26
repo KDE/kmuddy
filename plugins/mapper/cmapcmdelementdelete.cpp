@@ -43,42 +43,54 @@ CMapCmdElementDelete::~CMapCmdElementDelete()
 
 void CMapCmdElementDelete::redo()
 {
-	QStringList groupList = properties->groupList();
+  QStringList groupList = properties->groupList();
 
-	for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
-	{
-		if (*it != "<default>")
-		{
-			CMapElement *element = manager->findElement(properties->group(*it));
+  for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
+  {
+    if (*it == "<default>") continue;
+    CMapElement *element = manager->findElement(properties->group(*it));
+    if (!element) properties->deleteGroup(*it);
+  }
 
-			for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
-			{
-				plugin->beforeElementDeleted(element);
-			}
-			deleteElement(properties->group(*it),m_delOpsite);
-		}
-	}
+  for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
+  {
+    if (*it == "<default>") continue;
+
+    // ignore elements that already got deleted - this is because deletion of multiple rooms can include the same exit twice
+    // also mark them as ignored, so that undo doesn't create these twice
+    KConfigGroup group = properties->group(*it);
+    CMapElement *element = manager->findElement(group);
+    if (!element) {
+      group.writeEntry("Deleted", "1");
+      continue;
+    }
+
+    for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
+      plugin->beforeElementDeleted(element);
+
+    deleteElement(properties->group(*it),m_delOpsite);
+  }
 }
 
 void CMapCmdElementDelete::undo()
 {
-	QStringList groupList = properties->groupList();
+  QStringList groupList = properties->groupList();
 
-	for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
-	{
-		if (*it != "<default>")
-		{
-                        KConfigGroup group = properties->group (*it);
+  for (QStringList::Iterator it = groupList.begin(); it != groupList.end(); ++it)
+  {
+    if (*it == "<default>") continue;
 
-			CMapElement *elm = createElement(group);
-			elm->loadProperties(group);
+    KConfigGroup group = properties->group (*it);
+    if (group.hasKey("Deleted")) continue;
 
-			for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
-			{
-				plugin->afterElementUndeleted(elm);
-			}
-		}
-	}
+    CMapElement *elm = createElement(group);
+    elm->loadProperties(group);
+
+    for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
+    {
+      plugin->afterElementUndeleted(elm);
+    }
+  }
 }
 
 void CMapCmdElementDelete::addElement(KMemConfig *newElementProperties)

@@ -40,8 +40,9 @@ void CMapCmdGroup::undo()
 {
   m_mapManager->setUndoActive(false);
 
-  foreach (CMapCommand *c, commands)
-    c->undo();
+  // undo must go in reverse order, so that the last performed action is the first restored ones. This is because the preceeding actions may rely on the changed done by the following actions not yet having been done.
+  for (int idx = commands.count() - 1; idx >= 0; --idx)
+    commands.at(idx)->undo();
 
   m_mapManager->setUndoActive(true);
 }

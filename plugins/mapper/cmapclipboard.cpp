@@ -477,26 +477,9 @@ void CMapClipboard::slotDelete(void)
     if (level)
     {
       QList<CMapElement *> lst = level->getAllElements();
-      foreach (CMapElement *el, lst) {
-        CMapRoom *room = dynamic_cast<CMapRoom *>(el);
-        if (room) {
-          QList<CMapPath *> paths = *room->getPathList(); // create a copy
-          foreach (CMapPath *path, paths)
-          {
-            if (path->getSelected())
-              m_mapManager->deleteElement(path);
-          }
-          paths = *room->getConnectingPathList();
-          foreach (CMapPath *path, paths)
-          {
-            if (path->getSelected())
-              m_mapManager->deleteElement(path);
-          }
-        }
-
+      foreach (CMapElement *el, lst)
         if (el->getSelected())
-          m_mapManager->deleteElement(room);
-      }
+          m_mapManager->deleteElement(el);
     }
   }
 
