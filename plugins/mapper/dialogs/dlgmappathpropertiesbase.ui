@@ -1,1080 +1,1212 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0" stdsetdef="1">
-  <author></author>
-  <comment></comment>
-  <exportmacro></exportmacro>
-  <class>DlgMapPathPropertiesBase</class>
-  <widget class="QDialog" name="DlgMapPathPropertiesBase">
-    <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>435</width>
-        <height>456</height>
-      </rect>
-    </property>
-    <property name="windowTitle">
-      <string>Path Properties</string>
-    </property>
-    <layout class="QVBoxLayout">
-      <property name="margin">
+<ui version="4.0">
+ <class>DlgMapPathPropertiesBase</class>
+ <widget class="QDialog" name="DlgMapPathPropertiesBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Path Properties</string>
+  </property>
+  <layout class="QVBoxLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="margin">
+    <number>11</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabPaths">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabExits">
+      <attribute name="title">
+       <string>Exits</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <property name="margin">
         <number>11</number>
-      </property>
-      <property name="spacing">
+       </property>
+       <property name="spacing">
         <number>6</number>
-      </property>
-      <item>
-        <widget class="QTabWidget" name="tabPaths">
-          <widget class="QWidget" name="tabExits">
-            <attribute name="title">
-              <string>Exits</string>
-            </attribute>
-            <layout class="QGridLayout">
-              <property name="margin">
-                <number>11</number>
-              </property>
-              <property name="spacing">
-                <number>6</number>
-              </property>
-              <item row="0" column="0">
-                <widget class="Q3ButtonGroup" name="grdExits">
-                  <property name="title">
-                    <string>Exit Details</string>
-                  </property>
-                  <layout class="QVBoxLayout">
-                    <property name="margin">
-                      <number>11</number>
-                    </property>
-                    <property name="spacing">
-                      <number>6</number>
-                    </property>
-                    <item>
-                      <widget class="QRadioButton" name="chkNormal">
-                        <property name="text">
-                          <string>Normal exit</string>
-                        </property>
-                        <property name="buttonGroupId">
-                          <number>1</number>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <layout class="QHBoxLayout">
-                        <property name="margin">
-                          <number>0</number>
-                        </property>
-                        <property name="spacing">
-                          <number>6</number>
-                        </property>
-                        <item>
-                          <layout class="QVBoxLayout">
-                            <property name="margin">
-                              <number>0</number>
-                            </property>
-                            <property name="spacing">
-                              <number>6</number>
-                            </property>
-                            <item>
-                              <widget class="QLabel" name="lblSrc">
-                                <property name="text">
-                                  <string>Source Directions</string>
-                                </property>
-                                <property name="wordWrap">
-                                  <bool>false</bool>
-                                </property>
-                              </widget>
-                            </item>
-                            <item>
-                              <layout class="QGridLayout">
-                                <property name="margin">
-                                  <number>0</number>
-                                </property>
-                                <property name="spacing">
-                                  <number>6</number>
-                                </property>
-                                <item row="4" column="0" rowspan="1" colspan="3">
-                                  <widget class="QPushButton" name="cmdSrcDown">
-                                    <property name="text">
-                                      <string>Down</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="2" column="2">
-                                  <widget class="QPushButton" name="cmdSrcE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>E</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="1">
-                                  <widget class="QPushButton" name="cmdSrcS">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>S</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="0" column="0" rowspan="1" colspan="3">
-                                  <widget class="QPushButton" name="cmdSrcUp">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>0</width>
-                                        <height>0</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>32767</width>
-                                        <height>32767</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>Up</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="2" column="0">
-                                  <widget class="QPushButton" name="cmdSrcW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>W</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="2">
-                                  <widget class="QPushButton" name="cmdSrcNE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>NE</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="0">
-                                  <widget class="QPushButton" name="cmdSrcNW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>NW</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="2">
-                                  <widget class="QPushButton" name="cmdSrcSE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>SE</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="1">
-                                  <widget class="QPushButton" name="cmdSrcN">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>N</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="0">
-                                  <widget class="QPushButton" name="cmdSrcSW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>SW</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                              </layout>
-                            </item>
-                          </layout>
-                        </item>
-                        <item>
-                          <spacer name="Spacer6">
-                            <property name="sizeHint">
-                              <size>
-                                <width>20</width>
-                                <height>20</height>
-                              </size>
-                            </property>
-                            <property name="sizeType">
-                              <enum>QSizePolicy::Expanding</enum>
-                            </property>
-                            <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
-                            </property>
-                          </spacer>
-                        </item>
-                        <item>
-                          <layout class="QVBoxLayout">
-                            <property name="margin">
-                              <number>0</number>
-                            </property>
-                            <property name="spacing">
-                              <number>6</number>
-                            </property>
-                            <item>
-                              <widget class="QLabel" name="lblDest">
-                                <property name="text">
-                                  <string>Destination Direction</string>
-                                </property>
-                                <property name="wordWrap">
-                                  <bool>false</bool>
-                                </property>
-                              </widget>
-                            </item>
-                            <item>
-                              <layout class="QGridLayout">
-                                <property name="margin">
-                                  <number>0</number>
-                                </property>
-                                <property name="spacing">
-                                  <number>6</number>
-                                </property>
-                                <item row="4" column="0" rowspan="1" colspan="3">
-                                  <widget class="QPushButton" name="cmdDestDown">
-                                    <property name="text">
-                                      <string>Down</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="2">
-                                  <widget class="QPushButton" name="cmdDestNE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>NE</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="2">
-                                  <widget class="QPushButton" name="cmdDestSE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>SE</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="1">
-                                  <widget class="QPushButton" name="cmdDestN">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>N</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="1" column="0">
-                                  <widget class="QPushButton" name="cmdDestNW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>NW</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="2" column="0">
-                                  <widget class="QPushButton" name="cmdDestW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>W</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="2" column="2">
-                                  <widget class="QPushButton" name="cmdDestE">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>E</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="1">
-                                  <widget class="QPushButton" name="cmdDestS">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>S</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="3" column="0">
-                                  <widget class="QPushButton" name="cmdDestSW">
-                                    <property name="minimumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                      <size>
-                                        <width>30</width>
-                                        <height>30</height>
-                                      </size>
-                                    </property>
-                                    <property name="text">
-                                      <string>SW</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                                <item row="0" column="0" rowspan="1" colspan="3">
-                                  <widget class="QPushButton" name="cmdDestUp">
-                                    <property name="text">
-                                      <string>Up</string>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                    <property name="checkable">
-                                      <bool>true</bool>
-                                    </property>
-                                  </widget>
-                                </item>
-                              </layout>
-                            </item>
-                          </layout>
-                        </item>
-                        <item>
-                          <spacer name="Spacer5">
-                            <property name="sizeHint">
-                              <size>
-                                <width>20</width>
-                                <height>20</height>
-                              </size>
-                            </property>
-                            <property name="sizeType">
-                              <enum>QSizePolicy::Expanding</enum>
-                            </property>
-                            <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
-                            </property>
-                          </spacer>
-                        </item>
-                      </layout>
-                    </item>
-                    <item>
-                      <widget class="QRadioButton" name="chkSpecial">
-                        <property name="text">
-                          <string>Special Exit</string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QLabel" name="lblSpecial">
-                        <property name="text">
-                          <string>Special Command</string>
-                        </property>
-                        <property name="wordWrap">
-                          <bool>false</bool>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <layout class="QHBoxLayout">
-                        <property name="margin">
-                          <number>0</number>
-                        </property>
-                        <property name="spacing">
-                          <number>6</number>
-                        </property>
-                        <item>
-                          <widget class="QLabel" name="lblSrcToDest">
-                            <property name="text">
-                              <string>Source To Destination:</string>
-                            </property>
-                            <property name="wordWrap">
-                              <bool>false</bool>
-                            </property>
-                          </widget>
-                        </item>
-                        <item>
-                          <widget class="QLineEdit" name="txtSpecialSrc"/>
-                        </item>
-                      </layout>
-                    </item>
-                    <item>
-                      <layout class="QHBoxLayout">
-                        <property name="margin">
-                          <number>0</number>
-                        </property>
-                        <property name="spacing">
-                          <number>6</number>
-                        </property>
-                        <item>
-                          <widget class="QLabel" name="lblDestToSrc">
-                            <property name="text">
-                              <string>Destination To Source:</string>
-                            </property>
-                            <property name="wordWrap">
-                              <bool>false</bool>
-                            </property>
-                          </widget>
-                        </item>
-                        <item>
-                          <widget class="QLineEdit" name="txtSpecialDest"/>
-                        </item>
-                      </layout>
-                    </item>
-                  </layout>
-                </widget>
-              </item>
-            </layout>
-          </widget>
-          <widget class="QWidget" name="tabCommands">
-            <attribute name="title">
-              <string>Commands</string>
-            </attribute>
-            <layout class="QVBoxLayout">
-              <property name="margin">
-                <number>11</number>
-              </property>
-              <property name="spacing">
-                <number>6</number>
-              </property>
-              <item>
-                <widget class="QGroupBox" name="fraSrcDestCommands">
-                  <property name="title">
-                    <string>Src To Destination Commands</string>
-                  </property>
-                  <layout class="QVBoxLayout">
-                    <property name="margin">
-                      <number>11</number>
-                    </property>
-                    <property name="spacing">
-                      <number>6</number>
-                    </property>
-                    <item>
-                      <widget class="QLabel" name="lblSrcBefore">
-                        <property name="text">
-                          <string>Before walking path:</string>
-                        </property>
-                        <property name="wordWrap">
-                          <bool>false</bool>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QLineEdit" name="txtSrcBefore"/>
-                    </item>
-                    <item>
-                      <widget class="QLabel" name="lblSrcAfter">
-                        <property name="text">
-                          <string>After walking path:</string>
-                        </property>
-                        <property name="wordWrap">
-                          <bool>false</bool>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QLineEdit" name="txtSrcAfter"/>
-                    </item>
-                  </layout>
-                </widget>
-              </item>
-              <item>
-                <widget class="QGroupBox" name="fraDestSrcCommands">
-                  <property name="title">
-                    <string>Destination To Source Commands</string>
-                  </property>
-                  <layout class="QVBoxLayout">
-                    <property name="margin">
-                      <number>11</number>
-                    </property>
-                    <property name="spacing">
-                      <number>6</number>
-                    </property>
-                    <item>
-                      <widget class="QLabel" name="lblDestBefore">
-                        <property name="text">
-                          <string>Before walking path:</string>
-                        </property>
-                        <property name="wordWrap">
-                          <bool>false</bool>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QLineEdit" name="txtDestBefore"/>
-                    </item>
-                    <item>
-                      <widget class="QLabel" name="lblDestAfter">
-                        <property name="text">
-                          <string>After walking path:</string>
-                        </property>
-                        <property name="wordWrap">
-                          <bool>false</bool>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <widget class="QLineEdit" name="txtDestAfter"/>
-                    </item>
-                  </layout>
-                </widget>
-              </item>
-              <item>
-                <spacer name="Spacer12">
-                  <property name="sizeHint">
-                    <size>
-                      <width>20</width>
-                      <height>20</height>
-                    </size>
-                  </property>
-                  <property name="sizeType">
-                    <enum>QSizePolicy::Expanding</enum>
-                  </property>
-                  <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                  </property>
-                </spacer>
-              </item>
-            </layout>
-          </widget>
-          <widget class="QWidget" name="tabDirections">
-            <attribute name="title">
-              <string>Direction</string>
-            </attribute>
-            <layout class="QVBoxLayout">
-              <property name="margin">
-                <number>11</number>
-              </property>
-              <property name="spacing">
-                <number>6</number>
-              </property>
-              <item>
-                <layout class="QVBoxLayout">
-                  <property name="margin">
-                    <number>0</number>
-                  </property>
-                  <property name="spacing">
-                    <number>6</number>
-                  </property>
-                  <item>
-                    <widget class="Q3ButtonGroup" name="grdDirs">
-                      <property name="title">
-                        <string>Path Directions</string>
-                      </property>
-                      <layout class="QVBoxLayout">
-                        <property name="margin">
-                          <number>11</number>
-                        </property>
-                        <property name="spacing">
-                          <number>6</number>
-                        </property>
-                        <item>
-                          <widget class="QRadioButton" name="optOneWay">
-                            <property name="text">
-                              <string>One Way</string>
-                            </property>
-                          </widget>
-                        </item>
-                        <item>
-                          <widget class="QRadioButton" name="optTwoWay">
-                            <property name="text">
-                              <string>Two Way</string>
-                            </property>
-                            <property name="buttonGroupId">
-                              <number>0</number>
-                            </property>
-                          </widget>
-                        </item>
-                      </layout>
-                    </widget>
-                  </item>
-                  <item>
-                    <spacer name="Spacer2">
-                      <property name="sizeHint">
-                        <size>
-                          <width>20</width>
-                          <height>20</height>
-                        </size>
-                      </property>
-                      <property name="sizeType">
-                        <enum>QSizePolicy::Expanding</enum>
-                      </property>
-                      <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                      </property>
-                    </spacer>
-                  </item>
-                </layout>
-              </item>
-            </layout>
-          </widget>
-        </widget>
-      </item>
-      <item>
-        <layout class="QHBoxLayout">
-          <property name="margin">
-            <number>0</number>
-          </property>
+       </property>
+       <item row="0" column="0">
+        <widget class="Q3ButtonGroup" name="grdExits">
+         <property name="title">
+          <string>Exit Details</string>
+         </property>
+         <layout class="QVBoxLayout">
           <property name="spacing">
-            <number>6</number>
+           <number>6</number>
+          </property>
+          <property name="margin">
+           <number>11</number>
           </property>
           <item>
-            <spacer name="Spacer1">
-              <property name="sizeHint">
-                <size>
-                  <width>20</width>
-                  <height>20</height>
-                </size>
+           <widget class="QCheckBox" name="optTwoWay">
+            <property name="text">
+             <string>Two Way Exit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="chkNormal">
+            <property name="text">
+             <string>Normal exit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="lblSrc">
+                <property name="text">
+                 <string>Source Directions</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout">
+                <property name="margin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item row="4" column="0" colspan="3">
+                 <widget class="QPushButton" name="cmdSrcDown">
+                  <property name="text">
+                   <string>Down</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="cmdSrcE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>E</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="cmdSrcS">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>S</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QPushButton" name="cmdSrcUp">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Up</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="cmdSrcW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>W</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="cmdSrcNE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>NE</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="cmdSrcNW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>NW</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="cmdSrcSE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>SE</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="cmdSrcN">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>N</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="cmdSrcSW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>SW</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="Spacer6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
               <property name="sizeType">
-                <enum>QSizePolicy::Expanding</enum>
+               <enum>QSizePolicy::Expanding</enum>
               </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QVBoxLayout">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="lblDest">
+                <property name="text">
+                 <string>Destination Direction</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout">
+                <property name="margin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item row="4" column="0" colspan="3">
+                 <widget class="QPushButton" name="cmdDestDown">
+                  <property name="text">
+                   <string>Down</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="cmdDestNE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>NE</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="cmdDestSE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>SE</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="cmdDestN">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>N</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="cmdDestNW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>NW</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="cmdDestW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>W</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="cmdDestE">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>E</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="cmdDestS">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>S</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="cmdDestSW">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>SW</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QPushButton" name="cmdDestUp">
+                  <property name="text">
+                   <string>Up</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="Spacer5">
               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+               <enum>Qt::Horizontal</enum>
               </property>
-            </spacer>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item>
-            <widget class="QPushButton" name="cmdOK">
-              <property name="text">
-                <string>OK</string>
-              </property>
-            </widget>
+           <widget class="QRadioButton" name="chkSpecial">
+            <property name="text">
+             <string>Special Exit</string>
+            </property>
+           </widget>
           </item>
           <item>
-            <widget class="QPushButton" name="cmdCancel">
-              <property name="text">
-                <string>Cancel</string>
-              </property>
-            </widget>
+           <widget class="QLabel" name="lblSpecial">
+            <property name="text">
+             <string>Special Command</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
-        </layout>
-      </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblSrcToDest">
+              <property name="text">
+               <string>Source To Destination:</string>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtSpecialSrc"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblDestToSrc">
+              <property name="text">
+               <string>Destination To Source:</string>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtSpecialDest"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabCommands">
+      <attribute name="title">
+       <string>Commands</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="margin">
+        <number>11</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="fraSrcDestCommands">
+         <property name="title">
+          <string>Src To Destination Commands</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="margin">
+           <number>11</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lblSrcBefore">
+            <property name="text">
+             <string>Before walking path:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtSrcBefore"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblSrcAfter">
+            <property name="text">
+             <string>After walking path:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtSrcAfter"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="fraDestSrcCommands">
+         <property name="title">
+          <string>Destination To Source Commands</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="margin">
+           <number>11</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lblDestBefore">
+            <property name="text">
+             <string>Before walking path:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtDestBefore"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDestAfter">
+            <property name="text">
+             <string>After walking path:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtDestAfter"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="Spacer12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="Spacer1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cmdOK">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cmdCancel">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
     </layout>
-  </widget>
-  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
-  <connections>
-    <connection>
-      <sender>cmdSrcUp</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcUp()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcNW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcNW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcN</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcN()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcSW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcSW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcS</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcS()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcSE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcSE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcDown</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcDown()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestSW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestSW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestS</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestS()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestSE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestSE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestDown</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestDown()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestNW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestNW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcNE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcNE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestN</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestN()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestNE</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestNE()</slot>
-    </connection>
-    <connection>
-      <sender>cmdSrcW</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotSrcW()</slot>
-    </connection>
-    <connection>
-      <sender>cmdDestUp</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDestUp()</slot>
-    </connection>
-    <connection>
-      <sender>cmdOK</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>accept()</slot>
-    </connection>
-    <connection>
-      <sender>cmdCancel</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>reject()</slot>
-    </connection>
-    <connection>
-      <sender>chkNormal</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotExitTypeChange()</slot>
-    </connection>
-    <connection>
-      <sender>chkSpecial</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotExitTypeChange()</slot>
-    </connection>
-    <connection>
-      <sender>optOneWay</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDirectionChange()</slot>
-    </connection>
-    <connection>
-      <sender>optTwoWay</sender>
-      <signal>clicked()</signal>
-      <receiver>DlgMapPathPropertiesBase</receiver>
-      <slot>slotDirectionChange()</slot>
-    </connection>
-  </connections>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>Qt3Support/Q3GroupBox</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3ButtonGroup</class>
+   <extends>Q3GroupBox</extends>
+   <header>Qt3Support/Q3ButtonGroup</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmdOK</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcUp</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestSW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestSW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestDown</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestNE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestNE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestN</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestN()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcNE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcNE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcS</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcS()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcSE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcSE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcDown</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcSW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcSW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcNW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcNW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcN</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcN()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdSrcE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotSrcE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkNormal</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotExitTypeChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestS</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestS()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestSE</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestSE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestNW</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestNW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDestUp</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDestUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>optTwoWay</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotDirectionChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkSpecial</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgMapPathPropertiesBase</receiver>
+   <slot>slotExitTypeChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

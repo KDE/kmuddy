@@ -33,6 +33,7 @@
 #include "../cmappath.h"
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
+#include <kdebug.h>
 
 DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent)
 	: QDialog(parent)
@@ -105,7 +106,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathEl
 	{
 		fraDestSrcCommands->setEnabled(false);
 		txtSpecialSrc->setEnabled(false);
-		optOneWay->setChecked(true);
+		optTwoWay->setChecked(false);
 	}
 
 
@@ -126,6 +127,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathEl
 		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 
+kDebug()<<optTwoWay->isChecked();
 }
 
 DlgMapPathProperties::~DlgMapPathProperties()
@@ -299,11 +301,11 @@ void DlgMapPathProperties::slotAccept()
 
 void DlgMapPathProperties::slotDirectionChange()
 {
-	fraDestSrcCommands->setEnabled(!optOneWay->isChecked());
+	fraDestSrcCommands->setEnabled(optTwoWay->isChecked());
 	if ( !chkNormal->isChecked() )
 	{
-		txtSpecialDest->setEnabled(!optOneWay->isChecked());
-		lblDestToSrc->setEnabled(!optOneWay->isChecked());
+		txtSpecialDest->setEnabled(optTwoWay->isChecked());
+		lblDestToSrc->setEnabled(optTwoWay->isChecked());
 	}
 }
 
@@ -340,8 +342,8 @@ void DlgMapPathProperties::slotExitTypeChange()
 	txtSpecialSrc->setEnabled(!normal);
 	lblSrcToDest->setEnabled(!normal);
 
-	lblDestToSrc->setEnabled(!normal && !optOneWay->isChecked());
-	txtSpecialDest->setEnabled(!normal && !optOneWay->isChecked());
+	lblDestToSrc->setEnabled(!normal && optTwoWay->isChecked());
+	txtSpecialDest->setEnabled(!normal && optTwoWay->isChecked());
 
 }
 
