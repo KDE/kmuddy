@@ -66,6 +66,8 @@ protected:
 	void mousePressEvent(QMouseEvent *e);
 	/** Called when the mouse is being moved */
 	void mouseMoveEvent(QMouseEvent *e);
+        /** double click event */
+        void mouseDoubleClickEvent(QMouseEvent *e);
 	/** Called when a key is pressed */
 	virtual void keyPressEvent(QKeyEvent *e);
 	/** Called when a key is released */

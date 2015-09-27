@@ -374,6 +374,11 @@ void CMapWidget::mousePressEvent(QMouseEvent *e)
 	}
 }
 
+void CMapWidget::mouseDoubleClickEvent(QMouseEvent *e)
+{
+  mapManager->getCurrentTool()->mouseDoubleClickEvent(e->pos(), e, viewWidget->getCurrentlyViewedLevel());
+}
+
 /** Called when the mouse is being moved */
 void CMapWidget::mouseMoveEvent(QMouseEvent *e)
 {

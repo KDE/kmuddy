@@ -1548,6 +1548,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   // Check to see if we were unable to find any paths
   if (!bFound)
   {
+    speedwalkActive = false;
     KMessageBox::information (NULL,i18n("The automapper was unable to find a path to requested room"),i18n("KMuddy Mapper"));
     return;
   }
@@ -1581,6 +1582,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
     speedWalkAbortCount++;
     if (mapData->speedwalkAbortActive && (speedWalkAbortCount == mapData->speedwalkAbortLimit))
     {
+      speedwalkActive = false;
       KMessageBox::information (NULL,i18n("Speedwalk abort because move limit was reached"),i18n("KMuddy Mapper"));
 
       return;

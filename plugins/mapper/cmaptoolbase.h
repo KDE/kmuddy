@@ -52,6 +52,7 @@ public:
 	virtual void mousePressEvent(QPoint, QMouseEvent *, CMapLevel *)                       { }
 	virtual void mouseReleaseEvent(QPoint, QMouseEvent *, CMapLevel *)                     { }
 	virtual void mouseMoveEvent(QPoint ,Qt::ButtonState,CMapLevel *)        { }
+	virtual void mouseDoubleClickEvent(QPoint, QMouseEvent *, CMapLevel *)                  { }
 	virtual void mouseLeaveEvent()                                           { }
 	virtual void mouseEnterEvent()                                           { }
 	virtual void keyPressEvent(QKeyEvent *)                                            { }

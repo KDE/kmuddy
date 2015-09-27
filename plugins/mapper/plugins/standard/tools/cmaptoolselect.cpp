@@ -285,6 +285,28 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
   mapManager->getActiveView()->changed();
 }
 
+void CMapToolSelect::mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *, CMapLevel *currentLevel)
+{
+  // If we double-click on something that is not a room, do nothing
+  QList<CMapElement *> elements = currentLevel->elementsUnderMouse(mousePos);
+  CMapRoom *room = 0;
+  foreach (CMapElement *el, elements) {
+    room = dynamic_cast<CMapRoom *>(el);
+    if (room) break;
+  }
+  if (!room) return;
+
+  // If we do not have a current room, set this room as one.
+  if (!mapManager->getCurrentRoom()) {
+    mapManager->setCurrentRoom(room);
+    return;
+  }
+
+  // If we do, speedwalk from there to this room.
+  mapManager->walkPlayerTo(room);
+}
+
+
 /** Called when the tool recives a mouse move event */
 void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *)
 {
