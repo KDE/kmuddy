@@ -48,7 +48,7 @@ set(kmuddy_SRCS
    cscriptapi.cpp
 )
 
-kde4_add_executable(kmuddy ${kmuddy_SRCS})
+add_executable(kmuddy ${kmuddy_SRCS})
 
 set (KMUDDY_LIBRARIES kmuddycore dialogs ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS} ${KDE4_KDE3SUPPORT_LIBS} z )
 
@@ -61,7 +61,7 @@ target_link_libraries(kmuddy ${KMUDDY_LIBRARIES} )
 install(TARGETS kmuddy DESTINATION ${BIN_INSTALL_DIR})
 
 # install the icons
-kde4_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons( ${ICON_INSTALL_DIR} )
 
 install (FILES kmuddy.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 

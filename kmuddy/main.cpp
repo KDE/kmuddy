@@ -20,6 +20,7 @@
 #include <kaboutdata.h>
 #include <klocale.h>
 #include <kapplication.h>
+#include <Kdelibs4ConfigMigrator>
 
 #include <signal.h>
 
@@ -77,7 +78,15 @@ int main(int argc, char *argv[])
   //when switching tabs using Alt+number - ignoring the signal, hoping
   //for the best...
   signal (SIGALRM, SIG_IGN);
-  
+
+  // migrate settings from kde4
+  Kdelibs4ConfigMigrator migrator(QStringLiteral("kmuddy")); // the same name defined in the aboutData
+  // all the config files of your application
+  migrator.setConfigFiles(QStringList() << QStringLiteral("kmuddyrc"));
+  // list of KXMLGUI files used by your application
+  migrator.setUiFiles(QStringList() << QStringLiteral("kmuddymapperpart.rc"));
+  migrator.migrate();
+
   KApplication a;
   a.setApplicationName ("KMuddy");
   KMuddy *kmuddy = 0;

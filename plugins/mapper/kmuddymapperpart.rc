@@ -5,9 +5,6 @@
       <Action name = "viewUpperLevel"/>
       <Action name = "viewLowerLevel"/>
     </Menu>
-    <Menu name="Window"><Text>&amp;Window</Text>
-      <Action name = "viewSpeedwalkList"/>
-    </Menu>
   </MenuBar>
   <StatusBar/>
   <ToolBar fullWidth="false" name="tools" position="left"><Text>Tools</Text>
