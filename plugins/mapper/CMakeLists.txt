@@ -21,7 +21,6 @@ set(kmuddymapper_PART_SRCS
    cmaptext.cpp 
    cmapelementutil.cpp
    cmapviewstatusbar.cpp 
-   cmaplistviewitem.cpp 
    cmapcmdgroup.cpp 
    cmapcmdelementcreate.cpp 
    cmapcmdelementproperties.cpp 
