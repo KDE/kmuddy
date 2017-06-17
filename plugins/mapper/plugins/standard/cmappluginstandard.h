@@ -19,8 +19,7 @@
 #define CMAPPLUGINSTANDARD_H
 
 #include <QMap>
-//Added by qt3to4:
-#include <Q3ValueList>
+#include <QLinkedList>
 
 #include "../../cmappluginbase.h"
 
@@ -104,7 +103,7 @@ private:
 		QString note;
 	};
 
-	typedef Q3ValueList<DeletedElement> DeletedElementList;
+	typedef QLinkedList<DeletedElement> DeletedElementList;
 
 	
 	DeletedElementList::iterator findRoom(int level,int id,bool *found);

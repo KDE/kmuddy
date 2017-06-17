@@ -28,7 +28,6 @@
 #include "../cmappropertiespanebase.h"
 
 #include <qlineedit.h>
-#include <q3multilineedit.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qpushbutton.h>

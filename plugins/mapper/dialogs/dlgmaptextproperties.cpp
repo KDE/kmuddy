@@ -18,17 +18,15 @@
 #include "dlgmaptextproperties.h"
 
 #include <qfile.h>
-#include <q3listbox.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qlineedit.h>
-#include <q3multilineedit.h>
-#include <q3textstream.h>
 #include <qpalette.h>
 #include <qfontdatabase.h>
 #include <qtabwidget.h>
 #include <qlayout.h>
 #include <qfontmetrics.h>
+#include <QScrollArea>
 #include <QPixmap>
 #include <QVBoxLayout>
 
@@ -50,13 +48,10 @@
 #include <kdebug.h>
 
 CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent)
-	: Q3ScrollView(parent, 0, Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
+	: QWidget(parent, Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
 {
 	buffer = NULL;
 	mapManager = manager;
-
-	setHScrollBarMode(Auto);
-	setVScrollBarMode(Auto);
 }
 
 CMapTextPreview::~CMapTextPreview()
@@ -67,19 +62,7 @@ CMapTextPreview::~CMapTextPreview()
 
 void CMapTextPreview::drawContents(QPainter *paint,int , int , int, int )
 {
-	int width,height;
-
-	if (contentsWidth()>viewport()->width())
-		width = contentsWidth();
-	else
-		width = viewport()->width();
-
-	if (contentsHeight()>viewport()->height())
-		height = contentsHeight();
-	else
-		height = viewport()->height();
-
-	QRect drawArea(0,0,width,height);
+	QRect drawArea(0,0,width(),height());
 	
 	// delete the buffer only when we need one with a different size
 	if (buffer && (buffer->size() != drawArea.size()))
@@ -124,7 +107,9 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 	QString height;
 	QVBoxLayout *vbox = new QVBoxLayout((QWidget *)fraPreview);
 	textScrollView = new CMapTextPreview(mapManager,fraPreview);
-	vbox->addWidget( textScrollView);
+        QScrollArea *textScrollArea = new QScrollArea (fraPreview);
+        textScrollArea->setWidget (textScrollView);
+	vbox->addWidget( textScrollArea);
 	textScrollView->show();
 	fillFamilyList();
 	setFont(text->getFont());
@@ -263,6 +248,6 @@ void DlgMapTextProperties::slotUpdatePreview()
 	textScrollView->setColor(textColor);
 	textScrollView->setSize(QSize(width,height));
 	textScrollView->setText(txtText->text());
-	textScrollView->resizeContents(txtWidth->text().toInt(),txtHeight->text().toInt());
-	textScrollView->viewport()->update();
+	textScrollView->resize(txtWidth->text().toInt(),txtHeight->text().toInt());
+	textScrollView->update();
 }

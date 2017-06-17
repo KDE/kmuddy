@@ -25,7 +25,6 @@
 #include <qfile.h>
 #include <qdom.h>
 #include <qfileinfo.h>
-#include <q3textstream.h>
 
 #include <set>
 

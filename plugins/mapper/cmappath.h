@@ -19,7 +19,7 @@
 #define CMAPPATH_H
 
 #include <qrect.h>
-#include <q3valuelist.h>
+#include <QList>
 
 #include "cmapelement.h"
 
@@ -182,7 +182,7 @@ private:
 	QRect getBoundRectOfSeg(QPoint pos1,QPoint pos2);
 
 private:
-	typedef Q3ValueList<QPoint> PointList;
+	typedef QList<QPoint> PointList;
 
 	/** If this is greater than 0 then the bend will not be painted */
 	int m_dontPaintBend;

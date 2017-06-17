@@ -284,7 +284,7 @@ void CMapPath::drawPath(QPainter *p,CMapZone *zone,QPoint offset,QColor color,in
 	{
 		if (tempPathCords.count()>1)
 		{
-			QPoint temp = *(tempPathCords.at(1));
+			QPoint temp = tempPathCords.at(1);
 
 			int count = 0;
 
@@ -406,7 +406,7 @@ bool CMapPath::mouseInElement(QPoint mousePos)
 
 	if (tempPathCords.count()>1)
 	{
-		QPoint temp = *tempPathCords.at(1);
+		QPoint temp = tempPathCords.at(1);
 
 		for( PointList::Iterator point = tempPathCords.begin(); point != tempPathCords.end(); ++point )
 		{		
@@ -539,7 +539,7 @@ CMapElement *CMapPath::copy(void)
 /** Used to add a bend to the path */
 int CMapPath::addBend(QPoint pos)
 {
-    if (bendList.contains(pos)>-1)
+    if (bendList.contains(pos))
 		return -1;
 
 	if (bendList.count()==0)
@@ -584,7 +584,7 @@ int CMapPath::addBend(QPoint pos)
 
 			if (r.contains(pos))
 			{
-				bendList.insert(bendList.at(count),pos);
+				bendList.insert(count, pos);
 				return count;
 			}
 			x1 = (*point).x();
@@ -599,7 +599,7 @@ int CMapPath::addBend(QPoint pos)
 /** Used to add a bend to the path */
 void CMapPath::addBendWithUndo(QPoint pos)
 {
-    if (bendList.contains(pos)>-1)
+    if (bendList.contains(pos))
 		return;
 
 	CMapCmdElementProperties *cmdAddBend = new CMapCmdElementProperties(getManager(),i18n("Add Bend"),this);
@@ -613,7 +613,7 @@ void CMapPath::moveBendWithUndo(int bend, QPoint pos)
 {
 	if (bend>0 && bend-1 < (int)bendList.count())
 	{
-		QPoint oldPos = *(bendList.at(bend-1));
+		QPoint oldPos = bendList.at(bend-1);
 		CMapCmdElementProperties *cmdMoveBend = new CMapCmdElementProperties(getManager(),i18n("Move Bend"),this);
 		cmdMoveBend->getNewProperties().writeEntry("MoveBendPos",pos);
 		cmdMoveBend->getNewProperties().writeEntry("MoveBendBend",bend);
@@ -863,7 +863,7 @@ void CMapPath::moveBend(int bend, QPoint pos)
 {
 	if (bend>0 && bend-1 < (int)bendList.count())
 	{
-		(*bendList.at(bend-1)) = pos;
+		bendList.replace(bend-1, pos);
 		getManager()->changedElement(this);
 	}
 }
@@ -872,26 +872,16 @@ void CMapPath::moveBend(int bend, QPoint pos)
   * @param seg The path segment number to delete */
 QPoint CMapPath::deletePathSeg(int seg)
 {	
-	QPoint deletedPos;
-	PointList::Iterator pos;
+  QPoint deletedPos;
 
-	for( PointList::Iterator point = bendList.begin(); point != bendList.end(); ++point )
-	{
-		kDebug() << "Bend : " << (*point).x() << "," << (*point).y();	
-	}
+  for( PointList::Iterator point = bendList.begin(); point != bendList.end(); ++point )
+  {
+    kDebug() << "Bend : " << (*point).x() << "," << (*point).y();	
+  }
 
-	if (seg >= (int)bendList.count())
-	{
-		pos =bendList.at(bendList.count()-1);
-		deletedPos = (*pos);
-	}
-	else
-	{
-		pos =bendList.at(seg-1);
-		deletedPos = (*pos);
-	}
-
-	return deletedPos;
+  if (seg > (int) bendList.count()) seg = bendList.count();
+  deletedPos = bendList.at(seg - 1);
+  return deletedPos;
 }
 
 /**

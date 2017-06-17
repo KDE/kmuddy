@@ -49,18 +49,12 @@
         </widget>
       </item>
       <item>
-        <widget class="Q3ProgressBar" name="ProgressBar">
+        <widget class="QProgressBar" name="ProgressBar">
           <property name="maximumSize">
             <size>
               <width>32767</width>
               <height>15</height>
             </size>
-          </property>
-          <property name="progress">
-            <number>100</number>
-          </property>
-          <property name="centerIndicator">
-            <bool>true</bool>
           </property>
         </widget>
       </item>

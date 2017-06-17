@@ -21,7 +21,6 @@
 #include <qfont.h>
 #include <qstring.h>
 #include <qcolor.h>
-#include <q3strlist.h>
 #include <qpoint.h>
 
 #include "cmapmanager.h"

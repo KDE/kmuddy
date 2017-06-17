@@ -17,8 +17,8 @@
 
 #include "dlgspeedwalkprogress.h"
 
-#include <q3progressbar.h>
-#include <qpushbutton.h>
+#include <QProgressBar>
+#include <QPushButton>
 
 DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent) : QDialog(parent)
 {
@@ -31,17 +31,17 @@ DlgSpeedwalkProgress::~DlgSpeedwalkProgress()
 
 void DlgSpeedwalkProgress::setProgress(int progress)
 {
-	ProgressBar->setProgress(progress);
+	ProgressBar->setValue(progress);
 }
 
 int DlgSpeedwalkProgress::getTotalSteps(void)
 {
-	return ProgressBar->totalSteps();
+	return ProgressBar->maximum();
 }
 
 void DlgSpeedwalkProgress::setTotalSteps(int steps)
 {
-	ProgressBar->setTotalSteps(steps);
+	ProgressBar->setMaximum(steps);
 }
 
 void DlgSpeedwalkProgress::slotAbort()

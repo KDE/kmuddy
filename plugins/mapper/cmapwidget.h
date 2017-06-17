@@ -18,16 +18,10 @@
 #ifndef CMAPWIDGET_H
 #define CMAPWIDGET_H
 
-#include <qwidget.h>
+#include <QWidget>
 #include <q3scrollview.h>
-#include <qtooltip.h>
-#include <q3popupmenu.h>
-//Added by qt3to4:
-#include <QPixmap>
-#include <QResizeEvent>
-#include <QEvent>
-#include <QMouseEvent>
-#include <QPaintEvent>
+#include <QToolTip>
+#include <QMenu>
 
 #include <kaction.h>
 #include <klocale.h>
@@ -81,7 +75,7 @@ protected:
 	void showRoomContextMenu(void);
 	/** Used to display the context menu for other / no elements */
 	void showOtherContextMenu(void);
-	void showContextMenu(Q3PopupMenu *menu);
+	void showContextMenu(QMenu *menu);
 
 	/** Draw the map elements */
 	virtual void drawElements(QPainter *p);
@@ -94,7 +88,7 @@ private:
 	/** Used to create the element context menus */
 	void initContexMenus(void);
     /** This method is used to tell the plugins a menu is about to open then open the menu */
-	void popupMenu(CMapElement *element,Q3PopupMenu *menu,QPoint pos);
+	void popupMenu(CMapElement *element,QMenu *menu,QPoint pos);
         friend class CMapView;
 private:
 	QPoint selectedPos;
@@ -108,10 +102,10 @@ private:
  	QCursor* mouseDragCursor;
 
 	// Menus
-	Q3PopupMenu *room_menu;
-	Q3PopupMenu *path_menu;
-	Q3PopupMenu *text_menu;
-	Q3PopupMenu *empty_menu;
+	QMenu *room_menu;
+	QMenu *path_menu;
+	QMenu *text_menu;
+	QMenu *empty_menu;
 
 	/** A pointer to the map manager */
 	CMapManager *mapManager;

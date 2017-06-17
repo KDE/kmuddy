@@ -21,14 +21,13 @@
 #include <QDialog>
 #include <qfont.h>
 #include <qcolor.h>
-#include <q3scrollview.h>
 #include <qpixmap.h>
 #include "ui_dlgmaptextpropertiesbase.h"
 
 class CMapText;
 class CMapManager;
 
-class CMapTextPreview : public Q3ScrollView
+class CMapTextPreview : public QWidget
 {
 public:
 	CMapTextPreview(CMapManager *manager,QWidget *parent=0);

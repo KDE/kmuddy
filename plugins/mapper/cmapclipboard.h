@@ -19,7 +19,6 @@
 #define CMAPCLIPBOARD_H
 
 #include <qobject.h>
-#include <q3valuelist.h>
 #include <kconfiggroup.h>
 
 class KAction;

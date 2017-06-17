@@ -18,7 +18,6 @@
 #include "cmapwidget.h"
 
 #include <QBitmap>
-#include <Q3PopupMenu>
 #include <QScrollArea>
 #include <kapplication.h>
 #include <kactioncollection.h>
@@ -66,10 +65,10 @@ CMapWidget::~CMapWidget()
 /** Used to create the element context menus */
 void CMapWidget::initContexMenus(void)
 {
-  room_menu = (Q3PopupMenu *)getView()->guiFactory()->container("room_popup",getView());
-  text_menu = (Q3PopupMenu *)getView()->guiFactory()->container("text_popup",getView());
-  path_menu = (Q3PopupMenu *)getView()->guiFactory()->container("path_popup",getView());
-  empty_menu = (Q3PopupMenu *)getView()->guiFactory()->container("empty_popup",getView());
+  room_menu = (QMenu *)getView()->guiFactory()->container("room_popup",getView());
+  text_menu = (QMenu *)getView()->guiFactory()->container("text_popup",getView());
+  path_menu = (QMenu *)getView()->guiFactory()->container("path_popup",getView());
+  empty_menu = (QMenu *)getView()->guiFactory()->container("empty_popup",getView());
 }
 
 /** Used to get the views */
@@ -281,7 +280,7 @@ void CMapWidget::showOtherContextMenu(void)
   showContextMenu (empty_menu);
 }
 
-void CMapWidget::showContextMenu(Q3PopupMenu *menu)
+void CMapWidget::showContextMenu(QMenu *menu)
 {
   CMapView *view = mapManager->getActiveView();
   CMapElement *el = view->getSelectedElement();
@@ -317,7 +316,7 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
 }
 
 /** This method is used to tell the plugins a menu is about to open then open the menu */
-void CMapWidget::popupMenu(CMapElement *element,Q3PopupMenu *menu,QPoint pos)
+void CMapWidget::popupMenu(CMapElement *element,QMenu *menu,QPoint pos)
 {
   if (element) {
     for (CMapPluginBase *plugin = mapManager->getPluginList()->first();plugin!=0;plugin = mapManager->getPluginList()->next())

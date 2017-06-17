@@ -31,7 +31,6 @@
 
 #include <QQueue>
 #include <qtimer.h>
-#include <q3valuelist.h>
 #include <Q3PtrList>
 
 #include "cmapzone.h"
