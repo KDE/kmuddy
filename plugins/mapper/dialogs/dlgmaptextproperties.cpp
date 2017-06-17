@@ -48,10 +48,11 @@
 #include <kdebug.h>
 
 CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent)
-	: QWidget(parent, Qt::WNorthWestGravity | Qt::WResizeNoErase | Qt::WRepaintNoErase)
+	: QWidget(parent)
 {
-	buffer = NULL;
-	mapManager = manager;
+  setAttribute (Qt::WA_StaticContents);
+  buffer = NULL;
+  mapManager = manager;
 }
 
 CMapTextPreview::~CMapTextPreview()

@@ -66,7 +66,7 @@ void CMapToolRoom::mouseReleaseEvent(QPoint mousePos, QMouseEvent * /*e*/, CMapL
 }
 
 /** Called when the tool recives a mouse move event */
-void CMapToolRoom::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *)
+void CMapToolRoom::mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *)
 {
 	lastPos = mapManager->cordsSnapGrid(mousePos);
         mapManager->getActiveView()->requestPaint();

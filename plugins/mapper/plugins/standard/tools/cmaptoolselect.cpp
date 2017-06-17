@@ -25,8 +25,6 @@
 #include "../cmapcmdmoveelements.h"
 
 #include <qcursor.h>
-//Added by qt3to4:
-#include <QPixmap>
 
 #include <kstandarddirs.h>
 #include <kiconloader.h>
@@ -308,7 +306,7 @@ void CMapToolSelect::mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *, CMapL
 
 
 /** Called when the tool recives a mouse move event */
-void CMapToolSelect::mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *)
+void CMapToolSelect::mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *)
 {
   // If a drag operation is not in progress then return
   if (!bDragging) return;

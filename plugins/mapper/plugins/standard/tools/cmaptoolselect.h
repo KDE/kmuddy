@@ -44,7 +44,7 @@ public:
 	/** Called when the tool recives a mouse release event */
 	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 	/** Called when the tool recives a mouse move event */
-	virtual void mouseMoveEvent(QPoint mousePos,Qt::ButtonState,CMapLevel *currentLevel);
+	virtual void mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *currentLevel);
 	/** Called when the tool recives a mouse double click event */
 	virtual void mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
 	/** This is called when a key is pressed */

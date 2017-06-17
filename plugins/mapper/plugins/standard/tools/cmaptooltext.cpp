@@ -22,8 +22,6 @@
 #include <kiconloader.h>
 
 #include <qcursor.h>
-//Added by qt3to4:
-#include <QKeyEvent>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmaplevel.h"

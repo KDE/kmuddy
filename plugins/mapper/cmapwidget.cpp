@@ -398,7 +398,7 @@ void CMapWidget::mouseMoveEvent(QMouseEvent *e)
 	else
 	{
 		// Send the mouse event to the current tool
-		mapManager->getCurrentTool()->mouseMoveEvent(e->pos(),e->button(),viewWidget->getCurrentlyViewedLevel());
+		mapManager->getCurrentTool()->mouseMoveEvent(e->pos(), e->modifiers(), e->buttons(), viewWidget->getCurrentlyViewedLevel());
   	}
 }
 
