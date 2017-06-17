@@ -320,7 +320,7 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
 void CMapWidget::popupMenu(CMapElement *element,QMenu *menu,QPoint pos)
 {
   if (element) {
-    for (CMapPluginBase *plugin = mapManager->getPluginList()->first();plugin!=0;plugin = mapManager->getPluginList()->next())
+    for (CMapPluginBase *plugin : mapManager->getPluginList())
       plugin->beforeOpenElementMenu(element);
   }
   menu->popup(mapToGlobal(pos));

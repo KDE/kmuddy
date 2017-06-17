@@ -24,8 +24,7 @@
 #include <kconfiggroup.h>
 
 #include <qregion.h>
-//Added by qt3to4:
-#include <Q3PointArray>
+#include <QPolygon>
 
 #include <math.h>
 #include <stdlib.h>
@@ -144,7 +143,7 @@ void CMapPath::setCords(void)
 void CMapPath::drawArrow(directionTyp dir,QPainter *p,QPoint end)
 {
 	int x1=0,x2=0,y1=0,y2=0;
-	Q3PointArray cords(3);
+	QPolygon cords(3);
 
 	switch (dir)
 	{

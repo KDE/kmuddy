@@ -65,7 +65,7 @@ void CMapCmdElementDelete::redo()
       continue;
     }
 
-    for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
+    for (CMapPluginBase *plugin : manager->getPluginList())
       plugin->beforeElementDeleted(element);
 
     deleteElement(properties->group(*it),m_delOpsite);
@@ -86,10 +86,8 @@ void CMapCmdElementDelete::undo()
     CMapElement *elm = createElement(group);
     elm->loadProperties(group);
 
-    for (CMapPluginBase *plugin = manager->getPluginList()->first(); plugin!=0; plugin = manager->getPluginList()->next())
-    {
+    for (CMapPluginBase *plugin : manager->getPluginList())
       plugin->afterElementUndeleted(elm);
-    }
   }
 }
 

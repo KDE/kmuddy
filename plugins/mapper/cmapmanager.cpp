@@ -31,7 +31,6 @@
 
 #include <QQueue>
 #include <qtimer.h>
-#include <Q3PtrList>
 
 #include "cmapzone.h"
 #include "cmappath.h"
@@ -150,6 +149,9 @@ CMapManager::~CMapManager()
   if (commandHistory)
     delete commandHistory;
 
+  qDeleteAll(m_fileFilter);
+  m_fileFilter.clear();
+
   kDebug() << "CMapManager::~CMapManager() end";
 }
 
@@ -184,7 +186,7 @@ void CMapManager::createProfileConfigPanes ()
 {
   /*KPageDialog *dlg = */(KPageDialog *) cDialogList::self()->getDialog ("profile-prefs");
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
+  for (CMapPluginBase *plugin : pluginList)
     plugin->createProfileConfigPanes();
 }
 
@@ -219,14 +221,14 @@ void CMapManager::createGlobalConfigPanes ()
   colorlayout->addWidget (mapColor);
   speedwalklayout->addWidget (mapSpeedwalk);
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
+  for (CMapPluginBase *plugin : pluginList)
     plugin->createGlobalConfigPanes();
 }
 
 QList<CMapPropertiesPaneBase *> CMapManager::createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent)
 {
   QList<CMapPropertiesPaneBase *> res;
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
+  for (CMapPluginBase *plugin : pluginList)
     res.append(plugin->createPropertyPanes(type, element, parent));
   return res;
 }
@@ -235,8 +237,6 @@ QList<CMapPropertiesPaneBase *> CMapManager::createPropertyPanes(elementTyp type
 /** This will setup the import/export file filters */
 void CMapManager::initFileFilters()
 {
-  m_fileFilter.setAutoDelete(true);
-
   m_fileFilter.append(new CMapFileFilterXML(this));
 }
 
@@ -246,9 +246,7 @@ void CMapManager::initFileFilters()
 void CMapManager::initPlugins()
 {
   int pluginCount = 0;
-  toolList.setAutoDelete(false);
   toolList.clear();
-  pluginList.setAutoDelete(false);
   pluginList.clear();
   kDebug() << "Loading Static Plugins...\n";
   // These used to be plug-ins, but now I'm linking them in statically, and just pretend that they are plug-ins.
@@ -257,7 +255,7 @@ void CMapManager::initPlugins()
   plugin = new CMapPluginStandard (activeView);
   pluginList.append (plugin);
 
-  for (plugin = pluginList.first(); plugin!=0; plugin = pluginList.next())
+  for (CMapPluginBase *plugin : pluginList)
   {
     kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
     foreach (CMapToolBase *tool, *plugin->getToolList())
@@ -273,9 +271,8 @@ void CMapManager::initPlugins()
   kDebug() << "Finished loading " << pluginCount << " plugins\n";
   kDebug() << "Finished loading " << toolList.count() << " tools\n";
   
-  if (toolList.count() > 0)
+  if (!toolList.isEmpty())
   {
-
     currentTool = toolList.first();
     currentTool->setChecked(true);
   }
@@ -294,9 +291,9 @@ void CMapManager::initPlugins()
 }
 
 /** Used to get a list of the plugins */
-Q3PtrList<CMapPluginBase> *CMapManager::getPluginList()
+QLinkedList<CMapPluginBase *> CMapManager::getPluginList()
 {
-  return &pluginList;
+  return pluginList;
 }
 
 /** Used to get a pointer to the map data */
@@ -531,10 +528,8 @@ void CMapManager::eraseMap(void)
 
   if (activeView) activeView->setLevel(NULL);
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
-  {
+  for (CMapPluginBase *plugin : pluginList)
     plugin->mapErased();
-  }
 
   loginRoom = NULL;
   currentRoom = NULL;
@@ -623,10 +618,8 @@ void CMapManager::createNewMap()
   if (activeView->getCurrentlyViewedLevel()==NULL)  
     activeView->showPosition(loginRoom,true);
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
-  {
+  for (CMapPluginBase *plugin : pluginList)
     plugin->newMapCreated();
-  }
 
   activeView->changed();
 }
@@ -1022,10 +1015,8 @@ void CMapManager::changedElement(CMapElement *element)
     return;
   if (!activeView) return;
 
-  for (CMapPluginBase *plugin = getPluginList()->first();plugin!=0; plugin= getPluginList()->next())
-  {
+  for (CMapPluginBase *plugin : pluginList)
     plugin->elementChanged(element);
-  }
 
   activeView->changedElement(element);
 }
@@ -1194,10 +1185,8 @@ void CMapManager::readOptions()
 
   activeView->readOptions();
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
-  {
+  for (CMapPluginBase *plugin : pluginList)
     plugin->loadConfigOptions();
-  }
 }
 
 /** Used to write the map options */
@@ -1257,10 +1246,8 @@ void CMapManager::saveGlobalConfig()
   gs->setColor ("mapper-color-Edit", mapData->editColor);
   gs->setColor ("mapper-color-Current", mapData->currentColor);
 
-  for (CMapPluginBase *plugin = getPluginList()->first(); plugin!=0; plugin = getPluginList()->next())
-  {
+  for (CMapPluginBase *plugin : pluginList)
     plugin->saveConfigOptions();
-  }
 
   gs->setBool ("mapper-speedwalk-abort-active", mapData->speedwalkAbortActive);
   gs->setInt ("mapper-speedwalk-abort-limit", mapData->speedwalkAbortLimit);
@@ -1688,7 +1675,7 @@ void CMapManager::redrawAllViews(void)
 
 CMapFileFilterBase *CMapManager::nativeFilter(bool isLoad)
 {
-  for (CMapFileFilterBase *filter = m_fileFilter.first();filter!=0;filter=m_fileFilter.next())
+  for (CMapFileFilterBase *filter : m_fileFilter)
   {
     if (isLoad && (!filter->supportLoad())) continue;
     if ((!isLoad) && (!filter->supportSave())) continue;

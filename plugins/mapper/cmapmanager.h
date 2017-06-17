@@ -24,7 +24,7 @@
 #include <qcolor.h>
 #include <qpoint.h>
 #include <qobject.h>
-#include <q3ptrlist.h>
+#include <QLinkedList>
 #include <qworkspace.h>
 #include <QStringList>
 #include <qcursor.h>
@@ -91,7 +91,7 @@ public:
   void eventStringHandler (QString event, int, QString &par1, const QString &);
 
   /** Used to get a list of the plugins */
-  Q3PtrList<CMapPluginBase> *getPluginList();
+  QLinkedList<CMapPluginBase *> getPluginList();
   /**
    * Used to create a new view of the map
    * actually returns a CMapView*,  dynamic_cast if necessary
@@ -298,7 +298,7 @@ private:
 
 private:
   /** A list of import/export filters */
-  Q3PtrList<CMapFileFilterBase> m_fileFilter;
+  QLinkedList<CMapFileFilterBase *> m_fileFilter;
   /** If this is true then commands are added to the history, otherwise they are not */
   bool m_commandsActive;
   /** The filter used to proces mud input/output */
@@ -312,7 +312,7 @@ private:
   /** The current tool */
   CMapToolBase *currentTool;
   /** A list of all loaded tools */
-  Q3PtrList<CMapToolBase> toolList;
+  QLinkedList<CMapToolBase *> toolList;
   /** The undo/redo history */
   KUndoStack *commandHistory;
   /** Points the command history currently being used */
@@ -330,7 +330,7 @@ private:
   /** A pointer to the map data */
   CMapData *mapData;
   /** A list of all the plugins */
-  Q3PtrList<CMapPluginBase> pluginList;
+  QLinkedList<CMapPluginBase *> pluginList;
   /** pointer to the speedwalk status indicaor */
   DlgSpeedwalkProgress *speedwalkProgressDlg;
 

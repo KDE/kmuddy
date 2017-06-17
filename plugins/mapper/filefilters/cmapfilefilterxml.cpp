@@ -111,10 +111,8 @@ int CMapFileFilterXML::saveData(const QString &filename)
 
 QString CMapFileFilterXML::saveXMLFile()
 {
-	for (CMapPluginBase *plugin = m_mapManager->getPluginList()->first(); plugin!=0; plugin = m_mapManager->getPluginList()->next())
-	{
-		plugin->saveAboutToStart();
-	}
+  for (CMapPluginBase *plugin : m_mapManager->getPluginList())
+    plugin->saveAboutToStart();
 
 	// Create XML Document and add root node
 	QDomDocument doc ("kmudmap");
@@ -305,10 +303,8 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
 		return -1;
 	}
 
-	for (CMapPluginBase *plugin = m_mapManager->getPluginList()->first(); plugin!=0; plugin = m_mapManager->getPluginList()->next())
-	{
-		plugin->loadAboutToStart();
-	}
+  for (CMapPluginBase *plugin : m_mapManager->getPluginList())
+    plugin->loadAboutToStart();
 
     QDomElement docElem = doc.documentElement();
 
@@ -640,7 +636,7 @@ void CMapFileFilterXML::savePluginPropertiesForElement(CMapElement *element,QDom
 	QDomElement pluginsNode = doc->createElement ("plugins");
 
 
-	for (CMapPluginBase *plugin = m_mapManager->getPluginList()->first(); plugin!=0; plugin = m_mapManager->getPluginList()->next())
+  for (CMapPluginBase *plugin : m_mapManager->getPluginList())
 	{
 		QDomElement pNode = doc->createElement(plugin->name());
 		KMemConfig pluginProperties;
@@ -676,7 +672,7 @@ void CMapFileFilterXML::loadPluginPropertiesForElement(CMapElement *element,QDom
 
 			if (!e.isNull() )
 			{
-				for (CMapPluginBase *plugin = m_mapManager->getPluginList()->first(); plugin!=0; plugin = m_mapManager->getPluginList()->next())
+                          for (CMapPluginBase *plugin : m_mapManager->getPluginList())
 				{
 					if (plugin->name()==e.tagName())
 					{
