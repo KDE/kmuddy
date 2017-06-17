@@ -26,7 +26,7 @@
 #include <qobject.h>
 #include <q3ptrlist.h>
 #include <qworkspace.h>
-#include <q3ptrstack.h>
+#include <QStringList>
 #include <qcursor.h>
 
 #include <kurl.h>
@@ -343,7 +343,7 @@ private:
   /** Used to tell if speedwalk is active */
   bool speedwalkActive;
   /** The rooms that are to be speed walked */
-  Q3PtrStack<QString> pathToWalk;
+  QStringList pathToWalk;
 
   KMuddyMapper *mapperPlugin;
 private:

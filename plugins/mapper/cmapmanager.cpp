@@ -106,7 +106,6 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   setDefaultOptions();
 
   speedwalkActive = false;
-  pathToWalk.setAutoDelete(true);
 
   speedwalkProgressDlg = new DlgSpeedwalkProgress();
   speedwalkProgressDlg->hide();
@@ -1542,7 +1541,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
       }
     }
 
-    pathToWalk.push(new QString(directionToText(foundPath->getSrcDir(),foundPath->getSpecialCmd())));
+    pathToWalk.append(directionToText(foundPath->getSrcDir(),foundPath->getSpecialCmd()));
 
     destRoom=foundRoom;
     // Check to make sure that tings are not stuck in a loop and abort
@@ -1589,10 +1588,10 @@ void CMapManager::slotWalkPlayerAlongPath(void)
 {
   if (speedwalkActive)
   {
-    QString *dir = pathToWalk.pop();
+    QString dir = pathToWalk.takeFirst();
 
     // TODO: using active session isn't a very good idea; progress bar should be shown on the mapper window, not in KMuddy's status bar; furthermore, the mapper should distinguish sessions and switch maps when session changes or something - until all this gets done, we cannot implement this any better
-    mapperPlugin->sendCommand (mapperPlugin->activeSession(), *dir);
+    mapperPlugin->sendCommand (mapperPlugin->activeSession(), dir);
     speedwalkProgressDlg->setProgress(++speedwalkProgress);
 
     // Walk the path
