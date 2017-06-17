@@ -19,6 +19,7 @@
 
 #include <QBitmap>
 #include <QScrollArea>
+#include <QScrollBar>
 #include <kapplication.h>
 #include <kactioncollection.h>
 #include <kxmlguifactory.h>

@@ -399,7 +399,7 @@
                 </widget>
               </item>
               <item>
-                <widget class="Q3MultiLineEdit" name="txtText"/>
+                <widget class="QTextEdit" name="txtText"/>
               </item>
             </layout>
           </widget>

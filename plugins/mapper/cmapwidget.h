@@ -19,7 +19,6 @@
 #define CMAPWIDGET_H
 
 #include <QWidget>
-#include <q3scrollview.h>
 #include <QToolTip>
 #include <QMenu>
 

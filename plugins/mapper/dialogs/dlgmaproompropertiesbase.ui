@@ -60,7 +60,7 @@
         </widget>
        </item>
        <item>
-        <widget class="Q3MultiLineEdit" name="txtDescription" native="true"/>
+        <widget class="QTextEdit" name="txtDescription" native="true"/>
        </item>
       </layout>
      </widget>
@@ -153,7 +153,7 @@
         </widget>
        </item>
        <item>
-        <widget class="Q3ButtonGroup" name="fraLabelPos">
+        <widget class="QGroupBox" name="fraLabelPos">
          <property name="title">
           <string>LabelPosition</string>
          </property>
@@ -662,26 +662,9 @@
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
   <customwidget>
-   <class>Q3GroupBox</class>
-   <extends>QGroupBox</extends>
-   <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Q3ButtonGroup</class>
-   <extends>Q3GroupBox</extends>
-   <header>Qt3Support/Q3ButtonGroup</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>KColorButton</class>
    <extends>QPushButton</extends>
    <header>kcolorbutton.h</header>
-  </customwidget>
-  <customwidget>
-   <class>Q3MultiLineEdit</class>
-   <extends>QWidget</extends>
-   <header>q3multilineedit.h</header>
   </customwidget>
  </customwidgets>
  <includes>

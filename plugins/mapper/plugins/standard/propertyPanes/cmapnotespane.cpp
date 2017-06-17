@@ -38,7 +38,7 @@ CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *ico
     lblNotes->setText( i18n( "Notes:" ) );
     notesLayout->addWidget( lblNotes );
 
-	txtNotes = new Q3MultiLineEdit( this );
+	txtNotes = new QTextEdit( this );
 	notesLayout->addWidget( txtNotes );
 
 	txtNotes->setText(m_plugin->getNote(element));

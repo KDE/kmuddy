@@ -18,12 +18,11 @@
 #ifndef CMAPNOTESPANE_H
 #define CMAPNOTESPANE_H
 
-#include <qstring.h>
-#include <qicon.h>
-#include <qwidget.h>
-#include <qlayout.h>
-#include <qlabel.h>
-#include <q3multilineedit.h>
+#include <QString>
+#include <QIcon>
+#include <QLayout>
+#include <QLabel>
+#include <QTextEdit>
 
 #include "../../../cmapelement.h"
 #include "../../../cmappropertiespanebase.h"
@@ -53,7 +52,7 @@ private:
 	/** The components of the pane */
 	QVBoxLayout *notesLayout;	
 	QLabel *lblNotes;
-	Q3MultiLineEdit *txtNotes;
+	QTextEdit *txtNotes;
 	CMapPluginStandard *m_plugin;
 
 };
