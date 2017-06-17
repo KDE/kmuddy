@@ -1,6 +1,4 @@
 
-add_subdirectory( plugins )
-
 include_directories( ${CMAKE_SOURCE_DIR}/libs ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
 add_definitions (-DQT3_SUPPORT)
@@ -51,6 +49,22 @@ set(kmuddymapper_PART_SRCS
    dialogs/dlgmapspeedwalk.cpp
    dialogs/dlgmapdirections.cpp 
    filefilters/cmapfilefilterxml.cpp
+
+   plugins/standard/cmapcmdmoveelements.cpp 
+   plugins/standard/cmapcmdnotes.cpp 
+   plugins/standard/cmappluginstandard.cpp
+   plugins/standard/tools/cmaptoolselect.cpp
+   plugins/standard/tools/cmaptoolroom.cpp
+   plugins/standard/tools/cmaptoolpath.cpp
+   plugins/standard/tools/cmaptooltext.cpp
+   plugins/standard/tools/cmaptooleraser.cpp
+   plugins/standard/propertyPanes/cmapnotespane.cpp
+
+   plugins/speedwalk/cmappluginspeedwalk.cpp 
+   plugins/speedwalk/cmapcmdspeedwalkadd.cpp 
+   plugins/speedwalk/cmapcmdspeedwalkremove.cpp 
+   plugins/speedwalk/dlgmapspeedwalkcontainter.cpp 
+   plugins/speedwalk/dlgmapspeedwalklist.cpp
    )
 
 kde4_add_ui_files (kmuddymapper_PART_SRCS
@@ -62,6 +76,9 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmappathpropertiesbase.ui
    dialogs/dlgspeedwalkprogressbase.ui
    dialogs/dlgmapdirectionsbase.ui
+
+   plugins/speedwalk/dlgmapspeedwalklistbase.ui
+
    )
 
 kde4_add_plugin(kmuddymapper ${kmuddymapper_PART_SRCS})
@@ -77,4 +94,5 @@ install( FILES kmuddymapper.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install( FILES kmuddymapperpart.rc DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
 install( FILES kmuddymapperplugin.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
 install( FILES kmud_grid.png kmud_create.png kmud_follow.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
+install( FILES plugins/standard/tools/kmud_select.png plugins/standard/tools/kmud_room.png plugins/standard/tools/kmud_text.png plugins/standard/tools/kmud_path.png plugins/standard/tools/kmud_eraser.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
 

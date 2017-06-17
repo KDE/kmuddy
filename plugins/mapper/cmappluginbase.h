@@ -36,7 +36,7 @@ class KMemConfig;
 /**This is the base class for mapper plugins
   *@author Kmud Developer Team
   */
-class KMUDDY_EXPORT CMapPluginBase : public QObject, public KXMLGUIClient
+class KMUDDY_EXPORT CMapPluginBase : public QObject
 {
    Q_OBJECT
 public: 

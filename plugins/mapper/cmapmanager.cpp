@@ -253,6 +253,9 @@ void CMapManager::initFileFilters()
   m_fileFilter.append(new CMapFileFilterXML(this));
 }
 
+#include "plugins/standard/cmappluginstandard.h"
+#include "plugins/speedwalk/cmappluginspeedwalk.h"
+
 /** Used to create the plugins */
 void CMapManager::initPlugins()
 {
@@ -261,45 +264,26 @@ void CMapManager::initPlugins()
   toolList.clear();
   pluginList.setAutoDelete(false);
   pluginList.clear();
-  kDebug() << "Loading Plugins...\n";
+  kDebug() << "Loading Static Plugins...\n";
+  // These used to be plug-ins, but now I'm linking them in statically, and just pretend that they are plug-ins.
+  // This is because linking to the mapper part is causing issues.
+  CMapPluginBase *plugin;
+  plugin = new CMapPluginStandard (activeView);
+  pluginList.append (plugin);
+  plugin = new CMapPluginSpeedwalk (activeView);
+  pluginList.append (plugin);
 
-  KService::List offers = KServiceTypeTrader::self()->query("KMuddy/Mapper/Plugin");
-  kDebug() << "got " << offers.count() << " offers for plugins\n";
-
-  CMapPluginBase* plugin;
-
-  for (unsigned int i = 0; i < (unsigned int) offers.count(); ++i)
+  for (plugin = pluginList.first(); plugin!=0; plugin = pluginList.next())
   {
-    kDebug() << "Processing offer "
-      << (i+1)
-      << ": \"" << offers[i]->name()
-      << "\" (" << offers[i]->library() << ")\n";
-
-    KPluginFactory *factory = KPluginLoader (*offers[i]).factory();
-    if (!factory) {
-      kWarning() << "Obtaining factory failed!";
-      continue;
-    }
-    plugin = factory->create<CMapPluginBase> (activeView);
-
-    if (!plugin)
+    kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
+    foreach (CMapToolBase *tool, *plugin->getToolList())
     {
-      kWarning() << "Plugin creation failed!";
+      toolList.append(tool);
     }
-    else
-    {
-      pluginList.append(plugin);
-  
-      kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
-      foreach (CMapToolBase *tool, *plugin->getToolList())
-      {
-        toolList.append(tool);
-      }
 
 //      getActiveView()->insertChildClient(plugin);
-      
-      pluginCount++;
-    }
+    
+    pluginCount++;
   }
 
   kDebug() << "Finished loading " << pluginCount << " plugins\n";

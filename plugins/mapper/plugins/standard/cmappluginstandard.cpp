@@ -38,19 +38,14 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kactioncollection.h>
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
 
-K_PLUGIN_FACTORY (KMuddyMapperStandardFactory, registerPlugin<CMapPluginStandard>();)
-K_EXPORT_PLUGIN (KMuddyMapperStandardFactory("kmuddymapper"))
-
-
-CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : CMapPluginBase(parent)
+CMapPluginStandard::CMapPluginStandard(QObject *parent) : CMapPluginBase(parent)
 {
-        CMapManager *manager = (dynamic_cast<CMapView *>(parent))->getManager();
+  CMapView *view = dynamic_cast<CMapView *>(parent);
+        CMapManager *manager = view->getManager();
 	kDebug() << "CMapPluginStandard::CMapPluginStandard";
 	kDebug() << "CMapPluginStandard::CMapPluginStandard Create Tools";
-        KActionCollection *acol = actionCollection();
+        KActionCollection *acol = view->actionCollection();
         kDebug() << "Plugin collection is "<<acol;
 
 	// Create and Add the tools to the tools list
@@ -66,8 +61,6 @@ CMapPluginStandard::CMapPluginStandard(QObject *parent, const QVariantList &) : 
 	acol->action("toolsRoom")->setEnabled(true);
 	acol->action("toolsSelect")->setEnabled(true);
 	acol->action("toolsText")->setEnabled(true);
-
-	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_standard.rc"), true);
 }
 
 CMapPluginStandard::~CMapPluginStandard()
@@ -88,11 +81,13 @@ QList<CMapPropertiesPaneBase *> CMapPluginStandard::createPropertyPanes(elementT
 /** This is called when the character or mud profiles change */
 void CMapPluginStandard::profileChanged(void)
 {
+  /*
 	actionCollection()->action("toolsEraser")->setEnabled(true);
 	actionCollection()->action("toolsPath")->setEnabled(true);
 	actionCollection()->action("toolsRoom")->setEnabled(true);
 	actionCollection()->action("toolsSelect")->setEnabled(true);
 	actionCollection()->action("toolsText")->setEnabled(true);
+        */
 }
 
 /**

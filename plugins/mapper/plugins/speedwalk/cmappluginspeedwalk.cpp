@@ -35,24 +35,17 @@
 
 #include "cglobalsettings.h"
 
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
-
-K_PLUGIN_FACTORY (KMuddyMapperSpeedwalkFactory, registerPlugin<CMapPluginSpeedwalk>();)
-K_EXPORT_PLUGIN (KMuddyMapperSpeedwalkFactory("kmuddymapper"))
-
-CMapPluginSpeedwalk::CMapPluginSpeedwalk(QObject *parent, const QVariantList &) : CMapPluginBase(parent)
+CMapPluginSpeedwalk::CMapPluginSpeedwalk(QObject *parent) : CMapPluginBase(parent)
 {
-	setXMLFile (KStandardDirs::locate("appdata", "kmuddymapper_speedwalk.rc"));
-
+  CMapView *view = dynamic_cast<CMapView *>(parent);
 	m_showAction = new KAction (this);
         m_showAction->setText (i18n("Show Speedwalk List"));
         connect (m_showAction, SIGNAL (triggered()), this, SLOT(slotViewSpeedwalkList()));
-        actionCollection()->addAction("viewSpeedwalkList", m_showAction);
+        view->actionCollection()->addAction("viewSpeedwalkList", m_showAction);
 	m_addAction = new KAction (this);
         m_addAction->setText (i18n("&Add to speed walk list"));
         connect (m_addAction, SIGNAL (triggered()), this, SLOT(slotRoomAddToSpeedwalk()));
-        actionCollection()->addAction("roomAddToSpeedwalk", m_addAction);
+        view->actionCollection()->addAction("roomAddToSpeedwalk", m_addAction);
 	
 	m_speedwalkList = NULL;
 

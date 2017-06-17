@@ -22,7 +22,7 @@
 #include "cmapmanager.h"
 #include "cmapview.h"
 
-CMapPluginBase::CMapPluginBase(QObject *parent) : KXMLGUIClient((CMapView *)parent)
+CMapPluginBase::CMapPluginBase(QObject *parent)
 {
   mapManager = (dynamic_cast<CMapView *>(parent))->getManager();
 }

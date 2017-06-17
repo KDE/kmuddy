@@ -6,11 +6,17 @@
       <Action name = "viewLowerLevel"/>
     </Menu>
     <Menu name="Window"><Text>&amp;Window</Text>
+      <Action name = "viewSpeedwalkList"/>
     </Menu>
   </MenuBar>
   <StatusBar/>
   <ToolBar fullWidth="false" name="tools" position="left"><Text>Tools</Text>
-    <Action name = "toolsGrid"/>
+    <Action name="toolsGrid"/>
+    <Action name="toolsSelect"/>
+    <Action name="toolsRoom"/>
+    <Action name="toolsPath"/>
+    <Action name="toolsText"/>
+    <Action name="toolsEraser"/>
     <Separator/>
     <Action name = "editUndo"/>
     <Action name = "editRedo"/>
@@ -35,6 +41,7 @@
     <Action name = "roomCurrentPos"/>
     <Action name = "roomLoginPoint"/>
     <Action name = "roomWalkTo"/>
+    <Action name = "roomAddToSpeedwalk"/>
     <Separator/>
     <Action name = "roomDelete"/>
     <Separator/>

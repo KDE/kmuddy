@@ -34,7 +34,7 @@ class CMapPluginStandard : public CMapPluginBase
 {
    Q_OBJECT
 public: 
-	CMapPluginStandard(QObject *, const QVariantList &);
+	CMapPluginStandard(QObject *);
 	~CMapPluginStandard();
 
 	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);

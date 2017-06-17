@@ -36,7 +36,7 @@ class CMapPluginSpeedwalk : public CMapPluginBase
 {
    Q_OBJECT
 public: 
-	CMapPluginSpeedwalk(QObject *parent, const QVariantList &);
+	CMapPluginSpeedwalk(QObject *parent);
 	~CMapPluginSpeedwalk();
 
 	/** This is called before a element menu is openend */
