@@ -28,7 +28,6 @@
 CMapFilter::CMapFilter(CMapManager *manager)
 {  
   mapManager = manager;
-  directionCmdQueue.setAutoDelete(false);
 }
 
 CMapFilter::~CMapFilter()
@@ -49,7 +48,7 @@ QString CMapFilter::processCommand (const QString &command)
       newStr += executeAfterCommand (command);
 
       if (mapManager->getMapData()->validRoomCheck)
-        directionCmdQueue.enqueue(new QString (command));
+        directionCmdQueue.append (command);
       else
         mapManager->movePlayerBy(command);
       return newStr;
@@ -99,10 +98,9 @@ QString CMapFilter::executeAfterCommand (const QString &command)
 /** This method is called when output is sent to the mud */
 void CMapFilter::processServerOutput(const QString &s)
 {
-  QString *dirCmd=directionCmdQueue.dequeue();
+  if (!directionCmdQueue.isEmpty()) {
+     QString dirCmd = directionCmdQueue.takeFirst();
 
-  if ((dirCmd!=NULL))
-  {
     if (mapManager->getActiveView()->getFollowMode())
     {
       bool movePlayer = true;
@@ -126,10 +124,8 @@ void CMapFilter::processServerOutput(const QString &s)
       }
 
       if (movePlayer)
-        mapManager->movePlayerBy(*dirCmd);
+        mapManager->movePlayerBy(dirCmd);
     }
-
-    delete dirCmd;
   }
 }
 

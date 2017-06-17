@@ -20,8 +20,8 @@
 
 #include "../../cmapcommand.h"
 
-#include <q3valuelist.h>
-#include <qpoint.h>
+#include <QLinkedList>
+#include <QPoint>
 
 
 class CMapManager;
@@ -49,7 +49,7 @@ private:
 		QPoint pos;
 		int labelPos;
 	};
-	typedef Q3ValueList<struct elemProp> PropList;
+	typedef QLinkedList<struct elemProp> PropList;
 
 	PropList elements;
 	CMapManager *m_mapManager;

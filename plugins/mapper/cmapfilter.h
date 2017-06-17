@@ -19,8 +19,8 @@
 #ifndef CMAPFILTER_H
 #define CMAPFILTER_H
 
-#include <q3ptrqueue.h>
-#include <qstring.h>
+#include <QString>
+#include <QStringList>
 
 class CMapManager;
 
@@ -45,7 +45,7 @@ private:
 
 private:
   CMapManager *mapManager;
-  Q3PtrQueue<QString> directionCmdQueue;
+  QStringList directionCmdQueue;
 };
 
 #endif

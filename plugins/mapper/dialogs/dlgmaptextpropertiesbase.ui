@@ -25,7 +25,7 @@
       </property>
       <item>
         <widget class="QTabWidget" name="TextTabs">
-          <widget class="QWidget" name="tab">
+          <widget class="QWidget" name="tab1">
             <attribute name="title">
               <string>&amp;Font</string>
             </attribute>
@@ -167,7 +167,7 @@
               </item>
             </layout>
           </widget>
-          <widget class="QWidget" name="tab">
+          <widget class="QWidget" name="tab2">
             <attribute name="title">
               <string>S&amp;ize</string>
             </attribute>
@@ -377,7 +377,7 @@
               </item>
             </layout>
           </widget>
-          <widget class="QWidget" name="tab">
+          <widget class="QWidget" name="tab3">
             <attribute name="title">
               <string>Text</string>
             </attribute>
@@ -416,7 +416,7 @@
         </widget>
       </item>
       <item>
-        <widget class="Q3Frame" name="fraPreview">
+        <widget class="QFrame" name="fraPreview">
           <property name="minimumSize">
             <size>
               <width>300</width>
