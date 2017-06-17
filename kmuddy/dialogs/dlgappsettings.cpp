@@ -554,7 +554,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   //page 8
    //layout ensures that the widget fills entire available space...
   QHBoxLayout *keylayout = new QHBoxLayout (frmshortcuts);
-  keys = new KShortcutsEditor (cActionManager::self()->getACol (), frmshortcuts, false);
+  keys = new KShortcutsEditor (cActionManager::self()->getACol (), frmshortcuts);
   keylayout->addWidget (keys);
 
   cActionManager::self()->invokeEvent ("dialog-create", 0, "app-prefs");

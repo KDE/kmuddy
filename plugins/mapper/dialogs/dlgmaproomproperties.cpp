@@ -77,7 +77,7 @@ DlgMapRoomProperties::~DlgMapRoomProperties()
 void DlgMapRoomProperties::regenerateExits(void)
 {
   lstPaths->clear();
-  QTreeWidgetItem *item;
+  QTreeWidgetItem *item = nullptr;
   foreach (CMapPath *path, *room->getPathList())
   {
     QString direction = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
@@ -90,7 +90,7 @@ void DlgMapRoomProperties::regenerateExits(void)
     lstPaths->addTopLevelItem(item);
   }
 
-  lstPaths->setCurrentItem(item);
+  if (item) lstPaths->setCurrentItem(item);
 }
 
 void DlgMapRoomProperties::slotAccept()

@@ -1,5 +1,35 @@
 This is a TODO list for KMuddy.
 
+#6  0x00007f7f498bf763 in std::_Rb_tree_increment(std::_Rb_tree_node_base const*) () at /usr/lib64/libstdc++.so.6
+#7  0x00007f7f4e5a90ec in std::_Rb_tree_iterator<std::pair<QString const, QString> >::operator++() (this=this@entry=0x7ffee1881fb0) at /usr/include/c++/5/bits/stl_tree.h:205
+#8  0x00007f7f4e5f2a5f in cListObject::save(QXmlStreamWriter*) (this=0x1551760, writer=0x321d710) at /home/tomas/projects/kmuddy/libs/clistobject.cpp:358
+#9  0x00007f7f4e5f9ea7 in cListGroup::save(QXmlStreamWriter*) (this=0x1270090, writer=0x321d710) at /home/tomas/projects/kmuddy/libs/clistgroup.cpp:265
+#10 0x00007f7f4e5f9ea7 in cListGroup::save(QXmlStreamWriter*) (this=0x105b5b0, writer=0x321d710) at /home/tomas/projects/kmuddy/libs/clistgroup.cpp:265
+#11 0x00007f7f4e5f49ac in cList::save(QXmlStreamWriter*) (this=this@entry=0x1120900, writer=writer@entry=0x321d710) at /home/tomas/projects/kmuddy/libs/clist.cpp:496
+#12 0x00007f7f4e5fc585 in cListManager::saveList(int, cList*) (this=this@entry=0xbdf960, sessId=sessId@entry=2, list=0x1120900) at /home/tomas/projects/kmuddy/libs/clistmanager.cpp:279
+#13 0x00007f7f4e5fca04 in cListManager::saveAll(int) (this=0xbdf960, sessId=2) at /home/tomas/projects/kmuddy/libs/clistmanager.cpp:289
+#14 0x00007f7f4e5c87c2 in cActionManager::invokeEvent(QString, int) (this=0x9ac920, event=..., session=session@entry=2) at /home/tomas/projects/kmuddy/libs/cactionmanager.cpp:402
+#15 0x00007f7f4e5cd372 in cActionBase::invokeEvent(QString, int) (this=this@entry=0xfdc0c0, event=..., session=session@entry=2) at /home/tomas/projects/kmuddy/libs/cactionbase.cpp:166
+#16 0x00000000004300fe in cConnection::saveSession() (this=0xfdc0b0) at /home/tomas/projects/kmuddy/kmuddy/cconnection.cpp:830
+#17 0x00007f7f4ae72f90 in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () at /usr/lib64/libQtCore.so.4
+#18 0x00007f7f4ae789a3 in QObject::event(QEvent*) () at /usr/lib64/libQtCore.so.4
+#19 0x00007f7f49d6ff1c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () at /usr/lib64/libQtGui.so.4
+#20 0x00007f7f49d769ec in QApplication::notify(QObject*, QEvent*) () at /usr/lib64/libQtGui.so.4
+#21 0x00007f7f4bb6165a in KApplication::notify(QObject*, QEvent*) () at /usr/lib64/libkdeui.so.5
+#22 0x00007f7f4ae5fa4d in QCoreApplication::notifyInternal(QObject*, QEvent*) () at
+
+#7  0x00007fdcdd4c4f23 in CMapManager::setEditElement(CMapElement*) (this=0x3352930, element=0x39937a0) at /home/tomas/projects/kmuddy/plugins/mapper/cmapmanager.cpp:1370
+#8  0x00007fdcdce4245a in CMapToolText::mouseReleaseEvent(QPoint, QMouseEvent*, CMapLevel*) (this=0x432c390, mousePos=..., e=<optimized out>, currentLevel=0x432c8b0) at /home/tomas/projects/kmuddy/plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:61
+#9  0x00007fdcf11baf00 in QWidget::event(QEvent*) () at /usr/lib64/libQtGui.so.4
+#10 0x00007fdcdd4ab3cb in CMapWidget::event(QEvent*) (this=0x2d87470, e=0x7ffc189394d0) at /home/tomas/projects/kmuddy/plugins/mapper/cmapwidget.cpp:121
+#11 0x00007fdcf1167f1c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () at /usr/lib64/libQtGui.so.4
+#12 0x00007fdcf116eb53 in QApplication::notify(QObject*, QEvent*) () at /usr/lib64/libQtGui.so.4
+#13 0x00007fdcf2f5965a in KApplication::notify(QObject*, QEvent*) () at /usr/lib64/libkdeui.so.5
+#14 0x00007fdcf2257a4d in QCoreApplication::notifyInternal(QObject*, QEvent*) () at /usr/lib64/libQtCore.so.4
+#15 0x00007fdcf116e1ed in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () at /usr/lib64/libQtGui.so.4
+#16 0x00007fdcf11e4942 in  () at /usr/lib64/libQtGui.so.4
+
+
 TODO-list:
 ----------
 
