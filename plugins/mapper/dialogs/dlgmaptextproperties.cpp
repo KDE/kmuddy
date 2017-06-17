@@ -177,7 +177,7 @@ void DlgMapTextProperties::slotSetSize(void)
 	QString width;
 	QString height;
 	QStringList textList;
-	CMapText::stringToList(txtText->text(),&textList);
+	CMapText::stringToList(txtText->toPlainText(),&textList);
 	int tmpWidth = 0;
 	for (QStringList::iterator it = textList.begin(); it != textList.end(); ++it)
 	{
@@ -225,7 +225,7 @@ void DlgMapTextProperties::slotAccept()
 	int width = txtWidth->text().toInt();
 	int height = txtHeight->text().toInt();
 
-	command->compare("Text",text->getText(),txtText->text());
+	command->compare("Text",text->getText(),txtText->toPlainText());
 	command->compare("Color",text->getColor(),textColor);
 	command->compare("Font",text->getFont(),textFont);
 	command->compare("Size",text->getSize(),QSize(width,height));
@@ -247,7 +247,7 @@ void DlgMapTextProperties::slotUpdatePreview()
 	textScrollView->setFont(textFont);
 	textScrollView->setColor(textColor);
 	textScrollView->setSize(QSize(width,height));
-	textScrollView->setText(txtText->text());
+	textScrollView->setText(txtText->toPlainText());
 	textScrollView->resize(txtWidth->text().toInt(),txtHeight->text().toInt());
 	textScrollView->update();
 }

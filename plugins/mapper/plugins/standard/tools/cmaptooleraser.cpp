@@ -61,8 +61,8 @@ CMapToolEraser::CMapToolEraser(KActionCollection *actionCollection,CMapManager *
                    manager,"toolsEraser",0)
 {
 
-	QBitmap delete_cb( 32, 32, delete_cb_bits, TRUE );
-	QBitmap delete_cm( 32, 32, delete_cm_bits, TRUE );
+	QBitmap delete_cb = QBitmap::fromData (QSize(32, 32), delete_cb_bits);
+	QBitmap delete_cm = QBitmap::fromData (QSize(32, 32), delete_cm_bits);
 
 	deleteCursor = new QCursor( delete_cb, delete_cm, 1,1);
 }
@@ -73,7 +73,7 @@ CMapToolEraser::~CMapToolEraser()
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolEraser::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
+void CMapToolEraser::mouseReleaseEvent(QPoint mousePos, QMouseEvent * /*e*/, CMapLevel *currentLevel)
 {
   if (!currentLevel) return;
   CMapElement *element = currentLevel->findElementAt(mousePos);

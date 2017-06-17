@@ -36,6 +36,8 @@ public:
 	CMapPluginStandard(QObject *);
 	~CMapPluginStandard();
 
+        virtual QString tagName() { return QString("standard"); }
+
 	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
 
 	void profileChanged(void);

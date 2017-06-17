@@ -89,7 +89,7 @@ cCmdProcessor::~cCmdProcessor()
   delete expcache;
 }
 
-void cCmdProcessor::eventNothingHandler (QString event, int session)
+void cCmdProcessor::eventNothingHandler (QString event, int /*session*/)
 {
   if (event == "global-settings-changed") {
     setFocusCommandString (cGlobalSettings::self()->getString ("str-focus"));

@@ -293,93 +293,89 @@ int CMapFileFilterXML::loadData(const QString &filename)
 //int CMapFileFilterXML::loadXMLData(QString filename)
 int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
 {
-	// TODO_jp : Make sure Zone ID and level ID max value is set corretly
-	QDomDocument doc ("map");	
+  // TODO_jp : Make sure Zone ID and level ID max value is set corretly
+  QDomDocument doc ("map");  
 
-	if (!doc.setContent( buffer))
-	{
-		kDebug() << "Unable to open the map file, not a valid xml document";
-		// file.close();
-		return -1;
-	}
+  if (!doc.setContent( buffer))
+  {
+    kDebug() << "Unable to open the map file, not a valid xml document";
+    // file.close();
+    return -1;
+  }
 
   for (CMapPluginBase *plugin : m_mapManager->getPluginList())
     plugin->loadAboutToStart();
 
-    QDomElement docElem = doc.documentElement();
+  QDomElement docElem = doc.documentElement();
 
-	// Check that this version of the file can be loaded
-	QDomElement e = readChildElement(&docElem,"Version");
-	if (!e.isNull())
-	{
-		QString major = e.attribute("Major","");
-		QString minor = e.attribute("Minor","");
-		
-		if (major != "1" || minor != "0")
-		{
-			 //TODO_jp : Output error message
-			kDebug() << "This version can't be loaded";
-			return -4;
-		}
-    }
-    else
-    {
-		//TODO_jp : Output error message
-		kDebug() << "Unable to find version";		
-		return -2;
-    }
-
-	// Find Root Zone
-    QDomElement rootZoneNode = readChildElement(&docElem,"Zone");
-    if (rootZoneNode.isNull())
-    {
-		//TODO_jp : Output error message
-		kDebug() << "Unable to find root zone";
-		return -2;
-    }
-
-    // Load Root Zone
-    int errorZone =loadZone(&rootZoneNode);
+  // Check that this version of the file can be loaded
+  QDomElement e = readChildElement(&docElem,"Version");
+  if (!e.isNull())
+  {
+    QString major = e.attribute("Major","");
+    QString minor = e.attribute("Minor","");
     
-    if (errorZone!=0)
+    if (major != "1" || minor != "0")
     {
-		return errorZone;
-	}
-
-    // Find Paths
-    QDomElement pathsNode = readChildElement(&docElem,"Paths");
-    if (pathsNode.isNull())
-    {
-		//TODO_jp : Output error message
-		kDebug() << "Unable to find paths";
-		return -2;
+       //TODO_jp : Output error message
+      kDebug() << "This version can't be loaded";
+      return -4;
     }
+  }
+  else
+  {
+    //TODO_jp : Output error message
+    kDebug() << "Unable to find version";    
+    return -2;
+  }
 
-	// Load Paths
-	int errorPath = loadPaths(&pathsNode);
+  // Find Root Zone
+  QDomElement rootZoneNode = readChildElement(&docElem,"Zone");
+  if (rootZoneNode.isNull())
+  {
+    //TODO_jp : Output error message
+    kDebug() << "Unable to find root zone";
+    return -2;
+  }
 
-	if (errorPath!=0)
-	{
-		return errorPath;
-	}
+  // Load Root Zone
+  int errorZone =loadZone(&rootZoneNode);
+  
+  if (errorZone!=0)
+    return errorZone;
 
-	// Find Links
-	QDomElement linksNode = readChildElement(&docElem,"Links");
-	if (pathsNode.isNull())
-	{
-		//TODO_jp : Output error message
-		kDebug() << "Unable to find links";
-		return -2;
-	}
+  // Find Paths
+  QDomElement pathsNode = readChildElement(&docElem,"Paths");
+  if (pathsNode.isNull())
+  {
+    //TODO_jp : Output error message
+    kDebug() << "Unable to find paths";
+    return -2;
+  }
 
-	int errorLinks = loadLinks(&linksNode);
-	if (errorLinks!=0)
-	{
-		return errorLinks;
-	}
+  // Load Paths
+  int errorPath = loadPaths(&pathsNode);
 
-	// Return no error
-	return 0;
+  if (errorPath!=0)
+  {
+    return errorPath;
+  }
+
+  // Find Links
+  QDomElement linksNode = readChildElement(&docElem,"Links");
+  if (pathsNode.isNull())
+  {
+    //TODO_jp : Output error message
+    kDebug() << "Unable to find links";
+    return -2;
+  }
+
+  int errorLinks = loadLinks(&linksNode);
+  if (errorLinks)
+    return errorLinks;
+
+  // Return no error
+  return 0;
 }
 
 /** This method is used to load all of the links
@@ -637,21 +633,21 @@ void CMapFileFilterXML::savePluginPropertiesForElement(CMapElement *element,QDom
 
 
   for (CMapPluginBase *plugin : m_mapManager->getPluginList())
-	{
-		QDomElement pNode = doc->createElement(plugin->name());
-		KMemConfig pluginProperties;
-		plugin->saveElementProperties(element,&pluginProperties);
+  {
+    QDomElement pNode = doc->createElement(plugin->tagName());
+    KMemConfig pluginProperties;
+    plugin->saveElementProperties(element,&pluginProperties);
 
-		EntryMap entries = pluginProperties.entryMap("Properties");
-		for (EntryMap::ConstIterator it = entries.begin(); it != entries.end(); ++it)
-		{
-			pNode.setAttribute(it.key(),it.data());
-		}
-		
-		pluginsNode.appendChild(pNode);
-	}
+    EntryMap entries = pluginProperties.entryMap("Properties");
+    for (EntryMap::ConstIterator it = entries.begin(); it != entries.end(); ++it)
+    {
+      pNode.setAttribute(it.key(),it.value());
+    }
 
-	elProperties->appendChild(pluginsNode);
+    pluginsNode.appendChild(pNode);
+  }
+
+  elProperties->appendChild(pluginsNode);
 }
 
 /**
@@ -674,7 +670,7 @@ void CMapFileFilterXML::loadPluginPropertiesForElement(CMapElement *element,QDom
 			{
                           for (CMapPluginBase *plugin : m_mapManager->getPluginList())
 				{
-					if (plugin->name()==e.tagName())
+					if (plugin->tagName()==e.tagName())
 					{
 						KMemConfig pluginProperties;
 

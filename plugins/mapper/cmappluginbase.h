@@ -43,6 +43,8 @@ public:
 	CMapPluginBase(QObject *parent=0);
 	virtual ~CMapPluginBase();
 
+        virtual QString tagName() = 0;
+
 	/** Used to get a list of the tools */
 	virtual QList<CMapToolBase *> *getToolList(void);
 	/** Used to get a list of the property pages for a map element */

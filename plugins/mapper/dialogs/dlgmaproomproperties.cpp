@@ -97,7 +97,7 @@ void DlgMapRoomProperties::slotAccept()
   CMapCmdElementProperties *command = new CMapCmdElementProperties(mapManager,i18n("Changed Room Properties"),room);
 
   command->compare("Label",room->getLabel(),txtLabel->text().trimmed());
-  command->compare("Description",room->getDescription(),txtDescription->text().trimmed());
+  command->compare("Description",room->getDescription(),txtDescription->toPlainText().trimmed());
   command->compare("Color",room->getColor(),cmdRoomColor->color());
   command->compare("DefaultColor",room->getUseDefaultCol(),chkUseDefaltColor->isChecked());
   command->compare("LabelPos",(int)room->getLabelPosition(),(int)getLabelPos());

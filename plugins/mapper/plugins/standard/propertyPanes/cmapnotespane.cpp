@@ -51,7 +51,7 @@ CMapNotesPane::~CMapNotesPane()
 /** This is called when the ok button of the property dialog is pressed */
 void CMapNotesPane::slotOk()
 {
-	CMapCMDNotes *cmd = new CMapCMDNotes(m_plugin,m_element,txtNotes->text());
+	CMapCMDNotes *cmd = new CMapCMDNotes(m_plugin,m_element,txtNotes->toPlainText());
 	m_plugin->getManager()->addCommand(cmd);
 }
 

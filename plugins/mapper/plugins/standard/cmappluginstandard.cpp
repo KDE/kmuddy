@@ -193,8 +193,7 @@ void CMapPluginStandard::afterElementUndeleted(CMapElement *element)
 	if (found)
 	{		
 		addNote(element,(*e).note);
-
-		m_deletedElements.remove(e);
+		m_deletedElements.erase(e);
 	}
 }
 

@@ -43,10 +43,10 @@ CMapToolPath::CMapToolPath(KActionCollection *actionCollection,CMapManager *mana
                    BarIcon(("kmud_path.png")),
                    manager,"toolsPath",0)
 {
-		QBitmap pathStart_cb(16,16, path1_bits,TRUE);
+		QBitmap pathStart_cb = QBitmap::fromData (QSize(16,16), path1_bits);
 		pathStartCursor = new QCursor( pathStart_cb,pathStart_cb, 4,0);	
 
-		QBitmap pathEnd_cb(16,16, path2_bits,TRUE);
+		QBitmap pathEnd_cb = QBitmap::fromData (QSize(16,16), path2_bits);
 		pathEndCursor = new QCursor( pathEnd_cb, pathEnd_cb, 4,0);
 }
 
@@ -57,7 +57,7 @@ CMapToolPath::~CMapToolPath()
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolPath::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
+void CMapToolPath::mouseReleaseEvent(QPoint mousePos, QMouseEvent * /*e*/, CMapLevel *currentLevel)
 {
   if (!currentLevel) return;
   CMapRoom *destRoom = currentLevel->findRoomAt(mousePos);

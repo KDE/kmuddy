@@ -54,7 +54,7 @@ void CMapToolRoom::paint(QPainter *p)
 }
 
 /** Called when the tool recives a mouse release event */
-void CMapToolRoom::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel)
+void CMapToolRoom::mouseReleaseEvent(QPoint mousePos, QMouseEvent * /*e*/, CMapLevel *currentLevel)
 {
 	//FIXME_jp : Check to see if the room was placed at the edge of the map and move map if nescerary
 

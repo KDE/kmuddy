@@ -571,7 +571,7 @@
        <property name="title">
         <string>Background</string>
        </property>
-       <layout class="QGridLayout" name="gridLayout">
+       <layout class="QGridLayout" name="gridLayout3">
         <item row="0" column="0">
          <widget class="QLabel" name="lblBackground">
           <property name="text">

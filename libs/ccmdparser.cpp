@@ -53,7 +53,7 @@ cCmdParser::~cCmdParser()
   removeGlobalEventHandler ("global-settings-changed");
 }
 
-void cCmdParser::eventNothingHandler (QString event, int session)
+void cCmdParser::eventNothingHandler (QString event, int /*session*/)
 {
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();

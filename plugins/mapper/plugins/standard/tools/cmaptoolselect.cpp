@@ -174,7 +174,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *
   mapManager->levelChanged(currentLevel);
 
   kDebug() << "CMapToolSelect: timer start";
-  mouseDownTimer.start(150,false);
+  mouseDownTimer.start(150);
 }
 
 QPoint CMapToolSelect::alignToGrid(QPoint offset)

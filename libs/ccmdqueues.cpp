@@ -90,7 +90,7 @@ void cCmdQueues::timeout ()
 
 }
 
-void cCmdQueues::gotLine (const QString &line)
+void cCmdQueues::gotLine (const QString &/*line*/)
 {
   // TODO: handle the queues waiting for a line here ...
   
