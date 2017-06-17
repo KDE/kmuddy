@@ -59,12 +59,6 @@ set(kmuddymapper_PART_SRCS
    plugins/standard/tools/cmaptooltext.cpp
    plugins/standard/tools/cmaptooleraser.cpp
    plugins/standard/propertyPanes/cmapnotespane.cpp
-
-   plugins/speedwalk/cmappluginspeedwalk.cpp 
-   plugins/speedwalk/cmapcmdspeedwalkadd.cpp 
-   plugins/speedwalk/cmapcmdspeedwalkremove.cpp 
-   plugins/speedwalk/dlgmapspeedwalkcontainter.cpp 
-   plugins/speedwalk/dlgmapspeedwalklist.cpp
    )
 
 kde4_add_ui_files (kmuddymapper_PART_SRCS
@@ -76,9 +70,6 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmappathpropertiesbase.ui
    dialogs/dlgspeedwalkprogressbase.ui
    dialogs/dlgmapdirectionsbase.ui
-
-   plugins/speedwalk/dlgmapspeedwalklistbase.ui
-
    )
 
 kde4_add_plugin(kmuddymapper ${kmuddymapper_PART_SRCS})

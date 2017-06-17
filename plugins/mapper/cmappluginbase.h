@@ -68,9 +68,6 @@ public:
 	virtual void saveConfigOptions(void);
 	virtual void loadConfigOptions(void);
 	virtual void mapErased(void);
-	/** Request that a room be added to the speedwalk list
-	 * @param room The room to be added */
-	virtual void addSpeedwalkRoom(CMapRoom *) { };
 	/** This is called when the character or mud profiles change */
 	virtual void profileChanged(void) { };
 	/** This method is called when profile data changes */

@@ -257,11 +257,6 @@ public:
   /** Used to repaint all the views */
   void redrawAllViews(void);
 
-  /** This method tells the plugins that the mapper wants to add a room to the speedwalk list
-    * @param room The room to add to the speedwalk list
-    */
-  void addSpeedwalkRoom(CMapRoom *room);
-
   /** This method is used to find a element from a list of properties
       * @param properties The list of proerties
       * @return The element if it's found otherwise NULL */

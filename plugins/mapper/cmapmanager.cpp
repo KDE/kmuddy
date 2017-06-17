@@ -232,17 +232,6 @@ QList<CMapPropertiesPaneBase *> CMapManager::createPropertyPanes(elementTyp type
   return res;
 }
 
-/** This method tells the plugins that the mapper wants to add a room to the speedwalk list
-  * @param room The room to add to the speedwalk list
-  */
-void CMapManager::addSpeedwalkRoom(CMapRoom *room)
-{
-  for (CMapPluginBase *plugin=getPluginList()->first();plugin!=0; plugin=getPluginList()->next())
-  {
-    plugin->addSpeedwalkRoom(room);
-  }
-}
-
 
 /** This will setup the import/export file filters */
 void CMapManager::initFileFilters()
@@ -253,7 +242,6 @@ void CMapManager::initFileFilters()
 }
 
 #include "plugins/standard/cmappluginstandard.h"
-#include "plugins/speedwalk/cmappluginspeedwalk.h"
 
 /** Used to create the plugins */
 void CMapManager::initPlugins()
@@ -268,8 +256,6 @@ void CMapManager::initPlugins()
   // This is because linking to the mapper part is causing issues.
   CMapPluginBase *plugin;
   plugin = new CMapPluginStandard (activeView);
-  pluginList.append (plugin);
-  plugin = new CMapPluginSpeedwalk (activeView);
   pluginList.append (plugin);
 
   for (plugin = pluginList.first(); plugin!=0; plugin = pluginList.next())
