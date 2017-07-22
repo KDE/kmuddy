@@ -17,7 +17,6 @@
 
 #include "dlgspeedwalkprogress.h"
 
-#include <QProgressBar>
 #include <QPushButton>
 
 DlgSpeedwalkProgress::DlgSpeedwalkProgress(QWidget *parent) : QDialog(parent)

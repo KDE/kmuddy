@@ -36,7 +36,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kdebug.h>
 
 #include <QComboBox>
-#include <QGridLayout>
 #include <QSplitter>
 #include <QStackedWidget>
 #include <QStandardItemModel>

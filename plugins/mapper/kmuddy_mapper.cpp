@@ -25,7 +25,6 @@
 #include <klocale.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <QDebug>
 #include <QDockWidget>
 #include <map>
 

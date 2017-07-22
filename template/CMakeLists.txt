@@ -1,14 +1,14 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/lib ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
+include_directories( ${CMAKE_SOURCE_DIR}/lib    )
 
 
 ########### next target ###############
 
 set(kmuddyplugintemplate_PART_SRCS plugin_template.cpp )
 
-kde4_add_plugin(kmuddyplugintemplate ${kmuddyplugintemplate_PART_SRCS})
+add_library(kmuddyplugintemplate MODULE ${kmuddyplugintemplate_PART_SRCS})
 
-target_link_libraries(kmuddyplugintemplate  ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KDEUI_LIBS} kmuddycore )
+target_link_libraries(kmuddyplugintemplate  KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
 install(TARGETS kmuddyplugintemplate DESTINATION ${PLUGIN_INSTALL_DIR} )
 

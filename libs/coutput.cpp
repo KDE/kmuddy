@@ -34,11 +34,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
 {
   con = new cConsole (false, parent);
+  setWidget (con);
   con->setSession (sess);
 
   echocolor = Qt::yellow;
   systemcolor = Qt::cyan;
   bgcolor = Qt::black;
+
+  // enable vertical scrollbar, disable the other one
+  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
+  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
 
   // connect cConsole to us ...
   connect (con, SIGNAL (dimensionsChanged (int, int)), this,
@@ -48,6 +53,10 @@ cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
   connect (con, SIGNAL (promptCommand (const QString &)), this,
       SLOT (promptCommand (const QString &)));
 
+  //and connect() slider so that aconsole is shown/hidden as needed
+  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), con, SLOT (sliderChanged (int)));
+  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), con, SLOT (sliderChanged (int)));
+    
   // react on events
   addEventHandler ("display-line", 20, PT_TEXTCHUNK);
   addEventHandler ("display-prompt", 20, PT_TEXTCHUNK);
@@ -84,6 +93,10 @@ void cOutput::eventNothingHandler (QString event, int session)
     con->setWrapPos (gs->getInt ("wrap-pos"));
     con->setIndentation (gs->getInt ("indent"));
     con->setRepaintCount (gs->getInt ("force-redraw"));
+
+    //changing font often causes view to move - move to the very bottom
+    verticalScrollBar()->setValue (verticalScrollBar()->maximum());
+
     con->tryUpdateHistorySize ();
   }
 }

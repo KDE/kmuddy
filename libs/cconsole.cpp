@@ -28,7 +28,6 @@
 #include <QClipboard>
 #include <QEvent>
 #include <QFontMetrics>
-#include <QLayout>
 #include <QMouseEvent>
 #include <QPainter>
 #include <QPixmap>
@@ -109,7 +108,7 @@ inline void swap (int &a, int &b)
 }
 
 cConsole::cConsole (bool auxiliary, QWidget *parent, const char *name) :
-      Q3GridView (parent, name)
+      QTableView (parent, name)
 {
 //  setAttribute (Qt::WA_StaticContents);
 //  setAttribute (Qt::WA_NoBackground);
@@ -133,7 +132,7 @@ cConsole::cConsole (bool auxiliary, QWidget *parent, const char *name) :
     //connections
   else
     historySize = 100;        //aux. console does not need that big history
-  Q3GridView::setNumCols (1);
+  QTableView::setNumCols (1);
 
   wordWrapping = true;
   indentValue = 0;
@@ -191,13 +190,6 @@ cConsole::cConsole (bool auxiliary, QWidget *parent, const char *name) :
   addAction (sep2);
   if (fullscreenmode) addAction (fullscreenmode);
 
-  //enable vertical scrollbar, disable the other one
-  setHScrollBarMode (AlwaysOff);
-  if (!aux)
-    setVScrollBarMode (AlwaysOn);
-  else
-    setVScrollBarMode (AlwaysOff);
-
   //create our auxiliary console if needed
   if (!aux)
   {
@@ -205,10 +197,6 @@ cConsole::cConsole (bool auxiliary, QWidget *parent, const char *name) :
     aconsole->hide ();
     aconvisible = false;
     aconsize = 25;  //aconsole covers 25% by default
-    
-    //and connect() slider so that aconsole is shown/hidden as needed
-    connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
-    connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
     //connect some auxiliary console's signals to ours, so that links work correctly
     connect (aconsole, SIGNAL (sendCommand (const QString &)), this,
@@ -281,10 +269,6 @@ void cConsole::setFont (QFont f)
   repaintContents (false);
   if (!aux)
     aconsole->setFont (f);
-
-  //changing font often causes view to move - move to the very bottom
-  if (!aux)
-    verticalScrollBar()->setValue (verticalScrollBar()->maximum());
 }
 
 void cConsole::setDefaultBkColor (QColor color)
@@ -648,7 +632,7 @@ void cConsole::paintCell (QPainter *p, int row, int)
   
   if (row < usedrows)     //only the first "usedrows" rows contain data
   {
-    int cw = Q3GridView::cellWidth ();
+    int cw = QTableView::cellWidth ();
     int ch = cellHeight ();
 
     QPixmap *pix = 0, *pix2 = 0;
@@ -790,7 +774,7 @@ void cConsole::fixupOutput ()
   QSize wsize = viewportSize (width(), height());
   int newcols = wsize.width() / charWidth;
   int spaceforrows = wsize.height() / cellHeight ();
-  Q3GridView::setCellWidth (newcols * charWidth);
+  QTableView::setCellWidth (newcols * charWidth);
 
   //columns are handled first... no manipulation needed anymore, as the paint routines are
   //more intelligent now :D
@@ -836,7 +820,7 @@ void cConsole::fixupOutput ()
 void cConsole::resizeEvent (QResizeEvent *e)
 {
   //let the parent process it first
-  Q3GridView::resizeEvent (e);
+  QTableView::resizeEvent (e);
 
   //fixup output window to reflect changes
   fixupOutput ();
@@ -852,7 +836,7 @@ void cConsole::updateRowRange (int r1, int r2)
     updateCell (i, 0);
 }
 
-void cConsole::contentsMousePressEvent (QMouseEvent *e)
+void cConsole::mousePressEvent (QMouseEvent *e)
 {
   if (e->button() == Qt::LeftButton)
   {
@@ -907,7 +891,7 @@ void cConsole::contentsMousePressEvent (QMouseEvent *e)
     }
 }
 
-void cConsole::contentsMouseReleaseEvent (QMouseEvent *e)
+void cConsole::mouseReleaseEvent (QMouseEvent *e)
 {
   if (e->button() == Qt::LeftButton)
   {
@@ -937,7 +921,7 @@ void cConsole::contentsMouseReleaseEvent (QMouseEvent *e)
   */
 }
 
-void cConsole::contentsMouseMoveEvent (QMouseEvent *e)
+void cConsole::mouseMoveEvent (QMouseEvent *e)
 {
   //changing cursor over links...
   int inrow = rowAt (e->y());
@@ -983,7 +967,7 @@ void cConsole::contentsMouseMoveEvent (QMouseEvent *e)
   }
 }
 
-void cConsole::contentsMouseDoubleClickEvent (QMouseEvent *e)
+void cConsole::mouseDoubleClickEvent (QMouseEvent *e)
 {
   if (e->button() == Qt::LeftButton)
   {
@@ -1126,7 +1110,7 @@ void cConsole::wheelEvent (QWheelEvent *e)
   exactly what we want.
   */
   if (!aux)
-    Q3GridView::wheelEvent (e);
+    QTableView::wheelEvent (e);
   else
     e->ignore ();
 }

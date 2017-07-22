@@ -40,9 +40,9 @@ public:
   ~cAliasList ();
 
   static cList *newList () { return new cAliasList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Alias"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Alias"; }
+  virtual cListEditor *editor (QWidget *parent) override;
 
   bool matchString (const QString &string);
   QStringList commandsToExec ();

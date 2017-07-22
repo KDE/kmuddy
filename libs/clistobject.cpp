@@ -26,8 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clist.h"
 #include "clistmanager.h"
 
-#include <QRegExp>
-#include <QStringList>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 

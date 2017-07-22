@@ -23,7 +23,7 @@
 #ifndef CCONSOLE_H
 #define CCONSOLE_H
 
-#include <q3gridview.h>
+#include <QTableView>
 #include <qclipboard.h>
 #include <qdatetime.h>
 
@@ -84,11 +84,11 @@ while scrolling the main console...
   *@author Tomas Mecir
   */
 
-class KMUDDY_EXPORT cConsole : public Q3GridView {
+class KMUDDY_EXPORT cConsole : public QTableView {
    Q_OBJECT
 public: 
   /** auxiliary console is used to display last few lines when scrolling... */
-  cConsole(bool auxiliary=false, QWidget *parent=0, const char *name=0);
+  cConsole(bool auxiliary=false, QWidget *parent=0);
   ~cConsole();
   void setSession (int s);
 
@@ -179,13 +179,13 @@ protected:
   void updateRowRange (int r1, int r2);
  
   /** mouse press event */
-  void contentsMousePressEvent (QMouseEvent *e);
+  void mousePressEvent (QMouseEvent *e);
   /** mouse release event */
-  void contentsMouseReleaseEvent (QMouseEvent *e);
+  void mouseReleaseEvent (QMouseEvent *e);
   /** mouse move event */
-  void contentsMouseMoveEvent (QMouseEvent *e);
+  void mouseMoveEvent (QMouseEvent *e);
   /** mouse double-click event */
-  void contentsMouseDoubleClickEvent (QMouseEvent *e);
+  void mouseDoubleClickEvent (QMouseEvent *e);
   /** mouse triple-click event */
   void mouseTripleClickEvent (QMouseEvent *e);
   /** disables scrolling aux.console using mouse wheel */

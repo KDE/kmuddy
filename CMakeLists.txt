@@ -1,21 +1,21 @@
 project(kmuddy)
 
-cmake_minimum_required(VERSION 2.8)
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} )
+cmake_minimum_required(VERSION 2.8.12)
 
-find_package(ECM REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
-
-find_package(Qt5 REQUIRED COMPONENTS Widgets)
-find_package(KF5 CONFIG REQUIRED KCoreAddons I18n KIOCore Phonon)
+find_package(ECM 0.0.10 REQUIRED CONFIG)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE))
+include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(FeatureSummary)
 include(KDEFrameworkCompilerSettings)
+include(ECMInstallIcons)
 
-macro_optional_find_package(MXP)
+find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Script)
+find_package(KF5 REQUIRED COMPONENTS Config CoreAddons I18n KIO KDELibs4Support XmlGui Parts Service)
+
+find_package(MXP)
 if (MXP_FOUND)
   message(STATUS "Found the MXP library at " ${MXP_LIBRARIES})
   set(HAVE_MXP TRUE)
@@ -39,7 +39,6 @@ add_subdirectory( kmuddy )
 add_subdirectory( plugins )
 add_subdirectory( scripting )
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
 
 
 ########### install files ###############

@@ -60,9 +60,7 @@
 #include <ctime>
 
 #include <qdesktopwidget.h>
-#include <QDockWidget>
 #include <qtimer.h>
-#include <QVBoxLayout>
 #include <QKeyEvent>
 
 #include <kaboutapplicationdialog.h>

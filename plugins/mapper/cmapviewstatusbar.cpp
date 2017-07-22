@@ -20,7 +20,6 @@
 #include <QLabel>
 #include <QComboBox>
 #include <QPushButton>
-#include <QHBoxLayout>
 
 #include <klocale.h>
 

@@ -1,7 +1,7 @@
 
 add_subdirectory( dialogs )
 
-include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDES} ${KDE4_PHONON_INCLUDES} ${QT_INCLUDES} )
+include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR} )
 if (MXP_FOUND)
   include_directories (${MXP_INCLUDE_DIR})
 endif (MXP_FOUND)
@@ -50,8 +50,7 @@ set(kmuddy_SRCS
 
 add_executable(kmuddy ${kmuddy_SRCS})
 
-set (KMUDDY_LIBRARIES kmuddycore dialogs ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KUTILS_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS} ${KDE4_KDE3SUPPORT_LIBS} z )
-
+set (KMUDDY_LIBRARIES kmuddycore dialogs KF5::KDELibs4Support KF5::I18n KF5::Parts z )
 if (MXP_FOUND)
   set (KMUDDY_LIBRARIES ${KMUDDY_LIBRARIES} ${MXP_LIBRARIES})
 endif (MXP_FOUND)
@@ -61,7 +60,18 @@ target_link_libraries(kmuddy ${KMUDDY_LIBRARIES} )
 install(TARGETS kmuddy DESTINATION ${BIN_INSTALL_DIR})
 
 # install the icons
-ecm_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons(ICONS
+    16-apps-kmuddy.png
+    32-apps-kmuddy.png
+    DESTINATION ${ICON_INSTALL_DIR}
+    THEME hicolor
+)
+ecm_install_icons(ICONS
+    16-apps-kmuddy.png
+    32-apps-kmuddy.png
+    DESTINATION ${ICON_INSTALL_DIR}
+    THEME locolor
+)
 
 install (FILES kmuddy.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 

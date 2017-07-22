@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
+include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR}    )
 
 
 ########### next target ###############
@@ -9,9 +9,9 @@ set(kmuddyvarviewerplugin_PART_SRCS
   dlgvarviewer.cpp
 )
 
-kde4_add_plugin(kmuddyvarviewerplugin ${kmuddyvarviewerplugin_PART_SRCS})
+add_library(kmuddyvarviewerplugin MODULE ${kmuddyvarviewerplugin_PART_SRCS})
 
-target_link_libraries(kmuddyvarviewerplugin  ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KDEUI_LIBS} kmuddycore )
+target_link_libraries(kmuddyvarviewerplugin  KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
 install(TARGETS kmuddyvarviewerplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
 

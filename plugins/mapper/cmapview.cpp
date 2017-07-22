@@ -18,8 +18,6 @@
 
 #include "cmapview.h"
 
-#include <QLabel>
-#include <QVBoxLayout>
 #include <QPushButton>
 #include <QScrollArea>
 #include <QActionGroup>

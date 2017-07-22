@@ -19,7 +19,6 @@
 #define CMAPWIDGET_H
 
 #include <QWidget>
-#include <QToolTip>
 #include <QMenu>
 
 #include <kaction.h>

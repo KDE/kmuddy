@@ -1,5 +1,5 @@
 
-include_directories( ${KDE4_INCLUDES} ${KDE4_PHONON_INCLUDES} ${QT_INCLUDES}
+include_directories( 
    ${CMAKE_CURRENT_SOURCE_DIR}
    ${CMAKE_CURRENT_BINARY_DIR} )
 
@@ -53,10 +53,10 @@ set(kmuddycore_LIB_SRCS
    cscripteval.cpp
    cscripteditor.cpp )
 
-kde4_add_library(kmuddycore SHARED ${kmuddycore_LIB_SRCS})
+add_library(kmuddycore SHARED ${kmuddycore_LIB_SRCS})
 
 # TODO: get rid of the support libs
-target_link_libraries(kmuddycore  ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KUTILS_LIBS} ${KDE4_PHONON_LIBS} ${QT_QTSCRIPT_LIBRARY} ${KDE4_KDE3SUPPORT_LIBS})
+target_link_libraries(kmuddycore KF5::Service  KF5::KDELibs4Support Qt5::Script)
 
 set_target_properties(kmuddycore PROPERTIES VERSION 1.0.0 SOVERSION 1 )
 install(TARGETS kmuddycore DESTINATION ${LIB_INSTALL_DIR} )

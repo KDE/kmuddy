@@ -191,6 +191,6 @@ protected:
   Private *d;
 };
 // Qt metatype, needed so the model can return these in data()
-Q_DECLARE_METATYPE(cListObject *);
+Q_DECLARE_METATYPE(cListObject *)
 
 #endif

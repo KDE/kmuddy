@@ -27,8 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kdebug.h>
 #include <kdialog.h>
-#include <QFrame>
-#include <QVBoxLayout>
 #include <kplugininfo.h>
 #include <kpluginselector.h>
 #include <ktrader.h>

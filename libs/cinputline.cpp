@@ -25,9 +25,7 @@
 
 #include <QApplication>
 #include <QClipboard>
-#include <QCursor>
 #include <QKeyEvent>
-#include <QTextCursor>
 #include <kglobalsettings.h>
 
 class cCompletion : public KCompletion {

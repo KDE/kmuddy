@@ -18,7 +18,6 @@
 
 #include "cstatus.h"
 
-#include <QDateTime>
 #include <QTextStream>
 #include <klocale.h>
 

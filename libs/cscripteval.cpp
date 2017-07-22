@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QScriptContext>
 #include <QScriptEngine>
 #include <QScriptSyntaxCheckResult>
-#include <QStringList>
 
 class TooLongEvent : public QEvent { public: TooLongEvent() : QEvent(QEvent::User) {}; };
 

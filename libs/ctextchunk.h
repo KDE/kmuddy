@@ -189,7 +189,7 @@ protected:
 #define CHUNK_TEXT 1
 class KMUDDY_EXPORT chunkText : public chunkItem {
  public:
-  virtual int type() { return CHUNK_TEXT; };
+  virtual int type() override { return CHUNK_TEXT; };
   
   const QString &text() { return _text; }
   void setText (const QString &t) { _text = t; }

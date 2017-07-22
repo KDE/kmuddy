@@ -19,7 +19,6 @@
 #ifndef CTELNET_H
 #define CTELNET_H
 
-#include <QTimer>
 
 #include <list>
 #include <string>

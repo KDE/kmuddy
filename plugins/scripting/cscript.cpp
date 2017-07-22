@@ -23,7 +23,6 @@
 #include "cscriptlist.h"
 
 #include <klocale.h>
-#include <QDir>
 #include <QProcess>
 
 cScript::cScript (cList *list) : cListObject (list)

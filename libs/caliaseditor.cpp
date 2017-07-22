@@ -41,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocale.h>
 #include <ktextedit.h>
 
+#include <KServiceTypeTrader>
 #include <kregexpeditorinterface.h>
-#include <kparts/componentfactory.h>
 
 struct cAliasEditor::Private {
   // Basic

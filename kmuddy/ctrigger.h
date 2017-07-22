@@ -47,13 +47,13 @@ protected:
   cTrigger (cList *list);
 
   /** React on an attribute change by updating the pattern object. */
-  virtual void attribChanged (const QString &name);
+  virtual void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  virtual void updateVisibleName() override;
 
 #define TRIGGER_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType);
+  virtual cList::TraverseAction traverse (int traversalType) override;
 
   /** Perform trigger matching. */
   cList::TraverseAction doMatch ();

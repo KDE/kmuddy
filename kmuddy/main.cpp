@@ -16,10 +16,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <kcmdlineargs.h>
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <klocale.h>
-#include <kapplication.h>
+#include <QApplication>
 #include <Kdelibs4ConfigMigrator>
 
 #include <signal.h>
@@ -70,9 +69,7 @@ int main(int argc, char *argv[])
       ki18n("Scripting improvements"), "koehnheiko@googlemail.com");
   aboutData.addCredit(ki18n("Robert Marmorstein"),
       ki18n("Systray icon support"), "robertandbeth@gmail.com");
-  KCmdLineArgs::init( argc, argv, &aboutData );
-  KCmdLineOptions options;   // no options at the moment
-  KCmdLineArgs::addCmdLineOptions( options );
+  KAboutData::setApplicationData (aboutData);
 
   //alarm signal is sometimes causing KMuddy to terminate incorrectly
   //when switching tabs using Alt+number - ignoring the signal, hoping
@@ -87,10 +84,9 @@ int main(int argc, char *argv[])
   migrator.setUiFiles(QStringList() << QStringLiteral("kmuddymapperpart.rc"));
   migrator.migrate();
 
-  KApplication a;
-  a.setApplicationName ("KMuddy");
+  KApplication a (argc, argv );
+  QApplication::setApplicationDisplayName(i18n("KMuddy"));
   KMuddy *kmuddy = 0;
-
 
 /*
   if (a.isSessionRestored ())  //session management

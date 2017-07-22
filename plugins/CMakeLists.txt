@@ -7,7 +7,6 @@ add_subdirectory( mapper )
 add_subdirectory( converter )
 # add_subdirectory( test )
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
 
 
 ########### install files ###############

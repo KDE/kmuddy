@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COUTPUT_H
 
 #include <qcolor.h>
-#include <qobject.h>
+#include <QScrollArea>
 
 #include <cactionbase.h>
 #include <kmuddy_export.h>
@@ -33,11 +33,12 @@ class cConsole;
 
 /**
 This class serves as a wrapper for the main cConsole widget. It translates its signal-slot mechanism to the cAction-based approach. This is necessary, because cConsole is used in other places as well.
+It also handles scrollbars.
 
 @author Tomas Mecir
 */
 
-class KMUDDY_EXPORT cOutput : public QObject, public cActionBase
+class KMUDDY_EXPORT cOutput : public QScrollArea, public cActionBase
 {
 Q_OBJECT
 public:

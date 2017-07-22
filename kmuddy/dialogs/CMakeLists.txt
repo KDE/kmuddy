@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_SOURCE_DIR}/kmuddy ${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDES} ${QT_INCLUDES} )
+include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_SOURCE_DIR}/kmuddy ${CMAKE_CURRENT_BINARY_DIR}   )
 
 if (MXP_FOUND)
   include_directories (${MXP_INCLUDE_DIR})
@@ -27,7 +27,7 @@ set(dialogs_LIB_SRCS
     dlgobjects.cpp
     dlgmudlist.cpp )
 
-kde4_add_library(dialogs STATIC ${dialogs_LIB_SRCS})
+add_library(dialogs STATIC ${dialogs_LIB_SRCS})
 
 target_link_libraries(dialogs )
 

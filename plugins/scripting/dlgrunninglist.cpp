@@ -20,7 +20,6 @@
 #include "crunninglist.h"
 
 #include <QLabel>
-#include <QMenu>
 #include <QTreeView>
 #include <QVBoxLayout>
 

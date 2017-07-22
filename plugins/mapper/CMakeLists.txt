@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/libs ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
+include_directories( ${CMAKE_SOURCE_DIR}/libs   ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
 
 ########### next target ###############
@@ -57,7 +57,7 @@ set(kmuddymapper_PART_SRCS
    plugins/standard/propertyPanes/cmapnotespane.cpp
    )
 
-kde4_add_ui_files (kmuddymapper_PART_SRCS
+ki18n_wrap_ui (kmuddymapper_PART_SRCS
    dialogs/dlgmapcolorbase.ui
    dialogs/dlgmapmovementbase.ui
    dialogs/dlgmapspeedwalkbase.ui
@@ -68,9 +68,9 @@ kde4_add_ui_files (kmuddymapper_PART_SRCS
    dialogs/dlgmapdirectionsbase.ui
    )
 
-kde4_add_plugin(kmuddymapper ${kmuddymapper_PART_SRCS})
+add_library(kmuddymapper MODULE ${kmuddymapper_PART_SRCS})
 
-target_link_libraries(kmuddymapper  ${KDE4_KDECORE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KDE3SUPPORT_LIBS} kmuddycore )
+target_link_libraries(kmuddymapper  KF5::KDELibs4Support KF5::Parts kmuddycore )
 
 install(TARGETS kmuddymapper DESTINATION ${PLUGIN_INSTALL_DIR} )
 

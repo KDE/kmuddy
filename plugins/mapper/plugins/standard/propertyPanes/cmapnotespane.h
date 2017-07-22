@@ -20,7 +20,6 @@
 
 #include <QString>
 #include <QIcon>
-#include <QLayout>
 #include <QLabel>
 #include <QTextEdit>
 
