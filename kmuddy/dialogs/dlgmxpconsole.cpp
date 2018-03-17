@@ -60,7 +60,7 @@ void dlgMXPConsole::addLine (const QString &line)
   sb->setValue (sb->maximum ());
 }
 
-QSize dlgObjects::sizeHint() const
+QSize dlgMXPConsole::sizeHint() const
 {
   return QSize (300, 200);
 }

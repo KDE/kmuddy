@@ -28,7 +28,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocale.h>
 #include <kpushbutton.h>
 
-#include <qlabel.h>
+#include <QDialogButtonBox>
+#include <QLabel>
 #include <QGridLayout>
 #include <QListWidget>
 #include <QVBoxLayout>
@@ -50,23 +51,16 @@ void dlgWindows::createDialog()
 {
   //initial dialog size
   setWindowTitle (i18n("Output Windows"));
-  setButtons (KDialog::Ok);
   
   //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QGridLayout *layout = new QGridLayout (page);
-
-  setMainWidget (page);
-
-  //change button text
-  setButtonText (KDialog::Ok, i18n ("Done"));
+  QGridLayout *layout = new QGridLayout (this);
 
   //create widgets
-  QLabel *label = new QLabel (i18n ("&List of output windows"), page);
-  box = new QListWidget (page);
+  QLabel *label = new QLabel (i18n ("&List of output windows"), this);
+  box = new QListWidget (this);
   label->setBuddy (box);
   
-  QFrame *buttons = new QFrame (page);
+  QFrame *buttons = new QFrame (this);
   QVBoxLayout *buttonslayout = new QVBoxLayout (buttons);
   
   btshow = new KPushButton (i18n("&Show"), buttons);
@@ -79,6 +73,12 @@ void dlgWindows::createDialog()
   buttonslayout->addWidget (bthide);
   buttonslayout->addWidget (btdelete);
   buttonslayout->addStretch (10);
+
+  QDialogButtonBox *dlgbuttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  QPushButton *button = dlgbuttons->button (QDialogButtonBox::Ok);
+  button->setText (i18n ("&Dont"));
+  connect (dlgbuttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (dlgbuttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
   layout->setColumnStretch (0, 10);
   layout->setRowStretch (1, 10);

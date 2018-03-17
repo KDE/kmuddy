@@ -42,15 +42,11 @@ dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent)
   setFocusPolicy (Qt::StrongFocus);
 
   owindow = new cConsole(this);
-  //our window shall also have a status bar
-  owindow->setVScrollBarMode (Q3ScrollView::AlwaysOn);
 
   //no session information yet, will set it when it's available
   sess = 0;
   owindow->setSession (0);
 
-  KDialog::resizeLayout (this, 0, 5);
-  
   KWindowSystem::setType(this->winId(), NET::Utility);
 
   layout->setMargin (0);
