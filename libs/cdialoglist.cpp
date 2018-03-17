@@ -39,13 +39,13 @@ cDialogList *cDialogList::self ()
   return _self;
 }
 
-KDialog *cDialogList::getDialog (const QString &name) {
+QDialog *cDialogList::getDialog (const QString &name) {
   if (dialogs.count (name))
     return dialogs[name];
   return 0;
 }
 
-void cDialogList::addDialog (const QString &name, KDialog *dlg) {
+void cDialogList::addDialog (const QString &name, QDialog *dlg) {
   dialogs[name] = dlg;
 }
 

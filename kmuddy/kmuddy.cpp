@@ -1106,9 +1106,7 @@ void KMuddy::showAndHandleConnectDialog ()
 {
   //so first we have to create the dialog...
   cdlg = new dlgConnect (this);
-
-  //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (cdlg, SIGNAL (okClicked()), this, SLOT (doConnect()));
+  connect (cdlg, SIGNAL (accepted()), this, SLOT (doConnect()));
 
   //dialog is ready - show it!
   cdlg->exec ();
@@ -1123,9 +1121,7 @@ void KMuddy::showAndHandleQuickConnectDialog ()
 {
   //so first we have to create the dialog...
   if (!qdlg) qdlg = new dlgQuickConnect (this);
-
-  //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (qdlg, SIGNAL (okClicked()), this, SLOT (doQuickConnect()));
+  connect (qdlg, SIGNAL (accepted()), this, SLOT (doQuickConnect()));
 
   //dialog is ready - show it!
   qdlg->exec ();

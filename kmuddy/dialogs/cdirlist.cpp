@@ -17,12 +17,13 @@
 
 #include "cdirlist.h"
 
+#include <QFileDialog>
 #include <QGridLayout>
+#include <QIcon>
 #include <QListWidget>
-#include <kpushbutton.h>
+#include <QPushButton>
 
 #include <kapplication.h>
-#include <kfiledialog.h>
 #include <klocale.h>
 
 cDirList::cDirList (QWidget *parent) : QWidget(parent)
@@ -32,10 +33,10 @@ cDirList::cDirList (QWidget *parent) : QWidget(parent)
 
   //create all widgets
   listbox = new QListWidget (this);
-  btadd = new KPushButton (i18n ("&Add..."), this);
-  btdel = new KPushButton (i18n ("Delete"), this);
-  btup = new KPushButton (KIcon ("go-up"), i18n ("Move &up"), this);
-  btdown = new KPushButton (KIcon ("go-down"), i18n ("Move &down"), this);
+  btadd = new QPushButton (i18n ("&Add..."), this);
+  btdel = new QPushButton (i18n ("Delete"), this);
+  btup = new QPushButton (QIcon::fromTheme ("go-up"), i18n ("Move &up"), this);
+  btdown = new QPushButton (QIcon::fromTheme ("go-down"), i18n ("Move &down"), this);
 
   //add widgets to layout
   layout->setSpacing (10);
@@ -69,12 +70,11 @@ void cDirList::setDirList (const QStringList &dlist)
 
 void cDirList::addEntry ()
 {
-  QString dirName = KFileDialog::getExistingDirectory (QString(), this, i18n ("Choose sound directory"));
-  if (dirName != QString())
-  {
-    dirlist.append (dirName);
-    update();
-  }
+  QString dirName = QFileDialog::getExistingDirectory (this, i18n ("Choose sound directory"));
+  if (dirName.isEmpty()) return;
+
+  dirlist.append (dirName);
+  update();
 }
 
 void cDirList::removeEntry ()

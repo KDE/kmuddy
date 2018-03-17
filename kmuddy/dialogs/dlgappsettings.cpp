@@ -31,18 +31,18 @@
 #include <QGroupBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QIcon>
 #include <QLabel>
+#include <QPushButton>
 
 #include <kapplication.h>
 #include <kcolorbutton.h>
 #include <kconfig.h>
 #include <kfontdialog.h>
-#include <kiconloader.h>
 #include <kshortcutsdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
 #include <knuminput.h>
-#include <kpushbutton.h>
 #include <kstandarddirs.h>
 
 dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
@@ -65,28 +65,28 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   KPageWidgetItem *item;
   QFrame *frmwindow = new QFrame (this);
   item = addPage (frmwindow, i18n ("Window"));
-  item->setIcon (KIcon ("window-new"));
+  item->setIcon (QIcon::fromTheme ("window-new"));
   QFrame *frmoutputarea = new QFrame (this);
   item = addPage (frmoutputarea, i18n ("Output area"));
-  item->setIcon (KIcon ("format-justify-left"));
+  item->setIcon (QIcon::fromTheme ("format-justify-left"));
   QFrame *frmfont = new QFrame (this);
   item = addPage (frmfont, i18n ("Font"));
-  item->setIcon (KIcon ("preferences-desktop-font"));
+  item->setIcon (QIcon::fromTheme ("preferences-desktop-font"));
   QFrame *frminput = new QFrame (this);
   item = addPage (frminput, i18n ("Input line"));
-  item->setIcon (KIcon ("edit-clear"));
+  item->setIcon (QIcon::fromTheme ("edit-clear"));
   QFrame *frmcolors = new QFrame (this);
   item = addPage (frmcolors, i18n ("Colors"));
-  item->setIcon (KIcon ("color-picker"));
+  item->setIcon (QIcon::fromTheme ("color-picker"));
   QFrame *frmchars = new QFrame (this);
   item = addPage (frmchars, i18n ("Strings"));
-  item->setIcon (KIcon ("format-indent-less"));
+  item->setIcon (QIcon::fromTheme ("format-indent-less"));
   QFrame *frmsound = new QFrame (this);
   item = addPage (frmsound, i18n ("Sounds"));
-  item->setIcon (KIcon ("media-playback-start"));
+  item->setIcon (QIcon::fromTheme ("media-playback-start"));
   QFrame *frmshortcuts = new QFrame (this);
   item = addPage (frmshortcuts, i18n ("Shortcuts"));
-  item->setIcon (KIcon ("configure-shortcuts"));
+  item->setIcon (QIcon::fromTheme ("configure-shortcuts"));
 
   //page 1
   QGridLayout *winlayout = new QGridLayout (frmwindow);
@@ -288,7 +288,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   QLabel *fl1 = new QLabel (i18n ("&Server output"), frmfont);
   fonted1 = new QLabel (frmfont);
   fonted1->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
-  KPushButton *bfont1 = new KPushButton (i18n ("Choose..."), frmfont);
+  QPushButton *bfont1 = new QPushButton (i18n ("Choose..."), frmfont);
   fl1->setBuddy (bfont1);
   connect (bfont1, SIGNAL (clicked()), this, SLOT (fontchooser1 ()));
   QString serveroutput = i18n ("Here you can select a font that will be used for main display.");
@@ -298,7 +298,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   QLabel *fl2 = new QLabel (i18n ("&Input line"), frmfont);
   fonted2 = new QLabel (frmfont);
   fonted2->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
-  KPushButton *bfont2 = new KPushButton (i18n ("Choose..."), frmfont);
+  QPushButton *bfont2 = new QPushButton (i18n ("Choose..."), frmfont);
   fl2->setBuddy (bfont2);
   connect (bfont2, SIGNAL (clicked()), this, SLOT (fontchooser2 ()));
   QString inputline = i18n ("Here you can select a font that will be used for the input line.");
@@ -308,7 +308,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   QLabel *fl3 = new QLabel (i18n ("&Multi-line input"), frmfont);
   fonted3 = new QLabel (frmfont);
   fonted3->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
-  KPushButton *bfont3 = new KPushButton (i18n ("Choose..."), frmfont);
+  QPushButton *bfont3 = new QPushButton (i18n ("Choose..."), frmfont);
   fl3->setBuddy (bfont3);
   connect (bfont3, SIGNAL (clicked()), this, SLOT (fontchooser3 ()));
   QString minputline = i18n ("Here you can select a font that will be used for the multi-line input window.");
@@ -551,8 +551,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   cActionManager::self()->invokeEvent ("dialog-create", 0, "app-prefs");
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (this, SIGNAL (okClicked()), this, SLOT (getSettingsFromDialog()));
-  connect (this, SIGNAL (applyClicked()), this, SLOT (getSettingsFromDialog()));
+  connect (this, SIGNAL (accepted()), this, SLOT (getSettingsFromDialog()));
+  connect (button (QDialogButtonBox::Apply), SIGNAL (clicked()), this, SLOT (getSettingsFromDialog()));
 }
 
 dlgAppSettings::~dlgAppSettings()
@@ -561,7 +561,7 @@ dlgAppSettings::~dlgAppSettings()
   cDialogList::self()->removeDialog ("app-prefs");
 }
 
-QSize dlgConnect::sizeHint() const
+QSize dlgAppSettings::sizeHint() const
 {
   return QSize (600, 400);
 }

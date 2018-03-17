@@ -74,7 +74,7 @@ dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
       "profiles."));
   chkOffline->setChecked(false);
 
-  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
   QPushButton *button = buttons->button (QDialogButtonBox::Ok);
   button->setText (i18n ("&Connect"));
   button->setToolTip (i18n ("Establishes connection with specified parameters."));
@@ -136,13 +136,14 @@ bool dlgConnect::isOffLine()
 void dlgConnect::selectionChanged (const QItemSelection &index)
 {
   //enable/disable Connect button
-  enableButtonOk (index.indexes().empty() ? false : true);
+  QPushButton *button = buttons->button (QDialogButtonBox::Ok);
+  button->setEnabled (index.indexes().empty() ? false : true);
 }
 
 void dlgConnect::doubleClicked (const QModelIndex &index)
 {
   if (index.isValid ())
-    slotButtonClicked (KDialog::Ok);
+    accept();
 }
 
 void dlgConnect::addPressed ()
@@ -151,7 +152,7 @@ void dlgConnect::addPressed ()
   mdlg = new dlgEditProfile (this);
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (mdlg, SIGNAL (okClicked ()), this, SLOT (doAdd ()));
+  connect (mdlg, SIGNAL (accepted()), this, SLOT (doAdd ()));
 
   //fill in default login sequence
   QStringList ls;
@@ -175,7 +176,7 @@ void dlgConnect::modifyPressed ()
   mdlg = new dlgEditProfile (this);
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (mdlg, SIGNAL (okClicked ()), this, SLOT (doModify ()));
+  connect (mdlg, SIGNAL (accepted()), this, SLOT (doModify ()));
 
   mdlg->setName (mgr->visibleProfileName (profile));
   mdlg->setServer (sett->getString ("server"));

@@ -36,7 +36,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
   //initial dialog size
   setWindowTitle (i18n ("Session Transcript"));
   setFaceType( KPageDialog::Tabbed );
-  setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
+  setStandardButtons (QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Apply);
 
   //create main dialog's widget
   QFrame *page = new QFrame (this);

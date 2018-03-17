@@ -24,6 +24,7 @@
 #include "cmudlist.h"
 #include "dlgmudlist.h"
 
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
 #include <QPushButton>
@@ -38,7 +39,6 @@
 dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
 {
   setWindowTitle (i18n ("Edit profile"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
   QGridLayout *layout = new QGridLayout (this);
@@ -59,6 +59,7 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   ed3 = new KRestrictedLine (this);
   ed3->setValidChars ("0123456789");
   ed3->setWhatsThis( i18n ("Enter port on which your MUD running (usually some 4-digit number)."));
+  ed3->setFixedWidth (80);
   QLabel *l4 = new QLabel (i18n ("&Login name:"), this);
   ed4 = new KLineEdit (this);
   ed4->setWhatsThis( i18n ("Enter your login name on the MUD here.<p><i>This setting is optional.</i>"));
@@ -77,7 +78,9 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
       "No aliases, no macros, no speed-walk. Also note that empty lines "
       "will also be sent, including the very last line."));
   
-  ed3->setFixedWidth (80);
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
   l1->setBuddy (ed1);
   l2->setBuddy (ed2);
@@ -100,6 +103,7 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   layout->addWidget (ed4, 4, 1);
   layout->addWidget (ed5, 5, 1);
   layout->addWidget (connstr, 7, 0, 1, 2);
+  layout->addWidget (buttons, 8, 0, 1, 2);
 
   ed1->setFocus ();
 }
@@ -183,7 +187,7 @@ void dlgEditProfile::openMudList ()
   setPort (e->port);
 }
 
-void dlgEditProfile::slotOk ()
+void dlgEditProfile::accept ()
 {
   QString s = name ().simplified ();
   bool failed = false;
@@ -199,11 +203,9 @@ void dlgEditProfile::slotOk ()
     failed = true;
   }
     
-  //if name is okay, accept() the dialog...
-  if (!failed)
-  {
-    accept ();
-    emit okClicked ();
-  }
+  //if name is okay, accept the dialog...
+  if (failed) return;
+
+  QDialog::accept ();
 }
 

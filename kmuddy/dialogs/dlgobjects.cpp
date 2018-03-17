@@ -125,7 +125,8 @@ dlgObjects::dlgObjects (QWidget *parent)
   connect (d->lists, SIGNAL (currentIndexChanged (int)),
       this, SLOT (listChanged (int)));
   connect (d->viewer, SIGNAL (itemActivated (cListObject *)), this, SLOT (activeObjectChanged (cListObject *)));
-  connect (this, SIGNAL (closeClicked ()), this, SLOT (saveChanges ()));
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (this, &QDialog::accepted, this, SLOT (saveChanges()));
 
   d->currentSession = cActionManager::self()->activeSession ();
 

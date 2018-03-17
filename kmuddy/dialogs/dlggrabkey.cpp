@@ -19,9 +19,11 @@
 
 #include "kmuddy.h"
 
-#include <qlabel.h>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QPushButton>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kvbox.h>
 
 dlgGrabKey::dlgGrabKey (QWidget *parent) : QDialog (parent)
@@ -29,13 +31,17 @@ dlgGrabKey::dlgGrabKey (QWidget *parent) : QDialog (parent)
   KMuddy::self()->setGrabDialog (this);
   
   //initial dialog size
-  setCWindowTitle (i18n ("Keygrabber"));
-  setButtons (KDialog::Cancel);
-  setDefaultButton (KDialog::Cancel);
+  setWindowTitle (i18n ("Keygrabber"));
 
   //create main dialog's widget
   KVBox *vbox = new KVBox (this);
   new QLabel (i18n ("Press the desired shortcut..."), vbox);
+
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Cancel, vbox);
+  QPushButton *button = buttons->button (QDialogButtonBox::Cancel);
+  button->setDefault(true);
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
 
 dlgGrabKey::~dlgGrabKey ()

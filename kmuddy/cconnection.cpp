@@ -318,9 +318,9 @@ void cConnection::showConnPrefsDialog ()
   d->sdlg = new dlgProfileSettings (KMuddy::self());
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (d->sdlg, SIGNAL (okClicked()), this,
+  connect (d->sdlg, SIGNAL (accepted()), this,
       SLOT (getSettingsFromDialog()));
-  connect (d->sdlg, SIGNAL (applyClicked()), this,
+  connect (d->sdlg->button (QDialogButtonBox::Apply), SIGNAL (clicked()), this,
       SLOT (getSettingsFromDialog()));
 
   //next we fill in its data

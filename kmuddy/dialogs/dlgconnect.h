@@ -26,6 +26,7 @@
 class QTreeView;
 class KPushButton;
 class QCheckBox;
+class QDialogButtonBox;
 
 class dlgEditProfile;
 
@@ -49,6 +50,7 @@ protected:
   QCheckBox *chkSendNothing;
   QCheckBox *chkOffline;
   dlgEditProfile *mdlg;
+  QDialogButtonBox *buttons;
 
   void updateProfileFromDialog (const QString &profile);
 protected slots:

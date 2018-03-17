@@ -225,8 +225,8 @@ void cTranscript::configure ()
   tdlg = new dlgTranscript (cActionManager::self()->mainWidget());
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (tdlg, SIGNAL (okClicked()), this, SLOT (applyTranscript ()));
-  connect (tdlg, SIGNAL (applyClicked()), this, SLOT (applyTranscript ()));
+  connect (tdlg, SIGNAL (accepted()), this, SLOT (applyTranscript ()));
+  connect (tdlg->button (QDialogButtonBox::Apply), SIGNAL (clicked()), this, SLOT (applyTranscript ()));
 
   //next we fill in its data
   tdlg->setEnabled (running);
@@ -423,7 +423,7 @@ void cTranscript::dumpBuffer ()
   bdlg->setFileName (fName);
   bdlg->setType (TRANSCRIPT_HTML);
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (bdlg, SIGNAL (okClicked()), this, SLOT (doDumpBuffer ()));
+  connect (bdlg, SIGNAL (accepted()), this, SLOT (doDumpBuffer ()));
 
   //dialog is ready - show it!
   bdlg->exec ();

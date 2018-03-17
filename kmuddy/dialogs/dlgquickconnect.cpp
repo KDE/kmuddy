@@ -21,10 +21,12 @@
 //needed by gcc 3.2
 #define max(a,b) (((a) >= (b)) ? (a) : (b))
 
-#include <qlabel.h>
+#include <QDialogButtonBox>
 #include <QGridLayout>
+#include <QLabel>
+#include <QPushButton>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <klineedit.h>
 #include <krestrictedline.h>
 
@@ -32,19 +34,14 @@ dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
 {
   //initial dialog size
   setWindowTitle (i18n ("Quick Connect"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
 
-  //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QGridLayout *layout = new QGridLayout (page);
-  
-  setMainWidget (page);
+  QGridLayout *layout = new QGridLayout (this);
   
   //put some edit boxes there
-  QLabel *l1 = new QLabel (i18n ("&Host:"), page);
-  ed1 = new KLineEdit (page);
-  QLabel *l2 = new QLabel (i18n ("&Port:"), page);
-  ed2 = new KRestrictedLine (page);
+  QLabel *l1 = new QLabel (i18n ("&Host:"), this);
+  ed1 = new KLineEdit (this);
+  QLabel *l2 = new QLabel (i18n ("&Port:"), this);
+  ed2 = new KRestrictedLine (this);
   ed2->setValidChars ("0123456789");
   int w = max (l1->width(), l2->width());
   l1->setFixedWidth (w);
@@ -55,14 +52,18 @@ dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
   l1->setBuddy (ed1);
   l2->setBuddy (ed2);
   
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  QPushButton *button = buttons->button (QDialogButtonBox::Ok);
+  button->setText (i18n ("&Connect"));
+  button->setToolTip (i18n ("Establishes connection with specified parameters."));
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
   layout->addWidget (l1, 0, 0);
   layout->addWidget (l2, 1, 0);
   layout->addWidget (ed1, 0, 1);
   layout->addWidget (ed2, 1, 1);
-
-  //update button text
-  setButtonText (KDialog::Ok, i18n ("&Connect"));
-  setButtonToolTip (KDialog::Ok, i18n ("Establishes connection with specified parameters."));
+  layout->addWidget (buttons, 2, 0, 1, 2);
 
   //humm, this one seems to be causing some X Error 42 BadMatch...
   //I have no idea why does it happen; however, everything seems

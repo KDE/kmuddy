@@ -21,18 +21,19 @@
 #include "cdirlist.h"
 #include "cdialoglist.h"
 
-#include <qcheckbox.h>
-#include <qcombobox.h>
-#include <qlabel.h>
-#include <qpushbutton.h>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QFileDialog>
+#include <QIcon>
+#include <QLabel>
+#include <QPushButton>
 #include <QGridLayout>
 #include <QVBoxLayout>
+
 #include <kapplication.h>
 #include <kcodecaction.h>
-#include <kfiledialog.h>
-#include <kiconloader.h>
 #include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
 {
@@ -47,20 +48,20 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   KPageWidgetItem *item;
   QFrame *frmconn = new QFrame (this);
   item = addPage (frmconn, i18n ("Connection"));
-  item->setIcon (KIcon ("connection-established"));
+  item->setIcon (QIcon::fromTheme ("connection-established"));
   QFrame *frmcommands = new QFrame (this);
   item = addPage (frmcommands, i18n ("Commands"));
-  item->setIcon (KIcon ("gear"));
+  item->setIcon (QIcon::fromTheme ("gear"));
   QFrame *frmdirs = new QFrame (this);
   item = addPage (frmdirs, i18n ("Folders"));
-  item->setIcon (KIcon ("folder"));
+  item->setIcon (QIcon::fromTheme ("folder"));
   QFrame *frmsound = new QFrame (this);
   item = addPage (frmsound, i18n ("Sound"));
-  item->setIcon (KIcon ("media-playback-start"));
+  item->setIcon (QIcon::fromTheme ("media-playback-start"));
 #ifdef HAVE_MXP
   QFrame *frmmxp = new QFrame (this);
   item = addPage (frmmxp, i18n ("MXP"));
-  item->setIcon (KIcon ("go-jump"));
+  item->setIcon (QIcon::fromTheme ("go-jump"));
 #endif
 
   //page 1
@@ -393,17 +394,17 @@ void dlgProfileSettings::setScriptWorkDir (const QString &s)
 
 void dlgProfileSettings::choosedir1 ()
 {
-  edscriptdir->setText (KFileDialog::getExistingDirectory (edscriptdir->text(), this, i18n ("Choose default script location")));
+  edscriptdir->setText (QFileDialog::getExistingDirectory (this, i18n ("Choose default script location"), edscriptdir->text()));
 }
 
 void dlgProfileSettings::choosedir2 ()
 {
-  edscriptworkdir->setText (KFileDialog::getExistingDirectory (edscriptworkdir->text(), this, i18n ("Choose default script working directory")));
+  edscriptworkdir->setText (QFileDialog::getExistingDirectory (this, i18n ("Choose default script working directory"), edscriptworkdir->text()));
 }
 
 void dlgProfileSettings::choosedir3 ()
 {
-  edtranscriptdir->setText (KFileDialog::getExistingDirectory (edtranscriptdir->text(), this, i18n ("Choose default transcript directory")));
+  edtranscriptdir->setText (QFileDialog::getExistingDirectory (this, i18n ("Choose default transcript directory"), edtranscriptdir->text()));
 }
 
 void dlgProfileSettings::encodingChanged (const QString &enc)

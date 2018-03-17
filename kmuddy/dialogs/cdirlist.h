@@ -19,11 +19,11 @@
 #define CDIRLIST_H
 
 #include <qstringlist.h>
-#include <qwidget.h>
+#include <QWidget>
 #include <kvbox.h>
 
 class QListWidget;
-class KPushButton;
+class QPushButton;
 
 /**
 A widget that allows you to choose a list of directories.
@@ -47,7 +47,7 @@ protected:
   void update ();
   
   QListWidget *listbox;
-  KPushButton *btadd, *btdel, *btup, *btdown;
+  QPushButton *btadd, *btdel, *btup, *btdown;
   QStringList dirlist;
 };
 

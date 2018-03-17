@@ -53,7 +53,7 @@ public:
   void setPassword (QString password);
   void setConnectionString (QStringList conn);  
 protected slots:
-  void slotOk ();
+  void accept() override;
   void openMudList ();
 
 protected:

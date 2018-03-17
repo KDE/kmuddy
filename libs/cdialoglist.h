@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kmuddy_export.h>
 
-class KDialog;
+class QDialog;
 
 using namespace std;
 
@@ -41,13 +41,13 @@ class KMUDDY_EXPORT cDialogList : public cActionBase {
  public:
   static cDialogList *self ();
   ~cDialogList();
-  KDialog *getDialog (const QString &name);
-  void addDialog (const QString &name, KDialog *dlg);
+  QDialog *getDialog (const QString &name);
+  void addDialog (const QString &name, QDialog *dlg);
   void removeDialog (const QString &name);
  private:
   cDialogList();
   static cDialogList *_self;
-  map<QString, KDialog *> dialogs;
+  map<QString, QDialog *> dialogs;
 };
 
 #endif

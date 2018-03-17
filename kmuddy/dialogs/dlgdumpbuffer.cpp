@@ -21,6 +21,7 @@
 
 #include <qcheckbox.h>
 #include <qcombobox.h>
+#include <QDialogButtonBox>
 #include <qlabel.h>
 #include <qpushbutton.h>
 #include <QHBoxLayout>
@@ -34,7 +35,6 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
 {
   //initial dialog size
   setWindowTitle (i18n ("Dump output buffer"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
   QVBoxLayout *layout = new QVBoxLayout (this);
@@ -72,6 +72,10 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
   typelayout->addWidget (lbltype);
   typelayout->addWidget (ttype);
 
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
   //connect the Browse button!
   connect (filebutton, SIGNAL (clicked ()), this, SLOT (browseFiles ()));
 
@@ -84,6 +88,7 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
   layout->addWidget (chkcurpos);
   layout->addWidget (fileframe);
   layout->addWidget (typeframe);
+  layout->addWidget (buttons);
 
   //initial dialog settings...
   chkcurpos->setChecked (false);
