@@ -71,14 +71,19 @@ public:
   void getAllColors (QColor &_echo, QColor &_system);
   void setEnableEcho (bool value);
   void setEnableMessages (bool value);
+
+  /** resizing aconsole (CTRL+keys) */
+  void aconUp ();
+  void aconDown ();
+
 protected slots:
   void dimensionsChanged (int x, int y);
   void sendCommand (const QString &command);
   void promptCommand (const QString &command);
 protected:
-  virtual void eventStringHandler (QString event, int, QString &par1, const QString &);
-  virtual void eventChunkHandler (QString event, int, cTextChunk *chunk);
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventStringHandler (QString event, int, QString &par1, const QString &) override;
+  virtual void eventChunkHandler (QString event, int, cTextChunk *chunk) override;
+  virtual void eventNothingHandler (QString event, int session) override;
 
   /** show commands / messages ? */
   bool cmdecho, messages;
@@ -91,6 +96,12 @@ protected:
   
   /** stored cConsole widget */
   cConsole *con;
+  /** our auxiliary console */
+  cConsole *aconsole;
+  /** is the auxiliary console visible? */
+  bool aconvisible;
+  /** size of auxiliary console (in percents) */
+  int aconsize;
 };
 
 #endif

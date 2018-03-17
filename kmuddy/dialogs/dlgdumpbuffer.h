@@ -19,7 +19,7 @@
 #define DLGDUMPBUFFER_H
 
 #include <qwidget.h>
-#include <kdialog.h>
+#include <QDialog>
 
 class QCheckBox;
 class QComboBox;
@@ -30,11 +30,12 @@ Dump Buffer dialog.
   *@author Tomas Mecir
   */
 
-class dlgDumpBuffer : public KDialog {
+class dlgDumpBuffer : public QDialog {
    Q_OBJECT
 public:
   dlgDumpBuffer (QWidget *parent=0);
   ~dlgDumpBuffer ();
+  virtual QSize sizeHint() const override;
   bool curPos ();
   QString fileName ();
   void setFileName (const QString &fName);

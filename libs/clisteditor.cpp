@@ -26,11 +26,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QLabel>
 #include <QCheckBox>
+#include <QPushButton>
 #include <QVBoxLayout>
-#include <klocale.h>
+
+#include <KLocalizedString>
 #include <kmessagebox.h>
 #include <knuminput.h>
-#include <kpushbutton.h>
 #include <klineedit.h>
 
 struct cListEditor::Private {
@@ -71,8 +72,8 @@ cListEditor::cListEditor (QWidget *parent)
   buttonLayout->setSpacing (20);
   buttonLayout->setAlignment (Qt::AlignCenter);
 
-  KPushButton *saveButton = new KPushButton (i18n ("&Apply changes"), buttonBar);
-  KPushButton *undoButton = new KPushButton (i18n ("&Undo changes"), buttonBar);
+  QPushButton *saveButton = new QPushButton (i18n ("&Apply changes"), buttonBar);
+  QPushButton *undoButton = new QPushButton (i18n ("&Undo changes"), buttonBar);
   connect (saveButton, SIGNAL (clicked()), this, SLOT (saveClicked ()));
   connect (undoButton, SIGNAL (clicked()), this, SLOT (undoClicked ()));
   
@@ -311,5 +312,3 @@ void cListEditor::saveDataToObject ()
   d->saving = false;
 }
 
-
-#include "clisteditor.moc"

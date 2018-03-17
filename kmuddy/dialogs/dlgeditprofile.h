@@ -19,7 +19,7 @@
 #ifndef DLGEDITPROFILE_H
 #define DLGEDITPROFILE_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 class KLineEdit;
 class KTextEdit;
@@ -30,12 +30,13 @@ Dialog used to edit basic profile settings (server, port, ...)
   *@author Tomas Mecir
   */
 
-class dlgEditProfile : public KDialog  {
+class dlgEditProfile : public QDialog {
    Q_OBJECT
 public: 
   dlgEditProfile (QWidget *parent=0);
   ~dlgEditProfile();
 
+  virtual QSize sizeHint() const override;
   /** values in LineEdits */
   QString name ();
   QString server ();

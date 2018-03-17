@@ -23,7 +23,7 @@
 #include "cmacromanager.h"
 #include "cvariablelist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <map>
 
@@ -247,8 +247,8 @@ int cCmdProcessor::isFocusCommand (const QString &command)
 {
   int pos;
   if ((focusstr.length() > 0) && (command.startsWith(focusstr))) {
-    command.trimmed(); //removes leading/trailing spaces
-    if ((pos = command.indexOf(focusstr,focusstr.length())) == -1)
+    QString cmd = command.trimmed(); //removes leading/trailing spaces
+    if ((pos = cmd.indexOf(focusstr, focusstr.length())) == -1)
       return -1; //return false if a second focustr can't be found
     return pos;
   }

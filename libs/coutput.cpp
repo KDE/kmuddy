@@ -27,13 +27,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cprofilesettings.h"
 #include "ctextchunk.h"
 
+#include <QScrollBar>
+
 #include <kapplication.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <krandom.h>
 
 cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
 {
-  con = new cConsole (false, parent);
+  con = new cConsole (parent);
   setWidget (con);
   con->setSession (sess);
 
@@ -64,6 +66,9 @@ cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
   addEventHandler ("message", 50, PT_STRING);
   addEventHandler ("user-message", 50, PT_STRING);
   addGlobalEventHandler ("global-settings-changed", 50, PT_NOTHING);
+
+  aconsize = 25;
+  con->setScrollTextSize (aconsize);
 }
 
 
@@ -77,11 +82,11 @@ cOutput::~cOutput ()
   removeGlobalEventHandler ("global-settings-changed");
 }
 
-void cOutput::eventNothingHandler (QString event, int session)
+void cOutput::eventNothingHandler (QString event, int /*session*/)
 {
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();
-    cConsole::setInitialHistorySize (gs->getInt ("history-size"));
+    con->setInitialHistorySize (gs->getInt ("history-size"));
 
     con->setFont (gs->getFont ("console-font"));
     setEchoColor (gs->getColor ("color-" + QString::number (gs->getInt ("echo-color"))));
@@ -89,8 +94,6 @@ void cOutput::eventNothingHandler (QString event, int session)
     setEnableEcho (gs->getBool ("command-echo"));
     setEnableMessages (gs->getBool ("show-messages"));
     con->setEnableBlinking (gs->getBool ("allow-blink"));
-    con->setWordWrapping (gs->getBool ("word-wrap"));
-    con->setWrapPos (gs->getInt ("wrap-pos"));
     con->setIndentation (gs->getInt ("indent"));
     con->setRepaintCount (gs->getInt ("force-redraw"));
 
@@ -145,6 +148,7 @@ void cOutput::setDefaultBkColor (QColor color)
 {
   bgcolor = color;
   con->setDefaultBkColor (color);
+  aconsole->setDefaultBkColor (color);
 }
 
 void cOutput::setEchoColor (QColor color)
@@ -246,6 +250,21 @@ void cOutput::makeDecision ()
   decisionMessage (s);
 }
 
+void cOutput::aconUp ()
+{
+  //85% is max size
+  if (aconsize > 80) return;
+  aconsize += 5;
+  
+  con->setScrollTextSize (aconsize);
+}
 
+void cOutput::aconDown ()
+{
+  //5% is min size
+  if (aconsize < 10) return;
+  aconsize -= 5;
+  
+  con->setScrollTextSize (aconsize);
+}
 
-#include "coutput.moc"

@@ -44,6 +44,7 @@ public:
   dlgMXPConsole (QWidget *parent = 0);
   /** destructor */
   ~dlgMXPConsole ();
+  virtual QSize sizeHint() const override;
   /** add new line to the dialog */
   void addLine (const QString &line);
 protected:

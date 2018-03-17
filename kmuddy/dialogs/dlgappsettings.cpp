@@ -57,9 +57,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
     i18n("Bright cyan"), i18n("White") };
 
   //initial dialog size
-  setInitialSize (QSize (600, 400));
-  setCaption (i18n ("Application settings"));
-  setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
+  setWindowTitle (i18n ("Application settings"));
+  setStandardButtons (QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Apply);
   setFaceType (KPageDialog::List);
 
   //prepare dialog pages
@@ -222,16 +221,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
 
     //blinking
   chkblinking = new QCheckBox (i18n ("Enable b&linking"), output1);
-  chkblinking->setWhatsThis( i18n ("Enables support for blinking. "
-      "This is disabled by default, because most players don't like it."));
+  chkblinking->setWhatsThis( i18n ("Enables support for blinking. "));
   
-   //word wrapping
-  chkwrap = new QCheckBox (i18n ("Enable &word wrapping"), output1);
-  chkwrap->setWhatsThis( i18n ("If a line that is longer than current console "
-      "width is to be displayed, it wraps to the next line. With this option "
-      "enabled, whole words will move to the next line, instead of cutting "
-      "words in the middle."));
-
    //indentation
   edindent = new KIntNumInput (output2);
   edindent->setLabel (i18n ("&Indentation"),
@@ -570,6 +561,11 @@ dlgAppSettings::~dlgAppSettings()
   cDialogList::self()->removeDialog ("app-prefs");
 }
 
+QSize dlgConnect::sizeHint() const
+{
+  return QSize (600, 400);
+}
+
 void dlgAppSettings::showSettingsDialog ()
 {
   //so first we have to create the dialog...
@@ -620,16 +616,6 @@ void dlgAppSettings::setMessages (bool value)
   chkmessages->setChecked (value);
 }
 
-void dlgAppSettings::setWordWrapping (bool value)
-{
-  chkwrap->setChecked (value);
-}
-
-bool dlgAppSettings::wordWrapping ()
-{
-  return chkwrap->isChecked ();
-}
-
 void dlgAppSettings::setIndentation (int value)
 {
   edindent->setValue (value);
@@ -638,16 +624,6 @@ void dlgAppSettings::setIndentation (int value)
 int dlgAppSettings::indentation ()
 {
   return edindent->value ();
-}
-
-void dlgAppSettings::setWrapPos (int value)
-{
-  edwrappos->setValue (value);
-}
-
-int dlgAppSettings::wrapPos ()
-{
-  return edwrappos->value ();
 }
 
 void dlgAppSettings::setHistory (int value)
@@ -1079,9 +1055,7 @@ void dlgAppSettings::getSettingsFromDialog ()
   gs->setBool ("allow-blink", enableBlinking ());
   gs->setBool ("command-echo", cmdEcho ());
   gs->setBool ("show-messages", messages ());
-  gs->setBool ("word-wrap", wordWrapping ());
   gs->setInt ("indent", indentation ());
-  gs->setInt ("wrap-pos", wrapPos ());
   gs->setInt ("history-size", history ());
   gs->setInt ("force-redraw", forceRedraw ());
 
@@ -1160,9 +1134,7 @@ void dlgAppSettings::putSettingsToDialog ()
   setEnableBlinking (gs->getBool ("allow-blink"));
   setCmdEcho (gs->getBool ("command-echo"));
   setMessages (gs->getBool ("show-messages"));
-  setWordWrapping (gs->getBool ("word-wrap"));
   setIndentation (gs->getInt ("indent"));
-  setWrapPos (gs->getInt ("wrap-pos"));
   setHistory (gs->getInt ("history-size"));
   setForceRedraw (gs->getInt ("force-redraw"));
 
@@ -1208,6 +1180,4 @@ void dlgAppSettings::putSettingsToDialog ()
   //Shortcuts
   //--- NOTHING NEEDED ---
 }
-
-#include "dlgappsettings.moc"
 

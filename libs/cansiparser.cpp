@@ -355,6 +355,7 @@ void cANSIParser::changeColor (int color)
         break;
       case 25:  //BLINK OFF
         blinkactive = false;
+        break;
       //26 is proportional spacing - NOT SUPPORTED
       case 27:  //POSITIVE IMAGE
         negactive = false;
@@ -403,6 +404,4 @@ void cANSIParser::changeColor (int color)
     }
   }
 }
-
-#include "cansiparser.moc"
 

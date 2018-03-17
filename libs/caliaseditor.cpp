@@ -37,8 +37,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
+#include <KLocalizedString>
 #include <klineedit.h>
-#include <klocale.h>
 #include <ktextedit.h>
 
 #include <KServiceTypeTrader>
@@ -394,4 +394,3 @@ void cAliasEditor::getDataFromGUI (cListObjectData *data)
   data->boolValues["global"] = d->check5->isChecked();
 }
 
-#include "caliaseditor.moc"

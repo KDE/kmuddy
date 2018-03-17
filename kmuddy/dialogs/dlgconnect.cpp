@@ -24,6 +24,7 @@
 #include "cprofilesettings.h"
 
 #include <QCheckBox>
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QTreeView>
 #include <QVBoxLayout>
@@ -33,21 +34,15 @@
 #include <kmessagebox.h>
 #include <kpushbutton.h>
 
-dlgConnect::dlgConnect(QWidget *parent) : KDialog (parent)
+dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
 {
-  //initial dialog size
-  setInitialSize (QSize (500, 400));
-  setCaption (i18n ("Connect"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
+  setWindowTitle (i18n ("Connect"));
 
   //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QGridLayout *layout = new QGridLayout (page);
-
-  setMainWidget (page);
+  QGridLayout *layout = new QGridLayout (this);
 
   //put some widgets there
-  lw = new QTreeView (page);
+  lw = new QTreeView (this);
   lw->setModel (cProfileManager::self()->model());
   lw->setUniformRowHeights (true);
   lw->setRootIsDecorated (false);
@@ -56,7 +51,7 @@ dlgConnect::dlgConnect(QWidget *parent) : KDialog (parent)
     i18n ("This list shows currently defined profiles.<p><b>Profiles</b> "
       "allow you to speed up connecting to your MUD, as well as to use "
       "more advanced features like <i>aliases</i> or <i>triggers</i>."));
-  QWidget *vb = new QWidget (page);
+  QWidget *vb = new QWidget (this);
   QVBoxLayout *vblayout = new QVBoxLayout (vb);
   vblayout->setSpacing (5);
   KPushButton *addButton = new KPushButton (i18n ("&New profile"), vb);
@@ -68,16 +63,26 @@ dlgConnect::dlgConnect(QWidget *parent) : KDialog (parent)
   vblayout->addWidget (deleteButton);
   vblayout->addWidget (duplicateButton);
 
-  chkSendNothing = new QCheckBox (i18n ("Do not &send login sequence"), page);
+  chkSendNothing = new QCheckBox (i18n ("Do not &send login sequence"), this);
   chkSendNothing->setWhatsThis( i18n ("Login sequence won't be sent for "
       "this connect. Useful when you're creating a new character and you "
       "want to use QuickConnect for some reason."));
   chkSendNothing->setChecked (false);
   
-  chkOffline = new QCheckBox (i18n ("&Offline editing"), page);
+  chkOffline = new QCheckBox (i18n ("&Offline editing"), this);
   chkOffline->setWhatsThis( i18n ("This allows offline editing of "
       "profiles."));
   chkOffline->setChecked(false);
+
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  QPushButton *button = buttons->button (QDialogButtonBox::Ok);
+  button->setText (i18n ("&Connect"));
+  button->setToolTip (i18n ("Establishes connection with specified parameters."));
+  button = buttons->button (QDialogButtonBox::Cancel);
+  button->setText (i18n ("C&lose"));
+  button->setToolTip (i18n ("Closes this dialog box without connecting."));
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
   layout->setRowStretch (0, 0);
   layout->setRowStretch (1, 5);
@@ -87,14 +92,8 @@ dlgConnect::dlgConnect(QWidget *parent) : KDialog (parent)
   layout->addWidget (vb, 0, 1);
   layout->addWidget (chkSendNothing, 2, 0);
   layout->addWidget (chkOffline, 3, 0);
+  layout->addWidget (buttons, 4, 0, 2, 1);
   
-  //update button text
-  setButtonText (KDialog::Ok, i18n ("&Connect"));
-  setButtonToolTip (KDialog::Ok, i18n ("Establishes connection with specified parameters."));
-  setButtonText (KDialog::Cancel, i18n ("C&lose"));
-  setButtonToolTip (KDialog::Cancel, i18n ("Closes this dialog box without connecting."));
-  showButtonSeparator (true);
-
   //connect signals
   connect (addButton, SIGNAL(clicked()), this, SLOT(addPressed()));
   connect (modifyButton, SIGNAL(clicked()), this, SLOT(modifyPressed()));
@@ -109,6 +108,11 @@ dlgConnect::dlgConnect(QWidget *parent) : KDialog (parent)
 
 dlgConnect::~dlgConnect()
 {
+}
+
+QSize dlgConnect::sizeHint() const
+{
+  return QSize (500, 400);
 }
 
 QString dlgConnect::selectedProfile ()
@@ -259,4 +263,3 @@ void dlgConnect::doModify ()
   updateProfileFromDialog (profile);
 }
 
-#include "dlgconnect.moc"

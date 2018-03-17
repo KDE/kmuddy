@@ -25,7 +25,7 @@
 
 #include <qdir.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kstandarddirs.h>
 
 using namespace std;

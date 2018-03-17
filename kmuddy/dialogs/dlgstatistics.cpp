@@ -141,5 +141,3 @@ void dlgStatistics::update ()
   view->addTopLevelItems (items);
 }
 
-#include "dlgstatistics.moc"
-

@@ -30,13 +30,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <qpainter.h>
 #include <qregexp.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <stdlib.h>
 
 QColor chunkLink::linkColor = Qt::blue;
 
 /** state variables needed to paint a row */
+/*
 struct paintStatus {
   int length, selstart, sellen;
   
@@ -51,6 +52,7 @@ struct paintStatus {
   QColor paintColor, fillColor;
   QColor defbkcolor;
 };
+*/
 
 cTextChunk::cTextChunk (cConsole *_console)
 {
@@ -69,7 +71,7 @@ void cTextChunk::init (cConsole *_console)
 {
   startattr.startpos = 0;
   startattr.attrib = 0;
-  pstatus = new paintStatus;
+//  pstatus = new paintStatus;
   console = _console;
   //update the timestamp
   timestamp = QDateTime::currentDateTime();
@@ -82,7 +84,7 @@ cTextChunk::~cTextChunk ()
   for (it = _entries.begin(); it != _entries.end(); ++it)
     delete *it;
   _entries.clear();
-  delete pstatus;
+//  delete pstatus;
 }
 
 void cTextChunk::appendEntry (chunkItem *entry)
@@ -610,6 +612,8 @@ cTextChunk *cTextChunk::duplicate ()
   return chunk;
 }
 
+// TODO - we don't need this any more
+/*
 void cTextChunk::paint (int length, int selstart, int sellen,
     int charWidth, int charHeight,
     QPainter *painter, QPainter *blinkpainter)
@@ -664,6 +668,7 @@ void cTextChunk::paint (int length, int selstart, int sellen,
     }
   }
 }
+*/
 
 QString cTextChunk::toText ()
 {
@@ -675,7 +680,6 @@ QString cTextChunk::toText ()
   list<chunkItem *>::iterator it;
   for (it = _entries.begin(); it != _entries.end(); ++it)
     s += (*it)->toText();
-  s += "\n";
   return s;
 }
 
@@ -696,7 +700,6 @@ QString cTextChunk::toAnsi (cANSIParser *ap)
   list<chunkItem *>::iterator it;
   for (it = _entries.begin(); it != _entries.end(); ++it)
     s += (*it)->toAnsi (ap);
-  s += "\n";
   return s;
 }
 
@@ -716,9 +719,6 @@ QString cTextChunk::toHTML ()
   for (it = _entries.begin(); it != _entries.end(); ++it)
     s += (*it)->toHTML (suffix);
   s += suffix;
-  //we use <pre>, hence we don't need the <br> tag
-  //s += "<br>";
-  s += "\n";
   return s;
 }
 
@@ -949,6 +949,7 @@ void chunkLink::parseMenu ()
   }
 }
 
+/*
 void chunkItem::paintText (const QString &text, QPainter *painter, QFont font,
     QColor fg, QColor bg, paintStatus *ps)
 {
@@ -1113,6 +1114,7 @@ void chunkLink::paint (QPainter *painter, paintStatus *ps)
   //okay, paint the text!
   paintText (_text, painter, font, paintColor, fillColor, ps);
 }
+*/
 
 QString chunkFg::constructAnsi (QColor color, cANSIParser *ap)
 {
@@ -1262,7 +1264,7 @@ QString chunkLink::toAnsi (cANSIParser *ap)
 QString chunkFg::constructHTML (QColor color, QString &suffix)
 {
   suffix = "</font>" + suffix;
-  return "<font color=\"" + color.name() + "\">";
+  return "<font style=\"color: " + color.name() + "\">";
 }
 
 QString chunkBg::constructHTML (QColor, QString &)
@@ -1289,7 +1291,7 @@ QString chunkLink::toHTML (QString &)
   }
   else
   {
-    return "<a href=\"" + _target + "\">" + _text + "</a>";
+    return "<a style=\"color: " + linkColor.name() + "\" href=\"" + _target + "\">" + _text + "</a>";
   }
 }
 

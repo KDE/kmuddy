@@ -235,16 +235,13 @@ void cWindowList::adjustFonts(QFont font)
   }
 }
 
-void cWindowList::applySettings (bool allowblinking, bool wordwrapping,
-    int wrappos, int indentvalue, int forceredraw)
+void cWindowList::applySettings (bool allowblinking, int indentvalue, int forceredraw)
 {
   map<QString, dlgOutputWindow *>::iterator it;
   for (it = windows.begin(); it != windows.end(); ++it)
   {
     cConsole *console = it->second->console();
     console->setEnableBlinking (allowblinking);
-    console->setWordWrapping (wordwrapping);
-    console->setWrapPos (wrappos);
     console->setIndentation (indentvalue);
     console->setRepaintCount (forceredraw);
   }

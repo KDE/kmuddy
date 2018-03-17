@@ -24,19 +24,17 @@
 #include <klocale.h>
 #include <kvbox.h>
 
-dlgGrabKey::dlgGrabKey (QWidget *parent) : KDialog (parent)
+dlgGrabKey::dlgGrabKey (QWidget *parent) : QDialog (parent)
 {
   KMuddy::self()->setGrabDialog (this);
   
   //initial dialog size
-  setInitialSize (QSize (200, 80));
-  setCaption (i18n ("Keygrabber"));
+  setCWindowTitle (i18n ("Keygrabber"));
   setButtons (KDialog::Cancel);
   setDefaultButton (KDialog::Cancel);
 
   //create main dialog's widget
   KVBox *vbox = new KVBox (this);
-  setMainWidget (vbox);
   new QLabel (i18n ("Press the desired shortcut..."), vbox);
 }
 
@@ -45,12 +43,15 @@ dlgGrabKey::~dlgGrabKey ()
   KMuddy::self()->setGrabDialog (0);
 }
 
+QSize dlgGrabKey::sizeHint() const
+{
+  return QSize (200, 80);
+}
+
 void dlgGrabKey::gotKey (int key, Qt::KeyboardModifiers state)
 {
   _key = key;
   _state = state;
   accept ();
 }
-
-#include "dlggrabkey.moc"
 

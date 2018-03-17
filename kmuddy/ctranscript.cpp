@@ -117,6 +117,7 @@ void cTranscript::addLineToTranscript (cTextChunk *chunk)
     case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap); break;
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
+  s += "\n";  // we use <pre> in HTML, so this applies equally to all three
   QByteArray b = s.toLocal8Bit ();
   const char *ch = b.constData();
   if (ch)
@@ -144,6 +145,7 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
     case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap); break;
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
+  s += "\n";  // we use <pre> in HTML, so this applies equally to all three
   QByteArray b = s.toLocal8Bit ();
   const char *ch = b.constData();
   if (ch)

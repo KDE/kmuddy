@@ -25,8 +25,8 @@
 
 #include <QApplication>
 #include <QClipboard>
+#include <QFontDatabase>
 #include <QKeyEvent>
-#include <kglobalsettings.h>
 
 class cCompletion : public KCompletion {
  public:
@@ -37,7 +37,7 @@ class cCompletion : public KCompletion {
 
   /** Overridden completion function that ensures that short strings do not get expanded at all
    This is because we don't store short commands, and don't want the client to auto-complete them to somethign undesirable */
-  virtual QString makeCompletion (const QString &string) {
+  virtual QString makeCompletion (const QString &string) override {
     if (string.length() < 5) return QString();
     return KCompletion::makeCompletion(string);
   }
@@ -120,7 +120,7 @@ void cInputLine::initialize ()
   setPalette (p);
 
   //change font
-  setFont (KGlobalSettings::fixedFont ()); //default system fixed font
+  setFont (QFontDatabase::systemFont (QFontDatabase::FixedFont)); //default system fixed font
 
   //set defaults
   keeptext = true;
@@ -169,15 +169,15 @@ void cInputLine::setACType (int typeofac)
 {
   curactype = typeofac;
   if (!useac) {
-    setCompletionMode (KGlobalSettings::CompletionNone);
+    setCompletionMode (KCompletion::CompletionNone);
     return;
   }
-  KGlobalSettings::Completion comp;
+  KCompletion::CompletionMode comp;
   switch (typeofac) {
-    case 1: comp = KGlobalSettings::CompletionMan; break;
-    case 2: comp = KGlobalSettings::CompletionPopup; break;
+    case 1: comp = KCompletion::CompletionMan; break;
+    case 2: comp = KCompletion::CompletionPopup; break;
     case 0:
-    default: comp = KGlobalSettings::CompletionAuto; break;
+    default: comp = KCompletion::CompletionAuto; break;
   }
   setCompletionMode (comp);
 }
@@ -425,6 +425,4 @@ void cInputLine::handleTabExpansion ()
   setText (t);
   setCursorPosition (expandPos + tabWords[tabListPos].length());
 }
-
-#include "cinputline.moc"
 

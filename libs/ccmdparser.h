@@ -69,7 +69,7 @@ class KMUDDY_EXPORT cCmdParser : public cActionBase
   /** remove the raw flag from the command */
   QString fixRaw (const QString &command);
  protected:
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
 
   /** split text into commands, using command separators and \n */
   QStringList splitIntoCommands (const QString &text);

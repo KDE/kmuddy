@@ -141,4 +141,3 @@ void cCmdQueues::processQueue (cCmdQueue *queue)
   }
 }
 
-#include "ccmdqueues.moc"

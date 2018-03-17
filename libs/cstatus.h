@@ -46,10 +46,10 @@ public:
   KStatusBar *statusBar() { return sb; };
 
 protected:
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
   virtual void eventStringHandler (QString event, int session,
-      QString &par1, const QString &);
-  virtual void eventIntHandler (QString event, int session, int par1, int par2);
+      QString &par1, const QString &) override;
+  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
 
   void dimensionsChanged (int x, int y);
   void timerStart ();

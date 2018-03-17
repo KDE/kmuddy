@@ -25,11 +25,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clistgroup.h"
 #include "clistmanager.h"
 
-#include <kicon.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QAbstractItemModel>
 #include <QFont>
+#include <QIcon>
 #include <QMimeData>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
@@ -46,7 +46,7 @@ class cListModel : public QAbstractItemModel {
   cListModel (cList *l) : QAbstractItemModel(), lst(l) {
   }
 
-  virtual QModelIndex index (int row, int column, const QModelIndex &parent = QModelIndex()) const
+  virtual QModelIndex index (int row, int column, const QModelIndex &parent = QModelIndex()) const override
   {
     if (!hasIndex(row, column, parent))
       return QModelIndex();
@@ -65,7 +65,7 @@ class cListModel : public QAbstractItemModel {
     return createIndex (obj->positionInGroup(), 0, (void *) obj);
   }
 
-  virtual QModelIndex parent (const QModelIndex &index) const
+  virtual QModelIndex parent (const QModelIndex &index) const override
   {
     if (!index.isValid()) return QModelIndex();
     cListObject *obj = static_cast<cListObject *>(index.internalPointer());
@@ -75,12 +75,12 @@ class cListModel : public QAbstractItemModel {
     return createIndex (group->positionInGroup(), 0, (void *) group);
   }
 
-  virtual int columnCount (const QModelIndex &) const
+  virtual int columnCount (const QModelIndex &) const override
   {
     return 1;  // we have one column
   }
 
-  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const
+  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.column() > 0) return 0;  // we only have a single column
 
@@ -90,7 +90,7 @@ class cListModel : public QAbstractItemModel {
     return static_cast<cListGroup *>(obj)->objectCount();
   }
 
-  virtual QVariant data ( const QModelIndex &index, int role = Qt::DisplayRole) const
+  virtual QVariant data ( const QModelIndex &index, int role = Qt::DisplayRole) const override
   {
     cListObject *obj = index.isValid() ? static_cast<cListObject *>(index.internalPointer()) : lst->rootGroup();
     
@@ -104,7 +104,7 @@ class cListModel : public QAbstractItemModel {
     }
 
     if (role == Qt::DecorationRole) {
-      return obj->enabled() ? KIcon() : KIcon("dialog-cancel");
+      return obj->enabled() ? QIcon() : QIcon::fromTheme("dialog-cancel");
     }
 
     if (role == Qt::FontRole) {
@@ -116,7 +116,7 @@ class cListModel : public QAbstractItemModel {
     return QVariant();
   }
 
-  virtual Qt::ItemFlags flags (const QModelIndex &index) const
+  virtual Qt::ItemFlags flags (const QModelIndex &index) const override
   {
     Qt::ItemFlags res = Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsUserCheckable;
     // anything can be dragged, only groups accept drops
@@ -156,19 +156,19 @@ class cListModel : public QAbstractItemModel {
   }
 
   // drag and drop
-  Qt::DropActions supportedDropActions () const
+  Qt::DropActions supportedDropActions () const override
   {
     return Qt::MoveAction;
   }
 
-  QStringList mimeTypes () const
+  QStringList mimeTypes () const override
   {
     QStringList types;
     types << "application/kmuddy.object.info";
     return types;
   }
 
-  QMimeData *mimeData (const QModelIndexList &indexes) const
+  QMimeData *mimeData (const QModelIndexList &indexes) const override
   {
     QMimeData *mimeData = new QMimeData();
     QByteArray encodedData;
@@ -187,7 +187,7 @@ class cListModel : public QAbstractItemModel {
     return mimeData;
   }
 
-  bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+  bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override
   {
     if (action == Qt::IgnoreAction) return true;
     if (!data->hasFormat("application/kmuddy.object.info")) return false;

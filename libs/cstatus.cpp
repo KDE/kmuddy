@@ -19,7 +19,7 @@
 #include "cstatus.h"
 
 #include <QTextStream>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "cprofilesettings.h"
 
@@ -257,6 +257,4 @@ void cStatus::timer1Tick ()
 
   sb->changeItem (" " + i18n ("idle") + ss, ID_IDLE);
 }
-
-#include "cstatus.moc"
 

@@ -19,7 +19,7 @@
 #ifndef DLGCONNECT_H
 #define DLGCONNECT_H
 
-#include <kdialog.h>
+#include <QDialog>
 #include <QItemSelection>
 #include <QModelIndex>
 
@@ -34,12 +34,13 @@ Connect dialog. Shown and handled by cConnection.
   *@author Tomas Mecir
   */
 
-class dlgConnect : public KDialog {
+class dlgConnect : public QDialog {
 Q_OBJECT
 public:
   dlgConnect (QWidget *parent=0);
   ~dlgConnect ();
 
+  virtual QSize sizeHint() const override;
   QString selectedProfile ();
   bool sendNothing ();
   bool isOffLine ();

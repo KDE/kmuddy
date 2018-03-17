@@ -114,5 +114,3 @@ void dlgMultiLine::sendClicked ()
   emit commands (cmds);
 }
 
-#include "dlgmultiline.moc"
-

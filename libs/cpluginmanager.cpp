@@ -27,9 +27,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kdebug.h>
 #include <kdialog.h>
-#include <kplugininfo.h>
+#include <KLocalizedString>
+#include <KPluginInfo>
 #include <kpluginselector.h>
-#include <ktrader.h>
+#include <KServiceTypeTrader>
 //#include <kparts/componentfactory.h>
 #include <kparts/plugin.h>
 
@@ -396,4 +397,3 @@ void cPluginManager::passCommand (int sess, QString &command)
   if (dontSend) command = QString();
 }
 
-#include "cpluginmanager.moc"

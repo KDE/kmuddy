@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QXmlStreamWriter>
 
 #include <kdebug.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <map>
 
@@ -51,20 +51,20 @@ class cProfileModel : public QAbstractTableModel {
   {
   }
 
-  virtual int columnCount (const QModelIndex &parent = QModelIndex()) const
+  virtual int columnCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.isValid()) return 0;  // because Qt docs say so
     return 4;  // we have 4 columns
   }
 
-  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const
+  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.isValid()) return 0;  // because Qt docs say so
     return mgr->profileList().size();
   }
 
   virtual QVariant headerData ( int section, Qt::Orientation /*orientation*/,
-      int role = Qt::DisplayRole ) const
+      int role = Qt::DisplayRole ) const override
   {
     if (role != Qt::DisplayRole) return QVariant();
     switch (section) {
@@ -76,7 +76,7 @@ class cProfileModel : public QAbstractTableModel {
     }
   }
 
-  virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+  virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const override
   {
     // display role only
     if (role != Qt::DisplayRole) return QVariant();

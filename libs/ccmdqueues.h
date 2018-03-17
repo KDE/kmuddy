@@ -56,8 +56,8 @@ class KMUDDY_EXPORT cCmdQueues : public QObject, public cActionBase
  protected slots:
   void timeout ();
  protected:
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *chunk);
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2);
+  virtual void eventChunkHandler (QString event, int session, cTextChunk *chunk) override;
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
 
   /** react on a line */
   void gotLine (const QString &line);

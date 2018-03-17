@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clistmanager.h"
 #include "cprofilesettings.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 cCmdParser::cCmdParser (int sess)
   : cActionBase ("cmdparser", sess)

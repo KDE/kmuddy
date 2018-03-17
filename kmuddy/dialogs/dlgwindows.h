@@ -23,10 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef DLGWINDOWS_H
 #define DLGWINDOWS_H
 
+#include <QDialog>
 #include <QLabel>
-#include <kdialog.h>
 
-class QLabel;
 class QListWidget;
 class KPushButton;
 class QStringList;
@@ -36,13 +35,14 @@ class cWindowList;
 /**
 @author Vladimir Lazarenko
 */
-class dlgWindows : public KDialog
+class dlgWindows : public QDialog
 {
 Q_OBJECT
 public:
   dlgWindows(cWindowList *wlist, QWidget *parent = 0);
-
   ~dlgWindows();
+
+  virtual QSize sizeHint() const override;
     
 protected slots:
   void wshow();

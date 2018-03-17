@@ -22,7 +22,7 @@
 #include <kmuddy_export.h>
 
 #include <qobject.h>
-#include <Phonon/Global>
+#include <QMediaPlayer>
 
 /**
 Plays sound via Phonon.
@@ -62,10 +62,10 @@ public:
   void forceUpdateParams ();
   void disableSound ();
 protected slots:
-  void stateChanged (Phonon::State newState);
-  void finished ();
+  void stateChanged (QMediaPlayer::State newState);
 protected:
   void init ();
+  void finished ();
 
   struct Private;
   Private *d;

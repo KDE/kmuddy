@@ -17,49 +17,50 @@
 
 #include "dlgimportexportprofile.h"
 
-#include <kfiledialog.h>
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
-#include <kpushbutton.h>
-#include <qcombobox.h>
-#include <qlabel.h>
+
+#include <QComboBox>
+#include <QDialogButtonBox>
+#include <QFileDialog>
 #include <QGridLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 
 dlgImportExportProfile::dlgImportExportProfile (bool isImport,
-    QWidget *parent) : KDialog (parent)
+    QWidget *parent) : QDialog (parent)
 {
   import = isImport;
   
   //initial dialog size
-  setInitialSize (QSize (300, 150));
-  setCaption (isImport ? i18n ("Import profile") : i18n ("Export profile"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
+  setWindowTitle (isImport ? i18n ("Import profile") : i18n ("Export profile"));
 
-  //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QGridLayout *layout = new QGridLayout (page);
+  QGridLayout *layout = new QGridLayout (this);
 
-  setMainWidget (page);
-
-  QLabel *l1 = new QLabel (i18n ("&Profile name"), page);
+  QLabel *l1 = new QLabel (i18n ("&Profile name"), this);
   if (isImport)
   {
-    edprofile = new KLineEdit (page);
+    edprofile = new QLineEdit (this);
     l1->setBuddy (edprofile);
   }
   else
   {
-    cbprofile = new QComboBox (page);
+    cbprofile = new QComboBox (this);
     //cProfiles p;
     //cbprofile->addItems (p.getprofiles());
     l1->setBuddy (cbprofile);
   }
   QLabel *l2 = new QLabel (isImport ? i18n ("&Import from") :
-      i18n ("&Export to"), page);
-  edfname = new KLineEdit (page);
+      i18n ("&Export to"), this);
+  edfname = new QLineEdit (this);
   l2->setBuddy (edfname);
-  KPushButton *button = new KPushButton (i18n ("Browse..."), page);
+  QPushButton *button = new QPushButton (i18n ("Browse..."), this);
+
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
   layout->setSpacing (10);
   layout->addWidget (l1, 0, 0);
   layout->addWidget (l2, 1, 0);
@@ -69,6 +70,7 @@ dlgImportExportProfile::dlgImportExportProfile (bool isImport,
     layout->addWidget (cbprofile, 0, 1);
   layout->addWidget (edfname, 1, 1);
   layout->addWidget (button, 1, 2);
+  layout->addWidget (buttons, 0, 3, 0, 2);
   layout->setRowStretch (2, 10);
 
   connect (button, SIGNAL (clicked()), this, SLOT (browse ()));
@@ -77,6 +79,11 @@ dlgImportExportProfile::dlgImportExportProfile (bool isImport,
 dlgImportExportProfile::~dlgImportExportProfile ()
 {
 
+}
+
+QSize dlgImportExportProfile::sizeHint() const
+{
+  return QSize (300, 150);
 }
 
 void dlgImportExportProfile::doThings ()
@@ -121,19 +128,15 @@ void dlgImportExportProfile::browse ()
 {
   if (import)
   {
-    QString n = KFileDialog::getOpenFileName (QString(),
-        QString(), this, i18n ("Choose file with profile"));
+    QString n = QFileDialog::getOpenFileName (this, i18n ("Choose file with profile"));
     if (!(n.isEmpty()))
       edfname->setText (n);
   }
   else
   {
-    QString n = KFileDialog::getSaveFileName (QString(),
-        QString(), this, i18n ("Enter target file"));
+    QString n = QFileDialog::getSaveFileName (this, i18n ("Enter target file"));
     if (!(n.isEmpty()))
       edfname->setText (n);
   }
 }
-
-#include "dlgimportexportprofile.moc"
 

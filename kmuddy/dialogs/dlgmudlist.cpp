@@ -44,7 +44,7 @@ struct dlgMudList::Private {
   QSortFilterProxyModel *proxy;
 };
 
-dlgMudList::dlgMudList (QWidget *parent) : KDialog (parent)
+dlgMudList::dlgMudList (QWidget *parent) : QDialog (parent)
 {
   d = new Private;
   if (!lst)
@@ -52,16 +52,13 @@ dlgMudList::dlgMudList (QWidget *parent) : KDialog (parent)
     lst = new cMUDList;
 
   // initialize the dialog
-  setInitialSize (QSize (750, 500));
-  setCaption (i18n ("MUD Listing"));
+  setWindowTitle (i18n ("MUD Listing"));
   setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
-  QWidget *main = new QWidget (this);
-  QVBoxLayout *mainLayout = new QVBoxLayout (main);
-  setMainWidget (main);
+  QVBoxLayout *mainLayout = new QVBoxLayout (this);
 
-  QSplitter *page = new QSplitter (main);
+  QSplitter *page = new QSplitter (this);
   page->setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Expanding);
   QWidget *left = new QWidget (page);
   QGridLayout *layout = new QGridLayout (left);
@@ -75,7 +72,7 @@ dlgMudList::dlgMudList (QWidget *parent) : KDialog (parent)
   d->details = new KTextBrowser (page);
   page->addWidget (left);
   page->addWidget (d->details);
-  QLabel *source = new QLabel ("The list is provided courtesy of <a href=\"http://www.mudconnector.com/\">The MUD Connector</a>.<br/>If you are unsure which game to pick, you may also want to check out <a href=\"http://www.topmudsites.com\">www.topmudsites.com</a>.", main);
+  QLabel *source = new QLabel ("The list is provided courtesy of <a href=\"http://www.mudconnector.com/\">The MUD Connector</a>.<br/>If you are unsure which game to pick, you may also want to check out <a href=\"http://www.topmudsites.com\">www.topmudsites.com</a>.", this);
   source->setOpenExternalLinks (true);
   source->setWordWrap (true);
   
@@ -101,6 +98,11 @@ dlgMudList::dlgMudList (QWidget *parent) : KDialog (parent)
 dlgMudList::~dlgMudList ()
 {
   delete d;
+}
+
+QSize dlgMudList::sizeHint() const
+{
+  return QSize (750, 500);
 }
 
 const cMUDEntry *dlgMudList::getEntry (QWidget *parent)
@@ -150,4 +152,3 @@ const cMUDEntry *dlgMudList::selectedEntry ()
   return lst->entry (d->proxy->mapToSource (idx).row());
 }
 
-#include "dlgmudlist.moc"

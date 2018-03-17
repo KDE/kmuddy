@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clist.h"
 #include "clistmanager.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>

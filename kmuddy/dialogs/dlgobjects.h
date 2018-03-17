@@ -23,16 +23,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef DLGOBJECTS_H
 #define DLGOBJECTS_H
 
-#include <kdialog.h>
+#include <QDialog>
 #include "cactionbase.h"
 
 class cListObject;
 
-class dlgObjects: public KDialog, public cActionBase {
+class dlgObjects: public QDialog, public cActionBase {
  Q_OBJECT
  public:
   dlgObjects (QWidget *parent = 0);
   ~dlgObjects ();
+  virtual QSize sizeHint() const override;
 
  private slots:
   void listChanged (int index);

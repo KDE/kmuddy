@@ -19,7 +19,7 @@
 #ifndef DLGQUICKCONNECT_H
 #define DLGQUICKCONNECT_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 class KLineEdit;
 class KRestrictedLine;
@@ -29,12 +29,13 @@ QuickConnect dialog - handled by cConnection.
   *@author Tomas Mecir
   */
 
-class dlgQuickConnect : public KDialog {
+class dlgQuickConnect : public QDialog {
    Q_OBJECT
 public: 
   dlgQuickConnect (QWidget *parent=0);
   ~dlgQuickConnect ();
 
+  virtual QSize sizeHint() const override;
   /** values in LineEdits */
   QString host ();
   int port ();

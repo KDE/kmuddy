@@ -40,7 +40,7 @@ public:
   void removeObject (cListObject *obj);
   void objectChanged (cListObject *obj);
 
-  virtual bool isGroup () { return true; }
+  virtual bool isGroup () override { return true; }
 
   /** Returns the list of objects in this group. */
   const std::list<cListObject *> *objectList ();
@@ -71,18 +71,18 @@ protected:
   ~cListGroup ();
   friend class cList;
 
-  virtual void updateVisibleName ();
+  virtual void updateVisibleName () override;
 
   /** Load the group from the XML reader. */
-  virtual void load (QXmlStreamReader *reader);
+  virtual void load (QXmlStreamReader *reader) override;
   /** Save the group into a XML writer, including all nested groups. */
-  virtual void save (QXmlStreamWriter *writer);
+  virtual void save (QXmlStreamWriter *writer) override;
 
   /** regenerate the list of objects stored by priority */
   void generatePriorityList ();
   
   /** Recursive traversal of the list, called by cList::traverse */
-  virtual cList::TraverseAction traverse (int traversalType);
+  virtual cList::TraverseAction traverse (int traversalType) override;
   
   /** helper function used by generatePriorityList */
   static bool compareObjects (cListObject *a, cListObject *b);

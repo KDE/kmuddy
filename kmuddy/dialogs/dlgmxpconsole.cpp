@@ -40,7 +40,6 @@ dlgMXPConsole::~dlgMXPConsole ()
 
 void dlgMXPConsole::createDialog ()
 {
-  // setInitialSize (QSize (300, 200));
   setWindowTitle (i18n ("MXP Console"));
 
   viewer = new QTextEdit (this);
@@ -61,6 +60,10 @@ void dlgMXPConsole::addLine (const QString &line)
   sb->setValue (sb->maximum ());
 }
 
+QSize dlgObjects::sizeHint() const
+{
+  return QSize (300, 200);
+}
+
 #endif  //HAVE_MXP
 
-#include "dlgmxpconsole.moc"

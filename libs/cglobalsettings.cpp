@@ -28,9 +28,9 @@
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kglobal.h>
-#include <kglobalsettings.h>
 
 #include <QDir>
+#include <QFontDatabase>
 
 #include <map>
 
@@ -147,7 +147,7 @@ QFont cGlobalSettings::getFont (const QString &name)
     return d->fontValues[name];
   if (d->defaultFontValues.count (name))
     return d->defaultFontValues[name];
-  return KGlobalSettings::fixedFont ();
+  return QFontDatabase::systemFont (QFontDatabase::FixedFont);
 }
 
 void cGlobalSettings::setDefaultBool (const QString &name, bool val)
@@ -199,14 +199,12 @@ void cGlobalSettings::setDefaultOptions ()
   setDefaultBool ("allow-blink", true);
   setDefaultBool ("command-echo", true);
   setDefaultBool ("show-messages", true);
-  setDefaultBool ("word-wrap", true);
   setDefaultInt ("indent", 0);
-  setDefaultInt ("wrap-pos", 0);
   setDefaultInt ("history-size", 1000);
   setDefaultInt ("force-redraw", 10);
 
   //Fonts
-  QFont f = KGlobalSettings::fixedFont ();
+  QFont f = QFontDatabase::systemFont (QFontDatabase::FixedFont);
   setDefaultFont ("console-font", f);
   setDefaultFont ("input-font", f);
   setDefaultFont ("multi-line-font", f);
@@ -310,7 +308,7 @@ void cGlobalSettings::load ()
   entries = g.entryMap ();
   for (it = entries.begin(); it != entries.end(); ++it)
     setColor (it.key(), g.readEntry (it.key(), getColor(it.key())));
-  QFont f = KGlobalSettings::fixedFont ();
+  QFont f = QFontDatabase::systemFont (QFontDatabase::FixedFont);
   g = config->group ("Font values");
   entries = g.entryMap ();
   for (it = entries.begin(); it != entries.end(); ++it)
@@ -354,15 +352,13 @@ void cGlobalSettings::loadOldConfig ()
   setBool ("lpmud-style", g.readEntry("LPMud style", false));
   setBool ("show-messages", g.readEntry ("Display messages", true));
   setBool ("allow-blink", g.readEntry ("Allow blinking", true));
-  setBool ("word-wrap", g.readEntry ("Word wrapping", true));
   setInt ("indent", g.readEntry ("Indentation", 0));
-  setInt ("wrap-pos", g.readEntry ("Wrap position", 0));
   setInt ("history-size", g.readEntry ("History size", 1000));
   setInt ("force-redraw", g.readEntry ("Force redraw", 10));
   
   //Fonts
   g = config->group ("Fonts");
-  QFont f = KGlobalSettings::fixedFont ();
+  QFont f = QFontDatabase::systemFont (QFontDatabase::FixedFont);
   setFont ("console-font", g.readEntry ("Console font", f));
   setFont ("input-font", g.readEntry ("Input line font", f));
   setFont ("multi-line-font", g.readEntry ("Multi-line input font", f));

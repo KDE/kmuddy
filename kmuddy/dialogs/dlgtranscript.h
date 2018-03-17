@@ -39,6 +39,7 @@ public:
   dlgTranscript (QWidget *parent=0);
   ~dlgTranscript ();
 
+  virtual QSize sizeHint() const override;
   QString getFName ();
   QString getAFName ();
   void setFName (const QString &filename);

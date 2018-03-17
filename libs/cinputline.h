@@ -61,25 +61,25 @@ public slots:
 protected slots:
   void handleEnter (const QString &text);
 protected:
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
   virtual QString actionStringHandler (QString action, int, QString &par1,
-      const QString &);
+      const QString &) override;
 
  // virtual void paste ();
   virtual void paste (const QString &t);
   void handleTabExpansion ();
   /** event filter - handles TAB expansion */
-  virtual bool event (QEvent *e);
+  virtual bool event (QEvent *e) override;
   /** keypress event - handles history Up/Down browsing*/
-  void keyPressEvent (QKeyEvent *e);
+  void keyPressEvent (QKeyEvent *e) override;
   /** mouse-release event - handles middle-click paste */
-  void mouseReleaseEvent (QMouseEvent *e);
+  void mouseReleaseEvent (QMouseEvent *e) override;
   /** we got focus - restore selection (needed because selection is lost
     when switching between connections) */
-  void focusInEvent (QFocusEvent *e);
+  void focusInEvent (QFocusEvent *e) override;
   /** we lost focus - store selection (needed because selection is lost
     when switching between connections)*/
-  void focusOutEvent (QFocusEvent *e);
+  void focusOutEvent (QFocusEvent *e) override;
   QString getHistory (bool next);
   QString menuitem[CMDHISTORYSIZE];
   void addHistory (const QString &text);

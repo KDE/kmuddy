@@ -30,27 +30,23 @@
 #include <klineedit.h>
 #include <klocale.h>
 
-dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : KDialog (parent)
+dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
 {
   //initial dialog size
-  setInitialSize (QSize (300, 100));
-  setCaption (i18n ("Dump output buffer"));
+  setWindowTitle (i18n ("Dump output buffer"));
   setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QVBoxLayout *layout = new QVBoxLayout (page);
-
-  setMainWidget (page);
+  QVBoxLayout *layout = new QVBoxLayout (this);
 
   //where to start?
-  chkcurpos = new QCheckBox (i18n ("&Start at current position"), page);
+  chkcurpos = new QCheckBox (i18n ("&Start at current position"), this);
   chkcurpos->setWhatsThis( i18n ("When this is enabled, only the "
       "part of history buffer from currently displayed part up to the end of "
       "buffer will be dumped. Otherwise entire buffer will be dumped (default)."));
 
   //the file name
-  QFrame *fileframe = new QFrame (page);
+  QFrame *fileframe = new QFrame (this);
   QHBoxLayout *filelayout = new QHBoxLayout (fileframe);
   QLabel *lblname = new QLabel (i18n ("&File:"), fileframe);
   fname = new KLineEdit (fileframe);
@@ -63,7 +59,7 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : KDialog (parent)
   filelayout->addWidget (filebutton);
 
   //type
-  QFrame *typeframe = new QFrame (page);
+  QFrame *typeframe = new QFrame (this);
   QHBoxLayout *typelayout = new QHBoxLayout (typeframe);
   QLabel *lbltype = new QLabel (i18n ("&Dump format:"), typeframe);
   ttype = new QComboBox (typeframe);
@@ -97,6 +93,11 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : KDialog (parent)
 dlgDumpBuffer::~dlgDumpBuffer ()
 {
 
+}
+
+QSize dlgDumpBuffer::sizeHint() const
+{
+  return QSize (300, 100);
 }
 
 void dlgDumpBuffer::browseFiles ()
@@ -156,4 +157,3 @@ void dlgDumpBuffer::setType (int t)
   ttype->setCurrentIndex (t - 1);
 }
 
-#include "dlgdumpbuffer.moc"

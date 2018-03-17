@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QListWidget>
 #include <QVBoxLayout>
 
-dlgWindows::dlgWindows(cWindowList *wlist, QWidget *parent) : KDialog(parent)
+dlgWindows::dlgWindows(cWindowList *wlist, QWidget *parent) : QDialog(parent)
 {
   wl = wlist->windowList();
   winlist = wlist;
@@ -49,8 +49,7 @@ dlgWindows::~dlgWindows()
 void dlgWindows::createDialog()
 {
   //initial dialog size
-  setInitialSize (QSize (500, 400));
-  setCaption (i18n("Output Windows"));
+  setWindowTitle (i18n("Output Windows"));
   setButtons (KDialog::Ok);
   
   //create main dialog's widget
@@ -95,6 +94,11 @@ void dlgWindows::createDialog()
   connect (bthide, SIGNAL (clicked ()), this, SLOT (whide ()));
   connect (btdelete, SIGNAL (clicked ()), this, SLOT (remove ()));
 
+}
+
+QSize dlgWindows::sizeHint() const
+{
+  return QSize (500, 400);
 }
 
 void dlgWindows::wshow()
@@ -158,5 +162,3 @@ void dlgWindows::updateMe ()
     box->setCurrentRow (0);
 }
 
-
-#include "dlgwindows.moc"

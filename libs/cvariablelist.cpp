@@ -23,7 +23,7 @@
 #include "cvariable.h"
 
 #include <kdebug.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QDir>
 #include <QFile>

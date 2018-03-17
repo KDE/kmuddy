@@ -34,6 +34,7 @@ class dlgMultiLine : public QDockWidget {
 public: 
   dlgMultiLine (QWidget *parent = 0);
   ~dlgMultiLine ();
+  virtual QSize sizeHint() const override;
   /** set font */
   void setFont (const QFont &font);
 signals:

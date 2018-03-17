@@ -111,4 +111,3 @@ bool cScriptEval::event (QEvent *e)
   return true;
 }
 
-#include "cscripteval.moc"

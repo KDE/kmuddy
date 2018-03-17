@@ -17,19 +17,11 @@
 
 #include "csoundplayer.h"
 
-#include <Phonon/MediaObject>
-#include <Phonon/Path>
-#include <Phonon/AudioOutput>
-#include <Phonon/Global>
-
 struct cSoundPlayer::Private {
-  Phonon::MediaObject *media;
-  Phonon::AudioOutput *output;
+  QMediaPlayer player;
 
   bool isWave;
   bool nosound;
-  
-  bool playing;
   
   QString fName;
   int repeatCount, priority, volume;
@@ -42,11 +34,8 @@ cSoundPlayer::cSoundPlayer (bool isWAVE)
 {
   d = new Private;
 
-  d->media = 0;
   d->isWave = isWAVE;
   d->nosound = false;
-
-  d->playing = false;
 }
 
 cSoundPlayer::~cSoundPlayer()
@@ -57,17 +46,12 @@ cSoundPlayer::~cSoundPlayer()
 
 void cSoundPlayer::init ()
 {
-  if (d->media) return;
-  d->media = new Phonon::MediaObject (this);
-  d->output = new Phonon::AudioOutput (Phonon::MusicCategory, this);
-  createPath (d->media, d->output);
-  connect (d->media, SIGNAL (finished()), this, SLOT (finished()));
-  connect (d->media, SIGNAL (stateChanged(Phonon::State, Phonon::State)), this, SLOT (stateChanged(Phonon::State)));
+  connect (&d->player, SIGNAL (stateChanged(QMediaPlayer::State)), this, SLOT (stateChanged(QMediaPlayer::State)));
 }
 
 bool cSoundPlayer::isPlaying ()
 {
-  return d->playing;
+  return (d->player.state() == QMediaPlayer::PlayingState);
 }
 
 int cSoundPlayer::curPriority ()
@@ -116,7 +100,6 @@ void cSoundPlayer::play ()
 
   // stop existing sound, if any
   stop ();
-  d->playing = false;
 
   //apply new parameters
   d->fName = d->newFName;
@@ -127,20 +110,15 @@ void cSoundPlayer::play ()
   // Intialise the play object, if needed
   init ();
 
-  // assign the source
-  d->media->setCurrentSource (d->fName);
-  // set volume
-  d->output->setVolume ((qreal) d->volume / 100);
-  // and play
-  d->media->play ();
+  d->player.setMedia (QUrl::fromLocalFile (d->fName));
+  d->player.setVolume (d->volume);
+  d->player.play ();
 }
 
 void cSoundPlayer::stop ()
 {
   if (d->nosound) return;
-  if (!d->media) return;
-  d->media->stop();
-  d->playing = false;
+  d->player.stop();
 }
 
 void cSoundPlayer::forceUpdateParams ()
@@ -155,24 +133,23 @@ void cSoundPlayer::disableSound ()
   d->nosound = true;
 }
 
-void cSoundPlayer::stateChanged (Phonon::State newState)
+void cSoundPlayer::stateChanged (QMediaPlayer::State newState)
 {
-  d->playing = (newState == Phonon::PlayingState);
+  if ((newState == QMediaPlayer::StoppedState) && (d->player.mediaStatus() == QMediaPlayer::EndOfMedia))
+    finished();
+
   // TODO error reporting
 }
 
 void cSoundPlayer::finished ()
 {
-  d->playing = false;
-  
   if (d->repeatCount != -1)  //-1 means infinite playing
     d->repeatCount--;  //decrease repeat count
   if (d->repeatCount != 0) {
     // we need to play again - so play again
-    d->media->setCurrentSource (d->fName);
-    d->media->play ();
+    d->player.setMedia (QUrl::fromLocalFile (d->fName));
+    d->player.setVolume (d->volume);
+    d->player.play ();
   }
 }
-
-#include "csoundplayer.moc"
 

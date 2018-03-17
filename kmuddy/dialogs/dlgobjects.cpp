@@ -55,13 +55,12 @@ struct dlgObjects::Private
 };
 
 dlgObjects::dlgObjects (QWidget *parent)
-  : KDialog (parent), cActionBase ("dialog-objects", 0)
+  : QDialog (parent), cActionBase ("dialog-objects", 0)
 {
   d = new Private;
 
   //initial dialog size
-  setInitialSize (QSize (600, 400));
-  setCaption (i18n ("Object Manager"));
+  setWindowTitle (i18n ("Object Manager"));
   setButtons (KDialog::Close);
 
   //create main dialog's widget
@@ -144,6 +143,11 @@ dlgObjects::~dlgObjects ()
   removeEventHandler ("disconnected");
 
   delete d;
+}
+
+QSize dlgObjects::sizeHint() const
+{
+  return QSize (600, 400);
 }
 
 void dlgObjects::eventNothingHandler (QString event, int session)
@@ -233,4 +237,3 @@ void dlgObjects::activeObjectChanged (cListObject *obj)
   kDebug () << "Switched active object to " << obj->name() << "." << endl;
 }
 
-#include "dlgobjects.moc"

@@ -18,9 +18,9 @@
 #ifndef DLGIMPORTEXPORTPROFILE_H
 #define DLGIMPORTEXPORTPROFILE_H
 
-#include <kdialog.h>
+#include <QDialog>
 
-class KLineEdit;
+class QLineEdit;
 class QComboBox;
 
 /**
@@ -28,18 +28,19 @@ Dialog where you choose what to import/export.
   *@author Tomas Mecir
   */
 
-class dlgImportExportProfile : public KDialog {
+class dlgImportExportProfile : public QDialog {
    Q_OBJECT
 public: 
   dlgImportExportProfile (bool isImport, QWidget *parent=0);
   ~dlgImportExportProfile ();
   void doThings ();
+  virtual QSize sizeHint() const override;
 protected slots:
   void browse ();
 protected:
   bool import;
-  KLineEdit *edfname;
-  KLineEdit *edprofile;
+  QLineEdit *edfname;
+  QLineEdit *edprofile;
   QComboBox *cbprofile;
 };
 

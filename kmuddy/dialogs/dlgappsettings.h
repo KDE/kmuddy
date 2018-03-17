@@ -77,12 +77,8 @@ public:
   void setMessages (bool value);
   bool enableBlinking ();
   void setEnableBlinking (bool value);
-  void setWordWrapping (bool value);
-  bool wordWrapping ();
   void setIndentation (int value);
   int indentation ();
-  void setWrapPos (int value);
-  int wrapPos ();
   void setHistory (int value);
   int history ();
   int forceRedraw ();

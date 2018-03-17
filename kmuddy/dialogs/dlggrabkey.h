@@ -18,7 +18,7 @@
 #ifndef DLGGRABKEY_H
 #define DLGGRABKEY_H
 
-#include <kdialog.h>
+#include <QDialog>
 
 /**
 This dialog is used to grab keys. It works in conjuction with event filter
@@ -33,11 +33,12 @@ KDE people say...). I don't use QAction here, so macro keys are not affected.
   *@author Tomas Mecir
   */
 
-class dlgGrabKey : public KDialog  {
+class dlgGrabKey : public QDialog  {
    Q_OBJECT
 public:
   dlgGrabKey (QWidget *parent=0);
   ~dlgGrabKey ();
+  virtual QSize sizeHint() const override;
   /** key is here - sent by KMuddy::eventFilter */
   void gotKey (int key, Qt::KeyboardModifiers state);
 

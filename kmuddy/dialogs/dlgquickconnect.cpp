@@ -28,11 +28,10 @@
 #include <klineedit.h>
 #include <krestrictedline.h>
 
-dlgQuickConnect::dlgQuickConnect(QWidget *parent) : KDialog (parent)
+dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
 {
   //initial dialog size
-  setInitialSize (QSize (300, 120));
-  setCaption (i18n ("Quick Connect"));
+  setWindowTitle (i18n ("Quick Connect"));
   setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
@@ -77,6 +76,11 @@ dlgQuickConnect::~dlgQuickConnect()
 
 }
 
+QSize dlgQuickConnect::sizeHint() const
+{
+  return QSize (300, 120);
+}
+
 QString dlgQuickConnect::host ()
 {
   return ed1->text();
@@ -86,6 +90,4 @@ int dlgQuickConnect::port ()
 {
   return ed2->text().toInt ();
 }
-
-#include "dlgquickconnect.moc"
 

@@ -31,21 +31,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <netwm_def.h>
 #include <QVBoxLayout>
 
-dlgOutputWindow::dlgOutputWindow (QWidget *parent) : KDialog(parent)
+dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent)
 {
   //initial size
-  setInitialSize (QSize (250, 300));
-  setCaption (i18n ("Output window"));
-  setButtons (0);
+  setWindowTitle (i18n ("Output window"));
 
   //main widget
-  QWidget *page = new QWidget (this);
-  QVBoxLayout *layout = new QVBoxLayout (page);
+  QVBoxLayout *layout = new QVBoxLayout (this);
   
-  setMainWidget (page);
   setFocusPolicy (Qt::StrongFocus);
 
-  owindow = new cConsole(true, page);
+  owindow = new cConsole(this);
   //our window shall also have a status bar
   owindow->setVScrollBarMode (Q3ScrollView::AlwaysOn);
 
@@ -65,6 +61,11 @@ dlgOutputWindow::~dlgOutputWindow()
 {
 }
 
+QSize dlgOutputWindow::sizeHint() const
+{
+  return QSize (250, 300);
+}
+
 void dlgOutputWindow::setSession (int _sess)
 {
   sess = _sess;
@@ -81,13 +82,11 @@ void dlgOutputWindow::addLine (cTextChunk *chunk)
 void dlgOutputWindow::setOutputWindowName(const QString &name)
 {
   if(!name.isEmpty())
-    this->setCaption(name);
+    this->setWindowTitle(name);
 }
 
 void dlgOutputWindow::setFont(QFont font)
 {
   owindow->setFont(font);
 }
-
-#include "dlgoutputwindow.moc"
 

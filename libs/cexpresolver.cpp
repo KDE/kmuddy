@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cmacromanager.h"
 #include "cvariablelist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 cExpResolver::cExpResolver (int _sess)
 {

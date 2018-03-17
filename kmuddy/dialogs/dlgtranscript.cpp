@@ -34,8 +34,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
     KPageDialog (parent)
 {
   //initial dialog size
-  setInitialSize (QSize (400, 200));
-  setCaption (i18n ("Session Transcript"));
+  setWindowTitle (i18n ("Session Transcript"));
   setFaceType( KPageDialog::Tabbed );
   setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
 
@@ -172,6 +171,11 @@ dlgTranscript::~dlgTranscript ()
 
 }
 
+QSize dlgTranscript::sizeHint() const
+{
+  return QSize (400, 200);
+}
+
 void dlgTranscript::updateDialog (bool how)
 {
   overwrite->setEnabled (how);
@@ -295,6 +299,4 @@ char dlgTranscript::advTranscriptType ()
 {
   return advttype->currentIndex() + 1;
 }
-
-#include "dlgtranscript.moc"
 

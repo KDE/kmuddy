@@ -63,7 +63,7 @@ public:
 
   void setUseAnsi (bool val) { useansi = val; };
   
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
 
 signals:
   void fgColor (QColor color);

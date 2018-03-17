@@ -1281,13 +1281,13 @@ void KMuddy::pageDown ()
 void KMuddy::aconUp ()
 {
   cOutput *output = dynamic_cast<cOutput *>(am->object ("output", activeSession()));
-  output->console()->aconUp();
+  output->aconUp();
 }
 
 void KMuddy::aconDown ()
 {
   cOutput *output = dynamic_cast<cOutput *>(am->object ("output", activeSession()));
-  output->console()->aconDown();
+  output->aconDown();
 }
 
 bool KMuddy::eventFilter (QObject *o, QEvent *e)

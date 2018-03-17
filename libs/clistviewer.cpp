@@ -27,12 +27,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clistgroup.h"
 #include <kaction.h>
 #include <kactioncollection.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kinputdialog.h>
 #include <kmessagebox.h>
 
 #include <QContextMenuEvent>
 #include <QHeaderView>
+#include <QIcon>
 #include <QMenu>
 #include <QStandardItemModel>
 #include <QRegExpValidator>
@@ -62,7 +63,7 @@ cListViewer::cListViewer (QWidget *parent)
   // create the actions and popup menus
   KAction *actDeleteObj = new KAction (this);
   actDeleteObj->setText (i18n ("Delete object"));
-  actDeleteObj->setIcon (KIcon ("list-remove"));
+  actDeleteObj->setIcon (QIcon::fromTheme ("list-remove"));
   connect (actDeleteObj, SIGNAL (triggered()), this, SLOT (deleteObject()));
   d->col->addAction ("DeleteObject", actDeleteObj);
   KAction *actDeleteGroup = new KAction (this);
@@ -71,17 +72,17 @@ cListViewer::cListViewer (QWidget *parent)
   d->col->addAction ("DeleteGroup", actDeleteGroup);
   KAction *actAddSubGroup = new KAction (this);
   actAddSubGroup->setText (i18n ("Add subgroup"));
-  actAddSubGroup->setIcon (KIcon ("folder-new"));
+  actAddSubGroup->setIcon (QIcon::fromTheme ("folder-new"));
   connect (actAddSubGroup, SIGNAL (triggered()), this, SLOT (addGroup()));
   d->col->addAction ("AddSubGroup", actAddSubGroup);
   KAction *actAddGroup = new KAction (this);
   actAddGroup->setText (i18n ("Add group"));
-  actAddGroup->setIcon (KIcon ("folder-new"));
+  actAddGroup->setIcon (QIcon::fromTheme ("folder-new"));
   connect (actAddGroup, SIGNAL (triggered()), this, SLOT (addGroup()));
   d->col->addAction ("AddGroup", actAddGroup);
   KAction *actAddObject = new KAction (this);
   actAddObject->setText (i18n ("Add object"));
-  actAddObject->setIcon (KIcon ("list-add"));
+  actAddObject->setIcon (QIcon::fromTheme ("list-add"));
   connect (actAddObject, SIGNAL (triggered()), this, SLOT (addObject()));
   d->col->addAction ("AddObject", actAddObject);
 
@@ -272,5 +273,3 @@ void cListViewer::moveRight ()
   selectObject (obj);
 }
 
-
-#include "clistviewer.moc"

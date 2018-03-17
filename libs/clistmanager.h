@@ -63,8 +63,8 @@ class KMUDDY_EXPORT cListManager: public cActionBase {
   static cListManager *_self;
 
   void loadList (int sessId, cList *list);
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &);
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
 
   struct Private;
   Private *d;

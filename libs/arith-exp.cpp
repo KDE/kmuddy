@@ -64,7 +64,7 @@ bool arith_exp::compile (const QString &expression)
 {
    clear_compiled();
    
-   return ::compile(expression.toLocal8Bit(),
+   return ::compile(expression.toLocal8Bit().data(),
                     &compiled_code);
    
 } // arith_exp::compile

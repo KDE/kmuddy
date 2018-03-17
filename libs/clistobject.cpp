@@ -373,4 +373,3 @@ void cListObject::save (QXmlStreamWriter *writer)
   writer->writeEndElement ();  // end the object element
 }
 
-#include "clistobject.moc"

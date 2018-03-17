@@ -39,9 +39,8 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   cDialogList::self()->addDialog ("profile-prefs", this);
 
   //initial dialog size
-  setInitialSize (QSize (450, 350));
-  setCaption (i18n ("MUD preferences"));
-  setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
+  setWindowTitle (i18n ("MUD preferences"));
+  setStandardButtons (QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Apply);
   setFaceType (KPageDialog::List);
 
   //prepare dialog pages
@@ -250,6 +249,11 @@ dlgProfileSettings::~dlgProfileSettings ()
 {
   cDialogList::self()->removeDialog ("profile-prefs");
 
+}
+
+QSize dlgProfileSettings::sizeHint() const
+{
+  return QSize (450, 350);
 }
 
 bool dlgProfileSettings::useAnsi ()
@@ -470,6 +474,4 @@ QString dlgProfileSettings::variablePrefix ()
 }
 
 #endif  //HAVE_MXP
-
-#include "dlgprofilesettings.moc"
 

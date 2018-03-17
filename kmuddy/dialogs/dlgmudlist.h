@@ -23,16 +23,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef DLGMUDLIST_H
 #define DLGMUDLIST_H
 
-#include <kdialog.h>
+#include <QDialog>
 #include <QModelIndex>
 
 class cMUDEntry;
 class cMUDList;
 
-class dlgMudList : public KDialog {
+class dlgMudList : public QDialog {
  Q_OBJECT
  public:
   static const cMUDEntry *getEntry (QWidget *parent);
+  virtual QSize sizeHint() const override;
  private slots:
   void currentChanged (const QModelIndex &index);
  private:

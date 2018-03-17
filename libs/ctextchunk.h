@@ -38,7 +38,7 @@ class cConsole;
 
 class QPainter;
 
-struct paintStatus;
+// struct paintStatus;
 
 /** one item in a cTextChunk chunk - abstract base class */
 
@@ -56,7 +56,7 @@ class KMUDDY_EXPORT chunkItem {
   virtual void replace (int, int, const QString &) {};
   
   //painting the text...
-  virtual void paint (QPainter *painter, paintStatus *ps) = 0;
+//  virtual void paint (QPainter *painter, paintStatus *ps) = 0;
     
   //output to transcript...
   /** plain-text output */
@@ -66,8 +66,7 @@ class KMUDDY_EXPORT chunkItem {
   /** output to HTML, suffix can be used to provide closing tags if needed */
   virtual QString toHTML (QString &) { return QString(); };
  protected:
-  void paintText (const QString &text, QPainter *painter, QFont font, QColor fg, QColor bg,
-      paintStatus *ps);
+//  void paintText (const QString &text, QPainter *painter, QFont font, QColor fg, QColor bg, paintStatus *ps);
   int startpos;
 };
 
@@ -147,9 +146,7 @@ public:
   cTextChunk *duplicate ();
 
   //painting...
-  void paint (int length, int selstart, int sellen,
-      int charWidth, int charHeight,
-      QPainter *painter, QPainter *blinkpainter = 0);
+//  void paint (int length, int selstart, int sellen, int charWidth, int charHeight, QPainter *painter, QPainter *blinkpainter = 0);
   
   //output to transcript...
   /** plain-text output */
@@ -180,7 +177,7 @@ protected:
   QDateTime timestamp;
     
   /** paint status used by paint() */
-  paintStatus *pstatus;
+//  paintStatus *pstatus;
 };
 
 
@@ -193,23 +190,23 @@ class KMUDDY_EXPORT chunkText : public chunkItem {
   
   const QString &text() { return _text; }
   void setText (const QString &t) { _text = t; }
-  virtual int length() { return _text.length(); }
+  virtual int length() override { return _text.length(); }
     //pos is index of last index that will remain in this item
-  virtual chunkItem *split (int pos);
-  virtual chunkItem *duplicate();
-  virtual void trimLeft ();
-  virtual void replace (int pos, int len, const QString &newtext);
+  virtual chunkItem *split (int pos) override;
+  virtual chunkItem *duplicate() override;
+  virtual void trimLeft () override;
+  virtual void replace (int pos, int len, const QString &newtext) override;
 
   //painting
-  virtual void paint (QPainter *painter, paintStatus *ps);
+//  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** plain-text output */
-  virtual QString toText () { return _text; };
+  virtual QString toText () override { return _text; };
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *) {return _text; };
+  virtual QString toAnsi (cANSIParser *) override {return _text; };
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &);
+  virtual QString toHTML (QString &) override;
  protected:
   QString _text;
 };
@@ -217,21 +214,21 @@ class KMUDDY_EXPORT chunkText : public chunkItem {
 #define CHUNK_FG 2
 class KMUDDY_EXPORT chunkFg : public chunkItem {
  public:
-  virtual int type() { return CHUNK_FG; };
+  virtual int type() override { return CHUNK_FG; };
   
   QColor fg() { return _fg; }
   void setFg (QColor fgc) { _fg = fgc; }
-  virtual int length() { return 0; }
-  virtual chunkItem *duplicate();
+  virtual int length() override { return 0; }
+  virtual chunkItem *duplicate() override;
  
   //painting
-  virtual void paint (QPainter *painter, paintStatus *ps);
+//  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap);
+  virtual QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix);
+  virtual QString toHTML (QString &suffix) override;
   
   static QString constructAnsi (QColor color, cANSIParser *ap);
   static QString constructHTML (QColor color, QString &suffix);
@@ -242,21 +239,21 @@ class KMUDDY_EXPORT chunkFg : public chunkItem {
 #define CHUNK_BG 3
 class KMUDDY_EXPORT chunkBg : public chunkItem {
  public:
-  virtual int type() { return CHUNK_BG; };
+  virtual int type() override { return CHUNK_BG; };
   
   QColor bg() { return _bg; }
   void setBg (QColor bgc) { _bg = bgc; }
-  virtual int length() { return 0; }
-  virtual chunkItem *duplicate();
+  virtual int length() override { return 0; }
+  virtual chunkItem *duplicate() override;
  
   //painting
-  virtual void paint (QPainter *painter, paintStatus *ps);
+//  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap);
+  virtual QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix);
+  virtual QString toHTML (QString &suffix) override;
   
   static QString constructAnsi (QColor color, cANSIParser *ap);
   static QString constructHTML (QColor color, QString &suffix);
@@ -277,18 +274,18 @@ class KMUDDY_EXPORT chunkBg : public chunkItem {
 #define CHUNK_ATTRIB 4
 class KMUDDY_EXPORT chunkAttrib : public chunkItem {
  public:
-  virtual int type() { return CHUNK_ATTRIB; };
+  virtual int type() override { return CHUNK_ATTRIB; };
   int attrib() { return _attrib; }
   void setAttrib (int a) { _attrib = a; }
-  virtual int length() { return 0; }
-  virtual chunkItem *duplicate();
+  virtual int length() override { return 0; }
+  virtual chunkItem *duplicate() override;
  
   //painting
-  virtual void paint (QPainter *painter, paintStatus *ps);
+//  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *);
+  virtual QString toAnsi (cANSIParser *) override;
   
   //no HTML output here - we cannot handle closing tags properly without too much hassle
   
@@ -305,7 +302,7 @@ struct menuItem {
 #define CHUNK_LINK 5
 class KMUDDY_EXPORT chunkLink : public chunkItem {
  public:
-  virtual int type() { return CHUNK_LINK; };
+  virtual int type() override { return CHUNK_LINK; };
 
   QString name() { return _name; }
   void setName (const QString &n) { _name = n; }
@@ -326,21 +323,21 @@ class KMUDDY_EXPORT chunkLink : public chunkItem {
   /** parse menu information */
   void parseMenu ();
   
-  virtual int length() { return _text.length(); }
-  virtual chunkItem *split (int pos);
-  virtual chunkItem *duplicate ();
-  virtual void trimLeft ();
-  virtual void replace (int pos, int len, const QString &newtext);
+  virtual int length() override { return _text.length(); }
+  virtual chunkItem *split (int pos) override;
+  virtual chunkItem *duplicate () override;
+  virtual void trimLeft () override;
+  virtual void replace (int pos, int len, const QString &newtext) override;
  
   const list<menuItem> &menu() { return _menu; };
   //painting
-  virtual void paint (QPainter *painter, paintStatus *ps);
+//  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap);
+  virtual QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix);
+  virtual QString toHTML (QString &suffix) override;
  protected:
   QString _name, _target, _text, _hint;
   bool _iscommand, _toprompt, _ismenu;

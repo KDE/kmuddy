@@ -35,44 +35,39 @@
 #include <kmessagebox.h>
 #include <ktextedit.h>
 
-dlgEditProfile::dlgEditProfile(QWidget *parent) : KDialog (parent)
+dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
 {
-  //initial dialog size
-  setInitialSize (QSize (350, 350));
-  setCaption (i18n ("Edit profile"));
+  setWindowTitle (i18n ("Edit profile"));
   setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
-  QWidget *page = new QWidget (this);
-  QGridLayout *layout = new QGridLayout (page);
-
-  setMainWidget (page);
+  QGridLayout *layout = new QGridLayout (this);
 
   // create the button that opens the MUD listing
-  QPushButton *btlist = new QPushButton (i18n ("&Select from MUD list"), page);
+  QPushButton *btlist = new QPushButton (i18n ("&Select from MUD list"), this);
   connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
 
   // put some edit boxes there
-  QLabel *l1 = new QLabel (i18n ("Profile &name:"), page);
-  ed1 = new KLineEdit (page);
+  QLabel *l1 = new QLabel (i18n ("Profile &name:"), this);
+  ed1 = new KLineEdit (this);
   ed1->setWhatsThis( i18n ("Enter profile name here. You can enter any "
   "name, but it must be <b>unique</b>."));
-  QLabel *l2 = new QLabel (i18n ("&Server:"), page);
-  ed2 = new KLineEdit (page);
+  QLabel *l2 = new QLabel (i18n ("&Server:"), this);
+  ed2 = new KLineEdit (this);
   ed2->setWhatsThis( i18n ("Enter address of the server where your MUD is running."));
-  QLabel *l3 = new QLabel (i18n ("&Port:"), page);
-  ed3 = new KRestrictedLine (page);
+  QLabel *l3 = new QLabel (i18n ("&Port:"), this);
+  ed3 = new KRestrictedLine (this);
   ed3->setValidChars ("0123456789");
   ed3->setWhatsThis( i18n ("Enter port on which your MUD running (usually some 4-digit number)."));
-  QLabel *l4 = new QLabel (i18n ("&Login name:"), page);
-  ed4 = new KLineEdit (page);
+  QLabel *l4 = new QLabel (i18n ("&Login name:"), this);
+  ed4 = new KLineEdit (this);
   ed4->setWhatsThis( i18n ("Enter your login name on the MUD here.<p><i>This setting is optional.</i>"));
-  QLabel *l5 = new QLabel (i18n ("Pass&word:"), page);
-  ed5 = new KLineEdit (page);
+  QLabel *l5 = new QLabel (i18n ("Pass&word:"), this);
+  ed5 = new KLineEdit (this);
   ed5->setEchoMode (KLineEdit::Password);
   ed5->setWhatsThis( i18n ("Enter your password on the MUD here.<p><i>This setting is optional.</i>"));
-  QLabel *l6 = new QLabel (i18n ("&Connect sequence"), page);
-  connstr = new KTextEdit (page);
+  QLabel *l6 = new QLabel (i18n ("&Connect sequence"), this);
+  connstr = new KTextEdit (this);
   connstr->setAcceptRichText (false);
   connstr->setWordWrapMode (QTextOption::NoWrap);
   connstr->setWhatsThis( i18n ("Commands to be sent to the MUD after "
@@ -112,6 +107,11 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : KDialog (parent)
 dlgEditProfile::~dlgEditProfile()
 {
   //nothing here
+}
+
+QSize dlgEditProfile::sizeHint() const
+{
+  return QSize (350, 350);
 }
 
 QString dlgEditProfile::name ()
@@ -206,6 +206,4 @@ void dlgEditProfile::slotOk ()
     emit okClicked ();
   }
 }
-
-#include "dlgeditprofile.moc"
 

@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DLGOUTPUTWINDOW_H
 
 #include <qfont.h>
-#include <kdialog.h>
+#include <QDialog>
 #include <kwindowsystem.h>
 
 class cConsole;
@@ -35,13 +35,14 @@ One output window.
 @author Vladimir Lazarenko
 */
 
-class dlgOutputWindow : public KDialog
+class dlgOutputWindow : public QDialog
 {
   Q_OBJECT
 public:
   dlgOutputWindow (QWidget *parent = 0);
   ~dlgOutputWindow();
 
+  virtual QSize sizeHint() const override;
   void addLine (cTextChunk *chunk);
   void setOutputWindowName(const QString &name);
   void setFont(QFont font);

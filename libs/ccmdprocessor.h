@@ -52,7 +52,7 @@ public:
 
   cValue eval (const QString &exp, cCmdQueue *queue, bool &ok);
 protected:
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
 
   /** Looks to see if this is a tab/window command call. If it is, the command
   is split into :window:mytext */

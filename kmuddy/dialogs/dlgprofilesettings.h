@@ -40,6 +40,7 @@ public:
   dlgProfileSettings (QWidget *parent=0);
   ~dlgProfileSettings ();
 
+  virtual QSize sizeHint() const override;
   bool useAnsi ();
   void setUseAnsi (bool val);
   bool limitRepeater ();

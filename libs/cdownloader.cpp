@@ -75,5 +75,3 @@ void cDownloader::slotResult (KIO::Job *job)
   currentJob = 0;
 }
 
-#include "cdownloader.moc"
-

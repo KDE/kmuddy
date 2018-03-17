@@ -57,5 +57,3 @@ void cPrompt::updatePrompt(const QString &text)
   setText (text);
 }
 
-#include "cprompt.moc"
-
