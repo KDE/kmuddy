@@ -28,9 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 struct cMenuManagerPrivate;
 
-class KMenu;
+class QMenu;
 class QAction;
-class KMenuBar;
+class QMenuBar;
 
 /**
 Menu manager. It manages the menubar, allowing plug-ins to insert items into the menu.
@@ -44,17 +44,17 @@ public:
   ~cMenuManager ();
 
   /** assign a menubar to the object. It can't work without having one. */
-  void setMenuBar (KMenuBar *menuBar);
+  void setMenuBar (QMenuBar *menuBar);
 
   /** create a position for menus */
   void addMenuPosition (const QString &name);
   /** create a position for menu items */
-  void addItemPosition (const QString &name, KMenu *menu);
+  void addItemPosition (const QString &name, QMenu *menu);
   
   /** add a new menu */
-  void addMenu (KMenu *menu, const QString &label, const QString &position);
+  void addMenu (QMenu *menu, const QString &label, const QString &position);
   /** remove an existing menu */
-  void removeMenu (KMenu *menu);
+  void removeMenu (QMenu *menu);
   
   /** plug an action to a given position */
   void plug (QAction *action, QString position);

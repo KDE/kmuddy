@@ -32,9 +32,9 @@ class cTimerEditor : public cListEditor {
   cTimerEditor (QWidget *parent);
   ~cTimerEditor ();
 
-  virtual void createGUI(QWidget *parent);
-  virtual void fillGUI (const cListObjectData &data);
-  virtual void getDataFromGUI (cListObjectData *data);
+  virtual void createGUI(QWidget *parent) override;
+  virtual void fillGUI (const cListObjectData &data) override;
+  virtual void getDataFromGUI (cListObjectData *data) override;
  protected:
   struct Private;
   Private *d;

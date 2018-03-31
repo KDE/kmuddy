@@ -37,11 +37,11 @@ class KMUDDY_EXPORT cListGroupEditor : public cListEditor {
   virtual ~cListGroupEditor ();
 protected:
   /** Create the GUI. */
-  virtual void createGUI(QWidget *parent);
+  virtual void createGUI(QWidget *parent) override;
   /** Fill in the GUI. */
-  virtual void fillGUI (const cListObjectData &data);
+  virtual void fillGUI (const cListObjectData &data) override;
   /** Read the data from the GUI, fill in the data structure. */
-  virtual void getDataFromGUI (cListObjectData *data);
+  virtual void getDataFromGUI (cListObjectData *data) override;
 };
 
 

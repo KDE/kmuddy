@@ -49,7 +49,8 @@
 #include <kpushbutton.h>
 #include <kstatusbar.h>
 
-#include <qtooltip.h>
+#include <QPushButton>
+#include <QToolTip>
 
 cSession::cSession (int sess, QWidget *parent) :
     KVBox (parent), cActionBase ("session", sess)
@@ -81,8 +82,8 @@ cSession::cSession (int sess, QWidget *parent) :
   _multiinputline->hide ();
   _multiinputline->setToolTip (i18n ("Ctrl+Enter adds new line, unless changed in settings"));
   
-  KPushButton *switchlinebutton = new KPushButton (promptinput);
-  switchlinebutton->setIcon (KIcon ("format-justify-center"));
+  QPushButton *switchlinebutton = new QPushButton (promptinput);
+  switchlinebutton->setIcon (QIcon::fromTheme ("format-justify-center"));
   switchlinebutton->setToolTip (i18n ("Switches between standard and multi-line input line."));
   
   //the button should take as few space as possible
@@ -208,4 +209,3 @@ void cSession::switchInputLines ()
   }
 }
 
-#include "csession.moc"

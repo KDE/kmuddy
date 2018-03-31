@@ -390,4 +390,3 @@ void cMXPManager::reset ()
 #endif  //HAVE_MXP
 }
 
-#include "cmxpmanager.moc"

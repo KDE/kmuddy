@@ -40,9 +40,9 @@ public:
   ~cTriggerList ();
 
   static cList *newList () { return new cTriggerList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Trigger"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Trigger"; }
+  virtual cListEditor *editor (QWidget *parent) override;
 
   /** Sends these commands via cCmdProcessor. */
   virtual void processCommands (const QStringList &commands);

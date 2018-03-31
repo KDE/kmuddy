@@ -72,7 +72,7 @@ public:
 
 protected:
   void load ();
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
 
   std::map<QString, dlgOutputWindow *> windows;
   QStringList toerase;

@@ -31,9 +31,9 @@ class cTriggerEditor : public cListEditor {
   cTriggerEditor (QWidget *parent);
   ~cTriggerEditor ();
 
-  virtual void createGUI(QWidget *parent);
-  virtual void fillGUI (const cListObjectData &data);
-  virtual void getDataFromGUI (cListObjectData *data);
+  virtual void createGUI(QWidget *parent) override;
+  virtual void fillGUI (const cListObjectData &data) override;
+  virtual void getDataFromGUI (cListObjectData *data) override;
  protected slots:
   void updateEditButton (const QString &comboText);
   void editRegExp ();

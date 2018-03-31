@@ -33,11 +33,11 @@ public:
   ~cTimerList ();
 
   static cList *newList () { return new cTimerList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Timer"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Timer"; }
+  virtual cListEditor *editor (QWidget *parent) override;
 
-  virtual void setEnabled (bool en = true);
+  virtual void setEnabled (bool en = true) override;
 protected slots:
   void timeout ();
 protected:

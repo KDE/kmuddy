@@ -69,7 +69,7 @@ private:
   /** constructor */
   cSessionManager ();
 
-  void eventNothingHandler (QString event, int session);
+  void eventNothingHandler (QString event, int session) override;
 
   enum ProfileIcon {
     IconOk, IconNo, IconFlag

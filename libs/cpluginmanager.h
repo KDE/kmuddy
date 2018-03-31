@@ -84,10 +84,10 @@ protected:
   
   static cPluginManager *_self;
 
-  virtual void eventIntHandler (QString event, int session, int par1, int par2);
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2);
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *par);
+  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventChunkHandler (QString event, int session, cTextChunk *par) override;
   
   void findPlugins ();
   

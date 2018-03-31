@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CMULTIINPUTLINE_H
 #define CMULTIINPUTLINE_H
 
-#include <q3textedit.h>
+#include <QTextEdit>
 
 #include "cactionbase.h"
 
@@ -32,7 +32,7 @@ The multi-line input line. It can hold several lines, and can automatically expa
 
 @author Tomas Mecir
 */
-class cMultiInputLine : public Q3TextEdit, public cActionBase
+class cMultiInputLine : public QTextEdit, public cActionBase
 {
 Q_OBJECT
 public:
@@ -54,7 +54,7 @@ public:
   void setLinesHeight (int lines);
   
   /** set the new font */
-  virtual void setFont (const QFont &font);
+  void setMyFont (const QFont &font);
   
 signals:
   void commandEntered (const QString &command);
@@ -62,10 +62,10 @@ signals:
 protected slots:
   void updateHeight ();
 protected:
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
   void sendCommands ();
 
-  virtual void keyPressEvent (QKeyEvent *e);
+  virtual void keyPressEvent (QKeyEvent *e) override;
 
   int _lines;
 

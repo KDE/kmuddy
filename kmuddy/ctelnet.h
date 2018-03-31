@@ -25,6 +25,7 @@
 
 #include <config-mxp.h>
 #include "cactionbase.h"
+#include <QObject>
 
 struct cTelnetPrivate;
 
@@ -222,8 +223,8 @@ protected slots:
   void socketRead ();
   void socketClosed ();
 protected:
-  virtual void eventIntHandler (QString event, int session, int par1, int par2);
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
+  virtual void eventNothingHandler (QString event, int session) override;
 
   void reset ();
   void setupSocketHandlers ();

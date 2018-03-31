@@ -212,7 +212,7 @@ void cConsole::forceEmitSize () {
   emit dimensionsChanged (curCols(), curRows());
 }
 
-void cConsole::dumpBuffer (bool fromcurrent, FILE *file, char dumpType) {
+void cConsole::dumpBuffer (bool fromcurrent, QFile &file, char dumpType) {
   // TODO
 }
 

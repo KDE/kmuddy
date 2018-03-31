@@ -59,5 +59,3 @@ cVariableList *cScriptAPI::varList ()
   return dynamic_cast<cVariableList *>(am->object ("variables", sess()));
 }
 
-
-#include "cscriptapi.moc"

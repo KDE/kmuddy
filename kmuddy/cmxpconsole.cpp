@@ -93,5 +93,3 @@ void cMXPConsole::addWarning (int sess, const QString &text)
 #endif  //HAVE_MXP  
 }
 
-
-#include "cmxpconsole.moc"

@@ -22,9 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cmenumanager.h"
 
-#include <qaction.h>
-#include <kmenubar.h>
-#include <kmenu.h>
+#include <QAction>
+#include <QMenuBar>
+#include <QMenu>
 
 #include <list>
 #include <map>
@@ -32,12 +32,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using namespace std;
 
 struct cMenuManagerPrivate {
-  KMenuBar *menuBar;
+  QMenuBar *menuBar;
   map<QString, QAction *> positions;  // where to place individual items
-  map<QString, KMenu *> locations;    // which position is in which menu
-  map<KMenu *, QString> lastPositionInMenu;
-  map<KMenu *, QAction *> menuActions;
-  map<QAction *, KMenu *> actionLocations;
+  map<QString, QMenu *> locations;    // which position is in which menu
+  map<QMenu *, QString> lastPositionInMenu;
+  map<QMenu *, QAction *> menuActions;
+  map<QAction *, QMenu *> actionLocations;
 };
 
 cMenuManager *cMenuManager::_self = 0;
@@ -59,7 +59,7 @@ cMenuManager *cMenuManager::self ()
   return _self;
 }
 
-void cMenuManager::setMenuBar (KMenuBar *menuBar)
+void cMenuManager::setMenuBar (QMenuBar *menuBar)
 {
   d->menuBar = menuBar;
 }
@@ -69,7 +69,7 @@ void cMenuManager::addMenuPosition (const QString &name)
   addItemPosition (name, 0);
 }
 
-void cMenuManager::addItemPosition (const QString &name, KMenu *menu)
+void cMenuManager::addItemPosition (const QString &name, QMenu *menu)
 {
   if (d->positions.count (name)) return;
   
@@ -84,14 +84,14 @@ void cMenuManager::addItemPosition (const QString &name, KMenu *menu)
   d->locations[name] = menu;
 }
 
-void cMenuManager::addMenu (KMenu *menu, const QString &label, const QString &position)
+void cMenuManager::addMenu (QMenu *menu, const QString &label, const QString &position)
 {
   // nothing if there's no such position
   if (!d->positions.count (position)) return;
   
   // plug the actual item
   QAction *before = d->positions[position];
-  KMenu *inMenu = d->locations[position];
+  QMenu *inMenu = d->locations[position];
   if (inMenu) return;
   if (before)
     d->menuBar->insertMenu (before, menu);
@@ -100,7 +100,7 @@ void cMenuManager::addMenu (KMenu *menu, const QString &label, const QString &po
   menu->setTitle (label);
 }
 
-void cMenuManager::removeMenu (KMenu *menu)
+void cMenuManager::removeMenu (QMenu *menu)
 {
   d->menuBar->removeAction (d->menuActions[menu]);
   d->menuActions.erase (menu);
@@ -108,7 +108,7 @@ void cMenuManager::removeMenu (KMenu *menu)
 
   // remove all positions tied to this menu
   QStringList pl;
-  map<QString, KMenu *>::iterator it;
+  map<QString, QMenu *>::iterator it;
   for (it = d->locations.begin(); it != d->locations.end(); ++it)
     if (it->second == menu)
       pl << it->first;
@@ -127,7 +127,7 @@ void cMenuManager::plug (QAction *action, QString position)
   
   // plug the actual item
   QAction *before = d->positions[position];
-  KMenu *menu = d->locations[position];
+  QMenu *menu = d->locations[position];
   if (!menu) return;
   if (before)
     menu->insertAction (before, action);
@@ -138,7 +138,7 @@ void cMenuManager::plug (QAction *action, QString position)
 
 void cMenuManager::unplug (QAction *action)
 {
-  KMenu *menu = d->actionLocations[action];
+  QMenu *menu = d->actionLocations[action];
   if (menu) 
     menu->removeAction (action);
   d->actionLocations.erase (action);

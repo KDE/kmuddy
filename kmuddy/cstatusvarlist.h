@@ -39,9 +39,9 @@ class cStatusVarList : public cList
   ~cStatusVarList ();
   
   static cList *newList () { return new cStatusVarList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Status variable"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Status variable"; }
+  virtual cListEditor *editor (QWidget *parent) override;
 
   void variableChanged (const QString &varname);
  private:
@@ -49,7 +49,7 @@ class cStatusVarList : public cList
   Private *d;
   friend class cStatusVar;
 
-  virtual void listLoaded ();
+  virtual void listLoaded () override;
 
   QString variableName () const;
 

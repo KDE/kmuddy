@@ -1104,4 +1104,3 @@ void cTelnet::setNegotiateOnStartup (bool startupneg)
   d->_startupneg = startupneg;
 }
 
-#include "ctelnet.moc"

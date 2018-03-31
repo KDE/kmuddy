@@ -24,12 +24,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cmudlist.h"
 
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
 #include <QSortFilterProxyModel>
 #include <QSplitter>
 #include <QTextDocument>
 #include <QTreeView>
+
 #include <klineedit.h>
 #include <klocale.h>
 #include <ktextbrowser.h>
@@ -53,7 +55,6 @@ dlgMudList::dlgMudList (QWidget *parent) : QDialog (parent)
 
   // initialize the dialog
   setWindowTitle (i18n ("MUD Listing"));
-  setButtons (KDialog::Ok | KDialog::Cancel);
 
   //create main dialog's widget
   QVBoxLayout *mainLayout = new QVBoxLayout (this);
@@ -75,9 +76,14 @@ dlgMudList::dlgMudList (QWidget *parent) : QDialog (parent)
   QLabel *source = new QLabel ("The list is provided courtesy of <a href=\"http://www.mudconnector.com/\">The MUD Connector</a>.<br/>If you are unsure which game to pick, you may also want to check out <a href=\"http://www.topmudsites.com\">www.topmudsites.com</a>.", this);
   source->setOpenExternalLinks (true);
   source->setWordWrap (true);
-  
+
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
   mainLayout->addWidget (page);
   mainLayout->addWidget (source);
+  mainLayout->addWidget (buttons);
 
   d->view->setRootIsDecorated (false);
   d->view->setItemsExpandable (false);

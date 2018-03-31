@@ -36,8 +36,8 @@ class KMUDDY_EXPORT cPrompt : public QLabel, public cActionBase {
   ~cPrompt();
   void updatePrompt (const QString &text);
  protected:
-  virtual void eventStringHandler (QString event, int, QString &par1, const QString &);
-  virtual void eventNothingHandler (QString event, int);
+  virtual void eventStringHandler (QString event, int, QString &par1, const QString &) override;
+  virtual void eventNothingHandler (QString event, int) override;
 
 };
 

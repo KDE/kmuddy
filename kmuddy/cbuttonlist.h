@@ -41,16 +41,16 @@ public:
   ~cButtonList ();
 
   static cList *newList () { return new cButtonList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Button"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Button"; }
+  virtual cListEditor *editor (QWidget *parent) override;
   
   void updateButtons ();
  private:
   bool loaded;
   friend class cButton;
 
-  virtual void listLoaded ();
+  virtual void listLoaded () override;
 };
 
 #endif  //CBUTTONLIST_H

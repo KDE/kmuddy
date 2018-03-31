@@ -24,10 +24,10 @@
 
 #include <kmainwindow.h>
 
-class KMenu;
+class QMenu;
 class QTimer;
 class KHelpMenu;
-class KMenuBar;
+class QMenuBar;
 class KToolBar;
 
 class dlgConnect;
@@ -176,27 +176,27 @@ protected:
   KMuddy ();
   static KMuddy *_self;
 
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventIntHandler (QString event, int session, int, int);
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *);
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventIntHandler (QString event, int session, int, int) override;
+  virtual void eventChunkHandler (QString event, int session, cTextChunk *) override;
   virtual void eventStringHandler (QString event, int session, QString &par1,
-      const QString &par2);
+      const QString &par2) override;
 
   void prepareObjects ();
   void killObjects ();
   /** called when we try to close the window (Alt+F4 or the Close icon) */
-  virtual bool queryClose ();
+  virtual bool queryClose () override;
   
   /** calls cSessionManager::self()->activeSession. Provided for convenience. */
   int activeSession ();
   
   /** event filter, used to grab macro keys */
-  bool eventFilter (QObject *o, QEvent *e);
+  bool eventFilter (QObject *o, QEvent *e) override;
 
   /** save session properties */
-  void saveProperties (KConfigGroup &config);
+  void saveProperties (KConfigGroup &config) override;
   /** read session properties */
-  void readProperties (const KConfigGroup &config);
+  void readProperties (const KConfigGroup &config) override;
 
   dlgGrabKey *grabdlg;
 
@@ -207,8 +207,8 @@ protected:
   static bool goingDown;
   
   /**menus*/
-  KMenu *connectionMenu, *editMenu, *viewMenu, *profileMenu;
-  KMenu *toolsMenu, *settingsMenu, *popup;
+  QMenu *connectionMenu, *editMenu, *viewMenu, *profileMenu;
+  QMenu *toolsMenu, *settingsMenu, *popup;
   KHelpMenu *helpMenu;
 
   /**System Tray Icon*/

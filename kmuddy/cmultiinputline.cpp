@@ -26,21 +26,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ccmdqueue.h"
 #include "ccmdqueues.h"
 
-#include <kglobalsettings.h>
 #include <QKeyEvent>
+#include <QFontDatabase>
 
 //maximum number of lines ...
 #define MAXLINES 10
 
 cMultiInputLine::cMultiInputLine (int sess, QWidget *parent)
- : Q3TextEdit(parent), cActionBase ("multiinputline", sess)
+ : QTextEdit(parent), cActionBase ("multiinputline", sess)
 {
   setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Fixed);
 
   setTextFormat (Qt::PlainText);
 
-  setWordWrap (Q3TextEdit::WidgetWidth);
-  setWrapPolicy (Q3TextEdit::AtWordOrDocumentBoundary);
+  setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
 
   //height: 2 lines
   setLinesHeight (2);
@@ -65,7 +64,7 @@ void cMultiInputLine::eventNothingHandler (QString event, int session)
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();
 
-    setFont (gs->getFont ("input-font"));
+    setMyFont (gs->getFont ("input-font"));
     keepText (gs->getBool ("keep-text"));
     selectKeptText (gs->getBool ("keep-text") ? gs->getBool ("select-kept") : false);
     swapEnters (gs->getBool ("swap-enters"));
@@ -87,16 +86,16 @@ void cMultiInputLine::initialize ()
   setPalette (p);
 
   //scroll-bars
-  setHScrollBarMode (Q3ScrollView::AlwaysOff);
-  setVScrollBarMode (Q3ScrollView::AlwaysOn);
+  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
+  setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
   
   //change font
-  setFont (KGlobalSettings::fixedFont ()); //default system fixed font
+  setMyFont (QFontDatabase::systemFont (QFontDatabase::FixedFont)); //default system fixed font
 }
 
-void cMultiInputLine::setFont (const QFont &font)
+void cMultiInputLine::setMyFont (const QFont &font)
 {
-  Q3TextEdit::setFont (font);
+  setCurrentFont (font);
   setLinesHeight (_lines);
 }
 
@@ -165,10 +164,9 @@ void cMultiInputLine::keyPressEvent (QKeyEvent *e)
       sendCommands ();
     else
       //standard behaviour otherwise
-      Q3TextEdit::keyPressEvent (e);
+      QTextEdit::keyPressEvent (e);
   }
   else
-    Q3TextEdit::keyPressEvent (e);
+    QTextEdit::keyPressEvent (e);
 }
 
-#include "cmultiinputline.moc"

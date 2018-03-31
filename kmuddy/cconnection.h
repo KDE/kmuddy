@@ -54,11 +54,10 @@ public:
   void sendCommands ();
   int sentCommands ();
 
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventStringHandler (QString event, int session,
-      QString &par1, const QString &);
-  virtual QString actionStringHandler (QString action, int session, QString &par1, const QString &);
-  virtual QString actionNothingHandler (QString action, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
+  virtual QString actionStringHandler (QString action, int session, QString &par1, const QString &) override;
+  virtual QString actionNothingHandler (QString action, int session) override;
 
 public slots:
   void showConnPrefsDialog ();

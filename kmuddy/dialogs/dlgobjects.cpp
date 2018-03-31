@@ -29,16 +29,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clistmanager.h"
 #include "clistviewer.h"
 
-#include <kaction.h>
 #include <kactioncollection.h>
 #include <klocale.h>
 #include <ktoolbar.h>
 #include <kdebug.h>
 
 #include <QComboBox>
+#include <QDialogButtonBox>
 #include <QSplitter>
 #include <QStackedWidget>
 #include <QStandardItemModel>
+#include <QVBoxLayout>
 
 struct dlgObjects::Private
 {
@@ -51,7 +52,7 @@ struct dlgObjects::Private
   QString currentList;
   int currentSession;
 
-  KAction *aUp, *aDown, *aLeft, *aRight;
+  QAction *aUp, *aDown, *aLeft, *aRight;
 };
 
 dlgObjects::dlgObjects (QWidget *parent)
@@ -61,12 +62,10 @@ dlgObjects::dlgObjects (QWidget *parent)
 
   //initial dialog size
   setWindowTitle (i18n ("Object Manager"));
-  setButtons (KDialog::Close);
 
   //create main dialog's widget
   QSplitter *page = new QSplitter (this);
-
-  setMainWidget (page);
+  QVBoxLayout *mainLayout = new QVBoxLayout (this);
 
   QWidget *left = new QWidget (page);
   d->editorStack = new QStackedWidget (page);
@@ -87,21 +86,21 @@ dlgObjects::dlgObjects (QWidget *parent)
   d->editorStack->addWidget (d->emptyEditor);
   d->editorStack->addWidget (d->groupEditor);
 
-  d->aUp = new KAction (this);
+  d->aUp = new QAction (this);
   d->aUp->setText (i18n ("Up"));
-  d->aUp->setIcon (KIcon ("arrow-up"));
+  d->aUp->setIcon (QIcon::fromTheme ("arrow-up"));
   connect (d->aUp, SIGNAL (triggered()), d->viewer, SLOT (moveUp()));
-  d->aDown = new KAction(this);
+  d->aDown = new QAction(this);
   d->aDown->setText (i18n ("Down"));
-  d->aDown->setIcon (KIcon ("arrow-down"));
+  d->aDown->setIcon (QIcon::fromTheme ("arrow-down"));
   connect (d->aDown, SIGNAL (triggered()), d->viewer, SLOT (moveDown()));
-  d->aLeft = new KAction (this);
+  d->aLeft = new QAction (this);
   d->aLeft->setText (i18n ("Left"));
-  d->aLeft->setIcon (KIcon ("arrow-left"));
+  d->aLeft->setIcon (QIcon::fromTheme ("arrow-left"));
   connect (d->aLeft, SIGNAL (triggered()), d->viewer, SLOT (moveLeft()));
-  d->aRight = new KAction (this);
+  d->aRight = new QAction (this);
   d->aRight->setText (i18n ("Right"));
-  d->aRight->setIcon (KIcon ("arrow-right"));
+  d->aRight->setIcon (QIcon::fromTheme ("arrow-right"));
   connect (d->aRight, SIGNAL (triggered()), d->viewer, SLOT (moveRight()));
 
   KActionCollection *col = d->viewer->actionCollection ();
@@ -122,11 +121,17 @@ dlgObjects::dlgObjects (QWidget *parent)
   page->addWidget (left);
   page->addWidget (d->editorStack);
 
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Close, this);
+  connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+  mainLayout->addWidget (page);
+  mainLayout->addWidget (buttons);
+
   connect (d->lists, SIGNAL (currentIndexChanged (int)),
       this, SLOT (listChanged (int)));
   connect (d->viewer, SIGNAL (itemActivated (cListObject *)), this, SLOT (activeObjectChanged (cListObject *)));
-  connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
-  connect (this, &QDialog::accepted, this, SLOT (saveChanges()));
+  connect (this, &QDialog::accepted, this, &dlgObjects::saveChanges);
+  connect (this, &QDialog::rejected, this, &dlgObjects::saveChanges);
 
   d->currentSession = cActionManager::self()->activeSession ();
 

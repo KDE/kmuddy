@@ -29,9 +29,10 @@
 #include "dialogs/dlgtranscript.h"
 #include "dialogs/dlgdumpbuffer.h"
 
-#include <errno.h>
-
-#include <qdir.h>
+#include <QDir>
+#include <QFile>
+#include <QPushButton>
+#include <QTimer>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kconfig.h>
@@ -43,8 +44,6 @@ cTranscript::cTranscript (int sess) : cActionBase ("transcript", sess)
   running = false;
   advrunning = false;
   rotatedaily = false;
-  file = NULL;
-  advfile = NULL;
   overwrite = true;
   includedump = false;
   includetimestamp = false;
@@ -118,11 +117,8 @@ void cTranscript::addLineToTranscript (cTextChunk *chunk)
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
   s += "\n";  // we use <pre> in HTML, so this applies equally to all three
-  QByteArray b = s.toLocal8Bit ();
-  const char *ch = b.constData();
-  if (ch)
-    fputs (ch, file);
-  fflush (file);
+  file.write (s.toLocal8Bit ());
+  file.flush();
 }
 
 void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
@@ -135,7 +131,7 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
   {
     QTime time = QTime::currentTime ();
     timestamp.sprintf ("[%02d:%02d:%02d.%02d] ", time.hour(), time.minute(), time.second(), time.msec() / 10);
-    fputs (timestamp.toLatin1(), advfile);
+    advfile.write (timestamp.toLatin1());
   }
  
   cANSIParser *ap = dynamic_cast<cANSIParser *>(object ("ansiparser"));
@@ -146,12 +142,9 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
   s += "\n";  // we use <pre> in HTML, so this applies equally to all three
-  QByteArray b = s.toLocal8Bit ();
-  const char *ch = b.constData();
-  if (ch)
-    fputs (ch, advfile);
+  advfile.write (s.toLocal8Bit ());
   
-  fflush (advfile);
+  advfile.flush();
 }
 
 void cTranscript::stopTranscript ()
@@ -159,7 +152,7 @@ void cTranscript::stopTranscript ()
   if (!running)
     return;
     
-  fputs ("\n\n", file);
+  file.write ("\n\n");
   
   if (type == TRANSCRIPT_ANSI)  //ANSI transcript
   {
@@ -170,17 +163,16 @@ void cTranscript::stopTranscript ()
     defcolor[2] = '0';
     defcolor[3] = 'm';
     defcolor[4] = 0;
-    fputs (defcolor, file);
+    file.write (defcolor);
   }
   if (type == TRANSCRIPT_HTML)  //HTML transcript
   {
     //closing HTML tags
-    fputs ("</pre></body></html>\n", file);
+    file.write ("</pre></body></html>\n");
   }
   
   running = false;
-  fclose (file);
-  file = 0;
+  file.close();
   invokeEvent ("message", sess(), i18n ("Session transcript has been stopped."));
 }
 
@@ -189,7 +181,7 @@ void cTranscript::stopAdvTranscript ()
   if (!advrunning)
     return;
     
-  fputs ("\n\n", advfile);
+  advfile.write ("\n\n");
   
   if (type == TRANSCRIPT_ANSI)  //ANSI transcript
   {
@@ -200,17 +192,16 @@ void cTranscript::stopAdvTranscript ()
     defcolor[2] = '0';
     defcolor[3] = 'm';
     defcolor[4] = 0;
-    fputs (defcolor, advfile);
+    advfile.write (defcolor);
   }
   if (type == TRANSCRIPT_HTML)  //HTML transcript
   {
     //closing HTML tags
-    fputs ("</pre></body></html>\n", advfile);
+    advfile.write ("</pre></body></html>\n");
   }
     
   advrunning = false;
-  fclose (advfile);
-  advfile = 0;
+  advfile.close();
   if (transtimer->isActive ())
   {
     transtimer->stop ();
@@ -262,41 +253,38 @@ void cTranscript::startTranscript ()
   cTelnet *telnet = dynamic_cast<cTelnet *>(object ("telnet"));
   if (!(telnet->isConnected()))  //no transcript if we aren't connected
     return;
-  errno = 0;
   
-  file = fopen (fname.toLatin1(), overwrite ? "w" : "a");
-  if (file == NULL)
+  file.setFileName (fname);
+  if (!file.open (QIODevice::WriteOnly | QIODevice::Text | ( overwrite ? QIODevice::Truncate : QIODevice::Append )))
   {
     KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
-        i18n ("Transcript file could not be opened."), strerror (errno));
-    errno = 0;
+        i18n ("Transcript file could not be opened."), file.errorString());
     invokeEvent ("message", sess(), i18n ("Session transcript could not be started."));
+    return;
   }
-  else
+
+  running = true;
+  cOutput *output = dynamic_cast<cOutput *>(object ("output"));
+  file.write ("\n\n");
+  if (type == TRANSCRIPT_HTML)
   {
-    running = true;
-    cOutput *output = dynamic_cast<cOutput *>(object ("output"));
-    fputs ("\n\n", file);
-    if (type == TRANSCRIPT_HTML)
-    {
-      //TODO: what if we're adding to an existing HTML transcript?
-      fputs ("<html>\n", file);
-      fputs ("<meta name=\"Generator\" content=\"KMuddy\">\n", file);
-      fputs ("<body bgcolor=", file);
-      fputs (output->defaultBkColor().name().toLatin1(), file);
-      fputs (">\n", file);
-    }
-    QString s = i18n ("Session transcript has just started.");
-    fputs (s.toLatin1(), file);
-    if (type == TRANSCRIPT_HTML) fputs ("<br><pre>", file);  //pre-formatted text starting...
-    fputs ("\n\n", file);
-
-    //add buffer dump if requested
-    if (includedump)
-      output->console()->dumpBuffer (false, file, type);
-
-    invokeEvent ("message", sess(), i18n ("Session transcript has been started."));
+    //TODO: what if we're adding to an existing HTML transcript?
+    file.write ("<html>\n");
+    file.write ("<meta name=\"Generator\" content=\"KMuddy\">\n");
+    file.write ("<body bgcolor=");
+    file.write (output->defaultBkColor().name().toLatin1());
+    file.write (">\n");
   }
+  QString s = i18n ("Session transcript has just started.");
+  file.write (s.toLatin1());
+  if (type == TRANSCRIPT_HTML) file.write ("<br/><pre>");  //pre-formatted text starting...
+  file.write ("\n\n");
+
+  //add buffer dump if requested
+  if (includedump)
+    output->console()->dumpBuffer (false, file, type);
+
+  invokeEvent ("message", sess(), i18n ("Session transcript has been started."));
 }
 
 void cTranscript::startAdvTranscript ()
@@ -312,8 +300,6 @@ void cTranscript::startAdvTranscript ()
   if(advfname.isEmpty())
     return; // no transcript if advanced filename failed
   
-  errno = 0;
- 
   transtimer = new QTimer();
   connect (transtimer, SIGNAL (timeout ()), this, SLOT (timeout ()));
 
@@ -321,40 +307,38 @@ void cTranscript::startAdvTranscript ()
   af = sett ? sett->getString ("transcript-directory") : QDir::homePath();
   af += advfname;
 
-  advfile = fopen (af.toLatin1(), "a");
-  if (advfile == NULL)
+  file.setFileName (af);
+  if (!advfile.open (QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
   {
     KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
-        i18n ("Advanced transcript file could not be opened."), strerror (errno));
-    errno = 0;
+        i18n ("Advanced transcript file could not be opened."), advfile.errorString());
     invokeEvent ("message", sess(), i18n ("Advanced session transcript could not be started."));
+    return;
   }
-  else
-  {
-    advrunning = true;
-    cOutput *output = dynamic_cast<cOutput *>(object ("output"));
-    fputs ("\n\n", advfile);
-    if (advtype == TRANSCRIPT_HTML)
-    {
-      //TODO: what if we're adding to an existing HTML transcript?
-      fputs ("<html>\n", advfile);
-      fputs ("<meta name=\"Generator\" content=\"KMuddy\">\n", advfile);
-      fputs ("<body bgcolor=", advfile);
-      fputs (output->defaultBkColor().name().toLatin1(), advfile);
-      fputs (">\n", advfile);
-    }
-    QString s = i18n ("Advanced session transcript has just started.");
-    fputs (s.toLatin1(), advfile);
-    if (advtype == TRANSCRIPT_HTML) fputs ("<br><pre>", advfile);  //pre-formatted text starting...
-    fputs ("\n\n", advfile);
 
-    invokeEvent ("message", sess(), i18n ("Advanced session transcript has been started."));
-    
-    if (rotatedaily)
-    {
-      invokeEvent ("message", sess(), i18n ("Session transcript will be rotated at midnight."));
-      transtimer->start (60000);
-    }
+  advrunning = true;
+  cOutput *output = dynamic_cast<cOutput *>(object ("output"));
+  advfile.write ("\n\n");
+  if (advtype == TRANSCRIPT_HTML)
+  {
+    //TODO: what if we're adding to an existing HTML transcript?
+    advfile.write ("<html>\n");
+    advfile.write ("<meta name=\"Generator\" content=\"KMuddy\">\n");
+    advfile.write ("<body bgcolor=");
+    advfile.write (output->defaultBkColor().name().toLatin1());
+    advfile.write (">\n");
+  }
+  QString s = i18n ("Advanced session transcript has just started.");
+  advfile.write (s.toLatin1());
+  if (advtype == TRANSCRIPT_HTML) advfile.write ("<br/><pre>");  //pre-formatted text starting...
+  advfile.write ("\n\n");
+
+  invokeEvent ("message", sess(), i18n ("Advanced session transcript has been started."));
+  
+  if (rotatedaily)
+  {
+    invokeEvent ("message", sess(), i18n ("Session transcript will be rotated at midnight."));
+    transtimer->start (60000);
   }
 }
 
@@ -436,26 +420,25 @@ void cTranscript::doDumpBuffer ()
 {
   QString fName = bdlg->fileName();
   int type = bdlg->type();
-  FILE *f = fopen (fName.toLatin1(), "w");
-  if (f)
-  {
-    cOutput *output = dynamic_cast<cOutput *>(object ("output"));
-    if (type == TRANSCRIPT_HTML)
-    {
-      fputs ("<html>\n", f);
-      fputs ("<meta name=\"Generator\" content=\"KMuddy\">\n", f);
-      fputs ("<body bgcolor=", f);
-      fputs (output->defaultBkColor().name().toLatin1(), f);
-      fputs ("><pre>\n", f);
-    }
-    output->console()->dumpBuffer (bdlg->curPos(), f, type);
-    if (type == TRANSCRIPT_HTML)
-      fputs ("\n</pre></body></html>\n", f);
-  }
-  else
+  QFile f (fName);
+  if (!f.open (QIODevice::WriteOnly | QIODevice::Text)) {
     KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
-        i18n ("Dump file could not be opened."), strerror (errno));
-  fclose (f);
+        i18n ("Dump file could not be opened."), f.errorString());
+    return;
+  }
+  cOutput *output = dynamic_cast<cOutput *>(object ("output"));
+  if (type == TRANSCRIPT_HTML)
+  {
+    f.write ("<html>\n");
+    f.write ("<meta name=\"Generator\" content=\"KMuddy\">\n");
+    f.write ("<body bgcolor=");
+    f.write (output->defaultBkColor().name().toLatin1());
+    f.write ("><pre>\n");
+  }
+  output->console()->dumpBuffer (bdlg->curPos(), f, type);
+  if (type == TRANSCRIPT_HTML)
+    f.write ("\n</pre></body></html>\n");
+  f.close ();
 }
 
 void cTranscript::timeout()
@@ -515,4 +498,3 @@ QString cTranscript::getAFName()
   return advfname;
 }
 
-#include "ctranscript.moc"

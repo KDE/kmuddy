@@ -38,7 +38,7 @@ public:
 public slots:
   void update ();
 protected:
-  void eventIntHandler (QString event, int, int, int);
+  void eventIntHandler (QString event, int, int, int) override;
 
   QTimer *updateTimer;
 

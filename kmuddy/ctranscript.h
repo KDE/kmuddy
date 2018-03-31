@@ -19,9 +19,8 @@
 #ifndef CTRANSCRIPT_H
 #define CTRANSCRIPT_H
 
-#include <stdio.h>
-
-#include <qobject.h>
+#include <QObject>
+#include <QFile>
 
 #include "cactionbase.h"
 
@@ -63,8 +62,8 @@ protected slots:
   void applyTranscript ();
   void doDumpBuffer ();
 protected:
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *chunk);
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventChunkHandler (QString event, int session, cTextChunk *chunk) override;
   
   void startTranscript ();
   
@@ -74,7 +73,7 @@ protected:
   bool running, advrunning, rotatedaily;
   bool overwrite, includedump;
   bool includetimestamp;
-  FILE *file, *advfile;
+  QFile file, advfile;
   QString fname, advfname, fileformat;
   QTimer *transtimer;
 

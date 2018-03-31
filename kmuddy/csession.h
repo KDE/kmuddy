@@ -66,10 +66,9 @@ public:
 
   void setAuxInput (bool val);
 
-  virtual QString actionNothingHandler (QString action, int session);
-  virtual void eventNothingHandler (QString event, int session);
-  virtual void eventStringHandler (QString event, int session,
-      QString &par1, const QString &par2);
+  virtual QString actionNothingHandler (QString action, int session) override;
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
 protected slots:
   /** switch between standard input and multi-line input */
   void switchInputLines ();

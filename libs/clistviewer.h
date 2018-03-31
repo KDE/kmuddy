@@ -57,10 +57,10 @@ class KMUDDY_EXPORT cListViewer: public QTreeView {
   void moveLeft ();
   void moveRight ();
  protected slots:
-  virtual void currentChanged (const QModelIndex &current, const QModelIndex &previous);
+  virtual void currentChanged (const QModelIndex &current, const QModelIndex &previous) override;
  protected:
   /** Context menu handler. */
-  virtual void contextMenuEvent (QContextMenuEvent *event);
+  virtual void contextMenuEvent (QContextMenuEvent *event) override;
  private:
   struct Private;
   Private *d;

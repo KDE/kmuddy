@@ -157,4 +157,3 @@ void cButtonEditor::getDataFromGUI (cListObjectData *data)
   data->strValues["script-release"] = d->scriptrel->text();
 }
 
-#include "cbuttoneditor.moc"

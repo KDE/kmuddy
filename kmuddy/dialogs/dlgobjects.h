@@ -40,8 +40,8 @@ class dlgObjects: public QDialog, public cActionBase {
   void activeObjectChanged (cListObject *obj);
   void saveChanges ();
  private:
-  void eventNothingHandler (QString event, int session);
-  void eventIntHandler (QString event, int, int par1, int);
+  void eventNothingHandler (QString event, int session) override;
+  void eventIntHandler (QString event, int, int par1, int) override;
 
   void switchList ();
 

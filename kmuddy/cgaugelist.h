@@ -42,9 +42,9 @@ public:
   ~cGaugeList ();
 
   static cList *newList () { return new cGaugeList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Gauge"; }
-  virtual cListEditor *editor (QWidget *parent);
+  virtual cListObject *newObject () override;
+  virtual QString objName () override { return "Gauge"; }
+  virtual cListEditor *editor (QWidget *parent) override;
   
   /** a gauge request, adds a new gauge, if there is no gauge already using the
   same base variable */
@@ -60,7 +60,7 @@ public:
   Private *d;
   friend class cGauge;
 
-  virtual void listLoaded ();
+  virtual void listLoaded () override;
   
   void addGauge (cGauge *g);
   void removeGauge (cGauge *g);

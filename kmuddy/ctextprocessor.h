@@ -57,9 +57,8 @@ public:
 
   void setOutputWindow(QString winname) { wname = winname; };
   
-  virtual void eventStringHandler (QString event, int session, QString &par1,
-      const QString &);
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
+  virtual void eventNothingHandler (QString event, int session) override;
 
 public slots:
   // processing of various received items...

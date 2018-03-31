@@ -91,4 +91,3 @@ void cMultiLineInput::setFont (QFont font)
   if (multiline) multiline->setFont (font);
 }
 
-#include "cmultilineinput.moc"

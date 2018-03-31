@@ -47,7 +47,7 @@ protected slots:
 protected:
   cMultiLineInput ();
   void init ();
-  virtual void eventNothingHandler (QString event, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
 
   dlgMultiLine *multiline;
   static cMultiLineInput *_self;

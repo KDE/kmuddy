@@ -29,13 +29,13 @@ class cShortcut : public cListObject  {
  public: 
   virtual ~cShortcut ();
 
-  virtual void attribChanged (const QString &name);
+  virtual void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  virtual void updateVisibleName() override;
 
 #define SHORTCUT_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType);
+  virtual cList::TraverseAction traverse (int traversalType) override;
   
   static QString keyToString (int _key, int _state);
  private:

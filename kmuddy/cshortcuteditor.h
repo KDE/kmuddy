@@ -32,9 +32,9 @@ class cShortcutEditor : public cListEditor {
   cShortcutEditor (QWidget *parent);
   ~cShortcutEditor ();
 
-  virtual void createGUI(QWidget *parent);
-  virtual void fillGUI (const cListObjectData &data);
-  virtual void getDataFromGUI (cListObjectData *data);
+  virtual void createGUI(QWidget *parent) override;
+  virtual void fillGUI (const cListObjectData &data) override;
+  virtual void getDataFromGUI (cListObjectData *data) override;
  protected slots:
   void grabKey ();
  protected:

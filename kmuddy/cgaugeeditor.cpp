@@ -125,4 +125,3 @@ void cGaugeEditor::getDataFromGUI (cListObjectData *data)
   data->intValues["color"] = c.red() * 256 * 256 + c.green() * 256 + c.blue();
 }
 
-#include "cgaugeeditor.moc"

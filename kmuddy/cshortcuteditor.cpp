@@ -158,4 +158,3 @@ void cShortcutEditor::grabKey ()
   d->cmd->setFocus ();
 }
 
-#include "cshortcuteditor.moc"

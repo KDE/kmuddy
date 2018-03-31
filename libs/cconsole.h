@@ -26,6 +26,7 @@
 #include <kmuddy_export.h>
 
 #include <QClipboard>
+#include <QFile>
 #include <QGraphicsView>
 #include <QStringList>
 class cTextChunk;
@@ -71,7 +72,7 @@ public:
   functions, where this fails for unknown reasons */
   void forceEmitSize ();
   /** dump all history buffer to that file */
-  void dumpBuffer (bool fromcurrent, FILE *file, char dumpType);
+  void dumpBuffer (bool fromcurrent, QFile &file, char dumpType);
   void tryUpdateHistorySize ();
   void setInitialHistorySize (int size);
 

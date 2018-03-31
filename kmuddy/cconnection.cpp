@@ -24,8 +24,10 @@
 #include <klocale.h>
 #include <kapplication.h>
 #include <kstandarddirs.h>
-#include <qdatetime.h>
-#include <qtimer.h>
+
+#include <QDateTime>
+#include <QPushButton>
+#include <QTimer>
 
 #include "kmuddy.h"
 #include "ccmdprocessor.h"
@@ -838,4 +840,3 @@ void cConnection::save ()
     d->windowlist->save();
 }
 
-#include "cconnection.moc"

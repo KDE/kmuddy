@@ -461,4 +461,3 @@ void cTextProcessor::timeout ()
     receivedGA ();
 }
 
-#include "ctextprocessor.moc"

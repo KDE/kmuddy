@@ -51,9 +51,9 @@ public:
   ~cMXPManager ();
   
 #ifdef HAVE_MXP
-  virtual void eventNothingHandler (QString event, int session);
-  virtual QString actionIntHandler (QString action, int session, int par1, int par2 = 0);
-  virtual QString actionNothingHandler (QString action, int session);
+  virtual void eventNothingHandler (QString event, int session) override;
+  virtual QString actionIntHandler (QString action, int session, int par1, int par2 = 0) override;
+  virtual QString actionNothingHandler (QString action, int session) override;
   
   bool isMXPActive () { return mxpactive; };
   void setMXPActive (bool active);
