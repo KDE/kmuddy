@@ -28,6 +28,7 @@ class QMenu;
 class QTimer;
 class KHelpMenu;
 class QMenuBar;
+class KSystemTrayIcon;
 class KToolBar;
 
 class dlgConnect;
@@ -39,7 +40,6 @@ class dlgStatistics;
 
 class cActionManager;
 class cTabWidget;
-class KSystemTrayIcon;
 
 /** KMuddy is the base class of the project */
 class KMuddy : public KMainWindow, public cActionBase
@@ -131,7 +131,6 @@ protected slots:
   void pasteInput ();
 
   void changeSession (int tab);
-  void aboutApp ();
 
   /** lots of slots that handle menus; were handled by slots in objects,
   now we have cSession, so we have to handle them here */

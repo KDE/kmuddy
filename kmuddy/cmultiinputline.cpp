@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QKeyEvent>
 #include <QFontDatabase>
+#include <QTextBlock>
 
 //maximum number of lines ...
 #define MAXLINES 10
@@ -37,9 +38,8 @@ cMultiInputLine::cMultiInputLine (int sess, QWidget *parent)
 {
   setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Fixed);
 
-  setTextFormat (Qt::PlainText);
-
-  setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
+  setAcceptRichText (false);
+  setWordWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
 
   //height: 2 lines
   setLinesHeight (2);
@@ -128,19 +128,17 @@ void cMultiInputLine::setLinesHeight (int lines)
 
 void cMultiInputLine::updateHeight()
 {
-  setLinesHeight (lines ());
+  setLinesHeight (document()->lineCount());
 }
 
 void cMultiInputLine::sendCommands ()
 {
-  int pars = paragraphs();
-
   cCmdQueues *queues = (cCmdQueues *) object ("cmdqueues");
   if (!queues) return;
   // create a command queue with all the commands
   cCmdQueue *queue = new cCmdQueue (sess());
-  for (int i = 0; i < pars; i++)
-    queue->addCommand (text (i));
+  for (QTextBlock block = document()->begin(); block.isValid(); block = block.next())
+    queue->addCommand (block.text());
   queues->addQueue (queue);
 
   //delete text if not needed

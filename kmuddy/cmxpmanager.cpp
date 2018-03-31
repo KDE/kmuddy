@@ -113,7 +113,7 @@ void cMXPManager::processText (const QString &text)
     return;
 
   //give the text to the library
-  mxpProcessText (h, text.toLocal8Bit());
+  mxpProcessText (h, text.toLocal8Bit().data());
 
   //process each result
   while (mxpHasResults (h)) {
@@ -320,7 +320,7 @@ QColor cMXPManager::toColor (RGB mxpColor)
 
 void cMXPManager::sendDefaultFont ()
 {
-  const char *name = deffont.family ().toLatin1();
+  const char *name = deffont.family ().toLatin1().data();
   int size = deffont.pointSize ();
   bool bold = deffont.bold ();
   bool italics = deffont.italic ();

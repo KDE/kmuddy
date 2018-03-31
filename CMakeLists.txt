@@ -13,7 +13,7 @@ include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
 
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Script Multimedia)
-find_package(KF5 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KDELibs4Support KCMUtils XmlGui Parts Service)
+find_package(KF5 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KDELibs4Support KCMUtils XmlGui Parts Service IconThemes)
 
 find_package(MXP)
 if (MXP_FOUND)

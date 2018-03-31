@@ -46,10 +46,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <knuminput.h>
+#include <KServiceTypeTrader>
 #include <ktextedit.h>
 
 #include <kregexpeditorinterface.h>
-#include <kparts/componentfactory.h>
 
 struct cTriggerEditor::Private {
   // Basic
@@ -728,7 +728,7 @@ void cTriggerEditor::updateColorizationsList ()
 void cTriggerEditor::browseForSoundFile ()
 {
   //open some file and place its name to the edit box
-  QString fName = KFileDialog::getOpenFileName (QString(),
+  QString fName = KFileDialog::getOpenFileName (QUrl(),
         "audio/x-wav audio/mpeg audio/ogg", this, i18n ("Choose sound file"));
   if (!(fName.isEmpty()))
     d->edsoundname->setText (fName);

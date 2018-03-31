@@ -29,7 +29,6 @@
 dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
 {
   //initial size
-  // setInitialSize (QSize (400, 250));
   setWindowTitle (i18n ("Multi-line input"));
 
   //main widget
@@ -91,6 +90,11 @@ dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
 
 dlgMultiLine::~dlgMultiLine ()
 {
+}
+
+QSize dlgMultiLine::sizeHint() const
+{
+  return QSize (400, 250);
 }
 
 void dlgMultiLine::setFont (const QFont &font)

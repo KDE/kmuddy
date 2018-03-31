@@ -62,10 +62,10 @@
 #include <QAction>
 #include <QDesktopWidget>
 #include <QIcon>
+#include <QKeyEvent>
 #include <QMenu>
 #include <QMenuBar>
 #include <QTimer>
-#include <QKeyEvent>
 
 #include <kaboutapplicationdialog.h>
 #include <kactioncollection.h>
@@ -73,6 +73,7 @@
 #include <kapplication.h>
 #include <khelpmenu.h>
 #include <kinputdialog.h>
+#include <KIconLoader>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kshortcut.h>
@@ -80,8 +81,8 @@
 #include <ktoggleaction.h>
 #include <ktoolbar.h>
 #include <kwindowsystem.h>
-#include <ksystemtrayicon.h>
 #include <kpassivepopup.h>
+#include <KSystemTrayIcon>
 #include <kdebug.h>
 
 KMuddy *KMuddy::_self = 0;
@@ -606,8 +607,6 @@ void KMuddy::prepareObjects ()
   menu->plug (pluginsconfig, "settings-slot3");
 
   //menu Help
-      //make About Kmuddy work (I have no idea why it doesn't work immediately)
-  connect (helpMenu, SIGNAL (showAboutApplication ()), this, SLOT (aboutApp ()));
 
   // global actions are tied to the main window
   addAction (lineup);
@@ -914,13 +913,6 @@ QString KMuddy::reconnectText ()
   KActionCollection *acol = am->getACol ();
   QAction *reconnect = acol->action ("Reconnect");
   return i18n ("To reconnect, press %1 or use Connection / Reconnect.", reconnect->shortcut().toString());;
-}
-
-void KMuddy::aboutApp ()
-{
-  KAboutApplicationDialog *dlg = new KAboutApplicationDialog (KGlobal::activeComponent().aboutData(), this);
-  dlg->exec ();
-  delete dlg;
 }
 
 void KMuddy::updateWindows ()

@@ -27,49 +27,54 @@
 #include "kmuddy.h"
 #include "cglobalsettings.h"
 
-#define DESCRIPTION ki18n("KMuddy is a MUD (Multi-User Dungeon) client for KDE with a variety of features.")
+#define DESCRIPTION i18n("KMuddy is a MUD (Multi-User Dungeon) client for KDE with a variety of features.")
 
 int main(int argc, char *argv[])
 {
-  KAboutData aboutData ("kmuddy", "", ki18n("KMuddy"),
-    VERSION, DESCRIPTION, KAboutData::License_GPL,
-    ki18n("(c) 2002-2009, Tomas Mecir"), KLocalizedString(), "http://www.kmuddy.com/", "kmuddy@kmuddy.com");
-  aboutData.addAuthor(ki18n ("Tomas Mecir"),
-      ki18n("Main developer and maintainer"), "kmuddy@kmuddy.com");
-  aboutData.addCredit(ki18n("Alex Bache"),
-      ki18n("Many improvements in external scripting, internal script parser, output view and aliases/triggers, bugfixes"), "alex.bache@ntlworld.com");
-  aboutData.addCredit(ki18n("Alsherok staff"),
-      ki18n("for releasing AFKMud codebase, used to test MCCP/MSP"));
-  aboutData.addCredit(ki18n("Andrea Cascio"),
-      ki18n("SuSE RPMs, speed-walking improvements"), "hacksaw@triangolo.it");
-  aboutData.addCredit(ki18n("Orion Elder"),
-      ki18n("KMuddy forum, many ideas"), "orion@mudplanet.org");
-  aboutData.addCredit(ki18n("Scott Monachello"),
-      ki18n("Improvements in scripting, bugfixes"), "smonachello@yahoo.com");
-  aboutData.addCredit(ki18n("Tyler Montbriand"),
-      ki18n("Help with SDL support"), "tsm@accesscomm.ca");
-  aboutData.addCredit(ki18n("Marco Mastroddi"),
-      ki18n("Tick timers"), "marco.mastroddi@libero.it");
-  aboutData.addCredit (ki18n("Henrikki Almusa"),
-      ki18n("Commands to enable/disable groups"), "hena@iki.fi");
-  aboutData.addCredit(ki18n("Drossos Stamboulakis"),
-      ki18n("Selection improvements, full screen mode, cross-tab commands"), "adsluard@tpg.com.au");
-  aboutData.addCredit (ki18n("Antonio J. Soler Sanchez"),
-      ki18n("Spanish translation"), "redtony@telefonica.net");
-  aboutData.addCredit(ki18n("lontau"),
-      ki18n("Code to access KMuddy variables in Ruby"));
-  aboutData.addCredit (ki18n("Magnus Lundborg"), ki18n("Tab-expansion improvements"), "lundborg.magnus@gmail.com");
-  aboutData.addCredit(ki18n("Vladimir Lazarenko"),
-      ki18n("Many improvements. Hosting KMuddy CVS."), "vlad@lazarenko.net");
-  aboutData.addCredit(ki18n("Stuart Henshall"),
-      ki18n("Speed improvements."), "shenshall@blueyonder.co.uk");
-  aboutData.addCredit(ki18n("Vadim Peretokin"),
-      ki18n("Many improvements, website"), "vadimuses@gmail.com");
-  aboutData.addCredit(ki18n("Heiko Koehn"),
-      ki18n("Scripting improvements"), "koehnheiko@googlemail.com");
-  aboutData.addCredit(ki18n("Robert Marmorstein"),
-      ki18n("Systray icon support"), "robertandbeth@gmail.com");
+  QApplication a (argc, argv);
+  KLocalizedString::setApplicationDomain("foo");
+  QApplication::setApplicationDisplayName(i18n("KMuddy"));
+
+  KAboutData aboutData ("kmuddy", i18n("KMuddy"),
+    VERSION, DESCRIPTION, KAboutLicense::GPL,
+    i18n("(c) 2002-2018, Tomas Mecir"), QString(), "http://www.kmuddy.com/", "mecirt@gmail.com");
+  aboutData.addAuthor(i18n ("Tomas Mecir"),
+      i18n("Main developer and maintainer"), "mecirt@gmail.com");
+  aboutData.addCredit(i18n("Alex Bache"),
+      i18n("Many improvements in external scripting, internal script parser, output view and aliases/triggers, bugfixes"), "alex.bache@ntlworld.com");
+  aboutData.addCredit(i18n("Alsherok staff"),
+      i18n("for releasing AFKMud codebase, used to test MCCP/MSP"));
+  aboutData.addCredit(i18n("Andrea Cascio"),
+      i18n("SuSE RPMs, speed-walking improvements"), "hacksaw@triangolo.it");
+  aboutData.addCredit(i18n("Orion Elder"),
+      i18n("KMuddy forum, many ideas"), "orion@mudplanet.org");
+  aboutData.addCredit(i18n("Scott Monachello"),
+      i18n("Improvements in scripting, bugfixes"), "smonachello@yahoo.com");
+  aboutData.addCredit(i18n("Tyler Montbriand"),
+      i18n("Help with SDL support"), "tsm@accesscomm.ca");
+  aboutData.addCredit(i18n("Marco Mastroddi"),
+      i18n("Tick timers"), "marco.mastroddi@libero.it");
+  aboutData.addCredit (i18n("Henrikki Almusa"),
+      i18n("Commands to enable/disable groups"), "hena@iki.fi");
+  aboutData.addCredit(i18n("Drossos Stamboulakis"),
+      i18n("Selection improvements, full screen mode, cross-tab commands"), "adsluard@tpg.com.au");
+  aboutData.addCredit (i18n("Antonio J. Soler Sanchez"),
+      i18n("Spanish translation"), "redtony@telefonica.net");
+  aboutData.addCredit(i18n("lontau"),
+      i18n("Code to access KMuddy variables in Ruby"));
+  aboutData.addCredit (i18n("Magnus Lundborg"), i18n("Tab-expansion improvements"), "lundborg.magnus@gmail.com");
+  aboutData.addCredit(i18n("Vladimir Lazarenko"),
+      i18n("Many improvements. Hosting KMuddy CVS."), "vlad@lazarenko.net");
+  aboutData.addCredit(i18n("Stuart Henshall"),
+      i18n("Speed improvements."), "shenshall@blueyonder.co.uk");
+  aboutData.addCredit(i18n("Vadim Peretokin"),
+      i18n("Many improvements, website"), "vadimuses@gmail.com");
+  aboutData.addCredit(i18n("Heiko Koehn"),
+      i18n("Scripting improvements"), "koehnheiko@googlemail.com");
+  aboutData.addCredit(i18n("Robert Marmorstein"),
+      i18n("Systray icon support"), "robertandbeth@gmail.com");
   KAboutData::setApplicationData (aboutData);
+  QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kmuddy")));
 
   //alarm signal is sometimes causing KMuddy to terminate incorrectly
   //when switching tabs using Alt+number - ignoring the signal, hoping
@@ -84,8 +89,6 @@ int main(int argc, char *argv[])
   migrator.setUiFiles(QStringList() << QStringLiteral("kmuddymapperpart.rc"));
   migrator.migrate();
 
-  KApplication a (argc, argv );
-  QApplication::setApplicationDisplayName(i18n("KMuddy"));
   KMuddy *kmuddy = 0;
 
 /*

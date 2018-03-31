@@ -33,8 +33,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kapplication.h>
 #include <kdialog.h>
-#include <kicon.h>
 #include <klocale.h>
+
+#include <QIcon>
 
 struct cSessionManagerPrivate {
   cTabWidget *widget;
@@ -42,7 +43,7 @@ struct cSessionManagerPrivate {
   cActionManager *am;
 
   /** icons for the tab bar */
-  KIcon iconOk, iconNo, iconFlag;
+  QIcon iconOk, iconNo, iconFlag;
 
   /** should the tab bar be displayed even if there is only one connection? */
   bool wantTabBar;
@@ -58,9 +59,9 @@ cSessionManager::cSessionManager () : cActionBase ("session-manager", 0)
   d->am = cActionManager::self();
 
   //icons for tabs
-  d->iconOk = KIcon ("dialog-ok");
-  d->iconNo = KIcon ("dialog-cancel");
-  d->iconFlag = KIcon ("flag");
+  d->iconOk = QIcon::fromTheme ("dialog-ok");
+  d->iconNo = QIcon::fromTheme ("dialog-cancel");
+  d->iconFlag = QIcon::fromTheme ("flag");
 
   addGlobalEventHandler ("global-settings-changed", 50, PT_NOTHING);
 }
@@ -302,7 +303,7 @@ void cSessionManager::setAlwaysTabBar (bool value)
 void cSessionManager::setIcon (int sess, ProfileIcon icon)
 {
   int tab = getTabBySession (sess);
-  KIcon i;
+  QIcon i;
   switch (icon) {
     case IconOk: i = d->iconOk; break;
     case IconNo: i = d->iconNo; break;

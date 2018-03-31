@@ -60,8 +60,7 @@ void cWindowList::eventNothingHandler (QString event, int)
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();
     adjustFonts (gs->getFont ("console-font"));
-    applySettings (gs->getBool ("allow-blink"), gs->getBool ("word-wrap"),
-        gs->getInt ("wrap-pos"), gs->getInt ("indent"), gs->getBool ("force-redraw"));
+    applySettings (gs->getBool ("allow-blink"), gs->getInt ("indent"), gs->getBool ("force-redraw"));
   }
 }
 
@@ -189,7 +188,7 @@ void cWindowList::load ()
         name.replace("KMuddywin_", QString());
         if(!add(name, true))
           return;
-        windows[name]->setInitialSize(g.readEntry("Size", QSize()));
+        windows[name]->setMinimumSize(g.readEntry("Size", QSize()));
         pos = g.readEntry("Position", QPoint());
         windows[name]->move(pos);
         vis = g.readEntry("Visible", true);
