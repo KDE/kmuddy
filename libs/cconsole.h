@@ -109,6 +109,7 @@ signals:
 
 protected slots:
   void sliderChanged (int val);
+  void sceneChanged (const QList<QRectF> &region);
 
 protected:
   void resizeEvent (QResizeEvent *e) override;

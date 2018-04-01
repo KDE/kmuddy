@@ -21,6 +21,7 @@
 #include "cactionmanager.h"
 #include "ctextchunk.h"
 
+#include <QAbstractTextDocumentLayout>
 #include <QAction>
 #include <QFontDatabase>
 #include <QGraphicsTextItem>
@@ -29,37 +30,6 @@
 #include <QTextDocument>
 
 #include <KActionCollection>
-
-/**
-Class cHistoryBuffer - holds the whole buffer, rotates it when needed and provides access to it.
-Inspired by a similar class from Alex Bache.
-*/
-
-class KMUDDY_EXPORT cHistoryBuffer {
- public:
-  /** create the cyclic buffer of a given size */
-  cHistoryBuffer (int size);
-  /** destructor */
-  ~cHistoryBuffer ();
-  /** current number of items in the buffer */
-  int items () { return _items; };
-  /** current size of the buffer */
-  int size () { return _size; };
-  /** add a new line to the buffer */
-  void add (cTextChunk *chunk);
-  /** Returns one line in the buffer.
-  Returns cTextChunk*, not cTextChunk*& - so that we can modify the chunk contents, but we
-  cannot assign another chunk to any given position,*/
-  cTextChunk * operator[] (int idx);
-  /** flush the buffer */
-  void flush ();
- protected:
-  int _size, _items;
-  /** position in the cyclic buffer, where the NEXT added item will go */
-  int curidx;
-  /** the actual buffer */
-  cTextChunk **buffer;
-};
 
 class cTextOutputItem : public QGraphicsTextItem {
 public:
@@ -75,7 +45,7 @@ public:
     double w = view->viewport()->width();
     double h = view->viewport()->height();
     if (isSecondary) h = h * percentHeight / 100;
-    else h = max (h, document()->pageSize().height());
+    else h = max (h, document()->documentLayout()->documentSize().height());
     return QRectF (0, 0, w, h);
   }
 
@@ -102,6 +72,7 @@ class cConsole::Private {
   int sess;
   int charWidth, charHeight;
   bool wantNewLine;
+  bool atBottom;
 
   friend class cConsole;
 };
@@ -115,6 +86,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->charWidth = 12;
   d->charHeight = 12;
   d->wantNewLine = false;
+  d->atBottom = true;
 
   setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
   setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
@@ -126,7 +98,6 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   //size policy
   QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
   setSizePolicy (qsp);
-  viewport()->setSizePolicy (qsp);
 
   d->text = new QTextDocument;
   QString stylesheet = "body { color: " + QColor (Qt::lightGray).name() + "; } ";
@@ -151,6 +122,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
 
   setScene (&d->scene);
   d->scene.setFocusItem (d->mainText);
+  connect (&d->scene, &QGraphicsScene::changed, this, &cConsole::sceneChanged);
 
   //background color
   d->bgcolor = Qt::black;
@@ -232,10 +204,18 @@ void cConsole::setScrollTextVisible (bool vis)
 void cConsole::sliderChanged (int val)
 {
   int maxval = verticalScrollBar()->maximum ();
+  d->atBottom = (val >= maxval);
   bool vis = (val < maxval);
   setScrollTextVisible (vis);
 }
 
+void cConsole::sceneChanged (const QList<QRectF> &region)
+{
+  // move back to the bottom if we were
+  if (!d->atBottom) return;
+  QScrollBar *sb  = verticalScrollBar();
+  sb->setValue (sb->maximum());
+}
 
 void cConsole::setScrollTextSize (int aconsize)
 {
@@ -300,6 +280,7 @@ void cConsole::addText (cTextChunk *chunk) {
   addNewText (chunk, false);
 }
 
+#include <QDebug>
 void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
 {
   QTextCursor cursor (d->text);
@@ -313,6 +294,9 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
     cursor.insertHtml (chunk->toHTML());
   }
   if (endTheLine) d->wantNewLine = true;
+
+  d->mainText->updateSize();
+  d->scrollText->updateSize();
 }
 
 void cConsole::forceBeginOfLine () {
