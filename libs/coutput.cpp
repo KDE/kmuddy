@@ -56,8 +56,8 @@ cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
       SLOT (promptCommand (const QString &)));
 
   //and connect() slider so that aconsole is shown/hidden as needed
-  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), con, SLOT (sliderChanged (int)));
-  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), con, SLOT (sliderChanged (int)));
+  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
+  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   // react on events
   addEventHandler ("display-line", 20, PT_TEXTCHUNK);
@@ -132,6 +132,13 @@ void cOutput::dimensionsChanged (int x, int y)
   invokeEvent ("dimensions-changed", sess(), x, y);
 }
 
+void cOutput::sliderChanged (int val)
+{
+  int maxval = verticalScrollBar()->maximum ();
+  bool vis = (val < maxval);
+  con->setScrollTextVisible (vis);
+}
+
 void cOutput::sendCommand (const QString &command)
 {
   // we send the command directly, with no parsing, because these commands
@@ -148,7 +155,6 @@ void cOutput::setDefaultBkColor (QColor color)
 {
   bgcolor = color;
   con->setDefaultBkColor (color);
-  aconsole->setDefaultBkColor (color);
 }
 
 void cOutput::setEchoColor (QColor color)

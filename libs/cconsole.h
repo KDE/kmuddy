@@ -62,6 +62,8 @@ public:
   /** return current number of columns */
   int curCols();
 
+  /** Is the scroll text visible? */
+  void setScrollTextVisible (bool vis);
   /** Size of the secondary console shown while scrolling */
   void setScrollTextSize (int aconsize);
 

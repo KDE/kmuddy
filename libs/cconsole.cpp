@@ -182,6 +182,11 @@ QColor cConsole::defaultBkColor () {
   return d->bgcolor;
 }
 
+void cConsole::setScrollTextVisible (bool vis)
+{
+  d->scrollText->setVisible (vis);
+}
+
 void cConsole::setScrollTextSize (int aconsize)
 {
   // TODO

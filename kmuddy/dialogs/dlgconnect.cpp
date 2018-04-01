@@ -92,7 +92,7 @@ dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
   layout->addWidget (vb, 0, 1);
   layout->addWidget (chkSendNothing, 2, 0);
   layout->addWidget (chkOffline, 3, 0);
-  layout->addWidget (buttons, 4, 0, 2, 1);
+  layout->addWidget (buttons, 4, 0, 1, 2);
   
   //connect signals
   connect (addButton, SIGNAL(clicked()), this, SLOT(addPressed()));
