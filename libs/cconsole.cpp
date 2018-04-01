@@ -92,18 +92,19 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->text->setDefaultTextOption (opt);
 
   d->mainText = new QGraphicsTextItem;
+  d->scrollText = new QGraphicsTextItem;
+  d->scene.addItem (d->mainText);
+  d->scene.addItem (d->scrollText);
+
   d->mainText->setDocument (d->text);
   d->mainText->setFiltersChildEvents (true);
 
-  d->scrollText = new QGraphicsTextItem;
   d->scrollText->setDocument (d->text);
   d->scrollText->setParentItem (d->mainText);
   d->scrollText->setFocusProxy (d->mainText);
   d->scrollText->setVisible (false);
 
   setScene (&d->scene);
-  d->scene.addItem (d->mainText);
-  d->scene.addItem (d->scrollText);
   d->scene.setFocusItem (d->mainText);
 
   //background color

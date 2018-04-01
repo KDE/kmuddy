@@ -33,15 +33,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KLocalizedString>
 #include <krandom.h>
 
-cOutput::cOutput (int sess, QWidget *parent) : cActionBase ("output", sess)
+cOutput::cOutput (int sess, QWidget *parent) : QScrollArea (parent), cActionBase ("output", sess)
 {
-  con = new cConsole (parent);
+  con = new cConsole (this);
   setWidget (con);
   con->setSession (sess);
 
   echocolor = Qt::yellow;
   systemcolor = Qt::cyan;
   bgcolor = Qt::black;
+
+  setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Expanding);
 
   // enable vertical scrollbar, disable the other one
   setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);

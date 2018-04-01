@@ -21,7 +21,7 @@
 #include <config-mxp.h>
 #include "cactionbase.h"
 
-#include <kvbox.h>
+#include <QWidget>
 
 class cTelnet;
 class cANSIParser;
@@ -51,7 +51,7 @@ It's the widget that contains inputline, console and friends for one active conn
   *@author Tomas Mecir
   */
 
-class cSession : public KVBox, public cActionBase {
+class cSession : public QWidget, public cActionBase {
    Q_OBJECT
 public: 
   cSession (int sess, QWidget *parent=0);

@@ -48,12 +48,13 @@
 #include <klocale.h>
 #include <kpushbutton.h>
 #include <kstatusbar.h>
+#include <khbox.h>
 
 #include <QPushButton>
 #include <QToolTip>
+#include <QVBoxLayout>
 
-cSession::cSession (int sess, QWidget *parent) :
-    KVBox (parent), cActionBase ("session", sess)
+cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase ("session", sess)
 {
   _flashing = false;
   defaultName = true;
@@ -69,7 +70,7 @@ cSession::cSession (int sess, QWidget *parent) :
   _cmdqueues = new cCmdQueues (sess);
   _textproc = new cTextProcessor (sess);
   _connection = new cConnection (sess);
-  
+
   _output = new cOutput (sess, this);
   
   KHBox *promptinput = new KHBox (this);
@@ -99,6 +100,13 @@ cSession::cSession (int sess, QWidget *parent) :
 
   KStatusBar *statusbar = new KStatusBar (this);
   _status = new cStatus (sess, statusbar);
+
+  QVBoxLayout *layout = new QVBoxLayout (this);
+  layout->addWidget (_output);
+  layout->addWidget (promptinput);
+  layout->addWidget (_auxinputline);
+  layout->addWidget (_gaugebar);
+  layout->addWidget (statusbar);
 
   _transcript = new cTranscript (sess);
   _scripteval = new cScriptEval (sess);
