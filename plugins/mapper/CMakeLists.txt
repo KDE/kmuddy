@@ -70,7 +70,7 @@ ki18n_wrap_ui (kmuddymapper_PART_SRCS
 
 add_library(kmuddymapper MODULE ${kmuddymapper_PART_SRCS})
 
-target_link_libraries(kmuddymapper  KF5::KDELibs4Support KF5::Parts kmuddycore )
+target_link_libraries(kmuddymapper  KF5::KDELibs4Support KF5::Parts KF5::WidgetsAddons KF5::Service KF5::Archive kmuddycore )
 
 install(TARGETS kmuddymapper DESTINATION ${PLUGIN_INSTALL_DIR} )
 

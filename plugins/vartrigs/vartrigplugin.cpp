@@ -62,3 +62,4 @@ void cVarTrigPlugin::eventStringHandler (QString event, int session,
 }
 
 
+#include "vartrigplugin.moc"

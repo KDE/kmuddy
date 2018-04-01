@@ -29,8 +29,8 @@ class CMapCmdGroup : public CMapCommand
 public:
 	CMapCmdGroup(CMapManager *mapManager,QString name);
 	~CMapCmdGroup();
-	virtual void redo();
-	virtual void undo();
+	virtual void redo() override;
+	virtual void undo() override;
 	void addCommand(CMapCommand *command);
 	CMapCmdGroup *getPreviousGroup(void);
 	void setPreviousGroup(CMapCmdGroup *group);

@@ -340,4 +340,4 @@ void cStringsPlugin::unregisterFunctions ()
 }
 
 
-
+#include "stringsplugin.moc"

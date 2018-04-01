@@ -552,4 +552,3 @@ void cRunningList::scriptTextSent ()
 
 } // scriptTextSent
 
-#include "crunninglist.moc"

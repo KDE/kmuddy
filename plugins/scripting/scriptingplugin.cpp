@@ -190,3 +190,4 @@ void cScriptingPlugin::updateRunningList ()
   d->rdlg->switchRunningList (rl);
 }
 
+#include "scriptingplugin.moc"

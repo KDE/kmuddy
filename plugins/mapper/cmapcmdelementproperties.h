@@ -42,8 +42,8 @@ class CMapCmdElementProperties : public CMapCommand
 public:
 	CMapCmdElementProperties(CMapManager *mapManager,QString name,CMapElement *element);
 	~CMapCmdElementProperties();
-	virtual void redo();
-	virtual void undo();
+	virtual void redo() override;
+	virtual void undo() override;
 	KConfigGroup getOrgProperties(void);
 	KConfigGroup getNewProperties(void);
 

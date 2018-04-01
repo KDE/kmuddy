@@ -17,10 +17,11 @@
 
 #include "cmapclipboard.h"
 
-#include <kaction.h>
 #include <kactioncollection.h>
 #include <kdebug.h>
 #include <klocale.h>
+
+#include <QAction>
 
 #include "cmapmanager.h"
 #include "cmappath.h"
@@ -59,31 +60,31 @@ void CMapClipboard::initActions(void)
   // Edit menu
   KActionCollection *acol = m_view->actionCollection();
 
-  m_editSelectAll = new KAction (m_parent);
+  m_editSelectAll = new QAction (m_parent);
   m_editSelectAll->setText (i18n ("Select All"));
   connect (m_editSelectAll, SIGNAL (triggered ()), this, SLOT (slotSelectAll ()));
   acol->addAction ("editSelectAll", m_editSelectAll);
-  m_editUnselectAll = new KAction (m_parent);
+  m_editUnselectAll = new QAction (m_parent);
   m_editUnselectAll->setText (i18n ("Unselect All"));
   connect (m_editUnselectAll, SIGNAL (triggered ()), this, SLOT (slotUnselectAll ()));
   acol->addAction ("editUnselectAll", m_editUnselectAll);
-  m_editSelectInvert = new KAction (m_parent);
+  m_editSelectInvert = new QAction (m_parent);
   m_editSelectInvert->setText (i18n ("Invert Selection"));
   connect (m_editSelectInvert, SIGNAL (triggered ()), this, SLOT (slotInvertSelection ()));
   acol->addAction ("editSelectInvert", m_editSelectInvert);
-  m_editDelete = new KAction (m_parent);
+  m_editDelete = new QAction (m_parent);
   m_editDelete->setText (i18n ("Delete"));
   connect (m_editDelete, SIGNAL (triggered ()), this, SLOT (slotDelete ()));
   acol->addAction ("editDelete", m_editDelete);
-  m_editCopy = new KAction (m_parent);
+  m_editCopy = new QAction (m_parent);
   m_editCopy->setText (i18n ("Copy"));
   connect (m_editCopy, SIGNAL (triggered ()), this, SLOT (slotCopy ()));
   acol->addAction ("editCopy", m_editCopy);
-  m_editCut = new KAction (m_parent);
+  m_editCut = new QAction (m_parent);
   m_editCut->setText (i18n ("Cut"));
   connect (m_editCut, SIGNAL (triggered ()), this, SLOT (slotCut ()));
   acol->addAction ("editCut", m_editCut);
-  m_editPaste = new KAction (m_parent);
+  m_editPaste = new QAction (m_parent);
   m_editPaste->setText (i18n ("Paste"));
   connect (m_editPaste, SIGNAL (triggered ()), this, SLOT (slotPaste ()));
   acol->addAction ("editPaste", m_editPaste);

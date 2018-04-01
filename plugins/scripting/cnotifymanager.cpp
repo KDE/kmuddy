@@ -253,4 +253,3 @@ void cEventNotification::writeNext ()
 }
 
 
-#include "cnotifymanager.moc"

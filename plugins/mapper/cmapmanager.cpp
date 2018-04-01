@@ -26,11 +26,11 @@
 #include <kstandardaction.h>
 #include <kfiledialog.h>
 #include <kpagedialog.h>
-#include <kcomponentdata.h>
-#include <kundostack.h>
 
+#include <QIcon>
 #include <QQueue>
-#include <qtimer.h>
+#include <QTimer>
+#include <QUndoStack>
 
 #include "cmapzone.h"
 #include "cmappath.h"
@@ -91,7 +91,7 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   elementEdit = NULL;
 
   /** Create undo/redo history */
-  commandHistory = new KUndoStack();
+  commandHistory = new QUndoStack();
   //FIXME_jp: Needs to be configurable
   commandHistory->setUndoLimit(30);
   commandHistory->clear();
@@ -155,11 +155,6 @@ CMapManager::~CMapManager()
   kDebug() << "CMapManager::~CMapManager() end";
 }
 
-KComponentData CMapManager::instance ()
-{
-  return mapperPlugin->componentData();
-}
-
 void CMapManager::eventStringHandler (QString event, int, QString &par1, const QString &)
 {
   if (event == "dialog-create") {
@@ -197,16 +192,16 @@ void CMapManager::createGlobalConfigPanes ()
   KPageWidgetItem *item;
   QFrame *frmdir = new QFrame (dlg);
   item = dlg->addPage (frmdir, i18n ("Mapper: Directions"));
-  item->setIcon (KIcon ("gear"));
+  item->setIcon (QIcon::fromTheme ("gear"));
   QFrame *frmmovement = new QFrame (dlg);
   item = dlg->addPage (frmmovement, i18n ("Mapper: Movement"));
-  item->setIcon (KIcon ("run"));
+  item->setIcon (QIcon::fromTheme ("run"));
   QFrame *frmcolor = new QFrame (dlg);
   item = dlg->addPage (frmcolor, i18n ("Mapper: Colors"));
-  item->setIcon (KIcon ("colorize"));
+  item->setIcon (QIcon::fromTheme ("colorize"));
   QFrame *frmspeedwalk = new QFrame (dlg);
   item = dlg->addPage (frmspeedwalk, i18n ("Mapper: Speedwalk"));
-  item->setIcon (KIcon ("launch"));
+  item->setIcon (QIcon::fromTheme ("launch"));
 
   QVBoxLayout *dirlayout = new QVBoxLayout (frmdir);
   QVBoxLayout *movementlayout = new QVBoxLayout (frmmovement);

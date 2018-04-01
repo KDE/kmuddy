@@ -16,8 +16,6 @@
 
 #include <QVariantList>
 
-class KComponentData;
-
 struct KMuddyMapperPrivate;
 
 class KMuddyMapper : public cPlugin
@@ -27,20 +25,18 @@ public:
   KMuddyMapper (QObject *, const QVariantList &);
   virtual ~KMuddyMapper ();
 
-  KComponentData componentData () const;
-
-  virtual void sessionAdd (int sess, bool fresh = true);
-  virtual void sessionRemove (int sess, bool closed = true);
-  virtual void sessionSwitch (int sess);
-  virtual void connected (int sess);
-  virtual void disconnected (int sess);
+  virtual void sessionAdd (int sess, bool fresh = true) override;
+  virtual void sessionRemove (int sess, bool closed = true) override;
+  virtual void sessionSwitch (int sess) override;
+  virtual void connected (int sess) override;
+  virtual void disconnected (int sess) override;
   
   virtual void load (int sess);
-  virtual void save (int sess);
+  virtual void save (int sess) override;
   
   virtual void processInput (int sess, int phase, cTextChunk * chunk,
-      bool gagged);
-  virtual void processCommand (int sess, QString & command, bool &dontSend);
+      bool gagged) override;
+  virtual void processCommand (int sess, QString & command, bool &dontSend) override;
 
 protected slots:
   void showMapper (bool b);

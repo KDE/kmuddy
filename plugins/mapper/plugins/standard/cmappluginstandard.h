@@ -36,17 +36,17 @@ public:
 	CMapPluginStandard(QObject *);
 	~CMapPluginStandard();
 
-        virtual QString tagName() { return QString("standard"); }
+        virtual QString tagName() override { return QString("standard"); }
 
-	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
+	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent) override;
 
-	void profileChanged(void);
+	void profileChanged(void) override;
 	/** This is called before a element is deleted
 	  * @param element The element about to be deleted */
-	void beforeElementDeleted(CMapElement *element);
+	void beforeElementDeleted(CMapElement *element) override;
 	/** This method is called after undoing a delete action
 	  * @param element The elemening being restored */
-	void afterElementUndeleted(CMapElement *element);
+	void afterElementUndeleted(CMapElement *element) override;
 	/**
 	 * This method is used to add a note or change a exsiting note
 	 * @param elemenet The element the note is for
@@ -71,29 +71,29 @@ public:
 	  * @param element The element being saved
 	  * @param properties When method exits this should contain the new properties
 	  */
-	void saveElementProperties(CMapElement *element,KMemConfig *properties);
+	void saveElementProperties(CMapElement *element,KMemConfig *properties) override;
 
 	/** This method is used to update an element with the properties load from a file
 	  * It will usally be called when loading map data to file
 	  * @param element The element being loaded
 	  * @param properties The properties being loaded from the file
 	  */
-	void loadElementProperties(CMapElement *element,KMemConfig *properties);
+	void loadElementProperties(CMapElement *element,KMemConfig *properties) override;
 
 	/**
 	 * This is called when the map is about to be loaded from file
 	 */
-	void loadAboutToStart();
+	void loadAboutToStart() override;
 
  	/**
 	 * This is called when the map is about to be saved to file
 	 */
-	void saveAboutToStart(void);
+	void saveAboutToStart(void) override;
 
 	/**
 	 * This is called when a new map is created
 	 */
-	void newMapCreated(void);
+	void newMapCreated(void) override;
 
 
 private:

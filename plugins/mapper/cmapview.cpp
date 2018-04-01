@@ -18,6 +18,7 @@
 
 #include "cmapview.h"
 
+#include <QAction>
 #include <QPushButton>
 #include <QScrollArea>
 #include <QActionGroup>
@@ -35,7 +36,6 @@
 #include "cmapclipboard.h"
 #include "cmapcmdelementproperties.h"
 
-#include <kaction.h>
 #include <kselectaction.h>
 #include <ktoggleaction.h>
 #include <kactioncollection.h>
@@ -124,27 +124,27 @@ void CMapView::initMenus()
   m_toolsGrid->setIcon (BarIcon("kmud_grid.png"));
   connect (m_toolsGrid, SIGNAL (triggered()), this, SLOT(slotToolsGrid()));
   actionCollection()->addAction ("toolsGrid", m_toolsGrid);
-  m_toolsUpLevel = new KAction (this);
+  m_toolsUpLevel = new QAction (this);
   m_toolsUpLevel->setText ( i18n("Display Upper Level"));
   m_toolsUpLevel->setIcon (BarIcon("arrow-up"));
   connect (m_toolsUpLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelUp()));
   actionCollection()->addAction ("toolsLevelUp", m_toolsUpLevel);
-  m_toolsDownLevel = new KAction (this);
+  m_toolsDownLevel = new QAction (this);
   m_toolsDownLevel->setText ( i18n("Display Lower Level"));
   m_toolsDownLevel->setIcon (BarIcon("arrow-down"));
   connect (m_toolsDownLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDown()));
   actionCollection()->addAction ("toolsLevelDown", m_toolsDownLevel);
-  m_toolsDeleteLevel = new KAction (this);
+  m_toolsDeleteLevel = new QAction (this);
   m_toolsDeleteLevel->setText ( i18n("Delete Current Level"));
   m_toolsDeleteLevel->setIcon (BarIcon("edit-delete"));
   connect (m_toolsDeleteLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDelete()));
   actionCollection()->addAction ("toolsLevelDelete", m_toolsDeleteLevel);
-  m_toolsCreateZone = new KAction (this);
+  m_toolsCreateZone = new QAction (this);
   m_toolsCreateZone->setText ( i18n("Create New Zone"));
   m_toolsCreateZone->setIcon (BarIcon("task-new"));
   connect (m_toolsCreateZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneCreate()));
   actionCollection()->addAction ("toolsZoneCreate", m_toolsCreateZone);
-  m_toolsDeleteZone = new KAction (this);
+  m_toolsDeleteZone = new QAction (this);
   m_toolsDeleteZone->setText ( i18n("Delete Current Zone"));
   m_toolsDeleteZone->setIcon (BarIcon("edit-delete"));
   connect (m_toolsDeleteZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneDelete()));
@@ -161,37 +161,37 @@ void CMapView::initMenus()
   actionCollection()->addAction ("viewLowerLevel", m_viewLowerLevel);
 
   // Room Popup Actions
-  KAction *action;
-  action = new KAction (this);
+  QAction *action;
+  action = new QAction (this);
   action->setText (i18n("Set &Current Position"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSetCurrentPos()));
   actionCollection()->addAction ("roomCurrentPos", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("Set Room to &Login Point"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSetLogin()));
   actionCollection()->addAction ("roomLoginPoint", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Speed walk to room"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomSpeedwalkTo()));
   actionCollection()->addAction ("roomWalkTo", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Delete room"));
   action->setIcon (SmallIcon("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomDelete()));
   actionCollection()->addAction ("roomDelete", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Properties"));
   action->setIcon (SmallIcon("document-properties"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomProperties()));
   actionCollection()->addAction ("roomProperties", action);
 
   // Text Popup Actions
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Delete Text"));
   action->setIcon (SmallIcon("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotTextDelete()));
   actionCollection()->addAction ("textDelete", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Properties"));
   action->setIcon (SmallIcon("document-properties"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotTextProperties()));
@@ -206,24 +206,24 @@ void CMapView::initMenus()
   action->setText (i18n("&Two way"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathTwoWay()));
   actionCollection()->addAction ("pathTwoWay", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Add Bend"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathAddBend()));
   actionCollection()->addAction ("pathAddBend", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Remove Segment"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathDelBend()));
   actionCollection()->addAction ("pathDelBend", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Edit Bends"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathEditBends()));
   actionCollection()->addAction ("pathEditBends", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Delete Path"));
   action->setIcon (SmallIcon("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathDelete()));
   actionCollection()->addAction ("pathDelete", action);
-  action = new KAction (this);
+  action = new QAction (this);
   action->setText (i18n("&Properties"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathProperties()));
   actionCollection()->addAction ("pathPorperties", action);
@@ -852,10 +852,5 @@ bool CMapView::queryClose()
 {
   emit closed();
   return true;
-}
-
-KComponentData CMapView::instance ()
-{
-  return mapManager->instance(); 
 }
 

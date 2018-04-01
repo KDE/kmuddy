@@ -21,7 +21,7 @@
 #include <qobject.h>
 #include <kconfiggroup.h>
 
-class KAction;
+class QAction;
 class CMapManager;
 class KMemConfig;
 class CMapZone;
@@ -78,13 +78,13 @@ private:
   CMapView *m_view;
   QObject *m_parent;
 
-  KAction *m_editSelectAll;
-  KAction *m_editUnselectAll;
-  KAction *m_editSelectInvert;
-  KAction *m_editDelete;
-  KAction *m_editCopy;
-  KAction *m_editCut;
-  KAction *m_editPaste;
+  QAction *m_editSelectAll;
+  QAction *m_editUnselectAll;
+  QAction *m_editSelectInvert;
+  QAction *m_editDelete;
+  QAction *m_editCopy;
+  QAction *m_editCut;
+  QAction *m_editPaste;
 
 };
 

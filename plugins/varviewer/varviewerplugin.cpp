@@ -75,4 +75,4 @@ cVarViewerPlugin::~cVarViewerPlugin()
 }
 
 
-
+#include "varviewerplugin.moc"

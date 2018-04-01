@@ -27,7 +27,7 @@
 
 #include <klocale.h>
 #include <kregexpeditorinterface.h>
-#include <kparts/componentfactory.h>
+#include <KServiceTypeTrader>
 
 DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {

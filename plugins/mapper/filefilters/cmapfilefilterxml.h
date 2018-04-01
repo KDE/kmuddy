@@ -38,26 +38,26 @@ public:
 
 	/** This returns name of the import/export filter. This should be kept small
       * @return The Name of the filter */
-	QString getName(void);
+	QString getName(void) override;
 	/** This returns a discription of the import/export filter
       * @return The discription */
-	QString getDescription(void);
+	QString getDescription(void) override;
 	/** This returns the extension  of the filename that will be loaded,created
       * @return The exstension */
-	QString getExtension(void);
+	QString getExtension(void) override;
 	/** This returns the pattern extension of the filename that will be loaded,created
       * @return The exstension */
-	QString getPatternExtension(void);
+	QString getPatternExtension(void) override;
 
 
 	/** This method will return true or false depending on if it's a export filter
       * @return True if this is a export filter, otherwise false */
-	bool supportSave(void) { return true; };
+	bool supportSave(void) override { return true; };
 	/** This method will return true or false depending on if it's a import filter
       * @return True if this is a import filter, otherwise false */
-	bool supportLoad(void) { return true; };
+	bool supportLoad(void) override { return true; };
         /** Is this the native format? */
-        virtual bool isNative() { return true; };
+        virtual bool isNative() override { return true; };
 
 	/** This method should be reimplemented if this is a to be a export filter. It
 	  * is called to save the map data
@@ -65,7 +65,7 @@ public:
 	  * @return 0, The file was saved succesfully
 	  * @return -1, The file could not be created
 	  */
-	int saveData(const QString &filename);
+	int saveData(const QString &filename) override;
 	/** This method should be reimplemeted if this is to be a import filter. It is
 	  * called to load the map data
 	  * @param filename The url of the file to be loaded
@@ -73,7 +73,7 @@ public:
 	  *         -1 , Could not open the file
 	  *         -2 , If the file is corrupt
 	  */
-	int loadData(const QString &filename);
+	int loadData(const QString &filename) override;
 
 private:
 	int loadXMLData(const QByteArray & buffer);	

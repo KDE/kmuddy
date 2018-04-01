@@ -33,8 +33,8 @@ public:
 	CMapCmdMoveMap(CMapManager *manager,QPoint offset,QString name);
 	~CMapCmdMoveMap();
 
-	virtual void redo();
-	virtual void undo();
+	virtual void redo() override;
+	virtual void undo() override;
 
 private:
 	/** This method is used to move the elements in a zone by the given vector */

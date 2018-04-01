@@ -21,7 +21,6 @@
 #include "cmapzonemanager.h"
 
 #include <kactioncollection.h>
-#include <kcomponentdata.h>
 #include <klocale.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
@@ -38,7 +37,6 @@ struct MapperSession {
 
 struct KMuddyMapperPrivate {
   KToggleAction *showmapper;
-  KComponentData componentData;
   QDockWidget *docker;
   std::map<int, MapperSession *> sessions;
   int currentSession;
@@ -51,8 +49,6 @@ struct KMuddyMapperPrivate {
 KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
 {
   d = new KMuddyMapperPrivate;
-
-  d->componentData = KMuddyMapperFactory::componentData();
 
   _priority = 200;
 
@@ -96,10 +92,6 @@ KMuddyMapper::~KMuddyMapper()
     delete it->second;
   }
   delete d;
-}
-
-KComponentData KMuddyMapper::componentData () const {
-  return d->componentData;
 }
 
 /** Called when a session has been added. If the session has existed before, fresh is set
@@ -207,3 +199,4 @@ void KMuddyMapper::mapperClosed ()
   d->showmapper->setChecked (d->docker->isVisible());
 }
 
+#include "kmuddy_mapper.moc"

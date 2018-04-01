@@ -93,4 +93,3 @@ bool cConverterDialog::display (std::list<ConversionDialogItem *> items)
 }
 
 
-#include "converterdialog.moc"

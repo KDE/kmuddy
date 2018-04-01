@@ -38,26 +38,26 @@ public:
 	CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom);
 	~CMapPath();
 
-	elementTyp getElementType(void)              { return PATH ; }
+	elementTyp getElementType(void) override     { return PATH ; }
 	/** This method is used to set the cords of the path */
 	void setCords(void);
 
 	bool getDone(void)                           { return done; }
 	void setDone(bool set)                       { done = set; }
 
-	void paint(QPainter *p,CMapZone *zone);
+	void paint(QPainter *p,CMapZone *zone) override;
 	/** Used to paint the element while it is bined resized */	
-	void resizePaint(QPoint offset,QPainter *p,CMapZone *currentZone,int resizeId);
-	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone);
-	void lowerPaint(QPainter *p,CMapZone *zone);
-	void higherPaint(QPainter *p,CMapZone *zone);
+	void resizePaint(QPoint offset,QPainter *p,CMapZone *currentZone,int resizeId) override;
+	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone) override;
+	void lowerPaint(QPainter *p,CMapZone *zone) override;
+	void higherPaint(QPainter *p,CMapZone *zone) override;
 	void editPaint(QPoint pos,QPainter *p,CMapZone *,int editBox);
 
 	/** Used to find out if the mouse is in the element */
-	bool mouseInElement(QPoint mousePos);
+	bool mouseInElement(QPoint mousePos) override;
 
 	/** Used to create a deep copy of the path */
-	CMapElement *copy(void);
+	CMapElement *copy(void) override;
 
 	/** Get the directions of the start and finish directions of the path */
 	directionTyp getSrcDir(void)                 { return srcDir; }
@@ -105,27 +105,27 @@ public:
 	QString getAfterCommand(void)                { return afterCommand; }
 	
 	/** Used to load the properties of the element from a list of properties */
-	virtual void loadProperties(KConfigGroup grp);
+	virtual void loadProperties(KConfigGroup grp) override;
 	/** Used to save the properties of the element to a list of properties */
-	virtual void saveProperties(KConfigGroup grp);
+	virtual void saveProperties(KConfigGroup grp) override;
     /** Used to save the element as an XML object
 	  * @param properties The XML object to save the properties too
 	  * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties);
+	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object
 	  * @param properties The XML object to load the properties from */
-	virtual void loadQDomElement(QDomElement *properties);
+	virtual void loadQDomElement(QDomElement *properties) override;
 
 	/** Used to move the element relative to it's current position */
-	virtual void moveBy(QPoint offset);
+	virtual void moveBy(QPoint offset) override;
 
-	/** This is overriddent to stop a path be resized */
-	virtual void resize(QPoint,int) { }
+	/** This is overridden to stop a path be resized */
+	virtual void resize(QPoint,int) override { }
 	/** Used to find out if the mouse is in the resize box
 	  * @param mousePos The position of the mouse pointer
 	  * @param currentZone A pointer to the current zone
 	  * @return the ID of the resize box, or 0 if not in any */
-	virtual int mouseInResize(QPoint mousePos,CMapZone *currentZone);
+	virtual int mouseInResize(QPoint mousePos,CMapZone *currentZone) override;
 	/**
 	 * This method is used to find out if the mouse pointer is in a path segment.
 	 * @param mousePos The position of the mouse
@@ -161,13 +161,13 @@ protected:
 	QPoint deletePathSeg(int seg);
 
 	/** This method is used to calculate the positions of the resize handles */
-	void generateResizePositions(void);
+	void generateResizePositions(void) override;
 	/** Used to paint the element at a given location and size
 	  * @param p The painer to paint the element to
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone);
+	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 
 private:
 	/** This method is used to calcualte the distance from a path segment */

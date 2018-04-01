@@ -41,9 +41,9 @@ public:
 	CMapRoom(CMapManager *manager,QRect rect,CMapLevel *level);
 	~CMapRoom();
 
-	elementTyp getElementType(void)             { return ROOM ; }
+	elementTyp getElementType(void) override    { return ROOM ; }
 
-        virtual void setLevel(CMapLevel *level);
+        virtual void setLevel(CMapLevel *level) override;
 
 	void setLabel(QString str);
 	QString getLabel(void)                      { return label; }
@@ -80,12 +80,12 @@ public:
 	void setMoveTime(int moveTime)              { time = moveTime; }
 	int getMoveTime(void)                       { return time; }
 
-	void paint(QPainter *p,CMapZone *);
-	void dragPaint(QPoint offset,QPainter *p,CMapZone *);
-	void lowerPaint(QPainter *p,CMapZone *);
-	void higherPaint(QPainter *p,CMapZone *);
+	void paint(QPainter *p,CMapZone *) override;
+	void dragPaint(QPoint offset,QPainter *p,CMapZone *) override;
+	void lowerPaint(QPainter *p,CMapZone *) override;
+	void higherPaint(QPainter *p,CMapZone *) override;
 
-	CMapElement *copy(void);
+	CMapElement *copy(void) override;
 
 	labelPosTyp getLabelPosition(void);
 	void setLabelPosition(labelPosTyp pos);
@@ -93,21 +93,21 @@ public:
 	void textRemove(void);
 
 	/** Used to load the properties of the element from a list of properties */
-	virtual void loadProperties(KConfigGroup properties);
+	virtual void loadProperties(KConfigGroup properties) override;
 	/** Used to save the properties of the element to a list of properties */
-	virtual void saveProperties(KConfigGroup properties);
+	virtual void saveProperties(KConfigGroup properties) override;
     /** Used to save the element as an XML object 
       * @param properties The XML object to save the properties too
       * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties);
+	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object 
 	  * @param properties The XML object to load the properties too */
-	virtual void loadQDomElement(QDomElement *properties);
+	virtual void loadQDomElement(QDomElement *properties) override;
 	
 	/** Used to move the element relative to it's current position */
-	virtual void moveBy(QPoint offset);
+	virtual void moveBy(QPoint offset) override;
 	/** This is used to resize the element */
-	void resize(QPoint offset,int resizeId);
+	void resize(QPoint offset,int resizeId) override;
 	/** This is used to get a unique ID for the room */
 	unsigned int getRoomID(void);
 	/** This is used to set the ID of the room */
@@ -121,7 +121,7 @@ protected:
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone);
+	void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 	void geometryChanged(void);
 	
 	unsigned int m_ID;

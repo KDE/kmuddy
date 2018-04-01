@@ -22,13 +22,12 @@
 
 #include <kxmlguiwindow.h>
 #include <klocale.h>
-#include <kcomponentdata.h>
 #include <kmuddy_export.h>
 
 class QLabel;
 class QScrollArea;
 class QPushButton;
-class KAction;
+class QAction;
 class KToggleAction;
 class KSelectAction;
 class QActionGroup;
@@ -134,19 +133,18 @@ public:
   void readOptions();
 
   QActionGroup *toolGroup () { return m_toolGroup; }
-  KComponentData instance ();
 
 protected:
   /** Used to get the width of the widget */
   virtual int getWidth(void);
   /** Used to gt the height of the widget */
   virtual int getHeight(void);
-  virtual void resizeEvent (QResizeEvent *);
+  virtual void resizeEvent (QResizeEvent *) override;
   virtual void slotWidgetBeingClosed();
   virtual void slotDockWindowClose();
-  virtual void closeEvent ( QCloseEvent *e);
+  virtual void closeEvent ( QCloseEvent *e) override;
   /** Used to set the view to active */
-  virtual void focusInEvent(QFocusEvent *e);
+  virtual void focusInEvent(QFocusEvent *e) override;
 
 private slots:
   void slotToolsGrid();
@@ -197,7 +195,7 @@ private:
   void initMenus();
   /** Used by slotToolsLevel(Up/Down) */
   void levelShift(bool up);
-  virtual bool queryClose ();
+  virtual bool queryClose () override;
 
   /**
    * Used to enable/disable the view actions
@@ -241,11 +239,11 @@ private:
 
   //Actions
   KToggleAction *m_toolsGrid;
-  KAction *m_toolsUpLevel;
-  KAction *m_toolsDownLevel;
-  KAction *m_toolsDeleteLevel;
-  KAction *m_toolsCreateZone;
-  KAction *m_toolsDeleteZone;
+  QAction *m_toolsUpLevel;
+  QAction *m_toolsDownLevel;
+  QAction *m_toolsDeleteLevel;
+  QAction *m_toolsCreateZone;
+  QAction *m_toolsDeleteZone;
 
   KToggleAction *m_viewLowerLevel;
   KToggleAction *m_viewUpperLevel;

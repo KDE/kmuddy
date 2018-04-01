@@ -22,6 +22,7 @@
 class CMapManager;
 
 #include "ui_dlgmapdirectionsbase.h"
+#include <QDialog>
 
 /**
   *@author Kmud Developer Team

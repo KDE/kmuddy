@@ -199,5 +199,3 @@ void dlgVarViewer::showEvent (QShowEvent *)
   model->listChanged (vars);
 }
 
-#include "dlgvarviewer.moc"
-

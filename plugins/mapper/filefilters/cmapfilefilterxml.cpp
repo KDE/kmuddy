@@ -99,7 +99,7 @@ int CMapFileFilterXML::saveData(const QString &filename)
 	if (!result.isEmpty())
 	{
 		kDebug() << "Write map.xml : " << result.size();
-		zip.writeFile("map.xml", QString(), QString(), result.toLocal8Bit(), result.size());
+		zip.writeFile("map.xml", QString(), QString(), result.toLocal8Bit().data(), result.size());
 		kDebug() << "Done write";		
 
 	}

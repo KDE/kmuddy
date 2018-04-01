@@ -39,8 +39,8 @@ public:
 	CMapText(QString str,CMapManager *manager,QPoint pos,CMapLevel *level);
 	~CMapText();
 
-	elementTyp getElementType(void)             { return TEXT ; }
-        virtual void setLevel(CMapLevel *level);
+	elementTyp getElementType(void) override    { return TEXT ; }
+        virtual void setLevel(CMapLevel *level) override;
 
 	/** Sets the text of the text element
 	  * @param str The new string that the text element should be set to
@@ -71,16 +71,16 @@ public:
 	  * @param p The painter used to paint the text
 	  * @param zone The zone the text is being painted in
 	  */
-	void paint(QPainter *p,CMapZone *zone);
-	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone);
-	void lowerPaint(QPainter *p,CMapZone *zone);
-	void higherPaint(QPainter *p,CMapZone *zone);
+	void paint(QPainter *p,CMapZone *zone) override;
+	void dragPaint(QPoint offset,QPainter *p,CMapZone *zone) override;
+	void lowerPaint(QPainter *p,CMapZone *zone) override;
+	void higherPaint(QPainter *p,CMapZone *zone) override;
 
 	/** This is used to create  a new copy of the text element and return
 	  * a pointer to the new text element
 	  * @return A pointer to the copy of the text element.
 	  */
-	CMapElement *copy(void);
+	CMapElement *copy(void) override;
 
 	void setLinkElement (CMapElement *element)   { m_linkElement = element; }
 	CMapElement *getLinkElement(void)            { return m_linkElement; }
@@ -116,17 +116,17 @@ public:
 
 	/** Used to load the properties of the element from a list of properties
 	  * @param properties The properties to load into the element */
-	virtual void loadProperties(KConfigGroup properties);
+	virtual void loadProperties(KConfigGroup properties) override;
 	/** Used to save the properties of the element to a list of properties
 	  * @param properties The properties to load into the element */
-	virtual void saveProperties(KConfigGroup properties);
+	virtual void saveProperties(KConfigGroup properties) override;
     /** Used to save the element as an XML object
 	  * @param properties The XML object to save the properties too
 	  * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties);
+	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object
 	  * @param properties The XML object to load the properties from */
-	virtual void loadQDomElement(QDomElement *properties);
+	virtual void loadQDomElement(QDomElement *properties) override;
 	
 	/** This is used to convert mouse cordinates into a cursor position
 	  * @param mousePos The position of the mose */
@@ -170,15 +170,15 @@ public:
 
 protected:
 	/** This method is called when the element looses it's edit mode */
-	virtual void editModeUnsetEvent(void);
+	virtual void editModeUnsetEvent(void) override;
 	/** This method is called when the element gains it's edit mode */
-	virtual void editModeSetEvent(void);
+	virtual void editModeSetEvent(void) override;
 	/** Used to paint the element at a given location and size
 	  * @param p The painer to paint the element to
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone);
+	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 
 private:
 	/** This used internaly to calculate the offset of the cursor */

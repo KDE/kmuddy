@@ -212,4 +212,4 @@ void cTestPlugin::processCommand (int sess, QString & command, bool & dontSend)
 
 
 
-
+#include "testplugin.moc"

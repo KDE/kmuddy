@@ -45,25 +45,25 @@ public:
 
 protected:
         /** This is used to display custop tooltips. */
-        bool event (QEvent *e);
+        bool event (QEvent *e) override;
 	/** This is called when the mouse leaves the widget */
-	void leaveEvent(QEvent *e);
+	void leaveEvent(QEvent *e) override;
 	/** This is called when the mouse enters the widget */
-	void enterEvent(QEvent *e);
+	void enterEvent(QEvent *e) override;
 	/** draw the map widget */
-	void paintEvent(QPaintEvent *);
+	void paintEvent(QPaintEvent *) override;
 	/** The mouse release event */
-	void mouseReleaseEvent(QMouseEvent *e);
+	void mouseReleaseEvent(QMouseEvent *e) override;
 	/** The mouse press event */
-	void mousePressEvent(QMouseEvent *e);
+	void mousePressEvent(QMouseEvent *e) override;
 	/** Called when the mouse is being moved */
-	void mouseMoveEvent(QMouseEvent *e);
+	void mouseMoveEvent(QMouseEvent *e) override;
         /** double click event */
-        void mouseDoubleClickEvent(QMouseEvent *e);
+        void mouseDoubleClickEvent(QMouseEvent *e) override;
 	/** Called when a key is pressed */
-	virtual void keyPressEvent(QKeyEvent *e);
+	virtual void keyPressEvent(QKeyEvent *e) override;
 	/** Called when a key is released */
-	virtual void keyReleaseEvent(QKeyEvent *e);
+	virtual void keyReleaseEvent(QKeyEvent *e) override;
 
 	/** Used to display the text context menu */
 	void showTextContextMenu(void);

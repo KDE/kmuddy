@@ -25,7 +25,6 @@
 #include <qpoint.h>
 #include <qobject.h>
 #include <QLinkedList>
-#include <qworkspace.h>
 #include <QStringList>
 #include <qcursor.h>
 
@@ -35,7 +34,6 @@
 #include <kaction.h>
 #include <kselectaction.h>
 #include <ktoggleaction.h>
-#include <ksimpleconfig.h>
 #include <kstatusbar.h>
 #include <kconfiggroup.h>
 
@@ -72,9 +70,8 @@ class DlgMapSpeedwalk;
 
 class KMuddyMapper;
 
-class KComponentData;
 class QActionGroup;
-class KUndoStack;
+class QUndoStack;
 
 /**This is used to make the mapper perform different tasks
   *@author KMud Development Team
@@ -88,7 +85,7 @@ public:
   CMapManager (QWidget *parent, KMuddyMapper *mapper, int sess);
   ~CMapManager();
 
-  void eventStringHandler (QString event, int, QString &par1, const QString &);
+  void eventStringHandler (QString event, int, QString &par1, const QString &) override;
 
   /** Used to get a list of the plugins */
   QLinkedList<CMapPluginBase *> getPluginList();
@@ -232,7 +229,7 @@ public:
   CMapLevel *findLevel(unsigned int id);
 
   /** Obtain the command history */
-  KUndoStack *getCommandHistory() { return commandHistory; };
+  QUndoStack *getCommandHistory() { return commandHistory; };
   /** Used to create a new command group */
   void openCommandGroup(QString name);
   /** Used to close a command group */
@@ -269,8 +266,6 @@ public:
   virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent);
 
   QString defaultSavePath () const;
-
-  KComponentData instance ();
 
 public:
   /** A count of the number of levels created */
@@ -314,7 +309,7 @@ private:
   /** A list of all loaded tools */
   QLinkedList<CMapToolBase *> toolList;
   /** The undo/redo history */
-  KUndoStack *commandHistory;
+  QUndoStack *commandHistory;
   /** Points the command history currently being used */
   CMapCmdGroup *historyGroup;
   /** Used to store the amount of steps taken in the speedwalk */

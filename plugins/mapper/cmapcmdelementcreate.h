@@ -42,8 +42,8 @@ class CMapCmdElementCreate : public CMapCommand,CMapElementUtil
 public:
 	CMapCmdElementCreate(CMapManager *mapManager,QString name);
 	~CMapCmdElementCreate();
-	virtual void redo();
-	virtual void undo();
+	virtual void redo() override;
+	virtual void undo() override;
 
 	void addElement(KMemConfig *newElementProperties,QString grp = "Properties");
 

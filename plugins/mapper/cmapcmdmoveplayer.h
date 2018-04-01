@@ -31,8 +31,8 @@ class CMapCmdMovePlayer : public CMapCommand
 public:
   CMapCmdMovePlayer(CMapManager *mapManager, directionTyp direction, QString specialCmd, bool create);
   ~CMapCmdMovePlayer();
-  virtual void redo();
-  virtual void undo();
+  virtual void redo() override;
+  virtual void undo() override;
 
 private:
   CMapManager *m_manager;
