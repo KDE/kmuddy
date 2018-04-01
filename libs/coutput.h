@@ -38,7 +38,7 @@ It also handles scrollbars.
 @author Tomas Mecir
 */
 
-class KMUDDY_EXPORT cOutput : public QScrollArea, public cActionBase
+class KMUDDY_EXPORT cOutput : public QWidget, public cActionBase
 {
 Q_OBJECT
 public:
@@ -80,7 +80,6 @@ protected slots:
   void dimensionsChanged (int x, int y);
   void sendCommand (const QString &command);
   void promptCommand (const QString &command);
-  void sliderChanged (int);
 protected:
   virtual void eventStringHandler (QString event, int, QString &par1, const QString &) override;
   virtual void eventChunkHandler (QString event, int, cTextChunk *chunk) override;

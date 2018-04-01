@@ -28,15 +28,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ctextchunk.h"
 
 #include <QScrollBar>
+#include <QVBoxLayout>
 
 #include <kapplication.h>
 #include <KLocalizedString>
 #include <krandom.h>
 
-cOutput::cOutput (int sess, QWidget *parent) : QScrollArea (parent), cActionBase ("output", sess)
+cOutput::cOutput (int sess, QWidget *parent) : QWidget(parent), cActionBase ("output", sess)
 {
   con = new cConsole (this);
-  setWidget (con);
+  QVBoxLayout *layout = new QVBoxLayout (this);
+  layout->addWidget (con);
+
   con->setSession (sess);
 
   echocolor = Qt::yellow;
@@ -44,10 +47,6 @@ cOutput::cOutput (int sess, QWidget *parent) : QScrollArea (parent), cActionBase
   bgcolor = Qt::black;
 
   setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Expanding);
-
-  // enable vertical scrollbar, disable the other one
-  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
-  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
 
   // connect cConsole to us ...
   connect (con, SIGNAL (dimensionsChanged (int, int)), this,
@@ -57,10 +56,6 @@ cOutput::cOutput (int sess, QWidget *parent) : QScrollArea (parent), cActionBase
   connect (con, SIGNAL (promptCommand (const QString &)), this,
       SLOT (promptCommand (const QString &)));
 
-  //and connect() slider so that aconsole is shown/hidden as needed
-  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
-  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
-    
   // react on events
   addEventHandler ("display-line", 20, PT_TEXTCHUNK);
   addEventHandler ("display-prompt", 20, PT_TEXTCHUNK);
@@ -100,7 +95,7 @@ void cOutput::eventNothingHandler (QString event, int /*session*/)
     con->setRepaintCount (gs->getInt ("force-redraw"));
 
     //changing font often causes view to move - move to the very bottom
-    verticalScrollBar()->setValue (verticalScrollBar()->maximum());
+    con->verticalScrollBar()->setValue (con->verticalScrollBar()->maximum());
 
     con->tryUpdateHistorySize ();
   }
@@ -132,13 +127,6 @@ void cOutput::eventChunkHandler (QString event, int, cTextChunk *chunk)
 void cOutput::dimensionsChanged (int x, int y)
 {
   invokeEvent ("dimensions-changed", sess(), x, y);
-}
-
-void cOutput::sliderChanged (int val)
-{
-  int maxval = verticalScrollBar()->maximum ();
-  bool vis = (val < maxval);
-  con->setScrollTextVisible (vis);
 }
 
 void cOutput::sendCommand (const QString &command)

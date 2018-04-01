@@ -107,6 +107,9 @@ signals:
   void sendCommand (const QString &command);
   void promptCommand (const QString &command);
 
+protected slots:
+  void sliderChanged (int val);
+
 protected:
   void resizeEvent (QResizeEvent *e) override;
   /** called when resizing and when changing font */

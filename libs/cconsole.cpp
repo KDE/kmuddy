@@ -24,6 +24,7 @@
 #include <QAction>
 #include <QFontDatabase>
 #include <QGraphicsTextItem>
+#include <QScrollBar>
 #include <QTextCursor>
 #include <QTextDocument>
 
@@ -60,9 +61,40 @@ class KMUDDY_EXPORT cHistoryBuffer {
   cTextChunk **buffer;
 };
 
+class cTextOutputItem : public QGraphicsTextItem {
+public:
+  cTextOutputItem(bool sec) {
+    isSecondary = sec;
+    percentHeight = sec ? 25 : 0;
+  }
+
+  virtual QRectF boundingRect() const override {
+    QGraphicsScene *sc = scene();
+    if (sc->views().isEmpty()) return QRectF (0, 0, 0, 0);
+    QGraphicsView *view = sc->views().first();
+    double w = view->viewport()->width();
+    double h = view->viewport()->height();
+    if (isSecondary) h = h * percentHeight / 100;
+    else h = max (h, document()->pageSize().height());
+    return QRectF (0, 0, w, h);
+  }
+
+  void setPercentHeight (int ph) {
+    percentHeight = ph; updateSize();
+  }
+
+  void updateSize () {
+    prepareGeometryChange();
+  }
+
+protected:
+  bool isSecondary;
+  int percentHeight;
+};
+
 class cConsole::Private {
   QGraphicsScene scene;
-  QGraphicsTextItem *mainText, *scrollText;
+  cTextOutputItem *mainText, *scrollText;
   QTextDocument *text;
 
   QColor bgcolor;
@@ -84,6 +116,18 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->charHeight = 12;
   d->wantNewLine = false;
 
+  setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
+  setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
+
+  //and connect() slider so that aconsole is shown/hidden as needed
+  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
+  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
+    
+  //size policy
+  QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
+  setSizePolicy (qsp);
+  viewport()->setSizePolicy (qsp);
+
   d->text = new QTextDocument;
   QString stylesheet = "body { color: " + QColor (Qt::lightGray).name() + "; } ";
   d->text->setDefaultStyleSheet (stylesheet);
@@ -91,13 +135,14 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
   d->text->setDefaultTextOption (opt);
 
-  d->mainText = new QGraphicsTextItem;
-  d->scrollText = new QGraphicsTextItem;
+  d->mainText = new cTextOutputItem (false);
+  d->scrollText = new cTextOutputItem (true);
   d->scene.addItem (d->mainText);
   d->scene.addItem (d->scrollText);
 
   d->mainText->setDocument (d->text);
   d->mainText->setFiltersChildEvents (true);
+  d->mainText->setPos (0, 0);
 
   d->scrollText->setDocument (d->text);
   d->scrollText->setParentItem (d->mainText);
@@ -115,10 +160,6 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   setPalette (pal);
   setBackgroundRole (QPalette::Base);
 
-  //size policy
-  QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
-  setSizePolicy (qsp);
-  
   //context menu
   setContextMenuPolicy (Qt::ActionsContextMenu);
   KActionCollection *acol = cActionManager::self()->getACol();
@@ -188,9 +229,17 @@ void cConsole::setScrollTextVisible (bool vis)
   d->scrollText->setVisible (vis);
 }
 
+void cConsole::sliderChanged (int val)
+{
+  int maxval = verticalScrollBar()->maximum ();
+  bool vis = (val < maxval);
+  setScrollTextVisible (vis);
+}
+
+
 void cConsole::setScrollTextSize (int aconsize)
 {
-  // TODO
+  d->scrollText->setPercentHeight (aconsize);
 }
 
 void cConsole::setIndentation (int val) {
@@ -301,7 +350,8 @@ void cConsole::resizeEvent (QResizeEvent *)
 
 void cConsole::fixupOutput ()
 {
-  d->text->setTextWidth (d->scene.width());
+  d->mainText->updateSize();
+  d->scrollText->updateSize();
 
   forceEmitSize ();
 }
