@@ -12,7 +12,7 @@
     <projectdirectory>.</projectdirectory>
     <absoluteprojectpath>false</absoluteprojectpath>
     <version>1.0.1</version>
-    <description>A MUD client for KDE with many features.</description>
+    <description>A MUD client by KDE with many features.</description>
     <ignoreparts>
       <part>kdevdistpart</part>
       <part>kdevtools</part>

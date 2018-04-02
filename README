@@ -1,11 +1,11 @@
-KMuddy - a MUD client for KDE
+KMuddy - a MUD client by KDE
 -----------------------------
  
 
 1. Introduction
 ---------------
 
-KMuddy if a MUD client for the KDE environment. It includes many features
+KMuddy if a MUD client by the KDE community. It includes many features
 useful for MUD players - aliases, triggers, scripting support, timers,
 macro keys and more. It also supports MCCP (MUD compression protocol)
 and MSP (MUD Sound Protocol) protocols.
