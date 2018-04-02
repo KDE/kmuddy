@@ -73,5 +73,5 @@ ecm_install_icons(ICONS
     THEME locolor
 )
 
-install (FILES kmuddy.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install (FILES org.kde.kmuddy.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
