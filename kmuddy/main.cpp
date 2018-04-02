@@ -32,7 +32,7 @@
 int main(int argc, char *argv[])
 {
   QApplication a (argc, argv);
-  KLocalizedString::setApplicationDomain("foo");
+  KLocalizedString::setApplicationDomain("kmuddy");
   QApplication::setApplicationDisplayName(i18n("KMuddy"));
 
   KAboutData aboutData ("kmuddy", i18n("KMuddy"),
