@@ -24,6 +24,7 @@
 #include <QAbstractTextDocumentLayout>
 #include <QAction>
 #include <QFontDatabase>
+#include <QGraphicsItemGroup>
 #include <QGraphicsTextItem>
 #include <QScrollBar>
 #include <QTextCursor>
@@ -35,22 +36,25 @@ class cTextOutputItem : public QGraphicsTextItem {
 public:
   cTextOutputItem(bool sec) {
     isSecondary = sec;
-    percentHeight = sec ? 25 : 0;
+    bgcolor = Qt::black;
+  }
+
+  void setBackgroundColor (QColor color) {
+    bgcolor = color;
+  }
+
+  QPainterPath opaqueArea() const override {
+    return shape();
+  }
+
+  void paint (QPainter *painter, const QStyleOptionGraphicsItem *o, QWidget *w) {
+    painter->setBrush (bgcolor);
+    painter->drawRect (boundingRect());
+    QGraphicsTextItem::paint (painter, o, w);
   }
 
   virtual QRectF boundingRect() const override {
-    QGraphicsScene *sc = scene();
-    if (sc->views().isEmpty()) return QRectF (0, 0, 0, 0);
-    QGraphicsView *view = sc->views().first();
-    double w = view->viewport()->width();
-    double h = view->viewport()->height();
-    if (isSecondary) h = h * percentHeight / 100;
-    else h = max (h, document()->documentLayout()->documentSize().height());
-    return QRectF (0, 0, w, h);
-  }
-
-  void setPercentHeight (int ph) {
-    percentHeight = ph; updateSize();
+    return scene()->sceneRect();
   }
 
   void updateSize () {
@@ -59,12 +63,44 @@ public:
 
 protected:
   bool isSecondary;
+  QColor bgcolor;
+};
+
+class cScrollTextGroup : public QGraphicsItemGroup
+{
+public:
+  cScrollTextGroup() {
+    percentHeight = 25;
+    setFlag (QGraphicsItem::ItemClipsChildrenToShape);
+  }
+
+  virtual QRectF boundingRect() const override {
+    QGraphicsScene *sc = scene();
+    if (sc->views().isEmpty()) return QRectF (0, 0, 0, 0);
+    QGraphicsView *view = sc->views().first();
+    double w = view->viewport()->width();
+    double h = view->viewport()->height();
+    h = h * percentHeight / 100;
+    return QRectF (0, 0, w, h);
+  }
+
+  void setPercentHeight (int ph) {
+    percentHeight = ph;
+    updateSize();
+  }
+
+  void updateSize () {
+    prepareGeometryChange();
+  }
+
+protected:
   int percentHeight;
 };
 
 class cConsole::Private {
   QGraphicsScene scene;
   cTextOutputItem *mainText, *scrollText;
+  cScrollTextGroup *scrollTextGroup;
   QTextDocument *text;
 
   QColor bgcolor;
@@ -76,7 +112,6 @@ class cConsole::Private {
 
   friend class cConsole;
 };
-
 
 
 
@@ -95,10 +130,6 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
-  //size policy
-  QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
-  setSizePolicy (qsp);
-
   d->text = new QTextDocument;
   QString stylesheet = "body { color: " + QColor (Qt::lightGray).name() + "; } ";
   d->text->setDefaultStyleSheet (stylesheet);
@@ -106,31 +137,41 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
   d->text->setDefaultTextOption (opt);
 
+  //size policy
+  QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
+  setSizePolicy (qsp);
+
+  // scene
+  setScene (&d->scene);
+  // this needs to be set immediately to prevent an endless recursion
+  scene()->setSceneRect (0, 0, viewport()->width(), viewport()->height());
+
   d->mainText = new cTextOutputItem (false);
   d->scrollText = new cTextOutputItem (true);
+  d->scrollTextGroup = new cScrollTextGroup;
   d->scene.addItem (d->mainText);
+  d->scene.addItem (d->scrollTextGroup);
   d->scene.addItem (d->scrollText);
 
   d->mainText->setDocument (d->text);
-  d->mainText->setFiltersChildEvents (true);
+//  d->mainText->setFiltersChildEvents (true);
   d->mainText->setPos (0, 0);
+  d->mainText->setTextInteractionFlags (Qt::TextBrowserInteraction);
+
+  d->scrollTextGroup->setParentItem (d->mainText);
+  d->scrollTextGroup->setVisible (false);
+  d->scrollTextGroup->setFlag (QGraphicsItem::ItemIsSelectable);
 
   d->scrollText->setDocument (d->text);
-  d->scrollText->setParentItem (d->mainText);
-  d->scrollText->setFocusProxy (d->mainText);
-  d->scrollText->setVisible (false);
+  d->scrollText->setParentItem (d->scrollTextGroup);
+  d->scrollText->setPos (0, 0);
+  d->scrollText->setTextInteractionFlags (Qt::TextBrowserInteraction);
 
-  setScene (&d->scene);
   d->scene.setFocusItem (d->mainText);
   connect (&d->scene, &QGraphicsScene::changed, this, &cConsole::sceneChanged);
 
   //background color
-  d->bgcolor = Qt::black;
-  QPalette pal = palette();
-  pal.setColor (backgroundRole(), d->bgcolor);
-  pal.setColor (QPalette::Base, d->bgcolor);
-  setPalette (pal);
-  setBackgroundRole (QPalette::Base);
+  setDefaultBkColor (Qt::black);
 
   //context menu
   setContextMenuPolicy (Qt::ActionsContextMenu);
@@ -151,12 +192,15 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   if (fullscreenmode) addAction (fullscreenmode);
 
   setFont (QFontDatabase::systemFont (QFontDatabase::FixedFont)); //default system fixed font
-  setCursor (Qt::IBeamCursor);
+  viewport()->setCursor (Qt::IBeamCursor);
 
+  forceBeginOfLine ();
   fixupOutput();
 }
 
 cConsole::~cConsole() {
+  setScene (nullptr);  // needed to prevent crashes in the destructor
+
   delete d->scrollText;
   delete d->mainText;
   delete d->text;
@@ -184,11 +228,15 @@ QFont cConsole::font () {
 }
 
 void cConsole::setDefaultBkColor (QColor color) {
+
   d->bgcolor = color;
   QPalette pal = palette();
   pal.setColor (backgroundRole(), d->bgcolor);
   pal.setColor (QPalette::Base, d->bgcolor);
   setPalette (pal);
+  setBackgroundRole (QPalette::Base);
+  d->mainText->setBackgroundColor (color);
+  d->scrollText->setBackgroundColor (color);
   update();
 }
 
@@ -198,7 +246,7 @@ QColor cConsole::defaultBkColor () {
 
 void cConsole::setScrollTextVisible (bool vis)
 {
-  d->scrollText->setVisible (vis);
+  d->scrollTextGroup->setVisible (vis);
 }
 
 void cConsole::sliderChanged (int val)
@@ -219,7 +267,7 @@ void cConsole::sceneChanged (const QList<QRectF> &region)
 
 void cConsole::setScrollTextSize (int aconsize)
 {
-  d->scrollText->setPercentHeight (aconsize);
+  d->scrollTextGroup->setPercentHeight (aconsize);
 }
 
 void cConsole::setIndentation (int val) {
@@ -280,7 +328,6 @@ void cConsole::addText (cTextChunk *chunk) {
   addNewText (chunk, false);
 }
 
-#include <QDebug>
 void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
 {
   QTextCursor cursor (d->text);
@@ -295,8 +342,9 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
   }
   if (endTheLine) d->wantNewLine = true;
 
-  d->mainText->updateSize();
-  d->scrollText->updateSize();
+  // TODO - if the buffer is full, remove old blocks/lines
+
+  fixupOutput();
 }
 
 void cConsole::forceBeginOfLine () {
@@ -332,8 +380,38 @@ void cConsole::resizeEvent (QResizeEvent *)
   fixupOutput();
 }
 
+// this is needed to resize the text display at startup
+bool cConsole::viewportEvent(QEvent *event)
+{
+  if (event->type() == QEvent::Resize)
+    fixupOutput();
+  return QGraphicsView::viewportEvent (event);
+}
+
+
+void cConsole::scrollContentsBy (int dx, int dy)
+{
+  QGraphicsView::scrollContentsBy (dx, dy);
+
+  // move the scrollback to its desired position
+  int h = d->scrollTextGroup->boundingRect().height();
+  QPointF scenepos = mapToScene (0, height() - h);
+  // don't exceed the scene height
+  double diff = scenepos.y() + h - d->scene.height();
+  if (diff > 0) scenepos.setY (scenepos.y() - diff);
+  // and shift the text viewer
+  double ty = d->scrollText->boundingRect().height() - h;
+
+  d->scrollTextGroup->setPos (scenepos);
+  d->scrollText->setPos (0, -ty);
+}
+
 void cConsole::fixupOutput ()
 {
+  double h = max ((qreal) viewport()->height(), d->text->documentLayout()->documentSize().height());
+  scene()->setSceneRect (0, 0, viewport()->width(), h);
+
+  sceneChanged();
   d->mainText->updateSize();
   d->scrollText->updateSize();
 

@@ -109,10 +109,12 @@ signals:
 
 protected slots:
   void sliderChanged (int val);
-  void sceneChanged (const QList<QRectF> &region);
+  void sceneChanged (const QList<QRectF> &region = QList<QRectF>());
 
 protected:
   void resizeEvent (QResizeEvent *e) override;
+  bool viewportEvent(QEvent *event) override;
+  virtual void scrollContentsBy (int dx, int dy) override;
   /** called when resizing and when changing font */
   void fixupOutput ();
 
