@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Plugin Template
 Name[bs]=Servisni Predložak
+Name[ca]=Plantilla de connector
 Name[de]=Modulvorlage
 Name[es]=Plantilla para complementos
 Name[et]=Mallplugin
@@ -22,6 +23,7 @@ Name[uk]=Шаблон додатка
 Name[x-test]=xxPlugin Templatexx
 Comment=Plugin Template
 Comment[bs]=Servisni Predložak
+Comment[ca]=Plantilla de connector
 Comment[de]=Modulvorlage
 Comment[es]=Plantilla para complementos
 Comment[et]=Mallplugin
