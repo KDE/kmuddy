@@ -160,7 +160,6 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
 
   d->scrollTextGroup->setParentItem (d->mainText);
   d->scrollTextGroup->setVisible (false);
-  d->scrollTextGroup->setFlag (QGraphicsItem::ItemIsSelectable);
 
   d->scrollText->setDocument (d->text);
   d->scrollText->setParentItem (d->scrollTextGroup);
