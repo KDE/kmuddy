@@ -48,8 +48,8 @@
 #include <klocale.h>
 #include <kpushbutton.h>
 #include <kstatusbar.h>
-#include <khbox.h>
 
+#include <QHBoxLayout>
 #include <QPushButton>
 #include <QToolTip>
 #include <QVBoxLayout>
@@ -73,7 +73,7 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
 
   _output = new cOutput (sess, this);
   
-  KHBox *promptinput = new KHBox (this);
+  QWidget *promptinput = new QWidget (this);
   _prompt = new cPrompt (sess, promptinput);
   
   _inputline = new cInputLine (sess, "inputline", promptinput);
@@ -101,7 +101,17 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
   KStatusBar *statusbar = new KStatusBar (this);
   _status = new cStatus (sess, statusbar);
 
+  QHBoxLayout *playout = new QHBoxLayout (promptinput);
+  playout->setSpacing (1);
+  playout->setMargin (1);
+  playout->addWidget (_prompt);
+  playout->addWidget (_inputline);
+  playout->addWidget (_multiinputline);
+  playout->addWidget (switchlinebutton);
+
   QVBoxLayout *layout = new QVBoxLayout (this);
+  layout->setSpacing (1);
+  layout->setMargin (1);
   layout->addWidget (_output);
   layout->addWidget (promptinput);
   layout->addWidget (_auxinputline);

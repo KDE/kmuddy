@@ -131,7 +131,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   d->text = new QTextDocument;
-  QString stylesheet = "body { color: " + QColor (Qt::lightGray).name() + "; } ";
+  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } ";
   d->text->setDefaultStyleSheet (stylesheet);
   QTextOption opt;
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
