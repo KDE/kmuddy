@@ -32,6 +32,7 @@
 
 #include <KActionCollection>
 
+
 class cTextOutputItem : public QGraphicsTextItem {
 public:
   cTextOutputItem(bool sec) {
@@ -131,7 +132,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   d->text = new QTextDocument;
-  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } ";
+  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + ": } ";
   d->text->setDefaultStyleSheet (stylesheet);
   QTextOption opt;
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);

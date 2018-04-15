@@ -34,8 +34,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <stdlib.h>
 
-QColor chunkLink::linkColor = Qt::blue;
-
 /** state variables needed to paint a row */
 /*
 struct paintStatus {
@@ -1283,15 +1281,16 @@ QString chunkBg::toHTML (QString &suffix)
   return chunkBg::constructHTML (_bg, suffix);
 }
 
+QColor chunkLink::linkColor = Qt::blue;
 QString chunkLink::toHTML (QString &)
 {
   if (_iscommand)
   {
-    return _text;
+    return "<a rel=\"command\" href=\"" + _target + "\">" + _text + "</a>";
   }
   else
   {
-    return "<a style=\"color: " + linkColor.name() + "\" href=\"" + _target + "\">" + _text + "</a>";
+    return "<a rel=\"link\" href=\"" + _target + "\">" + _text + "</a>";
   }
 }
 
