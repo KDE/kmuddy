@@ -117,6 +117,7 @@ protected:
   virtual void scrollContentsBy (int dx, int dy) override;
   /** called when resizing and when changing font */
   void fixupOutput ();
+  void adjustScrollBack ();
 
   void addNewText (cTextChunk *chunk, bool endTheLine);
 

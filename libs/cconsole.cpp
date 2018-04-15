@@ -388,10 +388,8 @@ bool cConsole::viewportEvent(QEvent *event)
 }
 
 
-void cConsole::scrollContentsBy (int dx, int dy)
+void cConsole::adjustScrollBack ()
 {
-  QGraphicsView::scrollContentsBy (dx, dy);
-
   // move the scrollback to its desired position
   int h = d->scrollTextGroup->boundingRect().height();
   QPointF scenepos = mapToScene (0, height() - h);
@@ -405,6 +403,13 @@ void cConsole::scrollContentsBy (int dx, int dy)
   d->scrollText->setPos (0, -ty);
 }
 
+void cConsole::scrollContentsBy (int dx, int dy)
+{
+  QGraphicsView::scrollContentsBy (dx, dy);
+
+  adjustScrollBack();
+}
+
 void cConsole::fixupOutput ()
 {
   double h = max ((qreal) viewport()->height(), d->text->documentLayout()->documentSize().height());
@@ -413,9 +418,75 @@ void cConsole::fixupOutput ()
   sceneChanged();
   d->mainText->updateSize();
   d->scrollText->updateSize();
+  adjustScrollBack ();
 
   forceEmitSize ();
 }
+
+/*
+void cConsole::activateLink (chunkLink *link, const QPoint &point)
+{
+  //two modes of operation, depending on whether this is a command-link or a URL-link
+  if (link->isCommand())
+  {
+    QString cmd = link->target();
+    bool toprompt = link->toPrompt();
+    bool ismenu = link->isMenu();
+    if (ismenu)
+    {
+      //get rid of old menu, if any
+      delete linkMenu;
+      
+      link->parseMenu();
+      
+      //create the menu
+      menuChunk = link;
+      linkMenu = new KMenu (this);
+      
+      //insert all the items
+      list<menuItem>::const_iterator it;
+      for (it = menuChunk->menu().begin(); it != menuChunk->menu().end(); ++it)
+        linkMenu->addAction ((*it).caption);
+      connect (linkMenu, SIGNAL (triggered (QAction *)), this, SLOT (linkMenuItemHandler (QAction *)));
+      
+      linkMenu->popup (point);
+    }
+    else
+    {
+      if (toprompt)
+        emit promptCommand (cmd);
+      else
+        emit sendCommand (cmd);
+    }
+  }
+  else
+  {
+    QString url = link->target();
+    KToolInvocation::invokeBrowser (url);
+  }
+}
+
+void cConsole::linkMenuItemHandler (QAction *item)
+{
+  if (!linkMenu) return;
+  int idx = linkMenu->actions().indexOf (item);
+  if (idx == -1) return;  // not found
+  bool toprompt = menuChunk->toPrompt();
+  list<menuItem>::const_iterator it;
+  QString cmd;
+  it = menuChunk->menu().begin();
+  for (int i = 0; i < idx; i++)
+    ++it;
+  cmd = (*it).command;
+  if (toprompt)
+    emit promptCommand (cmd);
+  else
+    emit sendCommand (cmd);
+
+  linkMenu = 0;
+  menuChunk = 0;
+}
+*/
 
 
 /*
