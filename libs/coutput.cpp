@@ -48,6 +48,7 @@ cOutput::cOutput (int sess, QWidget *parent) : QWidget(parent), cActionBase ("ou
   bgcolor = Qt::black;
 
   setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Expanding);
+  setFocusPolicy (Qt::NoFocus);
 
   // connect cConsole to us ...
   connect (con, SIGNAL (dimensionsChanged (int, int)), this,

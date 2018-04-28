@@ -658,6 +658,7 @@ void cConnection::reconnect ()
 {
   //inform plug-ins
   invokeEvent ("reconnect", sess());
+  d->commandNum = 0;
 
   //reconnect...
   if (d->profileConnection)
@@ -688,6 +689,7 @@ void cConnection::addCommand (const QString &command)
 
   // technically, this is wrong, because the command can still be in the queue,
   // but I believe it's sufficient
+  d->commandNum++;
   invokeEvent ("command-sent", sess(), command);
 }
 

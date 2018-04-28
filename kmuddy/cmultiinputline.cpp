@@ -161,8 +161,13 @@ void cMultiInputLine::keyPressEvent (QKeyEvent *e)
     if (ctrl == swapenters)
       sendCommands ();
     else
+    {
+      // need to make a new QKeyEvent, as we need to drop the ctrl modifier
+      QKeyEvent *enter = new QKeyEvent (e->type(), e->key(), Qt::NoModifier, QString());
       //standard behaviour otherwise
-      QTextEdit::keyPressEvent (e);
+      QTextEdit::keyPressEvent (enter);
+      delete enter;
+    }
   }
   else
     QTextEdit::keyPressEvent (e);

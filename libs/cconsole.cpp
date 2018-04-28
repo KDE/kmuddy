@@ -55,7 +55,9 @@ public:
   }
 
   virtual QRectF boundingRect() const override {
-    return scene()->sceneRect();
+    QRectF rect = scene()->sceneRect();
+    // add +1 to each side to eliminate the selection box, which we do not want
+    return QRectF (-1, -1, rect.width() + 2, rect.height() + 2);
   }
 
   void updateSize () {
@@ -141,6 +143,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   //size policy
   QSizePolicy qsp (QSizePolicy::Expanding, QSizePolicy::Expanding);
   setSizePolicy (qsp);
+  setFocusPolicy (Qt::NoFocus);
 
   // scene
   setScene (&d->scene);
