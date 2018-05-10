@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Variable Triggers
 Name[bs]=Promjenjivi okidači
-Name[ca]=Actibadors variables
+Name[ca]=Desencadenants variables
 Name[ca@valencia]=Actibadors variables
 Name[de]=Variable löst aus
 Name[es]=Desencadenantes variables
@@ -22,7 +22,7 @@ Name[uk]=Умовні зміни
 Name[x-test]=xxVariable Triggersxx
 Comment=Adds supports for triggers that fire off variable changes.
 Comment[bs]=Daje podršku za prekidače koji aktiviraju na promjene varijabli.
-Comment[ca]=Afegeix suport per activadors que desencadenen canvis variables.
+Comment[ca]=Afegeix suport per a desencadenants que activen canvis variables.
 Comment[ca@valencia]=Afig suport per activadors que desencadenen canvis variables.
 Comment[de]=Fügt Unterstützung für Auslöser hinzu, die Änderungen von Variablen bewirken.
 Comment[es]=Añade apoyo para desencadenantes que disparan cambios variables.
