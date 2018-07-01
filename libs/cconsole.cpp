@@ -73,7 +73,7 @@ class cScrollTextGroup : public QGraphicsItemGroup
 {
 public:
   cScrollTextGroup() {
-    percentHeight = 25;
+    _percentHeight = 25;
     setFlag (QGraphicsItem::ItemClipsChildrenToShape);
   }
 
@@ -83,13 +83,17 @@ public:
     QGraphicsView *view = sc->views().first();
     double w = view->viewport()->width();
     double h = view->viewport()->height();
-    h = h * percentHeight / 100;
+    h = h * _percentHeight / 100;
     return QRectF (0, 0, w, h);
   }
 
   void setPercentHeight (int ph) {
-    percentHeight = ph;
     updateSize();
+    _percentHeight = ph;
+  }
+
+  int percentHeight () {
+    return _percentHeight;
   }
 
   void updateSize () {
@@ -97,7 +101,7 @@ public:
   }
 
 protected:
-  int percentHeight;
+  int _percentHeight;
 };
 
 class cConsole::Private {
@@ -271,6 +275,7 @@ void cConsole::sceneChanged (const QList<QRectF> &region)
 void cConsole::setScrollTextSize (int aconsize)
 {
   d->scrollTextGroup->setPercentHeight (aconsize);
+  adjustScrollBack();
 }
 
 void cConsole::setIndentation (int val) {
@@ -363,19 +368,27 @@ void cConsole::addSelectionToClipboard (QClipboard::Mode clipboardMode) {
 }
 
 void cConsole::lineUp () {
-  // TODO
+  QScrollBar *bar = verticalScrollBar();
+  int by = bar->singleStep();
+  bar->setValue (bar->value() - by);
 }
 
 void cConsole::lineDown () {
-  // TODO
+  QScrollBar *bar = verticalScrollBar();
+  int by = bar->singleStep();
+  bar->setValue (bar->value() + by);
 }
 
 void cConsole::pageUp () {
-  // TODO
+  QScrollBar *bar = verticalScrollBar();
+  int by = bar->pageStep() * (100 - d->scrollTextGroup->percentHeight()) / 100;  // deduct backview size
+  bar->setValue (bar->value() - by);
 }
 
 void cConsole::pageDown () {
-  // TODO
+  QScrollBar *bar = verticalScrollBar();
+  int by = bar->pageStep() * (100 - d->scrollTextGroup->percentHeight()) / 100;  // deduct backview size
+  bar->setValue (bar->value() + by);
 }
 
 void cConsole::resizeEvent (QResizeEvent *)
