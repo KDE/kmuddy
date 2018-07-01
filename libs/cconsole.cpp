@@ -22,6 +22,7 @@
 #include "ctextchunk.h"
 
 #include <QAbstractTextDocumentLayout>
+#include <QApplication>
 #include <QAction>
 #include <QFontDatabase>
 #include <QGraphicsItemGroup>
@@ -211,7 +212,6 @@ cConsole::~cConsole() {
   delete d->scrollText;
   delete d->mainText;
   delete d->text;
-  // TODO
   delete d;
 }
 
@@ -364,7 +364,10 @@ void cConsole::expireNamedLinks (const QString &name) {
 }
 
 void cConsole::addSelectionToClipboard (QClipboard::Mode clipboardMode) {
-  // TODO
+  QString selection = d->mainText->textCursor().selectedText();
+  if (!selection.size()) return;
+  selection = selection.replace (QChar::ParagraphSeparator, '\n');
+  QApplication::clipboard()->setText (selection, clipboardMode);
 }
 
 void cConsole::lineUp () {
