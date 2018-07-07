@@ -85,7 +85,7 @@ void cOutput::eventNothingHandler (QString event, int /*session*/)
 {
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();
-    con->setInitialHistorySize (gs->getInt ("history-size"));
+    con->setHistorySize (gs->getInt ("history-size"));
 
     con->setFont (gs->getFont ("console-font"));
     setEchoColor (gs->getColor ("color-" + QString::number (gs->getInt ("echo-color"))));
@@ -98,8 +98,6 @@ void cOutput::eventNothingHandler (QString event, int /*session*/)
 
     //changing font often causes view to move - move to the very bottom
     con->verticalScrollBar()->setValue (con->verticalScrollBar()->maximum());
-
-    con->tryUpdateHistorySize ();
   }
 }
 

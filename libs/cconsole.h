@@ -75,9 +75,10 @@ public:
   void forceEmitSize ();
   /** dump all history buffer to that file */
   void dumpBuffer (bool fromcurrent, QFile &file, char dumpType);
-  void tryUpdateHistorySize ();
-  void setInitialHistorySize (int size);
+  void setHistorySize (int size);
 
+  /** How many lines in total does the console have currently? */
+  int totalLines();
   QStringList words (QString prefix, int minLength = 3);
   /** clear the widget */
   void clear ();

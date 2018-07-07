@@ -28,6 +28,7 @@
 #include <QGraphicsItemGroup>
 #include <QGraphicsTextItem>
 #include <QScrollBar>
+#include <QTextBlock>
 #include <QTextCursor>
 #include <QTextDocument>
 
@@ -111,6 +112,7 @@ class cConsole::Private {
   cScrollTextGroup *scrollTextGroup;
   QTextDocument *text;
 
+  int historySize;
   QColor bgcolor;
   QFont font;
   int sess;
@@ -130,6 +132,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->charHeight = 12;
   d->wantNewLine = false;
   d->atBottom = true;
+  d->historySize = 1000;
 
   setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
   setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
@@ -307,12 +310,8 @@ void cConsole::dumpBuffer (bool fromcurrent, QFile &file, char dumpType) {
   // TODO
 }
 
-void cConsole::tryUpdateHistorySize () {
-  // TODO
-}
-
-void cConsole::setInitialHistorySize (int size) {
-  // TODO
+void cConsole::setHistorySize (int size) {
+  d->historySize = size;
 }
 
 QStringList cConsole::words (QString prefix, int minLength) {
@@ -336,6 +335,10 @@ void cConsole::addText (cTextChunk *chunk) {
   addNewText (chunk, false);
 }
 
+int cConsole::totalLines() {
+  return d->text->lineCount();
+}
+
 void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
 {
   QTextCursor cursor (d->text);
@@ -351,6 +354,22 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
   if (endTheLine) d->wantNewLine = true;
 
   // TODO - if the buffer is full, remove old blocks/lines
+  while (totalLines() > d->historySize) {
+    // check the height of the first block; if removing it won't put us below the history limit, remove it
+    QTextBlock fblock = d->text->firstBlock();
+    int flines = fblock.lineCount();
+    if (totalLines() - flines < d->historySize) break;
+
+    int fheight = d->text->documentLayout()->blockBoundingRect (fblock).height();
+    cursor = QTextCursor (fblock);
+    cursor.select (QTextCursor::BlockUnderCursor);
+    cursor.movePosition (QTextCursor::NextCharacter, QTextCursor::KeepAnchor);  // need to move, otherwise the empty block is kept
+    cursor.removeSelectedText();
+
+    // scroll accordingly if needed
+    QScrollBar *bar = verticalScrollBar();
+    if (!d->atBottom) bar->setValue (bar->value() - fheight);
+  }
 
   fixupOutput();
 }
