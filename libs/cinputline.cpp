@@ -390,11 +390,15 @@ void cInputLine::handleTabExpansion ()
     if (expandPos == cursorPos + 1)
     return;  //do nothing if we're at a space
 
+    // find the next space - we want to remove the entire word if we are in the middle of one
+    int wordEnd = t.indexOf (' ', cursorPos);
+    int wordLength = ((wordEnd > 0) ? wordEnd : t.length()) - expandPos;
+
     //find prefix and get list of all matching words
     QString prefix = t.mid (expandPos, cursorPos - expandPos + 1);
     int prefixLen = prefix.length();
-    if (prefixLen < 2)
-    return;
+    if (prefixLen < 2) return;
+
     cOutput *output = dynamic_cast<cOutput *>(object ("output"));
     tabWords = output->console()->words (prefix);
     if (tabWords.count() == 0)
@@ -403,8 +407,8 @@ void cInputLine::handleTabExpansion ()
     //initialize the expansion
     tabListPos = tabWords.count()-1;  // Set the position to the last occuranc of the prefix (ML 051006)
 
-    //delete the prefix
-    t.remove (expandPos, prefixLen);
+    // delete the word
+    t.remove (expandPos, wordLength);
 
   }
   else

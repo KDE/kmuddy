@@ -314,11 +314,32 @@ void cConsole::setHistorySize (int size) {
   d->historySize = size;
 }
 
+// grab all the words from the last 100 lines that meet the prefix/length criteria
 QStringList cConsole::words (QString prefix, int minLength) {
   QStringList res;
 
-  // TODO
+  int lineLimit = 100;
+  int lines = 0;
+  QTextBlock block = d->text->lastBlock();
+  while ((block != d->text->firstBlock()) && (lines < lineLimit)) {
+    lines += block.lineCount();
+    QString text = block.text();
+    // split the text into words
+    QStringList words = text.split (QRegExp ("[\\s\\.\\,\\(\\)\\[\\]\\?\\!\\:\\;\"\']"));
+    //store words that meet the requirements
+    for (QString word : words) {
+      if (word.length() < minLength) continue;
+      if ((!prefix.isEmpty()) && (!word.startsWith (prefix, Qt::CaseInsensitive))) continue;
+      // case-sensitive comparison here, so we store all the used upper/lowercase variants 
+      if (res.contains (word)) continue;
 
+      res.push_back (word);
+    }
+
+    block = block.previous();
+  }
+
+  // We intentionally don't sort the list.
   return res;
 }
 
@@ -353,7 +374,6 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
   }
   if (endTheLine) d->wantNewLine = true;
 
-  // TODO - if the buffer is full, remove old blocks/lines
   while (totalLines() > d->historySize) {
     // check the height of the first block; if removing it won't put us below the history limit, remove it
     QTextBlock fblock = d->text->firstBlock();
