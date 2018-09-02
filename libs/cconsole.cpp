@@ -24,7 +24,7 @@
 #include <QAbstractTextDocumentLayout>
 #include <QApplication>
 #include <QAction>
-#include <QFontDatabase>
+#include <QDesktopServices>
 #include <QGraphicsItemGroup>
 #include <QGraphicsTextItem>
 #include <QScrollBar>
@@ -164,6 +164,10 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->scene.addItem (d->mainText);
   d->scene.addItem (d->scrollTextGroup);
   d->scene.addItem (d->scrollText);
+  connect (d->mainText, &QGraphicsTextItem::linkActivated, this, &cConsole::linkActivated);
+  connect (d->scrollText, &QGraphicsTextItem::linkActivated, this, &cConsole::linkActivated);
+  connect (d->mainText, &QGraphicsTextItem::linkHovered, this, &cConsole::linkHovered);
+  connect (d->scrollText, &QGraphicsTextItem::linkHovered, this, &cConsole::linkHovered);
 
   d->mainText->setDocument (d->text);
 //  d->mainText->setFiltersChildEvents (true);
@@ -482,6 +486,38 @@ void cConsole::fixupOutput ()
   forceEmitSize ();
 }
 
+void cConsole::linkHovered (const QString &link)
+{
+  viewport()->setCursor (link.isEmpty() ? Qt::IBeamCursor : Qt::PointingHandCursor);
+}
+
+void cConsole::linkActivated (const QString &link)
+{
+  // TODO - menus and such, need to encode them in the level text. For now we just use plain text.
+  // see old code below for menu handling - except that we don't have the chunk pointer
+
+  // get the first two words, they are iscommand/toprompt
+  int pos = link.indexOf(' ');
+  if (pos < 0) return;
+  QString w1 = link.left(pos);
+  QString ll = link.mid(pos + 1);
+  pos = ll.indexOf(' ');
+  QString w2 = ll.left(pos);
+  QString cmd = ll.mid(pos + 1);
+
+  if (w1 == "link") {
+    // URL link
+    QDesktopServices::openUrl (QUrl (cmd));
+    return;
+  }
+
+  if (w2 == "prompt")
+    emit promptCommand (cmd);
+  else
+    emit sendCommand (cmd);
+}
+
+
 /*
 void cConsole::activateLink (chunkLink *link, const QPoint &point)
 {
@@ -553,5 +589,4 @@ TODO SIGNALS - these must be emitted
 void sendCommand (const QString &command);  -- in activateLink
 void promptCommand (const QString &command);  -- in activateLink
 */
-
 

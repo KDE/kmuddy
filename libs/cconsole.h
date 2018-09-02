@@ -96,6 +96,8 @@ public slots:
   /** adds selection to clipboard (adding to mouse selection buffer is done
       automatically) */
   void addSelectionToClipboard (QClipboard::Mode clipboardMode);
+  void linkHovered (const QString &link);
+  void linkActivated (const QString &link);
 
   /** shifting it around (SHIFT+keys) */
   void lineUp ();

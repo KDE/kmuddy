@@ -1284,13 +1284,8 @@ QString chunkBg::toHTML (QString &suffix)
 QColor chunkLink::linkColor = Qt::blue;
 QString chunkLink::toHTML (QString &)
 {
-  if (_iscommand)
-  {
-    return "<a rel=\"command\" href=\"" + _target + "\">" + _text + "</a>";
-  }
-  else
-  {
-    return "<a rel=\"link\" href=\"" + _target + "\">" + _text + "</a>";
-  }
+  QString rel = _iscommand ? "command" : "link";
+  QString href = rel + " " + (_toprompt ? "prompt" : "send") + " " + _target;
+  return "<a rel=\"" + rel + "\" href=\"" + href + "\">" + _text + "</a>";
 }
 
