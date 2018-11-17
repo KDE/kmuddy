@@ -112,11 +112,10 @@ void cTranscript::addLineToTranscript (cTextChunk *chunk)
   cANSIParser *ap = dynamic_cast<cANSIParser *>(object ("ansiparser"));
   QString s;
   switch (type) {
-    case TRANSCRIPT_PLAIN: s = chunk->toText (); break;
-    case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap); break;
+    case TRANSCRIPT_PLAIN: s = chunk->toText () + "\n"; break;
+    case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap) + "\n"; break;
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
-  s += "\n";  // we use <pre> in HTML, so this applies equally to all three
   file.write (s.toLocal8Bit ());
   file.flush();
 }
@@ -137,11 +136,10 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
   cANSIParser *ap = dynamic_cast<cANSIParser *>(object ("ansiparser"));
   QString s;
   switch (advtype) {
-    case TRANSCRIPT_PLAIN: s = chunk->toText (); break;
-    case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap); break;
+    case TRANSCRIPT_PLAIN: s = chunk->toText () + "\n"; break;
+    case TRANSCRIPT_ANSI: s = chunk->toAnsi (ap) + "\n"; break;
     case TRANSCRIPT_HTML: s = chunk->toHTML (); break;
   };
-  s += "\n";  // we use <pre> in HTML, so this applies equally to all three
   advfile.write (s.toLocal8Bit ());
   
   advfile.flush();
@@ -268,10 +266,13 @@ void cTranscript::startTranscript ()
   file.write ("\n\n");
   if (type == TRANSCRIPT_HTML)
   {
+    cProfileSettings *sett = settings();
     //TODO: what if we're adding to an existing HTML transcript?
-    file.write ("<html>\n");
+    file.write ("<html><head>\n");
     file.write ("<meta name=\"Generator\" content=\"KMuddy\">\n");
-    file.write ("<body bgcolor=");
+    file.write (("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=" + sett->getString ("encoding") + "\">").toLatin1());
+    file.write ("<style> p { margin: 0px; padding: 2px; } </style>");
+    file.write ("</head><body bgcolor=");
     file.write (output->defaultBkColor().name().toLatin1());
     file.write (">\n");
   }

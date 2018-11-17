@@ -44,8 +44,8 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   QGridLayout *layout = new QGridLayout (this);
 
   // create the button that opens the MUD listing
-  QPushButton *btlist = new QPushButton (i18n ("&Select from MUD list"), this);
-  connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
+//  QPushButton *btlist = new QPushButton (i18n ("&Select from MUD list"), this);
+//  connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
 
   // put some edit boxes there
   QLabel *l1 = new QLabel (i18n ("Profile &name:"), this);
@@ -90,7 +90,7 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   l6->setBuddy (connstr);
   
   layout->setSpacing (10);
-  layout->addWidget (btlist, 0, 0);
+//  layout->addWidget (btlist, 0, 0);
   layout->addWidget (l1, 1, 0);
   layout->addWidget (l2, 2, 0);
   layout->addWidget (l3, 3, 0);

@@ -29,8 +29,10 @@
 #include <QGraphicsTextItem>
 #include <QScrollBar>
 #include <QTextBlock>
+#include <QTextBlockFormat>
 #include <QTextCursor>
 #include <QTextDocument>
+#include <QDebug>
 
 #include <KActionCollection>
 
@@ -116,7 +118,7 @@ class cConsole::Private {
   QColor bgcolor;
   QFont font;
   int sess;
-  int charWidth, charHeight;
+  double charWidth, charHeight;
   bool wantNewLine;
   bool atBottom;
 
@@ -142,7 +144,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   d->text = new QTextDocument;
-  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + ": } ";
+  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + "; } p,div { padding: 1px; line-spacing: 1.3 } ";
   d->text->setDefaultStyleSheet (stylesheet);
   QTextOption opt;
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
@@ -232,7 +234,7 @@ void cConsole::setFont (QFont f) {
 
   QFontMetrics fm (f);
   d->charWidth = fm.width ("m");
-  d->charHeight = fm.lineSpacing();
+  d->charHeight = fm.lineSpacing() + 2;
 
   fixupOutput();
 }
@@ -311,7 +313,13 @@ void cConsole::forceEmitSize () {
 }
 
 void cConsole::dumpBuffer (bool fromcurrent, QFile &file, char dumpType) {
-  // TODO
+  QString contents;
+  // TODO: support 'fromcurrent'
+  if ((dumpType == TRANSCRIPT_PLAIN) || (dumpType == TRANSCRIPT_ANSI))
+    contents = d->text->toPlainText();
+  else if (dumpType == TRANSCRIPT_HTML)
+    contents = d->text->toHtml();
+  file.write (contents.toLocal8Bit());
 }
 
 void cConsole::setHistorySize (int size) {
@@ -372,6 +380,9 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
     if (d->wantNewLine) {
       cursor.insertBlock ();
       d->wantNewLine = false;
+      QTextBlockFormat bformat = cursor.blockFormat();
+      bformat.setLineHeight (2, QTextBlockFormat::LineDistanceHeight);
+      cursor.setBlockFormat (bformat);
     }
 
     cursor.insertHtml (chunk->toHTML());

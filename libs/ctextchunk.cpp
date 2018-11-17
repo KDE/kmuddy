@@ -717,7 +717,7 @@ QString cTextChunk::toHTML ()
   for (it = _entries.begin(); it != _entries.end(); ++it)
     s += (*it)->toHTML (suffix);
   s += suffix;
-  return s;
+  return "<p>" + s + "</p>";
 }
 
 cTextChunk *cTextChunk::makeLine (const QString &text, QColor fg, QColor bg, cConsole *console)
