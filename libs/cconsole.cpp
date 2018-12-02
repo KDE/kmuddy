@@ -65,6 +65,8 @@ public:
   }
 
   void updateSize () {
+    QRectF rect = scene()->sceneRect();
+    setTextWidth (rect.width());
     prepareGeometryChange();
   }
 
