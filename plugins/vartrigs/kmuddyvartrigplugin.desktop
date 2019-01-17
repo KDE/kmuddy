@@ -21,6 +21,7 @@ Name[tr]=Değişken Tetikleyicileri
 Name[uk]=Умовні зміни
 Name[x-test]=xxVariable Triggersxx
 Name[zh_CN]=变量触发器
+Name[zh_TW]=變數觸發器
 Comment=Adds supports for triggers that fire off variable changes.
 Comment[bs]=Daje podršku za prekidače koji aktiviraju na promjene varijabli.
 Comment[ca]=Afegeix suport per a desencadenants que activen canvis variables.

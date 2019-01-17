@@ -25,6 +25,7 @@ Comment[tr]=KMuddy Eklentisi
 Comment[uk]=Додаток KMuddy
 Comment[x-test]=xxKMuddy Pluginxx
 Comment[zh_CN]=KMuddy 插件
+Comment[zh_TW]=KMuddy 外掛程式
 
 # version of plug-in, used to prevent loading plug-ins with incompatible API
 [PropertyDef::X-KMuddy-Version]
