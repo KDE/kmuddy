@@ -5,6 +5,9 @@ This is a detailed change-log. I have started writing this on
 5th September 2002, right after the first public release (version 0.1) ...
 ----------
 
+2011-2019
+- lots more work, mapper, qt4/qt5 port, etc, see git log
+
 2010-12-13
 
 * loaded a new mudlist

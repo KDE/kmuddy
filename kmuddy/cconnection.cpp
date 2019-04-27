@@ -589,7 +589,7 @@ void cConnection::establishQuickConnection (const QString &server, int port)
 
   if (telnet->isConnected ())
     disconnect ();
-  d->profileConnection = true;
+  d->profileConnection = false;
   d->quickServer = server;
   d->quickPort = port;
   d->connInProgress = false;
