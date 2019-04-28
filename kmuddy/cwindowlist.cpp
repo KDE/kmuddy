@@ -60,7 +60,7 @@ void cWindowList::eventNothingHandler (QString event, int)
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();
     adjustFonts (gs->getFont ("console-font"));
-    applySettings (gs->getBool ("allow-blink"), gs->getInt ("indent"), gs->getBool ("force-redraw"));
+    applySettings (gs->getBool ("allow-blink"), gs->getInt ("indent"));
   }
 }
 
@@ -234,7 +234,7 @@ void cWindowList::adjustFonts(QFont font)
   }
 }
 
-void cWindowList::applySettings (bool allowblinking, int indentvalue, int forceredraw)
+void cWindowList::applySettings (bool allowblinking, int indentvalue)
 {
   map<QString, dlgOutputWindow *>::iterator it;
   for (it = windows.begin(); it != windows.end(); ++it)
@@ -242,7 +242,6 @@ void cWindowList::applySettings (bool allowblinking, int indentvalue, int forcer
     cConsole *console = it->second->console();
     console->setEnableBlinking (allowblinking);
     console->setIndentation (indentvalue);
-    console->setRepaintCount (forceredraw);
   }
 }
 

@@ -67,9 +67,6 @@ public:
   /** Size of the secondary console shown while scrolling */
   void setScrollTextSize (int aconsize);
 
-  /** number of lines until a forced repaint */
-  void setRepaintCount (int val);
-
   /** forces amission of dimensionsChanged signal; used by toolbar hiding
   functions, where this fails for unknown reasons */
   void forceEmitSize ();

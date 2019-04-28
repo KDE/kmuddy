@@ -120,6 +120,7 @@ class cConsole::Private {
   QColor bgcolor;
   QFont font;
   int sess;
+  int indentChars;
   double charWidth, charHeight;
   bool wantNewLine;
   bool atBottom;
@@ -137,6 +138,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   d->wantNewLine = false;
   d->atBottom = true;
   d->historySize = 1000;
+  d->indentChars = 0;
 
   setHorizontalScrollBarPolicy (Qt::ScrollBarAlwaysOff);
   setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
@@ -275,7 +277,7 @@ void cConsole::sliderChanged (int val)
   setScrollTextVisible (vis);
 }
 
-void cConsole::sceneChanged (const QList<QRectF> &region)
+void cConsole::sceneChanged (const QList<QRectF> &)
 {
   // move back to the bottom if we were
   if (!d->atBottom) return;
@@ -290,7 +292,8 @@ void cConsole::setScrollTextSize (int aconsize)
 }
 
 void cConsole::setIndentation (int val) {
-  // TODO
+
+  d->indentChars = val;
 }
 
 void cConsole::setEnableBlinking (bool value) {
@@ -304,10 +307,6 @@ int cConsole::curRows() {
 int cConsole::curCols() {
   if (d->charWidth <= 0) return 0;
   return width() / d->charWidth;
-}
-
-void cConsole::setRepaintCount (int val) {
-  // TODO
 }
 
 void cConsole::forceEmitSize () {
@@ -384,6 +383,9 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
       d->wantNewLine = false;
       QTextBlockFormat bformat = cursor.blockFormat();
       bformat.setLineHeight (2, QTextBlockFormat::LineDistanceHeight);
+      double px = d->indentChars * d->charWidth;  // 0 if no indentation is to happen
+      bformat.setLeftMargin (px);
+      bformat.setTextIndent (-1 * px);
       cursor.setBlockFormat (bformat);
     }
 
@@ -531,6 +533,7 @@ void cConsole::linkActivated (const QString &link)
 }
 
 
+
 /*
 void cConsole::activateLink (chunkLink *link, const QPoint &point)
 {
@@ -594,12 +597,5 @@ void cConsole::linkMenuItemHandler (QAction *item)
   linkMenu = 0;
   menuChunk = 0;
 }
-*/
-
-
-/*
-TODO SIGNALS - these must be emitted
-void sendCommand (const QString &command);  -- in activateLink
-void promptCommand (const QString &command);  -- in activateLink
 */
 

@@ -67,7 +67,7 @@ public:
   void save ();
 
   void adjustFonts(QFont font);
-  void applySettings (bool allowblinking, int indentvalue, int forceredraw);
+  void applySettings (bool allowblinking, int indentvalue);
 
 protected:
   void load ();

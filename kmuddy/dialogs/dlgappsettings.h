@@ -26,9 +26,9 @@
 class QLabel;
 class QComboBox;
 class QCheckBox;
+class QSpinBox;
 class KColorButton;
 class KLineEdit;
-class KIntNumInput;
 class KShortcutsEditor;
 class cDirList;
 
@@ -82,8 +82,6 @@ public:
   int indentation ();
   void setHistory (int value);
   int history ();
-  int forceRedraw ();
-  void setForceRedraw (int value);
   
 //Font
   void setFont1 (QFont f);
@@ -162,8 +160,7 @@ protected:
   QComboBox *combo[4];
   QCheckBox *chkcmdecho, *chkmessages;
   QCheckBox *chkblinking;
-  QCheckBox *chkwrap;
-  KIntNumInput *edindent, *edhistory, *edwrappos, *edforceredraw;
+  QSpinBox *edindent, *edhistory;
 //Font
   QLabel *fonted1, *fonted2, *fonted3;
   QFont font[3];

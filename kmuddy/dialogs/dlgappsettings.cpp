@@ -34,6 +34,7 @@
 #include <QIcon>
 #include <QLabel>
 #include <QPushButton>
+#include <QSpinBox>
 
 #include <kapplication.h>
 #include <kcolorbutton.h>
@@ -42,8 +43,25 @@
 #include <kshortcutsdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
-#include <knuminput.h>
 #include <kstandarddirs.h>
+
+QSpinBox *setupSpinbox (QGridLayout *layout, int row, int firstcol, const QString &label, int min, int max, const QString &specialVal, const QString &whatsThis)
+{
+  QSpinBox *box = new QSpinBox;
+  box->setMinimum (min);
+  box->setMaximum (max);
+  box->setSpecialValueText (specialVal);
+  box->setWhatsThis( whatsThis);
+
+  QLabel *clabel = new QLabel (label);
+  clabel->setAlignment (Qt::AlignLeft | Qt::AlignVCenter);
+  clabel->setBuddy (box);
+
+  layout->addWidget (clabel, row, firstcol);
+  layout->addWidget (box, row, firstcol + 1);
+
+  return box;
+}
 
 dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
 {
@@ -164,6 +182,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
 
   //page 2
   QVBoxLayout *outlayout = new QVBoxLayout (frmoutputarea);
+
    //colors
   QWidget *wcolors = new QWidget (frmoutputarea);
   QGridLayout *wincolorlayout = new QGridLayout (wcolors);
@@ -202,79 +221,45 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   wincolorlayout->setRowStretch (4, 10);
   wincolorlayout->setColumnStretch (2, 3);
 
-  KHBox *outputs = new KHBox (frmoutputarea);
-  //output1 and output2 come in reversed order, because I'm too lazy to rewrite all the stuff ;)
-  KVBox *output2 = new KVBox (outputs);
-  KVBox *output1 = new KVBox (outputs);
-  outputs->setSpacing (10);
-  output1->setSpacing (10);
-  output2->setSpacing (10);
+  QFrame *outputs = new QFrame (frmoutputarea);
+  QFrame *output1 = new QFrame (outputs);
+  QFrame *output2 = new QFrame (outputs);
+  QHBoxLayout *outputsLayout = new QHBoxLayout (outputs);
+  outputsLayout->setSpacing (10);
+  QGridLayout *output1Layout = new QGridLayout (output1);
+  QVBoxLayout *output2Layout = new QVBoxLayout (output2);
+  output1Layout->setSpacing (10);
+  output2Layout->setSpacing (10);
+  outputsLayout->addWidget (output1);
+  outputsLayout->addWidget (output2);
+
+   //indentation
+  edindent = setupSpinbox (output1Layout, 0, 0, i18n ("&Indentation"), 0, 10, i18n ("None"),
+      i18n ("When a line is too long, part of it will be moved to the next line. Indentation says how many spaces will be "
+      "put to the beginning of the continued line."));
+
+   //history size
+  edhistory = setupSpinbox (output1Layout, 2, 0, i18n ("&History buffer size"), 100, 10000, QString(), i18n ("Size of output scroll-back buffer. "
+      "Please note that this setting will only affect new connections, existing ones will keep their history setting."));
+  edhistory->setSingleStep (100);
+  edhistory->setSuffix (" " + i18n ("lines"));
 
    //cmd echo and system messages
-  chkcmdecho = new QCheckBox (i18n ("Enable co&mmand echo"), output1);
+  chkcmdecho = new QCheckBox (i18n ("Enable co&mmand echo"), output2);
   chkcmdecho->setWhatsThis( i18n ("Enables displaying of commands in the "
       "console.<p><b>Please note:</b> This will also disable command echo "
       "in session transcript."));
-  chkmessages = new QCheckBox (i18n ("Enable s&ystem messages"), output1);
+  chkmessages = new QCheckBox (i18n ("Enable s&ystem messages"), output2);
   chkmessages->setWhatsThis( i18n ("Enables displaying of system messages "
       "in the console."));
-
     //blinking
-  chkblinking = new QCheckBox (i18n ("Enable b&linking"), output1);
-  chkblinking->setWhatsThis( i18n ("Enables support for blinking. "));
+  chkblinking = new QCheckBox (i18n ("Enable b&linking"), output2);
+  chkblinking->setWhatsThis( i18n ("Enables support for blinking. Currently not supported."));
+  chkblinking->setEnabled (false);   // currently not supported
   
-   //indentation
-  edindent = new KIntNumInput (output2);
-  edindent->setLabel (i18n ("&Indentation"),
-      Qt::AlignLeft | Qt::AlignVCenter);
-  edindent->setMinimum (0);
-  edindent->setMaximum (10);
-  edindent->setSpecialValueText (i18n ("None"));
-  //edindent shouldn't be too wide
-  edindent->setMaximumSize (edindent->minimumSizeHint ());
-  edindent->setWhatsThis( i18n ("When a line is too long, part of it will "
-      "be moved to the next line. Indentation says how many spaces will be "
-      "put to the beginning of the continued line."));
-
-   //wrap at
-  edwrappos = new KIntNumInput (output2);
-  edwrappos->setLabel (i18n ("W&rap at position"),
-      Qt::AlignLeft | Qt::AlignVCenter);
-  edwrappos->setMinimum (0);
-  edwrappos->setMaximum (250);
-  edwrappos->setSpecialValueText (i18n ("As needed"));
-  //edwrappos shouldn't be too wide
-  edwrappos->setMaximumSize (edwrappos->minimumSizeHint ());
-  edwrappos->setWhatsThis( i18n ("Wrap at a fixed position, or at the rightmost position, "
-      "if no value is given."));
-
-   //history size
-  edhistory = new KIntNumInput (output2);
-  edhistory->setLabel (i18n ("&History buffer size"),
-      Qt::AlignLeft | Qt::AlignVCenter);
-  edhistory->setRange (100, 10000, 100);
-  edhistory->setSliderEnabled (false);
-  edhistory->setSuffix (" " + i18n ("lines"));
-  //edhistory shouldn't be too wide too
-  edhistory->setMaximumSize (edhistory->minimumSizeHint ());
-  edhistory->setWhatsThis( i18n ("Size of output scroll-back buffer. "
-      "Please note that this setting will only affect new connections, "
-      "existing ones will keep their history setting."));
-
-   //force redraw
-  edforceredraw = new KIntNumInput (output2);
-  edforceredraw->setLabel (i18n ("&Forced redraw after"),
-      Qt::AlignLeft | Qt::AlignVCenter);
-  edforceredraw->setRange (0, 20, 1);
-  edforceredraw->setSliderEnabled (false);
-  edforceredraw->setSuffix (" " + i18n ("lines"));
-  edforceredraw->setSpecialValueText (i18n ("Never"));
-  //edhistory shouldn't be too wide too
-  edforceredraw->setMaximumSize (edforceredraw->minimumSizeHint ());
-  edforceredraw->setWhatsThis( i18n ("Forced redraw after adding a given amount "
-    "of lines. Setting this to a low number may prevent some displaying problems, at a cost "
-    "of higher CPU usage. Setting it to Never will disable the feature, redraw will "
-    "only occur when needed."));
+  output2Layout->addWidget (chkcmdecho);
+  output2Layout->addWidget (chkmessages);
+  output2Layout->addWidget (chkblinking);
 
    //add widgets to main layout
   outlayout->setSpacing (10);
@@ -634,16 +619,6 @@ void dlgAppSettings::setHistory (int value)
 int dlgAppSettings::history ()
 {
   return edhistory->value ();
-}
-
-int dlgAppSettings::forceRedraw ()
-{
-  return edforceredraw->value ();
-}
-
-void dlgAppSettings::setForceRedraw (int value)
-{
-  edforceredraw->setValue (value);
 }
 
 bool dlgAppSettings::enableBlinking ()
@@ -1057,7 +1032,6 @@ void dlgAppSettings::getSettingsFromDialog ()
   gs->setBool ("show-messages", messages ());
   gs->setInt ("indent", indentation ());
   gs->setInt ("history-size", history ());
-  gs->setInt ("force-redraw", forceRedraw ());
 
   //Fonts
   gs->setFont ("console-font", font1 ());
@@ -1136,7 +1110,6 @@ void dlgAppSettings::putSettingsToDialog ()
   setMessages (gs->getBool ("show-messages"));
   setIndentation (gs->getInt ("indent"));
   setHistory (gs->getInt ("history-size"));
-  setForceRedraw (gs->getInt ("force-redraw"));
 
   //Fonts
   setFont1 (gs->getFont ("console-font"));

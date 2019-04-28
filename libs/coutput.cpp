@@ -94,7 +94,6 @@ void cOutput::eventNothingHandler (QString event, int /*session*/)
     setEnableMessages (gs->getBool ("show-messages"));
     con->setEnableBlinking (gs->getBool ("allow-blink"));
     con->setIndentation (gs->getInt ("indent"));
-    con->setRepaintCount (gs->getInt ("force-redraw"));
 
     //changing font often causes view to move - move to the very bottom
     con->verticalScrollBar()->setValue (con->verticalScrollBar()->maximum());
