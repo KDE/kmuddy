@@ -49,7 +49,7 @@ class KMUDDY_EXPORT chunkItem {
   int startPos () { return startpos; }
   void setStartPos (int sp) { startpos = sp; }
   virtual int length() = 0;
-  virtual chunkItem *split (int) { return 0; }
+  virtual chunkItem *split (int) { return nullptr; }
   virtual void trimLeft () {};
   virtual chunkItem *duplicate() = 0;
 

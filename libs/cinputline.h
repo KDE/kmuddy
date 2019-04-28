@@ -33,7 +33,7 @@
 class KMUDDY_EXPORT cInputLine : public KLineEdit, public cActionBase  {
    Q_OBJECT
 public: 
-  cInputLine (int sess, QString objName="inputline", QWidget *parent=0);
+  cInputLine (int sess, QString objName="inputline", QWidget *parent=nullptr);
   ~cInputLine();
   /** initialize the input line - must be separated
   from the constructor, because it uses cSession, which is not

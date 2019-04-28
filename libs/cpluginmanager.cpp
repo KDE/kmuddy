@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using namespace std;
 
-cPluginManager *cPluginManager::_self = 0;
+cPluginManager *cPluginManager::_self = nullptr;
 
 cPluginManager *cPluginManager::self ()
 {
@@ -52,7 +52,7 @@ cPluginManager::cPluginManager () : cActionBase ("pluginmanager", 0)
   findPlugins ();
   activeSess = 0;
   lastGagged = false;
-  pluginDialog = 0;
+  pluginDialog = nullptr;
 
   // global objects receive events from all sessions, hence this will work well
   addEventHandler ("send-command", 20, PT_STRING);
@@ -92,7 +92,7 @@ cPluginManager::~cPluginManager ()
   removeEventHandler ("session-created");
   removeEventHandler ("session-destroyed");
   
-  _self = 0;
+  _self = nullptr;
 }
 
 void cPluginManager::eventIntHandler (QString event, int, int par1, int)
@@ -189,7 +189,7 @@ bool cPluginManager::loadPlugin (const QString &name)
   
   KService::Ptr service = pluginInfo[name].service();
   KPluginFactory *factory = KPluginLoader (*service).factory();
-  cPlugin *plugin = factory->create<cPlugin> (0);
+  cPlugin *plugin = factory->create<cPlugin> (nullptr);
 
   if (!plugin) {
     kDebug() << "Failed to load plugin: " << name;
@@ -281,7 +281,7 @@ void cPluginManager::unloadAll ()
 
 void cPluginManager::showPluginsDialog ()
 {
-  pluginDialog = new KDialog (0);
+  pluginDialog = new KDialog (nullptr);
   pluginDialog->setCaption (i18n ("Plugins"));
   pluginDialog->setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
   pluginDialog->setInitialSize (QSize (400, 300));
@@ -302,7 +302,7 @@ void cPluginManager::showPluginsDialog ()
   pluginDialog->exec ();
 
   delete pluginDialog;
-  pluginDialog = 0;
+  pluginDialog = nullptr;
 }
 
 void cPluginManager::applyPluginDialog ()

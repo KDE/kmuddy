@@ -53,9 +53,9 @@ cListViewer::cListViewer (QWidget *parent)
   : QTreeView (parent)
 {
   d = new Private;
-  d->currentItem = 0;
+  d->currentItem = nullptr;
   d->emptyModel = new QStandardItemModel;
-  setList (0);
+  setList (nullptr);
   header()->hide();  // no header
   d->validator = new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this);
   d->col = new KActionCollection (this);
@@ -115,7 +115,7 @@ cListViewer::~cListViewer ()
 void cListViewer::setList (cList *l)
 {
   d->list = l;
-  d->currentItem = 0;
+  d->currentItem = nullptr;
   setModel (l ? l->model() : d->emptyModel);
 }
 

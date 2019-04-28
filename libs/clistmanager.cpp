@@ -47,7 +47,7 @@ struct cListManager::Private {
   int maxObjectID;
 };
 
-cListManager *cListManager::_self = 0;
+cListManager *cListManager::_self = nullptr;
 
 cListManager *cListManager::self()
 {
@@ -153,8 +153,8 @@ QStandardItemModel *cListManager::typeModel () const
 
 cList *cListManager::getList (int sessId, const QString &name)
 {
-  if (!d->lists.count (sessId)) return 0;  // session must exist
-  if (!d->listTypes.count (name)) return 0;  // type must be registered
+  if (!d->lists.count (sessId)) return nullptr;  // session must exist
+  if (!d->listTypes.count (name)) return nullptr;  // type must be registered
   if (d->lists[sessId].count (name))
     return d->lists[sessId][name];  // list exists - return it
 
@@ -224,7 +224,7 @@ cListObject *cListManager::object (int id) const
 {
   if (d->objects.count (id))
     return d->objects[id];
-  return 0;
+  return nullptr;
 }
 
 void cListManager::loadList (int sessId, cList *list)

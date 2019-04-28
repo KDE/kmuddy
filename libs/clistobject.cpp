@@ -42,7 +42,7 @@ cListObject::cListObject (cList *list)
 {
   d = new Private;
   d->list = list;
-  d->parent = 0;
+  d->parent = nullptr;
   d->data.enabled = true;
   d->groupPos = 0;
   d->groupPriorityPos = 0;

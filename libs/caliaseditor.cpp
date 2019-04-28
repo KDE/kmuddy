@@ -69,7 +69,7 @@ cAliasEditor::cAliasEditor (QWidget *parent)
   : cListEditor (parent)
 {
   d = new Private;
-  d->regExpDialog = 0;
+  d->regExpDialog = nullptr;
 }
 
 cAliasEditor::~cAliasEditor ()

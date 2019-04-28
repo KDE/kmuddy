@@ -55,7 +55,7 @@ cListEditor::cListEditor (QWidget *parent)
 {
   d = new Private;
   d->objNum = 0;
-  d->obj = 0;
+  d->obj = nullptr;
   d->guiCreated = false;
   d->saving = false;
 
@@ -94,7 +94,7 @@ void cListEditor::setObject (cListObject *obj)
 {
   if (d->obj) {
     disconnect (d->obj, SIGNAL (changed (cListObject *)), this, SLOT (objectChanged (cListObject *)));
-    d->obj = 0;
+    d->obj = nullptr;
   }
 
   if (!obj) return;
@@ -146,7 +146,7 @@ void cListEditor::objectChanged (cListObject *obj)
 
 bool cListEditor::objectValid ()
 {
-  if (d->obj == 0) return false;
+  if (!d->obj) return false;
   return (cListManager::self()->objectId (d->obj) != 0);
 }
 

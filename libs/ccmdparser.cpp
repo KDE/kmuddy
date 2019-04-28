@@ -161,7 +161,7 @@ QStringList cCmdParser::parseCommand (const QString &command, bool expandAliases
   // perform alias expansion
   if (expandAliases) {
     cList *al = cListManager::self()->getList (sess(), "aliases");
-    cAliasList *aliases = al ? dynamic_cast<cAliasList *>(al) : 0;
+    cAliasList *aliases = al ? dynamic_cast<cAliasList *>(al) : nullptr;
     if (aliases && aliases->matchString (cmd))
     {
       aliasesExpanded = true;
@@ -425,7 +425,7 @@ unsigned int cCmdParser::repeater (QString &command)
 
       //limit repeat count if needed
       cProfileSettings *sett = settings ();
-      bool limitRepeats = ((sett == 0) ? true : sett->getBool ("limit-repeater"));
+      bool limitRepeats = sett ? sett->getBool ("limit-repeater") : true;
 
       if ((repc > 100) && limitRepeats)
       {

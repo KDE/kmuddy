@@ -61,7 +61,7 @@ class cListModel : public QAbstractItemModel {
   QModelIndex indexOf (const cListObject *obj) const
   {
     if (obj == lst->rootGroup()) return QModelIndex();
-    if (obj == 0) return QModelIndex();
+    if (!obj) return QModelIndex();
     return createIndex (obj->positionInGroup(), 0, (void *) obj);
   }
 
@@ -252,7 +252,7 @@ cList::cList (const QString &name)
   d->enabled = true;
   d->name = name;
   d->model = new cListModel (this);
-  d->rootGroup = 0;
+  d->rootGroup = nullptr;
   d->sess = 0;
   d->hasError = false;
 }
@@ -342,7 +342,7 @@ cListGroup *cList::group (const QString &name)
 {
   if (d->groups.count (name))
     return d->groups[name];
-  return 0;
+  return nullptr;
 }
 
 cListGroup *cList::addGroup (cListGroup *parent, const QString &name)
@@ -407,7 +407,7 @@ cListObject *cList::getObject (const QString &name)
 {
   if (d->namedObjects.count (name))
     return d->namedObjects[name];
-  return 0;
+  return nullptr;
 }
 
 void cList::deleteObject (cListObject *obj)

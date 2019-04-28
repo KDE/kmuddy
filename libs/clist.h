@@ -68,7 +68,7 @@ public:
   virtual ~cList ();
 
   /** Create a new instance of this class. */
-  static cList *newList () { return 0; };
+  static cList *newList () { return nullptr; };
 
   /** Set session ID of this list. */
   void setSession (int sess);

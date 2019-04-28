@@ -150,7 +150,7 @@ chunkItem *cTextChunk::itemAt (int pos)
   }
   if (it != _entries.end())
     return *it;
-  return 0;
+  return nullptr;
 }
 
 cTextChunk *cTextChunk::splitLine (int idx, bool wordwrap, int indent,
@@ -158,7 +158,7 @@ cTextChunk *cTextChunk::splitLine (int idx, bool wordwrap, int indent,
 {
   //look if we need to split the line
   if (length() <= idx)
-    return 0;
+    return nullptr;
 
   //OKay, we need to split...
   QString text = plainText ();
@@ -183,7 +183,7 @@ cTextChunk *cTextChunk::splitLine (int idx, bool wordwrap, int indent,
 
   //now go, find the item that this splitpos belongs to, and split there!
   bool moving = false;
-  cTextChunk *ch2 = 0;
+  cTextChunk *ch2 = nullptr;
   chunkStart newstartattr = startattr;
   newstartattr.startpos = indent;   //start at indentation value
   list<chunkItem *>::iterator it, moveit;
@@ -429,7 +429,7 @@ void cTextChunk::replace (int pos, int len, const QString newtext)
   int spos, l;
   
   //step 1: prepare replacement chunk
-  chunkText *chunk = 0;
+  chunkText *chunk = nullptr;
   if (!newtext.isEmpty())
   {
     chunk = new chunkText;
@@ -812,7 +812,7 @@ QString chunkText::toHTML (QString &)
 chunkItem *chunkText::split (int pos)
 {
   if ((pos < 0) || (pos >= length()-1))
-    return 0;    //do NOTHING
+    return nullptr;    //do NOTHING
   chunkText *cht = new chunkText;
   int l1 = pos + 1;
   int l2 = _text.length() - l1;
@@ -825,7 +825,7 @@ chunkItem *chunkText::split (int pos)
 chunkItem *chunkLink::split (int pos)
 {
   if ((pos < 0) || (pos >= length()-1))
-    return 0;    //do NOTHING
+    return nullptr;    //do NOTHING
   chunkLink *chl = (chunkLink *) duplicate ();
   int l1 = pos + 1;
   int l2 = _text.length() - l1;

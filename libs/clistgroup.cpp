@@ -98,7 +98,7 @@ cListObject *cListGroup::objectAt (int pos)
 {
   std::list<cListObject *>::iterator it = d->objects.begin();
   for (int p = 0; p < pos; ++p) ++it;
-  if (it == d->objects.end()) return 0;   // hit end of list - no such object
+  if (it == d->objects.end()) return nullptr;   // hit end of list - no such object
   return *it;
 }
 

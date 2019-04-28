@@ -52,8 +52,8 @@ cAlias::cAlias (cList *list) : cListObject (list)
   //include prefix/suffix
   d->includeprefixsuffix = true;
   d->global = false;
-  d->exp = 0;
-  d->resolver = 0;
+  d->exp = nullptr;
+  d->resolver = nullptr;
 }
 
 cAlias::~cAlias ()
@@ -118,7 +118,7 @@ void cAlias::attribChanged (const QString &name)
     // TODO: this is duplicated for every place with conditions
     // find out if we could create a common class for this
     delete d->exp;
-    d->exp = 0;
+    d->exp = nullptr;
   
     // no expression ? nothing to do !
     if (d->condition.trimmed().isEmpty()) return;
@@ -193,7 +193,7 @@ bool cAlias::testCondition ()
   queue->fillFromPattern (&d->p);
   cValue val = d->exp->evaluate (d->resolver);
   delete queue;
-  d->resolver->setQueue(0);
+  d->resolver->setQueue(nullptr);
 
   // test passes if the evaluator returns non-zero ...
   return (val.asInteger() != 0);
