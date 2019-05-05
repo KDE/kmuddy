@@ -38,6 +38,11 @@ dlgMXPConsole::~dlgMXPConsole ()
 {
 }
 
+QSize dlgMXPConsole::sizeHint() const
+{
+  return QSize (500, 300);
+}
+
 void dlgMXPConsole::createDialog ()
 {
   setWindowTitle (i18n ("MXP Console"));
@@ -60,10 +65,6 @@ void dlgMXPConsole::addLine (const QString &line)
   sb->setValue (sb->maximum ());
 }
 
-QSize dlgMXPConsole::sizeHint() const
-{
-  return QSize (300, 200);
-}
 
 #endif  //HAVE_MXP
 

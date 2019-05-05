@@ -26,6 +26,7 @@
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QGridLayout>
+#include <QSortFilterProxyModel>
 #include <QTreeView>
 #include <QVBoxLayout>
 
@@ -43,14 +44,20 @@ dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
 
   //put some widgets there
   lw = new QTreeView (this);
-  lw->setModel (cProfileManager::self()->model());
+  QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel (this);
+  proxyModel->setSourceModel (cProfileManager::self()->model());
+  proxyModel->setSortCaseSensitivity (Qt::CaseInsensitive);
+  lw->setModel (proxyModel);
   lw->setUniformRowHeights (true);
   lw->setRootIsDecorated (false);
   lw->setItemsExpandable (false);
+  lw->setSortingEnabled (true);
+  lw->sortByColumn (0, Qt::AscendingOrder);
   lw->setWhatsThis(
     i18n ("This list shows currently defined profiles.<p><b>Profiles</b> "
       "allow you to speed up connecting to your MUD, as well as to use "
       "more advanced features like <i>aliases</i> or <i>triggers</i>."));
+
   QWidget *vb = new QWidget (this);
   QVBoxLayout *vblayout = new QVBoxLayout (vb);
   vblayout->setSpacing (5);
@@ -119,6 +126,9 @@ QString dlgConnect::selectedProfile ()
 {
   QItemSelection sel = lw->selectionModel()->selection();
   if (sel.empty()) return QString();
+  QSortFilterProxyModel *model = dynamic_cast<QSortFilterProxyModel *> (lw->model());
+  if (!model) return QString();
+  sel = model->mapSelectionToSource (sel);
   int idx = sel.indexes().first().row();
   return cProfileManager::self()->profileList()[idx];
 }

@@ -113,12 +113,12 @@ cTelnet::cTelnet (int sess) : cActionBase ("telnet", sess)
 {
   d = new cTelnetPrivate;
 
-  d->socket = 0;
+  d->socket = nullptr;
   d->termType = "KMuddy";
   
-  d->codec = 0;
-  d->inCoder = 0;
-  d->outCoder = 0;
+  d->codec = nullptr;
+  d->inCoder = nullptr;
+  d->outCoder = nullptr;
 
   d->iac = d->iac2 = d->insb = false;
   d->command = "";
@@ -167,7 +167,7 @@ cTelnet::~cTelnet()
   delete d->outCoder;
 
   delete d;
-  d = 0;
+  d = nullptr;
 }
 
 void cTelnet::eventNothingHandler (QString event, int)
@@ -223,7 +223,7 @@ void cTelnet::socketFailed ()
   d->_connected = false;
   d->_connecting = false;
   d->socket->deleteLater ();
-  d->socket = 0;
+  d->socket = nullptr;
 }
 
 /** establishes a new connection */
@@ -252,6 +252,7 @@ void cTelnet::connectIt (const QString &address, int port, cProfileSettings *set
   d->hostName = address;
   d->hostPort = port;
   d->socket = KSocketFactory::connectToHost ("telnet", address, port);
+  d->socket->setSocketOption (QAbstractSocket::KeepAliveOption, 1);
   setupSocketHandlers ();
 }
 
@@ -346,7 +347,7 @@ void cTelnet::disconnect ()
   
     // schedule socket deletion
     d->socket->deleteLater ();
-    d->socket = 0;
+    d->socket = nullptr;
   }
 
   //alright - we're disconnected
@@ -372,7 +373,7 @@ bool cTelnet::isConnected ()
 
 void cTelnet::setMSPGlobalPaths (const QStringList &paths)
 {
-  if (d->MSP != 0)
+  if (d->MSP)
     d->MSP->setGlobalPaths (paths);
 }
 
@@ -383,20 +384,20 @@ bool cTelnet::usingMSP ()
 
 void cTelnet::setMSPAllowed (bool allow)
 {
-  if (d->MSP != 0)
+  if (d->MSP)
     d->MSP->setMSPAllowed (allow);
 }
 
 void cTelnet::setDownloadAllowed (bool allow)
 {
-  if (d->MSP != 0)
+  if (d->MSP)
     d->MSP->setDownloadAllowed (allow);
 }
 
 void cTelnet::processSoundRequest (bool isSOUND, QString fName, int volume, int repeats,
     int priority, QString type, QString url)
 {
-  if (d->MSP != 0)
+  if (d->MSP)
     d->MSP->processRequest (isSOUND, fName, volume, repeats, priority, type, url);
 }
 

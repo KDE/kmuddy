@@ -22,9 +22,9 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 #include <KLocalizedString>
-#include <kvbox.h>
 
 dlgGrabKey::dlgGrabKey (QWidget *parent) : QDialog (parent)
 {
@@ -32,21 +32,23 @@ dlgGrabKey::dlgGrabKey (QWidget *parent) : QDialog (parent)
   
   //initial dialog size
   setWindowTitle (i18n ("Keygrabber"));
+  QVBoxLayout *layout = new QVBoxLayout (this);
 
-  //create main dialog's widget
-  KVBox *vbox = new KVBox (this);
-  new QLabel (i18n ("Press the desired shortcut..."), vbox);
+  QLabel *label = new QLabel (i18n ("Press the desired shortcut..."), this);
 
-  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Cancel, vbox);
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Cancel,this);
   QPushButton *button = buttons->button (QDialogButtonBox::Cancel);
   button->setDefault(true);
   connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
   connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+  layout->addWidget (label);
+  layout->addWidget (buttons);
 }
 
 dlgGrabKey::~dlgGrabKey ()
 {
-  KMuddy::self()->setGrabDialog (0);
+  KMuddy::self()->setGrabDialog (nullptr);
 }
 
 QSize dlgGrabKey::sizeHint() const

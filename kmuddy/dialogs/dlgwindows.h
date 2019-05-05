@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QLabel>
 
 class QListWidget;
-class KPushButton;
+class QPushButton;
 class QStringList;
 
 class cWindowList;
@@ -58,7 +58,7 @@ protected:
   cWindowList *winlist;
   
   QListWidget *box;
-  KPushButton *btshow, *bthide, *btdelete;
+  QPushButton *btshow, *bthide, *btdelete;
   
 
 };
