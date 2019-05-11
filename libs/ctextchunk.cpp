@@ -96,6 +96,7 @@ void cTextChunk::appendEntry (chunkItem *entry)
   _entries.push_back (entry);
   //update starting position
   entry->setStartPos (basepos);
+  entry->_chunk = this;
   //update the timestamp
   timestamp = QDateTime::currentDateTime();
 }
@@ -720,6 +721,27 @@ QString cTextChunk::toHTML ()
   return "<p>" + s + "</p>";
 }
 
+void cTextChunk::insertToDocument (QTextCursor &cursor)
+{
+  QTextCharFormat format;
+  chunkFg::setFormat (format, startattr.fg);
+  chunkBg::setFormat (format, startattr.bg);
+  chunkAttrib::setFormat (format, startattr.attrib);
+
+/*  I think this isn't needed anymore ...
+  if (startattr.startpos)
+  {
+    QString s;
+    s.fill (' ', startattr.startpos);
+    cursor.insertText (s, format);
+  }
+*/
+
+  for (chunkItem *item : _entries)
+    item->insertToDocument (cursor, format);
+}
+
+
 cTextChunk *cTextChunk::makeLine (const QString &text, QColor fg, QColor bg, cConsole *console)
 {
   cTextChunk *chunk = new cTextChunk (console);
@@ -1288,4 +1310,33 @@ QString chunkLink::toHTML (QString &)
   QString href = rel + " " + (_toprompt ? "prompt" : "send") + " " + _target;
   return "<a rel=\"" + rel + "\" href=\"" + href + "\">" + _text + "</a>";
 }
+
+void chunkLink::insertToDocument (QTextCursor &cursor, QTextCharFormat &format) {
+  QTextCharFormat linkformat = format;
+  linkformat.setAnchor (true);
+  linkformat.setAnchorHref (_target);
+  if (linkformat.foreground().color() == _chunk->startAttr().fg)
+    linkformat.setForeground (linkColor);
+  cursor.insertText (_text, linkformat);
+}
+
+void chunkFg::setFormat (QTextCharFormat &format, QColor color)
+{
+  format.setForeground (color);
+}
+
+void chunkBg::setFormat (QTextCharFormat &format, QColor color)
+{
+  format.setBackground (color);
+}
+
+void chunkAttrib::setFormat (QTextCharFormat &format, int attrib)
+{
+  format.setFontWeight ((attrib & ATTRIB_BOLD) ? QFont::Bold : QFont::Normal);
+  format.setFontItalic (attrib & ATTRIB_ITALIC);
+  format.setFontUnderline (attrib & ATTRIB_UNDERLINE);
+  format.setFontStrikeOut (attrib & ATTRIB_STRIKEOUT);
+  // blink, negative, and invisible are currently not supported
+}
+
 

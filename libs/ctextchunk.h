@@ -27,6 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDateTime>
 #include <QFont>
 #include <QString>
+#include <QTextCharFormat>
+#include <QTextCursor>
 
 #include <list>
 #include <kmuddy_export.h>
@@ -35,6 +37,7 @@ using namespace std;
 
 class cANSIParser;
 class cConsole;
+class cTextChunk;
 
 class QPainter;
 
@@ -44,6 +47,7 @@ class QPainter;
 
 class KMUDDY_EXPORT chunkItem {
  public:
+  chunkItem () : startpos(0), _chunk(nullptr) {}
   virtual ~chunkItem() {};
   virtual int type() = 0;
   int startPos () { return startpos; }
@@ -65,9 +69,14 @@ class KMUDDY_EXPORT chunkItem {
   virtual QString toAnsi (cANSIParser *) { return QString(); };
   /** output to HTML, suffix can be used to provide closing tags if needed */
   virtual QString toHTML (QString &) { return QString(); };
+
+  /** Insert self into a text document at the QTextCursor's position */
+  virtual void insertToDocument (QTextCursor &, QTextCharFormat &) = 0;
  protected:
 //  void paintText (const QString &text, QPainter *painter, QFont font, QColor fg, QColor bg, paintStatus *ps);
   int startpos;
+  cTextChunk *_chunk;
+  friend class cTextChunk;
 };
 
 /** one color change made by color triggers */
@@ -156,6 +165,7 @@ public:
   /** output to HTML */
   QString toHTML ();
 
+  void insertToDocument (QTextCursor &cursor);
   //get timestamp in a textual form
   QString getTimeStamp ();
   
@@ -169,7 +179,7 @@ protected:
   
   /** starting attributes... */
   chunkStart startattr;
-  
+
   /** cConsole object, used when needed */
   cConsole *console;
 
@@ -196,6 +206,8 @@ class KMUDDY_EXPORT chunkText : public chunkItem {
   virtual chunkItem *duplicate() override;
   virtual void trimLeft () override;
   virtual void replace (int pos, int len, const QString &newtext) override;
+
+  virtual void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override { cursor.insertText (_text, format); };
 
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
@@ -224,12 +236,15 @@ class KMUDDY_EXPORT chunkFg : public chunkItem {
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
+  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _fg); };
+
   //output to transcript...
   /** output to plain-text with ANSI sequences */
   virtual QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
   virtual QString toHTML (QString &suffix) override;
-  
+
+  static void setFormat (QTextCharFormat &format, QColor color);
   static QString constructAnsi (QColor color, cANSIParser *ap);
   static QString constructHTML (QColor color, QString &suffix);
  protected:
@@ -246,6 +261,8 @@ class KMUDDY_EXPORT chunkBg : public chunkItem {
   virtual int length() override { return 0; }
   virtual chunkItem *duplicate() override;
  
+  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _bg); };
+
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
@@ -255,6 +272,7 @@ class KMUDDY_EXPORT chunkBg : public chunkItem {
   /** output to HTML, suffix can be used to provide closing tags if needed */
   virtual QString toHTML (QString &suffix) override;
   
+  static void setFormat (QTextCharFormat &format, QColor color);
   static QString constructAnsi (QColor color, cANSIParser *ap);
   static QString constructHTML (QColor color, QString &suffix);
  protected:
@@ -282,13 +300,16 @@ class KMUDDY_EXPORT chunkAttrib : public chunkItem {
  
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
-  
+
+  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _attrib); };
+
   //output to transcript...
   /** output to plain-text with ANSI sequences */
   virtual QString toAnsi (cANSIParser *) override;
   
   //no HTML output here - we cannot handle closing tags properly without too much hassle
-  
+
+  static void setFormat (QTextCharFormat &format, int attrib);
   static QString constructAnsi (unsigned char attrib);
  protected:
   int _attrib;
@@ -332,7 +353,9 @@ class KMUDDY_EXPORT chunkLink : public chunkItem {
   const list<menuItem> &menu() { return _menu; };
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
-  
+
+  virtual void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override;
+
   //output to transcript...
   /** output to plain-text with ANSI sequences */
   virtual QString toAnsi (cANSIParser *ap) override;

@@ -66,7 +66,9 @@ public:
 
   void updateSize () {
     QRectF rect = scene()->sceneRect();
-    setTextWidth (rect.width());
+    double w = rect.width();
+    if (textWidth() == w) return;  // don't update the width if it already is fine - it's an expensive operation
+    setTextWidth (w);
     prepareGeometryChange();
   }
 
@@ -148,8 +150,8 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   d->text = new QTextDocument;
-  QString stylesheet = "* { color: " + QColor (Qt::lightGray).name() + "; white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + "; } p,div { padding: 1px; line-spacing: 1.3 } ";
-  d->text->setDefaultStyleSheet (stylesheet);
+//  QString stylesheet = "* { white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + "; }  ";
+//  d->text->setDefaultStyleSheet (stylesheet);
   QTextOption opt;
   opt.setWrapMode (QTextOption::WrapAtWordBoundaryOrAnywhere);
   d->text->setDefaultTextOption (opt);
@@ -382,6 +384,8 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
       cursor.insertBlock ();
       d->wantNewLine = false;
       QTextBlockFormat bformat = cursor.blockFormat();
+      bformat.setForeground (Qt::lightGray);
+      bformat.setProperty (QTextFormat::FramePadding, 1);
       bformat.setLineHeight (2, QTextBlockFormat::LineDistanceHeight);
       double px = d->indentChars * d->charWidth;  // 0 if no indentation is to happen
       bformat.setLeftMargin (px);
@@ -389,7 +393,8 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
       cursor.setBlockFormat (bformat);
     }
 
-    cursor.insertHtml (chunk->toHTML());
+    chunk->insertToDocument (cursor);
+//    cursor.insertHtml (chunk->toHTML());
   }
   if (endTheLine) d->wantNewLine = true;
 
