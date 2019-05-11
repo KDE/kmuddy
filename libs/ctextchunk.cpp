@@ -1314,7 +1314,8 @@ QString chunkLink::toHTML (QString &)
 void chunkLink::insertToDocument (QTextCursor &cursor, QTextCharFormat &format) {
   QTextCharFormat linkformat = format;
   linkformat.setAnchor (true);
-  linkformat.setAnchorHref (_target);
+  QString href = QString(_iscommand ? "command" : "link") + " " + (_toprompt ? "prompt" : "send") + " " + _target;
+  linkformat.setAnchorHref (href);
   if (linkformat.foreground().color() == _chunk->startAttr().fg)
     linkformat.setForeground (linkColor);
   cursor.insertText (_text, linkformat);
