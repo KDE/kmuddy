@@ -218,7 +218,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   viewport()->setCursor (Qt::IBeamCursor);
 
   forceBeginOfLine ();
-  fixupOutput();
+  fixupOutput(true);
 }
 
 cConsole::~cConsole() {
@@ -242,7 +242,7 @@ void cConsole::setFont (QFont f) {
   d->charWidth = fm.width ("m");
   d->charHeight = fm.lineSpacing() + 2;
 
-  fixupOutput();
+  fixupOutput(true);
 }
 
 QFont cConsole::font () {
@@ -415,7 +415,7 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
     if (!d->atBottom) bar->setValue (bar->value() - fheight);
   }
 
-  fixupOutput();
+  fixupOutput(false);
 }
 
 void cConsole::forceBeginOfLine () {
@@ -459,14 +459,14 @@ void cConsole::pageDown () {
 
 void cConsole::resizeEvent (QResizeEvent *)
 {
-  fixupOutput();
+  fixupOutput(true);
 }
 
 // this is needed to resize the text display at startup
 bool cConsole::viewportEvent(QEvent *event)
 {
   if (event->type() == QEvent::Resize)
-    fixupOutput();
+    fixupOutput(true);
   return QGraphicsView::viewportEvent (event);
 }
 
@@ -493,7 +493,7 @@ void cConsole::scrollContentsBy (int dx, int dy)
   adjustScrollBack();
 }
 
-void cConsole::fixupOutput ()
+void cConsole::fixupOutput (bool sizeChanged)
 {
   double h = max ((qreal) viewport()->height(), d->text->documentLayout()->documentSize().height());
   scene()->setSceneRect (0, 0, viewport()->width(), h);
@@ -503,7 +503,8 @@ void cConsole::fixupOutput ()
   d->scrollText->updateSize();
   adjustScrollBack ();
 
-  forceEmitSize ();
+  if (sizeChanged)
+    forceEmitSize ();
 }
 
 void cConsole::linkHovered (const QString &link)

@@ -293,6 +293,9 @@ void cTelnet::reset ()
   //reset telnet status
   d->iac = d->iac2 = d->insb = false;
   d->command = "";
+  // reset these so that we report dimensions correctly
+  d->curX = 0;
+  d->curY = 0;
 }
 
 void cTelnet::socketConnected ()
@@ -519,39 +522,37 @@ void cTelnet::windowSizeChanged (int x, int y)
   //remember the size - we'll need it if NAWS is currently disabled but will
   //be enabled. Also remember it if no connection exists at the moment;
   //we won't be called again when connecting
-  d->curX = x;
-  d->curY = y;
   if (!(isConnected()))
     return;
-  if (d->myOptionState[OPT_NAWS])   //only if we have negotiated this option
-  {
-    string s;
-    s = TN_IAC;
-    s += TN_SB;
-    s += OPT_NAWS;
-    unsigned char x1, x2, y1, y2;
-    x1 = (unsigned char) x / 256;
-    x2 = (unsigned char) x % 256;
-    y1 = (unsigned char) y / 256;
-    y2 = (unsigned char) y % 256;
-    //IAC must be doubled
-    s += x1;
-    if (x1 == TN_IAC)
-      s += TN_IAC;
-    s += x2; 
-    if (x2 == TN_IAC)
-      s += TN_IAC;
-    s += y1;
-    if (y1 == TN_IAC)
-      s += TN_IAC;
-    s += y2;
-    if (y2 == TN_IAC)
-      s += TN_IAC;
-    
+  if (!d->myOptionState[OPT_NAWS]) return;   //only if we have negotiated this option
+  if ((x == d->curX) && (y == d->curY)) return;   // don't spam sizes if we have sent the current one already
+
+  string s;
+  s = TN_IAC;
+  s += TN_SB;
+  s += OPT_NAWS;
+  unsigned char x1, x2, y1, y2;
+  x1 = (unsigned char) x / 256;
+  x2 = (unsigned char) x % 256;
+  y1 = (unsigned char) y / 256;
+  y2 = (unsigned char) y % 256;
+  //IAC must be doubled
+  s += x1;
+  if (x1 == TN_IAC)
     s += TN_IAC;
-    s += TN_SE;
-    doSendData (s);
-  }
+  s += x2; 
+  if (x2 == TN_IAC)
+    s += TN_IAC;
+  s += y1;
+  if (y1 == TN_IAC)
+    s += TN_IAC;
+  s += y2;
+  if (y2 == TN_IAC)
+    s += TN_IAC;
+  
+  s += TN_IAC;
+  s += TN_SE;
+  doSendData (s);
 }
 
 void cTelnet::sendTelnetOption (unsigned char type, unsigned char option)

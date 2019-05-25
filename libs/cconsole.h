@@ -116,7 +116,7 @@ protected:
   bool viewportEvent(QEvent *event) override;
   virtual void scrollContentsBy (int dx, int dy) override;
   /** called when resizing and when changing font */
-  void fixupOutput ();
+  void fixupOutput (bool sizeChanged = false);
   void adjustScrollBack ();
 
   void addNewText (cTextChunk *chunk, bool endTheLine);
