@@ -3,5 +3,5 @@ SRCDIR=$(pwd)
 
 mkdir ../kmuddy-build
 cd ../kmuddy-build
-cmake ${SRCDIR} -DCMAKE_BUILD_TYPE=debug -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
+cmake ${SRCDIR} -DCMAKE_BUILD_TYPE=debug -DCMAKE_INSTALL_PREFIX=`kf5-config --prefix`
 

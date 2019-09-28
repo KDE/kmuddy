@@ -639,7 +639,7 @@ void CMapFileFilterXML::savePluginPropertiesForElement(CMapElement *element,QDom
     plugin->saveElementProperties(element,&pluginProperties);
 
     EntryMap entries = pluginProperties.entryMap("Properties");
-    for (EntryMap::ConstIterator it = entries.begin(); it != entries.end(); ++it)
+    for (EntryMap::ConstIterator it = entries.constBegin(); it != entries.constEnd(); ++it)
     {
       pNode.setAttribute(it.key(),it.value());
     }

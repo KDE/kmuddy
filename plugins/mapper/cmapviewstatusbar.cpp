@@ -104,9 +104,7 @@ void CMapViewStatusbar::setZone(CMapZone *zone)
     d->zonePicker->setCurrentIndex(zones->activeZone());
   }
 
-  if (d->zone == zone) return;
   d->zone = zone;
-
   d->levelPicker->setModel(zone->levelsModel());
   setLevel(d->manager->getActiveView()->getCurrentlyViewedLevel());
 }

@@ -58,7 +58,7 @@ add_library(kmuddycore SHARED ${kmuddycore_LIB_SRCS})
 # TODO: get rid of the support libs
 target_link_libraries(kmuddycore KF5::KCMUtils KF5::I18n KF5::Service KF5::KDELibs4Support Qt5::Script Qt5::Multimedia)
 
-set_target_properties(kmuddycore PROPERTIES VERSION 1.0.0 SOVERSION 1 )
+set_target_properties(kmuddycore PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS kmuddycore DESTINATION ${LIB_INSTALL_DIR} )
 
 
