@@ -791,7 +791,6 @@
    </item>
   </layout>
  </widget>
- <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
  </customwidgets>
  <resources/>
