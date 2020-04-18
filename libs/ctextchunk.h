@@ -167,7 +167,7 @@ public:
 
   void insertToDocument (QTextCursor &cursor);
   //get timestamp in a textual form
-  QString getTimeStamp ();
+  QDateTime getTimeStamp ();
   
   /** create one line that's all in one color */
   static cTextChunk *makeLine (const QString &text, QColor fg, QColor bg, cConsole *console);

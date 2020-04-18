@@ -30,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <qpainter.h>
 #include <qregexp.h>
 
-#include <KLocalizedString>
-
 #include <stdlib.h>
 
 /** state variables needed to paint a row */
@@ -727,6 +725,7 @@ void cTextChunk::insertToDocument (QTextCursor &cursor)
   chunkFg::setFormat (format, startattr.fg);
   chunkBg::setFormat (format, startattr.bg);
   chunkAttrib::setFormat (format, startattr.attrib);
+  format.setProperty (QTextFormat::UserProperty + 1, timestamp);
 
 /*  I think this isn't needed anymore ...
   if (startattr.startpos)
@@ -768,38 +767,9 @@ cTextChunk *cTextChunk::makeLine (const QString &text, QColor fg, QColor bg, cCo
   return chunk;
 }
 
-QString cTextChunk::getTimeStamp ()
+QDateTime cTextChunk::getTimeStamp ()
 {
-  QString stamp = timestamp.toString ("hh:mm:ss");
-  
-  int secsago = timestamp.secsTo (QDateTime::currentDateTime());
-  if (secsago == 0)  //special case: NOW!
-    stamp += (" (" + i18n ("now") + ")");
-  else
-  {
-    int minsago = secsago / 60;
-    int hoursago = minsago / 60;
-    secsago = secsago % 60;
-    minsago = minsago % 60;
-    // FIXME: fix word puzzle
-    stamp += " (";
-    if (hoursago)
-      stamp += QString::number (hoursago) + ((hoursago == 1) ? i18n ("hour") : i18n ("hours"));
-    if (minsago && (hoursago < 10))  //don't show minutes if >= 10 hrs
-    {
-      if (hoursago)
-        stamp += " ";
-      stamp += QString::number (minsago) + " " + ((minsago == 1) ? i18n ("minute") : i18n ("minutes"));
-    }
-    if (secsago && (!(hoursago || (minsago >= 5))))  //don't show seconds if >= 5 mins ago
-    {
-      if (minsago || hoursago)
-        stamp += " ";
-      stamp += QString::number (secsago) + " " + ((secsago == 1) ? i18n ("second") : i18n ("seconds"));
-    }
-    stamp += (" " + i18n ("ago") + ")");
-  }
-  return stamp;
+  return timestamp;
 }
 
 void cTextChunk::fixupStartPositions ()

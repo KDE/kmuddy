@@ -26,15 +26,18 @@
 #include <QAction>
 #include <QDesktopServices>
 #include <QGraphicsItemGroup>
+#include <QGraphicsSceneHelpEvent>
 #include <QGraphicsTextItem>
 #include <QScrollBar>
 #include <QTextBlock>
 #include <QTextBlockFormat>
 #include <QTextCursor>
 #include <QTextDocument>
+#include <QToolTip>
 #include <QDebug>
 
 #include <KActionCollection>
+#include <KLocalizedString>
 
 
 class cTextOutputItem : public QGraphicsTextItem {
@@ -52,7 +55,7 @@ public:
     return shape();
   }
 
-  void paint (QPainter *painter, const QStyleOptionGraphicsItem *o, QWidget *w) {
+  void paint (QPainter *painter, const QStyleOptionGraphicsItem *o, QWidget *w) override {
     painter->setBrush (bgcolor);
     painter->drawRect (boundingRect());
     QGraphicsTextItem::paint (painter, o, w);
@@ -112,8 +115,72 @@ protected:
   int _percentHeight;
 };
 
+class cConsoleScene : public QGraphicsScene {
+
+ protected:
+
+  QString formatTimeStamp (QDateTime timestamp) {
+    QString stamp = timestamp.toString ("hh:mm:ss");
+    
+    int secsago = timestamp.secsTo (QDateTime::currentDateTime());
+    if (secsago == 0)  //special case: NOW!
+      stamp += (" (" + i18n ("now") + ")");
+    else
+    {
+      int minsago = secsago / 60;
+      int hoursago = minsago / 60;
+      secsago = secsago % 60;
+      minsago = minsago % 60;
+      // FIXME: fix word puzzle
+      stamp += " (";
+      if (hoursago)
+        stamp += QString::number (hoursago) + ((hoursago == 1) ? i18n ("hour") : i18n ("hours"));
+      if (minsago && (hoursago < 10))  //don't show minutes if >= 10 hrs
+      {
+        if (hoursago)
+          stamp += " ";
+        stamp += QString::number (minsago) + " " + ((minsago == 1) ? i18n ("minute") : i18n ("minutes"));
+      }
+      if (secsago && (!(hoursago || (minsago >= 5))))  //don't show seconds if >= 5 mins ago
+      {
+        if (minsago || hoursago)
+          stamp += " ";
+        stamp += QString::number (secsago) + " " + ((secsago == 1) ? i18n ("second") : i18n ("seconds"));
+      }
+      stamp += (" " + i18n ("ago") + ")");
+    }
+    return stamp;
+  }
+
+  virtual void helpEvent(QGraphicsSceneHelpEvent *helpEvent) override {
+    QGraphicsItem *top = itemAt (helpEvent->scenePos(), QTransform());
+    if (!top) {
+      QToolTip::hideText();
+      return;
+    }
+    cTextOutputItem *text = dynamic_cast<cTextOutputItem *>(top);
+    if (!text) {
+      QToolTip::hideText();
+      return;   // not a text item
+    }
+
+    // get the text format at the mouse position
+    QPointF coord = text->mapFromScene (helpEvent->scenePos());
+    QTextFormat format = text->document()->documentLayout()->formatAt (coord);
+    if (!format.isValid()) {
+      QToolTip::hideText();
+      return;   // not in text
+    }
+
+    QDateTime time = format.property (QTextFormat::UserProperty + 1).toDateTime();
+    QString tip = formatTimeStamp (time);
+    QToolTip::showText(helpEvent->screenPos(), tip);
+  }
+
+};
+
 class cConsole::Private {
-  QGraphicsScene scene;
+  cConsoleScene scene;
   cTextOutputItem *mainText, *scrollText;
   cScrollTextGroup *scrollTextGroup;
   QTextDocument *text;
@@ -390,6 +457,7 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
       double px = d->indentChars * d->charWidth;  // 0 if no indentation is to happen
       bformat.setLeftMargin (px);
       bformat.setTextIndent (-1 * px);
+      bformat.setProperty (QTextFormat::UserProperty + 1, chunk->getTimeStamp());
       cursor.setBlockFormat (bformat);
     }
 
