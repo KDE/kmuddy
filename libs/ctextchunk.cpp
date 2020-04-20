@@ -725,7 +725,6 @@ void cTextChunk::insertToDocument (QTextCursor &cursor)
   chunkFg::setFormat (format, startattr.fg);
   chunkBg::setFormat (format, startattr.bg);
   chunkAttrib::setFormat (format, startattr.attrib);
-  format.setProperty (QTextFormat::UserProperty + 1, timestamp);
 
 /*  I think this isn't needed anymore ...
   if (startattr.startpos)

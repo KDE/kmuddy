@@ -115,6 +115,13 @@ protected:
   int _percentHeight;
 };
 
+class cConsoleTimestamp : public QTextBlockUserData {
+ public:
+  cConsoleTimestamp(QDateTime s) { stamp = s; }
+  virtual ~cConsoleTimestamp(){};
+  QDateTime stamp;
+};
+
 class cConsoleScene : public QGraphicsScene {
 
  protected:
@@ -164,20 +171,30 @@ class cConsoleScene : public QGraphicsScene {
       return;   // not a text item
     }
 
-    // get the text format at the mouse position
+    // get the block at the mouse position
+    cConsoleTimestamp *stamp = nullptr;
     QPointF coord = text->mapFromScene (helpEvent->scenePos());
-    QTextFormat format = text->document()->documentLayout()->formatAt (coord);
-    if (!format.isValid()) {
+    QAbstractTextDocumentLayout *layout = text->document()->documentLayout();
+    QTextBlock block = text->document()->lastBlock();
+    while (block != text->document()->firstBlock()) {
+      if (layout->blockBoundingRect(block).contains (coord)) {  // found it
+        stamp = dynamic_cast<cConsoleTimestamp *>(block.userData());
+        break;
+      }
+      block = block.previous();
+    }
+
+    if (!stamp) {
       QToolTip::hideText();
       return;   // not in text
     }
 
-    QDateTime time = format.property (QTextFormat::UserProperty + 1).toDateTime();
-    QString tip = formatTimeStamp (time);
+    QString tip = formatTimeStamp (stamp->stamp);
     QToolTip::showText(helpEvent->screenPos(), tip);
   }
 
 };
+
 
 class cConsole::Private {
   cConsoleScene scene;
@@ -217,6 +234,7 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
     
   d->text = new QTextDocument;
+  d->text->setUndoRedoEnabled (false);
 //  QString stylesheet = "* { white-space: pre-wrap; } a { color: " + QColor (Qt::blue).name() + "; }  ";
 //  d->text->setDefaultStyleSheet (stylesheet);
   QTextOption opt;
@@ -445,10 +463,15 @@ int cConsole::totalLines() {
 void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
 {
   QTextCursor cursor (d->text);
+
+  cursor.beginEditBlock();
   cursor.movePosition (QTextCursor::End);
   if (chunk) {
     if (d->wantNewLine) {
       cursor.insertBlock ();
+      cursor.block().layout()->setCacheEnabled (true);
+      cConsoleTimestamp *stamp = new cConsoleTimestamp(chunk->getTimeStamp());
+      cursor.block().setUserData (stamp);  // this will delete the stamp
       d->wantNewLine = false;
       QTextBlockFormat bformat = cursor.blockFormat();
       bformat.setForeground (Qt::lightGray);
@@ -457,13 +480,11 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
       double px = d->indentChars * d->charWidth;  // 0 if no indentation is to happen
       bformat.setLeftMargin (px);
       bformat.setTextIndent (-1 * px);
-      bformat.setProperty (QTextFormat::UserProperty + 1, chunk->getTimeStamp());
       cursor.setBlockFormat (bformat);
     }
-
     chunk->insertToDocument (cursor);
-//    cursor.insertHtml (chunk->toHTML());
   }
+  cursor.endEditBlock();
   if (endTheLine) d->wantNewLine = true;
 
   while (totalLines() > d->historySize) {
