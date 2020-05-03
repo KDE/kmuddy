@@ -34,7 +34,6 @@
 #include <QTextCursor>
 #include <QTextDocument>
 #include <QToolTip>
-#include <QDebug>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -359,6 +358,14 @@ void cConsole::setScrollTextVisible (bool vis)
 void cConsole::sliderChanged (int val)
 {
   int maxval = verticalScrollBar()->maximum ();
+
+  // if we're very close to the bottom, push the slider to the bottom
+  // this fixes an off-by-one issue where scrollback would open when switching between tabs due to rounding issues
+  if ((val < maxval) && (val >= maxval - 2)) {
+    verticalScrollBar()->setValue (maxval);
+    return;
+  }
+
   d->atBottom = (val >= maxval);
   bool vis = (val < maxval);
   setScrollTextVisible (vis);
@@ -493,7 +500,12 @@ void cConsole::addNewText (cTextChunk *chunk, bool endTheLine)
     int flines = fblock.lineCount();
     if (totalLines() - flines < d->historySize) break;
 
-    int fheight = d->text->documentLayout()->blockBoundingRect (fblock).height();
+    // determine the distance between the blocks ... can't just use the height of the bounding block, as that doesn't take spacing into account
+    QTextBlock fnextblock = fblock.next();
+    QRectF rect1 = d->text->documentLayout()->blockBoundingRect (fblock);
+    QRectF rect2 = d->text->documentLayout()->blockBoundingRect (fnextblock);
+    int fheight = rect2.top() - rect1.top();
+
     cursor = QTextCursor (fblock);
     cursor.select (QTextCursor::BlockUnderCursor);
     cursor.movePosition (QTextCursor::NextCharacter, QTextCursor::KeepAnchor);  // need to move, otherwise the empty block is kept
