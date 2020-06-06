@@ -1448,7 +1448,7 @@ void cElementManager::processCustomTag (const string &name, const list<sParam> &
   list<sParam>::const_iterator itp;
   for (itp = params.begin(); itp != params.end(); ++itp)
     //assign parameter value... default values and stuff were already expanded
-    paramexpander->addEntity ((*itp).name, "'" + (*itp).value + "'");
+    paramexpander->addEntity ((*itp).name, /*"'" +*/ (*itp).value /*+ "'"*/);
   
   //process tag contents one by one
   list<sElementPart *>::iterator it;

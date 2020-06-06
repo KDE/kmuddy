@@ -14,7 +14,7 @@ set (mxp_SRCS
 
 add_library(mxp SHARED ${mxp_SRCS})
 
-set_target_properties(mxp PROPERTIES VERSION 0.0.4 SOVERSION 0)
+set_target_properties(mxp PROPERTIES VERSION 0.0.5 SOVERSION 0)
 install(TARGETS mxp DESTINATION lib${LIB_SUFFIX} )
 
 install (FILES libmxp.h DESTINATION include/libmxp)

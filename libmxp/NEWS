@@ -1,3 +1,6 @@
+News in libmxp 0.2.5:
+- fix entity expansion in custom tags
+
 News in libmxp 0.2.4:
 - fix element parsing so that parameters can include spaces
 
