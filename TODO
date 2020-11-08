@@ -30,6 +30,44 @@ This is a TODO list for KMuddy.
 #16 0x00007fdcf11e4942 in  () at /usr/lib64/libQtGui.so.4
 
 
+Application: KMuddy (kmuddy), signal: Segmentation fault
+
+[KCrash Handler]
+#4  0x00007f497b8882fc in QObject::disconnect(QObject const*, char const*, QObject const*, char const*) () at /usr/lib64/libQt5Core.so.5
+#5  0x00007f497df4de52 in cListEditor::setObject(cListObject*) (this=0x2470b40, obj=0x0) at /home/tomas/projects/kmuddy/libs/clisteditor.cpp:96
+#6  0x00000000004a2cb4 in dlgObjects::activeObjectChanged(cListObject*) (this=0x2155380, obj=0x6fc830) at /home/tomas/projects/kmuddy/kmuddy/dialogs/dlgobjects.cpp:227
+#7  0x00000000004a415c in dlgObjects::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (_o=0x2155380, _c=QMetaObject::InvokeMetaMethod, _id=1, _a=0x7ffe4008f7a0) at /home/tomas/projects/kmuddy-build/kmuddy/dialogs/dialogs_autogen/EWIEGA46WW/moc_dlgobjects.cpp:84
+#8  0x00007f497b890130 in  () at /usr/lib64/libQt5Core.so.5
+#9  0x00007f497deb59f1 in cListViewer::itemActivated(cListObject*) (this=0x1c51550, _t1=0x6fc830) at /home/tomas/projects/kmuddy-build/libs/kmuddycore_autogen/EWIEGA46WW/moc_clistviewer.cpp:176
+#10 0x00007f497df4cdea in cListViewer::currentChanged(QModelIndex const&, QModelIndex const&) (this=0x1c51550, current=...) at /home/tomas/projects/kmuddy/libs/clistviewer.cpp:138
+#11 0x00007f497c60b907 in QAbstractItemView::setSelectionModel(QItemSelectionModel*) () at /usr/lib64/libQt5Widgets.so.5
+#12 0x00007f497c680207 in QTreeView::setSelectionModel(QItemSelectionModel*) () at /usr/lib64/libQt5Widgets.so.5
+#13 0x00007f497c606186 in QAbstractItemView::setModel(QAbstractItemModel*) () at /usr/lib64/libQt5Widgets.so.5
+#14 0x00007f497c67ff51 in QTreeView::setModel(QAbstractItemModel*) () at /usr/lib64/libQt5Widgets.so.5
+#15 0x00007f497df4ccf4 in cListViewer::setList(cList*) (this=0x1c51550, l=0x12f79a0) at /home/tomas/projects/kmuddy/libs/clistviewer.cpp:119
+#16 0x00000000004a2b2a in dlgObjects::switchList() (this=0x2155380) at /home/tomas/projects/kmuddy/kmuddy/dialogs/dlgobjects.cpp:205
+#17 0x00000000004a28b0 in dlgObjects::eventNothingHandler(QString, int) (this=0x2155380, event=..., session=3) at /home/tomas/projects/kmuddy/kmuddy/dialogs/dlgobjects.cpp:163
+#18 0x00007f497deefb19 in cActionManager::invokeEvent(QString, int) (this=0x8381f0, event=..., session=3) at /home/tomas/projects/kmuddy/libs/cactionmanager.cpp:402
+#19 0x0000000000453985 in cTelnet::socketConnected() (this=0x13ea710) at /home/tomas/projects/kmuddy/kmuddy/ctelnet.cpp:316
+#20 0x000000000043795f in cTelnet::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (_o=0x13ea710, _c=QMetaObject::InvokeMetaMethod, _id=1, _a=0x7ffe4008fc40) at /home/tomas/projects/kmuddy-build/kmuddy/kmuddy_autogen/EWIEGA46WW/moc_ctelnet.cpp:86
+#21 0x00007f497b890130 in  () at /usr/lib64/libQt5Core.so.5
+#22 0x00007f497cec0e52 in  () at /usr/lib64/libQt5Network.so.5
+#23 0x00007f497b890130 in  () at /usr/lib64/libQt5Core.so.5
+#24 0x00007f497ce9b8b8 in  () at /usr/lib64/libQt5Network.so.5
+#25 0x00007f497cead0b8 in  () at /usr/lib64/libQt5Network.so.5
+#26 0x00007f497c3b30cf in QApplicationPrivate::notify_helper(QObject*, QEvent*) () at /usr/lib64/libQt5Widgets.so.5
+#27 0x00007f497b859c1a in QCoreApplication::notifyInternal2(QObject*, QEvent*) () at /usr/lib64/libQt5Core.so.5
+#28 0x00007f497b8b1c15 in  () at /usr/lib64/libQt5Core.so.5
+#29 0x00007f49794a02b7 in g_main_context_dispatch () at /usr/lib64/libglib-2.0.so.0
+#30 0x00007f49794a0638 in  () at /usr/lib64/libglib-2.0.so.0
+#31 0x00007f49794a06ef in g_main_context_iteration () at /usr/lib64/libglib-2.0.so.0
+#32 0x00007f497b8b105f in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () at /usr/lib64/libQt5Core.so.5
+#33 0x00007f497b8585db in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () at /usr/lib64/libQt5Core.so.5
+#34 0x00007f497b860840 in QCoreApplication::exec() () at /usr/lib64/libQt5Core.so.5
+#35 0x00000000004613bf in main(int, char**) (argc=1, argv=0x7ffe400905a8) at /home/tomas/projects/kmuddy/kmuddy/main.cpp:112
+[Inferior 1 (process 9817) detached]
+
+
 TODO-list:
 ----------
 

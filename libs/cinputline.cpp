@@ -405,7 +405,7 @@ void cInputLine::handleTabExpansion ()
     return;  //do nothing if we fail to find any such word
 
     //initialize the expansion
-    tabListPos = tabWords.count()-1;  // Set the position to the last occuranc of the prefix (ML 051006)
+    tabListPos = 0;
 
     // delete the word
     t.remove (expandPos, wordLength);
@@ -418,9 +418,9 @@ void cInputLine::handleTabExpansion ()
     t.remove (expandPos, wlen);  //length of that word, not including a trailing space
 
     //update position in the list
-    tabListPos--;
-    if (tabListPos < 0)
-    tabListPos = tabWords.count() - 1;
+    tabListPos++;
+    if (tabListPos >= tabWords.count())
+      tabListPos = 0;
   }
 
   //if we are here, we expand ...
