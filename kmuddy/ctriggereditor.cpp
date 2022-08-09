@@ -624,7 +624,7 @@ void cTriggerEditor::addColorization ()
 {
   if (d->cnum == MAX_COLORIZATIONS)  //limit reached!
   {
-    KMessageBox::sorry (this, i18n ("Maximum number of colorizations reached."));
+    KMessageBox::error (this, i18n ("Maximum number of colorizations reached."));
     return;
   }
   int fg = d->fgselect->currentIndex ();
@@ -748,7 +748,7 @@ void cTriggerEditor::createOutputWindow ()
     d->windowlist->addItems(wlist);
   }
   else
-    KMessageBox::sorry(this, i18n("Window name is empty!"));
+    KMessageBox::error(this, i18n("Window name is empty!"));
 }
 
 void cTriggerEditor::rewriteChanged (bool val)

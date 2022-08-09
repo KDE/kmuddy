@@ -255,7 +255,7 @@ void cTranscript::startTranscript ()
   file.setFileName (fname);
   if (!file.open (QIODevice::WriteOnly | QIODevice::Text | ( overwrite ? QIODevice::Truncate : QIODevice::Append )))
   {
-    KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
+    KMessageBox::detailedError (cActionManager::self()->mainWidget(),
         i18n ("Transcript file could not be opened."), file.errorString());
     invokeEvent ("message", sess(), i18n ("Session transcript could not be started."));
     return;
@@ -311,7 +311,7 @@ void cTranscript::startAdvTranscript ()
   file.setFileName (af);
   if (!advfile.open (QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
   {
-    KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
+    KMessageBox::detailedError (cActionManager::self()->mainWidget(),
         i18n ("Advanced transcript file could not be opened."), advfile.errorString());
     invokeEvent ("message", sess(), i18n ("Advanced session transcript could not be started."));
     return;
@@ -423,7 +423,7 @@ void cTranscript::doDumpBuffer ()
   int type = bdlg->type();
   QFile f (fName);
   if (!f.open (QIODevice::WriteOnly | QIODevice::Text)) {
-    KMessageBox::detailedSorry (cActionManager::self()->mainWidget(),
+    KMessageBox::detailedError (cActionManager::self()->mainWidget(),
         i18n ("Dump file could not be opened."), f.errorString());
     return;
   }

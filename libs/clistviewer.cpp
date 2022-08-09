@@ -197,7 +197,7 @@ void cListViewer::addGroup () {
   // check if such group exists yet
   cListGroup *g = d->list->group (name);
   if (g) {
-    KMessageBox::sorry (this, i18n ("Cannot create the group, as a group with this name already exists."));
+    KMessageBox::error (this, i18n ("Cannot create the group, as a group with this name already exists."));
     return;
   }
 

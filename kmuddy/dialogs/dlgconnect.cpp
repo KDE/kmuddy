@@ -232,7 +232,7 @@ void dlgConnect::deletePressed ()
 
   // can we do that ?
   if (mgr->hasSessionAssigned (profile)) {
-    KMessageBox::sorry (this, i18n ("This profile cannot be deleted, because you have a connection open using this profile."), i18n ("Unable to delete"));
+    KMessageBox::error (this, i18n ("This profile cannot be deleted, because you have a connection open using this profile."), i18n ("Unable to delete"));
     return;
   }
 
@@ -256,7 +256,7 @@ void dlgConnect::duplicatePressed ()
   bool ok;
   QString newName = KInputDialog::getText (i18n ("Duplicate Profile"), i18n ("Please enter name for the duplicated profile"), mgr->visibleProfileName (profile), &ok, this);
   if (!mgr->duplicateProfile (profile, newName))
-    KMessageBox::sorry (this, i18n ("There was an error trying to duplicate the profile. Please ensure that you have write access to the profile directory."), i18n ("Unable to duplicate"));
+    KMessageBox::error (this, i18n ("There was an error trying to duplicate the profile. Please ensure that you have write access to the profile directory."), i18n ("Unable to duplicate"));
 }
 
 void dlgConnect::doAdd ()

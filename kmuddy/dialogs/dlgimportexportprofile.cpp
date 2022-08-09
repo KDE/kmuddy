@@ -88,7 +88,7 @@ QSize dlgImportExportProfile::sizeHint() const
 
 void dlgImportExportProfile::doThings ()
 {
-  KMessageBox::sorry (this, i18n ("I am sorry, but import and export is currently disabled. The functionality should be re-enabled before the final release."));
+  KMessageBox::error (this, i18n ("I am sorry, but import and export is currently disabled. The functionality should be re-enabled before the final release."));
   /*
   if (exec() == QDialog::Accepted)
   {
@@ -119,7 +119,7 @@ void dlgImportExportProfile::doThings ()
         i18n ("Profile has been successfully imported.") :
         i18n ("Profile has been successfully exported."));
     else
-      KMessageBox::sorry (this, msg);
+      KMessageBox::error (this, msg);
   }
   */
 }
