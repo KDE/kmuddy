@@ -62,7 +62,7 @@ CMapWidget::CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent) : QW
 
 CMapWidget::~CMapWidget()
 {
-	viewWidget = NULL;
+	viewWidget = nullptr;
 }
 
 /** Used to create the element context menus */
@@ -101,7 +101,7 @@ bool CMapWidget::event(QEvent *e)
 
     CMapView *view = getView();
     CMapLevel *level = view->getCurrentlyViewedLevel();
-    CMapElement *element = level ? level->findElementAt(point) : 0;
+    CMapElement *element = level ? level->findElementAt(point) : nullptr;
     QString s;
     if (element)
     {
@@ -299,7 +299,7 @@ void CMapWidget::showContexMenu(QMouseEvent *e)
   view->setSelectedPos(e->pos());
   selectedPos = e->pos();
 
-  view->setSelectedElement(0);
+  view->setSelectedElement(nullptr);
   CMapElement *element = level->findElementAt (e->pos());
   if (!element) {
     showOtherContextMenu();

@@ -40,12 +40,12 @@ struct cMenuManagerPrivate {
   map<QAction *, QMenu *> actionLocations;
 };
 
-cMenuManager *cMenuManager::_self = 0;
+cMenuManager *cMenuManager::_self = nullptr;
 
 cMenuManager::cMenuManager () : cActionBase ("menumanager", 0)
 {
   d = new cMenuManagerPrivate;
-  d->menuBar = 0;
+  d->menuBar = nullptr;
 }
 
 cMenuManager::~cMenuManager ()
@@ -66,7 +66,7 @@ void cMenuManager::setMenuBar (QMenuBar *menuBar)
 
 void cMenuManager::addMenuPosition (const QString &name)
 {
-  addItemPosition (name, 0);
+  addItemPosition (name, nullptr);
 }
 
 void cMenuManager::addItemPosition (const QString &name, QMenu *menu)
@@ -79,7 +79,7 @@ void cMenuManager::addItemPosition (const QString &name, QMenu *menu)
     QString last = d->lastPositionInMenu[menu];
     d->positions[last] = menu ? menu->addSeparator () : d->menuBar->addSeparator();
   }
-  d->positions[name] = 0;
+  d->positions[name] = nullptr;
   d->lastPositionInMenu[menu] = name;
   d->locations[name] = menu;
 }

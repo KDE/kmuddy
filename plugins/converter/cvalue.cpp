@@ -240,7 +240,7 @@ cValue cValue::_empty;
 
 cValue::cValue ()
 {
-  d = 0;
+  d = nullptr;
 }
 
 cValue::cValue (const cValue &val)
@@ -251,25 +251,25 @@ cValue::cValue (const cValue &val)
 
 cValue::cValue (const QString &val)
 {
-  d = 0;
+  d = nullptr;
   setValue (val);
 }
 
 cValue::cValue (int val)
 {
-  d = 0;
+  d = nullptr;
   setValue (val);
 }
 
 cValue::cValue (double val)
 {
-  d = 0;
+  d = nullptr;
   setValue (val);
 }
 
 cValue::cValue (bool val)
 {
-  d = 0;
+  d = nullptr;
   setValue (val ? 1 : 0);
 }
 
@@ -281,7 +281,7 @@ cValue::~cValue ()
 
 cValue *cValue::load (KConfigGroup *g)
 {
-  cValue *val = 0;
+  cValue *val = nullptr;
   int type = g->readEntry ("Type", 0);
   int cnt;
   switch (type) {
@@ -384,7 +384,7 @@ void cValue::setValue (const cValue &val)
 void cValue::setValue ()
 {
   detachValue ();
-  d = 0;
+  d = nullptr;
 }
 
 void cValue::setValue (const QString &val)
@@ -578,7 +578,7 @@ void cValue::detachValue ()
   if (!d) return;
   if (d->usage > 0) d->usage--;
   if (d->usage == 0) delete d;
-  d = 0;
+  d = nullptr;
 }
 
 void cValue::unique ()

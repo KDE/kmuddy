@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using namespace std;
 
-cMacroManager *cMacroManager::_self = 0;
+cMacroManager *cMacroManager::_self = nullptr;
 
 struct cMacroManagerPrivate {
   map<QString, cMacro *> macros;
@@ -49,7 +49,7 @@ cMacroManager::cMacroManager ()
 cMacroManager::~cMacroManager ()
 {
   delete d;
-  _self = 0;
+  _self = nullptr;
 }
 
 void cMacroManager::addMacro (const QString &name, cMacro *macro)
@@ -66,7 +66,7 @@ void cMacroManager::removeMacro (const QString &name)
 
 cMacro *cMacroManager::macro (const QString &name)
 {
-  if (!d->macros.count (name)) return 0;
+  if (!d->macros.count (name)) return nullptr;
   return d->macros[name];
 }
 

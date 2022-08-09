@@ -59,7 +59,7 @@ void CMapElementUtil::deleteElement(KConfigGroup grp,bool delOpsite)
 
 CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 {
-	CMapElement *result = NULL;
+	CMapElement *result = nullptr;
 	QString text;
 
 	elementTyp type  = (elementTyp)grp.readEntry("Type",(int)OTHER);
@@ -83,7 +83,7 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 		}
 		else
 		{	
-			CMapLevel *level = NULL;
+			CMapLevel *level = nullptr;
 			if (grp.hasKey("Level"))
 			{
 				level = manager->findLevel(grp.readEntry("Level",-1));
@@ -142,7 +142,7 @@ CMapElement *CMapElementUtil::createElement(KConfigGroup grp)
 CMapRoom *CMapElementUtil::createRoom(CMapManager *manager, QPoint pos, CMapLevel *level)
 {
   if ((!level) || level->findElementAt(pos))
-    return NULL;
+    return nullptr;
 
   QRect rect(pos,manager->getMapData()->gridSize);
 
@@ -164,6 +164,6 @@ CMapText *CMapElementUtil::createText(CMapManager *manager, QPoint pos, CMapLeve
 /** Delete a path map element */
 void CMapElementUtil::deletePath(CMapPath *path,bool delOpsite)
 {
-  if (!delOpsite) path->setOpsitePath(NULL);
+  if (!delOpsite) path->setOpsitePath(nullptr);
   delete path;
 }

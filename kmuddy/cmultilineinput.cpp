@@ -27,7 +27,7 @@
 
 #include <kmainwindow.h>
 
-cMultiLineInput *cMultiLineInput::_self = 0;
+cMultiLineInput *cMultiLineInput::_self = nullptr;
 
 cMultiLineInput *cMultiLineInput::self ()
 {
@@ -46,7 +46,7 @@ cMultiLineInput::~cMultiLineInput ()
 {
   removeGlobalEventHandler ("global-settings-changed");
   delete multiline;
-  _self = 0;
+  _self = nullptr;
 }
 
 QDockWidget *cMultiLineInput::dialog ()

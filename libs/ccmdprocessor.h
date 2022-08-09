@@ -46,9 +46,9 @@ public:
   void processMacro (const QString &name, const QString &params, cCmdQueue *queue);
   
   /** expand internal scripting sequences in a command */
-  void expandInternalScripting (QString &command, cCmdQueue *queue = 0);
+  void expandInternalScripting (QString &command, cCmdQueue *queue = nullptr);
   /** expand variables in a command */
-  void expandVariables (QString &command, cCmdQueue *queue = 0);
+  void expandVariables (QString &command, cCmdQueue *queue = nullptr);
 
   cValue eval (const QString &exp, cCmdQueue *queue, bool &ok);
 protected:

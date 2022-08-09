@@ -52,7 +52,7 @@ arith_exp *cExpCache::expression (const QString &src)
 {
   if (cache.count (src))
     return cache[src];
-  return 0;
+  return nullptr;
 }
 
 void cExpCache::addExpression (const QString &src, arith_exp *exp)

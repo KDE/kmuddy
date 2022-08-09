@@ -60,8 +60,8 @@ cTrigger::cTrigger (cList *list) : cListObject (list)
   d->global = false;
   d->dontsend = false;
   d->promptDetect = false;
-  d->exp = 0;
-  d->resolver = 0;
+  d->exp = nullptr;
+  d->resolver = nullptr;
   d->ifMatch = cList::Stop;
   d->ifNotMatch = cList::Continue;
 }
@@ -139,7 +139,7 @@ void cTrigger::attribChanged (const QString &name)
     // TODO: this is duplicated for every place with conditions
     // find out if we could create a common class for this
     delete d->exp;
-    d->exp = 0;
+    d->exp = nullptr;
   
     // no expression ? nothing to do !
     if (d->condition.trimmed().isEmpty()) return;
@@ -223,7 +223,7 @@ bool cTrigger::testCondition ()
   queue->fillFromPattern (&d->p);
   cValue val = d->exp->evaluate (d->resolver);
   delete queue;
-  d->resolver->setQueue(0);
+  d->resolver->setQueue(nullptr);
 
   // test passes if the evaluator returns non-zero ...
   return (val.asInteger() != 0);

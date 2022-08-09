@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 class VariableModel : public QAbstractTableModel {
  public:
   VariableModel () {
-    list = 0;
+    list = nullptr;
     count = 0;
   }
 
@@ -164,7 +164,7 @@ void dlgVarViewer::eventNothingHandler (QString event, int sess)
     model->listChanged (vars);
   }
   if (event == "disconnected") {
-    model->listChanged (0);
+    model->listChanged (nullptr);
   }
 }
 

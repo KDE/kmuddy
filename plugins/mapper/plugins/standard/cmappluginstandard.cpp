@@ -73,7 +73,7 @@ QList<CMapPropertiesPaneBase *> CMapPluginStandard::createPropertyPanes(elementT
   QList<CMapPropertiesPaneBase *> list;
 
   if (type == ROOM || type == ZONE)
-    list.append(new CMapNotesPane(this,i18n("Notes"),NULL,type,element,parent));
+    list.append(new CMapNotesPane(this,i18n("Notes"),nullptr,type,element,parent));
 
   return list;
 }

@@ -24,7 +24,7 @@
 cVariable::cVariable ()
 {
   _name = QString();
-  val = 0;
+  val = nullptr;
 }
 
 cVariable::~cVariable ()

@@ -34,7 +34,7 @@ class CMapViewStatusbar : public QStatusBar
 {
    Q_OBJECT
 public: 
-  CMapViewStatusbar(CMapManager *manager, QWidget *parent=0);
+  CMapViewStatusbar(CMapManager *manager, QWidget *parent=nullptr);
   ~CMapViewStatusbar();
 
   void setLevel(CMapLevel *level);

@@ -55,7 +55,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : KXmlGuiWindow(parent)
   setAttribute (Qt::WA_DeleteOnClose, false);  // do not delete on close
 
   mapManager = manager;
-  currentLevel = 0;
+  currentLevel = nullptr;
   setFocusPolicy(Qt::StrongFocus);
   setWindowFlags (Qt::Widget);
 
@@ -262,7 +262,7 @@ void CMapView::readOptions()
 /** Used to get the currently viewed zone */
 CMapZone *CMapView::getCurrentlyViewedZone()
 {
-  return currentLevel ? currentLevel->getZone() : 0;
+  return currentLevel ? currentLevel->getZone() : nullptr;
 }
 
 /** Used to get the currently viewed level */
@@ -582,7 +582,7 @@ void CMapView::levelShift(bool up)
     return;
   }
 
-  if (KMessageBox::warningYesNo (NULL, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningYesNo (nullptr, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
 
   mapManager->createLevel(up ? UP : DOWN);
 }
@@ -604,7 +604,7 @@ void CMapView::slotToolsLevelDelete()
   int count = mapManager->getZone()->levelCount();
   if (count <= 1) return;
 
-  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningYesNo (nullptr,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
   mapManager->deleteLevel(level);
 }
 
@@ -620,7 +620,7 @@ void CMapView::slotToolsZoneCreate()
 void CMapView::slotToolsZoneDelete()
 {
   CMapZoneManager *zm = mapManager->zoneManager();
-  if (KMessageBox::warningYesNo (NULL,i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningYesNo (nullptr,i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
   zm->deleteZone(zm->activeZone());
 }
 

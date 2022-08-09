@@ -162,7 +162,7 @@ public:
   cTelnet (int sess);
   ~cTelnet ();
   /** attempt to establish a new connection */
-  void connectIt (const QString &address, int port, cProfileSettings *sett = 0);
+  void connectIt (const QString &address, int port, cProfileSettings *sett = nullptr);
   /** closes connection */
   void disconnect ();
   /** returns whether we're connected to some other host */

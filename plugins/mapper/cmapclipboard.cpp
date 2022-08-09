@@ -43,7 +43,7 @@ CMapClipboard::CMapClipboard(CMapManager *mapManager, CMapView *view, QObject *p
 {
 	kDebug() << "CMapClipboard::CMapClipboard constructor begins";
 
-	m_clipboard = NULL;
+	m_clipboard = nullptr;
 	initActions();
 	kDebug() << "CMapClipboard::CMapClipboard constructor ends";
 }
@@ -273,7 +273,7 @@ void CMapClipboard::pasteElements()
 			    CMapZone *zone = m_mapManager->getZone();
 
 				// Check to see if the level exists and if not create it
-				CMapLevel *level = NULL;
+				CMapLevel *level = nullptr;
 				if (levelNum >= (int)zone->levelCount())
 				{
 					level = m_mapManager->createLevel(UP);

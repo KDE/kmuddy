@@ -68,7 +68,7 @@ int cVariableList::getIntValue (const QString &varname)
 
 cValue *cVariableList::value (const QString &varname, cCmdQueue *queue)
 {
-  if (varname.isEmpty()) return 0;
+  if (varname.isEmpty()) return nullptr;
   QString vn = varname;
   if (varname[0] == '$')
     vn = vn.mid(1);
@@ -80,7 +80,7 @@ cValue *cVariableList::value (const QString &varname, cCmdQueue *queue)
   }
 
   if (!exists (vn))
-    return 0;
+    return nullptr;
   
   return vars[vn]->getValue();
 }

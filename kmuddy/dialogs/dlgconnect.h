@@ -38,7 +38,7 @@ Connect dialog. Shown and handled by cConnection.
 class dlgConnect : public QDialog {
 Q_OBJECT
 public:
-  dlgConnect (QWidget *parent=0);
+  dlgConnect (QWidget *parent=nullptr);
   ~dlgConnect ();
 
   virtual QSize sizeHint() const override;

@@ -50,7 +50,7 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 	{
 		kDebug() << "CMapCmdMoveElements::addElement 1.2";
 		CMapElement *lnkElement = ((CMapText *) element)->getLinkElement();
-		if (lnkElement!=NULL)
+		if (lnkElement!=nullptr)
 		{
 			if (lnkElement->getElementType()==ROOM)
 			{
@@ -76,7 +76,7 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 
 void CMapCmdMoveElements::redo()
 {
-  CMapLevel *level = NULL;	
+  CMapLevel *level = nullptr;	
   for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
   {
     struct elemProp prop = *it;
@@ -120,7 +120,7 @@ void CMapCmdMoveElements::redo()
 
 void CMapCmdMoveElements::undo()
 {
-  CMapLevel *level = NULL;
+  CMapLevel *level = nullptr;
   for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
   {
     struct elemProp prop = *it;

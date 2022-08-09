@@ -41,7 +41,7 @@ cGauge::cGauge (cList *list) : cListObject (list)
   d = new Private;
   
   d->color = Qt::white;
-  d->vars = 0;
+  d->vars = nullptr;
   
   QWidget *gaugeBar = dynamic_cast<QWidget *>(cActionManager::self()->object ("gaugebar", list->session()));
   d->gaugeitem = new cGaugeBarItem (gaugeBar);
@@ -53,7 +53,7 @@ cGauge::cGauge (cList *list) : cListObject (list)
 cGauge::~cGauge()
 {
   delete d->gaugeitem;
-  d->gaugeitem = 0;
+  d->gaugeitem = nullptr;
   delete d;
 }
 

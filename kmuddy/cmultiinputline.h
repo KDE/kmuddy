@@ -37,7 +37,7 @@ class cMultiInputLine : public QTextEdit, public cActionBase
 Q_OBJECT
 public:
   /** constructor */
-  cMultiInputLine (int sess, QWidget *parent = 0);
+  cMultiInputLine (int sess, QWidget *parent = nullptr);
   /** destructor */
   ~cMultiInputLine ();
   

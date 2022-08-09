@@ -56,7 +56,7 @@ cPattern::cPattern (const QString &pattern, PatternType pt)
   d->cs = Qt::CaseSensitive;
   d->wholewords = true;
   d->regexp.setCaseSensitivity (d->cs);
-  d->backrefpos = 0;
+  d->backrefpos = nullptr;
   d->lastlen = d->lastpos = 0;
 
   d->pattern = pattern;
@@ -67,7 +67,7 @@ cPattern::cPattern (const QString &pattern, PatternType pt)
 
 cPattern::~cPattern ()
 {
-  if (d->backrefpos != 0)
+  if (d->backrefpos != nullptr)
     delete[] d->backrefpos;
   delete d;
 }
@@ -122,9 +122,9 @@ bool cPattern::match (const QString &text, int matchingPos)
   if (d->pattern.length() == 0)
     return false;
 
-  if (d->backrefpos != 0)
+  if (d->backrefpos != nullptr)
     delete[] d->backrefpos;
-  d->backrefpos = 0;
+  d->backrefpos = nullptr;
 
   bool matched = false;
   int n;

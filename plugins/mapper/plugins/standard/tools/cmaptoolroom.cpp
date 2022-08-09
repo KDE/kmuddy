@@ -33,7 +33,7 @@ CMapToolRoom::CMapToolRoom(KActionCollection *actionCollection,CMapManager *mana
 	: CMapToolBase(actionCollection,
                    i18n("Create Room"),
                    BarIcon("kmud_room.png"),
-                   manager,"toolsRoom",0)
+                   manager,"toolsRoom",nullptr)
 
 {
 }

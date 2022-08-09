@@ -40,7 +40,7 @@ struct cButton::Private {
 cButton::cButton (cList *list) : cListObject (list)
 {
   d = new Private;
-  d->action = new QAction (0);
+  d->action = new QAction (nullptr);
   connect (d->action, SIGNAL (triggered (bool)), this, SLOT (execute (bool)));
 }
 

@@ -41,7 +41,7 @@ CMapToolPath::CMapToolPath(KActionCollection *actionCollection,CMapManager *mana
 	: CMapToolBase(actionCollection,
                    i18n("Create Path"),
                    BarIcon(("kmud_path.png")),
-                   manager,"toolsPath",0)
+                   manager,"toolsPath",nullptr)
 {
 		QBitmap pathStart_cb = QBitmap::fromData (QSize(16,16), path1_bits);
 		pathStartCursor = new QCursor( pathStart_cb,pathStart_cb, 4,0);	
@@ -68,7 +68,7 @@ void CMapToolPath::mouseReleaseEvent(QPoint mousePos, QMouseEvent * /*e*/, CMapL
       mapManager->createPath(pathStartRoom,destRoom);
 
     pathToolMode = 0;
-    pathStartRoom = NULL;
+    pathStartRoom = nullptr;
     currentCursor = pathStartCursor;
     mapManager->setPropertiesAllViews(currentCursor,false);
   }
@@ -91,7 +91,7 @@ void CMapToolPath::toolSelected(void)
 
 	mapManager->setPropertiesAllViews(currentCursor,false);
 
-	pathStartRoom = NULL;
+	pathStartRoom = nullptr;
 	pathToolMode = 0;
 }
 

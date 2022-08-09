@@ -43,7 +43,7 @@ CMapData::CMapData()
 
 	failedMoveMsg.clear();
 
-	rootZone = NULL;
+	rootZone = nullptr;
 	
 	//initDirections();
 }

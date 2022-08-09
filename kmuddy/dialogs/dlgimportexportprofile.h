@@ -31,7 +31,7 @@ Dialog where you choose what to import/export.
 class dlgImportExportProfile : public QDialog {
    Q_OBJECT
 public: 
-  dlgImportExportProfile (bool isImport, QWidget *parent=0);
+  dlgImportExportProfile (bool isImport, QWidget *parent=nullptr);
   ~dlgImportExportProfile ();
   void doThings ();
   virtual QSize sizeHint() const override;

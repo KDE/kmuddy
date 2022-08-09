@@ -26,7 +26,7 @@ CMapCmdLevelCreate::CMapCmdLevelCreate(CMapManager *manager,QString name,int ind
 	m_mapManager = manager;
 	m_index = index;
 	m_levelID = -1;
-	m_level = NULL;
+	m_level = nullptr;
 }
 
 CMapCmdLevelCreate::~CMapCmdLevelCreate()

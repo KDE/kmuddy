@@ -32,7 +32,7 @@ QuickConnect dialog - handled by cConnection.
 class dlgQuickConnect : public QDialog {
    Q_OBJECT
 public: 
-  dlgQuickConnect (QWidget *parent=0);
+  dlgQuickConnect (QWidget *parent=nullptr);
   ~dlgQuickConnect ();
 
   virtual QSize sizeHint() const override;

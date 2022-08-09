@@ -54,7 +54,7 @@ It's the widget that contains inputline, console and friends for one active conn
 class cSession : public QWidget, public cActionBase {
    Q_OBJECT
 public: 
-  cSession (int sess, QWidget *parent=0);
+  cSession (int sess, QWidget *parent=nullptr);
   ~cSession ();
 
   //name

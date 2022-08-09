@@ -42,7 +42,7 @@ struct cProfileSettings::Private {
   map<QString, QString> strVals;
 };
 
-cProfileSettings::Private *cProfileSettings::defd = 0;
+cProfileSettings::Private *cProfileSettings::defd = nullptr;
 
 cProfileSettings::cProfileSettings (QString profileId)
 {

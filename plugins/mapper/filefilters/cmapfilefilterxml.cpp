@@ -203,7 +203,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
   */
 void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,QDomElement *linksNode,CMapZone *zone)
 {
-  if (zone == NULL)
+  if (zone == nullptr)
     return;
 
   std::set<CMapPath *> saved; // this ensures that we don't save bi-dir paths twice
@@ -483,7 +483,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
     CMapRoom *srcRoom = srcLevel->findRoom(srcRoomID);
     CMapRoom *destRoom = destLevel->findRoom(destRoomID);
 
-    if (srcRoom==NULL || destRoom==NULL)
+    if (srcRoom==nullptr || destRoom==nullptr)
     {				
       kDebug() << "Src or Dest room is NULL while creating path";
       continue;

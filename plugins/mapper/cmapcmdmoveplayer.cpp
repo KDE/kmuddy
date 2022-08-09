@@ -31,9 +31,9 @@ CMapCmdMovePlayer::CMapCmdMovePlayer(CMapManager *mapManager, directionTyp direc
   m_create(create),
   m_special(specialCmd),
   m_direction(direction),
-  m_newroom(0),
-  m_newpath(0),
-  m_createdlevel(0)
+  m_newroom(nullptr),
+  m_newpath(nullptr),
+  m_createdlevel(nullptr)
 {
 }
 
@@ -43,9 +43,9 @@ CMapCmdMovePlayer::~CMapCmdMovePlayer()
 
 void CMapCmdMovePlayer::redo()
 {
-  m_createdlevel = 0;
-  m_newpath = 0;
-  m_newroom = 0;
+  m_createdlevel = nullptr;
+  m_newpath = nullptr;
+  m_newroom = nullptr;
 
   m_origroom = m_manager->getCurrentRoom();
   if (!m_origroom) return;
@@ -68,7 +68,7 @@ void CMapCmdMovePlayer::redo()
   if (!m_create) return;
 
   CMapRoom *srcRoom = m_origroom;
-  CMapPath *oppositePath = NULL;
+  CMapPath *oppositePath = nullptr;
 
   CMapLevel *destLevel = m_origroom->getLevel();
 
@@ -167,9 +167,9 @@ void CMapCmdMovePlayer::undo()
     delete m_newpath;
     delete m_newroom;
     delete m_createdlevel;
-    m_newroom = 0;
-    m_newpath = 0;
-    m_createdlevel = 0;
+    m_newroom = nullptr;
+    m_newpath = nullptr;
+    m_createdlevel = nullptr;
   }
 }
 

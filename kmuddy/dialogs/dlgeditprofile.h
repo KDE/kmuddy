@@ -33,7 +33,7 @@ Dialog used to edit basic profile settings (server, port, ...)
 class dlgEditProfile : public QDialog {
    Q_OBJECT
 public: 
-  dlgEditProfile (QWidget *parent=0);
+  dlgEditProfile (QWidget *parent=nullptr);
   ~dlgEditProfile();
 
   virtual QSize sizeHint() const override;

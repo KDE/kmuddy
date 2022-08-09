@@ -37,7 +37,7 @@ class CMapWidget : public QWidget
 {
    Q_OBJECT
 public:
-	CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent=0);
+	CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent=nullptr);
 	virtual ~CMapWidget();
 
 	/** Used to get the views */

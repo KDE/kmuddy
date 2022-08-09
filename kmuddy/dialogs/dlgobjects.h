@@ -31,7 +31,7 @@ class cListObject;
 class dlgObjects: public QDialog, public cActionBase {
  Q_OBJECT
  public:
-  dlgObjects (QWidget *parent = 0);
+  dlgObjects (QWidget *parent = nullptr);
   ~dlgObjects ();
   virtual QSize sizeHint() const override;
 

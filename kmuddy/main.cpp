@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
   migrator.setUiFiles(QStringList() << QStringLiteral("kmuddymapperpart.rc"));
   migrator.migrate();
 
-  KMuddy *kmuddy = 0;
+  KMuddy *kmuddy = nullptr;
 
 /*
   if (a.isSessionRestored ())  //session management

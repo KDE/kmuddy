@@ -81,7 +81,7 @@ dlgObjects::dlgObjects (QWidget *parent)
   d->viewer = new cListViewer (left);
 
   d->emptyEditor = new QWidget (d->editorStack);
-  d->objEditor = 0;
+  d->objEditor = nullptr;
   d->groupEditor = new cListGroupEditor (d->editorStack);
   d->editorStack->addWidget (d->emptyEditor);
   d->editorStack->addWidget (d->groupEditor);
@@ -194,7 +194,7 @@ void dlgObjects::switchList ()
   if (d->objEditor) {
     d->editorStack->removeWidget (d->objEditor);
     delete d->objEditor;
-    d->objEditor = 0;
+    d->objEditor = nullptr;
   }
   if (list) {
     d->objEditor = list->editor (this);
@@ -224,8 +224,8 @@ void dlgObjects::activeObjectChanged (cListObject *obj)
   saveChanges ();
 
   // clear the current object from editors
-  d->groupEditor->setObject (0);
-  d->objEditor->setObject (0);
+  d->groupEditor->setObject (nullptr);
+  d->objEditor->setObject (nullptr);
 
   if ((!obj) || (obj == (cListObject *) obj->list()->rootGroup())) {
     // no object - present the empty widget

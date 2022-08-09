@@ -41,9 +41,9 @@ struct KMuddyMapperPrivate {
   std::map<int, MapperSession *> sessions;
   int currentSession;
 
-  CMapManager *curManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager : 0; };
-  CMapZoneManager *curZoneManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager->zoneManager() : 0; };
-  CMapFilter *curFilter() { return sessions.count(currentSession) ? sessions[currentSession]->filter : 0; };
+  CMapManager *curManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager : nullptr; };
+  CMapZoneManager *curZoneManager() { return sessions.count(currentSession) ? sessions[currentSession]->manager->zoneManager() : nullptr; };
+  CMapFilter *curFilter() { return sessions.count(currentSession) ? sessions[currentSession]->filter : nullptr; };
 };
 
 KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
@@ -63,7 +63,7 @@ KMuddyMapper::KMuddyMapper (QObject *, const QVariantList &)
   mainWindow->addDockWidget (Qt::RightDockWidgetArea, d->docker);
   d->docker->setFloating (true);
   connect (d->docker, SIGNAL (visibilityChanged(bool)), this, SLOT (mapperClosed()));
-  d->docker->setWidget (0);
+  d->docker->setWidget (nullptr);
 
   d->currentSession = 0;
 
@@ -154,7 +154,7 @@ void KMuddyMapper::disconnected (int sess) {
   if (sess != d->currentSession) return;
   CMapManager *manager = d->curManager();
   if (manager) manager->getActiveView()->hide();
-  d->docker->setWidget (0);
+  d->docker->setWidget (nullptr);
 }
 
 /** Request to load data. */

@@ -36,7 +36,7 @@ CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *mana
 	: CMapToolBase(actionCollection,
                    i18n("Text"),
                    BarIcon("kmud_text.png"),
-                   manager,"toolsText",0)
+                   manager,"toolsText",nullptr)
 {
 	textCursor = new QCursor(Qt::IBeamCursor);
 }

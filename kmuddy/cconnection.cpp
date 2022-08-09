@@ -100,7 +100,7 @@ cConnection::cConnection (int sess) : cActionBase ("connection", sess)
   d = new cConnectionPrivate;
   d->profileConnection = false;
   d->destroying = false;
-  d->connecting = 0;
+  d->connecting = nullptr;
   d->connclosed = false;
   d->canCT = false;
   d->connInProgress = d->qconnInProgress = d->sendNothing = false;
@@ -108,8 +108,8 @@ cConnection::cConnection (int sess) : cActionBase ("connection", sess)
   d->waitCommands = false;
   d->commandNum = 0;
 
-  d->variablelist = 0;
-  d->windowlist = 0;
+  d->variablelist = nullptr;
+  d->windowlist = nullptr;
 
   d->saver = new QTimer;
   connect (d->saver, SIGNAL (timeout ()), this, SLOT (saveSession ()));
@@ -143,7 +143,7 @@ cConnection::~cConnection ()
 void cConnection::eventNothingHandler (QString event, int)
 {
   cTelnet *telnet = dynamic_cast<cTelnet *>(object ("telnet", sess()));
-  if (telnet == 0)
+  if (telnet == nullptr)
     return;
 
   if (event == "connected") {
@@ -557,7 +557,7 @@ void cConnection::sendLoginAndPassword ()
           QObject::disconnect (d->connecting, SIGNAL (timeout()),
               this, SLOT (sendLoginAndPassword()));
           delete d->connecting;
-          d->connecting = 0;
+          d->connecting = nullptr;
           wasData = false;
         }
       }
@@ -576,7 +576,7 @@ void cConnection::sendLoginAndPassword ()
     QObject::disconnect (d->connecting, SIGNAL (timeout()),
         this, SLOT (sendLoginAndPassword()));
     delete d->connecting;
-    d->connecting = NULL;
+    d->connecting = nullptr;
     wasData = false;
   }
 }
@@ -611,14 +611,14 @@ bool cConnection::isConnected ()
 void cConnection::disconnect ()
 {
   cTelnet *telnet = dynamic_cast<cTelnet *>(object ("telnet", sess()));
-  if (telnet == 0)
+  if (telnet == nullptr)
     return;
 
-  if (d->connecting != NULL)
+  if (d->connecting != nullptr)
   {
     d->connecting->stop ();
     delete d->connecting;
-    d->connecting = NULL;
+    d->connecting = nullptr;
   }
   d->saver->stop ();
   setAttrib ("connected", 0);
@@ -650,8 +650,8 @@ void cConnection::disconnect ()
   // may still be needed there
   delete d->variablelist;
   delete d->windowlist;
-  d->variablelist = 0;
-  d->windowlist = 0;
+  d->variablelist = nullptr;
+  d->windowlist = nullptr;
 }
 
 void cConnection::reconnect ()
@@ -697,7 +697,7 @@ void cConnection::sendCommands ()
 {
   // TODO: reimplent using the modern architecture
   cTelnet *telnet = dynamic_cast<cTelnet *>(object ("telnet", sess()));
-  if (telnet == 0)
+  if (telnet == nullptr)
     return;
   if (d->commands != QString())
     telnet->sendData (d->commands);

@@ -58,7 +58,7 @@ CMapToolEraser::CMapToolEraser(KActionCollection *actionCollection,CMapManager *
 	: CMapToolBase(actionCollection,
                    i18n("Eraser"),
                    BarIcon("kmud_eraser.png"),
-                   manager,"toolsEraser",0)
+                   manager,"toolsEraser",nullptr)
 {
 
 	QBitmap delete_cb = QBitmap::fromData (QSize(32, 32), delete_cb_bits);

@@ -32,7 +32,7 @@ Connection statistics dialog box.
 class dlgStatistics : public QDockWidget, public cActionBase {
    Q_OBJECT
 public: 
-  dlgStatistics (QWidget *parent=0);
+  dlgStatistics (QWidget *parent=nullptr);
   ~dlgStatistics ();
   /** update information in the dialog */
 public slots:

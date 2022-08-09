@@ -37,7 +37,7 @@ Dialog that allows changing of profile-related settings.
 class dlgProfileSettings : public KPageDialog {
    Q_OBJECT
 public: 
-  dlgProfileSettings (QWidget *parent=0);
+  dlgProfileSettings (QWidget *parent=nullptr);
   ~dlgProfileSettings ();
 
   virtual QSize sizeHint() const override;

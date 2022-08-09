@@ -55,13 +55,13 @@ public:
   cMacro *macro (const QString &name);
   /** Call a given macro with given parameters. May optionally accept a session number, and
   a pointer to the current command stack. */
-  bool callMacro (const QString &name, const QString &par, int sess = -1, cCmdQueue *queue = 0);
+  bool callMacro (const QString &name, const QString &par, int sess = -1, cCmdQueue *queue = nullptr);
   void addFunction (const QString &name, cFunction *function);
   void removeFunction (const QString &name);
   /** Call a given function with given parameters. May optionally accept a session number, and
   a pointer to the current command stack. */
   cValue callFunction (const QString &name, std::list<cValue> &params, int sess = -1,
-      cCmdQueue *queue = 0);
+      cCmdQueue *queue = nullptr);
   bool functionExists (const QString &name);
 private:
   /** constructor */
@@ -76,7 +76,7 @@ class KMUDDY_EXPORT cMacro {
  public:
   cMacro (const QString &name);
   virtual ~cMacro ();
-  virtual void eval (const QString &params, int sess = -1, cCmdQueue *queue = 0) = 0;
+  virtual void eval (const QString &params, int sess = -1, cCmdQueue *queue = nullptr) = 0;
   virtual bool preprocess (cCmdQueue *, cCmdQueueEntry *) { return true; };
  protected:
   QString n;
@@ -91,7 +91,7 @@ class KMUDDY_EXPORT cFunction {
  public:
   cFunction (const QString &name);
   virtual ~cFunction ();
-  virtual cValue eval (std::list<cValue> &params, int sess = -1, cCmdQueue *queue = 0) = 0;
+  virtual cValue eval (std::list<cValue> &params, int sess = -1, cCmdQueue *queue = nullptr) = 0;
  protected:
   QString n;
   // just some convenience aliases ...

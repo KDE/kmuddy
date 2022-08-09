@@ -40,7 +40,7 @@ class KMUDDY_EXPORT cDownloader : public QObject {
 public: 
   cDownloader (cMSP *mspObject);
   ~cDownloader ();
-  bool downloading () { return (currentJob != 0); };
+  bool downloading () { return (currentJob != nullptr); };
   void reset ();
   void download (QString remoteURL, QString localFile);
 protected slots:

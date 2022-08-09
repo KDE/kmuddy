@@ -42,7 +42,7 @@
 
 cTextProcessor::cTextProcessor (int sess) : cActionBase ("textproc", sess)
 {
-  chunk = 0;
+  chunk = nullptr;
 
   flush ();
   gotprompt = false;
@@ -172,7 +172,7 @@ void cTextProcessor::gotNewText (const QString &text)
   //if (gotprompt)
   //  gotNewLine ();
 
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   //reset tick-counter
@@ -203,7 +203,7 @@ void cTextProcessor::gotNewText (const QString &text)
     haveprompt = false;
 
     cList *tl = cListManager::self()->getList (sess(), "triggers");
-    cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : 0;
+    cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : nullptr;
     if (triggers)
     {
       //only prompt-detecting triggers will be executed here
@@ -219,7 +219,7 @@ void cTextProcessor::gotNewText (const QString &text)
 
 void cTextProcessor::gotFgColor (QColor color)
 {
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   chunkFg *chfg = new chunkFg;
@@ -232,7 +232,7 @@ void cTextProcessor::gotFgColor (QColor color)
 
 void cTextProcessor::gotBgColor (QColor color)
 {
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   chunkBg *chbg = new chunkBg;
@@ -245,7 +245,7 @@ void cTextProcessor::gotBgColor (QColor color)
 
 void cTextProcessor::gotAttrib (int a)
 {
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   chunkAttrib *chatt = new chunkAttrib;
@@ -259,7 +259,7 @@ void cTextProcessor::gotAttrib (int a)
 void cTextProcessor::gotALink (const QString &name, const QString &url, const QString &text,
     const QString &hint)
 {
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   chunkLink *chl = new chunkLink;
@@ -276,7 +276,7 @@ void cTextProcessor::gotALink (const QString &name, const QString &url, const QS
 void cTextProcessor::gotSENDLink (const QString &name, const QString &command,
     const QString &text, const QString &hint, bool toprompt, bool ismenu)
 {
-  if (chunk == 0)
+  if (chunk == nullptr)
     createChunk ();
 
   chunkLink *chl = new chunkLink;
@@ -331,7 +331,7 @@ void cTextProcessor::gotNewLine ()
   //first call trigger comparison/execution...
 
   cList *tl = cListManager::self()->getList (sess(), "triggers");
-  cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : 0;
+  cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : nullptr;
   if (triggers)
   {
     triggers->setDetectingPrompt (false);
@@ -371,7 +371,7 @@ void cTextProcessor::gotNewLine ()
   invokeEvent ("got-line", sess(), plainText);
 
   delete chunk;
-  chunk = 0;
+  chunk = nullptr;
 
   //increase line counter (even if line was gagged), and set $line variable in variableList
   lines++;
@@ -392,7 +392,7 @@ void cTextProcessor::flush ()
   lines = 0;
 
   delete chunk;
-  chunk = 0;
+  chunk = nullptr;
 
   gag = primarygag = false;
   haveprompt = gotprompt = false;
@@ -408,7 +408,7 @@ void cTextProcessor::receivedGA ()
       invokeEvent ("got-prompt", sess(), chunk);
 
       cList *tl = cListManager::self()->getList (sess(), "triggers");
-      cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : 0;
+      cTriggerList *triggers = tl ? dynamic_cast<cTriggerList *>(tl) : nullptr;
       if (triggers)
       {
         triggers->setDetectingPrompt (false);
@@ -418,7 +418,7 @@ void cTextProcessor::receivedGA ()
       invokeEvent ("display-prompt", sess(), chunk);
     
       delete chunk;
-      chunk = 0;
+      chunk = nullptr;
     }
 
     gotprompt = true;

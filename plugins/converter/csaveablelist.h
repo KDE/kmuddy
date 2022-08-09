@@ -41,13 +41,13 @@ public:
   /** go back to the first item */
   void reset () { cur = first; };
   /** advance list one item forwards */
-  void operator++ (int) { cur = ((cur == NULL) ? NULL : cur->next); };
+  void operator++ (int) { cur = ((cur == nullptr) ? nullptr : cur->next); };
   /** advance list one item backwards */
-  void operator-- (int) { cur = ((cur == NULL) ? NULL : cur->prev); };
+  void operator-- (int) { cur = ((cur == nullptr) ? nullptr : cur->prev); };
   /** return current field */
   cSaveableField * operator* () { return cur; };
   /** Is the current item valid? False if we have run away from the list */
-  operator bool () { return (cur != NULL); };
+  operator bool () { return (cur != nullptr); };
 
   /** is the list empty? */
   bool isEmpty () { return (_count == 0); };
@@ -61,7 +61,7 @@ public:
   /** sets marker to the current item */
   void setMarker () { marker = cur; };
   /** removes marker */
-  void unsetMarker () { marker = NULL; };
+  void unsetMarker () { marker = nullptr; };
 
   /** Adds a new item to the begin of the list. Returns true if successful. */
   bool addToBegin (cSaveableField *newitem);

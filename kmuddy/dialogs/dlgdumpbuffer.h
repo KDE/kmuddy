@@ -33,7 +33,7 @@ Dump Buffer dialog.
 class dlgDumpBuffer : public QDialog {
    Q_OBJECT
 public:
-  dlgDumpBuffer (QWidget *parent=0);
+  dlgDumpBuffer (QWidget *parent=nullptr);
   ~dlgDumpBuffer ();
   virtual QSize sizeHint() const override;
   bool curPos ();

@@ -41,7 +41,7 @@ Q_OBJECT
 public:
 
   /** constructor */
-  dlgVarViewer (QWidget *parent = 0);
+  dlgVarViewer (QWidget *parent = nullptr);
   /** destructor */
   ~dlgVarViewer ();
 protected:

@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocale.h>
 #include <ktextbrowser.h>
 
-cMUDList *dlgMudList::lst = 0;
+cMUDList *dlgMudList::lst = nullptr;
 
 struct dlgMudList::Private {
   KLineEdit *filter;
@@ -114,7 +114,7 @@ QSize dlgMudList::sizeHint() const
 const cMUDEntry *dlgMudList::getEntry (QWidget *parent)
 {
   dlgMudList *dlg = new dlgMudList (parent);
-  if (dlg->exec() != QDialog::Accepted) return 0;
+  if (dlg->exec() != QDialog::Accepted) return nullptr;
   // obtain the selected entry
   const cMUDEntry *e = dlg->selectedEntry ();
   delete dlg;
@@ -151,7 +151,7 @@ const cMUDEntry *dlgMudList::selectedEntry ()
 {
   QItemSelectionModel *sm = d->view->selectionModel();
   if (!sm->hasSelection())
-    return 0;
+    return nullptr;
   int row = sm->selectedRows().first().row();
   // we have the row in the view now, so now we need to map it to the row in the original model
   QModelIndex idx = d->proxy->index (row, 0);

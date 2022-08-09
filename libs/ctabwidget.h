@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 class KMUDDY_EXPORT cTabWidget : public QTabWidget
 {
  public:
-  cTabWidget (QWidget *parent = 0);
+  cTabWidget (QWidget *parent = nullptr);
   virtual ~cTabWidget () {};
   void showTabBar ();
   void hideTabBar ();

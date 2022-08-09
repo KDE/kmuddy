@@ -47,7 +47,7 @@ cActionBase::~cActionBase ()
   if (d->sess >= 0)
     cActionManager::self()->unregisterObject (this, d->sess);
   delete d;
-  d = 0;
+  d = nullptr;
 }
 
 int cActionBase::sess ()

@@ -86,21 +86,21 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   mapData = new CMapData();
 
   // Setup vars
-  loginRoom = NULL;
-  currentRoom = NULL;
-  elementEdit = NULL;
+  loginRoom = nullptr;
+  currentRoom = nullptr;
+  elementEdit = nullptr;
 
   /** Create undo/redo history */
   commandHistory = new QUndoStack();
   //FIXME_jp: Needs to be configurable
   commandHistory->setUndoLimit(30);
   commandHistory->clear();
-  historyGroup = NULL;
+  historyGroup = nullptr;
   m_commandsActive = true;
 
   initFileFilters();
 
-  activeView = 0;
+  activeView = nullptr;
 
   setDefaultOptions();
 
@@ -112,7 +112,7 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
 
   m_zoneCount = 0;
   m_levelCount = 0;
-  m_zoneManager = NULL;
+  m_zoneManager = nullptr;
 
   setUndoActive (false);
   createNewMap();  // because some things break if a map doesn't exist
@@ -142,7 +142,7 @@ CMapManager::~CMapManager()
 
   if (mapData)
     delete mapData;
-  mapData = 0;
+  mapData = nullptr;
   delete m_zoneManager;
   delete activeView;
 
@@ -274,7 +274,7 @@ void CMapManager::initPlugins()
   else
   {
     kWarning() << "No tools loaded!\n";
-    currentTool = NULL;
+    currentTool = nullptr;
   }
 
     if (pluginCount==0)
@@ -313,7 +313,7 @@ void CMapManager::openMapView()
     activeView->showPosition(QPoint(loginRoom->getX(),loginRoom->getY()),loginRoom->getLevel());
   else
   {
-    CMapRoom *firstRoom = findFirstRoom(NULL);
+    CMapRoom *firstRoom = findFirstRoom(nullptr);
     if (firstRoom)
       displayLevel(firstRoom->getLevel(), true);
   }
@@ -477,13 +477,13 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
 {
   elementTyp type = (elementTyp)properties.readEntry("Type",(uint)OTHER);
 
-  if (type == OTHER) return NULL;
+  if (type == OTHER) return nullptr;
 
   if (type==PATH)
   {
     CMapLevel *srcLevel = findLevel(properties.readEntry("SrcLevel",-1));
     CMapRoom *srcRoom = srcLevel->findRoom(properties.readEntry("SrcRoom",-1));
-    if (!srcRoom) return NULL;
+    if (!srcRoom) return nullptr;
     directionTyp srcDir = (directionTyp)properties.readEntry("SrcDir",0);
 
     QString specialCommand = properties.readEntry("SpecialCmdSrc","");
@@ -491,7 +491,7 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
   }
 
   CMapLevel *level = findLevel(properties.readEntry("Level",-5));
-  if (!level) return NULL;
+  if (!level) return nullptr;
 
   if (type == ROOM)
   {
@@ -506,7 +506,7 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
     if ((text->getX()==x) && (text->getY()==y))
       return text;
 
-  return NULL;
+  return nullptr;
 }
 
 /** Used to erase the map. This will erase all elements and can't be undone */
@@ -516,24 +516,24 @@ void CMapManager::eraseMap(void)
 
   eraseZone(mapData->rootZone);
   delete mapData->rootZone;
-  mapData->rootZone = NULL;
+  mapData->rootZone = nullptr;
 
   m_zoneCount = 0;
   m_levelCount = 0;
 
-  if (activeView) activeView->setLevel(NULL);
+  if (activeView) activeView->setLevel(nullptr);
 
   for (CMapPluginBase *plugin : pluginList)
     plugin->mapErased();
 
-  loginRoom = NULL;
-  currentRoom = NULL;
-  elementEdit = NULL;
+  loginRoom = nullptr;
+  currentRoom = nullptr;
+  elementEdit = nullptr;
 }
 
 void CMapManager::eraseZone(CMapZone *zone)
 {
-  if (zone == 0)
+  if (zone == nullptr)
     return;
 
   QList<CMapLevel *> levels;
@@ -557,9 +557,9 @@ void CMapManager::eraseZone(CMapZone *zone)
 /** Create new bottom or top level depending on the given direction */
 CMapLevel *CMapManager::createLevel(directionTyp dir)
 {
-  CMapLevel *result = NULL;
+  CMapLevel *result = nullptr;
 
-  CMapCmdLevelCreate *cmd = NULL;
+  CMapCmdLevelCreate *cmd = nullptr;
 
   int pos = (dir == UP) ? getZone()->levelCount() : 0;
   if (getUndoActive())
@@ -590,14 +590,14 @@ CMapLevel *CMapManager::findLevel(unsigned int id)
       return level;
   }
 
-  return NULL;
+  return nullptr;
 }
 
 /** Create new map */
 void CMapManager::createNewMap()
 {
   // Create the root zone
-  getMapData()->rootZone = NULL;  
+  getMapData()->rootZone = nullptr;  
 
   CMapZone *zone = getZone();
 
@@ -610,7 +610,7 @@ void CMapManager::createNewMap()
 
   if (currentRoom) activeView->showPosition(currentRoom->getLowPos(),zone->firstLevel());
 
-  if (activeView->getCurrentlyViewedLevel()==NULL)  
+  if (activeView->getCurrentlyViewedLevel()==nullptr)  
     activeView->showPosition(loginRoom,true);
 
   for (CMapPluginBase *plugin : pluginList)
@@ -705,12 +705,12 @@ void CMapManager::createText(QPoint pos,CMapLevel *level,QString str,QFont font,
 CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp srcDir,
                                   QPoint destPos,CMapLevel *destLevel,directionTyp destDir)
 {
-  CMapRoom *room=NULL;
-  CMapRoom *srcRoom=NULL;
-  CMapRoom *destRoom=NULL;
+  CMapRoom *room=nullptr;
+  CMapRoom *srcRoom=nullptr;
+  CMapRoom *destRoom=nullptr;
 
   if (!srcLevel || !destLevel)
-    return NULL;
+    return nullptr;
 
   foreach (room, *srcLevel->getRoomList())
   {
@@ -735,7 +735,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
 
 CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 {
-  CMapPath *result = NULL;
+  CMapPath *result = nullptr;
 
   KMemConfig properties;
   KConfigGroup props = properties.group("Properties");
@@ -752,7 +752,7 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 
   DlgMapPathProperties d(this,props,false);
 
-  if (!d.exec()) return NULL;
+  if (!d.exec()) return nullptr;
 
   srcDir = (directionTyp)props.readEntry("SrcDir",0);
   destDir = (directionTyp)props.readEntry("DestDir",0);
@@ -761,8 +761,8 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 
   if (srcRoom->getPathDirection(srcDir,specialCmdSrc) || destRoom->getPathDirection(destDir,specialCmdDest))
   {
-    KMessageBox::information (NULL,i18n("A path already exists at this location"),i18n("KMuddy Mapper"));
-    return NULL;
+    KMessageBox::information (nullptr,i18n("A path already exists at this location"),i18n("KMuddy Mapper"));
+    return nullptr;
   }
 
   // create
@@ -795,7 +795,7 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
   // FIXME_jp : Allow this to call lowlevel mapper methods when undo is not active
   //            but becarefull of second stage stuff
 
-  CMapPath *result = NULL;
+  CMapPath *result = nullptr;
   
   KMemConfig properties;
   KConfigGroup props = properties.group("Properties");
@@ -949,7 +949,7 @@ void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
 
   setUndoActive(false);
   commandHistory->clear();
-  historyGroup = NULL;
+  historyGroup = nullptr;
 
   eraseMap();
 
@@ -962,7 +962,7 @@ void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
 
   if (!getLoginRoom())
   {
-    CMapRoom *firstRoom = findFirstRoom(NULL);
+    CMapRoom *firstRoom = findFirstRoom(nullptr);
     setLoginRoom(firstRoom);
   }
 
@@ -970,7 +970,7 @@ void CMapManager::importMap(const QString& file,CMapFileFilterBase *filter)
 
   if (loginRoom && activeView)
   {
-    if (activeView->getCurrentlyViewedLevel()==NULL)  
+    if (activeView->getCurrentlyViewedLevel()==nullptr)  
       activeView->showPosition(loginRoom,true);
     setCurrentRoom(loginRoom);
   }
@@ -997,7 +997,7 @@ void CMapManager::activeViewChanged(void)
 
 void CMapManager::levelChanged(CMapLevel *level)
 {
-  if (level==NULL)
+  if (level==nullptr)
     return;
 
   activeView->changedLevel(level);
@@ -1006,7 +1006,7 @@ void CMapManager::levelChanged(CMapLevel *level)
 /** Used to inform the various parts of the mapper that a element has changed */
 void CMapManager::changedElement(CMapElement *element)
 {
-  if (element==NULL)
+  if (element==nullptr)
     return;
   if (!activeView) return;
 
@@ -1350,7 +1350,7 @@ void CMapManager::stopEditing(void)
     elementEdit->setEditMode(false);
   }
 
-  elementEdit = NULL;
+  elementEdit = nullptr;
 }
 
 int CMapManager::getUndoActive(void)
@@ -1437,7 +1437,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   CMapRoom *foundRoom;
   signed int time = 0;
   bool bFound = false;
-  CMapPath *foundPath = NULL;
+  CMapPath *foundPath = nullptr;
 
   int speedWalkAbortCount = 0;
 
@@ -1445,7 +1445,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 
   if (speedwalkActive)
   {
-    KMessageBox::information (NULL,i18n("Speedwalking is already in progress"),i18n("KMuddy Mapper"));
+    KMessageBox::information (nullptr,i18n("Speedwalking is already in progress"),i18n("KMuddy Mapper"));
     return;
   }
 
@@ -1499,7 +1499,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   if (!bFound)
   {
     speedwalkActive = false;
-    KMessageBox::information (NULL,i18n("The automapper was unable to find a path to requested room"),i18n("KMuddy Mapper"));
+    KMessageBox::information (nullptr,i18n("The automapper was unable to find a path to requested room"),i18n("KMuddy Mapper"));
     return;
   }
 
@@ -1533,7 +1533,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
     if (mapData->speedwalkAbortActive && (speedWalkAbortCount == mapData->speedwalkAbortLimit))
     {
       speedwalkActive = false;
-      KMessageBox::information (NULL,i18n("Speedwalk abort because move limit was reached"),i18n("KMuddy Mapper"));
+      KMessageBox::information (nullptr,i18n("Speedwalk abort because move limit was reached"),i18n("KMuddy Mapper"));
 
       return;
     }
@@ -1676,7 +1676,7 @@ CMapFileFilterBase *CMapManager::nativeFilter(bool isLoad)
     if ((!isLoad) && (!filter->supportSave())) continue;
     if (filter->isNative()) return filter;
   }
-  return 0;
+  return nullptr;
 }
 
 QString CMapManager::defaultSavePath () const
@@ -1712,7 +1712,7 @@ void CMapManager::generateTestMap()
   // Create a new empty map
   setUndoActive(false);
   commandHistory->clear();
-  historyGroup = NULL;
+  historyGroup = nullptr;
   eraseMap();
   createNewMap();
   setUndoActive(true);

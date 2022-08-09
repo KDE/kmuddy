@@ -39,7 +39,7 @@ class cGaugeBarItem : public QWidget
 Q_OBJECT
 public:
   /** constructor */
-  cGaugeBarItem (QWidget *parent = 0);
+  cGaugeBarItem (QWidget *parent = nullptr);
   /** destructor */
   ~cGaugeBarItem ();
   void setText (const QString &caption);
@@ -58,7 +58,7 @@ class cGaugeBarItemPrivate: public QWidget
 Q_OBJECT
 public:
   /** constructor */
-  cGaugeBarItemPrivate (QWidget *parent = 0);
+  cGaugeBarItemPrivate (QWidget *parent = nullptr);
   /** destructor */
   ~cGaugeBarItemPrivate ();
   void setValue (int value);

@@ -45,7 +45,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 	properties = pathProperties;
 	pathUndoable = undoable;
 	mapManager = manager;
-        path = 0;
+        path = nullptr;
 
 	txtSrcBefore->setText(properties.readEntry("SrcBeforeCommand",""));
 	txtSrcAfter->setText(properties.readEntry("SrcAfterCommand",""));
@@ -71,7 +71,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 	slotExitTypeChange();
 
 	// Get the extension panels from the plugins
-	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,NULL,(QWidget *)tabPaths);
+	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,nullptr,(QWidget *)tabPaths);
 	foreach (CMapPropertiesPaneBase *pane, paneList)
 	{
 		tabPaths->addTab(pane,pane->getTitle());
@@ -254,7 +254,7 @@ void DlgMapPathProperties::pathAccept(QString cmdName)
 	command->compare("SpecialExit",path->getSpecialExit(),chkSpecial->isChecked());
 	command->compare("SpecialCmdSrc",path->getSpecialCmd(),txtSpecialSrc->text().trimmed());
         CMapPath *op = path->getOpsitePath();
-	command->compare("PathTwoWay", op != 0, optTwoWay->isChecked());
+	command->compare("PathTwoWay", op != nullptr, optTwoWay->isChecked());
 
 	command->compare("DestBeforeCommand", op ? op->getBeforeCommand() : QString(), txtDestBefore->text().trimmed());
 	command->compare("DestAfterCommand", op ? op->getAfterCommand() : QString(), txtDestAfter->text().trimmed());

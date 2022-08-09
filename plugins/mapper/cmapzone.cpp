@@ -29,7 +29,7 @@
 
 #include <kdebug.h>
 
-CMapZone::CMapZone(CMapManager *manager) : CMapElement(manager,QRect(-1,-1,0,0),0)
+CMapZone::CMapZone(CMapManager *manager) : CMapElement(manager,QRect(-1,-1,0,0),nullptr)
 {
   label  = i18n("Unnamed Zone");
   m_room_id_count = 0;
@@ -176,7 +176,7 @@ void CMapZone::higherPaint(QPainter *p,CMapZone *)
 
 CMapElement *CMapZone::copy(void)
 {
-  return 0;
+  return nullptr;
 }
 
 void CMapZone::setLabelPosition(labelPosTyp pos)
@@ -215,7 +215,7 @@ void CMapZone::setLabelPosition(labelPosTyp pos)
 
 void CMapZone::setLabelPosition(labelPosTyp pos,CMapText *text)
 {
-	if (getLabel()=="" || text == NULL) pos=HIDE;
+	if (getLabel()=="" || text == nullptr) pos=HIDE;
 	setLabelPosition(pos);
 }
 
@@ -362,7 +362,7 @@ unsigned int CMapZone::levelCount() const
 CMapLevel *CMapZone::getLevel(int idx) const
 {
   QModelIndex index = mapLevelModel.index(idx, 0);
-  if (!index.isValid()) return 0;
+  if (!index.isValid()) return nullptr;
   CMapLevel *lvl = static_cast<CMapLevel*>(index.data(Qt::UserRole + 1).value<void *>());
   return lvl;
 }

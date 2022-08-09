@@ -36,8 +36,8 @@ class DlgMapPathProperties : public QDialog, private Ui::DlgMapPathPropertiesBas
 {
    Q_OBJECT
 public: 
-	DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable=true,QWidget *parent=0);
-	DlgMapPathProperties(CMapManager *manager,CMapPath *pathElement,bool undoable=true,QWidget *parent=0);
+	DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable=true,QWidget *parent=nullptr);
+	DlgMapPathProperties(CMapManager *manager,CMapPath *pathElement,bool undoable=true,QWidget *parent=nullptr);
 
 	bool getTwoWay(void);
 	QString getSpecialCmdDest(void);

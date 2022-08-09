@@ -40,7 +40,7 @@ cValue cExpResolver::get (QString varName)
   // the variable list, we could easily end up with a wrong one
   cVariableList *vars = dynamic_cast<cVariableList *>(cActionManager::self()->object("variables", sess));
 
-  cValue *val = 0;
+  cValue *val = nullptr;
   if (vars) val = vars->value(varName, queue);
   if (val) return *val;
   // can't retrieve value for some reason - return empty one

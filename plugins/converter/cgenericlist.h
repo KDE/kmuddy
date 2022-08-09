@@ -33,7 +33,7 @@ class cGenericList : public cList {
   static cList *newList () { return new cGenericList; };
   virtual cListObject *newObject ();
   virtual QString objName () { return QString(); }
-  virtual cListEditor *editor (QWidget *) { return 0; };
+  virtual cListEditor *editor (QWidget *) { return nullptr; };
 
   void init ();
   /** Save the generic list into a file - we cannot use cListManager here. */

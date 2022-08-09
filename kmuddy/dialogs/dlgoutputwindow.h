@@ -39,7 +39,7 @@ class dlgOutputWindow : public QDialog
 {
   Q_OBJECT
 public:
-  dlgOutputWindow (QWidget *parent = 0);
+  dlgOutputWindow (QWidget *parent = nullptr);
   ~dlgOutputWindow();
 
   virtual QSize sizeHint() const override;

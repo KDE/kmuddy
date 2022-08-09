@@ -65,22 +65,22 @@ struct cActionManagerPrivate {
   KActionCollection *acol;
 };
   
-cActionManager *cActionManager::_self = 0;
+cActionManager *cActionManager::_self = nullptr;
 
 cActionManager::cActionManager ()
 {
   d = new cActionManagerPrivate;
   d->activesess = 0;
   registerSession (0);
-  d->acol = 0;
-  d->mainWindow = 0;
+  d->acol = nullptr;
+  d->mainWindow = nullptr;
 }
 
 cActionManager::~cActionManager ()
 {
   unregisterSession (0);
   delete d;
-  _self = 0;
+  _self = nullptr;
   if (d->acol) delete d->acol;
 }
 
@@ -195,7 +195,7 @@ cActionBase *cActionManager::object (const QString &name, int session)
 {
   if (!sessionExists (session)) {
     std::cerr << "Requested object " << name.toLatin1().data() << " from non-existant session " << session << std::endl;
-    return 0;
+    return nullptr;
   }
   if (d->sessions[session]->objects.count (name))
   {
@@ -203,7 +203,7 @@ cActionBase *cActionManager::object (const QString &name, int session)
     return ab;
   }
   std::cerr << "Object " << name.toLatin1().data() << " from session " << session << " not found." << std::endl;
-  return 0;
+  return nullptr;
 }
 
 void cActionManager::addEventHandler (cActionBase *ab, int session, QString name,

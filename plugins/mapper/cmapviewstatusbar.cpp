@@ -48,8 +48,8 @@ CMapViewStatusbar::CMapViewStatusbar(CMapManager *manager, QWidget *parent) : QS
 {
   d = new Private;
   d->manager = manager;
-  d->zone = 0;
-  d->level = 0;
+  d->zone = nullptr;
+  d->level = nullptr;
 
   // labels
   d->lblRoomLabel = new QLabel(i18n("Current Room : "), this);

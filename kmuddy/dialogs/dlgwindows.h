@@ -39,7 +39,7 @@ class dlgWindows : public QDialog
 {
 Q_OBJECT
 public:
-  dlgWindows(cWindowList *wlist, QWidget *parent = 0);
+  dlgWindows(cWindowList *wlist, QWidget *parent = nullptr);
   ~dlgWindows();
 
   virtual QSize sizeHint() const override;

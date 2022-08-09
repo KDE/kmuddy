@@ -40,7 +40,7 @@ class KMUDDY_EXPORT CMapPluginBase : public QObject
 {
    Q_OBJECT
 public: 
-	CMapPluginBase(QObject *parent=0);
+	CMapPluginBase(QObject *parent=nullptr);
 	virtual ~CMapPluginBase();
 
         virtual QString tagName() = 0;

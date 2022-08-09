@@ -42,7 +42,7 @@ class cGaugeBar : public QWidget, public cActionBase
 Q_OBJECT
  public:
   /** constructor */
-  cGaugeBar (int sess, QWidget *parent = 0);
+  cGaugeBar (int sess, QWidget *parent = nullptr);
   /** destructor */
   ~cGaugeBar ();
 

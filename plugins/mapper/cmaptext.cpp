@@ -36,7 +36,7 @@ CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint po
 
   setColor(col);
 
-  m_linkElement = NULL;
+  m_linkElement = nullptr;
 
   getZone()->m_text_id_count=getZone()->m_text_id_count+1;
   m_ID = getZone()->m_text_id_count;	
@@ -52,7 +52,7 @@ CMapText::CMapText(QString str,CMapManager *manager,QPoint pos,CMapLevel *level)
   setRect(QRect(pos,pos));
   setText(str);
   setColor(Qt::black);
-  m_linkElement = NULL;
+  m_linkElement = nullptr;
 
   getZone()->m_text_id_count=getZone()->m_text_id_count+1;
   m_ID = getZone()->m_text_id_count;	

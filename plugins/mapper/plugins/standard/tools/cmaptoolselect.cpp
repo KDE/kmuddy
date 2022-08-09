@@ -35,7 +35,7 @@ CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *
         : CMapToolBase(actionCollection,
                        i18n("Select"),
                        BarIcon("kmud_select.png"),
-                       manager,"toolsSelect",0)
+                       manager,"toolsSelect",nullptr)
 {
 	kDebug() << "CMapToolSelect: constructor begins";
 
@@ -287,7 +287,7 @@ void CMapToolSelect::mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *, CMapL
 {
   // If we double-click on something that is not a room, do nothing
   QList<CMapElement *> elements = currentLevel->elementsUnderMouse(mousePos);
-  CMapRoom *room = 0;
+  CMapRoom *room = nullptr;
   foreach (CMapElement *el, elements) {
     room = dynamic_cast<CMapRoom *>(el);
     if (room) break;

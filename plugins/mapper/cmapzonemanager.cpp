@@ -179,7 +179,7 @@ int CMapZoneManager::createZoneEntry(const QString &name, const QString &file)
 cZoneInformation *CMapZoneManager::getZoneEntry(int idx)
 {
   QModelIndex index = d->zones.index(idx, 0);
-  if (!index.isValid()) return 0;
+  if (!index.isValid()) return nullptr;
   cZoneInformation *i = static_cast<cZoneInformation*>(index.data(Qt::UserRole + 1).value<void *>());
   return i;
 }

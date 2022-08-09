@@ -44,7 +44,7 @@ Dialog with main application settings.
 class dlgAppSettings : public KPageDialog  {
    Q_OBJECT
 public: 
-  dlgAppSettings(QWidget *parent=0);
+  dlgAppSettings(QWidget *parent=nullptr);
   ~dlgAppSettings();
 
   static void showSettingsDialog ();

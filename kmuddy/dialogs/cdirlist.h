@@ -33,7 +33,7 @@ A widget that allows you to choose a list of directories.
 class cDirList : public QWidget {
    Q_OBJECT
 public: 
-  cDirList (QWidget *parent=0);
+  cDirList (QWidget *parent=nullptr);
   ~cDirList ();
   const QStringList &getDirList () { return dirlist; };
   void setDirList (const QStringList &dlist);

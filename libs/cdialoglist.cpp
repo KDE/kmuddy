@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cdialoglist.h"
 
-cDialogList *cDialogList::_self = 0;
+cDialogList *cDialogList::_self = nullptr;
 
 cDialogList::cDialogList() : cActionBase ("dialog-list", 0)
 {
@@ -42,7 +42,7 @@ cDialogList *cDialogList::self ()
 QDialog *cDialogList::getDialog (const QString &name) {
   if (dialogs.count (name))
     return dialogs[name];
-  return 0;
+  return nullptr;
 }
 
 void cDialogList::addDialog (const QString &name, QDialog *dlg) {

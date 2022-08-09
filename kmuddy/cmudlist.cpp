@@ -39,7 +39,7 @@ using namespace std;
 class cMUDListModel : public QAbstractTableModel {
  public:
   cMUDListModel (cMUDList *l) :
-    QAbstractTableModel (0), lst (l)
+    QAbstractTableModel (nullptr), lst (l)
   {
   }
   virtual ~cMUDListModel () {}
@@ -145,8 +145,8 @@ int cMUDList::count ()
 
 const cMUDEntry *cMUDList::entry (int id)
 {
-  if (id < 0) return 0;
-  if (id >= count()) return 0;
+  if (id < 0) return nullptr;
+  if (id >= count()) return nullptr;
   return d->lst[id];
 }
 

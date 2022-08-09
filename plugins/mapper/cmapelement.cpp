@@ -31,7 +31,7 @@
 #define RESIZE_SIZE         10
 #define RESIZE_SIZE_HALF    5
 
-CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QObject (NULL)
+CMapElement::CMapElement(CMapManager *manager,QRect rect,CMapLevel *level) : QObject (nullptr)
 {
   mapManager = manager;
   position = rect;
@@ -106,7 +106,7 @@ CMapZone *CMapElement::getZone(void)
 	if (mapLevel)
 		return mapLevel->getZone();
 	else
-		return NULL;
+		return nullptr;
 }
 
 /** Used to find out if the mouse is in the element */

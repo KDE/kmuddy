@@ -50,11 +50,11 @@ struct cGlobalSettings::Private {
   bool allowEvents, pendingNotify;
 };
 
-cGlobalSettings *cGlobalSettings::_self = 0;
+cGlobalSettings *cGlobalSettings::_self = nullptr;
 
 cGlobalSettings *cGlobalSettings::self()
 {
-  if (_self == 0)
+  if (_self == nullptr)
     _self = new cGlobalSettings;
   return _self;
 }
@@ -72,7 +72,7 @@ cGlobalSettings::~cGlobalSettings()
 {
   save ();
   delete d;
-  _self = 0;
+  _self = nullptr;
 }
 
 void cGlobalSettings::setBool (const QString &name, bool value)

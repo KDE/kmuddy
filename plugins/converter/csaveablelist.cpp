@@ -24,10 +24,10 @@
 cSaveableList::cSaveableList (QString file, QString _objName, cSaveableField *proto)
 {
   _count = 0;
-  first = NULL;
-  last = NULL;
-  cur = NULL;
-  marker = NULL;
+  first = nullptr;
+  last = nullptr;
+  cur = nullptr;
+  marker = nullptr;
   objName = _objName;
   prototype = proto;
 
@@ -38,28 +38,28 @@ cSaveableList::cSaveableList (QString file, QString _objName, cSaveableField *pr
 cSaveableList::~cSaveableList ()
 {
   clear ();
-  if (config != NULL)
+  if (config != nullptr)
     delete config;
 }
 
 bool cSaveableList::addToBegin (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (first == NULL)  //list is still empty
+  if (first == nullptr)  //list is still empty
   {
     first = newitem;
     last = newitem;
-    newitem->prev = NULL;
-    newitem->next = NULL;
-    cur = NULL;
+    newitem->prev = nullptr;
+    newitem->next = nullptr;
+    cur = nullptr;
     _count = 1;
   }
   else
   {
     first->prev = newitem;
     newitem->next = first;
-    newitem->prev = NULL;
+    newitem->prev = nullptr;
     first = newitem;
     _count++;
   }
@@ -68,21 +68,21 @@ bool cSaveableList::addToBegin (cSaveableField *newitem)
 
 bool cSaveableList::addToEnd (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (last == NULL)  //list is still empty
+  if (last == nullptr)  //list is still empty
   {
     first = newitem;
     last = newitem;
-    newitem->prev = NULL;
-    newitem->next = NULL;
-    cur = NULL;
+    newitem->prev = nullptr;
+    newitem->next = nullptr;
+    cur = nullptr;
     _count = 1;
   }
   else
   {
     last->next = newitem;
-    newitem->next = NULL;
+    newitem->next = nullptr;
     newitem->prev = last;
     last = newitem;
     _count++;
@@ -92,15 +92,15 @@ bool cSaveableList::addToEnd (cSaveableField *newitem)
 
 bool cSaveableList::addAfterCurrent (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (cur == NULL)  //there is no current entry!!!
+  if (cur == nullptr)  //there is no current entry!!!
     return false;
   else
   {
     newitem->next = cur->next;
     newitem->prev = cur;
-    if (cur->next != NULL)
+    if (cur->next != nullptr)
       cur->next->prev = newitem;
     cur->next = newitem;
     _count++;
@@ -110,15 +110,15 @@ bool cSaveableList::addAfterCurrent (cSaveableField *newitem)
 
 bool cSaveableList::addAfterMarker (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (marker == NULL)  //there is no marked entry!!!
+  if (marker == nullptr)  //there is no marked entry!!!
     return false;
   else
   {
     newitem->next = marker->next;
     newitem->prev = marker;
-    if (marker->next != NULL)
+    if (marker->next != nullptr)
       marker->next->prev = newitem;
     marker->next = newitem;
     _count++;
@@ -128,18 +128,18 @@ bool cSaveableList::addAfterMarker (cSaveableField *newitem)
 
 bool cSaveableList::replaceCurrent (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (cur == NULL)  //there is no current entry!!!
+  if (cur == nullptr)  //there is no current entry!!!
     return false;
   else
   {
     //bind new item
     newitem->next = cur->next;
     newitem->prev = cur->prev;
-    if (cur->next != NULL)
+    if (cur->next != nullptr)
       cur->next->prev = newitem;
-    if (cur->prev != NULL)
+    if (cur->prev != nullptr)
       cur->prev->next = newitem;
     if (first == cur)
       first = newitem;
@@ -157,18 +157,18 @@ bool cSaveableList::replaceCurrent (cSaveableField *newitem)
 
 bool cSaveableList::replaceMarker (cSaveableField *newitem)
 {
-  if (newitem == NULL)
+  if (newitem == nullptr)
     return false;
-  if (marker == NULL)  //there is no marked entry!!!
+  if (marker == nullptr)  //there is no marked entry!!!
     return false;
   else
   {
     //bind new item
     newitem->next = marker->next;
     newitem->prev = marker->prev;
-    if (marker->next != NULL)
+    if (marker->next != nullptr)
       marker->next->prev = newitem;
-    if (marker->prev != NULL)
+    if (marker->prev != nullptr)
       marker->prev->next = newitem;
     if (first == marker)
       first = newitem;
@@ -187,9 +187,9 @@ bool cSaveableList::replaceMarker (cSaveableField *newitem)
 bool cSaveableList::moveCurrentToFront ()
 //only moves by one item
 {
-  if (cur == NULL)
+  if (cur == nullptr)
     return false;
-  if (cur->prev == NULL)
+  if (cur->prev == nullptr)
     return true;    //this is the begin - there's nothing to do
 
   //store pointers
@@ -201,13 +201,13 @@ bool cSaveableList::moveCurrentToFront ()
   cur->next = prev;
   cur->prev = prev2;
   //bind next
-  if (next != NULL)
+  if (next != nullptr)
     next->prev = prev;
   //bind prev
   prev->next = next;
   prev->prev = cur;
   //bind prev2
-  if (prev2 != NULL)
+  if (prev2 != nullptr)
     prev2->next = cur;
 
   //update first/last if needed
@@ -222,9 +222,9 @@ bool cSaveableList::moveCurrentToFront ()
 bool cSaveableList::moveCurrentToBack ()
 //only moves by one item
 {
-  if (cur == NULL)
+  if (cur == nullptr)
     return false;
-  if (cur->next == NULL)
+  if (cur->next == nullptr)
     return true;    //this is the end - there's nothing to do
   
   //store pointers
@@ -236,13 +236,13 @@ bool cSaveableList::moveCurrentToBack ()
   cur->next = next2;  
   cur->prev = next;
   //bind prev
-  if (prev != NULL)
+  if (prev != nullptr)
     prev->next = next;
   //bind next
   next->prev = prev;
   next->next = cur;
   //bind next2
-  if (next2 != NULL)
+  if (next2 != nullptr)
     next2->prev = cur;
 
   //update first/last if needed
@@ -256,15 +256,15 @@ bool cSaveableList::moveCurrentToBack ()
 
 bool cSaveableList::removeFirst (bool dontDelete)
 {
-  if (first == NULL)    //there's nothing to remove!
+  if (first == nullptr)    //there's nothing to remove!
     return false;
-  if (first->next != NULL)
-    first->next->prev = NULL;
+  if (first->next != nullptr)
+    first->next->prev = nullptr;
   cSaveableField *newfirst = first->next;
   if (cur == first)
     cur = newfirst;
   if (last == first)
-    last = NULL;     //newfirst==NULL in this case, but I want to be sure...
+    last = nullptr;     //newfirst==NULL in this case, but I want to be sure...
   if (marker == first)
     marker = newfirst;
   if (!dontDelete)
@@ -276,15 +276,15 @@ bool cSaveableList::removeFirst (bool dontDelete)
 
 bool cSaveableList::removeLast (bool dontDelete)
 {
-  if (last == NULL)    //there's nothing to remove!
+  if (last == nullptr)    //there's nothing to remove!
     return false;
-  if (last->prev != NULL)
-    last->prev->next = NULL;
+  if (last->prev != nullptr)
+    last->prev->next = nullptr;
   cSaveableField *newlast = last->prev;
   if (cur == last)
     cur = newlast;
   if (first == last)
-    first = NULL;     //newlast==NULL in this case, but I want to be sure...
+    first = nullptr;     //newlast==NULL in this case, but I want to be sure...
   if (marker == last)
     marker = newlast;
   if (!dontDelete)
@@ -296,58 +296,58 @@ bool cSaveableList::removeLast (bool dontDelete)
 
 bool cSaveableList::removeCurrent (bool dontDelete)
 {
-  if (cur == NULL)    //there's nothing to remove!
+  if (cur == nullptr)    //there's nothing to remove!
     return false;
 
-  if (cur->prev != NULL)
+  if (cur->prev != nullptr)
     cur->prev->next = cur->next;
-  if (cur->next != NULL)
+  if (cur->next != nullptr)
     cur->next->prev = cur->prev;
   if (marker == cur)
-    marker = NULL;
+    marker = nullptr;
   if (first == cur)
     first = cur->next;
   if (last == cur)
     last = cur->prev;
   if (!dontDelete)
     delete cur;
-  cur = NULL;
+  cur = nullptr;
   _count--;
   return true;
 }
 
 bool cSaveableList::removeMarked (bool dontDelete)
 {
-  if (marker == NULL)    //there's nothing to remove!
+  if (marker == nullptr)    //there's nothing to remove!
     return false;
 
-  if (marker->prev != NULL)
+  if (marker->prev != nullptr)
     marker->prev->next = marker->next;
-  if (marker->next != NULL)
+  if (marker->next != nullptr)
     marker->next->prev = marker->prev;
   if (cur == marker)
-    cur = NULL;
+    cur = nullptr;
   if (first == marker)
     first = marker->next;
   if (last == marker)
     last = marker->prev;
   if (!dontDelete)
     delete marker;
-  marker = NULL;
+  marker = nullptr;
   _count--;
   return true;
 }
 
 void cSaveableList::clear (bool dontDelete)
 {
-  while (last != NULL)
+  while (last != nullptr)
     removeFirst (dontDelete);
   _count = 0;
 }
 
 void cSaveableList::load ()
 {
-  if (config == NULL)
+  if (config == nullptr)
     return;
   clear ();
   KConfigGroup g = config->group ("General");

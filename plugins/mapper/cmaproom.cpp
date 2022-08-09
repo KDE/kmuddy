@@ -72,14 +72,14 @@ CMapRoom::~CMapRoom()
   // First make a copy, as deleting rooms alters this list
   QList<CMapPath *> paths = pathList;
   foreach (CMapPath *path, paths) {
-    path->setOpsitePath(0);  // prevents a crash
+    path->setOpsitePath(nullptr);  // prevents a crash
     delete path;
   }
 
   // Same for paths connecting with this room
   paths = connectingPaths;
   foreach (CMapPath *path, paths) {
-    path->setOpsitePath(0);  // prevents a crash
+    path->setOpsitePath(nullptr);  // prevents a crash
     delete path;
   }
 
@@ -324,13 +324,13 @@ CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 CMapRoom *CMapRoom::getPathTarget(directionTyp dir,QString specialCmd)
 {
   CMapPath *path = getPathDirection(dir, specialCmd);
-  if (!path) return 0;
+  if (!path) return nullptr;
   return path->getDestRoom();
 }
 
@@ -463,7 +463,7 @@ void CMapRoom::geometryChanged(void)
 
 void CMapRoom::textRemove(void)
 {
-	textElement=NULL;
+	textElement=nullptr;
 	labelPosition = HIDE;
 }
 

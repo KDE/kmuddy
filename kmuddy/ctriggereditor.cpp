@@ -111,7 +111,7 @@ cTriggerEditor::cTriggerEditor (QWidget *parent)
   : cListEditor (parent)
 {
   d = new Private;
-  d->regExpDialog = 0;
+  d->regExpDialog = nullptr;
 
   if (!cltextk) {
     cltextk = new QString[18];

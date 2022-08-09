@@ -91,7 +91,7 @@ cTriggerList::cTriggerList ()
   d = new Private;
 
   d->detectingPrompt = false;
-  d->curline = 0;
+  d->curline = nullptr;
 }
 
 cTriggerList::~cTriggerList ()
@@ -116,7 +116,7 @@ void cTriggerList::matchString (cTextChunk *line)
 
   traverse (TRIGGER_MATCH);
 
-  d->curline = 0;
+  d->curline = nullptr;
 }
 
 bool cTriggerList::detectingPrompt ()

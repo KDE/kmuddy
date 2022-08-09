@@ -127,9 +127,9 @@ void cConverterPlugin::converterDialog ()
       ++count;
     }
     if (count)
-      KMessageBox::information (0, i18n ("The profiles have been successfully converted."));
+      KMessageBox::information (nullptr, i18n ("The profiles have been successfully converted."));
     else
-      KMessageBox::error (0, i18n ("You did not specify any profiles to convert."));
+      KMessageBox::error (nullptr, i18n ("You did not specify any profiles to convert."));
   }
 
   // delete the profile info

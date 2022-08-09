@@ -58,7 +58,7 @@ CMapRoom *CMapLevel::findRoom(unsigned int id)
   foreach (CMapRoom *room, m_roomList)
     if (room->getRoomID() == id)
       return room;
-  return 0;
+  return nullptr;
 }
 
 /** Used to find a room with the ID */
@@ -67,7 +67,7 @@ CMapText *CMapLevel::findText(unsigned int id)
   foreach (CMapText *text, m_textList)
     if (text->getTextID() == id)
       return text;
-  return 0;
+  return nullptr;
 }
 
 /** Used to get the number of the level */
@@ -117,7 +117,7 @@ QList<CMapElement *> CMapLevel::getAllElements()
 CMapLevel *CMapLevel::getPrevLevel(void)
 {
   int idx = getZone()->levelIndex(this);
-  if (idx <= 0) return 0;
+  if (idx <= 0) return nullptr;
   return getZone()->getLevel(idx - 1);
 }
 
@@ -125,7 +125,7 @@ CMapLevel *CMapLevel::getPrevLevel(void)
 CMapLevel *CMapLevel::getNextLevel(void)
 {
   int idx = getZone()->levelIndex(this);
-  if (idx < 0) return 0;
+  if (idx < 0) return nullptr;
   return getZone()->getLevel(idx + 1);
 }
 
@@ -149,13 +149,13 @@ QList<CMapElement *> CMapLevel::elementsUnderMouse(QPoint mousePos)
 CMapElement *CMapLevel::findElementAt(QPoint pos, int type)
 {
   QList<CMapElement *> lst = elementsUnderMouse(pos);
-  if (lst.empty()) return NULL;
+  if (lst.empty()) return nullptr;
   foreach (CMapElement *el, lst)
   {
     if ((type >= 0) && (el->getElementType() != type)) continue;
     return el;
   }
-  return NULL;
+  return nullptr;
 }
 
 CMapRoom *CMapLevel::findRoomAt(QPoint pos)
@@ -164,7 +164,7 @@ CMapRoom *CMapLevel::findRoomAt(QPoint pos)
     if (room->mouseInElement(pos))
       return room;
 
-  return NULL;
+  return nullptr;
 }
 
 

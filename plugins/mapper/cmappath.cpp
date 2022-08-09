@@ -32,7 +32,7 @@
 #include "cmaplevel.h"
 #include "cmapcmdelementproperties.h"
 
-CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir, bool twoWay) : CMapElement(manager,NULL)
+CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir, bool twoWay) : CMapElement(manager,nullptr)
 {
   setSrcRoom(srcRoom);
   setDestRoom(destRoom);
@@ -66,12 +66,12 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CM
   beforeCommand = "";
   afterCommand = "";
   done = false;
-  opsitePath = NULL;
+  opsitePath = nullptr;
 
   m_dontPaintBend=0;
 }
 
-CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom)  : CMapElement(manager,NULL)
+CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom)  : CMapElement(manager,nullptr)
 {
 	setSrcRoom(srcRoom);
 	setDestRoom(destRoom);
@@ -83,13 +83,13 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom)  :
 	bSpecialExit = false;
 	specialCmd = "";
 	done = false;
-	opsitePath = NULL;
+	opsitePath = nullptr;
 }
 
 CMapPath::~CMapPath()
 {
   if (opsitePath) {
-    opsitePath->setOpsitePath(NULL);  // needed to prevent endless looping
+    opsitePath->setOpsitePath(nullptr);  // needed to prevent endless looping
     delete opsitePath;
   }
 
@@ -228,7 +228,7 @@ void CMapPath::setDestDir(directionTyp DestDir)
 void CMapPath::makeOneWay() {
   CMapPath *path = getOpsitePath();
   if (!path) return;
-  path->setOpsitePath(NULL);  // so it doesn't delete us too
+  path->setOpsitePath(nullptr);  // so it doesn't delete us too
   delete path;
 }
 
@@ -652,7 +652,7 @@ void CMapPath::loadProperties(KConfigGroup grp)
 	setDestDir((directionTyp)grp.readEntry("DestDir",(int)getDestDir()));
 	setCords();
 
-        if (grp.readEntry("PathTwoWay", getOpsitePath() != 0))
+        if (grp.readEntry("PathTwoWay", getOpsitePath() != nullptr))
           makeTwoWay();
         else
           makeOneWay();

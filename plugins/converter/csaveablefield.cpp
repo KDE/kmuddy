@@ -22,8 +22,8 @@
 
 cSaveableField::cSaveableField ()
 {
-  prev = NULL;
-  next = NULL;
+  prev = nullptr;
+  next = nullptr;
   globalmatch = false;
 }
 

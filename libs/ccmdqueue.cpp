@@ -32,8 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 cCmdQueue::cCmdQueue (int _sess) : sess(_sess)
 {
-  parser = 0;
-  preproc = 0;
+  parser = nullptr;
+  preproc = nullptr;
 }
 
 cCmdQueue::~cCmdQueue()
@@ -106,7 +106,7 @@ cValue *cCmdQueue::value (const QString &name)
     vn = vn.mid(1);
   if (variables.count (vn))
     return variables[vn];
-  return 0;
+  return nullptr;
 }
 
 void cCmdQueue::setValue (const QString &name, const QString &value)

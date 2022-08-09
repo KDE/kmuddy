@@ -51,7 +51,7 @@ CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent)
 	: QWidget(parent)
 {
   setAttribute (Qt::WA_StaticContents);
-  buffer = NULL;
+  buffer = nullptr;
   mapManager = manager;
 }
 
@@ -69,7 +69,7 @@ void CMapTextPreview::drawContents(QPainter *paint,int , int , int, int )
 	if (buffer && (buffer->size() != drawArea.size()))
 	{
 		delete buffer;
-		buffer = NULL;
+		buffer = nullptr;
 	}
 
 	if (!buffer)

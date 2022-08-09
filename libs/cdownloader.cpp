@@ -26,7 +26,7 @@
 cDownloader::cDownloader (cMSP *mspObject)
 {
   msp = mspObject;
-  currentJob = 0;
+  currentJob = nullptr;
 }
 
 cDownloader::~cDownloader ()
@@ -39,7 +39,7 @@ void cDownloader::reset ()
   if (currentJob)
   {
     currentJob->kill ();
-    currentJob = 0;
+    currentJob = nullptr;
   }
 }
 
@@ -72,6 +72,6 @@ void cDownloader::slotResult (KIO::Job *job)
     QString reason = job->errorString ();
     msp->downloadFailed (reason);
   }
-  currentJob = 0;
+  currentJob = nullptr;
 }
 

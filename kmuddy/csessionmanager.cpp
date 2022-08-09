@@ -49,12 +49,12 @@ struct cSessionManagerPrivate {
   bool wantTabBar;
 };
 
-cSessionManager *cSessionManager::_self = 0;
+cSessionManager *cSessionManager::_self = nullptr;
 
 cSessionManager::cSessionManager () : cActionBase ("session-manager", 0)
 {
   d = new cSessionManagerPrivate;
-  d->widget = 0;
+  d->widget = nullptr;
   cActionManager::self()->setActiveSession (0);
   d->am = cActionManager::self();
 
@@ -293,7 +293,7 @@ bool cSessionManager::alwaysTabBar ()
 void cSessionManager::setAlwaysTabBar (bool value)
 {
   d->wantTabBar = value;
-  if (d->widget == 0)
+  if (d->widget == nullptr)
     return;
   bool show = true;
   if ((!value) && (count() == 1)) show = false;

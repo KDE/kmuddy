@@ -43,7 +43,7 @@ using namespace std;
 class cProfileModel : public QAbstractTableModel {
  public:
   cProfileModel (cProfileManager *manager)
-      : QAbstractTableModel (0), mgr (manager)
+      : QAbstractTableModel (nullptr), mgr (manager)
   {
   }
 
@@ -133,7 +133,7 @@ struct cProfileManager::Private {
   cProfileModel *model;
 };
 
-cProfileManager *cProfileManager::_self = 0;
+cProfileManager *cProfileManager::_self = nullptr;
 
 cProfileManager *cProfileManager::self ()
 {
@@ -238,17 +238,17 @@ cProfileSettings *cProfileManager::settings (const QString &profileName)
 {
   if (d->profileSettings.count (profileName))
     return d->profileSettings[profileName];
-  return 0;
+  return nullptr;
 }
 
 cProfileSettings *cProfileManager::settings (int sess)
 {
   QString name;
-  if (!d->sessions.count (sess)) return 0;
+  if (!d->sessions.count (sess)) return nullptr;
   name = d->sessions[sess];
   if (d->profileSettings.count (name))
     return d->profileSettings[name];
-  return 0;
+  return nullptr;
 }
 
 QString cProfileManager::newProfile (const QString &name)

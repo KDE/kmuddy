@@ -816,7 +816,7 @@ class cFunctionGlobal: public cFunction {
     virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() == 0) return cValue::empty();
       QString varName = (*params.begin()).asString();
-      cValue *val = varList(sess)->value (varName, 0);
+      cValue *val = varList(sess)->value (varName, nullptr);
       if (val) return *val;
       return cValue::empty();
     }

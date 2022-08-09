@@ -85,7 +85,7 @@
 #include <KSystemTrayIcon>
 #include <kdebug.h>
 
-KMuddy *KMuddy::_self = 0;
+KMuddy *KMuddy::_self = nullptr;
 
 //are the actions ready?
 bool actionsReady;
@@ -98,20 +98,20 @@ KMuddy *KMuddy::self() {
   return _self;
 }
 
-KMuddy::KMuddy() : KMainWindow(0), cActionBase ("kmuddy", 0), sysIcon(0)
+KMuddy::KMuddy() : KMainWindow(nullptr), cActionBase ("kmuddy", 0), sysIcon(nullptr)
 {
   //initialize random number generator (needed by cMSP)
-  srand (time (0));
+  srand (time (nullptr));
 
-  central = 0;
+  central = nullptr;
   actionsReady = false;
   globalnotify = localnotify = alwaysnotify = false;
-  cdlg = 0;
-  qdlg = 0;
-  mdlg = 0;
-  statdlg = 0;
-  objdlg = 0;
-  grabdlg = 0;
+  cdlg = nullptr;
+  qdlg = nullptr;
+  mdlg = nullptr;
+  statdlg = nullptr;
+  objdlg = nullptr;
+  grabdlg = nullptr;
 
   _self = this;
   prepareObjects ();
@@ -138,7 +138,7 @@ void KMuddy::eventNothingHandler (QString event, int session)
     if (!systrayenabled && sysIcon) {
       // Remove the system tray icn
       delete sysIcon;
-      sysIcon = 0;
+      sysIcon = nullptr;
     }
     else if (systrayenabled && !sysIcon){
       // Load the system tray icon
@@ -548,7 +548,7 @@ void KMuddy::prepareObjects ()
   menu->plug (dodisconnect, "connection-slot1");
   menu->plug (reconnect, "connection-slot2");
   menu->plug (closetab, "connection-slot2");
-  menu->plug (KStandardAction::quit(this, SLOT(close()), 0), "connection-quit");
+  menu->plug (KStandardAction::quit(this, SLOT(close()), nullptr), "connection-quit");
 
   //menu Edit
   menu->addItemPosition ("edit-slot1", editMenu);
@@ -921,7 +921,7 @@ void KMuddy::updateWindows ()
   // then we won't need this at all ...
 
   // update the statistics window
-  if (statdlg != 0)
+  if (statdlg != nullptr)
     statdlg->update ();
 }
 
@@ -1107,7 +1107,7 @@ void KMuddy::showAndHandleConnectDialog ()
   //further action is handled by signal issued by OK button, so that we only
   //have to destroy the dialog...
   delete cdlg;
-  cdlg = 0;
+  cdlg = nullptr;
 }
 
 void KMuddy::showAndHandleQuickConnectDialog ()

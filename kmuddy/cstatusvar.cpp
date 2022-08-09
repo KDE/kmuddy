@@ -37,7 +37,7 @@ cStatusVar::cStatusVar (cList *list) : cListObject (list)
 {
   d = new Private;
   d->percentage = false;
-  d->vars = 0;
+  d->vars = nullptr;
 }
 
 cStatusVar::~cStatusVar()

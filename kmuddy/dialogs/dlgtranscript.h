@@ -36,7 +36,7 @@ Configures session transcript.
 class dlgTranscript : public KPageDialog {
    Q_OBJECT
 public: 
-  dlgTranscript (QWidget *parent=0);
+  dlgTranscript (QWidget *parent=nullptr);
   ~dlgTranscript ();
 
   virtual QSize sizeHint() const override;
