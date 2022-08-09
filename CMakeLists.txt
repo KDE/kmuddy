@@ -9,7 +9,6 @@ include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(FeatureSummary)
-include(KDEFrameworkCompilerSettings)
 include(ECMInstallIcons)
 
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Script Multimedia)
