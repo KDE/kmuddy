@@ -30,11 +30,11 @@ class cVarTriggerEditor : public cListEditor {
  Q_OBJECT
  public:
   cVarTriggerEditor (QWidget *parent);
-  ~cVarTriggerEditor ();
+  ~cVarTriggerEditor () override;
 
-  virtual void createGUI(QWidget *parent);
-  virtual void fillGUI (const cListObjectData &data);
-  virtual void getDataFromGUI (cListObjectData *data);
+  void createGUI(QWidget *parent) override;
+  void fillGUI (const cListObjectData &data) override;
+  void getDataFromGUI (cListObjectData *data) override;
  protected:
   struct Private;
   Private *d;

@@ -43,7 +43,7 @@ class KMUDDY_EXPORT cConsole : public QGraphicsView {
    Q_OBJECT
 public: 
   cConsole(QWidget *parent = Q_NULLPTR);
-  ~cConsole();
+  ~cConsole() override;
   void setSession (int s);
 
   /** set font */
@@ -114,7 +114,7 @@ protected slots:
 protected:
   void resizeEvent (QResizeEvent *e) override;
   bool viewportEvent(QEvent *event) override;
-  virtual void scrollContentsBy (int dx, int dy) override;
+  void scrollContentsBy (int dx, int dy) override;
   /** called when resizing and when changing font */
   void fixupOutput (bool sizeChanged = false);
   void adjustScrollBack ();

@@ -55,7 +55,7 @@ class cSession : public QWidget, public cActionBase {
    Q_OBJECT
 public: 
   cSession (int sess, QWidget *parent=nullptr);
-  ~cSession ();
+  ~cSession () override;
 
   //name
   void setName (const QString &name, bool defName = true);
@@ -66,9 +66,9 @@ public:
 
   void setAuxInput (bool val);
 
-  virtual QString actionNothingHandler (QString action, int session) override;
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
+  QString actionNothingHandler (QString action, int session) override;
+  void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
 protected slots:
   /** switch between standard input and multi-line input */
   void switchInputLines ();

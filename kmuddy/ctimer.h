@@ -27,7 +27,7 @@ One timer.
 
 class cTimer : public cListObject {
 public:
-  virtual ~cTimer ();
+  ~cTimer () override;
 
   /** Execute this timer now. */
   void execute ();
@@ -37,17 +37,17 @@ protected:
   friend class cTimerList;
   cTimer (cList *list);
 
-  virtual void setEnabled (bool en = true) override;
+  void setEnabled (bool en = true) override;
 
   /** React on an attribute change by adjusting the visible name. */
-  virtual void attribChanged (const QString &name) override;
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName() override;
+  void updateVisibleName() override;
 
 #define TIMER_RESET 1
 #define TIMER_TICK 2
 
-  virtual cList::TraverseAction traverse (int traversalType);
+  cList::TraverseAction traverse (int traversalType) override;
 
   virtual void tick (int tickTime);
   void resetTickCount ();

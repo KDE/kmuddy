@@ -38,9 +38,9 @@ class dlgProfileSettings : public KPageDialog {
    Q_OBJECT
 public: 
   dlgProfileSettings (QWidget *parent=nullptr);
-  ~dlgProfileSettings ();
+  ~dlgProfileSettings () override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   bool useAnsi ();
   void setUseAnsi (bool val);
   bool limitRepeater ();

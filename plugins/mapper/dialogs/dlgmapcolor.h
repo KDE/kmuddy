@@ -32,7 +32,7 @@ class DlgMapColor : public QWidget, public Ui_DlgMapColorBase
    Q_OBJECT
 public: 
 	DlgMapColor (CMapManager *mapManager, QWidget *parent);
-	~DlgMapColor ();
+	~DlgMapColor () override;
 
 	/** This slot is called when the OK button is pressed */
 	void slotOkPressed();

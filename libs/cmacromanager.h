@@ -47,7 +47,7 @@ public:
   /** return an instance */
   static cMacroManager *self ();
   /** destructor */
-  ~cMacroManager ();
+  ~cMacroManager () override;
 
   void addMacro (const QString &name, cMacro *macro);
   void removeMacro (const QString &name);

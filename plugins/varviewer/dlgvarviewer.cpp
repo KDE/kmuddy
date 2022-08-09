@@ -40,17 +40,17 @@ class VariableModel : public QAbstractTableModel {
     count = 0;
   }
 
-  int columnCount (const QModelIndex &parent = QModelIndex()) const {
+  int columnCount (const QModelIndex &parent = QModelIndex()) const override {
     if (parent.isValid()) return 0;
     return 2;
   }
 
-  int rowCount (const QModelIndex &parent = QModelIndex()) const {
+  int rowCount (const QModelIndex &parent = QModelIndex()) const override {
     if (parent.isValid()) return 0;
     return count;
   }
 
-  virtual QVariant data (const QModelIndex &index, int role = Qt::DisplayRole) const
+  QVariant data (const QModelIndex &index, int role = Qt::DisplayRole) const override
   {
     if (role != Qt::DisplayRole) return QVariant();
     if (index.parent().isValid()) return QVariant();
@@ -63,7 +63,7 @@ class VariableModel : public QAbstractTableModel {
     return list->getValue (name);
   }
 
-  virtual QVariant headerData (int section, Qt::Orientation, int role = Qt::DisplayRole) const
+  QVariant headerData (int section, Qt::Orientation, int role = Qt::DisplayRole) const override
   {
     if (role != Qt::DisplayRole) return QVariant();
     switch (section) {

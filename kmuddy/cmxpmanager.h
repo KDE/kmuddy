@@ -48,7 +48,7 @@ public:
   /** constructor */
   cMXPManager (int sess);
   /** destructor */
-  ~cMXPManager ();
+  ~cMXPManager () override;
   
 #ifdef HAVE_MXP
   virtual void eventNothingHandler (QString event, int session) override;

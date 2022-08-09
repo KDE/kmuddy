@@ -2,7 +2,7 @@
                           dlgquickconnect.h  -  QuickConnect dialog
     This file is a part of KMuddy distribution.
                              -------------------
-    begin                : Út Jul 23 2002
+    begin                : Ãšt Jul 23 2002
     copyright            : (C) 2002 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -33,9 +33,9 @@ class dlgQuickConnect : public QDialog {
    Q_OBJECT
 public: 
   dlgQuickConnect (QWidget *parent=nullptr);
-  ~dlgQuickConnect ();
+  ~dlgQuickConnect () override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   /** values in LineEdits */
   QString host ();
   int port ();

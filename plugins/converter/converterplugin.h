@@ -33,7 +33,7 @@ class cConverterPlugin : public cPlugin
 Q_OBJECT
 public:
   cConverterPlugin (QObject *, const QVariantList &);
-  virtual ~cConverterPlugin ();
+  ~cConverterPlugin () override;
 protected slots:
   void converterDialog ();
 protected:

@@ -39,16 +39,16 @@ class cGauge : public cListObject
 {
  public:
   /** destructor */
-  ~cGauge();
+  ~cGauge() override;
   
 #define GAUGE_MATCH 1
 #define GAUGE_UPDATE 2
   
-  virtual cList::TraverseAction traverse (int traversalType);
+  cList::TraverseAction traverse (int traversalType) override;
 
-  virtual void attribChanged (const QString &name);
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  void updateVisibleName() override;
 
   /** variable value has been changed - called by cGaugeList */
   void varValueChanged (const QString &var, int newval);
@@ -65,9 +65,9 @@ class cGauge : public cListObject
   void updateGauge ();
 
   /** React on the fact that the object has moved. */
-  virtual void objectMoved ();
-  virtual void objectEnabled ();
-  virtual void objectDisabled ();
+  void objectMoved () override;
+  void objectEnabled () override;
+  void objectDisabled () override;
 };
 
 #endif

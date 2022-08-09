@@ -37,7 +37,7 @@ class cCompletion : public KCompletion {
 
   /** Overridden completion function that ensures that short strings do not get expanded at all
    This is because we don't store short commands, and don't want the client to auto-complete them to somethign undesirable */
-  virtual QString makeCompletion (const QString &string) override {
+  QString makeCompletion (const QString &string) override {
     if (string.length() < 5) return QString();
     return KCompletion::makeCompletion(string);
   }

@@ -34,16 +34,16 @@ class cStatusVar : public cListObject
 {
  public:
   /** destructor */
-  ~cStatusVar();
+  ~cStatusVar() override;
 
 #define STATUSVAR_MATCH 1
 #define STATUSVAR_UPDATE 2
   
-  virtual cList::TraverseAction traverse (int traversalType);
+  cList::TraverseAction traverse (int traversalType) override;
 
-  virtual void attribChanged (const QString &name);
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  void updateVisibleName() override;
 
   void updateBar ();
 
@@ -52,9 +52,9 @@ class cStatusVar : public cListObject
   /** constructor */
   cStatusVar (cList *list);
  
-  virtual void objectMoved ();
-  virtual void objectDisabled ();
-  virtual void objectEnabled ();
+  void objectMoved () override;
+  void objectDisabled () override;
+  void objectEnabled () override;
  
   struct Private;
   Private *d;

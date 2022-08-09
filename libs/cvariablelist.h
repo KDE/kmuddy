@@ -34,7 +34,7 @@ This class represents the list of variables.
 class KMUDDY_EXPORT cVariableList : public cActionBase {
 public:
   cVariableList (int sess);
-  ~cVariableList ();
+  ~cVariableList () override;
   QString getValue (const QString &varname);
   int getIntValue (const QString &varname);
   /** Retrieve a variable value. If queue is given, attempts to get local

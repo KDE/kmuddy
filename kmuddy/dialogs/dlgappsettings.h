@@ -45,7 +45,7 @@ class dlgAppSettings : public KPageDialog  {
    Q_OBJECT
 public: 
   dlgAppSettings(QWidget *parent=nullptr);
-  ~dlgAppSettings();
+  ~dlgAppSettings() override;
 
   static void showSettingsDialog ();
   QSize sizeHint() const override;

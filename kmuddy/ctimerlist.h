@@ -30,14 +30,14 @@ class cTimerList : public QObject, public cList {
    Q_OBJECT
 public:
   cTimerList ();
-  ~cTimerList ();
+  ~cTimerList () override;
 
   static cList *newList () { return new cTimerList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Timer"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Timer"; }
+  cListEditor *editor (QWidget *parent) override;
 
-  virtual void setEnabled (bool en = true) override;
+  void setEnabled (bool en = true) override;
 protected slots:
   void timeout ();
 protected:

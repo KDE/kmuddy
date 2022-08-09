@@ -53,7 +53,7 @@ class KMUDDY_EXPORT CMapView : public KXmlGuiWindow
 
 public:
   CMapView(CMapManager *manager, QWidget *parent);
-  virtual ~CMapView();
+  ~CMapView() override;
 
   void initGUI();
 
@@ -139,12 +139,12 @@ protected:
   virtual int getWidth(void);
   /** Used to gt the height of the widget */
   virtual int getHeight(void);
-  virtual void resizeEvent (QResizeEvent *) override;
+  void resizeEvent (QResizeEvent *) override;
   virtual void slotWidgetBeingClosed();
   virtual void slotDockWindowClose();
-  virtual void closeEvent ( QCloseEvent *e) override;
+  void closeEvent ( QCloseEvent *e) override;
   /** Used to set the view to active */
-  virtual void focusInEvent(QFocusEvent *e) override;
+  void focusInEvent(QFocusEvent *e) override;
 
 private slots:
   void slotToolsGrid();
@@ -195,7 +195,7 @@ private:
   void initMenus();
   /** Used by slotToolsLevel(Up/Down) */
   void levelShift(bool up);
-  virtual bool queryClose () override;
+  bool queryClose () override;
 
   /**
    * Used to enable/disable the view actions

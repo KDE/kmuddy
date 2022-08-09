@@ -37,25 +37,25 @@ class CMapToolSelect : public CMapToolBase
         Q_OBJECT
 public:
 	CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager);
-	virtual ~CMapToolSelect();
+	~CMapToolSelect() override;
 
 	/** Called when the tool recives a mouse press event */
-	virtual void mousePressEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mousePressEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 	/** Called when the tool recives a mouse move event */
-	virtual void mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *currentLevel);
+	void mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *currentLevel) override;
 	/** Called when the tool recives a mouse double click event */
-	virtual void mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 	/** This is called when a key is pressed */
-	virtual void keyPressEvent(QKeyEvent *e);
+	void keyPressEvent(QKeyEvent *e) override;
 
 	/** This function called when a tool is selected */
-	virtual void toolSelected(void);
+	void toolSelected(void) override;
 	/** This function is called when a tool is unselected */
-	virtual void toolUnselected(void);
+	void toolUnselected(void) override;
 
-        virtual void paint(QPainter *);
+        void paint(QPainter *) override;
 
 private slots:
 	/** Called when a rectange drag opertion is performed */

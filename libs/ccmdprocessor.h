@@ -37,7 +37,7 @@ class cCmdProcessor expands internal scripting, variables, and also handles
 class KMUDDY_EXPORT cCmdProcessor : public cActionBase {
 public: 
   cCmdProcessor (int sess);
-  ~cCmdProcessor();
+  ~cCmdProcessor() override;
 
   void setFocusCommandString (QString str);
   
@@ -52,7 +52,7 @@ public:
 
   cValue eval (const QString &exp, cCmdQueue *queue, bool &ok);
 protected:
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventNothingHandler (QString event, int session) override;
 
   /** Looks to see if this is a tab/window command call. If it is, the command
   is split into :window:mytext */

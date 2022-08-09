@@ -2,7 +2,7 @@
                           dlgeditprofile.h  -  Edit Profile dialog
     This file is a part of KMuddy distribution.
                              -------------------
-    begin                : Pá Aug 9 2002
+    begin                : PÃ¡ Aug 9 2002
     copyright            : (C) 2002-2008 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -34,9 +34,9 @@ class dlgEditProfile : public QDialog {
    Q_OBJECT
 public: 
   dlgEditProfile (QWidget *parent=nullptr);
-  ~dlgEditProfile();
+  ~dlgEditProfile() override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   /** values in LineEdits */
   QString name ();
   QString server ();

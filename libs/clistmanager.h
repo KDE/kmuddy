@@ -35,7 +35,7 @@ class QStandardItemModel;
 class KMUDDY_EXPORT cListManager: public cActionBase {
  public:
   static cListManager *self();
-  virtual ~cListManager ();
+  ~cListManager () override;
 
   /** Register a new list type. Factory should point to the newList method of a cList-inherited class. */
   void registerType (const QString &name, const QString &visibleName, cList *(*factory)());
@@ -63,8 +63,8 @@ class KMUDDY_EXPORT cListManager: public cActionBase {
   static cListManager *_self;
 
   void loadList (int sessId, cList *list);
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
+  void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
 
   struct Private;
   Private *d;

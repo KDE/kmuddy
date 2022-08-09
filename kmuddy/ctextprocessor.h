@@ -42,7 +42,7 @@ class cTextProcessor : public QObject, public cActionBase {
    Q_OBJECT
 public: 
   cTextProcessor (int sess);
-  ~cTextProcessor ();
+  ~cTextProcessor () override;
   int linesReceived () { return lines; };
 
   /** recolorize the line - used by color triggers */
@@ -57,8 +57,8 @@ public:
 
   void setOutputWindow(QString winname) { wname = winname; };
   
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
+  void eventNothingHandler (QString event, int session) override;
 
 public slots:
   // processing of various received items...

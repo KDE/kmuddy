@@ -37,13 +37,13 @@ class CMapToolPath : public CMapToolBase
 {
 public: 
 	CMapToolPath(KActionCollection *actionCollection,CMapManager *manager);
-	~CMapToolPath();
+	~CMapToolPath() override;
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 
 	/** This function called when a tool is selected */
-	virtual void toolSelected(void);
+	void toolSelected(void) override;
 
 private:
 	QCursor *currentCursor;

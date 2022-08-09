@@ -28,16 +28,16 @@ One timer.
 class cTimer : public cSaveableField  {
 public:
   cTimer (int _sess);
-  virtual ~cTimer ();
+  ~cTimer () override;
 
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_TIMER; };
+  int itemType () override { return TYPE_TIMER; };
 
   void setInterval (int what);
   int interval () { return _interval; };

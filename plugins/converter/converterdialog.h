@@ -38,7 +38,7 @@ class cConverterDialog: public KDialog {
 Q_OBJECT
 public:
   cConverterDialog (QWidget *parent);
-  ~cConverterDialog ();
+  ~cConverterDialog () override;
   bool display (std::list<ConversionDialogItem *> items);
 private:
   struct Private;

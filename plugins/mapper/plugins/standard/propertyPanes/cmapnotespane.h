@@ -38,13 +38,13 @@ class CMapNotesPane : public CMapPropertiesPaneBase
 {
 public: 
 	CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent);
-	~CMapNotesPane();
+	~CMapNotesPane() override;
 
 public slots:
 	/** This is called when the ok button of the property dialog is pressed */
-	void slotOk();
+	void slotOk() override;
 	/** This is called when the cancel button of the property dialog is pressed */
-	void slotCancel();
+	void slotCancel() override;
 
 private:
 	CMapElement *m_element;

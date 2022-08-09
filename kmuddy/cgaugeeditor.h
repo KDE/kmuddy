@@ -30,11 +30,11 @@ class cGaugeEditor : public cListEditor {
  Q_OBJECT
  public:
   cGaugeEditor (QWidget *parent);
-  ~cGaugeEditor ();
+  ~cGaugeEditor () override;
 
-  virtual void createGUI(QWidget *parent) override;
-  virtual void fillGUI (const cListObjectData &data) override;
-  virtual void getDataFromGUI (cListObjectData *data) override;
+  void createGUI(QWidget *parent) override;
+  void fillGUI (const cListObjectData &data) override;
+  void getDataFromGUI (cListObjectData *data) override;
  protected:
   struct Private;
   Private *d;

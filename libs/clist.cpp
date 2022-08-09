@@ -46,7 +46,7 @@ class cListModel : public QAbstractItemModel {
   cListModel (cList *l) : QAbstractItemModel(), lst(l) {
   }
 
-  virtual QModelIndex index (int row, int column, const QModelIndex &parent = QModelIndex()) const override
+  QModelIndex index (int row, int column, const QModelIndex &parent = QModelIndex()) const override
   {
     if (!hasIndex(row, column, parent))
       return QModelIndex();
@@ -65,7 +65,7 @@ class cListModel : public QAbstractItemModel {
     return createIndex (obj->positionInGroup(), 0, (void *) obj);
   }
 
-  virtual QModelIndex parent (const QModelIndex &index) const override
+  QModelIndex parent (const QModelIndex &index) const override
   {
     if (!index.isValid()) return QModelIndex();
     cListObject *obj = static_cast<cListObject *>(index.internalPointer());
@@ -75,12 +75,12 @@ class cListModel : public QAbstractItemModel {
     return createIndex (group->positionInGroup(), 0, (void *) group);
   }
 
-  virtual int columnCount (const QModelIndex &) const override
+  int columnCount (const QModelIndex &) const override
   {
     return 1;  // we have one column
   }
 
-  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const override
+  int rowCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.column() > 0) return 0;  // we only have a single column
 
@@ -90,7 +90,7 @@ class cListModel : public QAbstractItemModel {
     return static_cast<cListGroup *>(obj)->objectCount();
   }
 
-  virtual QVariant data ( const QModelIndex &index, int role = Qt::DisplayRole) const override
+  QVariant data ( const QModelIndex &index, int role = Qt::DisplayRole) const override
   {
     cListObject *obj = index.isValid() ? static_cast<cListObject *>(index.internalPointer()) : lst->rootGroup();
     
@@ -116,7 +116,7 @@ class cListModel : public QAbstractItemModel {
     return QVariant();
   }
 
-  virtual Qt::ItemFlags flags (const QModelIndex &index) const override
+  Qt::ItemFlags flags (const QModelIndex &index) const override
   {
     Qt::ItemFlags res = Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsUserCheckable;
     // anything can be dragged, only groups accept drops

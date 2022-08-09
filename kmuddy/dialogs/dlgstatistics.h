@@ -33,7 +33,7 @@ class dlgStatistics : public QDockWidget, public cActionBase {
    Q_OBJECT
 public: 
   dlgStatistics (QWidget *parent=nullptr);
-  ~dlgStatistics ();
+  ~dlgStatistics () override;
   /** update information in the dialog */
 public slots:
   void update ();

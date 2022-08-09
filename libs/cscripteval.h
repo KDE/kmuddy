@@ -37,7 +37,7 @@ class KMUDDY_EXPORT cScriptEval : public QObject, public cActionBase
 Q_OBJECT
 public:
   cScriptEval (int sess);
-  ~cScriptEval();
+  ~cScriptEval() override;
 
   /** Add object to the global script namespace. */
   void addObject (QString name, QObject *object);
@@ -51,7 +51,7 @@ public:
   static QString validate (QString script);
 
 private:
-  virtual bool event(QEvent *e) override;
+  bool event(QEvent *e) override;
   class Private;
   Private *d;
 };

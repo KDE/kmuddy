@@ -43,15 +43,15 @@ public:
   /** constructor */
   dlgVarViewer (QWidget *parent = nullptr);
   /** destructor */
-  ~dlgVarViewer ();
+  ~dlgVarViewer () override;
 protected:
   void createDialog ();
 
-  void eventNothingHandler (QString event, int sess);
-  void eventIntHandler (QString event, int, int val, int);
-  void eventStringHandler (QString event, int sess, QString &par1, const QString &);
+  void eventNothingHandler (QString event, int sess) override;
+  void eventIntHandler (QString event, int, int val, int) override;
+  void eventStringHandler (QString event, int sess, QString &par1, const QString &) override;
 
-  void showEvent (QShowEvent *);
+  void showEvent (QShowEvent *) override;
 
   QTreeView *viewer;
   VariableModel *model;

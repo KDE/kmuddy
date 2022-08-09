@@ -30,15 +30,15 @@ Information about one script.
 class cScript : public cSaveableField  {
 public: 
   cScript (int _sess);
-  ~cScript ();
+  ~cScript () override;
 
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file */
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_SCRIPT; };
+  int itemType () override { return TYPE_SCRIPT; };
 
   /** get* methods */
   QString getName () { return name; };

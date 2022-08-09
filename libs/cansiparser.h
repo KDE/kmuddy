@@ -2,7 +2,7 @@
                           cansiparser.h  -  ANSI parser
     This file is a part of KMuddy distribution.
                              -------------------
-    begin                : Pá Jun 21 2002
+    begin                : PÃ¡ Jun 21 2002
     copyright            : (C) 2002-2004 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -45,7 +45,7 @@ class KMUDDY_EXPORT cANSIParser : public QObject, public cActionBase  {
   Q_OBJECT
 public: 
   cANSIParser (int sess);
-  ~cANSIParser ();
+  ~cANSIParser () override;
 
   /** get color in color palette */
   QColor color (int index);
@@ -63,7 +63,7 @@ public:
 
   void setUseAnsi (bool val) { useansi = val; };
   
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventNothingHandler (QString event, int session) override;
 
 signals:
   void fgColor (QColor color);

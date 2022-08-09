@@ -39,7 +39,7 @@ private:
   QString directory, name;
 public: 
   cTranscript (int sess);
-  ~cTranscript ();
+  ~cTranscript () override;
   
   void load();
   void save();
@@ -62,8 +62,8 @@ protected slots:
   void applyTranscript ();
   void doDumpBuffer ();
 protected:
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *chunk) override;
+  void eventNothingHandler (QString event, int session) override;
+  void eventChunkHandler (QString event, int session, cTextChunk *chunk) override;
   
   void startTranscript ();
   

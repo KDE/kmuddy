@@ -36,7 +36,7 @@ class KMUDDY_EXPORT CMapPath : public CMapElement
 public:
 	CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CMapRoom *destRoom,directionTyp destDir, bool twoWay);
 	CMapPath(CMapManager *manager,CMapRoom *srcRoom,CMapRoom *destRoom);
-	~CMapPath();
+	~CMapPath() override;
 
 	elementTyp getElementType(void) override     { return PATH ; }
 	/** This method is used to set the cords of the path */
@@ -105,27 +105,27 @@ public:
 	QString getAfterCommand(void)                { return afterCommand; }
 	
 	/** Used to load the properties of the element from a list of properties */
-	virtual void loadProperties(KConfigGroup grp) override;
+	void loadProperties(KConfigGroup grp) override;
 	/** Used to save the properties of the element to a list of properties */
-	virtual void saveProperties(KConfigGroup grp) override;
+	void saveProperties(KConfigGroup grp) override;
     /** Used to save the element as an XML object
 	  * @param properties The XML object to save the properties too
 	  * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
+	void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object
 	  * @param properties The XML object to load the properties from */
-	virtual void loadQDomElement(QDomElement *properties) override;
+	void loadQDomElement(QDomElement *properties) override;
 
 	/** Used to move the element relative to it's current position */
-	virtual void moveBy(QPoint offset) override;
+	void moveBy(QPoint offset) override;
 
 	/** This is overridden to stop a path be resized */
-	virtual void resize(QPoint,int) override { }
+	void resize(QPoint,int) override { }
 	/** Used to find out if the mouse is in the resize box
 	  * @param mousePos The position of the mouse pointer
 	  * @param currentZone A pointer to the current zone
 	  * @return the ID of the resize box, or 0 if not in any */
-	virtual int mouseInResize(QPoint mousePos,CMapZone *currentZone) override;
+	int mouseInResize(QPoint mousePos,CMapZone *currentZone) override;
 	/**
 	 * This method is used to find out if the mouse pointer is in a path segment.
 	 * @param mousePos The position of the mouse
@@ -167,7 +167,7 @@ protected:
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
+	void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 
 private:
 	/** This method is used to calcualte the distance from a path segment */

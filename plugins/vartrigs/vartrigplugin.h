@@ -31,10 +31,10 @@ class cVarTrigPlugin : public cPlugin, public cActionBase
 {
 public:
   cVarTrigPlugin (QObject *, const QVariantList &);
-  virtual ~cVarTrigPlugin ();
+  ~cVarTrigPlugin () override;
 
 protected:
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &);
+  void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
 };
 
 

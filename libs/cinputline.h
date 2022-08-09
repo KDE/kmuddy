@@ -34,7 +34,7 @@ class KMUDDY_EXPORT cInputLine : public KLineEdit, public cActionBase  {
    Q_OBJECT
 public: 
   cInputLine (int sess, QString objName="inputline", QWidget *parent=nullptr);
-  ~cInputLine();
+  ~cInputLine() override;
   /** initialize the input line - must be separated
   from the constructor, because it uses cSession, which is not
   available in constructor */
@@ -61,15 +61,15 @@ public slots:
 protected slots:
   void handleEnter (const QString &text);
 protected:
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual QString actionStringHandler (QString action, int, QString &par1,
+  void eventNothingHandler (QString event, int session) override;
+  QString actionStringHandler (QString action, int, QString &par1,
       const QString &) override;
 
  // virtual void paste ();
   virtual void paste (const QString &t);
   void handleTabExpansion ();
   /** event filter - handles TAB expansion */
-  virtual bool event (QEvent *e) override;
+  bool event (QEvent *e) override;
   /** keypress event - handles history Up/Down browsing*/
   void keyPressEvent (QKeyEvent *e) override;
   /** mouse-release event - handles middle-click paste */

@@ -36,7 +36,7 @@ class cConnection : public QObject, public cActionBase {
    Q_OBJECT
 public: 
   cConnection (int sess);
-  ~cConnection ();
+  ~cConnection () override;
   void establishConnection (const QString &profileName, bool sendNothing = false);
   void establishQuickConnection (const QString &server, int port);
   bool isConnected ();
@@ -54,10 +54,10 @@ public:
   void sendCommands ();
   int sentCommands ();
 
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
-  virtual QString actionStringHandler (QString action, int session, QString &par1, const QString &) override;
-  virtual QString actionNothingHandler (QString action, int session) override;
+  void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int session, QString &par1, const QString &) override;
+  QString actionStringHandler (QString action, int session, QString &par1, const QString &) override;
+  QString actionNothingHandler (QString action, int session) override;
 
 public slots:
   void showConnPrefsDialog ();

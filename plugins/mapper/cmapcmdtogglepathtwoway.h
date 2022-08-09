@@ -36,10 +36,10 @@ class CMapCmdTogglePathTwoWay : public CMapCommand,CMapElementUtil
 {
 public:
 	CMapCmdTogglePathTwoWay(CMapManager *mapManager,QString name,CMapPath *path);
-	~CMapCmdTogglePathTwoWay();
+	~CMapCmdTogglePathTwoWay() override;
 	
-	virtual void redo() override;
-	virtual void undo() override;
+	void redo() override;
+	void undo() override;
 
 private:
 	void togglePath(CMapPath *path);

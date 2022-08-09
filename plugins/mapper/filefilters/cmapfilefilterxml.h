@@ -34,7 +34,7 @@ class CMapFileFilterXML : public CMapFileFilterBase
 {
 public:
 	CMapFileFilterXML(CMapManager *manager);
-	~CMapFileFilterXML();
+	~CMapFileFilterXML() override;
 
 	/** This returns name of the import/export filter. This should be kept small
       * @return The Name of the filter */
@@ -57,7 +57,7 @@ public:
       * @return True if this is a import filter, otherwise false */
 	bool supportLoad(void) override { return true; };
         /** Is this the native format? */
-        virtual bool isNative() override { return true; };
+        bool isNative() override { return true; };
 
 	/** This method should be reimplemented if this is a to be a export filter. It
 	  * is called to save the map data

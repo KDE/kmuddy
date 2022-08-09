@@ -29,12 +29,12 @@ List of macro keys/shortcuts
 class cShortcutList : public cList {
 public: 
   cShortcutList ();
-  ~cShortcutList ();
+  ~cShortcutList () override;
   
   static cList *newList () { return new cShortcutList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Macro key"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Macro key"; }
+  cListEditor *editor (QWidget *parent) override;
 
   /** this key was pressed - send a command if needed, returns true if
   some shortcut matched the key */

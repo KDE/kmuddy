@@ -32,17 +32,17 @@ One action in the action toolbar.
 class cAction : public cSaveableField  {
 public: 
   cAction (int _sess);
-  ~cAction ();
+  ~cAction () override;
   /** creates a new instance of the class; this is needed because I need to
   create instances of childclasses from within this class, but I don't know
   the exact type of that instance... */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_ACTION; };
+  int itemType () override { return TYPE_ACTION; };
 
   void setCaption (const QString &s);
   QString getCaption ();

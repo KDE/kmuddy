@@ -29,7 +29,7 @@ class KMUDDY_EXPORT cScriptEditor : public QWidget {
 Q_OBJECT
  public:
   cScriptEditor (QWidget *parent);
-  ~cScriptEditor ();
+  ~cScriptEditor () override;
   void setText (const QString &text);
   QString text() const;
  protected slots:

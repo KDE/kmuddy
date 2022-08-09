@@ -30,15 +30,15 @@ This class represents one variable.
 class cVariable : public cSaveableField  {
 public: 
   cVariable ();
-  ~cVariable ();
+  ~cVariable () override;
 
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file */
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** abstract; returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_VARIABLE; };
+  int itemType () override { return TYPE_VARIABLE; };
 
   QString name () { return _name; };
   /** sets new variable name; no duplicity check here - cVariableList must

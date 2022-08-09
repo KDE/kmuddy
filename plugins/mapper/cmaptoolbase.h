@@ -44,7 +44,7 @@ class KMUDDY_EXPORT CMapToolBase : public QObject
 public:
 	/** The construtor for the tool */
 	CMapToolBase(KActionCollection *actionCollection,QString description,QIcon icon,CMapManager *manager,QString actionName,QActionGroup *group);
-	virtual ~CMapToolBase();
+	~CMapToolBase() override;
 
 	// Mouse events for the tool
 	virtual void mousePressEvent(QPoint, QMouseEvent *, CMapLevel *)                       { }

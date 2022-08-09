@@ -42,22 +42,22 @@ class cMUDListModel : public QAbstractTableModel {
     QAbstractTableModel (nullptr), lst (l)
   {
   }
-  virtual ~cMUDListModel () {}
+  ~cMUDListModel () override {}
 
-  virtual int columnCount (const QModelIndex &parent = QModelIndex()) const
+  int columnCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.isValid()) return 0;  // because Qt docs say so
     return 6;  // we have 6 columns
   }
 
-  virtual int rowCount (const QModelIndex &parent = QModelIndex()) const
+  int rowCount (const QModelIndex &parent = QModelIndex()) const override
   {
     if (parent.isValid()) return 0;  // because Qt docs say so
     return lst->count();
   }
 
-  virtual QVariant headerData ( int section, Qt::Orientation /*orientation*/,
-      int role = Qt::DisplayRole ) const
+  QVariant headerData ( int section, Qt::Orientation /*orientation*/,
+      int role = Qt::DisplayRole ) const override
   {
     if (role != Qt::DisplayRole) return QVariant();
     switch (section) {
@@ -71,7 +71,7 @@ class cMUDListModel : public QAbstractTableModel {
     }
   }
 
-  virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole) const
+  QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole) const override
   {
     // display and user role only
     if ((role != Qt::DisplayRole) && (role != Qt::UserRole)) return QVariant();

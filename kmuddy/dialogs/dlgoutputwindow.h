@@ -40,9 +40,9 @@ class dlgOutputWindow : public QDialog
   Q_OBJECT
 public:
   dlgOutputWindow (QWidget *parent = nullptr);
-  ~dlgOutputWindow();
+  ~dlgOutputWindow() override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   void addLine (cTextChunk *chunk);
   void setOutputWindowName(const QString &name);
   void setFont(QFont font);

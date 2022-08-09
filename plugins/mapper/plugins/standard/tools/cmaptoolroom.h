@@ -32,19 +32,19 @@ class CMapToolRoom : public CMapToolBase
    Q_OBJECT
 public: 
 	CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager);
-	~CMapToolRoom();
+	~CMapToolRoom() override;
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 	/** Called when the tool recives a mouse move event */
-	virtual void mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *currentLevel);
-	virtual void mouseLeaveEvent();
-	virtual void mouseEnterEvent();
+	void mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::MouseButtons, CMapLevel *currentLevel) override;
+	void mouseLeaveEvent() override;
+	void mouseEnterEvent() override;
 
 	/** This function called when a tool is selected */
-	virtual void toolSelected(void);
+	void toolSelected(void) override;
 
-        virtual void paint(QPainter *);
+        void paint(QPainter *) override;
 
 private:
 	QPoint lastPos;

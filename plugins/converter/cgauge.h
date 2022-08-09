@@ -40,16 +40,16 @@ class cGauge : public cSaveableField
   /** constructor */
   cGauge (int _sess);
   /** destructor */
-  ~cGauge();
+  ~cGauge() override;
   
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
     /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_GAUGE; };
+  int itemType () override { return TYPE_GAUGE; };
   
   const QString &variable () { return _variable; };
   const QString &maxVariable () { return _maxvariable; };

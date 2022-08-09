@@ -51,7 +51,7 @@ class KMUDDY_EXPORT CMapElement : public QObject
 public:
 	CMapElement(CMapManager *manager,CMapLevel *level);
 	CMapElement(CMapManager *manager,QRect rect,CMapLevel *level);
-	virtual ~CMapElement();
+	~CMapElement() override;
 
 	// Genomerty methods
 	/** Used to set the position of the top left of the element */

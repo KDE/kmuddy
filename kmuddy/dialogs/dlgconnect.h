@@ -2,7 +2,7 @@
                           dlgconnect.h  -  Connect dialog
     This file is a part of KMuddy distribution.
                              -------------------
-    begin                : Út Jul 23 2002
+    begin                : Ãšt Jul 23 2002
     copyright            : (C) 2002-2008 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -39,9 +39,9 @@ class dlgConnect : public QDialog {
 Q_OBJECT
 public:
   dlgConnect (QWidget *parent=nullptr);
-  ~dlgConnect ();
+  ~dlgConnect () override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   QString selectedProfile ();
   bool sendNothing ();
   bool isOffLine ();

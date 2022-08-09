@@ -32,7 +32,7 @@ class DlgMapSpeedwalk : public QWidget, public Ui::DlgMapSpeedwalkBase
    Q_OBJECT
 public: 
 	DlgMapSpeedwalk(CMapManager *mapManager, QWidget *parent);
-	~DlgMapSpeedwalk();
+	~DlgMapSpeedwalk() override;
 
 	virtual void slotOkPressed();
 

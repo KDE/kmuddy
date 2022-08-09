@@ -35,16 +35,16 @@ class cStatusVar : public cSaveableField
   /** constructor */
   cStatusVar (int _sess);
   /** destructor */
-  ~cStatusVar();
+  ~cStatusVar() override;
 
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
     /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_STATUSVAR; };
+  int itemType () override { return TYPE_STATUSVAR; };
  
   const QString &variable () { return _variable; };
   const QString &maxVariable () { return _maxvariable; };

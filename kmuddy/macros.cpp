@@ -36,7 +36,7 @@ using namespace std;
 class cMacroSet : public cMacro {
 public:
   cMacroSet () : cMacro ("set") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString value = params.section (' ', 1, -1, QString::SectionSkipEmpty);
     //no variable expansion for our parameter, to allow various tricks :)
@@ -47,7 +47,7 @@ public:
 class cMacroUnset : public cMacro {
 public:
   cMacroUnset () : cMacro ("unset") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     varList(sess)->unset (varname);
   }
@@ -56,7 +56,7 @@ public:
 class cMacroSetVal : public cMacro {
   public:
     cMacroSetVal () : cMacro ("setval") {}
-    virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+    void eval (const QString &params, int sess, cCmdQueue *queue) override {
       // this is like /set, but the value gets parsed using as expression
       cCmdProcessor *cmdproc = dynamic_cast<cCmdProcessor *>(am->object ("cmdprocessor", sess));
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
@@ -74,7 +74,7 @@ class cMacroSetVal : public cMacro {
 class cMacroLSet : public cMacro {
   public:
     cMacroLSet () : cMacro ("lset") {}
-    virtual void eval (const QString &params, int, cCmdQueue *queue) {
+    void eval (const QString &params, int, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString value = params.section (' ', 1, -1, QString::SectionSkipEmpty);
       //no variable expansion for our parameter, to allow various tricks :)
@@ -85,7 +85,7 @@ class cMacroLSet : public cMacro {
 class cMacroLUnset : public cMacro {
   public:
     cMacroLUnset () : cMacro ("lunset") {}
-    virtual void eval (const QString &params, int, cCmdQueue *queue) {
+    void eval (const QString &params, int, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       queue->delValue (varname);
     }
@@ -94,7 +94,7 @@ class cMacroLUnset : public cMacro {
 class cMacroInc : public cMacro {
 public:
   cMacroInc () : cMacro ("inc") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString value = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     bool ok = false;
@@ -106,7 +106,7 @@ public:
 class cMacroDec : public cMacro {
 public:
   cMacroDec () : cMacro ("dec") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString value = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     bool ok = false;
@@ -118,7 +118,7 @@ public:
 class cMacroLInc : public cMacro {
   public:
     cMacroLInc () : cMacro ("linc") {}
-    virtual void eval (const QString &params, int, cCmdQueue *queue) {
+    void eval (const QString &params, int, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString value = params.section (' ', 1, 1, QString::SectionSkipEmpty);
       bool ok = false;
@@ -136,7 +136,7 @@ class cMacroLInc : public cMacro {
 class cMacroLDec : public cMacro {
   public:
     cMacroLDec () : cMacro ("ldec") {}
-    virtual void eval (const QString &params, int, cCmdQueue *queue) {
+    void eval (const QString &params, int, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString value = params.section (' ', 1, 1, QString::SectionSkipEmpty);
       bool ok = false;
@@ -154,7 +154,7 @@ class cMacroLDec : public cMacro {
 class cMacroProvideRes : public cMacro {
 public:
   cMacroProvideRes () : cMacro ("provide-res") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     varList(sess)->provideResource (varname);
   }
@@ -163,7 +163,7 @@ public:
 class cMacroRequestRes : public cMacro {
 public:
   cMacroRequestRes () : cMacro ("request-res") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     bool ret = varList(sess)->requestResource (varname);
     if (!ret)
@@ -174,7 +174,7 @@ public:
 class cMacroEcho : public cMacro {
 public:
   cMacroEcho () : cMacro ("echo") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+  void eval (const QString &params, int sess, cCmdQueue *queue) override {
     if( !params.isEmpty() )
     {
       QString txt = expandVariables (params, sess, queue);
@@ -186,7 +186,7 @@ public:
 class cMacroTick : public cMacro {
 public:
   cMacroTick () : cMacro ("tick") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString objName = params;
     if (!objName.length()) {
       am->invokeEvent ("message", sess, i18n ("/tick: syntax: /tick timer-name"));
@@ -215,7 +215,7 @@ public:
 class cMacroTickNow : public cMacro {
 public:
   cMacroTickNow () : cMacro ("ticknow") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString objName = params;
     if (!objName.length()) {
       am->invokeEvent ("message", sess, i18n ("/ticknow: syntax: /ticknow timer-name"));
@@ -240,7 +240,7 @@ public:
 class cMacroAddItem : public cMacro {
   public:
     cMacroAddItem () : cMacro ("additem") {}
-    virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+    void eval (const QString &params, int sess, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString value = params.section (' ', 1, -1, QString::SectionSkipEmpty);
       varList(sess)->valueNotEmpty(varname, queue)->addToList (value);
@@ -251,7 +251,7 @@ class cMacroAddItem : public cMacro {
 class cMacroDelItem : public cMacro {
   public:
     cMacroDelItem () : cMacro ("delitem") {}
-    virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+    void eval (const QString &params, int sess, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString value = params.section (' ', 1, -1, QString::SectionSkipEmpty);
       cValue *val = varList(sess)->value(varname, queue);
@@ -262,7 +262,7 @@ class cMacroDelItem : public cMacro {
 class cMacroArraySet : public cMacro {
   public:
     cMacroArraySet () : cMacro ("arrayset") {}
-    virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+    void eval (const QString &params, int sess, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString index = params.section (' ', 1, 1, QString::SectionSkipEmpty);
       QString value = params.section (' ', 2, -1, QString::SectionSkipEmpty);
@@ -276,7 +276,7 @@ class cMacroArraySet : public cMacro {
 class cMacroArrayDel : public cMacro {
   public:
     cMacroArrayDel () : cMacro ("arraydel") {}
-    virtual void eval (const QString &params, int sess, cCmdQueue *queue) {
+    void eval (const QString &params, int sess, cCmdQueue *queue) override {
       QString varname = params.section (' ', 0, 0, QString::SectionSkipEmpty);
       QString index = params.section (' ', 1, 1, QString::SectionSkipEmpty);
       bool ok;
@@ -291,7 +291,7 @@ class cMacroArrayDel : public cMacro {
 class cMacroIf : public cMacro {
 public:
   cMacroIf () : cMacro ("if") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *queue)
+  void eval (const QString &params, int sess, cCmdQueue *queue) override
   {
     // we should perform matching (else preproc would fail) - true if non-zero
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
@@ -310,7 +310,7 @@ public:
     es->push (item);
   }
 
-  virtual bool preprocess (cCmdQueue *queue, cCmdQueueEntry *qe)
+  bool preprocess (cCmdQueue *queue, cCmdQueueEntry *qe) override
   {
     cExecStack *es = queue->execStack ("if");
     
@@ -356,7 +356,7 @@ public:
 class cMacroElse : public cMacro {
 public:
   cMacroElse () : cMacro ("else") {}
-  virtual void eval (const QString &, int sess, cCmdQueue *queue) {
+  void eval (const QString &, int sess, cCmdQueue *queue) override {
     cExecStack *es = queue->execStack ("if");
     // display some error if the stack is empty
     if (es->empty()) {
@@ -373,7 +373,7 @@ public:
 class cMacroEndIf : public cMacro {
 public:
   cMacroEndIf () : cMacro ("endif") {}
-  virtual void eval (const QString &, int sess, cCmdQueue *queue) {
+  void eval (const QString &, int sess, cCmdQueue *queue) override {
     cExecStack *es = queue->execStack ("if");
     // display some error if the stack is empty
     if (es->empty()) {
@@ -391,7 +391,7 @@ public:
 class cMacroOAdd : public cMacro {
 public:
   cMacroOAdd () : cMacro ("oadd") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, -1, QString::SectionSkipEmpty);
     if (par1.isEmpty() || par2.isEmpty()) {
@@ -425,7 +425,7 @@ public:
 class cMacroGAdd : public cMacro {
 public:
   cMacroGAdd () : cMacro ("gadd") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, -1, QString::SectionSkipEmpty);
     if (par2.isEmpty()) {
@@ -456,7 +456,7 @@ public:
 class cMacroODel : public cMacro {
 public:
   cMacroODel () : cMacro ("odel") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     int objId = cValue (par1).asInteger();
     cListManager *lm = cListManager::self();
@@ -480,7 +480,7 @@ public:
 class cMacroOMove : public cMacro {
 public:
   cMacroOMove () : cMacro ("omove") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     QString par3 = params.section (' ', 2, 2, QString::SectionSkipEmpty);
@@ -533,7 +533,7 @@ public:
 class cMacroORen : public cMacro {
 public:
   cMacroORen () : cMacro ("oren") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, -1, QString::SectionSkipEmpty);
     if (par2.isEmpty()) {
@@ -574,7 +574,7 @@ public:
 class cMacroOPriority : public cMacro {
 public:
   cMacroOPriority () : cMacro ("opriority") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     if (par2.isEmpty()) {
@@ -601,7 +601,7 @@ public:
 class cMacroOEnable : public cMacro {
 public:
   cMacroOEnable () : cMacro ("oenable") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     int objId = cValue (par1).asInteger();
     cListManager *lm = cListManager::self();
@@ -617,7 +617,7 @@ public:
 class cMacroODisable : public cMacro {
 public:
   cMacroODisable () : cMacro ("odisable") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     int objId = cValue (par1).asInteger();
     cListManager *lm = cListManager::self();
@@ -633,7 +633,7 @@ public:
 class cMacroOSetBAttr : public cMacro {
 public:
   cMacroOSetBAttr () : cMacro ("osetbattr") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     QString par3 = params.section (' ', 2, 2, QString::SectionSkipEmpty);
@@ -657,7 +657,7 @@ public:
 class cMacroOSetIAttr : public cMacro {
 public:
   cMacroOSetIAttr () : cMacro ("osetiattr") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     QString par3 = params.section (' ', 2, 2, QString::SectionSkipEmpty);
@@ -681,7 +681,7 @@ public:
 class cMacroOSetSAttr : public cMacro {
 public:
   cMacroOSetSAttr () : cMacro ("osetsattr") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     QString par1 = params.section (' ', 0, 0, QString::SectionSkipEmpty);
     QString par2 = params.section (' ', 1, 1, QString::SectionSkipEmpty);
     QString par3 = params.section (' ', 2, -1, QString::SectionSkipEmpty);
@@ -704,7 +704,7 @@ public:
 class cMacroTGroupOn : public cMacro {
 public:
   cMacroTGroupOn () : cMacro ("tgroupon") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     cListManager *lm = cListManager::self();
     cList *list = lm->getList (sess, "triggers");
     if (!list) return;
@@ -719,7 +719,7 @@ public:
 class cMacroTGroupOff : public cMacro {
 public:
   cMacroTGroupOff () : cMacro ("tgroupoff") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     cListManager *lm = cListManager::self();
     cList *list = lm->getList (sess, "triggers");
     if (!list) return;
@@ -735,7 +735,7 @@ public:
 class cMacroAGroupOn : public cMacro {
 public:
   cMacroAGroupOn () : cMacro ("agroupon") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     cListManager *lm = cListManager::self();
     cList *list = lm->getList (sess, "aliases");
     if (!list) return;
@@ -751,7 +751,7 @@ public:
 class cMacroAGroupOff : public cMacro {
 public:
   cMacroAGroupOff () : cMacro ("agroupoff") {}
-  virtual void eval (const QString &params, int sess, cCmdQueue *) override {
+  void eval (const QString &params, int sess, cCmdQueue *) override {
     cListManager *lm = cListManager::self();
     cList *list = lm->getList (sess, "aliases");
     if (!list) return;
@@ -768,7 +768,7 @@ public:
 class cFunctionContains: public cFunction {
 public:
   cFunctionContains () : cFunction ("contains") {}
-  virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+  cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
     if (params.size() < 2) return cValue::empty();
     std::list<cValue>::iterator it = params.begin();
     cValue lst = *it;
@@ -784,7 +784,7 @@ public:
 class cFunctionItem: public cFunction {
 public:
   cFunctionItem () : cFunction ("item") {}
-  virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+  cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
     if (params.size() < 2) return cValue::empty();
     std::list<cValue>::iterator it = params.begin();
     cValue lst = *it;
@@ -800,7 +800,7 @@ public:
 class cFunctionCount: public cFunction {
   public:
     cFunctionCount () : cFunction ("count") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       int count = 0;
       std::list<cValue>::iterator it = params.begin();
       for (; it != params.end(); ++it) {
@@ -813,7 +813,7 @@ class cFunctionCount: public cFunction {
 class cFunctionGlobal: public cFunction {
   public:
     cFunctionGlobal () : cFunction ("global") {}
-    virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() == 0) return cValue::empty();
       QString varName = (*params.begin()).asString();
       cValue *val = varList(sess)->value (varName, nullptr);
@@ -825,7 +825,7 @@ class cFunctionGlobal: public cFunction {
 class cFunctionLocal: public cFunction {
   public:
     cFunctionLocal () : cFunction ("local") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *queue) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *queue) override {
       if ((params.size() == 0) || (!queue)) return cValue::empty();
       QString varName = (*params.begin()).asString();
       cValue *val = queue->value (varName);
@@ -837,7 +837,7 @@ class cFunctionLocal: public cFunction {
 class cFunctionAttrib: public cFunction {
   public:
     cFunctionAttrib () : cFunction ("attrib") {}
-    virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString object = (*it).asString();
@@ -850,7 +850,7 @@ class cFunctionAttrib: public cFunction {
 class cFunctionStrAttrib: public cFunction {
   public:
     cFunctionStrAttrib () : cFunction ("strattrib") {}
-    virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString object = (*it).asString();
@@ -863,7 +863,7 @@ class cFunctionStrAttrib: public cFunction {
 class cFunctionObject: public cFunction {
   public:
     cFunctionObject () : cFunction ("object") {}
-    virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString listName = (*it).asString();
@@ -882,7 +882,7 @@ class cFunctionObject: public cFunction {
 class cFunctionGroup: public cFunction {
   public:
     cFunctionGroup () : cFunction ("group") {}
-    virtual cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int sess, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString listName = (*it).asString();
@@ -901,7 +901,7 @@ class cFunctionGroup: public cFunction {
 class cFunctionOBAttr: public cFunction {
   public:
     cFunctionOBAttr () : cFunction ("obattr") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       int id = (*it).asInteger();
@@ -918,7 +918,7 @@ class cFunctionOBAttr: public cFunction {
 class cFunctionOIAttr: public cFunction {
   public:
     cFunctionOIAttr () : cFunction ("oiattr") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       int id = (*it).asInteger();
@@ -935,7 +935,7 @@ class cFunctionOIAttr: public cFunction {
 class cFunctionOSAttr: public cFunction {
   public:
     cFunctionOSAttr () : cFunction ("osattr") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       int id = (*it).asInteger();

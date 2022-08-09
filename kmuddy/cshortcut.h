@@ -27,15 +27,15 @@ Represents one macro key/shortcut.
 
 class cShortcut : public cListObject  {
  public: 
-  virtual ~cShortcut ();
+  ~cShortcut () override;
 
-  virtual void attribChanged (const QString &name) override;
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName() override;
+  void updateVisibleName() override;
 
 #define SHORTCUT_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType) override;
+  cList::TraverseAction traverse (int traversalType) override;
   
   static QString keyToString (int _key, int _state);
  private:

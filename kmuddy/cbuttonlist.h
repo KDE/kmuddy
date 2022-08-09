@@ -38,19 +38,19 @@ class cButtonList : public cList
 {
 public:
   cButtonList ();
-  ~cButtonList ();
+  ~cButtonList () override;
 
   static cList *newList () { return new cButtonList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Button"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Button"; }
+  cListEditor *editor (QWidget *parent) override;
   
   void updateButtons ();
  private:
   bool loaded;
   friend class cButton;
 
-  virtual void listLoaded () override;
+  void listLoaded () override;
 };
 
 #endif  //CBUTTONLIST_H

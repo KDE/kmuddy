@@ -44,7 +44,7 @@ class KMUDDY_EXPORT cPlugin : public QObject
 Q_OBJECT
 public:
   cPlugin ();
-  virtual ~cPlugin ();
+  ~cPlugin () override;
 
   /** priority in which this plug-in receives texts/events. Lower number means higher priority. */
   int priority () { return _priority; };

@@ -28,12 +28,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 class cGenericList : public cList {
  public:
   cGenericList ();
-  ~cGenericList ();
+  ~cGenericList () override;
 
   static cList *newList () { return new cGenericList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return QString(); }
-  virtual cListEditor *editor (QWidget *) { return nullptr; };
+  cListObject *newObject () override;
+  QString objName () override { return QString(); }
+  cListEditor *editor (QWidget *) override { return nullptr; };
 
   void init ();
   /** Save the generic list into a file - we cannot use cListManager here. */

@@ -36,7 +36,7 @@ K_EXPORT_PLUGIN (cStringsPluginFactory("kmuddy"))
 class cFunctionLower: public cFunction {
   public:
     cFunctionLower () : cFunction ("lower") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString().toLower();
@@ -47,7 +47,7 @@ class cFunctionLower: public cFunction {
 class cFunctionUpper: public cFunction {
   public:
     cFunctionUpper () : cFunction ("upper") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString().toUpper();
@@ -58,7 +58,7 @@ class cFunctionUpper: public cFunction {
 class cFunctionCaps: public cFunction {
   public:
     cFunctionCaps () : cFunction ("caps") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString().toLower();
@@ -78,7 +78,7 @@ class cFunctionCaps: public cFunction {
 class cFunctionLeft: public cFunction {
   public:
     cFunctionLeft () : cFunction ("left") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString();
@@ -93,7 +93,7 @@ class cFunctionLeft: public cFunction {
 class cFunctionRight: public cFunction {
   public:
     cFunctionRight () : cFunction ("right") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString();
@@ -108,7 +108,7 @@ class cFunctionRight: public cFunction {
 class cFunctionMid: public cFunction {
   public:
     cFunctionMid () : cFunction ("mid") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString();
@@ -128,7 +128,7 @@ class cFunctionMid: public cFunction {
 class cFunctionStrlen: public cFunction {
   public:
     cFunctionStrlen () : cFunction ("strlen") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       int ret = (*it).asString().length();
@@ -139,7 +139,7 @@ class cFunctionStrlen: public cFunction {
 class cFunctionTrim: public cFunction {
   public:
     cFunctionTrim () : cFunction ("trim") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString().trimmed();
@@ -150,7 +150,7 @@ class cFunctionTrim: public cFunction {
 class cFunctionStrpos: public cFunction {
   public:
     cFunctionStrpos () : cFunction ("strpos") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 2) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString haystack = (*it).asString();
@@ -163,7 +163,7 @@ class cFunctionStrpos: public cFunction {
 class cFunctionStrfill: public cFunction {
   public:
     cFunctionStrfill () : cFunction ("strfill") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString ret = (*it).asString();
@@ -185,7 +185,7 @@ class cFunctionStrfill: public cFunction {
 class cFunctionStrleftfill: public cFunction {
   public:
     cFunctionStrleftfill () : cFunction ("strleftfill") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       // same as strfill, except for the last line
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
@@ -208,7 +208,7 @@ class cFunctionStrleftfill: public cFunction {
 class cFunctionStrcat: public cFunction {
   public:
     cFunctionStrcat () : cFunction ("strcat") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it;
       QString ret;
@@ -221,7 +221,7 @@ class cFunctionStrcat: public cFunction {
 class cFunctionJoin: public cFunction {
   public:
     cFunctionJoin () : cFunction ("join") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       cValue list = *it;
@@ -238,7 +238,7 @@ class cFunctionJoin: public cFunction {
 class cFunctionExplode: public cFunction {
   public:
     cFunctionExplode () : cFunction ("explode") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 1) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       cValue str = *it;
@@ -255,7 +255,7 @@ class cFunctionExplode: public cFunction {
 class cFunctionReplace: public cFunction {
   public:
     cFunctionReplace () : cFunction ("replace") {}
-    virtual cValue eval (std::list<cValue> &params, int, cCmdQueue *) {
+    cValue eval (std::list<cValue> &params, int, cCmdQueue *) override {
       if (params.size() < 3) return cValue::empty();
       std::list<cValue>::iterator it = params.begin();
       QString str = (*it).asString();

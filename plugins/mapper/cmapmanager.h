@@ -83,7 +83,7 @@ class KMUDDY_EXPORT CMapManager : public QObject, public cActionBase
 public:
   /** Constructor used to creat the map manager */
   CMapManager (QWidget *parent, KMuddyMapper *mapper, int sess);
-  ~CMapManager();
+  ~CMapManager() override;
 
   void eventStringHandler (QString event, int, QString &par1, const QString &) override;
 

@@ -32,10 +32,10 @@ class CMapCmdLevelCreate : public CMapCommand
 {
 public: 
 	CMapCmdLevelCreate(CMapManager *manager,QString name,int index);
-	~CMapCmdLevelCreate();
+	~CMapCmdLevelCreate() override;
 
-	virtual void redo() override;
-	virtual void undo() override;
+	void redo() override;
+	void undo() override;
 
 	CMapLevel *getLevel(void);
 

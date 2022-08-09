@@ -40,7 +40,7 @@ public:
   /** returns pointer to instance */
   static cSessionManager *self();
   /** destructor */
-  ~cSessionManager ();
+  ~cSessionManager () override;
 
   /** session count */
   int count ();

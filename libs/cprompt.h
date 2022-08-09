@@ -33,11 +33,11 @@ class KMUDDY_EXPORT cPrompt : public QLabel, public cActionBase {
    Q_OBJECT
  public:
   cPrompt (int sess, QWidget *parent);
-  ~cPrompt();
+  ~cPrompt() override;
   void updatePrompt (const QString &text);
  protected:
-  virtual void eventStringHandler (QString event, int, QString &par1, const QString &) override;
-  virtual void eventNothingHandler (QString event, int) override;
+  void eventStringHandler (QString event, int, QString &par1, const QString &) override;
+  void eventNothingHandler (QString event, int) override;
 
 };
 

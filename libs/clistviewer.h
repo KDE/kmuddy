@@ -38,7 +38,7 @@ class KMUDDY_EXPORT cListViewer: public QTreeView {
   /** constructor */
   cListViewer (QWidget *parent);
   /** destructor */
-  virtual ~cListViewer ();
+  ~cListViewer () override;
 
   void setList (cList *l);
   void selectObject (cListObject *obj);
@@ -57,10 +57,10 @@ class KMUDDY_EXPORT cListViewer: public QTreeView {
   void moveLeft ();
   void moveRight ();
  protected slots:
-  virtual void currentChanged (const QModelIndex &current, const QModelIndex &previous) override;
+  void currentChanged (const QModelIndex &current, const QModelIndex &previous) override;
  protected:
   /** Context menu handler. */
-  virtual void contextMenuEvent (QContextMenuEvent *event) override;
+  void contextMenuEvent (QContextMenuEvent *event) override;
  private:
   struct Private;
   Private *d;

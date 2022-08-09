@@ -32,15 +32,15 @@ class CMapToolEraser : public CMapToolBase
    Q_OBJECT
 public: 
 	CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager);
-	~CMapToolEraser();
+	~CMapToolEraser() override;
 
 	/** Called when the tool recives a mouse release event */
-	virtual void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel);
+	void mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLevel *currentLevel) override;
 
 	/** This function called when a tool is selected */
-	virtual void toolSelected(void);
+	void toolSelected(void) override;
 	/** This function is called when a tool is unselected */
-	virtual void toolUnselected(void);
+	void toolUnselected(void) override;
 
 private:
 	/** The mouse cursor */

@@ -34,7 +34,7 @@ class KMUDDY_EXPORT cSoundPlayer : public QObject, public cActionBase {
 public: 
   cSoundPlayer (bool isWAVE = true);
   // constructor must always be visible as well, else compilation fails
-  ~cSoundPlayer ();
+  ~cSoundPlayer () override;
   /** are we currently playing? */
   bool isPlaying ();
   /** priority of currently played sound */

@@ -31,7 +31,7 @@ class CMapTextPreview : public QWidget
 {
 public:
 	CMapTextPreview(CMapManager *manager,QWidget *parent=nullptr);
-	~CMapTextPreview();
+	~CMapTextPreview() override;
 
 	void setColor(QColor textColor)           { color = textColor; }
 	void setFont(QFont textFont)                { font = textFont; }
@@ -61,7 +61,7 @@ class DlgMapTextProperties : public QDialog, private Ui::DlgMapTextPropertiesBas
    Q_OBJECT
 public: 
 	DlgMapTextProperties(CMapManager *manager,CMapText *textElement,QWidget *parent=nullptr);
-	~DlgMapTextProperties();
+	~DlgMapTextProperties() override;
 
 private:
 	void fillFamilyList(void);

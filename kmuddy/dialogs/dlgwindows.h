@@ -40,9 +40,9 @@ class dlgWindows : public QDialog
 Q_OBJECT
 public:
   dlgWindows(cWindowList *wlist, QWidget *parent = nullptr);
-  ~dlgWindows();
+  ~dlgWindows() override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
     
 protected slots:
   void wshow();

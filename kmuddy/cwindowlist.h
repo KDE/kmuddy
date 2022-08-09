@@ -44,7 +44,7 @@ public:
   /** constructor */
   cWindowList (int sess);
   /** destructor */
-  ~cWindowList ();
+  ~cWindowList () override;
 
   /** does this window exist? */
   bool exists (const QString &name);
@@ -71,7 +71,7 @@ public:
 
 protected:
   void load ();
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventNothingHandler (QString event, int session) override;
 
   std::map<QString, dlgOutputWindow *> windows;
   QStringList toerase;

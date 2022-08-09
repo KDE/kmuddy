@@ -33,7 +33,7 @@ class DlgMapDirections : public QDialog, private Ui::DlgMapDirectionsBase
 	Q_OBJECT
 public:
 	DlgMapDirections(const CMapManager *mapManager, QWidget *parent);
-	~DlgMapDirections();
+	~DlgMapDirections() override;
 
 	virtual void slotOkPressed();
 

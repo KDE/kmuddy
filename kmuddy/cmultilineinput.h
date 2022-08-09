@@ -39,7 +39,7 @@ class cMultiLineInput : public QObject, public cActionBase {
    Q_OBJECT
 public:
   static cMultiLineInput *self();
-  ~cMultiLineInput ();
+  ~cMultiLineInput () override;
   QDockWidget *dialog ();
   void setFont (QFont font);
 protected slots:
@@ -47,7 +47,7 @@ protected slots:
 protected:
   cMultiLineInput ();
   void init ();
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventNothingHandler (QString event, int session) override;
 
   dlgMultiLine *multiline;
   static cMultiLineInput *_self;

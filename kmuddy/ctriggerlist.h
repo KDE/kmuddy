@@ -37,12 +37,12 @@ List of triggers.
 class cTriggerList : public cList {
 public: 
   cTriggerList ();
-  ~cTriggerList ();
+  ~cTriggerList () override;
 
   static cList *newList () { return new cTriggerList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Trigger"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Trigger"; }
+  cListEditor *editor (QWidget *parent) override;
 
   /** Sends these commands via cCmdProcessor. */
   virtual void processCommands (const QStringList &commands);

@@ -35,7 +35,7 @@ class CMapViewStatusbar : public QStatusBar
    Q_OBJECT
 public: 
   CMapViewStatusbar(CMapManager *manager, QWidget *parent=nullptr);
-  ~CMapViewStatusbar();
+  ~CMapViewStatusbar() override;
 
   void setLevel(CMapLevel *level);
   void setZone(CMapZone *zone);

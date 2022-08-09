@@ -37,10 +37,10 @@ class KMUDDY_EXPORT CMapText : public CMapElement
 public:
 	CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint pos,CMapLevel *level);
 	CMapText(QString str,CMapManager *manager,QPoint pos,CMapLevel *level);
-	~CMapText();
+	~CMapText() override;
 
 	elementTyp getElementType(void) override    { return TEXT ; }
-        virtual void setLevel(CMapLevel *level) override;
+        void setLevel(CMapLevel *level) override;
 
 	/** Sets the text of the text element
 	  * @param str The new string that the text element should be set to
@@ -116,17 +116,17 @@ public:
 
 	/** Used to load the properties of the element from a list of properties
 	  * @param properties The properties to load into the element */
-	virtual void loadProperties(KConfigGroup properties) override;
+	void loadProperties(KConfigGroup properties) override;
 	/** Used to save the properties of the element to a list of properties
 	  * @param properties The properties to load into the element */
-	virtual void saveProperties(KConfigGroup properties) override;
+	void saveProperties(KConfigGroup properties) override;
     /** Used to save the element as an XML object
 	  * @param properties The XML object to save the properties too
 	  * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
+	void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object
 	  * @param properties The XML object to load the properties from */
-	virtual void loadQDomElement(QDomElement *properties) override;
+	void loadQDomElement(QDomElement *properties) override;
 	
 	/** This is used to convert mouse cordinates into a cursor position
 	  * @param mousePos The position of the mose */
@@ -170,15 +170,15 @@ public:
 
 protected:
 	/** This method is called when the element looses it's edit mode */
-	virtual void editModeUnsetEvent(void) override;
+	void editModeUnsetEvent(void) override;
 	/** This method is called when the element gains it's edit mode */
-	virtual void editModeSetEvent(void) override;
+	void editModeSetEvent(void) override;
 	/** Used to paint the element at a given location and size
 	  * @param p The painer to paint the element to
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
+	void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 
 private:
 	/** This used internaly to calculate the offset of the cursor */

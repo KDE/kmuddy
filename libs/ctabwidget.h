@@ -34,7 +34,7 @@ class KMUDDY_EXPORT cTabWidget : public QTabWidget
 {
  public:
   cTabWidget (QWidget *parent = nullptr);
-  virtual ~cTabWidget () {};
+  ~cTabWidget () override {};
   void showTabBar ();
   void hideTabBar ();
 };

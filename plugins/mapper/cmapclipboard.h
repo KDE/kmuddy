@@ -37,7 +37,7 @@ class CMapClipboard : public QObject
    Q_OBJECT
 public: 
 	CMapClipboard(CMapManager *mapManager, CMapView *view, QObject *parent=nullptr);
-	~CMapClipboard();
+	~CMapClipboard() override;
 
 public:
 	/** This method is used to set the enabled start of the actions */

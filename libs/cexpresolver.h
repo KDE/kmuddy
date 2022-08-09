@@ -38,8 +38,8 @@ Resolver for variables and functions, used by the expression processor.
 class KMUDDY_EXPORT cExpResolver : public arith_exp_server {
   public:
     cExpResolver (int _sess);
-    virtual cValue get (QString varName) override;
-    virtual cValue function_call (const QString &functionName, list<cValue> &arguments) override;
+    cValue get (QString varName) override;
+    cValue function_call (const QString &functionName, list<cValue> &arguments) override;
     void setQueue (cCmdQueue *q) { queue = q; };
   protected:
     int sess;

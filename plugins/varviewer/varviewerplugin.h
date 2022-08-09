@@ -32,7 +32,7 @@ class cVarViewerPlugin : public cPlugin
 {
 public:
   cVarViewerPlugin (QObject *, const QVariantList &);
-  virtual ~cVarViewerPlugin ();
+  ~cVarViewerPlugin () override;
 protected:
   cVarViewerPluginPrivate *d;
 };

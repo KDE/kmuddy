@@ -32,7 +32,7 @@ class cStringsPlugin : public cPlugin
 {
 public:
   cStringsPlugin (QObject *, const QVariantList &);
-  virtual ~cStringsPlugin ();
+  ~cStringsPlugin () override;
 protected:
   void registerFunctions ();
   void unregisterFunctions ();

@@ -39,16 +39,16 @@ One trigger.
 class cTrigger : public cSaveableField  {
 public:
   cTrigger (int _sess);
-  ~cTrigger ();
+  ~cTrigger () override;
 
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_TRIGGER; };
+  int itemType () override { return TYPE_TRIGGER; };
 
   bool dontSend () { return dontsend; };
   void setDontSend (bool what) { dontsend = what; };

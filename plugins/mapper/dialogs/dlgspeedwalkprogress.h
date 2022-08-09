@@ -30,7 +30,7 @@ class DlgSpeedwalkProgress : public QDialog, private Ui::DlgSpeedwalkProgressBas
    Q_OBJECT
 public: 
 	DlgSpeedwalkProgress(QWidget *parent=nullptr);
-	~DlgSpeedwalkProgress();
+	~DlgSpeedwalkProgress() override;
 
 	void setProgress(int progress);
 	void setTotalSteps(int steps);

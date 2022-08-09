@@ -33,10 +33,10 @@ class CMapCmdLevelDelete : public CMapCommand
 {
 public: 
 	CMapCmdLevelDelete(CMapManager *manager,QString name, CMapLevel *level);
-	~CMapCmdLevelDelete();
+	~CMapCmdLevelDelete() override;
 
-	virtual void redo() override;
-	virtual void undo() override;
+	void redo() override;
+	void undo() override;
 
 private:
 	int m_index;

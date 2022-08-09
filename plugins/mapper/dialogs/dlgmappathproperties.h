@@ -45,7 +45,7 @@ public:
 	QString getDestBeforeCmd(void);
 
 
-	~DlgMapPathProperties();
+	~DlgMapPathProperties() override;
 
 private slots:
 	void slotAccept();

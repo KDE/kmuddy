@@ -196,29 +196,29 @@ protected:
 #define CHUNK_TEXT 1
 class KMUDDY_EXPORT chunkText : public chunkItem {
  public:
-  virtual int type() override { return CHUNK_TEXT; };
+  int type() override { return CHUNK_TEXT; };
   
   const QString &text() { return _text; }
   void setText (const QString &t) { _text = t; }
-  virtual int length() override { return _text.length(); }
+  int length() override { return _text.length(); }
     //pos is index of last index that will remain in this item
-  virtual chunkItem *split (int pos) override;
-  virtual chunkItem *duplicate() override;
-  virtual void trimLeft () override;
-  virtual void replace (int pos, int len, const QString &newtext) override;
+  chunkItem *split (int pos) override;
+  chunkItem *duplicate() override;
+  void trimLeft () override;
+  void replace (int pos, int len, const QString &newtext) override;
 
-  virtual void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override { cursor.insertText (_text, format); };
+  void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override { cursor.insertText (_text, format); };
 
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** plain-text output */
-  virtual QString toText () override { return _text; };
+  QString toText () override { return _text; };
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *) override {return _text; };
+  QString toAnsi (cANSIParser *) override {return _text; };
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &) override;
+  QString toHTML (QString &) override;
  protected:
   QString _text;
 };
@@ -226,23 +226,23 @@ class KMUDDY_EXPORT chunkText : public chunkItem {
 #define CHUNK_FG 2
 class KMUDDY_EXPORT chunkFg : public chunkItem {
  public:
-  virtual int type() override { return CHUNK_FG; };
+  int type() override { return CHUNK_FG; };
   
   QColor fg() { return _fg; }
   void setFg (QColor fgc) { _fg = fgc; }
-  virtual int length() override { return 0; }
-  virtual chunkItem *duplicate() override;
+  int length() override { return 0; }
+  chunkItem *duplicate() override;
  
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
-  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _fg); };
+  void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _fg); };
 
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap) override;
+  QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix) override;
+  QString toHTML (QString &suffix) override;
 
   static void setFormat (QTextCharFormat &format, QColor color);
   static QString constructAnsi (QColor color, cANSIParser *ap);
@@ -254,23 +254,23 @@ class KMUDDY_EXPORT chunkFg : public chunkItem {
 #define CHUNK_BG 3
 class KMUDDY_EXPORT chunkBg : public chunkItem {
  public:
-  virtual int type() override { return CHUNK_BG; };
+  int type() override { return CHUNK_BG; };
   
   QColor bg() { return _bg; }
   void setBg (QColor bgc) { _bg = bgc; }
-  virtual int length() override { return 0; }
-  virtual chunkItem *duplicate() override;
+  int length() override { return 0; }
+  chunkItem *duplicate() override;
  
-  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _bg); };
+  void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _bg); };
 
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
   
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap) override;
+  QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix) override;
+  QString toHTML (QString &suffix) override;
   
   static void setFormat (QTextCharFormat &format, QColor color);
   static QString constructAnsi (QColor color, cANSIParser *ap);
@@ -292,20 +292,20 @@ class KMUDDY_EXPORT chunkBg : public chunkItem {
 #define CHUNK_ATTRIB 4
 class KMUDDY_EXPORT chunkAttrib : public chunkItem {
  public:
-  virtual int type() override { return CHUNK_ATTRIB; };
+  int type() override { return CHUNK_ATTRIB; };
   int attrib() { return _attrib; }
   void setAttrib (int a) { _attrib = a; }
-  virtual int length() override { return 0; }
-  virtual chunkItem *duplicate() override;
+  int length() override { return 0; }
+  chunkItem *duplicate() override;
  
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
 
-  virtual void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _attrib); };
+  void insertToDocument (QTextCursor &, QTextCharFormat &format) override { setFormat (format, _attrib); };
 
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *) override;
+  QString toAnsi (cANSIParser *) override;
   
   //no HTML output here - we cannot handle closing tags properly without too much hassle
 
@@ -323,7 +323,7 @@ struct menuItem {
 #define CHUNK_LINK 5
 class KMUDDY_EXPORT chunkLink : public chunkItem {
  public:
-  virtual int type() override { return CHUNK_LINK; };
+  int type() override { return CHUNK_LINK; };
 
   QString name() { return _name; }
   void setName (const QString &n) { _name = n; }
@@ -344,23 +344,23 @@ class KMUDDY_EXPORT chunkLink : public chunkItem {
   /** parse menu information */
   void parseMenu ();
   
-  virtual int length() override { return _text.length(); }
-  virtual chunkItem *split (int pos) override;
-  virtual chunkItem *duplicate () override;
-  virtual void trimLeft () override;
-  virtual void replace (int pos, int len, const QString &newtext) override;
+  int length() override { return _text.length(); }
+  chunkItem *split (int pos) override;
+  chunkItem *duplicate () override;
+  void trimLeft () override;
+  void replace (int pos, int len, const QString &newtext) override;
  
   const list<menuItem> &menu() { return _menu; };
   //painting
 //  virtual void paint (QPainter *painter, paintStatus *ps) override;
 
-  virtual void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override;
+  void insertToDocument (QTextCursor &cursor, QTextCharFormat &format) override;
 
   //output to transcript...
   /** output to plain-text with ANSI sequences */
-  virtual QString toAnsi (cANSIParser *ap) override;
+  QString toAnsi (cANSIParser *ap) override;
   /** output to HTML, suffix can be used to provide closing tags if needed */
-  virtual QString toHTML (QString &suffix) override;
+  QString toHTML (QString &suffix) override;
  protected:
   QString _name, _target, _text, _hint;
   bool _iscommand, _toprompt, _ismenu;

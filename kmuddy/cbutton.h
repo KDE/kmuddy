@@ -36,15 +36,15 @@ class cButton : public cListObject
 Q_OBJECT
  public:
   /** destructor */
-  ~cButton();
+  ~cButton() override;
   
 #define BUTTON_UPDATE 1
   
-  virtual cList::TraverseAction traverse (int traversalType);
+  cList::TraverseAction traverse (int traversalType) override;
 
-  virtual void attribChanged (const QString &name);
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  void updateVisibleName() override;
 
  protected slots:
   void execute (bool checked);
@@ -59,9 +59,9 @@ Q_OBJECT
   void addButton ();
 
   /** React on the fact that the object has moved. */
-  virtual void objectMoved ();
-  virtual void objectEnabled ();
-  virtual void objectDisabled ();
+  void objectMoved () override;
+  void objectEnabled () override;
+  void objectDisabled () override;
 };
 
 #endif

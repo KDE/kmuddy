@@ -1,7 +1,7 @@
 /***************************************************************************
                           dlggrabkey.h  -  keygrabber
                              -------------------
-    begin                : Pi m·j 30 2003
+    begin                : Pi m√°j 30 2003
     copyright            : (C) 2003 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -37,8 +37,8 @@ class dlgGrabKey : public QDialog  {
    Q_OBJECT
 public:
   dlgGrabKey (QWidget *parent);
-  ~dlgGrabKey ();
-  virtual QSize sizeHint() const override;
+  ~dlgGrabKey () override;
+  QSize sizeHint() const override;
   /** key is here - sent by KMuddy::eventFilter */
   void gotKey (int key, Qt::KeyboardModifiers state);
 

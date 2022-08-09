@@ -34,7 +34,7 @@ class cDirList : public QWidget {
    Q_OBJECT
 public: 
   cDirList (QWidget *parent=nullptr);
-  ~cDirList ();
+  ~cDirList () override;
   const QStringList &getDirList () { return dirlist; };
   void setDirList (const QStringList &dlist);
 protected slots:

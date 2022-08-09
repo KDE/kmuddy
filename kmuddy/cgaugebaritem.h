@@ -41,7 +41,7 @@ public:
   /** constructor */
   cGaugeBarItem (QWidget *parent = nullptr);
   /** destructor */
-  ~cGaugeBarItem ();
+  ~cGaugeBarItem () override;
   void setText (const QString &caption);
   QString text () const;
   void setValue (int value);
@@ -60,15 +60,15 @@ public:
   /** constructor */
   cGaugeBarItemPrivate (QWidget *parent = nullptr);
   /** destructor */
-  ~cGaugeBarItemPrivate ();
+  ~cGaugeBarItemPrivate () override;
   void setValue (int value);
   int value () const;
   void setColor (const QColor &color);
   QColor color () const;
 
-  virtual QSize sizeHint () const;
+  QSize sizeHint () const override;
 protected:
-  void paintEvent (QPaintEvent *);
+  void paintEvent (QPaintEvent *) override;
 
   int val;
   QColor col;

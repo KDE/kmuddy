@@ -35,7 +35,7 @@ class KMUDDY_EXPORT cStatus : public QObject, public cActionBase {
    Q_OBJECT
 public: 
   cStatus (int sess, KStatusBar *statusbar);
-  ~cStatus();
+  ~cStatus() override;
   void showTimer ();
   void hideTimer ();
   /** shows a message for 2 seconds */
@@ -46,10 +46,10 @@ public:
   KStatusBar *statusBar() { return sb; };
 
 protected:
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventStringHandler (QString event, int session,
+  void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int session,
       QString &par1, const QString &) override;
-  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
+  void eventIntHandler (QString event, int session, int par1, int par2) override;
 
   void dimensionsChanged (int x, int y);
   void timerStart ();

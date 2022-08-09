@@ -30,7 +30,7 @@ class KMUDDY_EXPORT CMapCommand : public QUndoCommand
 {
   public: 
     CMapCommand(QString name);
-    ~CMapCommand();
+    ~CMapCommand() override;
 
     QString name() const { return m_name; }
 

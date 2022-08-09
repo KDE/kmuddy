@@ -33,20 +33,20 @@ This class represents one alias.
 
 class KMUDDY_EXPORT cAlias : public cListObject {
 public:
-  virtual ~cAlias ();
+  ~cAlias () override;
 
 protected:
   friend class cAliasList;
   cAlias (cList *list);
 
-  virtual void updateVisibleName () override;
+  void updateVisibleName () override;
 
   /** React on an attribute change by updating the pattern object. */
-  virtual void attribChanged (const QString &name) override;
+  void attribChanged (const QString &name) override;
 
 #define ALIAS_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType) override;
+  cList::TraverseAction traverse (int traversalType) override;
 
   /** Perform alias matching. */
   cList::TraverseAction doMatch ();

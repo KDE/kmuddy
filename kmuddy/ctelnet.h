@@ -160,7 +160,7 @@ class cTelnet : public QObject, public cActionBase {
 Q_OBJECT
 public: 
   cTelnet (int sess);
-  ~cTelnet ();
+  ~cTelnet () override;
   /** attempt to establish a new connection */
   void connectIt (const QString &address, int port, cProfileSettings *sett = nullptr);
   /** closes connection */
@@ -223,8 +223,8 @@ protected slots:
   void socketRead ();
   void socketClosed ();
 protected:
-  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventIntHandler (QString event, int session, int par1, int par2) override;
+  void eventNothingHandler (QString event, int session) override;
 
   void reset ();
   void setupSocketHandlers ();

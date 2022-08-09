@@ -23,20 +23,20 @@ class KMuddyMapper : public cPlugin
 Q_OBJECT
 public:
   KMuddyMapper (QObject *, const QVariantList &);
-  virtual ~KMuddyMapper ();
+  ~KMuddyMapper () override;
 
-  virtual void sessionAdd (int sess, bool fresh = true) override;
-  virtual void sessionRemove (int sess, bool closed = true) override;
-  virtual void sessionSwitch (int sess) override;
-  virtual void connected (int sess) override;
-  virtual void disconnected (int sess) override;
+  void sessionAdd (int sess, bool fresh = true) override;
+  void sessionRemove (int sess, bool closed = true) override;
+  void sessionSwitch (int sess) override;
+  void connected (int sess) override;
+  void disconnected (int sess) override;
   
   virtual void load (int sess);
-  virtual void save (int sess) override;
+  void save (int sess) override;
   
-  virtual void processInput (int sess, int phase, cTextChunk * chunk,
+  void processInput (int sess, int phase, cTextChunk * chunk,
       bool gagged) override;
-  virtual void processCommand (int sess, QString & command, bool &dontSend) override;
+  void processCommand (int sess, QString & command, bool &dontSend) override;
 
 protected slots:
   void showMapper (bool b);

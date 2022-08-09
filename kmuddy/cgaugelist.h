@@ -39,12 +39,12 @@ class cGaugeList : public cList
 {
 public:
   cGaugeList ();
-  ~cGaugeList ();
+  ~cGaugeList () override;
 
   static cList *newList () { return new cGaugeList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Gauge"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Gauge"; }
+  cListEditor *editor (QWidget *parent) override;
   
   /** a gauge request, adds a new gauge, if there is no gauge already using the
   same base variable */
@@ -60,7 +60,7 @@ public:
   Private *d;
   friend class cGauge;
 
-  virtual void listLoaded () override;
+  void listLoaded () override;
   
   void addGauge (cGauge *g);
   void removeGauge (cGauge *g);

@@ -38,7 +38,7 @@ class CMapWidget : public QWidget
    Q_OBJECT
 public:
 	CMapWidget(CMapView *view,CMapManager *manager,QWidget *parent=nullptr);
-	virtual ~CMapWidget();
+	~CMapWidget() override;
 
 	/** Used to get the views */
 	CMapView *getView(void);
@@ -61,9 +61,9 @@ protected:
         /** double click event */
         void mouseDoubleClickEvent(QMouseEvent *e) override;
 	/** Called when a key is pressed */
-	virtual void keyPressEvent(QKeyEvent *e) override;
+	void keyPressEvent(QKeyEvent *e) override;
 	/** Called when a key is released */
-	virtual void keyReleaseEvent(QKeyEvent *e) override;
+	void keyReleaseEvent(QKeyEvent *e) override;
 
 	/** Used to display the text context menu */
 	void showTextContextMenu(void);

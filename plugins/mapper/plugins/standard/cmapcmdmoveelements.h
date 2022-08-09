@@ -35,12 +35,12 @@ class CMapCmdMoveElements : public CMapCommand
 {
 public: 
 	CMapCmdMoveElements(CMapManager *mapManager,QPoint offset);
-	~CMapCmdMoveElements();
+	~CMapCmdMoveElements() override;
 
 	void addElement(CMapElement *element);
 
-	void redo();
-	void undo();
+	void redo() override;
+	void undo() override;
 
 private:
 	struct elemProp

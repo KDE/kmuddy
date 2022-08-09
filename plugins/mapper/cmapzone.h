@@ -38,10 +38,10 @@ public:
 
 public:
 	CMapZone(CMapManager *manager);
-	~CMapZone();
+	~CMapZone() override;
 
 	elementTyp getElementType(void) override         { return ZONE ; }
-        virtual void setLevel(CMapLevel *level) override;
+        void setLevel(CMapLevel *level) override;
 
 	void setLabel(QString zoneLabel);
 	QString getLabel(void)                           { return label; }
@@ -85,16 +85,16 @@ public:
 	void textRemove(void);
 
 	/** Used to load the properties of the element from a list of properties */
-	virtual void loadProperties(KConfigGroup properties) override;
+	void loadProperties(KConfigGroup properties) override;
 	/** Used to save the properties of the element to a list of properties */
-	virtual void saveProperties(KConfigGroup properties) override;
+	void saveProperties(KConfigGroup properties) override;
 	/** Used to save the element as an XML object
 	  * @param properties The XML object to save the properties too
 	  * @param doc The XML Document */
-	virtual void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
+	void saveQDomElement(QDomDocument *doc,QDomElement *properties) override;
 	/** Used to load the properties from a XML object
 	  * @param properties The XML object to load the properties too */
-	virtual void loadQDomElement(QDomElement *properties) override;
+	void loadQDomElement(QDomElement *properties) override;
 		
 	void setZoneID(unsigned  int id);
 	
@@ -105,7 +105,7 @@ protected:
 	  * @param pos The position to paint the elmenet
 	  * @param size The size the element should be draw
 	  * @param zone The current zone being viewed */
-	virtual void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
+	void paintElementResize(QPainter *p,QPoint pos,QSize size,CMapZone *zone) override;
 
 	unsigned int m_ID;
 

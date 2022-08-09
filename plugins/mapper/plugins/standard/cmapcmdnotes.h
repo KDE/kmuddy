@@ -35,10 +35,10 @@ class CMapCMDNotes : public CMapCommand
    //Q_OBJECT
 public: 
 	CMapCMDNotes(CMapPluginStandard *plugin,CMapElement *element,QString note);
-	~CMapCMDNotes();
+	~CMapCMDNotes() override;
 
-	virtual void redo();
-	virtual void undo();
+	void redo() override;
+	void undo() override;
 	
 private:
 	/** The element being used */

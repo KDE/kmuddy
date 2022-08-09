@@ -35,12 +35,12 @@ class cVarTriggerList : public cList
 {
  public:
   cVarTriggerList ();
-  ~cVarTriggerList ();
+  ~cVarTriggerList () override;
 
   static cList *newList () { return new cVarTriggerList; };
-  virtual cListObject *newObject ();
-  virtual QString objName () { return "Variable trigger"; }
-  virtual cListEditor *editor (QWidget *parent);
+  cListObject *newObject () override;
+  QString objName () override { return "Variable trigger"; }
+  cListEditor *editor (QWidget *parent) override;
   
   /** execute appropriate variable trigger, if any */
   void variableChanged (const QString &varname);

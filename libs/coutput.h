@@ -45,7 +45,7 @@ public:
   /** constructor */
   cOutput (int sess, QWidget *parent);
   /** destructor */
-  ~cOutput();
+  ~cOutput() override;
   cConsole *console () { return con; };
 
   void addText (cTextChunk *chunk);
@@ -81,9 +81,9 @@ protected slots:
   void sendCommand (const QString &command);
   void promptCommand (const QString &command);
 protected:
-  virtual void eventStringHandler (QString event, int, QString &par1, const QString &) override;
-  virtual void eventChunkHandler (QString event, int, cTextChunk *chunk) override;
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventStringHandler (QString event, int, QString &par1, const QString &) override;
+  void eventChunkHandler (QString event, int, cTextChunk *chunk) override;
+  void eventNothingHandler (QString event, int session) override;
 
   /** show commands / messages ? */
   bool cmdecho, messages;

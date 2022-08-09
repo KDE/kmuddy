@@ -40,20 +40,20 @@ One trigger.
 
 class cTrigger : public cListObject {
 public:
-  virtual ~cTrigger ();
+  ~cTrigger () override;
 
 protected:
   friend class cTriggerList;
   cTrigger (cList *list);
 
   /** React on an attribute change by updating the pattern object. */
-  virtual void attribChanged (const QString &name) override;
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName() override;
+  void updateVisibleName() override;
 
 #define TRIGGER_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType) override;
+  cList::TraverseAction traverse (int traversalType) override;
 
   /** Perform trigger matching. */
   cList::TraverseAction doMatch ();

@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class cGenericItem : public cListObject {
 public:
-  virtual ~cGenericItem ();
+  ~cGenericItem () override;
 
 protected:
   friend class cGenericList;

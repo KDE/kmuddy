@@ -152,7 +152,7 @@ protected:
   /** constructor - only cList can call it */
   cListObject (cList *list);
   /** destructor - only cList can call it */
-  virtual ~cListObject ();
+  ~cListObject () override;
 
   /** Sets the object name. Functions and macros can access the object by it. Used by cList. */
   virtual void setName (const QString &n);

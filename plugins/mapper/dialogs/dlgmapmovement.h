@@ -33,7 +33,7 @@ class DlgMapMovement : public QDialog, public Ui::DlgMapMovementBase
 	Q_OBJECT
 public: 
 	DlgMapMovement(CMapManager *mapManager, QWidget *parent);
-	~DlgMapMovement();
+	~DlgMapMovement() override;
 
 	void slotOkPressed();
 

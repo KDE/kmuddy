@@ -60,7 +60,7 @@ public:
     QGraphicsTextItem::paint (painter, o, w);
   }
 
-  virtual QRectF boundingRect() const override {
+  QRectF boundingRect() const override {
     QRectF rect = scene()->sceneRect();
     // add +1 to each side to eliminate the selection box, which we do not want
     return QRectF (-1, -1, rect.width() + 2, rect.height() + 2);
@@ -87,7 +87,7 @@ public:
     setFlag (QGraphicsItem::ItemClipsChildrenToShape);
   }
 
-  virtual QRectF boundingRect() const override {
+  QRectF boundingRect() const override {
     QGraphicsScene *sc = scene();
     if (sc->views().isEmpty()) return QRectF (0, 0, 0, 0);
     QGraphicsView *view = sc->views().first();
@@ -117,7 +117,7 @@ protected:
 class cConsoleTimestamp : public QTextBlockUserData {
  public:
   cConsoleTimestamp(QDateTime s) { stamp = s; }
-  virtual ~cConsoleTimestamp(){};
+  ~cConsoleTimestamp() override{};
   QDateTime stamp;
 };
 
@@ -158,7 +158,7 @@ class cConsoleScene : public QGraphicsScene {
     return stamp;
   }
 
-  virtual void helpEvent(QGraphicsSceneHelpEvent *helpEvent) override {
+  void helpEvent(QGraphicsSceneHelpEvent *helpEvent) override {
     QGraphicsItem *top = itemAt (helpEvent->scenePos(), QTransform());
     if (!top) {
       QToolTip::hideText();

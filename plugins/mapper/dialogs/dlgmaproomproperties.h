@@ -31,7 +31,7 @@ class DlgMapRoomProperties : public QDialog, private Ui::DlgMapRoomPropertiesBas
    Q_OBJECT
 public: 
 	DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent=nullptr);
-	~DlgMapRoomProperties();
+	~DlgMapRoomProperties() override;
 
 private slots:
 	void slotAccept();

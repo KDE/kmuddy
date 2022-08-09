@@ -47,7 +47,7 @@ Implementation notes (those that are not specified in the protocol):
 class KMUDDY_EXPORT cMSP : public cActionBase {
 public: 
   cMSP (int sess);
-  ~cMSP ();
+  ~cMSP () override;
   void reset (const QString &serverName);
   /** enable MSP support */
   void enableMSP ();

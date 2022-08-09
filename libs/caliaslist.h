@@ -37,12 +37,12 @@ A list of aliases.
 class KMUDDY_EXPORT cAliasList : public cList {
 public: 
   cAliasList ();
-  ~cAliasList ();
+  ~cAliasList () override;
 
   static cList *newList () { return new cAliasList; };
-  virtual cListObject *newObject () override;
-  virtual QString objName () override { return "Alias"; }
-  virtual cListEditor *editor (QWidget *parent) override;
+  cListObject *newObject () override;
+  QString objName () override { return "Alias"; }
+  cListEditor *editor (QWidget *parent) override;
 
   bool matchString (const QString &string);
   QStringList commandsToExec ();

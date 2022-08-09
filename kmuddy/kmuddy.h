@@ -47,7 +47,7 @@ class KMuddy : public KMainWindow, public cActionBase
   Q_OBJECT 
 public:
   /** destructor */
-  ~KMuddy();
+  ~KMuddy() override;
 
   static KMuddy *self();
 
@@ -175,16 +175,16 @@ protected:
   KMuddy ();
   static KMuddy *_self;
 
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventIntHandler (QString event, int session, int, int) override;
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *) override;
-  virtual void eventStringHandler (QString event, int session, QString &par1,
+  void eventNothingHandler (QString event, int session) override;
+  void eventIntHandler (QString event, int session, int, int) override;
+  void eventChunkHandler (QString event, int session, cTextChunk *) override;
+  void eventStringHandler (QString event, int session, QString &par1,
       const QString &par2) override;
 
   void prepareObjects ();
   void killObjects ();
   /** called when we try to close the window (Alt+F4 or the Close icon) */
-  virtual bool queryClose () override;
+  bool queryClose () override;
   
   /** calls cSessionManager::self()->activeSession. Provided for convenience. */
   int activeSession ();

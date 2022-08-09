@@ -49,7 +49,7 @@ class KMUDDY_EXPORT cPluginManager : public QObject, public cActionBase
 {
 Q_OBJECT
  public:
-  virtual ~cPluginManager ();
+  ~cPluginManager () override;
 
   static cPluginManager *self();
 
@@ -84,10 +84,10 @@ protected:
   
   static cPluginManager *_self;
 
-  virtual void eventIntHandler (QString event, int session, int par1, int par2) override;
-  virtual void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
-  virtual void eventNothingHandler (QString event, int session) override;
-  virtual void eventChunkHandler (QString event, int session, cTextChunk *par) override;
+  void eventIntHandler (QString event, int session, int par1, int par2) override;
+  void eventStringHandler (QString event, int session, QString &par1, const QString &par2) override;
+  void eventNothingHandler (QString event, int session) override;
+  void eventChunkHandler (QString event, int session, cTextChunk *par) override;
   
   void findPlugins ();
   

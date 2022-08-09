@@ -37,7 +37,7 @@ class KMUDDY_EXPORT cListEditor : public QWidget {
   /** constructor */
   cListEditor (QWidget *parent);
   /** destructor */
-  virtual ~cListEditor ();
+  ~cListEditor () override;
 
   /** Change the edited object. */
   void setObject (cListObject *obj);

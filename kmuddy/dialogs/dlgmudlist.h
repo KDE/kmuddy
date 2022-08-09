@@ -33,12 +33,12 @@ class dlgMudList : public QDialog {
  Q_OBJECT
  public:
   static const cMUDEntry *getEntry (QWidget *parent);
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
  private slots:
   void currentChanged (const QModelIndex &index);
  private:
   dlgMudList (QWidget *parent);
-  virtual ~dlgMudList ();
+  ~dlgMudList () override;
   const cMUDEntry *selectedEntry ();
 
   struct Private;

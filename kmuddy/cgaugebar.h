@@ -44,7 +44,7 @@ Q_OBJECT
   /** constructor */
   cGaugeBar (int sess, QWidget *parent = nullptr);
   /** destructor */
-  ~cGaugeBar ();
+  ~cGaugeBar () override;
 
   void addGauge (cGauge *g);
   void removeGauge (cGauge *g);

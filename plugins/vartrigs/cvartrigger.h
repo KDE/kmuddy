@@ -34,20 +34,20 @@ This class represents one variable trigger.
 class cVarTrigger : public cListObject
 {
 public:
-  virtual ~cVarTrigger ();
+  ~cVarTrigger () override;
 
 protected:
   friend class cVarTriggerList;
   cVarTrigger (cList *list);
 
   /** React on an attribute change. */
-  virtual void attribChanged (const QString &name);
+  void attribChanged (const QString &name) override;
 
-  virtual void updateVisibleName();
+  void updateVisibleName() override;
 
 #define VARTRIGGER_MATCH 1
 
-  virtual cList::TraverseAction traverse (int traversalType);
+  cList::TraverseAction traverse (int traversalType) override;
 
   virtual void executeCommands ();
 

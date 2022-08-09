@@ -30,16 +30,16 @@ it knows how to load/save itself and how to perform alias matching (all sorts).
 class cAlias : public cSaveableField  {
 public:
   cAlias (int _sess);
-  virtual ~cAlias ();
+  ~cAlias () override;
 
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file*/
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_ALIAS; };
+  int itemType () override { return TYPE_ALIAS; };
 
   bool sendOriginal () { return sendoriginal; };
   void setSendOriginal (bool what) { sendoriginal = what; };

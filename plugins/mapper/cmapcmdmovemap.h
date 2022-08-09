@@ -31,10 +31,10 @@ class CMapCmdMoveMap : public CMapCommand
 {
 public:
 	CMapCmdMoveMap(CMapManager *manager,QPoint offset,QString name);
-	~CMapCmdMoveMap();
+	~CMapCmdMoveMap() override;
 
-	virtual void redo() override;
-	virtual void undo() override;
+	void redo() override;
+	void undo() override;
 
 private:
 	/** This method is used to move the elements in a zone by the given vector */

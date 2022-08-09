@@ -34,11 +34,11 @@ class CMapPluginStandard : public CMapPluginBase
    Q_OBJECT
 public: 
 	CMapPluginStandard(QObject *);
-	~CMapPluginStandard();
+	~CMapPluginStandard() override;
 
-        virtual QString tagName() override { return QString("standard"); }
+        QString tagName() override { return QString("standard"); }
 
-	virtual QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent) override;
+	QList<CMapPropertiesPaneBase *> createPropertyPanes(elementTyp type,CMapElement *element,QWidget *parent) override;
 
 	void profileChanged(void) override;
 	/** This is called before a element is deleted

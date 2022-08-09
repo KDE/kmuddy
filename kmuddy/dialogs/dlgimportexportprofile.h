@@ -1,7 +1,7 @@
 /***************************************************************************
                           dlgimportexportprofile.h  -  description
                              -------------------
-    begin                : Ne júl 20 2003
+    begin                : Ne jÃºl 20 2003
     copyright            : (C) 2003 by Tomas Mecir
     email                : kmuddy@kmuddy.com
  ***************************************************************************/
@@ -32,9 +32,9 @@ class dlgImportExportProfile : public QDialog {
    Q_OBJECT
 public: 
   dlgImportExportProfile (bool isImport, QWidget *parent=nullptr);
-  ~dlgImportExportProfile ();
+  ~dlgImportExportProfile () override;
   void doThings ();
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
 protected slots:
   void browse ();
 protected:

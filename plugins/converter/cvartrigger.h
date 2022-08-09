@@ -37,16 +37,16 @@ public:
   /** constructor */
   cVarTrigger (int _sess);
   /** destructor */
-  ~cVarTrigger ();
+  ~cVarTrigger () override;
 
   /** creates a new instance of the class */
-  virtual cSaveableField *newInstance ();
+  cSaveableField *newInstance () override;
 
   /** load data from a config file */
-  virtual void load (KConfig *config, const QString &group);
+  void load (KConfig *config, const QString &group) override;
 
   /** abstract; returns type of item (light-weight RTTI) */
-  virtual int itemType () { return TYPE_VARTRIG; };
+  int itemType () override { return TYPE_VARTRIG; };
 
   void setVarName (const QString &varname);
   QString varName () { return var; };

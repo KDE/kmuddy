@@ -39,7 +39,7 @@ public:
   /** constructor */
   cMultiInputLine (int sess, QWidget *parent = nullptr);
   /** destructor */
-  ~cMultiInputLine ();
+  ~cMultiInputLine () override;
   
   /** initialize the input line - must be separated
   from the constructor, because it uses cSession, which is not
@@ -62,10 +62,10 @@ signals:
 protected slots:
   void updateHeight ();
 protected:
-  virtual void eventNothingHandler (QString event, int session) override;
+  void eventNothingHandler (QString event, int session) override;
   void sendCommands ();
 
-  virtual void keyPressEvent (QKeyEvent *e) override;
+  void keyPressEvent (QKeyEvent *e) override;
 
   int _lines;
 

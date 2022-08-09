@@ -37,9 +37,9 @@ class dlgTranscript : public KPageDialog {
    Q_OBJECT
 public: 
   dlgTranscript (QWidget *parent=nullptr);
-  ~dlgTranscript ();
+  ~dlgTranscript () override;
 
-  virtual QSize sizeHint() const override;
+  QSize sizeHint() const override;
   QString getFName ();
   QString getAFName ();
   void setFName (const QString &filename);

@@ -34,8 +34,8 @@ class dlgDumpBuffer : public QDialog {
    Q_OBJECT
 public:
   dlgDumpBuffer (QWidget *parent=nullptr);
-  ~dlgDumpBuffer ();
-  virtual QSize sizeHint() const override;
+  ~dlgDumpBuffer () override;
+  QSize sizeHint() const override;
   bool curPos ();
   QString fileName ();
   void setFileName (const QString &fName);

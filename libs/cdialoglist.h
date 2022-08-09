@@ -40,7 +40,7 @@ This class stores dialog boxes. Its purpose is to allow plug-ins to extend these
 class KMUDDY_EXPORT cDialogList : public cActionBase {
  public:
   static cDialogList *self ();
-  ~cDialogList();
+  ~cDialogList() override;
   QDialog *getDialog (const QString &name);
   void addDialog (const QString &name, QDialog *dlg);
   void removeDialog (const QString &name);

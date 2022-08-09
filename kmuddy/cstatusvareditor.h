@@ -30,11 +30,11 @@ class cStatusVarEditor : public cListEditor {
  Q_OBJECT
  public:
   cStatusVarEditor (QWidget *parent);
-  ~cStatusVarEditor ();
+  ~cStatusVarEditor () override;
 
-  virtual void createGUI(QWidget *parent) override;
-  virtual void fillGUI (const cListObjectData &data) override;
-  virtual void getDataFromGUI (cListObjectData *data) override;
+  void createGUI(QWidget *parent) override;
+  void fillGUI (const cListObjectData &data) override;
+  void getDataFromGUI (cListObjectData *data) override;
  protected:
   struct Private;
   Private *d;

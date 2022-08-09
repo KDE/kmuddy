@@ -41,7 +41,7 @@ class KMUDDY_EXPORT cMenuManager : public cActionBase
 {
 public:
   static cMenuManager *self ();
-  ~cMenuManager ();
+  ~cMenuManager () override;
 
   /** assign a menubar to the object. It can't work without having one. */
   void setMenuBar (QMenuBar *menuBar);
