@@ -44,5 +44,5 @@ add_subdirectory( scripting )
 
 install ( FILES muds.xml DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
 
-
+ki18n_install(po)
 
