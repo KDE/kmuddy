@@ -1,0 +1,5792 @@
+# Bosnian translations for kde package.
+# Copyright (C) 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde package.
+# Samir Ribic <megaribi@epn.ba>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kde 49i410\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-03-28 16:07+0000\n"
+"PO-Revision-Date: 2015-02-22 22:21+0100\n"
+"Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
+"Language-Team: Bosnian\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-17 06:23+0000\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Samir Ribić,Zlatan Čilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Samir.ribic@etf.unsa.ba,zcilic1@etf.unsa.ba"
+
+#: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
+#: kmuddy/cstatusvareditor.cpp:71
+#, kde-format
+msgid "&Caption"
+msgstr "&Natpis"
+
+#: kmuddy/cbuttoneditor.cpp:68
+#, kde-format
+msgid "Caption of this button."
+msgstr "Natpis ovog dugmeta."
+
+#: kmuddy/cbuttoneditor.cpp:71
+#, kde-format
+msgid "Co&mmand"
+msgstr "Ko&manda"
+
+#: kmuddy/cbuttoneditor.cpp:74
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the button. Note that you can "
+"enter multiple commands here (separated by semi-colons, or another character "
+"defined in <b>global settings</b>)."
+msgstr ""
+"Komanda koja će biti izvršena ako kliknete na dugme. Većem broju komandi "
+"možete pristupiti ovdje (odvojenih tačka-zarezom, ili nekim drugim "
+"karakterom definiranim u  <b>opštim podešavanjima</b>)."
+
+#: kmuddy/cbuttoneditor.cpp:83
+#, kde-format
+msgid "Icon displayed on the button toolbar."
+msgstr "Ikona prikazana na alatnoj traci dugmadi."
+
+#: kmuddy/cbuttoneditor.cpp:91
+#, kde-format
+msgid "&Un-press command"
+msgstr "&Od-klikni komanda."
+
+#: kmuddy/cbuttoneditor.cpp:94
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the push-down button while "
+"it's pushed down."
+msgstr "Komanda koja će biti izvršena ako kliknete na taster dok je pritisnut."
+
+#: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
+#: kmuddy/ctimereditor.cpp:133
+#, kde-format
+msgid "&General"
+msgstr "&Općenito"
+
+#: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
+#: kmuddy/ctimereditor.cpp:134 kmuddy/ctriggereditor.cpp:525
+#: libs/caliaseditor.cpp:243
+#, kde-format
+msgid "&Script"
+msgstr "&Skripta"
+
+#: kmuddy/cbuttoneditor.cpp:125
+#, kde-format
+msgid "Script when &released"
+msgstr "Skripta koja se izvrši kada se &pusti"
+
+#: kmuddy/cconnection.cpp:268
+#, kde-format
+msgid "Network error: %1"
+msgstr "Mrežna greška: %1"
+
+#: kmuddy/cconnection.cpp:430
+#, kde-format
+msgid "Do you want to close connection to %1?"
+msgstr "Da li želite da zatvorite konekciju do %1?"
+
+#: kmuddy/cconnection.cpp:431
+#, kde-format
+msgid "Disconnect"
+msgstr "Prekini vezu"
+
+#: kmuddy/cconnection.cpp:515
+#, kde-format
+msgid "(password is hidden)"
+msgstr "(šifra je sakrivena)"
+
+#: kmuddy/cconnection.cpp:736
+#, kde-format
+msgid "Aliases are now enabled."
+msgstr "Pseudonimi su sada omogućeni."
+
+#: kmuddy/cconnection.cpp:736
+#, kde-format
+msgid "Aliases are now disabled."
+msgstr "Pseudonimi su sada isključeni."
+
+#: kmuddy/cconnection.cpp:747
+#, kde-format
+msgid "Triggers are now enabled."
+msgstr "Aktivatori su sada omogućeni."
+
+#: kmuddy/cconnection.cpp:747
+#, kde-format
+msgid "Triggers are now disabled."
+msgstr "Aktivatori su sada isključeni."
+
+#: kmuddy/cconnection.cpp:758
+#, kde-format
+msgid "Timers are now enabled."
+msgstr "Tajmeri su sada omogućeni."
+
+#: kmuddy/cconnection.cpp:758
+#, kde-format
+msgid "Timers are now disabled."
+msgstr "Tajmeri su sada isključeni."
+
+#: kmuddy/cconnection.cpp:769
+#, kde-format
+msgid "Macro keys are now enabled."
+msgstr "Makro ključevi su sada omogućeni."
+
+#: kmuddy/cconnection.cpp:769
+#, kde-format
+msgid "Macro keys are now disabled."
+msgstr "Makro ključevi su sada isključeni."
+
+#: kmuddy/cconnection.cpp:822
+#, kde-format
+msgid "Aliases"
+msgstr "Pseudonimi"
+
+#: kmuddy/cconnection.cpp:823
+#, kde-format
+msgid "Triggers"
+msgstr "Okidači"
+
+#: kmuddy/cconnection.cpp:824
+#, kde-format
+msgid "Buttons"
+msgstr "Dugmad"
+
+#: kmuddy/cconnection.cpp:825
+#, kde-format
+msgid "Timers"
+msgstr "Tajmeri"
+
+#: kmuddy/cconnection.cpp:826
+#, kde-format
+msgid "Macro Keys"
+msgstr "Makro ključevi."
+
+#: kmuddy/cconnection.cpp:827
+#, kde-format
+msgid "Status variables"
+msgstr "Statusne promjenljive."
+
+#: kmuddy/cconnection.cpp:828
+#, kde-format
+msgid "Gauges"
+msgstr "Mjerači"
+
+#: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:57
+#: plugins/vartrigs/cvartriggereditor.cpp:57
+#, kde-format
+msgid "&Variable name"
+msgstr "&Ime promjenljive"
+
+#: kmuddy/cgaugeeditor.cpp:62
+#, kde-format
+msgid "Variable displayed by this gauge."
+msgstr "Promjenljiva prikazana ovim mjeračem."
+
+#: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:64
+#, kde-format
+msgid "&Max. variable (optional)"
+msgstr "&Maks. promjenljiva (opcionalno)"
+
+#: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:68
+#, kde-format
+msgid "Variable holding the maximum value (default=100)"
+msgstr ""
+"Promjenljiva koja čuva maksimalnu vrijednost (podrazumijevana vrijednost=100)"
+
+#: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:74
+#, kde-format
+msgid "Caption shown next to variable value."
+msgstr "Natpis prikazan do vrijednosti varijable."
+
+#: kmuddy/cgaugeeditor.cpp:78
+#, kde-format
+msgid "&Color"
+msgstr "&Boja"
+
+#: kmuddy/cgaugeeditor.cpp:81
+#, kde-format
+msgid "Color used to paint this gauge."
+msgstr "Boja korištena da se oboji ovaj mjerač."
+
+#: kmuddy/cmudlist.cpp:64 kmuddy/ctriggereditor.cpp:225
+#: libs/caliaseditor.cpp:149 plugins/converter/converterdialog.cpp:54
+#: plugins/scripting/crunninglist.cpp:57
+#, kde-format
+msgid "Name"
+msgstr "Ime"
+
+#: kmuddy/cmudlist.cpp:65 libs/cprofilemanager.cpp:72
+#, kde-format
+msgid "Server"
+msgstr "Server"
+
+#: kmuddy/cmudlist.cpp:66 libs/cprofilemanager.cpp:73
+#, kde-format
+msgid "Port"
+msgstr "Port"
+
+#: kmuddy/cmudlist.cpp:67
+#, kde-format
+msgid "WWW"
+msgstr "WWW"
+
+#: kmuddy/cmudlist.cpp:68
+#, kde-format
+msgid "IP"
+msgstr "IP"
+
+#: kmuddy/cmudlist.cpp:69
+#, kde-format
+msgid "Codebase"
+msgstr "Osnova koda."
+
+#: kmuddy/cmxpmanager.cpp:295
+#, kde-format
+msgid "line tag"
+msgstr "linijska oznaka"
+
+#: kmuddy/cmxpmanager.cpp:296
+#, kde-format
+msgid "expire link"
+msgstr "link isteknuća."
+
+#: kmuddy/cmxpmanager.cpp:297
+#, kde-format
+msgid "horizontal line"
+msgstr "vodoravna linija"
+
+#: kmuddy/cmxpmanager.cpp:298
+#, kde-format
+msgid "create window"
+msgstr "napravi prozor"
+
+#: kmuddy/cmxpmanager.cpp:299
+#, kde-format
+msgid "create internal window"
+msgstr "napravi interni prozor"
+
+#: kmuddy/cmxpmanager.cpp:300
+#, kde-format
+msgid "close window"
+msgstr "zatvori prozor"
+
+#: kmuddy/cmxpmanager.cpp:301
+#, kde-format
+msgid "set active window"
+msgstr "postavi aktivni prozor"
+
+#: kmuddy/cmxpmanager.cpp:302
+#, kde-format
+msgid "move cursor"
+msgstr "pomjeri kursor"
+
+#: kmuddy/cmxpmanager.cpp:303
+#, kde-format
+msgid "erase text"
+msgstr "obriši tekst"
+
+#: kmuddy/cmxpmanager.cpp:304
+#, kde-format
+msgid "relocate"
+msgstr "premjesti"
+
+#: kmuddy/cmxpmanager.cpp:305
+#, kde-format
+msgid "send username/password"
+msgstr "pošalji korisničko ime/šifru"
+
+#: kmuddy/cmxpmanager.cpp:306
+#, kde-format
+msgid "image"
+msgstr "slika"
+
+#: kmuddy/cmxpmanager.cpp:307
+#, kde-format
+msgid "image map"
+msgstr "mapa slika"
+
+#: kmuddy/cmxpmanager.cpp:308
+#, kde-format
+msgid "unknown"
+msgstr "nepoznat"
+
+#: kmuddy/cmxpmanager.cpp:310
+#, kde-format
+msgid "Ignoring unsupported MXP request (%1)"
+msgstr "Ignoriranje nepodržanog MXP zahtjeva (%1)"
+
+#: kmuddy/csession.cpp:84
+#, kde-format
+msgid "Ctrl+Enter adds new line, unless changed in settings"
+msgstr ""
+"Ctrl+Enter dodaje novu liniju, osim ukoliko nije promijenjeno u postavkama."
+
+#: kmuddy/csession.cpp:88
+#, kde-format
+msgid "Switches between standard and multi-line input line."
+msgstr "Mijenja između standardne i višelinijske linije za unos."
+
+#: kmuddy/csessionmanager.cpp:152 kmuddy/csessionmanager.cpp:186
+#, kde-format
+msgid "No connection"
+msgstr "Nema konekcije"
+
+#: kmuddy/csessionmanager.cpp:215
+#, kde-format
+msgid "Connection closed."
+msgstr "Veza je zatvorena."
+
+#: kmuddy/cshortcut.cpp:126
+#, kde-format
+msgid "(unknown)"
+msgstr "(nepoznato)"
+
+#: kmuddy/cshortcut.cpp:128
+#, kde-format
+msgid "(none)"
+msgstr "(nijedan)"
+
+#: kmuddy/cshortcut.cpp:132
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#: kmuddy/cshortcut.cpp:134
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: kmuddy/cshortcut.cpp:136
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: kmuddy/cshortcut.cpp:138
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
+#: kmuddy/kmuddy.cpp:287
+#, kde-format
+msgid "&Command"
+msgstr "&Naredba"
+
+#: kmuddy/cshortcuteditor.cpp:71
+#, kde-format
+msgid ""
+"Command that will be executed when you press the defined key combination.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Komanda koja će biti izvršena kada pritisnete definisanu kombinaciju tipki.\n"
+"Komanda može uključivati pseudonime, kodne pozive i slične stvari."
+
+#: kmuddy/cshortcuteditor.cpp:76
+#, kde-format
+msgid "Shortcut"
+msgstr "Prečica"
+
+#: kmuddy/cshortcuteditor.cpp:80
+#, kde-format
+msgid "Grab shortcut..."
+msgstr "Pokupi prečicu..."
+
+#: kmuddy/cshortcuteditor.cpp:83
+#, kde-format
+msgid "&Send command"
+msgstr "&Pošalji naredbu"
+
+#: kmuddy/cshortcuteditor.cpp:84
+#, kde-format
+msgid ""
+"If checked, the command will be sent to the MUD. Otherwise, it will be put "
+"in the inputline."
+msgstr ""
+"Ako je označena, komanda će biti poslana  MUD-u. U durgom slučaju, bit će "
+"stavljena u liniju za unos."
+
+#: kmuddy/cshortcuteditor.cpp:87
+#, kde-format
+msgid "&Overwrite existing text"
+msgstr "&Prepiši preko postojećeg teksta."
+
+#: kmuddy/cshortcuteditor.cpp:88
+#, kde-format
+msgid ""
+"If there already is some text in the input line, should it be overwritten?"
+msgstr ""
+"Ukoliko već ima nekog teksta u liniji za unos, da li preko njega treba "
+"pisati novi?"
+
+#: kmuddy/cstatusvareditor.cpp:61
+#, kde-format
+msgid "Variable displayed by this status variable."
+msgstr "Promjenljiva prikazana od strane ove statusne promjenljive."
+
+#: kmuddy/cstatusvareditor.cpp:77
+#, kde-format
+msgid "&Show as percentage"
+msgstr "&Prikaži kao procenat."
+
+#: kmuddy/cstatusvareditor.cpp:78
+#, kde-format
+msgid ""
+"When enabled, this variable will be shown as percentage. (of max.value, or "
+"of 100 if no max.value given)"
+msgstr ""
+"Kada je omogućena, ova promjenljiva će biti prikazana procentualno. (od maks."
+"vrijednosti, ili od 100 ako nije data maks.vrijednost)"
+
+#: kmuddy/ctelnet.cpp:241 kmuddy/ctelnet.cpp:315
+#, kde-format
+msgid "--- A connection has been established ---"
+msgstr "--- Konekcija je uspostavljena ---"
+
+#: kmuddy/ctelnet.cpp:251
+#, kde-format
+msgid "Connecting..."
+msgstr "Povezujem se..."
+
+#: kmuddy/ctelnet.cpp:1067
+#, kde-format
+msgid "The remote server has been found, attempting connection."
+msgstr "Udaljeni server je pronađen, pokušavam se konektovati."
+
+#: kmuddy/ctimer.cpp:78
+#, kde-format
+msgid " sec"
+msgstr " sek."
+
+#: kmuddy/ctimer.cpp:80
+#, kde-format
+msgid ", single-shot"
+msgstr ", jedan udarac"
+
+#: kmuddy/ctimereditor.cpp:70
+#, kde-format
+msgid ""
+"Command that will be executed on each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Komanda koja će biti izvršena na svaki otkucaj.\n"
+"Komanda može uključivati pseudonime, kodne pozive i slične stvari."
+
+#: kmuddy/ctimereditor.cpp:74
+#, kde-format
+msgid "&Interval"
+msgstr "&Interval"
+
+#: kmuddy/ctimereditor.cpp:78 kmuddy/ctimereditor.cpp:95
+#, kde-format
+msgid " secs"
+msgstr " sekundi"
+
+#: kmuddy/ctimereditor.cpp:82
+#, kde-format
+msgid "&Single-shot"
+msgstr "&Jedan udarac"
+
+#: kmuddy/ctimereditor.cpp:83
+#, kde-format
+msgid "When enabled, the timer will only be executed once and then disabled."
+msgstr ""
+"Kada je omogućen, tajmer će biti izvršen samo jednom i onda će biti "
+"isključen."
+
+#: kmuddy/ctimereditor.cpp:85
+#, kde-format
+msgid "&Run a command in advance"
+msgstr "&Pokreni komandu unaprijed."
+
+#: kmuddy/ctimereditor.cpp:86
+#, kde-format
+msgid "Run a command a given number of seconds before each timer tick."
+msgstr "Pokreni komandu dati broj sekundi prije svakog otkucaja tajmera."
+
+#: kmuddy/ctimereditor.cpp:88
+#, kde-format
+msgid "Advance command"
+msgstr "Napredna komanda."
+
+#: kmuddy/ctimereditor.cpp:91
+#, kde-format
+msgid "&Seconds before tick"
+msgstr "&Sekunde prije otkucaja."
+
+#: kmuddy/ctimereditor.cpp:98
+#, kde-format
+msgid "C&ommand"
+msgstr "Na&redba"
+
+#: kmuddy/ctimereditor.cpp:101
+#, kde-format
+msgid ""
+"Command that will be executed the specified time before each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Komanda koja će biti izvršena dato vrijeme prije svakog otkucaja.\n"
+"Komanda može uključivati pseudonime, kodne pozive i slične stvari."
+
+#: kmuddy/ctranscript.cpp:174
+#, kde-format
+msgid "Session transcript has been stopped."
+msgstr "Prepis sesije je zaustavljen."
+
+#: kmuddy/ctranscript.cpp:208
+#, kde-format
+msgid "Advanced session transcript has been stopped."
+msgstr "Napredni prepis sesije je zaustavljen."
+
+#: kmuddy/ctranscript.cpp:259
+#, kde-format
+msgid "Transcript file could not be opened."
+msgstr "Fajl prepisa nije bilo moguće otvoriti."
+
+#: kmuddy/ctranscript.cpp:260
+#, kde-format
+msgid "Session transcript could not be started."
+msgstr "Prepis sesije nije mogao biti pokrenut."
+
+#: kmuddy/ctranscript.cpp:279
+#, kde-format
+msgid "Session transcript has just started."
+msgstr "Transkripcija sesije je upravo pocela."
+
+#: kmuddy/ctranscript.cpp:288
+#, kde-format
+msgid "Session transcript has been started."
+msgstr "Transkripcija sesije je zapoceta."
+
+#: kmuddy/ctranscript.cpp:315
+#, kde-format
+msgid "Advanced transcript file could not be opened."
+msgstr "Napredni transkript fajl nije bilo moguce otvoriti."
+
+#: kmuddy/ctranscript.cpp:316
+#, kde-format
+msgid "Advanced session transcript could not be started."
+msgstr "Naprednu transkripcija sesije nije bilo moguce poceti."
+
+#: kmuddy/ctranscript.cpp:332
+#, kde-format
+msgid "Advanced session transcript has just started."
+msgstr "Napredna transkricpija sesije je upravo pocela."
+
+#: kmuddy/ctranscript.cpp:337
+#, kde-format
+msgid "Advanced session transcript has been started."
+msgstr "Napredna transkripcija sesije je zapoceta."
+
+#: kmuddy/ctranscript.cpp:341
+#, kde-format
+msgid "Session transcript will be rotated at midnight."
+msgstr "Transkripcija sesije će biti rotirana u ponoć."
+
+#: kmuddy/ctranscript.cpp:427
+#, kde-format
+msgid "Dump file could not be opened."
+msgstr "Fajl sa izvjestajem o prekidu programa nije bil moguce otvoriti."
+
+#: kmuddy/ctriggereditor.cpp:119
+#, kde-format
+msgid "Keep"
+msgstr "Sačuvaj"
+
+#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Black"
+msgstr "Crna"
+
+#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Red"
+msgstr "Crveno"
+
+#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Green"
+msgstr "Zeleno"
+
+#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Yellow"
+msgstr "Žuta"
+
+#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Blue"
+msgstr "Plavo"
+
+#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Magenta"
+msgstr "Magenta"
+
+#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Cyan"
+msgstr "Cijan"
+
+#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Gray"
+msgstr "Siva"
+
+#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Dark gray"
+msgstr "Tamno siva."
+
+#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright red"
+msgstr "Svijetlo crvena."
+
+#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright green"
+msgstr "Svijetlo zelena."
+
+#: kmuddy/ctriggereditor.cpp:131 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "Bright yellow"
+msgstr "Svijetlo žuta."
+
+#: kmuddy/ctriggereditor.cpp:132 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "Bright blue"
+msgstr "Svijetlo plava."
+
+#: kmuddy/ctriggereditor.cpp:133 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "Bright magenta"
+msgstr "Svijetla magneta."
+
+#: kmuddy/ctriggereditor.cpp:134 kmuddy/dialogs/dlgappsettings.cpp:75
+#, kde-format
+msgid "Bright cyan"
+msgstr "Svijetla cijan."
+
+#: kmuddy/ctriggereditor.cpp:135 kmuddy/dialogs/dlgappsettings.cpp:75
+#, kde-format
+msgid "White"
+msgstr "Bijela"
+
+#: kmuddy/ctriggereditor.cpp:136
+#, kde-format
+msgid "Other"
+msgstr "Drugo"
+
+#: kmuddy/ctriggereditor.cpp:141
+#, kde-format
+msgid "Whole line"
+msgstr "Čitava linija"
+
+#: kmuddy/ctriggereditor.cpp:142
+#, kde-format
+msgid "Matching text"
+msgstr "Odgovarajući tekst"
+
+#: kmuddy/ctriggereditor.cpp:143
+#, kde-format
+msgid "Prefix"
+msgstr "Prefiks"
+
+#: kmuddy/ctriggereditor.cpp:144
+#, kde-format
+msgid "Suffix"
+msgstr "Sufiks"
+
+#: kmuddy/ctriggereditor.cpp:145
+#, kde-format
+msgid "Full prefix"
+msgstr "Puni prefiks."
+
+#: kmuddy/ctriggereditor.cpp:146
+#, kde-format
+msgid "Full suffix"
+msgstr "Puni sufiks."
+
+#: kmuddy/ctriggereditor.cpp:147
+#, kde-format
+msgid "Backreference"
+msgstr "Referenca na prethodni dio"
+
+#: kmuddy/ctriggereditor.cpp:170
+#, kde-format
+msgid "&Trigger text"
+msgstr "&Okidač tekst"
+
+#: kmuddy/ctriggereditor.cpp:173 libs/caliaseditor.cpp:97
+#, kde-format
+msgid "Command that will be replaced if you enter it."
+msgstr "Komanda koja će biti zamijenjena ako joj pristupite."
+
+#: kmuddy/ctriggereditor.cpp:183 libs/caliaseditor.cpp:107
+#, kde-format
+msgid "Exact match"
+msgstr "Tačno poklapanje."
+
+#: kmuddy/ctriggereditor.cpp:184 libs/caliaseditor.cpp:108
+#, kde-format
+msgid "Sub-string"
+msgstr "Pod-string"
+
+#: kmuddy/ctriggereditor.cpp:185 libs/caliaseditor.cpp:109
+#, kde-format
+msgid "Begins with"
+msgstr "Počinje sa"
+
+#: kmuddy/ctriggereditor.cpp:186 libs/caliaseditor.cpp:110
+#, kde-format
+msgid "Ends with"
+msgstr "Završava sa"
+
+#: kmuddy/ctriggereditor.cpp:187 libs/caliaseditor.cpp:111
+#, kde-format
+msgid "Regular expression"
+msgstr "Regularni izraz"
+
+#: kmuddy/ctriggereditor.cpp:188
+#, kde-format
+msgid ""
+"Type of matching. Trigger will only be activated if this passes this type of "
+"test. Note that triggers are always matched as whole words."
+msgstr ""
+"Tip poklapanja. Okidač će jedino biti aktiviran ako ovo prođe ovu vrstu "
+"testa. Upamtite da se okidači uvijek poklapaju kao cijele riječi."
+
+#: kmuddy/ctriggereditor.cpp:195 libs/caliaseditor.cpp:119
+#, kde-format
+msgid "&Edit..."
+msgstr "&Izmijeni..."
+
+#: kmuddy/ctriggereditor.cpp:206 libs/caliaseditor.cpp:130
+#, kde-format
+msgid ""
+"Conditional triggering. If this is set, the actions will only fire if the "
+"condition is true (that means, if it evaluates as non-zero)."
+msgstr ""
+"Uslovno okidanje. Ako je ovo postavljeno, akcije će aktivirati samo ako je "
+"uslo istinit (to znači, ako se evaluira kao ne-nula)."
+
+#: kmuddy/ctriggereditor.cpp:210
+#, kde-format
+msgid "&Command(s) to send:"
+msgstr "&Komanda(e) za slanje:"
+
+#: kmuddy/ctriggereditor.cpp:214
+#, kde-format
+msgid "Command(s) that will replace command you've entered."
+msgstr "Komanda(e) koja(e) će zamijeniti komandu koju ste unijeli."
+
+#: kmuddy/ctriggereditor.cpp:217 libs/caliaseditor.cpp:141
+#, kde-format
+msgid "Test area"
+msgstr "Testno područje."
+
+#: kmuddy/ctriggereditor.cpp:219 libs/caliaseditor.cpp:143
+#, kde-format
+msgid "&Text: "
+msgstr "&Tekst: "
+
+#: kmuddy/ctriggereditor.cpp:225 kmuddy/dialogs/dlgstatistics.cpp:53
+#: libs/caliaseditor.cpp:149 plugins/varviewer/dlgvarviewer.cpp:71
+#, kde-format
+msgid "Value"
+msgstr "Vrijednost"
+
+#: kmuddy/ctriggereditor.cpp:229
+#, kde-format
+msgid ""
+"This is testing area. You can test your trigger here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"Ovo je testno područje. Možete testirati vaš okidač ovdje da biste vidjeli "
+"da li radi ono što želite. Samo ukucajte neki tekst i vidite šta se dešava."
+
+#: kmuddy/ctriggereditor.cpp:263 kmuddy/ctriggereditor.cpp:526
+#: libs/caliaseditor.cpp:187 libs/caliaseditor.cpp:244
+#: plugins/scripting/cscripteditor.cpp:86
+#, kde-format
+msgid "&Options"
+msgstr "&Opcije"
+
+#: kmuddy/ctriggereditor.cpp:266 libs/caliaseditor.cpp:196
+#, kde-format
+msgid "Whole words only"
+msgstr "Samo cijele riječi"
+
+#: kmuddy/ctriggereditor.cpp:267
+#, kde-format
+msgid ""
+"When enabled, this trigger will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"Kada je omogućen, ovaj okidač će se poklapati sa tekstom samo ako ima "
+"znakova razmaka ili nema ničega prije/poslije označenog stringa."
+
+#: kmuddy/ctriggereditor.cpp:270 libs/caliaseditor.cpp:200
+#, kde-format
+msgid "Case sensitive"
+msgstr "Razlikuj mala i velika slova"
+
+#: kmuddy/ctriggereditor.cpp:271 libs/caliaseditor.cpp:201
+#, kde-format
+msgid ""
+"When this option is on, upper case and lower case letters are treated as "
+"different characters, otherwise they're considered to be the same."
+msgstr ""
+"Kada je ova opcija uključena, velika i mala slova se tretiraju kao različiti "
+"karakteri, a inače se smatra da su isti."
+
+#: kmuddy/ctriggereditor.cpp:275
+#, kde-format
+msgid "Show but do not send"
+msgstr "Pokaži ali ne šalji."
+
+#: kmuddy/ctriggereditor.cpp:276
+#, kde-format
+msgid ""
+"When enabled, the text will not be sent to the MUD, it will only be "
+"displayed on the screen."
+msgstr ""
+"Kada je omogućeno, tekst neće biti poslan MUD-u, samo će biti prikazan na "
+"ekranu."
+
+#: kmuddy/ctriggereditor.cpp:279 libs/caliaseditor.cpp:209
+#, kde-format
+msgid "Global matching"
+msgstr "Globalno poklapanje."
+
+#: kmuddy/ctriggereditor.cpp:280
+#, kde-format
+msgid ""
+"<p>With global matching, one trigger/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it's "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition does not terminate scanning, so you can use this to highlight "
+"names from a list (using the condition to check if a match is in the list), "
+"or something like that."
+msgstr ""
+"<p>Sa globalnim poklapanjem, jedan okidač/okidač može poklapati više puta, "
+"ako sadrži uzorak više nego jednom. Naprimjer, ako je uzorak abc, poklapa se "
+"samo jednom sa abcdabcd ako je globalno poklapanje isključeno, a dva puta "
+"ukoliko je uključeno. Za svako poklapanje, zatražene akcije su izvršene - "
+"tako da komande mogu biti poslane više puta, po jednom po poklapanju.</"
+"p><p>Primjetite da neuspjeh uslova ne okončava skeniranje, tako da možete "
+"koristiti ovo da označite imena sa liste (koristeći uslov da provjerite da "
+"li ima poklapanja u listi), ili nesšto tog tipa."
+
+#: kmuddy/ctriggereditor.cpp:302 kmuddy/ctriggereditor.cpp:309
+#, kde-format
+msgid "Continue matching"
+msgstr "Nastavi sa poklapanjem."
+
+#: kmuddy/ctriggereditor.cpp:303 kmuddy/ctriggereditor.cpp:310
+#, kde-format
+msgid "Stop matching"
+msgstr "Zaustavi poklapanje."
+
+#: kmuddy/ctriggereditor.cpp:304 kmuddy/ctriggereditor.cpp:311
+#, kde-format
+msgid "Leave group"
+msgstr "Napusti grupu"
+
+#: kmuddy/ctriggereditor.cpp:330
+#, kde-format
+msgid "&Enable color replacement"
+msgstr "&Omogući zamjenu boja"
+
+#: kmuddy/ctriggereditor.cpp:331 kmuddy/ctriggereditor.cpp:527
+#, kde-format
+msgid "Color replacement"
+msgstr "Zamjena boja"
+
+#: kmuddy/ctriggereditor.cpp:353 kmuddy/ctriggereditor.cpp:412
+#, kde-format
+msgid "&Back-reference"
+msgstr "&Referenca na prethodni dio"
+
+#: kmuddy/ctriggereditor.cpp:356
+#, kde-format
+msgid "&Add"
+msgstr "&Dodaj"
+
+#: kmuddy/ctriggereditor.cpp:357
+#, kde-format
+msgid "&Remove"
+msgstr "&Ukloni"
+
+#: kmuddy/ctriggereditor.cpp:358
+#, kde-format
+msgid "&Colorize"
+msgstr "&Oboji"
+
+#: kmuddy/ctriggereditor.cpp:360
+#, kde-format
+msgid "&Foreground"
+msgstr "&Prednji plan"
+
+#: kmuddy/ctriggereditor.cpp:362
+#, kde-format
+msgid "&Background"
+msgstr "&Pozadina"
+
+#: kmuddy/ctriggereditor.cpp:378
+#, kde-format
+msgid "Type"
+msgstr "Vrsta"
+
+#: kmuddy/ctriggereditor.cpp:378
+#, kde-format
+msgid "Foreground"
+msgstr "Prednji plan"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
+#: kmuddy/ctriggereditor.cpp:378 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
+#, kde-format
+msgid "Background"
+msgstr "Pozadina"
+
+#: kmuddy/ctriggereditor.cpp:400
+#, kde-format
+msgid "Text &rewrite trigger"
+msgstr "Tekst &prepisni okidač"
+
+#: kmuddy/ctriggereditor.cpp:403 kmuddy/ctriggereditor.cpp:528
+#, kde-format
+msgid "Rewrite text"
+msgstr "Prepiši tekst"
+
+#: kmuddy/ctriggereditor.cpp:407
+#, kde-format
+msgid "&Change this part of line:"
+msgstr "&Promjeni ovaj dio linije:"
+
+#: kmuddy/ctriggereditor.cpp:415
+#, kde-format
+msgid "&To this value:"
+msgstr "&Ovoj vrijednosti:"
+
+#: kmuddy/ctriggereditor.cpp:439
+#, kde-format
+msgid "Do not show (&gag) the line"
+msgstr "Ne pokazuj (&gag) liniju"
+
+#: kmuddy/ctriggereditor.cpp:440
+#, kde-format
+msgid ""
+"This will prevent the matched line from being displayed in the output window."
+msgstr "Ovo će spriječiti označnu liniju da bude prikazana u izlaznom prozoru."
+
+#: kmuddy/ctriggereditor.cpp:442
+#, kde-format
+msgid "&Notify"
+msgstr "&Obavijesti"
+
+#: kmuddy/ctriggereditor.cpp:443
+#, kde-format
+msgid ""
+"This setting only takes effect if you have disabled the \"Always notify\" "
+"option in Global settings and at least one of global/local notification is "
+"enabled. It will activate notification if the KMuddy window and/or this "
+"session is not active at the moment.\n"
+"Useful if you only want to be notified of some events (tells, combat, ...)."
+msgstr ""
+"Ovo podešavanje ima efekta jedino ako ste isključili \"Uvijek obavijesti\" "
+"opciju u Globalnim podešavanjima i ako je barem jedna od globalnih/lokalnih "
+"obavijesti uključena. To će aktivirati obavijest ako je KMuddy prozor i/ili "
+"ova sesija neaktivna u trenutku.\n"
+"Korisno ako želite da budete obaviješteni samo o nekim događajima "
+"(komunikacije, borba, ...)."
+
+#: kmuddy/ctriggereditor.cpp:450
+#, kde-format
+msgid "&Prompt-detection trigger"
+msgstr "&Okidač za detekciju iskačuće poruke"
+
+#: kmuddy/ctriggereditor.cpp:451
+#, kde-format
+msgid ""
+"Enabling this will turn this trigger into a prompt detection trigger, that "
+"is, text will be passed to these triggers even if no newline was received, "
+"the text will be displayed as a prompt if the trigger gets matched, and most "
+"other options will NOT be taken into effect - prompt-detect trigger cannot "
+"send out text, gag lines, do notification. Colorization is still possible."
+msgstr ""
+"Uključivanje ovoga će pretvoriti ovaj okidač u okidač za detekciju iskačuće "
+"poruke, što jest, tekst će biti proslijeđen ovim okidačima čak iako nije "
+"primljena nova linija, telst će biti prikazan kao iskačuća poruka ako okidač "
+"dobije poklapanje, a većina drugih opcija NEĆE imati efekta - okidač za "
+"detekciju iskačuće poruke ne može slati tekst, blokirati linije, obavljati "
+"obavijesti. Kolorizacija je i dalje moguća."
+
+#: kmuddy/ctriggereditor.cpp:457
+#, kde-format
+msgid "Play s&ound file"
+msgstr "Pokreni z&vučni fajl"
+
+#: kmuddy/ctriggereditor.cpp:458
+#, kde-format
+msgid ""
+"This trigger will play a sound. Useful as a notification of important "
+"events, or to assign sounds to some events."
+msgstr ""
+"Ovaj okidač će pustiti zvuk. Koristan kao obavijest važnih događaja, ili da "
+"se dodijeli zvuk nekim događajima."
+
+#: kmuddy/ctriggereditor.cpp:477
+#, kde-format
+msgid "Send output to a separate window"
+msgstr "Pošaljji izlazne podatke u poseban prozor"
+
+#: kmuddy/ctriggereditor.cpp:478
+#, kde-format
+msgid "This will send the matched text to a separate output window"
+msgstr "Ovo će poslati označeni tekst u poseban izlazni prozor"
+
+#: kmuddy/ctriggereditor.cpp:480 kmuddy/dialogs/dlgwindows.cpp:53
+#, kde-format
+msgid "Output Windows"
+msgstr "Izlazni Prozori"
+
+#: kmuddy/ctriggereditor.cpp:491
+#, kde-format
+msgid "&Gag output in main window"
+msgstr "&Blokiraj izlaz u glavnom prozoru"
+
+#: kmuddy/ctriggereditor.cpp:492
+#, kde-format
+msgid ""
+"This will cause output sent to a separate window not to be displayed in main "
+"KMuddy session window"
+msgstr ""
+"Ovo će prouzrokovati da izlazni podaci poslani u poseban prozor ne budu "
+"prikazani u glavnom prozoru KMuddy sesije"
+
+#: kmuddy/ctriggereditor.cpp:495
+#, kde-format
+msgid "&Window name"
+msgstr "&Ime prozora"
+
+#: kmuddy/ctriggereditor.cpp:499
+#, kde-format
+msgid "&Create window"
+msgstr "&Napravi prozor"
+
+#: kmuddy/ctriggereditor.cpp:524 libs/caliaseditor.cpp:242
+#, kde-format
+msgid "&Basic"
+msgstr "&Osnovno"
+
+#: kmuddy/ctriggereditor.cpp:529
+#, kde-format
+msgid "Special trigger"
+msgstr "Specijalni okidač"
+
+#: kmuddy/ctriggereditor.cpp:530
+#, kde-format
+msgid "Output windows"
+msgstr "Izlazni prozori"
+
+#: kmuddy/ctriggereditor.cpp:594
+#, kde-format
+msgid "This text did not match your trigger."
+msgstr "Ovaj tekst nije imao poklapanje sa vašim okidačem."
+
+#: kmuddy/ctriggereditor.cpp:599
+#, kde-format
+msgid "This text matches your trigger."
+msgstr "Ovaj tekst se poklapa sa vašim okidačem."
+
+#: kmuddy/ctriggereditor.cpp:627
+#, kde-format
+msgid "Maximum number of colorizations reached."
+msgstr "Maksimalni broj kolorizacija je dosegnut."
+
+#: kmuddy/ctriggereditor.cpp:710 plugins/mapper/cmapviewstatusbar.cpp:61
+#, kde-format
+msgid "Unknown"
+msgstr "Nepoznat"
+
+#: kmuddy/ctriggereditor.cpp:732
+#, kde-format
+msgid "Choose sound file"
+msgstr "Odaberi zvučni fajl"
+
+#: kmuddy/ctriggereditor.cpp:751
+#, kde-format
+msgid "Window name is empty!"
+msgstr "Ime prozora je prazno!"
+
+#: kmuddy/dialogs/cdirlist.cpp:36
+#, kde-format
+msgid "&Add..."
+msgstr "&Dodaj..."
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
+#: kmuddy/dialogs/cdirlist.cpp:37 plugins/mapper/cmapclipboard.cpp:76
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
+#, kde-format
+msgid "Delete"
+msgstr "Obriši"
+
+#: kmuddy/dialogs/cdirlist.cpp:38
+#, kde-format
+msgid "Move &up"
+msgstr "Pomjeri &gore"
+
+#: kmuddy/dialogs/cdirlist.cpp:39
+#, kde-format
+msgid "Move &down"
+msgstr "Pomjeri &dolje"
+
+#: kmuddy/dialogs/cdirlist.cpp:73
+#, kde-format
+msgid "Choose sound directory"
+msgstr "Odaberi zvučni direktorij"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:78
+#, kde-format
+msgid "Application settings"
+msgstr "Postavke aplikacija"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:85
+#, kde-format
+msgid "Window"
+msgstr "Prozor"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:88
+#, kde-format
+msgid "Output area"
+msgstr "Područje za izlaz"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:91
+#, kde-format
+msgid "Font"
+msgstr "Font"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:94
+#, kde-format
+msgid "Input line"
+msgstr "Linija unosa"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:97
+#, kde-format
+msgid "Colors"
+msgstr "Boje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:100
+#, kde-format
+msgid "Strings"
+msgstr "Stringovi"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:103
+#, kde-format
+msgid "Sounds"
+msgstr "Zvukovi"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:106
+#, kde-format
+msgid "Shortcuts"
+msgstr "Prečice"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:112
+#, kde-format
+msgid "S&how the tab bar even if not needed"
+msgstr "P&rikaži traku kartica čak iako nije potrebna"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:113
+#, kde-format
+msgid ""
+"If this is checked, the tab bar will always be shown. Otherwise, it will be "
+"hidden if it contains only one tab."
+msgstr ""
+"Ako je ovo označeno, traka kartica će uvijek biti prikazana. U durgom "
+"slučaju, bit će skrivena ukoliko sadrži samo jednu karticu."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:116
+#, kde-format
+msgid "Show au&xiliary input line"
+msgstr "Prikaži po&moćnu liniju unosa"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:117
+#, kde-format
+msgid "You will have two input lines instead of one."
+msgstr "Imat ćete dvije linije unosa umjesto jedne."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:119
+#, kde-format
+msgid "&Always notify"
+msgstr "&Uvijek obavijesti"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:120
+#, kde-format
+msgid ""
+"If this is checked, output notification will be used whenever some text "
+"comes from the server. Otherwise, it will only be used when a notification "
+"trigger is activated. Note that this option only takes effect if global or "
+"local notification is enabled."
+msgstr ""
+"Ako je ovo označeno, izlazna obavijest će biti korištena kada god neki tekst "
+"dođe od servera. U drugom slučaju, bit će korištena samo onda kada je okidač "
+"za obavijesti aktiviran. Primjetite da ova opcija ima efekta samo ako je "
+"globalna ili lokalna obavijest uključena."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:125
+#, kde-format
+msgid "&Global notification"
+msgstr "&Globalne notifikacije"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:126
+#, kde-format
+msgid ""
+"When some text comes from the server and KMuddy is not currently active, "
+"window caption and the taskbar will try to attract your attention (some "
+"characters will blink there)."
+msgstr ""
+"Kada neki tekst dođe od servera i KMuddy nije trenutno aktivan, natpis u "
+"prozoru i alatna traka će pokušati da privuku vašu pažnju (neka slova će da "
+"svjetlucaju povremeno)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:130
+#, kde-format
+msgid "&Local notification"
+msgstr "&Lokalna obavijest"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:131
+#, kde-format
+msgid ""
+"When some text comes from the server and this session is not currently "
+"active, its tab will try to attract your attention (some characters will "
+"blink there)."
+msgstr ""
+"Kada neki tekst dođe od servera i ova sesija nije trenutno aktivna, njena "
+"sesija će pokušati da privče vašu pažnju (neka slova će da svjetlucaju "
+"povremeno)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:136
+#, kde-format
+msgid "Display system tray icon"
+msgstr "Prikaži ikonu pored sata"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:137
+#, kde-format
+msgid ""
+"This option toggles the presence of the system tray icon. The icon can be "
+"used to hide the application window without taking up space in the taskbar. "
+"You can click on the icon to hide the window and then click again to restore "
+"it. Your connection will remain active even if the window is hidden and you "
+"will still receive notification messages. "
+msgstr ""
+"Ova opcija prebacuje prisustvo ikone u sistemskom uglu. Ikona se može "
+"koristiti za skrivanje prozor aplikacije bez zauzimanja prostora u traci "
+"zadataka. Možete da kliknete na ikonu da sakrijete prozor, a zatim kliknite "
+"ponovo da ga vratite. Vaša veza će ostati aktivna čak i ako je prozor "
+"skriven i dalje ćete primati poruke obavještenja. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:145
+#, kde-format
+msgid "Use passive popups"
+msgstr "Koristi pasivne iskačuće prozore."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:146
+#, kde-format
+msgid ""
+"This option toggles the use of passive popups. Passive popups appear near "
+"the system tray icon when you are in another window and alert you to the "
+"presence of activity in one of your connections. "
+msgstr ""
+"Ova opcija prebacuje korišćenje pasivnih iskočnih prozora. Pasivni popups "
+"pojavljuju u blizini ikone sistemskom uglu kada ste u drugoj listi i vas "
+"upozoriti na postojanje aktivnosti u jednoj od vaših konekcija. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:152
+#, kde-format
+msgid "Auto-connect on startup"
+msgstr "Automatski se konektuj na startu sistema."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:153
+#, kde-format
+msgid ""
+"With this option set, the selected connection will be automatically "
+"initiated immediately after starting KMuddy. Handy when you connect using "
+"one profile most of the time."
+msgstr ""
+"Kada je ova opcija aktivirana, odabrana konekcija će automatski  biti "
+"pokrenuta odmah nakon pokretanja KMuddy-a. Korisno kada se konektujete "
+"koristeći jedan profil većinu vremena."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:156
+#, kde-format
+msgid "Auto-connect to:"
+msgstr "Automatski se konektuj na;:"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:194
+#, kde-format
+msgid "Default &background color"
+msgstr "Podrazumijevana &boja pozadine"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:197
+#, kde-format
+msgid "This color will be used as a standard background color."
+msgstr "Ova boja će biti korištena kao standardna boja pozadine."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:199
+#, kde-format
+msgid "Default &text color"
+msgstr "Podrazumijevana &boja teksta"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:202
+#, kde-format
+msgid "This color will be used to display standard text with no defined color."
+msgstr ""
+"Ova boja će biti korištena da se prikaže standardni tekst bez specificirane "
+"boje."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:204
+#, kde-format
+msgid "Command &echo color"
+msgstr "Boja &echo komande"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:207
+#, kde-format
+msgid "This color will be used to display commands that you have entered."
+msgstr "Ovaj boja će biti korištena da se prikažu komande koje ste unijeli."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:209
+#, kde-format
+msgid "&System message color"
+msgstr "&Boja sistemskih poruka"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:212
+#, kde-format
+msgid "This color will be used for various system messages."
+msgstr "Ova boja će biti korištena za različite sistemske poruke."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:237
+#, kde-format
+msgid "&Indentation"
+msgstr "&Uvlačenje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:237
+#, kde-format
+msgid "None"
+msgstr "Nijedan"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:238
+#, kde-format
+msgid ""
+"When a line is too long, part of it will be moved to the next line. "
+"Indentation says how many spaces will be put to the beginning of the "
+"continued line."
+msgstr ""
+"Kada je linija preduga, dio nje će biti premješten u sljedecći red. "
+"Indentacija određuje koliko znakova razmaka će biti stavljeno na početak "
+"sljedećeg reda."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:242
+#, kde-format
+msgid "&History buffer size"
+msgstr "&Velicina bafera historije"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:242
+#, kde-format
+msgid ""
+"Size of output scroll-back buffer. Please note that this setting will only "
+"affect new connections, existing ones will keep their history setting."
+msgstr ""
+"Veličina izlaznog bafera sa mogućnošću pregleda prijašnjih unosa. Molimo "
+"primijetite da će ovo podešavanje imati efekta samo na nove konekcije, već "
+"postojeće će zadržati prijašnja podešavanja."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:245
+#, kde-format
+msgid "lines"
+msgstr "linije"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:248
+#, kde-format
+msgid "Enable co&mmand echo"
+msgstr "Uključi ko&mandu echo"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:249
+#, kde-format
+msgid ""
+"Enables displaying of commands in the console.<p><b>Please note:</b> This "
+"will also disable command echo in session transcript."
+msgstr ""
+"Uključuje prikazivanje komandi u konzoli.<p><b>Molimo primjetite:</b> Ovo će "
+"također isključiti echo komandu u transkriptu sesije."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:252
+#, kde-format
+msgid "Enable s&ystem messages"
+msgstr "Uključi s&istemske poruke"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:253
+#, kde-format
+msgid "Enables displaying of system messages in the console."
+msgstr "Uključuje prikazivanje sistemskih poruka u konzoli."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:256
+#, kde-format
+msgid "Enable b&linking"
+msgstr "Uključi  s&vjetlucanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:257
+#, fuzzy, kde-format
+#| msgid "Enable b&linking"
+msgid "Enables support for blinking. Currently not supported."
+msgstr "Uključi  s&vjetlucanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:273
+#, kde-format
+msgid "&Server output"
+msgstr "&Serverski izlaz"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:276 kmuddy/dialogs/dlgappsettings.cpp:286
+#: kmuddy/dialogs/dlgappsettings.cpp:296
+#, kde-format
+msgid "Choose..."
+msgstr "Izaberi..."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:279
+#, kde-format
+msgid "Here you can select a font that will be used for main display."
+msgstr "Ovdje možete odabrati font koji će biti korišten za glavni displej."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:283
+#, kde-format
+msgid "&Input line"
+msgstr "&Linija unosa"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:289
+#, kde-format
+msgid "Here you can select a font that will be used for the input line."
+msgstr "Ovdje možete odabrati font koji će biti korišten za liniju unosa."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:293
+#, kde-format
+msgid "&Multi-line input"
+msgstr "&Višelinijski unos"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:299
+#, kde-format
+msgid ""
+"Here you can select a font that will be used for the multi-line input window."
+msgstr ""
+"Ovdje možete odabrati font koji će biti korišten u prozoru za višelinijski "
+"unos."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:318
+#, kde-format
+msgid "&Keep sent text"
+msgstr "&Sačuvaj poslani tekst"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:319
+#, kde-format
+msgid ""
+"If you enable this option, commands will remain in the input line after you "
+"send them (by pressing ENTER); otherwise it will be cleared."
+msgstr ""
+"Ako uključite ovu opciju, komande će ostati u liniji za unos nakon što ih "
+"pošaljete (pritiskom tipke ENTER); u drugom slučaju će biti počišćene."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:322
+#, kde-format
+msgid "&Select kept text after it's sent"
+msgstr "&Označi zadržani tekst nakon što je poslan"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:323
+#, kde-format
+msgid ""
+"If you enable this option, entered command will be selected. This allows you "
+"to immediately type another command without deleting the old one and still "
+"be able to reuse previous command easily."
+msgstr ""
+"Ako uključite ovu opciju, unesena komanda će biti označena. Ovo vam "
+"omogućava da odmah unesete drugu komandu bez brisanja stare, a da i dalje "
+"možete vrlo lahko ponovo iskoristiti prijašnju komandu."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:328
+#, kde-format
+msgid "&Cursor keys browse history"
+msgstr "&Kursor tipke za pretragu historije"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:329
+#, kde-format
+msgid ""
+"If you enable this option, you will be able to choose previously entered "
+"commands with Up and Down keys."
+msgstr ""
+"Ako uključite ovu opciju, bit ćete u mogućnosti da birate prethodno unesene "
+"komande sa Gore i Dolje tipkama."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:331
+#, kde-format
+msgid "Telnet-style &paste"
+msgstr "Telnet-stil &za lijepljenje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:332
+#, kde-format
+msgid ""
+"Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
+"but the last are sent as commands immediately."
+msgstr ""
+"Uključuje telnet-stil lijepljenja, npr. ako je višelinijski tekst "
+"zalijepljen, sve linije osim posljednje su poslane kao komande odmah."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:335
+#, kde-format
+msgid "T&rim spaces"
+msgstr "O&dstranjivanje znakova razmaka"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:336
+#, kde-format
+msgid ""
+"Enables trimming of spaces from commands. Note that with this option "
+"disabled, you should avoid including spaces when typing multiple commands on "
+"one line, or you will encounter problems with special sequences not being "
+"detected properly."
+msgstr ""
+"Uključuje odstranjivanje znakova razmaka od komandi. Primijetite da sa ovom "
+"opcijom isključenom, trebali biste izbjegavati ukucanjavanje razmaka "
+"prilikom unosa više komandi u liniju, ili ćete naići na probleme sa "
+"nepravilnom detekcijom specijalnih sekvenci."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:341
+#, kde-format
+msgid "Enable &auto-completion"
+msgstr "Uključi &automatsko dopunjavanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:342
+#, kde-format
+msgid ""
+"Auto-completion is a feature that offers you possible completions for "
+"commands, as you type them. It can also finish the command for you."
+msgstr ""
+"Automatsko dopunjavanje je opcija koja vam nudi moguće završetke za komande, "
+"dok ih pišete. Može također završiti unos komande za vas."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:350
+#, kde-format
+msgid "T&ype of auto-completion"
+msgstr "T&ip automatskog dopunjavanja."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:352
+#, kde-format
+msgid "Auto-fill"
+msgstr "Automatsko popunjavanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:353
+#, kde-format
+msgid "Shortest-match auto-fill"
+msgstr "Automatsko dopunjavanje za najkraće poklapanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:354
+#, kde-format
+msgid "Popup list-box"
+msgstr "Iskačuća lista kutija"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:358
+#, kde-format
+msgid "&Background color"
+msgstr "&Pozadinska boja"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:361
+#, kde-format
+msgid "Background color of the input line"
+msgstr "Pozadinska boja linije unosa"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:363
+#, kde-format
+msgid "&Text color"
+msgstr "&Boja teksta"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:366
+#, kde-format
+msgid "Color of text that you type in the input line."
+msgstr "Boja teksta kojeg unosite u liniju unosa."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:382
+#, kde-format
+msgid "S&wap ENTER and CTRL+ENTER for multi-line"
+msgstr "Z&amijeni ENTER i CTRL+ENTER za višelinijski"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:383
+#, kde-format
+msgid ""
+"When turned off, CTRL+ENTER will insert another line in the multi-line input "
+"line, and ENTER will send commands to the server. If turned on, then the "
+"behaviour of these keys gets swapped."
+msgstr ""
+"Kada je isključeno, CTRL+ENTER će unijeti još jednu liniju u višelinijsku "
+"liniju za unos, a ENTER će će slati komande serveru. Ako je uključeno, "
+"ponašanje ovih tipki se zamijeni."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:401
+#, kde-format
+msgid "Dark colors"
+msgstr "Tamne boje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:402
+#, kde-format
+msgid "Bright colors"
+msgstr "Svijetle boje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:429
+#, kde-format
+msgid "&Command separator string"
+msgstr "&String za razdvajanje komande"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:432
+#, kde-format
+msgid ""
+"You can enter multiple commands at once, they will get executed together. "
+"Here you can enter string that can be used to separate individual commands."
+msgstr ""
+"Mozete unijeti više komandi odjednom, bit će izvšene zajedno. Ovdje možete "
+"unijeti string koji može biti korišten za razdvajanje individualnih komandi."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:436
+#, kde-format
+msgid "&Speed-walk string"
+msgstr "&String za brzi hod"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:439
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"speed-walking. Every character is treated as one command: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Commands that will be sent for each "
+"direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
+"connections only)."
+msgstr ""
+"Ako počnete komandu sa ovim stringom, komanda će biti interpretirana kao "
+"komanda sa brzim hodom. Svaki karakter će biti tretiran kao jedna komanda: "
+"n, s, w, e, j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Komande koje će biti "
+"poslane za svaku direktivu mogu biti podešene u <i>MUD preference</i> "
+"(<b>samo profilno-zasnovane</b>konekcije)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:445
+#, kde-format
+msgid "S&peed-walk even if empty"
+msgstr "B&rzi hod čak ako je prazno"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:446
+#, kde-format
+msgid ""
+"Enabling this will cause KMuddy to expand speed-walk strings even if no "
+"speed-walk string has been given. This allows faster speed-walking, but keep "
+"in mind that EVERY command that consists only of valid speed-walk characters "
+"(news, for example) will be treated as speed-walking. To avoid this, you'll "
+"have to type at least one character in upper-case."
+msgstr ""
+"Uključivanje ovoga će imati učinak da Kmuddy proširuje stringove sa brzim "
+"hodom čak i ako string za brzi hod nije dat. Ovo omogućava brži brzi hod, "
+"ali upamtite da SVAKA komanda koja se sastoji samo od validnih karaktera za "
+"brzi hod (news, na primjer) će biti tretirana kao brzi hod. Da biste "
+"izbjegli ovo, morat ćete kucati makar jedan karakter velikim slovom."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:453
+#, kde-format
+msgid "Macro-ca&ll string"
+msgstr "Makro-p&oziv stringa"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:456
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
+"(/exec calls external scripts)"
+msgstr ""
+"Ako počnete komandu sa ovim stringom, komanda će biti tretirana kao makro-"
+"poziv.<br>Sintaksa je &lt;this string&gt;komanda&gt;[parametri](/exec poziva "
+"vanjske stringove)"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:461
+#, kde-format
+msgid "&Repeater string"
+msgstr "&String za ponavljanje"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:464
+#, kde-format
+msgid ""
+"Allows you to repeat some command. For example, typing <i>#10 say hello</i> "
+"sends that command 10 times. <br>Note that this also works with aliases and "
+"macro execution.<br>Repeater and number may be separated by a space (spaces)."
+msgstr ""
+"Omogućava vam da ponavljate neke komande. Naprimjer, ukucavanje <i>#10 reci "
+"zdravo </i> šalje tu komandu 10  puta. <br>Primjetite da ovo također radi sa "
+"aliasima i makro egzegucijama.<br>Ponavljač i broj mogu biti odvojeni "
+"razmakom(ili razmacima)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:470
+#, kde-format
+msgid "&Focus string"
+msgstr "&Fokus string"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:473
+#, kde-format
+msgid ""
+"If a command is started with this string, the command will be interpreted as "
+"a command-focus-call. This will allow you to send commands to other "
+"connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
+"this string&gt; &lt;command&gt;"
+msgstr ""
+"Ako je komanda započeta sa ovim stringom, komanda će biti interpretirana kao "
+"komanda sa fokus pozivom. Ovo će vam omogućiti da šaljete komande drugim "
+"povezanim karakterima.<br>Sintaksa je &lt;ovaj string&gt; &lt;fokus tab&gt; "
+"&lt;ovaj string&gt; &lt;komanda&gt;"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:479
+#, kde-format
+msgid "Send &as-is"
+msgstr "Pošalji &kako jeste"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:482
+#, kde-format
+msgid ""
+"If a command is started with this string, it will be sent as-is, without any "
+"parsing. This string will be removed first."
+msgstr ""
+"Ako je komanda započeta sa ovim stringom, bit će poslata onakva kakva jeste, "
+"bez ikakvog analiziranja. Ovaj string će biti otklonjen prvi."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:486
+#, kde-format
+msgid "&Expand backslashes"
+msgstr "&Proširi kose crte"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:487
+#, kde-format
+msgid ""
+"This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
+"TAB, \\\\ is \\, \\<anything else> means <anything else>."
+msgstr ""
+"Ovo će uključiti ekspanziju kosih crta, što je: \\n je kraj reda, \\t je "
+"TAB, \\\\ je \\, \\<anything else> znači <anything else>."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:511
+#, kde-format
+msgid "&Enable sounds globally"
+msgstr "&Uključi zvukove općenito"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:512
+#, kde-format
+msgid ""
+"<qt>Enable playing sounds for all connections.\n"
+"Note that you can override this setting in MUD Preferences dialog.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol).</qt>"
+msgstr ""
+"<qt>Uključi puštanje zvuka za sve konekcije.\n"
+"Primjetite da možete prepraviti ovu opciju u MUD Preference dijalogu.\n"
+"Također primjetite da će ovo jedino raditi ako vaš MUD podržava <b>MSP</b> "
+"(MUD protokol zvuka).</qt>"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:516
+#, kde-format
+msgid "Allow &downloading sounds"
+msgstr "Dozvoli &preuzimanje zvukova"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:518
+#, kde-format
+msgid ""
+"MSP version 0.3 supports downloading of sound files directly from the web or "
+"FTP. You can enable this functionality here. Note that every sound will only "
+"be downloaded once. The downloaded files are stored in your homedir in "
+"directory\n"
+msgstr ""
+"MSP verzija 0.3 podržava preuzimanje zvučnih fajlova direktno sa web-a ili "
+"FTP-a. Možete uključiti ovu funkciju ovdje. Primjetite da će svaki zvuk biti "
+"preuzet jednom. Preuzeti fajlovi će biti sačuvani u vašem home folderu u "
+"direktoriju\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkBold)
+#: kmuddy/dialogs/dlgappsettings.cpp:724 kmuddy/dialogs/dlgappsettings.cpp:733
+#: kmuddy/dialogs/dlgappsettings.cpp:742 kmuddy/dialogs/dlgappsettings.cpp:751
+#: kmuddy/dialogs/dlgappsettings.cpp:760 kmuddy/dialogs/dlgappsettings.cpp:769
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
+#, kde-format
+msgid "Bold"
+msgstr "Masno"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalic)
+#: kmuddy/dialogs/dlgappsettings.cpp:725 kmuddy/dialogs/dlgappsettings.cpp:734
+#: kmuddy/dialogs/dlgappsettings.cpp:743 kmuddy/dialogs/dlgappsettings.cpp:752
+#: kmuddy/dialogs/dlgappsettings.cpp:761 kmuddy/dialogs/dlgappsettings.cpp:770
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
+#, kde-format
+msgid "Italic"
+msgstr "Kurzivno"
+
+#: kmuddy/dialogs/dlgconnect.cpp:40
+#, kde-format
+msgid "Connect"
+msgstr "Poveži se"
+
+#: kmuddy/dialogs/dlgconnect.cpp:57
+#, kde-format
+msgid ""
+"This list shows currently defined profiles.<p><b>Profiles</b> allow you to "
+"speed up connecting to your MUD, as well as to use more advanced features "
+"like <i>aliases</i> or <i>triggers</i>."
+msgstr ""
+"Ova lista pokazuje trenutno definisane profile.<p><b>Profili</b> omogućava "
+"vam da ubrzate konektovanje na vaš MUD, kao i da koristite naprednije "
+"dodatke kao <i>aliasi</i> ili <i>okidači</i>."
+
+#: kmuddy/dialogs/dlgconnect.cpp:64
+#, kde-format
+msgid "&New profile"
+msgstr "&Novi profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:65
+#, kde-format
+msgid "&Modify profile"
+msgstr "&Promijeni profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:66
+#, kde-format
+msgid "&Delete profile"
+msgstr "&Obriši profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:67
+#, kde-format
+msgid "&Duplicate profile"
+msgstr "&Dupliciraj profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:73
+#, kde-format
+msgid "Do not &send login sequence"
+msgstr "Ne &šalji login sekvencu"
+
+#: kmuddy/dialogs/dlgconnect.cpp:74
+#, kde-format
+msgid ""
+"Login sequence won't be sent for this connect. Useful when you're creating a "
+"new character and you want to use QuickConnect for some reason."
+msgstr ""
+"Login sekvenca neće biti poslana za ovo konektovanje. Korisno kada kreirate "
+"novi karakter i želite da iskoristite BrzoKonektovanje iz nekog razloga."
+
+#: kmuddy/dialogs/dlgconnect.cpp:79
+#, kde-format
+msgid "&Offline editing"
+msgstr "&Editovanje van mreže"
+
+#: kmuddy/dialogs/dlgconnect.cpp:80
+#, kde-format
+msgid "This allows offline editing of profiles."
+msgstr "Ovo omogućava editovanje profila van mreže."
+
+#: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:57
+#, kde-format
+msgid "&Connect"
+msgstr "&Kreni"
+
+#: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:58
+#, kde-format
+msgid "Establishes connection with specified parameters."
+msgstr "Uspostavlja konekciju sa specifičnim parametrima."
+
+#: kmuddy/dialogs/dlgconnect.cpp:89
+#, kde-format
+msgid "C&lose"
+msgstr "Z&atvori"
+
+#: kmuddy/dialogs/dlgconnect.cpp:90
+#, kde-format
+msgid "Closes this dialog box without connecting."
+msgstr "Zatvara ovu dijalošku kutiju bez konektovanja."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid ""
+"This profile cannot be deleted, because you have a connection open using "
+"this profile."
+msgstr ""
+"Ovaj profil ne može biti obrisan, jer imate otvorenu konekciju koja koristi "
+"ovaj profil."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid "Unable to delete"
+msgstr "Brisanje nije bilo moguće"
+
+#: kmuddy/dialogs/dlgconnect.cpp:240
+#, kde-format
+msgid "Do you really want to delete profile %1?"
+msgstr "Da li stvarno želite da obrišete profil %1?"
+
+#: kmuddy/dialogs/dlgconnect.cpp:241
+#, kde-format
+msgid "Delete profile"
+msgstr "Obriši profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid "Duplicate Profile"
+msgstr "Dupliciraj profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid "Please enter name for the duplicated profile"
+msgstr "Molim unesite ime za duplicirani profil"
+
+#: kmuddy/dialogs/dlgconnect.cpp:259
+#, kde-format
+msgid ""
+"There was an error trying to duplicate the profile. Please ensure that you "
+"have write access to the profile directory."
+msgstr ""
+"Dogodila se greška pri pokušaju dupliciranja profila. Molim osigurajte da "
+"imate pristup pisanju za direktorij profila."
+
+#: kmuddy/dialogs/dlgconnect.cpp:259
+#, kde-format
+msgid "Unable to duplicate"
+msgstr "Dupliciranje nije bilo moguće"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:37
+#, kde-format
+msgid "Dump output buffer"
+msgstr "Isprazni izlazni bafer"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:43
+#, kde-format
+msgid "&Start at current position"
+msgstr "&Počni na trenutnoj poziciji"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:44
+#, kde-format
+msgid ""
+"When this is enabled, only the part of history buffer from currently "
+"displayed part up to the end of buffer will be dumped. Otherwise entire "
+"buffer will be dumped (default)."
+msgstr ""
+"Kada je ovo uključeno, samo dio historije bafera od trenutno prikazanog "
+"dijela do kraja bafera će biti odbačen. U durgom slučaju čitav bafer će biti "
+"odbačen (podrazumijevano)."
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:51 kmuddy/dialogs/dlgtranscript.cpp:85
+#, kde-format
+msgid "&File:"
+msgstr "&Datoteka:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:54 kmuddy/dialogs/dlgtranscript.cpp:88
+#, kde-format
+msgid "&Browse..."
+msgstr "&Pregledaj..."
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:64
+#, kde-format
+msgid "&Dump format:"
+msgstr "&Format za ekstrakciju:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:66
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+# >> @item:inlistbox Search mode
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:67
+#, kde-format
+msgid "Plain text"
+msgstr "Običan tekst"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:68
+#, kde-format
+msgid "Text with ANSI colors"
+msgstr "Tekst sa ANSI bojama"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:41 kmuddy/dialogs/dlgeditprofile.cpp:197
+#: kmuddy/dialogs/dlgeditprofile.cpp:202
+#, kde-format
+msgid "Edit profile"
+msgstr "Izmijeni profil"
+
+#. i18n ("&Select from MUD list"), this);
+#. connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
+#. put some edit boxes there
+#: kmuddy/dialogs/dlgeditprofile.cpp:51
+#, kde-format
+msgid "Profile &name:"
+msgstr "Ime &profila:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:53
+#, kde-format
+msgid ""
+"Enter profile name here. You can enter any name, but it must be <b>unique</"
+"b>."
+msgstr ""
+"Unesite ime profila ovdje. Možete unijeti bilo koje ime, ali mora biti "
+"<b>jedinstveno</b>."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:55
+#, kde-format
+msgid "&Server:"
+msgstr "&Server:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:57
+#, kde-format
+msgid "Enter address of the server where your MUD is running."
+msgstr "Unesite adresu servera gdje je vaš MUD pokrenut."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:58 kmuddy/dialogs/dlgquickconnect.cpp:43
+#, kde-format
+msgid "&Port:"
+msgstr "&Port:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:61
+#, kde-format
+msgid "Enter port on which your MUD running (usually some 4-digit number)."
+msgstr ""
+"Unesite port na kojem je vaš MUD pokrenut (obično neki četverocifreni broj)."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:63
+#, kde-format
+msgid "&Login name:"
+msgstr "&Ime za login:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:65
+#, kde-format
+msgid ""
+"Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
+msgstr ""
+"Unesite vaše ime za login na MUD ovdje.<p><i>Ova postavka je opcionalna.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:66
+#, kde-format
+msgid "Pass&word:"
+msgstr "Lo&zinka:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:69
+#, kde-format
+msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
+msgstr ""
+"Unesite vašu lozinku na MUD ovdje.<p><i>Ova postavka je opcionalna.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:70
+#, kde-format
+msgid "&Connect sequence"
+msgstr "&Povezna sekvenca"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:74
+#, kde-format
+msgid ""
+"Commands to be sent to the MUD after logging in.<br><b>$name</b> expands to "
+"username.<br><b>$password</b> expands to your password.<p><b>Important:</b> "
+"these commands are sent exactly as you type them, with leading/trailing "
+"spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
+"lines will also be sent, including the very last line."
+msgstr ""
+"Komande koje će biti poslane MUD-u poslije logovanja.<br><b>$ime</b> se "
+"proširuje na korisničko ime.<br><b>$lozinka</b> se proširuje na vašu lozinku."
+"<p><b>Bitno:</b> ove komande su poslane tačno onako kako ih unesete, sa "
+"početnim i krajnjim razmacima sklonjenim. Bez aliasa, makroa, brzog hoda. "
+"Također primjetite da će prazne linije također biti poslane, uključivo sa "
+"posljednjom linijom."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:197
+#, kde-format
+msgid "Profile name cannot be empty."
+msgstr "Ime profila ne može biti prazno."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:202
+#, kde-format
+msgid "Profile name cannot contain '/' character."
+msgstr "Ime profila ne može sadržavati karakter '/'."
+
+#: kmuddy/dialogs/dlggrabkey.cpp:34
+#, kde-format
+msgid "Keygrabber"
+msgstr "Hvatač ključeva"
+
+#: kmuddy/dialogs/dlggrabkey.cpp:37
+#, kde-format
+msgid "Press the desired shortcut..."
+msgstr "Kliknite željenu prečicu..."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Import profile"
+msgstr "Uvozni profil"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Export profile"
+msgstr "Izvozni profil"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:41
+#, kde-format
+msgid "&Profile name"
+msgstr "&Ime profila"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:54
+#, kde-format
+msgid "&Import from"
+msgstr "&Uvezi iz"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:55
+#, kde-format
+msgid "&Export to"
+msgstr "&Izvezi u"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:58
+#: kmuddy/dialogs/dlgprofilesettings.cpp:154
+#: kmuddy/dialogs/dlgprofilesettings.cpp:161
+#: kmuddy/dialogs/dlgprofilesettings.cpp:168
+#: plugins/scripting/cscripteditor.cpp:72
+#: plugins/scripting/cscripteditor.cpp:81
+#, kde-format
+msgid "Browse..."
+msgstr "Potraži..."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:91
+#, kde-format
+msgid ""
+"I am sorry, but import and export is currently disabled. The functionality "
+"should be re-enabled before the final release."
+msgstr ""
+"Žao mi je, ali uvoz i izvoz su trenutno isključeni. Ova funkcionalnost bi "
+"trebala biti ponovo uključena prije finalnog puštanja."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:131
+#, kde-format
+msgid "Choose file with profile"
+msgstr "Odaberi fajl sa profilom"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:137
+#, kde-format
+msgid "Enter target file"
+msgstr "Unesite odredišnu datoteku"
+
+#: kmuddy/dialogs/dlgmudlist.cpp:57
+#, kde-format
+msgid "MUD Listing"
+msgstr "MUD listing"
+
+#: kmuddy/dialogs/dlgmudlist.cpp:67
+#, kde-format
+msgid "&Filter:"
+msgstr "&Filter:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:32
+#, kde-format
+msgid "Multi-line input"
+msgstr "Višelinijski unos"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:44
+#, kde-format
+msgid ""
+"Enter commands that are to be sent to the MUD. Each line represents one "
+"command."
+msgstr ""
+"Unesite komande koje će biti poslane MUD-u. Svaka linija predstavlja jednu "
+"komandu."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:55
+#, kde-format
+msgid "&Prefix:"
+msgstr "&Prefiks:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:58
+#, kde-format
+msgid "&Suffix:"
+msgstr "&Sufiks:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:68
+#, kde-format
+msgid ""
+"Prefix and suffix may contain text, that will be added to the beginning "
+"(prefix) or ending (suffix) of every line written to the multi-line editor."
+msgstr ""
+"Prefiks i sufiks mogu sadržavati tekst, koji će biti dodan na početak "
+"(prefiks) ili kraj (sufiks) svake napisane linije višelinijskom editoru."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:78
+#, kde-format
+msgid "&Send"
+msgstr "&Pošalji"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:79
+#, kde-format
+msgid "Sends current text to the MUD."
+msgstr "Šalje trenutni tekst MUD-u."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:80
+#, kde-format
+msgid ""
+"This will send all the commands you've entered to the MUD. If you've entered "
+"prefix and/or suffix, they will be added to the beginning and ending of each "
+"command."
+msgstr ""
+"Ovo će poslati sve komande koje ste unijeli MUD-u. Ako se unijeli prefiks i/"
+"ili sufiks, bit će dodani na početak i kraj svake komande."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:83
+#, kde-format
+msgid "&Clear"
+msgstr "&Očisti"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:84
+#, kde-format
+msgid "Clears window contents."
+msgstr "Očisti sadržaje prozora."
+
+#: kmuddy/dialogs/dlgmxpconsole.cpp:48
+#, kde-format
+msgid "MXP Console"
+msgstr "MXP Konzola"
+
+#: kmuddy/dialogs/dlgobjects.cpp:64
+#, kde-format
+msgid "Object Manager"
+msgstr "Objekt menadžer"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcUp)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestUp)
+#: kmuddy/dialogs/dlgobjects.cpp:90
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:111
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:168
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:542
+#, kde-format
+msgid "Up"
+msgstr "Gore"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcDown)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestDown)
+#: kmuddy/dialogs/dlgobjects.cpp:94
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:121
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:266
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:102
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:356
+#, kde-format
+msgid "Down"
+msgstr "Dolje"
+
+#: kmuddy/dialogs/dlgobjects.cpp:98
+#, kde-format
+msgid "Left"
+msgstr "Lijevo"
+
+#: kmuddy/dialogs/dlgobjects.cpp:102
+#, kde-format
+msgid "Right"
+msgstr "Desno"
+
+#: kmuddy/dialogs/dlgoutputwindow.cpp:37
+#, kde-format
+msgid "Output window"
+msgstr "Prozor za izlaz"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:43
+#, kde-format
+msgid "MUD preferences"
+msgstr "MUD preference"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:50
+#, kde-format
+msgid "Connection"
+msgstr "Povezivanje"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabCommands)
+#: kmuddy/dialogs/dlgprofilesettings.cpp:53
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
+#, kde-format
+msgid "Commands"
+msgstr "Naredbe"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:56
+#, kde-format
+msgid "Folders"
+msgstr "Mape"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:59
+#, kde-format
+msgid "Sound"
+msgstr "Zvuk"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:63
+#, kde-format
+msgid "MXP"
+msgstr "MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:69
+#, kde-format
+msgid "&Use colorized output (if available)"
+msgstr "&Upotrijebi obojeni izlaz(ako je dostupan)"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:70
+#, kde-format
+msgid "&Do not allow more than 100 repeated commands"
+msgstr "&Ne dozvoli više od 100 ponovljenih komandi"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:76
+#, kde-format
+msgid "Enable telnet &negotiation on startup"
+msgstr "Uključi telnet &pregovaranje na startu"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:77
+#, kde-format
+msgid ""
+"Enables telnet negotiation for some option. Disabling it may resolve "
+"problems with some servers that do not understand these."
+msgstr ""
+"Uključuje telnet pregoavaranje za neke opcije. Isključivanje ovoga može "
+"riješiti probleme sa nekim serverima koji ne razumiju ove."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:81
+#, kde-format
+msgid "&Encoding:"
+msgstr "&Kodiranje:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:84
+#, kde-format
+msgid ""
+"Lets you pick the output character encoding used by the server. This usually "
+"only needs to be set for non-English servers."
+msgstr ""
+"Dopušta vam da odaberete kodiranje izlaznog karaktera korištenog od strane "
+"servera. Ovo je obično samo potrebno podesiti za ne engleske servere."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:90
+#, kde-format
+msgid "&Auto-append newlines after prompt"
+msgstr "&Automatski dodaji nove linije na kraj nakon prompta"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:91
+#, kde-format
+msgid ""
+"Enables adding linefeeds after GA-terminated prompts to have properly "
+"aligned output."
+msgstr ""
+"Omogućava dodavanje pomjerača u novi red nakon GA-terminiranih promptova da "
+"bi outpu bio pravilno poravnan."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:94
+#, kde-format
+msgid "&Show prompt in a separate field"
+msgstr "&Pokaži prompt u posebnom polju"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:98
+#, kde-format
+msgid "Show prompt in the s&tatus bar"
+msgstr "Pokaži prompt u s&tatus baru"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:101
+#, kde-format
+msgid "Show prompt in the &console"
+msgstr "Pokaži prompt u &konzoli"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:104
+#, kde-format
+msgid "Start advanced transcript when session starts"
+msgstr "Pokreni napredni transkript kada se sesija pokrene"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&North"
+msgstr "&Sjever"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "No&rtheast"
+msgstr "Sje&veroistok"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&East"
+msgstr "&Istok"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "So&utheast"
+msgstr "Ju&goistok"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "&South"
+msgstr "&Jug"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "Sou&thwest"
+msgstr "Jugo&zapad"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&West"
+msgstr "&Zapad"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "Nort&hwest"
+msgstr "Sjev&erozapad"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Up"
+msgstr "&Gore"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Down"
+msgstr "&Dolje"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:129
+#, kde-format
+msgid ""
+"This is a movement command. It is used by speed-walking and will also be "
+"used by the auto-mapper."
+msgstr ""
+"Ovo je komanda pokreta. Koristi se od strane brzog hodanja i također će biti "
+"korištena od strane auto-mapera."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:151
+#, kde-format
+msgid "External &scripts directory"
+msgstr "Direktorij eksternih &skripti"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:155
+#, kde-format
+msgid "Default directory where we will look for scripts."
+msgstr "Predefinisani direktorij gdje će biti vršena potraga za skriptama."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:158
+#: plugins/scripting/cscripteditor.cpp:78
+#, kde-format
+msgid "&Working directory"
+msgstr "&Direktorij za rad"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:162
+#, kde-format
+msgid ""
+"Default working directory for your scripts. Making this the same as above is "
+"usually a good choice."
+msgstr ""
+"Predefinisani direktorij za rad za vaše skripte. Podešavanje ovoga na isto "
+"kao gore navedeno je obično dobar izbor."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:165
+#, kde-format
+msgid "&Transcripts directory"
+msgstr "&Direktorij transkripta"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:169
+#, kde-format
+msgid "Directory where session transcripts will be saved by default."
+msgstr "Predefinisani direktorij gdje će biti spašavani transkripti sesija."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:190
+#, kde-format
+msgid "&Enable sounds for this profile"
+msgstr "&Omogući zvukove za ovaj profil"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:191
+#, kde-format
+msgid ""
+"Enable playing sounds with this profile.\n"
+"Note that this will only work if you enable sounds in global preferences.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol)."
+msgstr ""
+"Omogući puštanje zvukova sa ovim profilom.\n"
+"Primjetite da će ovo raditi jedino ako omogućite zvukove u opštim "
+"preferencama.\n"
+"Također primjetite da će ovo jedino raditi ako vaš MUD podržava <b>MSP</b> "
+"(MUD Zvučni Protokol)."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:196
+#, kde-format
+msgid "Only enable these if you need them:"
+msgstr "Omogućite ovo jedino ako trebate:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:197
+#, kde-format
+msgid "&Use MSP even if not negotiated"
+msgstr "&Koristi MSP čak i ako pregovarano"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:198
+#, kde-format
+msgid ""
+"When this option is enabled, KMuddy will interpret MSP sequences all the "
+"time, even if no negotiation took place. Useful for MUDs that don't support "
+"telnet negotiation of MSP.\n"
+"But beware - only turn this on if your MUD really supports MSP to prevent "
+"other players from sending malicious MSP sequences, if you allow downloading "
+"of sounds."
+msgstr ""
+"Kada je ova opcije omogućena, KMuddy će interpretirati MSP sekvence svo "
+"vrijeme, čak i ako nije bilo pregovaranja. Korisno za MUD-ove koji ne "
+"podržavaju telnet pregovaranje MSP-a.\n"
+"Ali budite oprezni - uključite ovo samo ako vaš MUD podržava MSP da biste "
+"spriječili druge igrače da šalju maliciozne MSP sekvence, ako dozvolite "
+"preuzimanje zvukova."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:204
+#, kde-format
+msgid "Allow &mid-line MSP sequences"
+msgstr "Dopustite &srednje-linijske MSP sekvence."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:205
+#, kde-format
+msgid ""
+"Mid-line MSP sequences are a zMUD's extension to the MSP spec that some MUDs "
+"seem to be using. You can enable support for this feature here, but ensure "
+"that other players cannot say/tell/whatever these sequences, or disable "
+"downloading support; otherwise players could instruct your client to "
+"download any file on the net..."
+msgstr ""
+"Srednje-linijske MSP sekvence su ekstenzija za MUD-a za MSP specifikaciju za "
+"koju se čini da neki MUD-ovi koriste. Možete omogućiti podršku da ovu opciju "
+"ovdje, ali osigurajte da drugi igrači ne mogu reći/kazati/štogod ove "
+"sekvence, ili isključite podršku za preuzimanje; inače bi igrači mogli "
+"preusmjeriti vašeg klijenta da preuzme bilo koji fajl sa mreže..."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:221
+#, kde-format
+msgid "&Use MXP"
+msgstr "&Koristi MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:224
+#, kde-format
+msgid "Never"
+msgstr "Nikad"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:225
+#, kde-format
+msgid "If negotiated"
+msgstr "Ako je pregovarano"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:226
+#, kde-format
+msgid "Auto-detect"
+msgstr "Automatsko detektiranje"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:227
+#, kde-format
+msgid "Always on"
+msgstr "Uvijek uključeno"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:228
+#, kde-format
+msgid ""
+"<qt><p>Here you can choose when will MXP be used.</p><ul><li><b>Never</b> "
+"MXP tags will never be parsed</li><li><b>If negotiated</b> MXP support will "
+"depend on successful telnet negotiation.</li><li><b>Auto-detect</b> MXP "
+"support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
+"look for MXP sequences.</li></ul></qt>"
+msgstr ""
+"<qt><p>Ovdje možete odabrati kada će MXP biti korišten.</"
+"p><ul><li><b>Nikada</b> MXP oznake neće nikada biti parsirane</li><li><b>ako "
+"je pregovarano</b> MXP podrška će ovisiti na uspješnosti telent pregovaranja."
+"</li><li><b>Automatska detekcija</b> MXP podrška će biti automatski "
+"detektovana.</li><li><b>Uvijek uključeno</b> KMuddy će uvijek tražiti MXP "
+"sekvence.</li></ul></qt>"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:234
+#, kde-format
+msgid "MXP &variable prefix"
+msgstr "MXP prefiks &varijabli"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:237
+#, kde-format
+msgid ""
+"Prefix prepended to each MXP variable from the server. Note that changing "
+"the prefix won't affect existing variables with old prefix."
+msgstr ""
+"Prefiks dodan svakoj MXP varijabli od strane servera. Primjetite da "
+"mijenjanje prefiksa neće utjecati na postojeće varijable sa starim prefiksom."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:397
+#, kde-format
+msgid "Choose default script location"
+msgstr "Odaberite predefinisanu lokaciju skripti"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:402
+#, kde-format
+msgid "Choose default script working directory"
+msgstr "Odaberite predefinisani radni driektorij za skripte"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:407
+#, kde-format
+msgid "Choose default transcript directory"
+msgstr "Odaberite predefinisani direktorij za transkripte"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:36
+#, kde-format
+msgid "Quick Connect"
+msgstr "Brzo poveži"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:41
+#, kde-format
+msgid "&Host:"
+msgstr "&Računar:"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:41
+#, kde-format
+msgid "Connection statistics"
+msgstr "Statistika veze"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:50
+#, kde-format
+msgid "&Statistics, updated every second:"
+msgstr "&Statistika, obnovljena svake sekunde:"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:53
+#, kde-format
+msgid "Counter"
+msgstr "Brojač"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:118
+#, kde-format
+msgid "Using MCCP"
+msgstr "Koristim MCCP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "Yes"
+msgstr "Da"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "No"
+msgstr "Ne"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:120
+#, kde-format
+msgid "MCCP version"
+msgstr "MCCP verzija"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:121
+#, kde-format
+msgid "N/A"
+msgstr "N/D"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:122
+#, kde-format
+msgid "Using MSP"
+msgstr "Koristim MSP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:125
+#, kde-format
+msgid "Using MXP"
+msgstr "Koristim MXP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:128
+#, kde-format
+msgid "Sent bytes"
+msgstr "Poslani bajti"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:130
+#, kde-format
+msgid "Sent commands"
+msgstr "Poslane komande"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:132
+#, kde-format
+msgid "Received bytes"
+msgstr "Primljeni bajti"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:134
+#, kde-format
+msgid "... after decompression"
+msgstr "... nakon dekompresije"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:136
+#, kde-format
+msgid "Received lines"
+msgstr "Primljene linije"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:138
+#, kde-format
+msgid "Connection time"
+msgstr "Vrijeme konekcije"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:37
+#, kde-format
+msgid "Session Transcript"
+msgstr "Transkript Sesije"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:44
+#, kde-format
+msgid "Basic"
+msgstr "Osnovna"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:45
+#, kde-format
+msgid "Advanced"
+msgstr "Napredno"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:53
+#, kde-format
+msgid "&Enable basic transcript"
+msgstr "&Omogući osnovni transkript"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:55
+#, kde-format
+msgid ""
+"Enables or disabled the session transcript. Note that session transcript is "
+"automatically disabled when you disconnect."
+msgstr ""
+"Omogućava ili onemogućava transkript sesije. Primjetite da je transkript "
+"sesije automatski onemogućen kada se diskonektujete."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:59
+#, kde-format
+msgid "Transcript settings"
+msgstr "Podešavanja transkripta."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:65 kmuddy/dialogs/dlgtranscript.cpp:120
+#, kde-format
+msgid "Transcript &format"
+msgstr "&Format transkripta"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:74
+#, kde-format
+msgid "&Overwrite existing file"
+msgstr "&Prepiši postojeći fajl"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:75
+#, kde-format
+msgid ""
+"If you enable this option, existing transcript file will be overwritten. "
+"Otherwise, new transcript will be appended to the end of an existing file "
+"(if it exists :))."
+msgstr ""
+"Ako omogućite ovu opciju, postojeći transkript fajl će biti prepisan. U "
+"drugom slučaju, novi transkript će biti dodan na kraj postojećeg fajla (ako "
+"postoji :))."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:78
+#, kde-format
+msgid "Include buffer &dump"
+msgstr "Uključi &izdvojke bafera"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:79
+#, kde-format
+msgid ""
+"This will cause KMuddy to add complete buffer dump to the beginning of the "
+"transcript file."
+msgstr ""
+"Ovo će prouzrokovati da KMuddy doda kompletan otpad bafera na početak "
+"transkript fajla."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:108
+#, kde-format
+msgid "Enable &advanced transcript"
+msgstr "Omogući &napredni transkript"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:109
+#, kde-format
+msgid ""
+"This will enable advanced transcript, which allows you to have transcript "
+"running all the time, rotates it at midnight and so. Note that normal and "
+"advanced transcripts can both be running at the same time, if you want."
+msgstr ""
+"Ovo će omogućiti napredni transkript, što vam dozvoljava da je transkript "
+"uključen svoj vrijeme, rotira se ako je ponoć i slično. Primjetite da i "
+"normalni i napredni transkript mogu biti uključeni u isto vrijeme, ako "
+"želite."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:114
+#, kde-format
+msgid "Advanced transcript settings"
+msgstr "Napredna podešavanja transkripta"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:129
+#, kde-format
+msgid "&Rotate log at midnight every day"
+msgstr "&Rotiraj zapis do sada spašenog u ponoć svakog dana"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:130
+#, kde-format
+msgid ""
+"This will cause KMuddy to rotate session transcript every day at midnight"
+msgstr ""
+"Ovo će prouzrokovati da KMuddy rotira transkript sesije svaki dan u ponoć"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:133
+#, kde-format
+msgid "Prepend lines with &timestamp"
+msgstr "Dodaj na početak linije sa &vremenskim pečatom"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:134
+#, kde-format
+msgid ""
+"This option will cause KMuddy to insert local timestamp in front of every "
+"line of logging"
+msgstr ""
+"Ova opcija će prouzrokovati da KMuddy dodaje lokalne vremenske pečate na "
+"početak zapisa spašavanja."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:140
+#, kde-format
+msgid "Log name format"
+msgstr "Format imena zapisa spašavanja"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:141
+#, kde-format
+msgid ""
+"Here you can specify log format. You can use the following options: $W - "
+"world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
+"combination of alpha-numeric characters."
+msgstr ""
+"Ovdje možete specificirati format zapisa spašavanja. Možete koristiti "
+"sljedeće opcije: $W - ime svijeta, $h - sat, $m - minut, $D - dan, $M - "
+"mjesec, $Y - godina, i bilo koju kombinaciju alfanumeričkih karaktera."
+
+#: kmuddy/dialogs/dlgwindows.cpp:59
+#, kde-format
+msgid "&List of output windows"
+msgstr "&Lista izlaznih prozora"
+
+#: kmuddy/dialogs/dlgwindows.cpp:66
+#, kde-format
+msgid "&Show"
+msgstr "&Prikaži"
+
+#: kmuddy/dialogs/dlgwindows.cpp:67
+#, kde-format
+msgid "&Hide"
+msgstr "&Sakrij"
+
+#: kmuddy/dialogs/dlgwindows.cpp:68
+#, kde-format
+msgid "&Delete"
+msgstr "&Obriši"
+
+#: kmuddy/kmuddy.cpp:249
+#, kde-format
+msgid "&Connect..."
+msgstr "&Povezivanje..."
+
+#: kmuddy/kmuddy.cpp:256
+#, kde-format
+msgid "&QuickConnect..."
+msgstr "&BrzoPovezivanje..."
+
+#: kmuddy/kmuddy.cpp:262
+#, kde-format
+msgid "&Disconnect"
+msgstr "&Otkači"
+
+#: kmuddy/kmuddy.cpp:268
+#, kde-format
+msgid "&Reconnect"
+msgstr "&Poveži se ponovo"
+
+#: kmuddy/kmuddy.cpp:273
+#, kde-format
+msgid "Close &tab"
+msgstr "Zatvori &karticu"
+
+#: kmuddy/kmuddy.cpp:282
+#, kde-format
+msgid "Paste &As"
+msgstr "Zalijepi &kao"
+
+#: kmuddy/kmuddy.cpp:291
+#, kde-format
+msgid "&Input"
+msgstr "&Unos"
+
+#: kmuddy/kmuddy.cpp:298
+#, kde-format
+msgid "Copy &Selection"
+msgstr "Kopiraj &Selekciju"
+
+#: kmuddy/kmuddy.cpp:304
+#, kde-format
+msgid "Enable command &parsing"
+msgstr "Omogući &parsiranje komandi"
+
+#: kmuddy/kmuddy.cpp:311
+#, kde-format
+msgid "Ca&ncel pending commands"
+msgstr "Ot&kaži komande na čekanju"
+
+#: kmuddy/kmuddy.cpp:322
+#, kde-format
+msgid "Show &gaugebar"
+msgstr "Pokaži &traku mjerača"
+
+#: kmuddy/kmuddy.cpp:335
+#, kde-format
+msgid "&Object Editor..."
+msgstr "Uređivač &objekata..."
+
+#: kmuddy/kmuddy.cpp:340
+#, kde-format
+msgid "&Output windows..."
+msgstr "&Izlazni prozori..."
+
+#: kmuddy/kmuddy.cpp:344
+#, kde-format
+msgid "A&liases enabled"
+msgstr "A&lijasi dozvoljeni"
+
+#: kmuddy/kmuddy.cpp:350
+#, kde-format
+msgid "Tri&ggers enabled"
+msgstr "Oki&dači dozvoljeni"
+
+#: kmuddy/kmuddy.cpp:356
+#, kde-format
+msgid "Tim&ers enabled"
+msgstr "Taj&meri dozvoljeni"
+
+#: kmuddy/kmuddy.cpp:361
+#, kde-format
+msgid "Macro &keys enabled"
+msgstr "Makro &ključevi dozvoljeni"
+
+#: kmuddy/kmuddy.cpp:366
+#, kde-format
+msgid "&MUD Preferences..."
+msgstr "&MUD Preference..."
+
+#: kmuddy/kmuddy.cpp:371
+#, kde-format
+msgid "&Save Profile"
+msgstr "&Snimi profil"
+
+#: kmuddy/kmuddy.cpp:378
+#, kde-format
+msgid "&Session transcript..."
+msgstr "Transkript sesije..."
+
+#: kmuddy/kmuddy.cpp:383
+#, kde-format
+msgid "Dump output &buffer..."
+msgstr "Izlazni &bafer otpada..."
+
+#: kmuddy/kmuddy.cpp:387
+#, kde-format
+msgid "&Decision assistant"
+msgstr "Asistent &odlučivanja"
+
+#: kmuddy/kmuddy.cpp:401
+#, kde-format
+msgid "&Global settings..."
+msgstr "&Opšta podešavanja..."
+
+#: kmuddy/kmuddy.cpp:406
+#, kde-format
+msgid "&Plugins..."
+msgstr "&Dodane mogućnosti..."
+
+#: kmuddy/kmuddy.cpp:411
+#, kde-format
+msgid "F&ull screen mode"
+msgstr "Mod p&unog ekrana..."
+
+#: kmuddy/kmuddy.cpp:422
+#, kde-format
+msgid "Shift line up"
+msgstr "Pomjeri liniju gore"
+
+#: kmuddy/kmuddy.cpp:427
+#, kde-format
+msgid "Shift line down"
+msgstr "Pomjeri liniju dolje"
+
+#: kmuddy/kmuddy.cpp:432
+#, kde-format
+msgid "Shift page up"
+msgstr "Pomjeri stranicu gore"
+
+#: kmuddy/kmuddy.cpp:437
+#, kde-format
+msgid "Shift page down"
+msgstr "Pomjeri stranicu dolje"
+
+#: kmuddy/kmuddy.cpp:442
+#, kde-format
+msgid "Split-screen up"
+msgstr "Podjela ekrana gore"
+
+#: kmuddy/kmuddy.cpp:447
+#, kde-format
+msgid "Split-screen down"
+msgstr "Podjela ekrana dolje"
+
+#: kmuddy/kmuddy.cpp:452
+#, kde-format
+msgid "Previous tab"
+msgstr "Prethodna kartica"
+
+#: kmuddy/kmuddy.cpp:457
+#, kde-format
+msgid "Next tab"
+msgstr "Sljedeća kartica"
+
+#: kmuddy/kmuddy.cpp:463 kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473
+#: kmuddy/kmuddy.cpp:478 kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488
+#: kmuddy/kmuddy.cpp:493 kmuddy/kmuddy.cpp:498 kmuddy/kmuddy.cpp:503
+#: kmuddy/kmuddy.cpp:508
+#, kde-format
+msgctxt "%1 - tab number"
+msgid "Switch to tab %1"
+msgstr "Prebaci na karticu %1"
+
+#: kmuddy/kmuddy.cpp:531
+#, kde-format
+msgid "&Connection"
+msgstr "&Konekcija"
+
+#: kmuddy/kmuddy.cpp:532
+#, kde-format
+msgid "&Edit"
+msgstr "&Izmijeni"
+
+#. i18n: ectx: Menu (View)
+#: kmuddy/kmuddy.cpp:533 plugins/mapper/kmuddymapperpart.rc:4
+#, kde-format
+msgid "&View"
+msgstr "&Pregled"
+
+#: kmuddy/kmuddy.cpp:534
+#, kde-format
+msgid "&Profile"
+msgstr "&Profil"
+
+#: kmuddy/kmuddy.cpp:535
+#, kde-format
+msgid "&Tools"
+msgstr "&Alati"
+
+#: kmuddy/kmuddy.cpp:536
+#, kde-format
+msgid "&Settings"
+msgstr "&Postavke"
+
+#: kmuddy/kmuddy.cpp:537
+#, kde-format
+msgid "&Help"
+msgstr "&Pomoć"
+
+#: kmuddy/kmuddy.cpp:915
+#, kde-format
+msgid "To reconnect, press %1 or use Connection / Reconnect."
+msgstr ""
+"Da bi se ponovo povezali, pritisnite %1 ili koristite Veza / Ponovno "
+"povezivanje."
+
+#: kmuddy/kmuddy.cpp:1169
+#, kde-format
+msgid ""
+"Profile has been saved. Note that profiles are automatically saved upon "
+"disconnecting, and also every five minutes."
+msgstr ""
+"Profil je spašen. Primjetite da su profili automatski spašeni pri prekidu "
+"veze, i također svakih pet minuta."
+
+#: kmuddy/macros.cpp:67
+#, kde-format
+msgid "/setval: Expression parsing failed."
+msgstr "/setval: Parsiranje izraza nije uspjelo."
+
+#: kmuddy/macros.cpp:170
+#, kde-format
+msgid "No free resources of that type."
+msgstr "Nema slobodnih resursa tog tipa."
+
+#: kmuddy/macros.cpp:192
+#, kde-format
+msgid "/tick: syntax: /tick timer-name"
+msgstr "/tick: syntax: /tick ime tajmera"
+
+#: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
+#, kde-format
+msgid "/tick: a timer with that name does not exist."
+msgstr "/tick: tajmer sa tim imenom ne postoji."
+
+#: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
+#, kde-format
+msgid "/tick: this timer is currently disabled."
+msgstr "/tick: tajmer je trenutno isključen."
+
+#         translations.
+#: kmuddy/macros.cpp:209
+#, kde-format
+msgid "Timer ticks in 1 second."
+msgid_plural "Timer ticks in %1 seconds."
+msgstr[0] "Tajmer otkucava kroz %1 sekundu."
+msgstr[1] "Tajmer otkucava kroz %1 sekunde."
+msgstr[2] "Tajmer otkucava kroz %1 sekundi."
+
+#: kmuddy/macros.cpp:211
+#, kde-format
+msgid "Timer ticks right now."
+msgstr "Tajmer otkucava sada."
+
+#: kmuddy/macros.cpp:221
+#, kde-format
+msgid "/ticknow: syntax: /ticknow timer-name"
+msgstr "/ticknow: sintaksa: /ticknow ime tajmera"
+
+#: kmuddy/macros.cpp:363
+#, kde-format
+msgid "/else: called without the matching /if."
+msgstr "/else: pozvano bez poklapanja /if."
+
+#: kmuddy/macros.cpp:380
+#, kde-format
+msgid "/endif: called without the matching /if."
+msgstr "/endif: pozvano bez poklapanja /if."
+
+#: kmuddy/macros.cpp:398
+#, kde-format
+msgid "/oadd: syntax: /oadd parent name"
+msgstr "/oadd: syntax: /oadd ime roditelja"
+
+#: kmuddy/macros.cpp:406
+#, kde-format
+msgid "/oadd: parent group does not exist."
+msgstr "/oadd: roditeljska grupa ne postoji."
+
+#: kmuddy/macros.cpp:410
+#, kde-format
+msgid "/oadd: parent must be a group."
+msgstr "/oadd: roditelj mora biti grupa."
+
+#: kmuddy/macros.cpp:415
+#, kde-format
+msgid "/oadd: object with this name already exists."
+msgstr "/oadd: objekt sa ovim imenom već postoji."
+
+#: kmuddy/macros.cpp:432
+#, kde-format
+msgid "/gadd: syntax: /gadd parent name"
+msgstr "/gadd: syntax: /gadd ime roditelja"
+
+#: kmuddy/macros.cpp:439
+#, kde-format
+msgid "/gadd: parent group does not exist."
+msgstr "/gadd: rioditeljska grupa ne postoji."
+
+#: kmuddy/macros.cpp:443
+#, kde-format
+msgid "/gadd: the parent must be a group"
+msgstr "/gadd: roditelj mora biti grupa"
+
+#: kmuddy/macros.cpp:449
+#, kde-format
+msgid "/gadd: such group already exists in that list"
+msgstr "/gadd: takvo ime grupe već postoji u toj listi"
+
+#: kmuddy/macros.cpp:465
+#, kde-format
+msgid "/odel: object does not exist."
+msgstr "/odel: objekat ne postoji."
+
+#: kmuddy/macros.cpp:470
+#, kde-format
+msgid "/odel: root group may not be deleted."
+msgstr "/odel: moguće je da korijenska grupa nije izbrisana."
+
+#: kmuddy/macros.cpp:488
+#, kde-format
+msgid "/omove: syntax: /omove object group [position]"
+msgstr "/omove: syntax: /omove grupa objekata [position]"
+
+#: kmuddy/macros.cpp:495
+#, kde-format
+msgid "/omove: object does not exist."
+msgstr "/omove: objekat ne postoji."
+
+#: kmuddy/macros.cpp:499
+#, kde-format
+msgid "/omove: root group may not be moved."
+msgstr "/omove: moguće je da korijenska grupa nije premještena."
+
+#: kmuddy/macros.cpp:505
+#, kde-format
+msgid "/omove: group does not exist."
+msgstr "/omove: grupa ne postoji."
+
+#: kmuddy/macros.cpp:509
+#, kde-format
+msgid "/omove: target must be a group."
+msgstr "/omove: meta mora biti grupa."
+
+#: kmuddy/macros.cpp:513
+#, kde-format
+msgid "/omove: object and target must be in the same list."
+msgstr "/omove: objekat i meta moraju biti u istoj listi."
+
+#: kmuddy/macros.cpp:525
+#, kde-format
+msgid "/omove: position out of range"
+msgstr "/omove: pozicija van raspona"
+
+#: kmuddy/macros.cpp:540
+#, kde-format
+msgid "/oren: syntax: /oren object new-name"
+msgstr "/oren: syntax: /oren object novo ime"
+
+#: kmuddy/macros.cpp:547
+#, kde-format
+msgid "/oren: object does not exist."
+msgstr "/oren: objekat ne postoji."
+
+#: kmuddy/macros.cpp:553
+#, kde-format
+msgid "/oren: root group cannot be renamed."
+msgstr "/oren: korijenska grupa ne može biti preimenovana."
+
+#: kmuddy/macros.cpp:559
+#, kde-format
+msgid "/oren: a group with this name already exists."
+msgstr "/oren: grupa sa istim imenom već postoji."
+
+#: kmuddy/macros.cpp:566
+#, kde-format
+msgid "/oren: an object with this name already exists."
+msgstr "/oren: objekat sa ovim imenom već postoji."
+
+#: kmuddy/macros.cpp:581
+#, kde-format
+msgid "/opriority: syntax: /opriority object priority"
+msgstr "/opriority: syntax: /opriority prioritet objekta"
+
+#: kmuddy/macros.cpp:588
+#, kde-format
+msgid "/opriority: object does not exist."
+msgstr "/opriority: objekat ne postoji."
+
+#: kmuddy/macros.cpp:594
+#, kde-format
+msgid "/opriority: priority must be in the 1-1000 range."
+msgstr "/opriority: priritet mora biti iz raspona 1 - 1000."
+
+#: kmuddy/macros.cpp:610
+#, kde-format
+msgid "/oenable: object does not exist."
+msgstr "/oenable: objekat ne postoji."
+
+#: kmuddy/macros.cpp:626
+#, kde-format
+msgid "/odisable: object does not exist."
+msgstr "/odisable: objekat ne postoji."
+
+#: kmuddy/macros.cpp:641
+#, kde-format
+msgid "/osetbattr: syntax: /osetbattr object parameter value"
+msgstr "/osetbattr: syntax: /osetbattr vrijednost parametra objekta"
+
+#: kmuddy/macros.cpp:648
+#, kde-format
+msgid "/osetbattr: object does not exist."
+msgstr "/osetbattr: objekat ne postoji."
+
+#: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
+#, kde-format
+msgid "/osetiattr: syntax: /osetbattr object parameter value"
+msgstr "/osetiattr: syntax: /osetbattr vrijednost parametra objekta"
+
+#: kmuddy/macros.cpp:672
+#, kde-format
+msgid "/osetiattr: object does not exist."
+msgstr "/osetiattr: objekat ne postoji."
+
+#: kmuddy/macros.cpp:696
+#, kde-format
+msgid "/osetsattr: object does not exist."
+msgstr "/osetsattr: objekat ne postoji."
+
+#: kmuddy/macros.cpp:713
+#, kde-format
+msgid "/tgroupon: group does not exist."
+msgstr "/tgroupon: grupa ne postoji."
+
+#: kmuddy/macros.cpp:728
+#, kde-format
+msgid "/tgroupoff: group does not exist."
+msgstr "/tgroupoff: grupa ne postoji."
+
+#: kmuddy/macros.cpp:744
+#, kde-format
+msgid "/agroupon: group does not exist."
+msgstr "/agroupon: grupa ne postoji."
+
+#: kmuddy/macros.cpp:760
+#, kde-format
+msgid "/agroupoff: group does not exist."
+msgstr "/agroupoff: grupa ne postoji."
+
+#: kmuddy/main.cpp:30
+#, kde-format
+msgid ""
+"KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
+"features."
+msgstr ""
+
+#: kmuddy/main.cpp:36 kmuddy/main.cpp:38
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:108
+#, kde-format
+msgid "KMuddy"
+msgstr "KMuddy"
+
+#: kmuddy/main.cpp:40
+#, fuzzy, kde-format
+#| msgid "(c) 2002-2009, Tomas Mecir"
+msgid "(c) 2002-2018, Tomas Mecir"
+msgstr "(c) 2002-2009, Tomas Mecir"
+
+#: kmuddy/main.cpp:41
+#, kde-format
+msgid "Tomas Mecir"
+msgstr "Tomas Mecir"
+
+#: kmuddy/main.cpp:42
+#, kde-format
+msgid "Main developer and maintainer"
+msgstr "Glavna osoba za razvoj i održavanje"
+
+#: kmuddy/main.cpp:43
+#, kde-format
+msgid "Alex Bache"
+msgstr "Alex Bache"
+
+#: kmuddy/main.cpp:44
+#, kde-format
+msgid ""
+"Many improvements in external scripting, internal script parser, output view "
+"and aliases/triggers, bugfixes"
+msgstr ""
+"Mnogo poboljšanja u eksternom skriptovanju, internom parseru skripti, "
+"izlaznog pogledu i alijasima/okidačima, popravkama grešaka."
+
+#: kmuddy/main.cpp:45
+#, kde-format
+msgid "Alsherok staff"
+msgstr "Alsherok osoblje"
+
+#: kmuddy/main.cpp:46
+#, kde-format
+msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
+msgstr "za objavljivanje AFKMud baze kodova, korištene za testiranje MCCP/MSP"
+
+#: kmuddy/main.cpp:47
+#, kde-format
+msgid "Andrea Cascio"
+msgstr "Andrea Cascio"
+
+#: kmuddy/main.cpp:48
+#, kde-format
+msgid "SuSE RPMs, speed-walking improvements"
+msgstr "SuSE RMP-ovi, poboljšanja na brzom hodanju"
+
+#: kmuddy/main.cpp:49
+#, kde-format
+msgid "Orion Elder"
+msgstr "Orion Elder"
+
+#: kmuddy/main.cpp:50
+#, kde-format
+msgid "KMuddy forum, many ideas"
+msgstr "KMuddy forum, mnoge ideje"
+
+#: kmuddy/main.cpp:51
+#, kde-format
+msgid "Scott Monachello"
+msgstr "Scott Monachello"
+
+#: kmuddy/main.cpp:52
+#, kde-format
+msgid "Improvements in scripting, bugfixes"
+msgstr "Poboljšanja na skriptovanju, popravkama grešaka"
+
+#: kmuddy/main.cpp:53
+#, kde-format
+msgid "Tyler Montbriand"
+msgstr "Tyler Montbriand"
+
+#: kmuddy/main.cpp:54
+#, kde-format
+msgid "Help with SDL support"
+msgstr "Pomoć sa SDL podrškom"
+
+#: kmuddy/main.cpp:55
+#, kde-format
+msgid "Marco Mastroddi"
+msgstr "Marco Mastroddi"
+
+#: kmuddy/main.cpp:56
+#, kde-format
+msgid "Tick timers"
+msgstr "Tajmeri otkucaja"
+
+#: kmuddy/main.cpp:57
+#, kde-format
+msgid "Henrikki Almusa"
+msgstr "Henrikki Almusa"
+
+#: kmuddy/main.cpp:58
+#, kde-format
+msgid "Commands to enable/disable groups"
+msgstr "Komande za omogućavanje/onemogućavanje grupa"
+
+#: kmuddy/main.cpp:59
+#, kde-format
+msgid "Drossos Stamboulakis"
+msgstr "Drossos Stamboulakis"
+
+#: kmuddy/main.cpp:60
+#, kde-format
+msgid "Selection improvements, full screen mode, cross-tab commands"
+msgstr ""
+"Poboljšanja selekcije, mod punog ekrana, komande za prelaz preko kartica"
+
+#: kmuddy/main.cpp:61
+#, kde-format
+msgid "Antonio J. Soler Sanchez"
+msgstr "Antonio J. Soler Sanchez"
+
+#: kmuddy/main.cpp:62
+#, kde-format
+msgid "Spanish translation"
+msgstr "Španski prevod"
+
+#: kmuddy/main.cpp:63
+#, kde-format
+msgid "lontau"
+msgstr "lontau"
+
+#: kmuddy/main.cpp:64
+#, kde-format
+msgid "Code to access KMuddy variables in Ruby"
+msgstr "Kod za pristup KMuddy varijabli u Ruby-u"
+
+#: kmuddy/main.cpp:65
+#, kde-format
+msgid "Magnus Lundborg"
+msgstr "Magnus Lundborg"
+
+#: kmuddy/main.cpp:65
+#, kde-format
+msgid "Tab-expansion improvements"
+msgstr "Poboljšanja na ekspanziji tabulatora"
+
+#: kmuddy/main.cpp:66
+#, kde-format
+msgid "Vladimir Lazarenko"
+msgstr "Vladimir Lazarenko"
+
+#: kmuddy/main.cpp:67
+#, kde-format
+msgid "Many improvements. Hosting KMuddy CVS."
+msgstr "Mnoga poboljšanja. Vođenje KMuddy CVS-a."
+
+#: kmuddy/main.cpp:68
+#, kde-format
+msgid "Stuart Henshall"
+msgstr "Stuart Henshall"
+
+#: kmuddy/main.cpp:69
+#, kde-format
+msgid "Speed improvements."
+msgstr "Poboljšanja na brzini."
+
+#: kmuddy/main.cpp:70
+#, kde-format
+msgid "Vadim Peretokin"
+msgstr "Vadim Peretokin"
+
+#: kmuddy/main.cpp:71
+#, kde-format
+msgid "Many improvements, website"
+msgstr "Mnoga poboljšanja, internet stranica"
+
+#: kmuddy/main.cpp:72
+#, kde-format
+msgid "Heiko Koehn"
+msgstr "Heiko Koehn"
+
+#: kmuddy/main.cpp:73
+#, kde-format
+msgid "Scripting improvements"
+msgstr "Poboljašanja na skriptovanju"
+
+#: kmuddy/main.cpp:74
+#, kde-format
+msgid "Robert Marmorstein"
+msgstr "Robert Marmorstein"
+
+#: kmuddy/main.cpp:75
+#, kde-format
+msgid "Systray icon support"
+msgstr "Podrška za ikonu trake za pregled aktivnih programa"
+
+#: libs/caliaseditor.cpp:94
+#, kde-format
+msgid "&Alias text"
+msgstr "&Alijas tekst"
+
+#: libs/caliaseditor.cpp:112
+#, kde-format
+msgid ""
+"Type of matching. Alias will only be activated if this passes this type of "
+"test. Note that aliases are always matched as whole words."
+msgstr ""
+"Tip poklapanja, alias će jedino biti aktiviran ako ovo prođe ovaj tip testa. "
+"Primjetite da su alijasi uvijek poklapani kao cijele riječi."
+
+#: libs/caliaseditor.cpp:134
+#, kde-format
+msgid "&Replacement text(s)"
+msgstr "&Zamjenski tekst(ovi)"
+
+#: libs/caliaseditor.cpp:138
+#, kde-format
+msgid "Command(s) that will replace command you have entered."
+msgstr "Komanda(e) koja(e) će zamijeniti komandu koju ste unijeli."
+
+#: libs/caliaseditor.cpp:153
+#, kde-format
+msgid ""
+"This is testing area. You can test your alias here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"Ovo je područje za testiranje. Možete testirati svoje alijase ovdje  da "
+"vidite da li radi ono što vi želite da radi. Jednostavno ukucajte neki tekst "
+"i vidite šta radi."
+
+#: libs/caliaseditor.cpp:190
+#, kde-format
+msgid "Send original command"
+msgstr "Pošalji originalnu komandu"
+
+#: libs/caliaseditor.cpp:191
+#, kde-format
+msgid ""
+"If this alias matches your command, a replacement command will be sent. If "
+"you enable this option, both original and replacement commands are sent "
+"(original command is sent first)."
+msgstr ""
+"Ako se ovaj alijas poklapa sa vašom komandom, zamjenska komanda će biti "
+"poslana. Ako omogućite ovu opciju, i zamjenska i originalna komanda su "
+"poslane (originalna je poslana prva)."
+
+#: libs/caliaseditor.cpp:197
+#, kde-format
+msgid ""
+"When enabled, this alias will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"Kada je omogućeno, ovaj alijas će se jedino poklapati sa tekstom ako ima "
+"znakova razmaka ili ako nema ničega prije/poslije poklopljenog stringa."
+
+#: libs/caliaseditor.cpp:205
+#, kde-format
+msgid "Include prefix/suffix"
+msgstr "Uključi prefiks/sufiks"
+
+#: libs/caliaseditor.cpp:206
+#, kde-format
+msgid ""
+"Prefix/suffix of matched text will be automatically appended to the expanded "
+"text."
+msgstr ""
+"Prefiks/sufiks poklopljenog teksta će biti automatski dodani na kraj "
+"proširenog teksta."
+
+#: libs/caliaseditor.cpp:210
+#, kde-format
+msgid ""
+"<p>With global matching, one alias/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it is "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition doesn't terminate scanning, so you can use this to highlight names "
+"from a list (using the condition to check if a match is in the list), or "
+"something like that."
+msgstr ""
+"</p> Sa opštim poklapanjem, jedan alijas/okidač može da se poklapa više "
+"puta, ako sadrži uzorak više nego jednom. Naprimjer, ako je uzorak abc, "
+"poklapa se samo jednom na abcdabcd kada je opšte poklapanje isključeno, ali "
+"dva puta ako je uključeno. Za svako poklapanje, tražene akcije su izvršene - "
+"tako da komande mogu biti poslane više puta, jednom po poklapanju. </p><p> "
+"Primjetite da neuspjeh uslova ne prekida pregled, tako da možete koristiti "
+"ovo da označite imena sa lista (koristeći uslov da provjerite ako ima "
+"poklpanja u listi), ili nešto poput toga."
+
+#: libs/caliaseditor.cpp:310
+#, kde-format
+msgid "This text did not match your alias."
+msgstr "Ovaj tekst se nije poklopio sa vašim alijasem."
+
+#: libs/caliaseditor.cpp:315
+#, kde-format
+msgid "This text matches your alias."
+msgstr "Ovaj tekst se poklopio sa vašim alijasem."
+
+#: libs/caliaseditor.cpp:329
+#, kde-format
+msgid "Command: "
+msgstr "Naredba: "
+
+#: libs/ccmdparser.cpp:432
+#, kde-format
+msgid "Sorry, count is limited to 100.\n"
+msgstr "Oprostite, brojanje je ograničeno na 100.\n"
+
+#: libs/ccmdparser.cpp:435
+#, kde-format
+msgid "You can disable this limit in Profile / MUD Preferences."
+msgstr "Možete isključiti ovo ograničenje  u Profili / MUD Preference."
+
+#: libs/ccmdprocessor.cpp:285
+#, kde-format
+msgid "Sorry, but macro calls are only available for profile connections."
+msgstr "Oprostite, ali makro poziv je dostupan samo za veze profila."
+
+#: libs/ccmdprocessor.cpp:296
+#, kde-format
+msgid "This macro does not exist."
+msgstr "Ovaj makro ne postoji."
+
+#: libs/cconsole.cpp:133
+#, kde-format
+msgid "now"
+msgstr "sada"
+
+#: libs/cconsole.cpp:143
+#, kde-format
+msgid "hour"
+msgstr "sat"
+
+#: libs/cconsole.cpp:143
+#, kde-format
+msgid "hours"
+msgstr "sati"
+
+#: libs/cconsole.cpp:148
+#, kde-format
+msgid "minute"
+msgstr "minuta"
+
+#: libs/cconsole.cpp:148
+#, kde-format
+msgid "minutes"
+msgstr "minuta"
+
+#: libs/cconsole.cpp:154
+#, kde-format
+msgid "second"
+msgstr "sekunda"
+
+#: libs/cconsole.cpp:154
+#, kde-format
+msgid "seconds"
+msgstr "sekundi"
+
+#: libs/cconsole.cpp:156
+#, kde-format
+msgid "ago"
+msgstr "prije"
+
+#: libs/cexpresolver.cpp:54
+#, kde-format
+msgid "Function %1 does not exist - assuming empty return value."
+msgstr ""
+"Funkcija %1 ne postoji - pretpostavlja se da je prazna povratna vrijednost."
+
+#: libs/clist.cpp:468
+#, kde-format
+msgid ""
+"This file does not contain the root group, and therefore cannot be loaded."
+msgstr "Ovaj fajl ne sadrži korijensku grupu, i zbog toga ne može biti učitan."
+
+#: libs/clist.cpp:471 libs/cvariablelist.cpp:373
+#: plugins/mapper/cmapzonemanager.cpp:229
+#, kde-format
+msgid ""
+"This file was created by a newer version of KMuddy, and this version is "
+"unable to open it."
+msgstr ""
+"Ovaj fajl je kreiran sa novijom verzijom KMuddy-a, i ova verzija nije u "
+"mogućnosti da ga otvori."
+
+#: libs/clist.cpp:473
+#, kde-format
+msgid "This is not a KMuddy object file."
+msgstr "Ovo nije KMuddy objekt fajl."
+
+#: libs/clist.cpp:475 libs/cvariablelist.cpp:377
+#: plugins/mapper/cmapzonemanager.cpp:233
+#, kde-format
+msgid "This file is corrupted."
+msgstr "Ovaj fajl ima grešku."
+
+#: libs/clist.cpp:479 libs/cvariablelist.cpp:381
+#: plugins/mapper/cmapzonemanager.cpp:236
+#, kde-format
+msgid "Error at line %1, column %2: %3"
+msgstr "Greška u liniji %1, kolona %2: %3"
+
+#: libs/clisteditor.cpp:75
+#, kde-format
+msgid "&Apply changes"
+msgstr "&Primjeni promjene."
+
+#: libs/clisteditor.cpp:76
+#, kde-format
+msgid "&Undo changes"
+msgstr "&Otkaži promjene"
+
+#: libs/clisteditor.cpp:217
+#, kde-format
+msgid "&Enabled"
+msgstr "&Uključeno"
+
+#: libs/clisteditor.cpp:219
+#, kde-format
+msgid "&Priority"
+msgstr "Pr&ioritet:"
+
+#: libs/clisteditor.cpp:224
+#, kde-format
+msgid "&Name"
+msgstr "&Ime"
+
+#: libs/clisteditor.cpp:285
+#, kde-format
+msgid "Cannot rename the group, as a group with this name already exists."
+msgstr "Ne može se preimenovati grupa, jer grupa sa ovim imenom već postoji."
+
+#: libs/clisteditor.cpp:292
+#, kde-format
+msgid "Cannot rename the object, as an object with this name already exists."
+msgstr ""
+"Ne može se preimenovati objekat, jer objekat sa ovim imenom već postoji."
+
+#: libs/clistgroup.cpp:229
+#, kde-format
+msgid "Error in file - group with no name."
+msgstr "Greška u fajlu - grupa bez imena."
+
+#: libs/clistgroup.cpp:233
+#, kde-format
+msgid "Error in file - duplicate group name."
+msgstr "Greška u fajlu - duplicirano ime grupe."
+
+#: libs/clistviewer.cpp:65
+#, kde-format
+msgid "Delete object"
+msgstr "Obriši objekat"
+
+#: libs/clistviewer.cpp:70 libs/clistviewer.cpp:165
+#, kde-format
+msgid "Delete group"
+msgstr "Obriši grupu"
+
+#: libs/clistviewer.cpp:74
+#, kde-format
+msgid "Add subgroup"
+msgstr "Dodaj podgrupu"
+
+#: libs/clistviewer.cpp:79
+#, kde-format
+msgid "Add group"
+msgstr "Dodaj grupu"
+
+#: libs/clistviewer.cpp:84
+#, kde-format
+msgid "Add object"
+msgstr "Dodaj objekat"
+
+#: libs/clistviewer.cpp:164
+#, kde-format
+msgid "Do you really want to delete this group?"
+msgstr "Da li stvarno želite obrisati ovu grupu?"
+
+#: libs/clistviewer.cpp:167
+#, kde-format
+msgid "Do you really want to delete this %1?"
+msgstr "Da li stvarno želite obrisati ovu %1?"
+
+#: libs/clistviewer.cpp:168
+#, kde-format
+msgid "Delete %1"
+msgstr "Obriši %1"
+
+#: libs/clistviewer.cpp:194
+#, kde-format
+msgid "Create Group"
+msgstr "Kreiraj grupu"
+
+#: libs/clistviewer.cpp:194
+#, kde-format
+msgid "Please enter the group name:"
+msgstr "Unesite ime grupe:"
+
+#: libs/clistviewer.cpp:200
+#, kde-format
+msgid "Cannot create the group, as a group with this name already exists."
+msgstr "Ne može se napraviti grupa, jer grupa sa ovim imenom već postoji."
+
+#: libs/cmsp.cpp:284
+#, kde-format
+msgid "MSP: Received corrupted sound trigger!"
+msgstr "MSP: Primljen je zvučni okidač sa greškom!"
+
+#: libs/cmsp.cpp:285
+#, kde-format
+msgid "MSP: Problem was: %1"
+msgstr "MSP: Problem je bio: %1"
+
+#: libs/cmsp.cpp:315
+#, kde-format
+msgid "Parameter names must be followed by '='."
+msgstr "Imena parametara moraju biti praćena sa '='."
+
+#: libs/cmsp.cpp:340
+#, kde-format
+msgid "Parameter %1 requires a numeric argument"
+msgstr "Parametar %1 traži numerički argument."
+
+#: libs/cmsp.cpp:351
+#, kde-format
+msgid "Value of param V is out of 0-100 range."
+msgstr "Vrijednost parametra V je van opsega 0-100."
+
+#: libs/cmsp.cpp:360
+#, kde-format
+msgid "Value of param L is out of -1;1-100 range."
+msgstr "Vrijednost parametra L je van opsega -1;1-100."
+
+#: libs/cmsp.cpp:373
+#, kde-format
+msgid "Value of param P is out of 0-100 range."
+msgstr "Vrijednost parametra P je van opsega 0-100."
+
+#: libs/cmsp.cpp:382
+#, kde-format
+msgid "Value of param C must be 0 or 1."
+msgstr "Vrijednost parametra C mora biti 0 ili 1."
+
+#: libs/cmsp.cpp:393
+#, kde-format
+msgid "Received unfinished sequence."
+msgstr "Primljena je nezavršena sekvenca."
+
+#: libs/cmsp.cpp:449
+#, kde-format
+msgid "MSP: Multiple downloads not supported, request ignored."
+msgstr "MSP: Višestruka preuzimanja nisu podržana, zahtjev je odbijen."
+
+#: libs/cmsp.cpp:469
+#, kde-format
+msgid "MSP: downloading of sounds disabled - request ignored."
+msgstr "MSP: preuzimanje zvukova isključeno - zahtjev odbijen."
+
+#: libs/coutput.cpp:232
+#, kde-format
+msgid "No, no, no!"
+msgstr "Ne, ne, ne!"
+
+#: libs/coutput.cpp:233
+#, kde-format
+msgid "I don't agree with it."
+msgstr "Ne slažem sa sa tim."
+
+#: libs/coutput.cpp:234
+#, kde-format
+msgid "Better not."
+msgstr "Bolje ne."
+
+#: libs/coutput.cpp:235
+#, kde-format
+msgid "I'd probably suggest to reject."
+msgstr "Najvjerovatnije bih predložio odbijanje."
+
+#: libs/coutput.cpp:236
+#, kde-format
+msgid "Saying no seems a bit better."
+msgstr "Čini se malo bolje reći ne."
+
+#: libs/coutput.cpp:237
+#, kde-format
+msgid "Saying yes seems a bit better."
+msgstr "Čini se malo bolje reći da."
+
+#: libs/coutput.cpp:238
+#, kde-format
+msgid "I'd probably suggest to accept."
+msgstr "Najvjerovatnije bih predložio prihvatanje."
+
+#: libs/coutput.cpp:239
+#, kde-format
+msgid "Sounds good."
+msgstr "Zvuči dobro."
+
+#: libs/coutput.cpp:240
+#, kde-format
+msgid "I agree with it."
+msgstr "Slažem se sa tim."
+
+#: libs/coutput.cpp:241
+#, kde-format
+msgid "Definitely yes!"
+msgstr "Definitivno da."
+
+#: libs/coutput.cpp:243
+#, kde-format
+msgid "My decision: %1"
+msgstr "Moja odluka: %1"
+
+#: libs/cpluginmanager.cpp:285
+#, kde-format
+msgid "Plugins"
+msgstr "Dodaci"
+
+#: libs/cprofilemanager.cpp:71
+#, kde-format
+msgid "Profile name"
+msgstr "Ime profila"
+
+#: libs/cprofilemanager.cpp:74
+#, kde-format
+msgid "Login name"
+msgstr "Ime za prijavu"
+
+#: libs/cstatus.cpp:41 libs/cstatus.cpp:180
+#, kde-format
+msgid "Off-line"
+msgstr "Van mreže"
+
+#: libs/cstatus.cpp:44 libs/cstatus.cpp:166 libs/cstatus.cpp:174
+#: libs/cstatus.cpp:210 libs/cstatus.cpp:258
+#, kde-format
+msgid "idle"
+msgstr "miruje"
+
+#: libs/cstatus.cpp:172
+#, kde-format
+msgid "Connected"
+msgstr "Povezano"
+
+#: libs/cstatus.cpp:175
+#, kde-format
+msgid "Connected."
+msgstr "Povezano."
+
+#: libs/cstatus.cpp:181
+#, kde-format
+msgid "Disconnected."
+msgstr "Nepovezan."
+
+#: libs/cstatus.cpp:183
+#, kde-format
+msgid "Connection has been closed."
+msgstr "Veza je zatvorena."
+
+#: libs/cvariablelist.cpp:375
+#, kde-format
+msgid "This is not a KMuddy variable list file."
+msgstr "Ovo nije varijable KMuddy liste fajlova."
+
+#: plugins/converter/converterdialog.cpp:40
+#, kde-format
+msgid "Profile Converter"
+msgstr "Pretvarač Profila."
+
+#: plugins/converter/converterdialog.cpp:49
+#, kde-format
+msgid ""
+"Pick profiles that you would like to convert and press Ok. This tool will "
+"create a new profile containing the information from the chosen profiles. "
+"Existing profiles will not be overwritten, even if they have the same name. "
+"The old profiles will be kept intact."
+msgstr ""
+"Odaberite profile koje želite da pretvarate i pritisnite OK. Ovaj alat će "
+"napraviti novi profil koji sadži informacije iz odabranih profila. Postojeći "
+"profili neče biti prepisani, čak i ako imaju isto ime. Stari profili će "
+"ostati netaknuti."
+
+#: plugins/converter/converterdialog.cpp:54
+#, kde-format
+msgid "Path"
+msgstr "Putanja"
+
+#: plugins/converter/converterplugin.cpp:74
+#, kde-format
+msgid "Profile &Converter..."
+msgstr "&Pretvarač Profila..."
+
+#: plugins/converter/converterplugin.cpp:130
+#, kde-format
+msgid "The profiles have been successfully converted."
+msgstr "Profili su uspješno pretvoreni."
+
+#: plugins/converter/converterplugin.cpp:132
+#, kde-format
+msgid "You did not specify any profiles to convert."
+msgstr "Niste odabrali niti jedan profil za pretvorbu."
+
+#: plugins/mapper/cmapclipboard.cpp:64
+#, kde-format
+msgid "Select All"
+msgstr "Izaberi sve"
+
+#: plugins/mapper/cmapclipboard.cpp:68
+#, kde-format
+msgid "Unselect All"
+msgstr "Poništi sav odabir"
+
+#: plugins/mapper/cmapclipboard.cpp:72
+#, kde-format
+msgid "Invert Selection"
+msgstr "Obrni izbor"
+
+#: plugins/mapper/cmapclipboard.cpp:80
+#, kde-format
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: plugins/mapper/cmapclipboard.cpp:84
+#, kde-format
+msgid "Cut"
+msgstr "Isijeci"
+
+#: plugins/mapper/cmapclipboard.cpp:88
+#, kde-format
+msgid "Paste"
+msgstr "Umetni"
+
+#: plugins/mapper/cmapclipboard.cpp:302 plugins/mapper/cmapclipboard.cpp:449
+#, kde-format
+msgid "Paste Element"
+msgstr "Zalijepi Element"
+
+#: plugins/mapper/cmapclipboard.cpp:315 plugins/mapper/cmapclipboard.cpp:459
+#, kde-format
+msgid "Update Properties"
+msgstr "Obnovi Osobine"
+
+#: plugins/mapper/cmapclipboard.cpp:380
+#, kde-format
+msgid "Paste Path"
+msgstr "Zalijepi Putanju"
+
+#: plugins/mapper/cmapclipboard.cpp:472
+#, kde-format
+msgid "Delete Elements"
+msgstr "Obriši Elemente"
+
+#: plugins/mapper/cmapelement.cpp:339
+#, kde-format
+msgid "Resize Element"
+msgstr "Promijeni Veličinu Elementa"
+
+#: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
+#, kde-format
+msgid "Level %1"
+msgstr "Nivo %1"
+
+#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:121
+#, kde-format
+msgid "Map #1"
+msgstr ""
+
+#: plugins/mapper/cmapmanager.cpp:194
+#, kde-format
+msgid "Mapper: Directions"
+msgstr "Maper: Usmjerenja"
+
+#: plugins/mapper/cmapmanager.cpp:197
+#, kde-format
+msgid "Mapper: Movement"
+msgstr "Maper: Pomjeranja"
+
+#: plugins/mapper/cmapmanager.cpp:200
+#, kde-format
+msgid "Mapper: Colors"
+msgstr "Maper: Boje"
+
+#: plugins/mapper/cmapmanager.cpp:203
+#, kde-format
+msgid "Mapper: Speedwalk"
+msgstr "Maper: Brzo Hodanje"
+
+#: plugins/mapper/cmapmanager.cpp:410
+#, kde-format
+msgid "Change Login Room"
+msgstr "Promijeni Sobu za Prijavu"
+
+#: plugins/mapper/cmapmanager.cpp:413
+#, kde-format
+msgid "Remove Login Room Status"
+msgstr "Ukloni Status Prijave Sobe"
+
+#: plugins/mapper/cmapmanager.cpp:420
+#, kde-format
+msgid "Set Login Room Status"
+msgstr "Postavi Status Prijave Sobe"
+
+#: plugins/mapper/cmapmanager.cpp:452
+#, kde-format
+msgid "Change Current Room"
+msgstr "Promijeni Trenutnu Sobu"
+
+#: plugins/mapper/cmapmanager.cpp:454
+#, kde-format
+msgid "Remove Current Room Status"
+msgstr "Ukloni Trenutni Status Sobe"
+
+#: plugins/mapper/cmapmanager.cpp:459
+#, kde-format
+msgid "Set Current Room Status"
+msgstr "Postavi Trenutni Status Sobe"
+
+#: plugins/mapper/cmapmanager.cpp:567
+#, kde-format
+msgid "Create Level"
+msgstr "Napravi nivo"
+
+#: plugins/mapper/cmapmanager.cpp:636
+#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:34
+#, kde-format
+msgid "Create Room"
+msgstr "Napravi Sobu"
+
+#: plugins/mapper/cmapmanager.cpp:664 plugins/mapper/cmapmanager.cpp:693
+#, kde-format
+msgid "Create Text"
+msgstr "Kreiraj tekst"
+
+#: plugins/mapper/cmapmanager.cpp:764
+#, kde-format
+msgid "A path already exists at this location"
+msgstr "Putanja već postoji na ovoj lokaciji"
+
+#: plugins/mapper/cmapmanager.cpp:764 plugins/mapper/cmapmanager.cpp:1448
+#: plugins/mapper/cmapmanager.cpp:1502 plugins/mapper/cmapmanager.cpp:1536
+#: plugins/mapper/cmapview.cpp:585 plugins/mapper/cmapview.cpp:607
+#: plugins/mapper/cmapview.cpp:614 plugins/mapper/cmapview.cpp:623
+#, kde-format
+msgid "KMuddy Mapper"
+msgstr "KMuddy Maper"
+
+#: plugins/mapper/cmapmanager.cpp:777 plugins/mapper/cmapmanager.cpp:811
+#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:42
+#, kde-format
+msgid "Create Path"
+msgstr "Napravi putanju"
+
+#: plugins/mapper/cmapmanager.cpp:857
+#, kde-format
+msgid "Delete Level"
+msgstr "Obriši nivo"
+
+#: plugins/mapper/cmapmanager.cpp:891 plugins/mapper/cmapmanager.cpp:900
+#, kde-format
+msgid "Delete Element"
+msgstr "Obriši Element"
+
+#: plugins/mapper/cmapmanager.cpp:1448
+#, kde-format
+msgid "Speedwalking is already in progress"
+msgstr "Brzo hodanje je već u procesu"
+
+#: plugins/mapper/cmapmanager.cpp:1502
+#, kde-format
+msgid "The automapper was unable to find a path to requested room"
+msgstr ""
+"Automatski maper nije bio u mogućnosti da nađe putanju do zatražene sobe"
+
+#: plugins/mapper/cmapmanager.cpp:1536
+#, kde-format
+msgid "Speedwalk abort because move limit was reached"
+msgstr "Brzo hodanje prekinuto jer je dostignut limit pomjeranja"
+
+#: plugins/mapper/cmapmanager.cpp:1635
+#, kde-format
+msgid "Move Elements in map"
+msgstr "Pomjeri Elemente u mapi"
+
+#: plugins/mapper/cmapmanager.cpp:1644
+#, kde-format
+msgid "Make Path Two-Way"
+msgstr "Napravi Dvosmjerne Puteve"
+
+#: plugins/mapper/cmapmanager.cpp:1654
+#, kde-format
+msgid "Make Path One-Way"
+msgstr "Napravi Jednosmjerne Puteve"
+
+#: plugins/mapper/cmapmanager.cpp:1690 plugins/mapper/cmapmanager.cpp:1699
+#, kde-format
+msgid "Change Element Property"
+msgstr "Promijeni Osobine Elementa"
+
+#: plugins/mapper/cmapmanager.cpp:1772
+#, kde-format
+msgid "Root Zone"
+msgstr "Zona Korijena"
+
+#: plugins/mapper/cmapmanager.cpp:1788
+#, kde-format
+msgid "Test room 1"
+msgstr "Test soba 1"
+
+#: plugins/mapper/cmapmanager.cpp:1791
+#, kde-format
+msgid "Test room 2"
+msgstr "Test soba 2"
+
+#: plugins/mapper/cmapmanager.cpp:1794
+#, kde-format
+msgid "Test room 3"
+msgstr "Test soba 3"
+
+#: plugins/mapper/cmapmanager.cpp:1797
+#, kde-format
+msgid "Test room 4"
+msgstr "Test soba 4"
+
+#: plugins/mapper/cmapmanager.cpp:1813
+#, kde-format
+msgid "Set Special Exit"
+msgstr "Postavi Specijalni Izlaz"
+
+#: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:685
+#, kde-format
+msgid "Add Bend"
+msgstr "Dodaj Krivulju"
+
+#: plugins/mapper/cmappath.cpp:616
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:217
+#, kde-format
+msgid "Move Bend"
+msgstr "Pomjeri krivulju"
+
+#: plugins/mapper/cmappath.cpp:631 plugins/mapper/cmapview.cpp:703
+#, kde-format
+msgid "Delete Path Segment"
+msgstr "Dodaj Segment Putanje"
+
+#: plugins/mapper/cmapview.cpp:54 plugins/mapper/kmuddy_mapper.cpp:61
+#, kde-format
+msgid "Mapper"
+msgstr "Maper"
+
+#: plugins/mapper/cmapview.cpp:81
+#, fuzzy, kde-format
+#| msgid "Follow Mode"
+msgid "Follow Moves"
+msgstr "Način Praćenja"
+
+#: plugins/mapper/cmapview.cpp:87
+#, fuzzy, kde-format
+#| msgid "Auto-detect"
+msgid "Auto Create"
+msgstr "Automatsko detektiranje"
+
+#: plugins/mapper/cmapview.cpp:123
+#, kde-format
+msgid "&Grid"
+msgstr "&Mreža"
+
+#: plugins/mapper/cmapview.cpp:128
+#, kde-format
+msgid "Display Upper Level"
+msgstr "Prikaži Viši Nivo"
+
+#: plugins/mapper/cmapview.cpp:133
+#, kde-format
+msgid "Display Lower Level"
+msgstr "Prikaži Niži Nivo"
+
+#: plugins/mapper/cmapview.cpp:138
+#, kde-format
+msgid "Delete Current Level"
+msgstr "Obriši Trenutni Nivo"
+
+#: plugins/mapper/cmapview.cpp:143
+#, fuzzy, kde-format
+#| msgid "Create Zone"
+msgid "Create New Zone"
+msgstr "Napravi Zonu"
+
+#: plugins/mapper/cmapview.cpp:148
+#, fuzzy, kde-format
+#| msgid "Delete Current zone"
+msgid "Delete Current Zone"
+msgstr "Obriši Trenutnu Zonu"
+
+#: plugins/mapper/cmapview.cpp:155
+#, kde-format
+msgid "Map Upper Level"
+msgstr "Gornji Nivo Mape"
+
+#: plugins/mapper/cmapview.cpp:159
+#, kde-format
+msgid "Map Lower Level"
+msgstr "Donji Nivo Mape"
+
+#: plugins/mapper/cmapview.cpp:166
+#, kde-format
+msgid "Set &Current Position"
+msgstr "Postavi &Trenutnu Poziciju"
+
+#: plugins/mapper/cmapview.cpp:170
+#, kde-format
+msgid "Set Room to &Login Point"
+msgstr "Postavi Sobu na Tačku &Prijave"
+
+#: plugins/mapper/cmapview.cpp:174
+#, kde-format
+msgid "&Speed walk to room"
+msgstr "&Brzo hodanje do sobe"
+
+#: plugins/mapper/cmapview.cpp:178
+#, kde-format
+msgid "&Delete room"
+msgstr "&Obriši sobu"
+
+#: plugins/mapper/cmapview.cpp:183 plugins/mapper/cmapview.cpp:195
+#: plugins/mapper/cmapview.cpp:227
+#, kde-format
+msgid "&Properties"
+msgstr "&Svojstva"
+
+#: plugins/mapper/cmapview.cpp:190
+#, kde-format
+msgid "&Delete Text"
+msgstr "&Obriši tekst"
+
+#: plugins/mapper/cmapview.cpp:202
+#, kde-format
+msgid "&One way"
+msgstr "&Jednosmjerno"
+
+#: plugins/mapper/cmapview.cpp:206
+#, kde-format
+msgid "&Two way"
+msgstr "&Dvosmjerno"
+
+#: plugins/mapper/cmapview.cpp:210
+#, kde-format
+msgid "&Add Bend"
+msgstr "&Dodaj Krivulju"
+
+#: plugins/mapper/cmapview.cpp:214
+#, kde-format
+msgid "&Remove Segment"
+msgstr "&Otkloni Segment"
+
+#: plugins/mapper/cmapview.cpp:218
+#, kde-format
+msgid "&Edit Bends"
+msgstr "&Uredi Krivulje"
+
+#: plugins/mapper/cmapview.cpp:222
+#, kde-format
+msgid "&Delete Path"
+msgstr "&Obriši Putanju"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdHide)
+#: plugins/mapper/cmapview.cpp:232
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
+#, kde-format
+msgid "Hide"
+msgstr "Sakrij"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
+#: plugins/mapper/cmapview.cpp:241
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
+#, kde-format
+msgid "Custom"
+msgstr "Proizvoljno"
+
+#: plugins/mapper/cmapview.cpp:244
+#, kde-format
+msgid "&Label"
+msgstr "&Etiketa"
+
+#: plugins/mapper/cmapview.cpp:585
+#, kde-format
+msgid "There is no level in that direction. Do you want to create a new one?"
+msgstr ""
+
+#: plugins/mapper/cmapview.cpp:607
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete this group?"
+msgid "Are you sure that you want to delete the current level?"
+msgstr "Da li stvarno želite obrisati ovu grupu?"
+
+#: plugins/mapper/cmapview.cpp:614
+#, fuzzy, kde-format
+#| msgid "Please enter name for the duplicated profile"
+msgid "Please enter the name of the new zone:"
+msgstr "Molim unesite ime za duplicirani profil"
+
+#: plugins/mapper/cmapview.cpp:623
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete this group?"
+msgid ""
+"Are you sure that you want to delete the current zone? This cannot be undone."
+msgstr "Da li stvarno želite obrisati ovu grupu?"
+
+#: plugins/mapper/cmapview.cpp:760
+#, kde-format
+msgid "Change room label position"
+msgstr "Promjeni poziciju etikete sobe"
+
+#: plugins/mapper/cmapview.cpp:786
+#, kde-format
+msgid "Change zone label position"
+msgstr "Promjeni poziciju etikete zone"
+
+#: plugins/mapper/cmapviewstatusbar.cpp:55
+#, kde-format
+msgid "Current Room : "
+msgstr "Trenutna soba: "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:56
+#, kde-format
+msgid "Level : "
+msgstr "Nivo: "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:57
+#, kde-format
+msgid "Zone : "
+msgstr "Zona: "
+
+#: plugins/mapper/cmapzone.cpp:34
+#, kde-format
+msgid "Unnamed Zone"
+msgstr "Neimenovana Zona"
+
+#: plugins/mapper/cmapzonemanager.cpp:231
+#, fuzzy, kde-format
+#| msgid "This is not a KMuddy variable list file."
+msgid "This is not a KMuddy map list."
+msgstr "Ovo nije varijable KMuddy liste fajlova."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
+#, kde-format
+msgid "Mapper Colors Options"
+msgstr "Opcije Boja Mapera"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
+#, kde-format
+msgid "Current Level"
+msgstr "Trenutni Nivo"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
+#, kde-format
+msgid "Default Path Color"
+msgstr "Predefinisana Boja Putanje"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
+#, kde-format
+msgid "Default Room Color"
+msgstr "Predefinisana Boja Sobe"
+
+#. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
+#, kde-format
+msgid "Current Position Color"
+msgstr "Trenutna Boja Pozicije"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
+#, kde-format
+msgid "Special Exit Color"
+msgstr "Specijalna Boja Izlaza"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
+#, kde-format
+msgid "Login Room Color"
+msgstr "Boja Sobe za Prijavu"
+
+#. i18n: ectx: property (text), widget (QLabel, lblEdit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
+#, kde-format
+msgid "Edit Mode Color"
+msgstr "Boja Načina za Uređivanje"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
+#, kde-format
+msgid "Default Text Color"
+msgstr "Predefinisana Boja Teksta"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
+#, kde-format
+msgid "Default Zone Color"
+msgstr "Predefinisana Boja Zone"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSelected)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
+#, kde-format
+msgid "Selected Color"
+msgstr "Odabrana boja"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
+#, kde-format
+msgid "Lower Level"
+msgstr "Niži Nivo"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:322
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
+#, kde-format
+msgid "Room Color"
+msgstr "Boja Sobe"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:351
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
+#, kde-format
+msgid "Path Color"
+msgstr "Boja Putanje"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerText)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:361
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:502
+#, kde-format
+msgid "Text Color"
+msgstr "Boja teksta"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerZone)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:371
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
+#, kde-format
+msgid "Zone Color"
+msgstr "Boja Zone"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
+#, kde-format
+msgid "Upper Level"
+msgstr "Viši Nivo"
+
+#. i18n: ectx: property (text), widget (QLabel, lblBackground)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
+#, kde-format
+msgid "Background Color"
+msgstr "Boja pozadine"
+
+#. i18n: ectx: property (text), widget (QLabel, lblGrid)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
+#, kde-format
+msgid "Grid Color"
+msgstr "Boja mreže"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
+#, kde-format
+msgid "Directions"
+msgstr "Smjerovi"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsLong)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
+#, kde-format
+msgid "Long Directions Commands"
+msgstr "Komande Dugih Smjerova"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:71
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:216
+#, kde-format
+msgid "North"
+msgstr "Sjever"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:81
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:226
+#, kde-format
+msgid "East"
+msgstr "Istok"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:91
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:236
+#, kde-format
+msgid "South"
+msgstr "Jug"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:101
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:246
+#, kde-format
+msgid "West"
+msgstr "Zapad"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:131
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
+#, kde-format
+msgid "North East"
+msgstr "Sjeveroistok"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:141
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
+#, kde-format
+msgid "South East"
+msgstr "Jugoistok"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:151
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
+#, kde-format
+msgid "South West"
+msgstr "Jugozapad"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:161
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:306
+#, kde-format
+msgid "North West"
+msgstr "Sjeverozapad"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
+#, kde-format
+msgid "Short Directions Commands"
+msgstr "Komande Kratkih Smjerova"
+
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:108
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:143
+#, kde-format
+msgid "Enter invalid movement string as a regular expression"
+msgstr "Unesite nepravilan niz pokreta kao regularan izraz"
+
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:143
+#, kde-format
+msgid "Kmud"
+msgstr "Kmud"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
+#, kde-format
+msgid "Valid Room Checking"
+msgstr "Pravilna Provjera Sobe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
+#, kde-format
+msgid "Enable valid room checking"
+msgstr "Omogući pravilnu provjeru sobe"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
+#, kde-format
+msgid "Invalid Move Strings"
+msgstr "Nepravilni Nizovi Pokreta"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
+#, kde-format
+msgid "Add"
+msgstr "Dodaj"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdEdit)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:68
+#, kde-format
+msgid "Edit"
+msgstr "Izmijeni"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdRemove)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:75
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:297
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:299
+#, kde-format
+msgid "Changed Path Properties"
+msgstr "Promijeni Osobine Putanje"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
+#, kde-format
+msgid "Path Properties"
+msgstr "Osobine Putanje"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
+#, kde-format
+msgid "Exits"
+msgstr "Izlazi"
+
+#. i18n: ectx: property (title), widget (QGroupBox, grdExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
+#, kde-format
+msgid "Exit Details"
+msgstr "Detalji Izlaza"
+
+#. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
+#, fuzzy, kde-format
+#| msgid "Two Way"
+msgid "Two Way Exit"
+msgstr "Dvosmjerno"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
+#, kde-format
+msgid "Normal exit"
+msgstr "Normalni izlaz"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
+#, kde-format
+msgid "Source Directions"
+msgstr "Smjerovi Izvora"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:124
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:488
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:322
+#, kde-format
+msgid "E"
+msgstr "E"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestS)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:146
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:510
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:190
+#, kde-format
+msgid "S"
+msgstr "S"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:190
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:466
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:256
+#, kde-format
+msgid "W"
+msgstr "Z"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:212
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:378
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:344
+#, kde-format
+msgid "NE"
+msgstr "SI"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:234
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:444
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:278
+#, kde-format
+msgid "NW"
+msgstr "SZ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:400
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:212
+#, kde-format
+msgid "SE"
+msgstr "JI"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestN)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:278
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:422
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
+#, kde-format
+msgid "N"
+msgstr "N"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:300
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:532
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:234
+#, kde-format
+msgid "SW"
+msgstr "JZ"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
+#, kde-format
+msgid "Destination Direction"
+msgstr "Smjerovi Destinacije"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
+#, kde-format
+msgid "Special Exit"
+msgstr "Specijalni Izlaz"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
+#, kde-format
+msgid "Special Command"
+msgstr "Specijalna Komanda"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
+#, kde-format
+msgid "Source To Destination:"
+msgstr "Izvor Do Destinacije:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
+#, kde-format
+msgid "Destination To Source:"
+msgstr "Destinacija Do Izvora:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
+#, kde-format
+msgid "Src To Destination Commands"
+msgstr "Komande Od Izvora Do Destinacije"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcBefore)
+#. i18n: ectx: property (text), widget (QLabel, lblDestBefore)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:665
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:706
+#, kde-format
+msgid "Before walking path:"
+msgstr "Putanja prije hodanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcAfter)
+#. i18n: ectx: property (text), widget (QLabel, lblDestAfter)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:678
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:719
+#, kde-format
+msgid "After walking path:"
+msgstr "Putanja poslije hodanja:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDestSrcCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:694
+#, kde-format
+msgid "Destination To Source Commands"
+msgstr "Komande Od Destinacije Do Izvora"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdOk)
+#. i18n: ectx: property (text), widget (QPushButton, cmdOK)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
+#, kde-format
+msgid "OK"
+msgstr "U redu"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
+#, kde-format
+msgid "Cancel"
+msgstr "Odustani"
+
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
+#: plugins/mapper/dialogs/dlgmaptextproperties.cpp:223
+#, kde-format
+msgid "Changed Room Properties"
+msgstr "Promijeni Osobine Sobe"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
+#, kde-format
+msgid "Room Properties"
+msgstr "Osobine Sobe"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
+#, kde-format
+msgid "&Description"
+msgstr "&Opis"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLabel)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
+#, kde-format
+msgid "Label:"
+msgstr "Oznaka:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:55
+#, kde-format
+msgid "Description:"
+msgstr "Opis:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAppearance)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
+#, kde-format
+msgid "&Appearance"
+msgstr "&Izgled"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
+#, kde-format
+msgid "Color"
+msgstr "Boja"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRoomColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
+#, kde-format
+msgid "Room Color:"
+msgstr "Boja Sobe:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
+#, fuzzy, kde-format
+#| msgid "Default Room Color"
+msgid "Default room color"
+msgstr "Predefinisana Boja Sobe"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
+#, kde-format
+msgid "LabelPosition"
+msgstr "PozicijaEtikete"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
+#, kde-format
+msgid "&Exits"
+msgstr "&Izlazi"
+
+#. i18n: ectx: property (text), widget (QLabel, lblExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
+#, kde-format
+msgid "Room Exits:"
+msgstr "Izlazi iz sobe:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
+#, kde-format
+msgid "Direction"
+msgstr "Smijer"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
+#, fuzzy, kde-format
+#| msgid "Before Command"
+msgid "Before command"
+msgstr "Prije Komande"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
+#, fuzzy, kde-format
+#| msgid "After Command"
+msgid "After command"
+msgstr "Poslije Komande"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
+#, kde-format
+msgid "Properties"
+msgstr "Svojstva"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:533
+#, kde-format
+msgid "&Contents"
+msgstr "&Sadržaj"
+
+#. i18n: ectx: property (text), widget (QLabel, lblContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
+#, kde-format
+msgid "RoomContents:"
+msgstr "SadržajSobe:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
+#, kde-format
+msgid "New Item"
+msgstr "Nova stavka"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdRemoveItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
+#, kde-format
+msgid "Remove Item"
+msgstr "Ukloni stavku"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
+#, kde-format
+msgid "Speedwalk Options"
+msgstr "Opcije Brzog hodanja"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
+#, kde-format
+msgid "Limit Speedwalk Moves"
+msgstr "Ograniči Pokrete Brzog hodanja"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:38
+#, kde-format
+msgid "Limit speedwalk moves"
+msgstr "Ograniči pokrete brzog hodanja"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:53
+#, kde-format
+msgid "Number of moves before aborting:"
+msgstr "Broj poteza prije prekidanja:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:106
+#, kde-format
+msgid "Delay Speedwalk Moves"
+msgstr "Odgodi Pokrete Brzog hodanja"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
+#, kde-format
+msgid "Delay before sending next command (centi secconds)"
+msgstr "Odgodi prije slanja sljedeće komande (centisekunde)"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
+#, kde-format
+msgid "Text Properties"
+msgstr "Osobine teksta"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
+#, kde-format
+msgid "&Font"
+msgstr "&Font"
+
+#. i18n: ectx: property (text), widget (QLabel, lblFamily)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:58
+#, kde-format
+msgid "Family:"
+msgstr "Porodica:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblColor_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
+#, kde-format
+msgid "Color:"
+msgstr "Boja:"
+
+#. i18n: ectx: property (text), widget (KColorButton, cmdColor)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
+#, kde-format
+msgid "Button"
+msgstr "Dugme"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
+#, kde-format
+msgid "S&ize"
+msgstr "&Veličina"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
+#, kde-format
+msgid "Actual Size "
+msgstr "Stvarna veličina "
+
+#. i18n: ectx: property (text), widget (QLabel, Width_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
+#, kde-format
+msgid "Width (pixels):"
+msgstr "Širina (u pikselima):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
+#, kde-format
+msgid "Height (pixels):"
+msgstr "Visina (u pikselima):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
+#, kde-format
+msgid "Font Size"
+msgstr "Veličina slova"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSize_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
+#, kde-format
+msgid "Enter font size:"
+msgstr "Unesi veličinu slova:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
+#, kde-format
+msgid "Set Size"
+msgstr "Postavi veličinu"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab3)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
+#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:37
+#, kde-format
+msgid "Text"
+msgstr "Tekst"
+
+#. i18n: ectx: property (text), widget (QLabel, lblText)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
+#, kde-format
+msgid "Text:"
+msgstr "Tekst:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblPreview)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
+#, kde-format
+msgid "Preview:"
+msgstr "Pregled:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
+#, kde-format
+msgid "Speedwalk Progress"
+msgstr "Osobine Brzog hodanja"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
+#, kde-format
+msgid "x"
+msgstr "x"
+
+#: plugins/mapper/kmuddy_mapper.cpp:72
+#, kde-format
+msgid "Show &mapper"
+msgstr "Pokaži &maper"
+
+#. i18n: ectx: ToolBar (tools)
+#: plugins/mapper/kmuddymapperpart.rc:10
+#, kde-format
+msgid "Tools"
+msgstr "Alati"
+
+#. i18n: ectx: ToolBar (navigation)
+#: plugins/mapper/kmuddymapperpart.rc:21
+#, kde-format
+msgid "Navigation"
+msgstr "Navigacija"
+
+#: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
+#, kde-format
+msgid "Move Elements"
+msgstr "Pomjeri Elemente"
+
+#: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
+#, kde-format
+msgid "Change element notes"
+msgstr "Promijeni bilješke elemenata"
+
+#: plugins/mapper/plugins/standard/cmappluginstandard.cpp:76
+#, kde-format
+msgid "Notes"
+msgstr "Zabilješke"
+
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:38
+#, kde-format
+msgid "Notes:"
+msgstr "Bilješke:"
+
+#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:59
+#, kde-format
+msgid "Eraser"
+msgstr "Brisač"
+
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:36
+#, kde-format
+msgid "Select"
+msgstr "Izaberi"
+
+#: plugins/scripting/cscript.cpp:68
+#, kde-format
+msgid "Sorry, single-instance script."
+msgstr "Oprostite, jedno-instancna skripta."
+
+#: plugins/scripting/cscripteditor.cpp:61
+#, kde-format
+msgid "Script &name"
+msgstr "&Ime skripte"
+
+#: plugins/scripting/cscripteditor.cpp:65
+#, kde-format
+msgid "Name of this script."
+msgstr "Ime ove skripte."
+
+#: plugins/scripting/cscripteditor.cpp:69
+#, kde-format
+msgid "&Command to execute"
+msgstr "&Komanda za izvršavanje"
+
+#: plugins/scripting/cscripteditor.cpp:73
+#, kde-format
+msgid ""
+"Command to execute, including parameters. Note that you can specify more "
+"parameters when executing the command from the input line, if you enable the "
+"Allow parameters checkbox."
+msgstr ""
+"Komanda za izvršavanje, uključujući parametre. Primjetite da možete "
+"specificirati više parametara kada izvršavate komandu iz linije unosa, ako "
+"označite Dozvoli parametre."
+
+#: plugins/scripting/cscripteditor.cpp:82
+#, kde-format
+msgid ""
+"Working directory for the script. Script will behave exactly as if it was "
+"run from this directory in console."
+msgstr ""
+"Radni direktorij za skriptu. Skripta će se ponašati tačno kao da je "
+"pokrenuta iz ovog direktorija u konzoli."
+
+#: plugins/scripting/cscripteditor.cpp:90
+#, kde-format
+msgid "Send user commands"
+msgstr "Pošalji korisničke komande"
+
+#: plugins/scripting/cscripteditor.cpp:91
+#, kde-format
+msgid ""
+"If script input is enabled, this enables sending of all sent commands to the "
+"script."
+msgstr ""
+"Ako je omogućen unos skripte, ovo omogućava slanje svih poslanih komandi "
+"skripti."
+
+#: plugins/scripting/cscripteditor.cpp:94
+#, kde-format
+msgid "Enable communication"
+msgstr "Omogući komunikaciju"
+
+#: plugins/scripting/cscripteditor.cpp:95
+#, kde-format
+msgid ""
+"Enables identification of lines of server output. Refer to the manual for "
+"more information."
+msgstr ""
+"Omogućava identifikaciju linija izlaza servera. Za više informacija, "
+"pogledajte uputu za korištenje."
+
+#: plugins/scripting/cscripteditor.cpp:98
+#, kde-format
+msgid "Single-instance script"
+msgstr "Jedno-instancna skripta"
+
+#: plugins/scripting/cscripteditor.cpp:99
+#, kde-format
+msgid ""
+"If an instance of this script is already running, another one can not be "
+"started."
+msgstr "Ako instanca ove skripte već radi, nova ne može biti pokrenuta."
+
+#: plugins/scripting/cscripteditor.cpp:102
+#, kde-format
+msgid "Use flow control"
+msgstr "Koristi kontrolu toka"
+
+#: plugins/scripting/cscripteditor.cpp:103
+#, kde-format
+msgid ""
+"<p>If enabled, flow control will be used for this script. Flow control "
+"ensures that scripts are kept in sync, that means, that if two lines arrive "
+"from the server, the second one is not sent to the scripts until all running "
+"scripts have received the first one. However, in some situations, it's "
+"better not to use this feature.</p><p>If you don't need to disable flow "
+"control for some reason, leave this on.</p>"
+msgstr ""
+"<p>Ako je omogućeno, kontrola toka će biti korištena za ovu skriptu. "
+"Kontrola toka osigurava da su skripte čuvane u sinhronizaciji, što znači, da "
+"ako dvije linije stignu od servera, druga nije poslana skriptama dok sve "
+"skripte koje rade ne prime prvu. Kako god, u nekim sitacijama, bolje je ne "
+"koristiti ovu mogućnost.</p><p>Ako ne trebate da isključite kotrolu toka iz "
+"nekog razloga, ostavite ovo uključeno.</p>"
+
+#: plugins/scripting/cscripteditor.cpp:111
+#, kde-format
+msgid "Communicate variables"
+msgstr "Varijable komunikacije"
+
+#: plugins/scripting/cscripteditor.cpp:112
+#, kde-format
+msgid ""
+"If enabled, a UNIX domain socket will be created, allowing you to obtain and "
+"modify actual variable values. More information in the documentation."
+msgstr ""
+"Ako je omogućeno, prostor za UNIX domena+u će biti stvoren, dozvoljavajući "
+"vam da dobijete i podešavate stvarne vrijednosti varijabli. Više informacija "
+"u dokumentaciji."
+
+#: plugins/scripting/cscripteditor.cpp:145
+#, kde-format
+msgid "Choose script"
+msgstr "Odaberi skriptu"
+
+#: plugins/scripting/cscripteditor.cpp:153
+#, kde-format
+msgid "Choose working directory"
+msgstr "Odaberi radni direktorij"
+
+#: plugins/scripting/cscriptlist.cpp:87
+#, kde-format
+msgid "Such external script does not exist!"
+msgstr "Takva eksterna skripta ne postoji!"
+
+#: plugins/scripting/dlgrunninglist.cpp:31
+#, kde-format
+msgid "Running scripts"
+msgstr "Skripte koje su pokrenute"
+
+#: plugins/scripting/dlgrunninglist.cpp:39
+#, kde-format
+msgid "&Running scripts"
+msgstr "&Skripte koje su pokrenute"
+
+#: plugins/scripting/dlgrunninglist.cpp:50
+#, kde-format
+msgid "&Terminate"
+msgstr "&Okončaj"
+
+#: plugins/scripting/dlgrunninglist.cpp:54
+#, kde-format
+msgid "&Kill"
+msgstr "&Ubij"
+
+#: plugins/scripting/scriptingplugin.cpp:65
+#, kde-format
+msgid "/exec: Script list is not available."
+msgstr "/exec: Lista skripti nije dostupna."
+
+#: plugins/scripting/scriptingplugin.cpp:125
+#, kde-format
+msgid "Scripts"
+msgstr "Skripte"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:61
+#, kde-format
+msgid "Variable name that this trigger will be reacting on."
+msgstr "Ime varijable na koje će reagovati ovaj okidač."
+
+#: plugins/vartrigs/cvartriggereditor.cpp:63
+#, kde-format
+msgid "&Commands"
+msgstr "&Naredbe"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:66
+#, kde-format
+msgid "Commands that will be executed when this trigger matches."
+msgstr "Komande koje će biti izvršene ako ovaj okidač nađe poklapanje."
+
+#: plugins/vartrigs/vartrigplugin.cpp:41
+#, kde-format
+msgid "Variable Triggers"
+msgstr "Promjenjivi okidači"
+
+#: plugins/varviewer/dlgvarviewer.cpp:70
+#, kde-format
+msgid "Variable"
+msgstr "Varijabla"
+
+#: plugins/varviewer/dlgvarviewer.cpp:140
+#, kde-format
+msgid "Variables"
+msgstr "Promjenljive"
+
+#~ msgid "W&rap at position"
+#~ msgstr "P&relomi na poziciji"
+
+#~ msgid "As needed"
+#~ msgstr "Kako je potrebno"
+
+#~ msgid ""
+#~ "Wrap at a fixed position, or at the rightmost position, if no value is "
+#~ "given."
+#~ msgstr ""
+#~ "Prelomi na fiksiranoj poziciji, ili na poziciji koja je prva sa desna, "
+#~ "ukoliko nije data vrijednost."
+
+#~ msgid "&Forced redraw after"
+#~ msgstr "&Forsirani prepis nakon"
+
+#~ msgid ""
+#~ "Forced redraw after adding a given amount of lines. Setting this to a low "
+#~ "number may prevent some displaying problems, at a cost of higher CPU "
+#~ "usage. Setting it to Never will disable the feature, redraw will only "
+#~ "occur when needed."
+#~ msgstr ""
+#~ "Forsirani prepis nakon dodavanja date količine linija. Podešavanje ovoga "
+#~ "na mali broj može spriječiti neke probleme prikazivanja, po cijenu veće "
+#~ "korištenja CPU. Podešavanje ovoga na Nikad će isključiti ovu opciju, "
+#~ "prepis će se desiti samo kada je potreban."
+
+#~ msgid "&Select from MUD list"
+#~ msgstr "&Izaberi sa MUD liste"
+
+#~ msgid ""
+#~ "Enables support for blinking. This is disabled by default, because most "
+#~ "players don't like it."
+#~ msgstr ""
+#~ "Uključuje podršku za svjetlucanje. Ovo je podrazumijevano isključeno, jer "
+#~ "većina igrača to ne voli."
+
+#~ msgid "Enable &word wrapping"
+#~ msgstr "Omogući &prelom teksta."
+
+#~ msgid ""
+#~ "If a line that is longer than current console width is to be displayed, "
+#~ "it wraps to the next line. With this option enabled, whole words will "
+#~ "move to the next line, instead of cutting words in the middle."
+#~ msgstr ""
+#~ "Ako linija koja je duža od trenutne širine konzole treba biti prikazana, "
+#~ "prelama se u sjledeću liniju. Uz ovu opciju uključenu, cijele riječi će "
+#~ "se pomjeriti u sljedeći red, umjesto prekida riječi u pola."
+
+#~ msgid "Done"
+#~ msgstr "Gotovo"
+
+#~ msgid "&Window"
+#~ msgstr "&Prozor"
+
+#~ msgid "Add Room to speedwalk list"
+#~ msgstr "Dodaj Sobu na listu brzog hodanja"
+
+#~ msgid "Remove Room(s) from speedwalk list"
+#~ msgstr "Obriši Sobu(e) sa liste brzog hodanja"
+
+#~ msgid "Show Speedwalk List"
+#~ msgstr "Pokaži Listu Brzog hodanja"
+
+#~ msgid "&Add to speed walk list"
+#~ msgstr "&Dodaj na listu brzog hodanja"
+
+#~ msgid "Speedwalk List"
+#~ msgstr "Lista Brzog hodanja"
+
+#~ msgid "&Show in active view"
+#~ msgstr "&Pokaži u aktivnom pogledu"
+
+#~ msgid "Show in &new view"
+#~ msgstr "Pokaži u &novom pogledu"
+
+#~ msgid "&Walk to room"
+#~ msgstr "&Hodaj do sobe"
+
+#~ msgid "&Remove from list"
+#~ msgstr "&Ukloni sa liste"
+
+#~ msgid "&Open in active view"
+#~ msgstr "&Otvori u aktivnom pogledu"
+
+#~ msgid "Open in &new view"
+#~ msgstr "Otvori u &novom pogledu"
+
+#~ msgid "Room"
+#~ msgstr "Soba"
+
+#~ msgid "&Level"
+#~ msgstr "&Nivo"
+
+#~ msgid "&Zone"
+#~ msgstr "&Zona"
+
+#~ msgid "Unnamed room"
+#~ msgstr "Neimenovana soba"
+
+#~ msgid "Categorize:"
+#~ msgstr "Kategoriziraj:"
+
+#~ msgid "Zone/Room"
+#~ msgstr "Zona/Soba"
+
+#~ msgid "Zone/Level/Room"
+#~ msgstr "Zona/Nivo/Soba"
+
+#~ msgid "Locations"
+#~ msgstr "Lokacije"
+
+#~ msgid "Path Directions"
+#~ msgstr "Smijerovi Putanje"
+
+#~ msgid "One Way"
+#~ msgstr "Jednosmjerno"
+
+#~ msgid ""
+#~ "KMuddy is a MUD (Multi-User Dungeon) client for KDE.\n"
+#~ "\n"
+#~ "It already contains various interesting features, more advanced features "
+#~ "are being added constantly. \n"
+#~ "\n"
+#~ "Maybe one day KMuddy will be the best client out there (for KDE at "
+#~ "least...)."
+#~ msgstr ""
+#~ "KMuddy je MUD (Multi-Korisnička Pećina) klijent za KDE.\n"
+#~ "\n"
+#~ "Već sadrži različite interesantne mogućnosti, više naprednih mogućnosti "
+#~ "se stalno dodaje. \n"
+#~ "\n"
+#~ "Možda jednog dana KMuddy bude najbolji klijent (barem za KDE...)."
+
+#~ msgid "Items"
+#~ msgstr "Stavke"
+
+#, fuzzy
+#~| msgid "Do you want to close connection to %1?"
+#~ msgid "Do you want to save the changes to the current map?"
+#~ msgstr "Da li želite da zatvorite konekciju do %1?"
+
+#~ msgid "&Create Mode"
+#~ msgstr "&Napravi Način"
+
+#~ msgid "New Map"
+#~ msgstr "Nova Mapa"
+
+#~ msgid "Load"
+#~ msgstr "Učitaj"
+
+#~ msgid "Save As"
+#~ msgstr "Snimi kao"
+
+#~ msgid "Information"
+#~ msgstr "Informacija"
+
+#~ msgid ""
+#~ "Are you sure you want to create a new map?\n"
+#~ "This action can not be undone"
+#~ msgstr ""
+#~ "Da li ste sigurni da želite napraviti novu mapu?\n"
+#~ "Ova akcija ne može biti otkazana"
+
+#~ msgid "Load Map File"
+#~ msgstr "Učitaj Fajl Mape"
+
+#~ msgid "Save Map File"
+#~ msgstr "Spasi Fajl Mape"
+
+#~ msgid "Unnamed"
+#~ msgstr "Neimenovan"
+
+#~ msgid "Map Information"
+#~ msgstr "Informacije o Mapi"
+
+#~ msgid "General Information"
+#~ msgstr "Opšte informacije"
+
+#~ msgid "Mud Name:"
+#~ msgstr "Ime Mud-a:"
+
+#~ msgid "Character Name:"
+#~ msgstr "Ime Karaktera:"
+
+#~ msgid "Number of Map Elements"
+#~ msgstr "Broj Elemenata Mape"
+
+#~ msgid "No. of Zones:"
+#~ msgstr "Broj Zona:"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "No. of Levels:"
+#~ msgstr "Broj Nivoa:"
+
+#~ msgid "No. of Rooms:"
+#~ msgstr "Broj Soba:"
+
+#~ msgid "No. of Text Labels:"
+#~ msgstr "Broj Etiketa Teksta:"
+
+#~ msgid "No. of Paths:"
+#~ msgstr "Broj Putanja:"
+
+#~ msgid "Starting Position"
+#~ msgstr "Startna Pozicija"
+
+#~ msgid "Y:"
+#~ msgstr "Y:"
+
+#~ msgid "X:"
+#~ msgstr "X:"
+
+#~ msgid "Level:"
+#~ msgstr "Nivo:"
+
+#~ msgid "Close"
+#~ msgstr "Zatvori"
+
+#~ msgid "&File"
+#~ msgstr "&Datoteka"
+
+#~ msgid "Active"
+#~ msgstr "Aktivan"
+
+#~ msgid "Used default room color"
+#~ msgstr "Korištena predefinisana boja sobe"
+
+#~ msgid "Changed Zone Properties"
+#~ msgstr "Promijenjene Osobine Zone"
+
+#~ msgid "Zone Properties"
+#~ msgstr "Osobine Zone"
+
+#~ msgid "Appearance"
+#~ msgstr "Izgled"
+
+#~ msgid "Zone Color:"
+#~ msgstr "Boja Zone:"
+
+#~ msgid "Use default background color"
+#~ msgstr "Koristi predefinisanu boju pozadine"
+
+#~ msgid "Use custom background"
+#~ msgstr "Koristi posebno napravljenu pozadinu"
+
+#~ msgid "Background color"
+#~ msgstr "Boja pozadine"
+
+#~ msgid "Background image:"
+#~ msgstr "Pozadinska slika:"
+
+#~ msgid "Select Image"
+#~ msgstr "Izaberite sliku"
+
+#~ msgid "&OK"
+#~ msgstr "&U redu"
+
+#~ msgid "&Cancel"
+#~ msgstr "&Odustani"
+
+#~ msgid "Tools Toolbar"
+#~ msgstr "Traka s alatima"
+
+#~ msgid "Navigation Toolbar"
+#~ msgstr "Traka za navigaciju"
+
+#~ msgid "&Level tools"
+#~ msgstr "&Nivo alati"
+
+#~ msgid "Set Element Properties"
+#~ msgstr "Postavi Osobine Elemenata"
+
+#~ msgid "Set Path properties"
+#~ msgstr "Postavi osobine Putanje"
+
+#~ msgid "Make Path Oneway"
+#~ msgstr "Napravi Jednosmjernu Putanju"
+
+#~ msgid "Make Path Twoway"
+#~ msgstr "Napravi Dvosmjernu Putanju"
+
+#~ msgid "Display Parent Zone"
+#~ msgstr "Prikaži Roditeljsku Zonu"
+
+#~ msgid "Edit Zone Properties"
+#~ msgstr "Uredi Osobine Zone"
+
+#~ msgid "Select Zone"
+#~ msgstr "Odaberi Zonu"
+
+#~ msgid "&Open Zone"
+#~ msgstr "&Otvorena Zona"
+
+#~ msgid "&Open Zone in New View"
+#~ msgstr "&Otvorena Zona u Novom Pogledu"
+
+#~ msgid "&Delete Zone"
+#~ msgstr "&Obriši Zonu"
+
+#~ msgid "Kmud Mapper"
+#~ msgstr "KMud Maper"
+
+#~ msgid "Move Player"
+#~ msgstr "Pomjeri Igrača"
+
+#~ msgid "Test Zone 2"
+#~ msgstr "Test Zona 2"
+
+#~ msgid "Test room 5"
+#~ msgstr "Test Soba 5"
+
+#~ msgid "Test Mud"
+#~ msgstr "Testni Mud"
+
+#~ msgid "Slayer"
+#~ msgstr "Ubica"
+
+#~ msgid "Zone:"
+#~ msgstr "Zona:"
+
+#~ msgid "&Zone Tools"
+#~ msgstr "&Zonski alati"
+
+#~ msgid "Open New Map View"
+#~ msgstr "Otvori Novi Pogled Mape"
+
+#~ msgid "Delete Level Actual Command"
+#~ msgstr "Obriši Nivo Stvarna Komanda"
+
+#~ msgid "This version of the file format is no longer supported by kmud"
+#~ msgstr "Ovaj verzija formata datoteke nije više podržana od strane kmud-a"
+
+#~ msgid ""
+#~ "The file is the incorrect version,\n"
+#~ "or not a valid map file."
+#~ msgstr ""
+#~ "Ova datoteka je netačna verzija,\n"
+#~ "ili nije validna mapa."
