@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 "Ordre que s'executarà si feu clic en el botó. Cal tindre en compte que hi "
 "podeu introduir múltiples ordres (separades per punt i coma o un altre "
-"caràcter definit a la <b>configuració global</b>)."
+"caràcter definit en la <b>configuració global</b>)."
 
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
@@ -335,7 +335,7 @@ msgstr "S'està ignorant la petició no admesa de MXP (%1)"
 #, kde-format
 msgid "Ctrl+Enter adds new line, unless changed in settings"
 msgstr ""
-"Ctrl+Retorn afig una línia nova, llevat que s'haja canviat a la configuració"
+"Ctrl+Retorn afig una línia nova, llevat que s'haja canviat en la configuració"
 
 #: kmuddy/csession.cpp:88
 #, kde-format
@@ -418,7 +418,7 @@ msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
 msgstr ""
-"Si està marcada, l'ordre s'enviarà a MUD. En cas contrari, es col·locarà a "
+"Si està marcada, l'ordre s'enviarà a MUD. En cas contrari, es col·locarà en "
 "la línia d'entrada."
 
 #: kmuddy/cshortcuteditor.cpp:87
@@ -430,7 +430,7 @@ msgstr "S&obreescriu el text existent"
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr "Si ja hi ha text a la línia d'entrada. S'ha de substituir?"
+msgstr "Si ja hi ha text en la línia d'entrada. S'ha de substituir?"
 
 #: kmuddy/cstatusvareditor.cpp:61
 #, kde-format
@@ -868,7 +868,7 @@ msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
 "displayed on the screen."
 msgstr ""
-"Quan estiga habilitada, el text no s'enviarà a MUD, només es mostrarà a la "
+"Quan estiga habilitada, el text no s'enviarà a MUD, només es mostrarà en la "
 "pantalla."
 
 #: kmuddy/ctriggereditor.cpp:279 libs/caliaseditor.cpp:209
@@ -897,7 +897,7 @@ msgstr ""
 "p><p>Cal tindre en compte que, si no complix la condició, no s'acabarà "
 "l'exploració, de manera que podeu utilitzar-ho per a ressaltar els noms "
 "d'una llista (utilitzant la condició per a comprovar si hi ha una "
-"coincidència a la llista) o alguna cosa així."
+"coincidència en la llista) o alguna cosa així."
 
 #: kmuddy/ctriggereditor.cpp:302 kmuddy/ctriggereditor.cpp:309
 #, kde-format
@@ -1016,7 +1016,7 @@ msgid ""
 "Useful if you only want to be notified of some events (tells, combat, ...)."
 msgstr ""
 "Esta opció només tindrà efecte si heu inhabilitat l'opció «Notifica sempre» "
-"a la configuració global i almenys una de les notificacions global/local "
+"en la configuració global i almenys una de les notificacions global/local "
 "està habilitada. Activarà la notificació si la finestra de KMuddy i/o esta "
 "sessió no està activa en este moment.\n"
 "Útil si només voleu ser notificat d'alguns esdeveniments (converses, "
@@ -1441,8 +1441,9 @@ msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
 "will also disable command echo in session transcript."
 msgstr ""
-"Permet la visualització d'ordres a la consola.<p><b>Cal tindre en compte:</"
-"b> Açò també inhabilitarà l'«echo» de l'ordre a la transcripció de la sessió."
+"Permet la visualització d'ordres en la consola.<p><b>Cal tindre en compte:</"
+"b> Açò també inhabilitarà l'«echo» de l'ordre en la transcripció de la "
+"sessió."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
@@ -1452,7 +1453,7 @@ msgstr "Habilita els missatges del s&istema"
 #: kmuddy/dialogs/dlgappsettings.cpp:253
 #, kde-format
 msgid "Enables displaying of system messages in the console."
-msgstr "Permet la visualització dels missatges del sistema a la consola."
+msgstr "Permet la visualització dels missatges del sistema en la consola."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
@@ -2418,7 +2419,7 @@ msgstr "Mostra l'indicatiu en la barra d'es&tat"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr "Mostra l'indicatiu a la &consola"
+msgstr "Mostra l'indicatiu en la &consola"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
@@ -2584,7 +2585,7 @@ msgstr ""
 "habilitar ací el reconeixement d'esta característica, però assegureu-vos que "
 "els altres jugadors no puguen esbrinar estes seqüències, o inhabiliteu les "
 "baixades. En cas contrari els jugadors podrien instruir al vostre client "
-"perquè baixe qualsevol fitxer a la xarxa..."
+"perquè baixe qualsevol fitxer en la xarxa..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -3660,7 +3661,7 @@ msgstr ""
 "p><p>Cal tindre en compte que, si no complix la condició, no s'acabarà "
 "l'exploració, de manera que podeu utilitzar-ho per a ressaltar els noms "
 "d'una llista (utilitzant la condició per a comprovar si hi ha una "
-"coincidència a la llista) o alguna cosa així."
+"coincidència en la llista) o alguna cosa així."
 
 #: libs/caliaseditor.cpp:310
 #, kde-format
@@ -5310,7 +5311,7 @@ msgid ""
 "run from this directory in console."
 msgstr ""
 "El directori de treball de l'script. L'script es comportarà exactament com "
-"si s'executara des d'este directori a la consola."
+"si s'executara des d'este directori en la consola."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
@@ -5389,7 +5390,7 @@ msgid ""
 "modify actual variable values. More information in the documentation."
 msgstr ""
 "Si està habilitada, es crearà un sòcol de domini UNIX, el qual permetrà "
-"obtindre i modificar els valors de la variable real. Més informació a la "
+"obtindre i modificar els valors de la variable real. Més informació en la "
 "documentació."
 
 #: plugins/scripting/cscripteditor.cpp:145
