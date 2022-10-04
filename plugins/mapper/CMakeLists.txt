@@ -72,14 +72,14 @@ add_library(kmuddymapper MODULE ${kmuddymapper_PART_SRCS})
 
 target_link_libraries(kmuddymapper  KF5::KDELibs4Support KF5::Parts KF5::WidgetsAddons KF5::Service KF5::Archive kmuddycore )
 
-install(TARGETS kmuddymapper DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddymapper DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES kmuddymapper.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
-install( FILES kmuddymapperpart.rc DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
-install( FILES kmuddymapperplugin.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
-install( FILES kmud_grid.png kmud_create.png kmud_follow.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
-install( FILES plugins/standard/tools/kmud_select.png plugins/standard/tools/kmud_room.png plugins/standard/tools/kmud_text.png plugins/standard/tools/kmud_path.png plugins/standard/tools/kmud_eraser.png DESTINATION ${DATA_INSTALL_DIR}/kmuddy/toolbar )
+install( FILES kmuddymapper.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kmuddymapperpart.rc DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy )
+install( FILES kmuddymapperplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
+install( FILES kmud_grid.png kmud_create.png kmud_follow.png DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy/toolbar )
+install( FILES plugins/standard/tools/kmud_select.png plugins/standard/tools/kmud_room.png plugins/standard/tools/kmud_text.png plugins/standard/tools/kmud_path.png plugins/standard/tools/kmud_eraser.png DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy/toolbar )
 

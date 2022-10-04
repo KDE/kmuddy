@@ -20,12 +20,12 @@ add_library(kmuddyscriptingplugin MODULE ${kmuddyscriptingplugin_PART_SRCS})
 
 target_link_libraries(kmuddyscriptingplugin KF5::KDELibs4Support KF5::Parts kmuddycore )
 
-install(TARGETS kmuddyscriptingplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddyscriptingplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES  kmuddyscriptingplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES  kmuddyscriptingplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
 
 

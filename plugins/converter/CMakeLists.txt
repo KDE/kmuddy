@@ -29,10 +29,10 @@ add_library(kmuddyconverterplugin MODULE ${kmuddyconverterplugin_PART_SRCS})
 
 target_link_libraries(kmuddyconverterplugin  KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
-install(TARGETS kmuddyconverterplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddyconverterplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES  kmuddyconverterplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES  kmuddyconverterplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 

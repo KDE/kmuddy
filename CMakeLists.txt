@@ -2,7 +2,7 @@ project(kmuddy)
 
 cmake_minimum_required(VERSION 2.8.12)
 
-find_package(ECM 0.0.10 REQUIRED CONFIG)
+find_package(ECM 1.6.0 REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
@@ -42,7 +42,7 @@ add_subdirectory( scripting )
 
 ########### install files ###############
 
-install ( FILES muds.xml DESTINATION ${DATA_INSTALL_DIR}/kmuddy )
+install ( FILES muds.xml DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy )
 
 ki18n_install(po)
 

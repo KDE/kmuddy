@@ -57,21 +57,21 @@ endif (MXP_FOUND)
 
 target_link_libraries(kmuddy ${KMUDDY_LIBRARIES} )
 
-install(TARGETS kmuddy DESTINATION ${BIN_INSTALL_DIR})
+install(TARGETS kmuddy DESTINATION ${KDE_INSTALL_BINDIR})
 
 # install the icons
 ecm_install_icons(ICONS
     16-apps-kmuddy.png
     32-apps-kmuddy.png
-    DESTINATION ${ICON_INSTALL_DIR}
+    DESTINATION ${KDE_INSTALL_ICONDIR}
     THEME hicolor
 )
 ecm_install_icons(ICONS
     16-apps-kmuddy.png
     32-apps-kmuddy.png
-    DESTINATION ${ICON_INSTALL_DIR}
+    DESTINATION ${KDE_INSTALL_ICONDIR}
     THEME locolor
 )
 
-install (FILES org.kde.kmuddy.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install (FILES org.kde.kmuddy.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

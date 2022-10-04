@@ -10,11 +10,11 @@ add_library(kmuddystringsplugin MODULE ${kmuddystringsplugin_PART_SRCS})
 
 target_link_libraries(kmuddystringsplugin  KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
-install(TARGETS kmuddystringsplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddystringsplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES  kmuddystringsplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES  kmuddystringsplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
 

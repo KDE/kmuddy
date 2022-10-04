@@ -9,10 +9,10 @@ add_library(kmuddytestplugin MODULE ${kmuddytestplugin_PART_SRCS})
 
 target_link_libraries(kmuddytestplugin  KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
-install(TARGETS kmuddytestplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddytestplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES  kmuddytestplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES  kmuddytestplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 

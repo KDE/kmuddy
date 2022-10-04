@@ -15,12 +15,12 @@ add_library(kmuddyvartrigplugin MODULE ${kmuddyvartrigplugin_PART_SRCS})
 
 target_link_libraries(kmuddyvartrigplugin KF5::KDELibs4Support KF5::Parts  kmuddycore )
 
-install(TARGETS kmuddyvartrigplugin DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kmuddyvartrigplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES  kmuddyvartrigplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES  kmuddyvartrigplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
 
 
