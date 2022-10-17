@@ -790,7 +790,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:210
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr "O&rdres a enviar:"
+msgstr "O&rdres que s'han d'enviar:"
 
 #: kmuddy/ctriggereditor.cpp:214
 #, kde-format
@@ -4079,7 +4079,7 @@ msgstr "Els perfils s'han convertit correctament."
 #: plugins/converter/converterplugin.cpp:132
 #, kde-format
 msgid "You did not specify any profiles to convert."
-msgstr "No heu especificat cap perfil a convertir."
+msgstr "No heu especificat cap perfil que s'haja de convertir."
 
 #: plugins/mapper/cmapclipboard.cpp:64
 #, kde-format
@@ -5291,7 +5291,7 @@ msgstr "Nom d'este script."
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
 msgid "&Command to execute"
-msgstr "O&rdre a executar"
+msgstr "O&rdre que s'ha d'executar"
 
 #: plugins/scripting/cscripteditor.cpp:73
 #, kde-format
@@ -5300,7 +5300,7 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
-"Ordre que s'ha d'executar, inclosos els paràmetres. Cal tindre en compte que "
+"Ordre que s'executarà, inclosos els paràmetres. Cal tindre en compte que "
 "podeu especificar més paràmetres quan s'executa l'ordre des de la línia "
 "d'entrada, si habiliteu la casella de selecció «Permet els paràmetres»."
 
