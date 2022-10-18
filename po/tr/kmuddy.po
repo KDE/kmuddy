@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-10-12 14:57+0300\n"
+"PO-Revision-Date: 2022-10-18 02:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -827,7 +827,7 @@ msgstr "&Seçenekler"
 #: kmuddy/ctriggereditor.cpp:266 libs/caliaseditor.cpp:196
 #, kde-format
 msgid "Whole words only"
-msgstr ""
+msgstr "Yalnızca tam sözcükler"
 
 #: kmuddy/ctriggereditor.cpp:267
 #, kde-format
@@ -835,11 +835,13 @@ msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"Etkinleştirildiğinde, bu tetik, eşleşen diziden önce/sonra boşluklar vrasa "
+"veya bir şey yoksa eşleşecektir."
 
 #: kmuddy/ctriggereditor.cpp:270 libs/caliaseditor.cpp:200
 #, kde-format
 msgid "Case sensitive"
-msgstr ""
+msgstr "BÜYÜK/küçük harf duyarlı"
 
 #: kmuddy/ctriggereditor.cpp:271 libs/caliaseditor.cpp:201
 #, kde-format
@@ -847,11 +849,13 @@ msgid ""
 "When this option is on, upper case and lower case letters are treated as "
 "different characters, otherwise they're considered to be the same."
 msgstr ""
+"Bu seçenek açıkken, BÜYÜK ve küçük harfler ayrı karakterler olarak işlem "
+"görürler; aksi takdirde özel bir işlem uygulanmaz."
 
 #: kmuddy/ctriggereditor.cpp:275
 #, kde-format
 msgid "Show but do not send"
-msgstr ""
+msgstr "Göster; ancak gönderme"
 
 #: kmuddy/ctriggereditor.cpp:276
 #, kde-format
@@ -859,11 +863,12 @@ msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
 "displayed on the screen."
 msgstr ""
+"Etkinleştirildiğinde, metin MUD'a gönderilmez, yalnızca ekranda görüntülenir."
 
 #: kmuddy/ctriggereditor.cpp:279 libs/caliaseditor.cpp:209
 #, kde-format
 msgid "Global matching"
-msgstr ""
+msgstr "Global eşleşme"
 
 #: kmuddy/ctriggereditor.cpp:280
 #, kde-format
@@ -877,36 +882,44 @@ msgid ""
 "names from a list (using the condition to check if a match is in the list), "
 "or something like that."
 msgstr ""
+"<p>Global eşleşme ile, bir tetik, bir dizgiyi birden çok kez içeriyorsa "
+"birden çok kez eşleşebilir. Örneğin, eğer dizgi abc ise abcdabcd üzerinde "
+"yalnızca bir kez eşleşir; global eşleşme açıksa iki kez eşleşir. Her eşleşme "
+"için, istenen eylemler gerçekleştirilir; böylece komutlar eşleşme başına "
+"birden çok kez gönderilebilir.</p><p>Koşulu yerine getirmemenin taramayı "
+"sonlandırmadığını not edin; böylece bunu bir listeden adları vurgulamak için "
+"kullanabilirsiniz (bir eşleşmenin listede olup olmadığını denetlemek için "
+"koşulu kullanarak) veya buna benzer şeyler yapabilirsiniz."
 
 #: kmuddy/ctriggereditor.cpp:302 kmuddy/ctriggereditor.cpp:309
 #, kde-format
 msgid "Continue matching"
-msgstr ""
+msgstr "Eşleşmeyi sürdür"
 
 #: kmuddy/ctriggereditor.cpp:303 kmuddy/ctriggereditor.cpp:310
 #, kde-format
 msgid "Stop matching"
-msgstr ""
+msgstr "Eşleşmeyi durdur"
 
 #: kmuddy/ctriggereditor.cpp:304 kmuddy/ctriggereditor.cpp:311
 #, kde-format
 msgid "Leave group"
-msgstr ""
+msgstr "Gruptan ayrıl"
 
 #: kmuddy/ctriggereditor.cpp:330
 #, kde-format
 msgid "&Enable color replacement"
-msgstr ""
+msgstr "&Renk değiştirmeyi etkinleştir"
 
 #: kmuddy/ctriggereditor.cpp:331 kmuddy/ctriggereditor.cpp:527
 #, kde-format
 msgid "Color replacement"
-msgstr ""
+msgstr "Renk değiştirme"
 
 #: kmuddy/ctriggereditor.cpp:353 kmuddy/ctriggereditor.cpp:412
 #, kde-format
 msgid "&Back-reference"
-msgstr ""
+msgstr "&Geri Başvuru"
 
 #: kmuddy/ctriggereditor.cpp:356
 #, kde-format
@@ -921,17 +934,17 @@ msgstr "&Kaldır"
 #: kmuddy/ctriggereditor.cpp:358
 #, kde-format
 msgid "&Colorize"
-msgstr ""
+msgstr "&Renklendir"
 
 #: kmuddy/ctriggereditor.cpp:360
 #, kde-format
 msgid "&Foreground"
-msgstr ""
+msgstr "Ö&n Plan"
 
 #: kmuddy/ctriggereditor.cpp:362
 #, kde-format
 msgid "&Background"
-msgstr "&Arkaplan"
+msgstr "&Arka Plan"
 
 #: kmuddy/ctriggereditor.cpp:378
 #, kde-format
@@ -941,49 +954,49 @@ msgstr "Tür"
 #: kmuddy/ctriggereditor.cpp:378
 #, kde-format
 msgid "Foreground"
-msgstr "Önplan"
+msgstr "Ön Plan"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
 #: kmuddy/ctriggereditor.cpp:378 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
 #, kde-format
 msgid "Background"
-msgstr "Arkaplan"
+msgstr "Arka Plan"
 
 #: kmuddy/ctriggereditor.cpp:400
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr ""
+msgstr "Metin &yeniden yazma tetiği"
 
 #: kmuddy/ctriggereditor.cpp:403 kmuddy/ctriggereditor.cpp:528
 #, kde-format
 msgid "Rewrite text"
-msgstr ""
+msgstr "Metni yeniden yaz"
 
 #: kmuddy/ctriggereditor.cpp:407
 #, kde-format
 msgid "&Change this part of line:"
-msgstr ""
+msgstr "Satırın &bu kısmını değiştir:"
 
 #: kmuddy/ctriggereditor.cpp:415
 #, kde-format
 msgid "&To this value:"
-msgstr ""
+msgstr "B&u değere:"
 
 #: kmuddy/ctriggereditor.cpp:439
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr ""
+msgstr "Sa&tırı gösterme"
 
 #: kmuddy/ctriggereditor.cpp:440
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
-msgstr ""
+msgstr "Bu, eşleşen satırın çıktı penceresinde gösterilmesini önleyecektir."
 
 #: kmuddy/ctriggereditor.cpp:442
 #, kde-format
 msgid "&Notify"
-msgstr ""
+msgstr "&Bildir"
 
 #: kmuddy/ctriggereditor.cpp:443
 #, kde-format
@@ -994,11 +1007,17 @@ msgid ""
 "session is not active at the moment.\n"
 "Useful if you only want to be notified of some events (tells, combat, ...)."
 msgstr ""
+"Bu seçenek, yalnızca global ayarlardaki \"Her zaman bildir\" seçeneğini "
+"devre dışı bıraktıysanız ve en az bir global/yerel bildirim etkinse etkili "
+"olur. KMuddy penceresi ve/veya bu oturum şu anda etkin değilse bildirimleri "
+"etkinleştirir.\n"
+"Yalnızca bazı etkinliklerden haberiniz olmasını istiyorsanız (anlatılar, "
+"savaş, ...) yararlıdır."
 
 #: kmuddy/ctriggereditor.cpp:450
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr ""
+msgstr "İ&stem algılama tetiği"
 
 #: kmuddy/ctriggereditor.cpp:451
 #, kde-format
