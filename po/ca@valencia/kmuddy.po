@@ -1697,8 +1697,8 @@ msgstr ""
 "Si inicieu una ordre amb esta cadena, l'ordre s'interpretarà amb marxa "
 "ràpida. Cada caràcter es tractarà com una ordre: n, s, w, e, j(=ne), k(=se), "
 "l(=sw), m(=nw), u, d.<p>Les ordres que s'enviaran per a cada adreça es pot "
-"establir a <i>Preferències de MUD</i> (només per a les connexions <b>basades "
-"en el perfil</b>)."
+"establir en <i>Preferències de MUD</i> (només per a les connexions "
+"<b>basades en el perfil</b>)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:445
 #, kde-format
@@ -3686,7 +3686,7 @@ msgstr "El recompte es limita a 100.\n"
 #: libs/ccmdparser.cpp:435
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr "Podeu inhabilitar este límit a «Perfil -> Preferències de MUD»."
+msgstr "Podeu inhabilitar este límit en «Perfil -> Preferències de MUD»."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
