@@ -1832,7 +1832,7 @@ msgid ""
 "directory\n"
 msgstr ""
 "La versió 0.3 de MSP admet la baixada de fitxers de so directament des del "
-"web o FTP. Podeu habilitar esta funcionalitat ací. Cal tindre en compte que "
+"web o FTP. Podeu habilitar esta característica ací. Cal tindre en compte que "
 "cada so només es baixarà una vegada. Els fitxers baixats s'emmagatzemaran al "
 "vostre directori d'inici\n"
 
@@ -1867,8 +1867,8 @@ msgid ""
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
 "Esta llista mostra els perfils definits actualment.<p>Els <b>perfils</b> "
-"permeten accelerar la connexió amb MUD, així com utilitzar funcions més "
-"avançades com <i>àlies</i> o <i>desencadenants</i>."
+"permeten accelerar la connexió amb MUD, així com utilitzar característiques "
+"més avançades com <i>àlies</i> o <i>desencadenants</i>."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -2185,7 +2185,7 @@ msgid ""
 "should be re-enabled before the final release."
 msgstr ""
 "Ho sentim, però la importació i exportació estan inhabilitades. La "
-"funcionalitat es tornarà a habilitar abans de la versió final."
+"característica es tornarà a habilitar abans de la versió final."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
