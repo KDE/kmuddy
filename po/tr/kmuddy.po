@@ -4825,13 +4825,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
 #, kde-format
 msgid "New Item"
-msgstr "Yeni Öğe"
+msgstr "Yeni Öge"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdRemoveItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
 #, kde-format
 msgid "Remove Item"
-msgstr ""
+msgstr "Ögeyi Kaldır"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
