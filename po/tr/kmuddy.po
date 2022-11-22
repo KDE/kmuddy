@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-11-10 21:19+0300\n"
+"PO-Revision-Date: 2022-11-21 22:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -770,7 +770,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:195 libs/caliaseditor.cpp:119
 #, kde-format
 msgid "&Edit..."
-msgstr "&Düzenle..."
+msgstr "Dü&zenle..."
 
 #: kmuddy/ctriggereditor.cpp:206 libs/caliaseditor.cpp:130
 #, kde-format
@@ -1071,7 +1071,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:495
 #, kde-format
 msgid "&Window name"
-msgstr ""
+msgstr "&Pencere adı"
 
 #: kmuddy/ctriggereditor.cpp:499
 #, kde-format
@@ -2884,7 +2884,7 @@ msgstr "&Bağlantı"
 #: kmuddy/kmuddy.cpp:532
 #, kde-format
 msgid "&Edit"
-msgstr "&Düzen"
+msgstr "Dü&zen"
 
 #. i18n: ectx: Menu (View)
 #: kmuddy/kmuddy.cpp:533 plugins/mapper/kmuddymapperpart.rc:4
@@ -2905,7 +2905,7 @@ msgstr "&Araçlar"
 #: kmuddy/kmuddy.cpp:536
 #, kde-format
 msgid "&Settings"
-msgstr "&Ayarlar"
+msgstr "Ayar&lar"
 
 #: kmuddy/kmuddy.cpp:537
 #, kde-format
@@ -4186,7 +4186,7 @@ msgstr "&Bölütü Kaldır"
 #: plugins/mapper/cmapview.cpp:218
 #, kde-format
 msgid "&Edit Bends"
-msgstr ""
+msgstr "Eğmeleri Dü&zenle"
 
 #: plugins/mapper/cmapview.cpp:222
 #, kde-format
