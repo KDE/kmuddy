@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-11-22 17:17+0300\n"
+"PO-Revision-Date: 2022-11-24 17:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1490,7 +1490,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:331
 #, kde-format
 msgid "Telnet-style &paste"
-msgstr ""
+msgstr "Telnet tarzı &yapıştır"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:332
 #, kde-format
