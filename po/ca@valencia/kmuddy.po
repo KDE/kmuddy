@@ -2518,7 +2518,7 @@ msgstr "Directori de les &transcripcions"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr "Directori on es guardaran per defecte les transcripcions."
+msgstr "Directori on es guardaran de manera predeterminada les transcripcions."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
