@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-11-24 17:09+0300\n"
+"PO-Revision-Date: 2022-12-10 18:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1885,7 +1885,7 @@ msgstr "&Dosya:"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:54 kmuddy/dialogs/dlgtranscript.cpp:88
 #, kde-format
 msgid "&Browse..."
-msgstr "&Gözat..."
+msgstr "&Göz At..."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:64
 #, kde-format
@@ -2037,7 +2037,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:81
 #, kde-format
 msgid "Browse..."
-msgstr "Gözat..."
+msgstr "Göz At..."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:91
 #, kde-format
