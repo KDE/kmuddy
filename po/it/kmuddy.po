@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-06-26 19:46+0200\n"
+"PO-Revision-Date: 2022-12-24 09:59+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -2133,7 +2133,7 @@ msgstr "Il nome del profilo non può contenere il carattere '/'."
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
 msgid "Keygrabber"
-msgstr ""
+msgstr "Acchiappa tasti"
 
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
@@ -5403,12 +5403,12 @@ msgstr "Sc&ript in esecuzione"
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
 msgid "&Terminate"
-msgstr "&Termina"
+msgstr "&Interrompi"
 
 #: plugins/scripting/dlgrunninglist.cpp:54
 #, kde-format
 msgid "&Kill"
-msgstr ""
+msgstr "&Termina"
 
 #: plugins/scripting/scriptingplugin.cpp:65
 #, kde-format
