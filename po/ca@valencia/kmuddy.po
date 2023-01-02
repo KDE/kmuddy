@@ -1304,10 +1304,10 @@ msgid ""
 msgstr ""
 "Esta opció canvia la presència de la icona de la safata del sistema. La "
 "icona es pot utilitzar per a ocultar la finestra de l'aplicació sense ocupar "
-"espai en la barra de tasques. Podeu fer clic en la icona per a ocultar la "
-"finestra i, després torneu a fer clic per a restaurar-la. La vostra connexió "
-"es mantindrà activa fins i tot si la finestra està oculta i encara rebreu "
-"els missatges de notificació. "
+"espai en la barra de tasques. Podeu fer clic damunt de la icona per a "
+"ocultar la finestra i, després torneu a fer clic per a restaurar-la. La "
+"vostra connexió es mantindrà activa fins i tot si la finestra està oculta i "
+"encara rebreu els missatges de notificació. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
