@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-10-05 13:49+0200\n"
+"PO-Revision-Date: 2023-01-13 15:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,7 +37,7 @@ msgstr "&წარწერა"
 #: kmuddy/cbuttoneditor.cpp:68
 #, kde-format
 msgid "Caption of this button."
-msgstr ""
+msgstr "ამ ღილაკის წარწერა."
 
 #: kmuddy/cbuttoneditor.cpp:71
 #, kde-format
@@ -55,12 +55,12 @@ msgstr ""
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
 msgid "Icon displayed on the button toolbar."
-msgstr ""
+msgstr "ღილაკების პანელზე ნაჩვენები ხატულა."
 
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr ""
+msgstr "&აშვების ბრძანება"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
@@ -85,17 +85,17 @@ msgstr "&სკრიპტი"
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr ""
+msgstr "სკრიპტი &აშვებისას"
 
 #: kmuddy/cconnection.cpp:268
 #, kde-format
 msgid "Network error: %1"
-msgstr ""
+msgstr "ქსელის შეცდომა: %1"
 
 #: kmuddy/cconnection.cpp:430
 #, kde-format
 msgid "Do you want to close connection to %1?"
-msgstr ""
+msgstr "გნებავთ, დახუროთ კავშირი %1-სთან?"
 
 #: kmuddy/cconnection.cpp:431
 #, kde-format
@@ -105,47 +105,47 @@ msgstr "გათიშვა"
 #: kmuddy/cconnection.cpp:515
 #, kde-format
 msgid "(password is hidden)"
-msgstr ""
+msgstr "(პაროლი დამალულია)"
 
 #: kmuddy/cconnection.cpp:736
 #, kde-format
 msgid "Aliases are now enabled."
-msgstr ""
+msgstr "მეტსახელები ახლა ჩართულია."
 
 #: kmuddy/cconnection.cpp:736
 #, kde-format
 msgid "Aliases are now disabled."
-msgstr ""
+msgstr "მეტსახელები ახლა გამორთულია."
 
 #: kmuddy/cconnection.cpp:747
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr ""
+msgstr "ტრიგერები ახლა ჩართულია."
 
 #: kmuddy/cconnection.cpp:747
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr ""
+msgstr "ტრიგერები ახლა გამორთულია."
 
 #: kmuddy/cconnection.cpp:758
 #, kde-format
 msgid "Timers are now enabled."
-msgstr ""
+msgstr "ტაიმერები ახლა ჩართულია."
 
 #: kmuddy/cconnection.cpp:758
 #, kde-format
 msgid "Timers are now disabled."
-msgstr ""
+msgstr "ტაიმერები ახლა გამორთულია."
 
 #: kmuddy/cconnection.cpp:769
 #, kde-format
 msgid "Macro keys are now enabled."
-msgstr ""
+msgstr "მაკროს ღილაკები ახლა ჩართულია."
 
 #: kmuddy/cconnection.cpp:769
 #, kde-format
 msgid "Macro keys are now disabled."
-msgstr ""
+msgstr "მაკროს ღილაკები ახლა გამორთულია."
 
 #: kmuddy/cconnection.cpp:822
 #, kde-format
@@ -170,12 +170,12 @@ msgstr "ტაიმერები"
 #: kmuddy/cconnection.cpp:826
 #, kde-format
 msgid "Macro Keys"
-msgstr ""
+msgstr "მაკროს ღილაკები"
 
 #: kmuddy/cconnection.cpp:827
 #, kde-format
 msgid "Status variables"
-msgstr ""
+msgstr "სტატუსის ცვლადები"
 
 #: kmuddy/cconnection.cpp:828
 #, kde-format
@@ -186,7 +186,7 @@ msgstr ""
 #: plugins/vartrigs/cvartriggereditor.cpp:57
 #, kde-format
 msgid "&Variable name"
-msgstr ""
+msgstr "&ცვლადის სახელი"
 
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
@@ -196,7 +196,7 @@ msgstr ""
 #: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:64
 #, kde-format
 msgid "&Max. variable (optional)"
-msgstr ""
+msgstr "&მაქს. ცვლადი (არასავალდებული)"
 
 #: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:68
 #, kde-format
@@ -253,62 +253,62 @@ msgstr ""
 #: kmuddy/cmxpmanager.cpp:295
 #, kde-format
 msgid "line tag"
-msgstr ""
+msgstr "ხაზის ჭდე"
 
 #: kmuddy/cmxpmanager.cpp:296
 #, kde-format
 msgid "expire link"
-msgstr ""
+msgstr "ბმულის ვადა"
 
 #: kmuddy/cmxpmanager.cpp:297
 #, kde-format
 msgid "horizontal line"
-msgstr ""
+msgstr "ჰორიზონტალური ხაზი"
 
 #: kmuddy/cmxpmanager.cpp:298
 #, kde-format
 msgid "create window"
-msgstr ""
+msgstr "ფანჯრის შექმნა"
 
 #: kmuddy/cmxpmanager.cpp:299
 #, kde-format
 msgid "create internal window"
-msgstr ""
+msgstr "შიდა ფანჯრის შექმნა"
 
 #: kmuddy/cmxpmanager.cpp:300
 #, kde-format
 msgid "close window"
-msgstr ""
+msgstr "ფანჯრის დახურვა"
 
 #: kmuddy/cmxpmanager.cpp:301
 #, kde-format
 msgid "set active window"
-msgstr ""
+msgstr "აქტიური ფანჯრის დაყენება"
 
 #: kmuddy/cmxpmanager.cpp:302
 #, kde-format
 msgid "move cursor"
-msgstr ""
+msgstr "კურსორის გადატანა"
 
 #: kmuddy/cmxpmanager.cpp:303
 #, kde-format
 msgid "erase text"
-msgstr ""
+msgstr "ტესტის წაშლა"
 
 #: kmuddy/cmxpmanager.cpp:304
 #, kde-format
 msgid "relocate"
-msgstr ""
+msgstr "გადაადგილება"
 
 #: kmuddy/cmxpmanager.cpp:305
 #, kde-format
 msgid "send username/password"
-msgstr ""
+msgstr "მომხმარებლის სახელის/პაროლის გაგზავნა"
 
 #: kmuddy/cmxpmanager.cpp:306
 #, kde-format
 msgid "image"
-msgstr ""
+msgstr "გამოსახულება"
 
 #: kmuddy/cmxpmanager.cpp:307
 #, kde-format
@@ -318,7 +318,7 @@ msgstr "გამოსახულების რუკა"
 #: kmuddy/cmxpmanager.cpp:308
 #, kde-format
 msgid "unknown"
-msgstr ""
+msgstr "უცნობი"
 
 #: kmuddy/cmxpmanager.cpp:310
 #, kde-format
@@ -338,12 +338,12 @@ msgstr ""
 #: kmuddy/csessionmanager.cpp:152 kmuddy/csessionmanager.cpp:186
 #, kde-format
 msgid "No connection"
-msgstr ""
+msgstr "მიერთების გარეშე"
 
 #: kmuddy/csessionmanager.cpp:215
 #, kde-format
 msgid "Connection closed."
-msgstr ""
+msgstr "მიერთება დახურულია."
 
 #: kmuddy/cshortcut.cpp:126
 #, kde-format
@@ -353,7 +353,7 @@ msgstr "(უცნობია)"
 #: kmuddy/cshortcut.cpp:128
 #, kde-format
 msgid "(none)"
-msgstr ""
+msgstr "(არაფერი)"
 
 #: kmuddy/cshortcut.cpp:132
 #, kde-format
@@ -396,12 +396,12 @@ msgstr "მალსახმობი"
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
 msgid "Grab shortcut..."
-msgstr ""
+msgstr "მალსახმობის ჩაჭერა..."
 
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
 msgid "&Send command"
-msgstr ""
+msgstr "&ბრძანების გაგზავნა"
 
 #: kmuddy/cshortcuteditor.cpp:84
 #, kde-format
@@ -413,7 +413,7 @@ msgstr ""
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
 msgid "&Overwrite existing text"
-msgstr ""
+msgstr "&არსებული ტექსტის გადაწერა"
 
 #: kmuddy/cshortcuteditor.cpp:88
 #, kde-format
@@ -429,7 +429,7 @@ msgstr ""
 #: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
 msgid "&Show as percentage"
-msgstr ""
+msgstr "&პროცენტულად ჩვენება"
 
 #: kmuddy/cstatusvareditor.cpp:78
 #, kde-format
@@ -473,7 +473,7 @@ msgstr ""
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
 msgid "&Interval"
-msgstr ""
+msgstr "&ინტერვალი"
 
 #: kmuddy/ctimereditor.cpp:78 kmuddy/ctimereditor.cpp:95
 #, kde-format
@@ -710,7 +710,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:170
 #, kde-format
 msgid "&Trigger text"
-msgstr ""
+msgstr "&ტრიგერი ტექსტი"
 
 #: kmuddy/ctriggereditor.cpp:173 libs/caliaseditor.cpp:97
 #, kde-format
@@ -774,7 +774,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:217 libs/caliaseditor.cpp:141
 #, kde-format
 msgid "Test area"
-msgstr ""
+msgstr "სატესტო ადგილი"
 
 #: kmuddy/ctriggereditor.cpp:219 libs/caliaseditor.cpp:143
 #, kde-format
@@ -799,7 +799,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
-msgstr ""
+msgstr "&პარამეტრები"
 
 #: kmuddy/ctriggereditor.cpp:266 libs/caliaseditor.cpp:196
 #, kde-format
@@ -828,7 +828,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:275
 #, kde-format
 msgid "Show but do not send"
-msgstr ""
+msgstr "მაჩვენე, მაგრამ არ გაგზავნო"
 
 #: kmuddy/ctriggereditor.cpp:276
 #, kde-format
@@ -934,7 +934,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:403 kmuddy/ctriggereditor.cpp:528
 #, kde-format
 msgid "Rewrite text"
-msgstr ""
+msgstr "ტექსტის გადაწერა"
 
 #: kmuddy/ctriggereditor.cpp:407
 #, kde-format
@@ -990,7 +990,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:457
 #, kde-format
 msgid "Play s&ound file"
-msgstr ""
+msgstr "&ხმის ფაილის დაკვრა"
 
 #: kmuddy/ctriggereditor.cpp:458
 #, kde-format
@@ -1012,7 +1012,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:480 kmuddy/dialogs/dlgwindows.cpp:53
 #, kde-format
 msgid "Output Windows"
-msgstr ""
+msgstr "გამოტანის ფანჯრები"
 
 #: kmuddy/ctriggereditor.cpp:491
 #, kde-format
@@ -1029,12 +1029,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:495
 #, kde-format
 msgid "&Window name"
-msgstr ""
+msgstr "&ფანჯრის სახელი"
 
 #: kmuddy/ctriggereditor.cpp:499
 #, kde-format
 msgid "&Create window"
-msgstr ""
+msgstr "&ფანჯრის შექმნა"
 
 #: kmuddy/ctriggereditor.cpp:524 libs/caliaseditor.cpp:242
 #, kde-format
@@ -1044,12 +1044,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:529
 #, kde-format
 msgid "Special trigger"
-msgstr ""
+msgstr "სპეციალური ტრიგერი"
 
 #: kmuddy/ctriggereditor.cpp:530
 #, kde-format
 msgid "Output windows"
-msgstr ""
+msgstr "გამოტანის ფანჯრები"
 
 #: kmuddy/ctriggereditor.cpp:594
 #, kde-format
@@ -1074,12 +1074,12 @@ msgstr "უცნობი"
 #: kmuddy/ctriggereditor.cpp:732
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "აირჩიეთ ხმის ფაილი"
 
 #: kmuddy/ctriggereditor.cpp:751
 #, kde-format
 msgid "Window name is empty!"
-msgstr ""
+msgstr "ფანჯრის სახელი ცარიელია!"
 
 #: kmuddy/dialogs/cdirlist.cpp:36
 #, kde-format
@@ -1106,12 +1106,12 @@ msgstr "&ჩამოწევა"
 #: kmuddy/dialogs/cdirlist.cpp:73
 #, kde-format
 msgid "Choose sound directory"
-msgstr ""
+msgstr "აირჩიეთ ხმის საქაღალდე"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:78
 #, kde-format
 msgid "Application settings"
-msgstr ""
+msgstr "აპლიკაციის მორგება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:85
 #, kde-format
@@ -1121,7 +1121,7 @@ msgstr "ფანჯარა"
 #: kmuddy/dialogs/dlgappsettings.cpp:88
 #, kde-format
 msgid "Output area"
-msgstr ""
+msgstr "გამოტანის ადგილი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:91
 #, kde-format
@@ -1131,7 +1131,7 @@ msgstr "შრიფტი"
 #: kmuddy/dialogs/dlgappsettings.cpp:94
 #, kde-format
 msgid "Input line"
-msgstr ""
+msgstr "შეყვანის ხაზი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:97
 #, kde-format
@@ -1178,7 +1178,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
 msgid "&Always notify"
-msgstr ""
+msgstr "&ყოველთვის შემატყობინე"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:120
 #, kde-format
@@ -1192,7 +1192,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
 msgid "&Global notification"
-msgstr ""
+msgstr "&გლობალური გაფრთხილება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:126
 #, kde-format
@@ -1205,7 +1205,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
 msgid "&Local notification"
-msgstr ""
+msgstr "&ლოკალური გაფრთხილება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:131
 #, kde-format
@@ -1218,7 +1218,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
 msgid "Display system tray icon"
-msgstr ""
+msgstr "სისტემის კუთხეში ხატულის ჩართვა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:137
 #, kde-format
@@ -1233,7 +1233,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
 msgid "Use passive popups"
-msgstr ""
+msgstr "პასიური ხატულების გამოყენება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:146
 #, kde-format
@@ -1246,7 +1246,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
 msgid "Auto-connect on startup"
-msgstr ""
+msgstr "გაშვებისას ავტომატური მიერთება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:153
 #, kde-format
@@ -1259,12 +1259,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:156
 #, kde-format
 msgid "Auto-connect to:"
-msgstr ""
+msgstr "ავტომატურად მივუერთდები:"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:194
 #, kde-format
 msgid "Default &background color"
-msgstr ""
+msgstr "&ფონის ნაგულისხმები ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:197
 #, kde-format
@@ -1274,7 +1274,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:199
 #, kde-format
 msgid "Default &text color"
-msgstr ""
+msgstr "&ტექსტის ნაგულისხმები ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:202
 #, kde-format
@@ -1284,7 +1284,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:204
 #, kde-format
 msgid "Command &echo color"
-msgstr ""
+msgstr "&ბრძანების ექოს ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:207
 #, kde-format
@@ -1294,7 +1294,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:209
 #, kde-format
 msgid "&System message color"
-msgstr ""
+msgstr "&სისტემური შეტყობინების ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:212
 #, kde-format
@@ -1304,12 +1304,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:237
 #, kde-format
 msgid "&Indentation"
-msgstr ""
+msgstr "&სწორება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:237
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "არაფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:238
 #, kde-format
@@ -1322,7 +1322,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:242
 #, kde-format
 msgid "&History buffer size"
-msgstr ""
+msgstr "&ისტორიის ბუფერის ზომა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:242
 #, kde-format
@@ -1351,7 +1351,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
 msgid "Enable s&ystem messages"
-msgstr ""
+msgstr "&სისტემური შეტყობინებების ჩართვა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:253
 #, kde-format
@@ -1361,7 +1361,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enable b&linking"
-msgstr ""
+msgstr "&ციმციმის ჩართვა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:257
 #, kde-format
@@ -1371,7 +1371,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:273
 #, kde-format
 msgid "&Server output"
-msgstr ""
+msgstr "&სერვერის გამოტანა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:276 kmuddy/dialogs/dlgappsettings.cpp:286
 #: kmuddy/dialogs/dlgappsettings.cpp:296
@@ -1387,7 +1387,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:283
 #, kde-format
 msgid "&Input line"
-msgstr ""
+msgstr "&შეყვანის ხაზი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:289
 #, kde-format
@@ -1397,7 +1397,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:293
 #, kde-format
 msgid "&Multi-line input"
-msgstr ""
+msgstr "&მრავალხაზიანი შეყვანა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:299
 #, kde-format
@@ -1408,7 +1408,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
 msgid "&Keep sent text"
-msgstr ""
+msgstr "&გაგზავნილი ტექსტის შენარჩუნება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:319
 #, kde-format
@@ -1488,7 +1488,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:352
 #, kde-format
 msgid "Auto-fill"
-msgstr ""
+msgstr "ავტომატური შევსება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:353
 #, kde-format
@@ -1513,7 +1513,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:363
 #, kde-format
 msgid "&Text color"
-msgstr ""
+msgstr "&ტექსტის ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:366
 #, kde-format
@@ -1536,12 +1536,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
 msgid "Dark colors"
-msgstr ""
+msgstr "მუქი ფერები"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:402
 #, kde-format
 msgid "Bright colors"
-msgstr ""
+msgstr "ღია ფერები"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:429
 #, kde-format
@@ -1711,22 +1711,22 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
 msgid "&New profile"
-msgstr ""
+msgstr "&ახალი პროფილი"
 
 #: kmuddy/dialogs/dlgconnect.cpp:65
 #, kde-format
 msgid "&Modify profile"
-msgstr ""
+msgstr "პროფილის &შეცვლა"
 
 #: kmuddy/dialogs/dlgconnect.cpp:66
 #, kde-format
 msgid "&Delete profile"
-msgstr ""
+msgstr "პროფილის &წაშლა"
 
 #: kmuddy/dialogs/dlgconnect.cpp:67
 #, kde-format
 msgid "&Duplicate profile"
-msgstr ""
+msgstr "&პროფილის დუბლირება"
 
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
@@ -1780,7 +1780,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
 msgid "Unable to delete"
-msgstr ""
+msgstr "წაშლის შეცდომა"
 
 #: kmuddy/dialogs/dlgconnect.cpp:240
 #, kde-format
@@ -1795,7 +1795,7 @@ msgstr "პროფილის წაშლა"
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid "Duplicate Profile"
-msgstr ""
+msgstr "პროფილის დუბლირება"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1812,7 +1812,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:259
 #, kde-format
 msgid "Unable to duplicate"
-msgstr ""
+msgstr "დუბლირების შეცდომა"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:37
 #, kde-format
@@ -1822,7 +1822,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:43
 #, kde-format
 msgid "&Start at current position"
-msgstr ""
+msgstr "&მიმდინარე პოზიციაზე დაწყება"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
@@ -1835,7 +1835,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:51 kmuddy/dialogs/dlgtranscript.cpp:85
 #, kde-format
 msgid "&File:"
-msgstr ""
+msgstr "&ფაილი:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:54 kmuddy/dialogs/dlgtranscript.cpp:88
 #, kde-format
@@ -1845,7 +1845,7 @@ msgstr "არჩევა..."
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:64
 #, kde-format
 msgid "&Dump format:"
-msgstr ""
+msgstr "&დამპის ფორმატი:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:66
 #, kde-format
@@ -1896,7 +1896,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:58 kmuddy/dialogs/dlgquickconnect.cpp:43
 #, kde-format
 msgid "&Port:"
-msgstr ""
+msgstr "&პორტი:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:61
 #, kde-format
@@ -1906,7 +1906,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:63
 #, kde-format
 msgid "&Login name:"
-msgstr ""
+msgstr "&მომხმარებლის სახელი:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:65
 #, kde-format
@@ -1917,7 +1917,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
 msgid "Pass&word:"
-msgstr ""
+msgstr "&პაროლი:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:69
 #, kde-format
@@ -1967,22 +1967,22 @@ msgstr "პროფილის შემოტანა"
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
 msgid "Export profile"
-msgstr ""
+msgstr "პროფილის გატანა"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:41
 #, kde-format
 msgid "&Profile name"
-msgstr ""
+msgstr "&პროფილის სახელი"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:54
 #, kde-format
 msgid "&Import from"
-msgstr ""
+msgstr "&შემოტანის წყარო"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:55
 #, kde-format
 msgid "&Export to"
-msgstr ""
+msgstr "&გატანა"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:58
 #: kmuddy/dialogs/dlgprofilesettings.cpp:154
@@ -2004,12 +2004,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
 msgid "Choose file with profile"
-msgstr ""
+msgstr "აირჩიეთ ფაილი პროფილით"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:137
 #, kde-format
 msgid "Enter target file"
-msgstr ""
+msgstr "აირჩიეთ სამიზნე ფაილი"
 
 #: kmuddy/dialogs/dlgmudlist.cpp:57
 #, kde-format
@@ -2019,12 +2019,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgmudlist.cpp:67
 #, kde-format
 msgid "&Filter:"
-msgstr ""
+msgstr "&ფილტრი:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:32
 #, kde-format
 msgid "Multi-line input"
-msgstr ""
+msgstr "მრავალხაზიანი შეყვანა"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:44
 #, kde-format
@@ -2036,7 +2036,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgmultiline.cpp:55
 #, kde-format
 msgid "&Prefix:"
-msgstr ""
+msgstr "&პრეფიქსი:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:58
 #, kde-format
@@ -2076,17 +2076,17 @@ msgstr "&გასუფთავება"
 #: kmuddy/dialogs/dlgmultiline.cpp:84
 #, kde-format
 msgid "Clears window contents."
-msgstr ""
+msgstr "ჟურნალის შიგთავსის გასუფთავება."
 
 #: kmuddy/dialogs/dlgmxpconsole.cpp:48
 #, kde-format
 msgid "MXP Console"
-msgstr ""
+msgstr "MXP კონსოლი"
 
 #: kmuddy/dialogs/dlgobjects.cpp:64
 #, kde-format
 msgid "Object Manager"
-msgstr ""
+msgstr "ობიექტის მმართველი"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
@@ -2117,7 +2117,7 @@ msgstr "ქვემოთ"
 #: kmuddy/dialogs/dlgobjects.cpp:98
 #, kde-format
 msgid "Left"
-msgstr ""
+msgstr "მარცხენა"
 
 #: kmuddy/dialogs/dlgobjects.cpp:102
 #, kde-format
@@ -2127,12 +2127,12 @@ msgstr "Right"
 #: kmuddy/dialogs/dlgoutputwindow.cpp:37
 #, kde-format
 msgid "Output window"
-msgstr ""
+msgstr "გამოტანის ფანჯარა"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:43
 #, kde-format
 msgid "MUD preferences"
-msgstr ""
+msgstr "MUD -ის მორგება"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:50
 #, kde-format
@@ -2159,7 +2159,7 @@ msgstr "ხმა"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:63
 #, kde-format
 msgid "MXP"
-msgstr ""
+msgstr "MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
@@ -2186,7 +2186,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:81
 #, kde-format
 msgid "&Encoding:"
-msgstr ""
+msgstr "&კოდირება:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:84
 #, kde-format
@@ -2235,7 +2235,7 @@ msgstr "&ჩრდილო"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "No&rtheast"
-msgstr ""
+msgstr "&ჩრდილოაღმოსავლეთი"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2245,7 +2245,7 @@ msgstr "&აღმო"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "So&utheast"
-msgstr ""
+msgstr "&სამხრეთაღმოსავლეთი"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
@@ -2255,7 +2255,7 @@ msgstr "&სამხ"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "Sou&thwest"
-msgstr ""
+msgstr "&სამხრეთდასავლეთი"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2265,7 +2265,7 @@ msgstr "&დასავ"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
 msgid "Nort&hwest"
-msgstr ""
+msgstr "&ჩრდილოდასავლეთი"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2287,7 +2287,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
 msgid "External &scripts directory"
-msgstr ""
+msgstr "&გარე სკრიპტების საქაღალდე"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
@@ -2298,7 +2298,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
-msgstr ""
+msgstr "&სამუშაო საქაღალდე"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:162
 #, kde-format
@@ -2310,7 +2310,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
 msgid "&Transcripts directory"
-msgstr ""
+msgstr "&ტრანსკრიპტების საქაღალდე"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
@@ -2370,7 +2370,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
 msgid "&Use MXP"
-msgstr ""
+msgstr "&MXP-ის გამოყენება"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:224
 #, kde-format
@@ -2385,7 +2385,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
 msgid "Auto-detect"
-msgstr ""
+msgstr "ავტომატური გამოცნობა"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:227
 #, kde-format
@@ -2432,7 +2432,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgquickconnect.cpp:36
 #, kde-format
 msgid "Quick Connect"
-msgstr ""
+msgstr "სწრაფი დაკავშირება"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:41
 #, kde-format
@@ -2442,7 +2442,7 @@ msgstr "&ჰოსტი:"
 #: kmuddy/dialogs/dlgstatistics.cpp:41
 #, kde-format
 msgid "Connection statistics"
-msgstr ""
+msgstr "კავშირის სტატისტიკა"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:50
 #, kde-format
@@ -2457,7 +2457,7 @@ msgstr "მთვლელი"
 #: kmuddy/dialogs/dlgstatistics.cpp:118
 #, kde-format
 msgid "Using MCCP"
-msgstr ""
+msgstr "MCCP- ის გამოყენება"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
 #: kmuddy/dialogs/dlgstatistics.cpp:126
@@ -2469,42 +2469,42 @@ msgstr "კი"
 #: kmuddy/dialogs/dlgstatistics.cpp:126
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "არა"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:120
 #, kde-format
 msgid "MCCP version"
-msgstr ""
+msgstr "MCCP-ის ვერსია"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:121
 #, kde-format
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:122
 #, kde-format
 msgid "Using MSP"
-msgstr ""
+msgstr "MSP- ის გამოყენება"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:125
 #, kde-format
 msgid "Using MXP"
-msgstr ""
+msgstr "MXP- ის გამოყენება"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:128
 #, kde-format
 msgid "Sent bytes"
-msgstr ""
+msgstr "გაგზავნილი ბაიტები"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:130
 #, kde-format
 msgid "Sent commands"
-msgstr ""
+msgstr "გაგზავნილი ბრძანებები"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:132
 #, kde-format
 msgid "Received bytes"
-msgstr ""
+msgstr "მიღებული ბაიტები"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:134
 #, kde-format
@@ -2514,17 +2514,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
 msgid "Received lines"
-msgstr ""
+msgstr "მიღებული ხაზები"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:138
 #, kde-format
 msgid "Connection time"
-msgstr ""
+msgstr "კავშირის დრო"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:37
 #, kde-format
 msgid "Session Transcript"
-msgstr ""
+msgstr "სესიის ტრანსკრიპტი"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:44
 #, kde-format
@@ -2551,17 +2551,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:59
 #, kde-format
 msgid "Transcript settings"
-msgstr ""
+msgstr "ტრანსკრიპტის მორგება"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:65 kmuddy/dialogs/dlgtranscript.cpp:120
 #, kde-format
 msgid "Transcript &format"
-msgstr ""
+msgstr "ტრანსკრიპტის &ფორმატები"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:74
 #, kde-format
 msgid "&Overwrite existing file"
-msgstr ""
+msgstr "&არსებული ფაილის გადაწერა"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
@@ -2627,7 +2627,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:140
 #, kde-format
 msgid "Log name format"
-msgstr ""
+msgstr "ჟურნალის სახელის ფორმატი"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
@@ -2655,37 +2655,37 @@ msgstr "&დამალვა"
 #: kmuddy/dialogs/dlgwindows.cpp:68
 #, kde-format
 msgid "&Delete"
-msgstr ""
+msgstr "&წაშლა"
 
 #: kmuddy/kmuddy.cpp:249
 #, kde-format
 msgid "&Connect..."
-msgstr ""
+msgstr "&მიერთება..."
 
 #: kmuddy/kmuddy.cpp:256
 #, kde-format
 msgid "&QuickConnect..."
-msgstr ""
+msgstr "&სწრაფი კავშირი..."
 
 #: kmuddy/kmuddy.cpp:262
 #, kde-format
 msgid "&Disconnect"
-msgstr ""
+msgstr "&გათიშვა"
 
 #: kmuddy/kmuddy.cpp:268
 #, kde-format
 msgid "&Reconnect"
-msgstr ""
+msgstr "&თავიდან დაკავშირება"
 
 #: kmuddy/kmuddy.cpp:273
 #, kde-format
 msgid "Close &tab"
-msgstr ""
+msgstr "&ჩანართის დახურვა"
 
 #: kmuddy/kmuddy.cpp:282
 #, kde-format
 msgid "Paste &As"
-msgstr ""
+msgstr "ჩასმა, &როგორც"
 
 #: kmuddy/kmuddy.cpp:291
 #, kde-format
@@ -2695,17 +2695,17 @@ msgstr "&შეყვანა"
 #: kmuddy/kmuddy.cpp:298
 #, kde-format
 msgid "Copy &Selection"
-msgstr ""
+msgstr "მონიშნულის &კოპირება"
 
 #: kmuddy/kmuddy.cpp:304
 #, kde-format
 msgid "Enable command &parsing"
-msgstr ""
+msgstr "ბრძანების &დამუშავების ჩართვა"
 
 #: kmuddy/kmuddy.cpp:311
 #, kde-format
 msgid "Ca&ncel pending commands"
-msgstr ""
+msgstr "დარჩენილი ბრძანებების &გაუქმება"
 
 #: kmuddy/kmuddy.cpp:322
 #, kde-format
@@ -2715,47 +2715,47 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:335
 #, kde-format
 msgid "&Object Editor..."
-msgstr ""
+msgstr "&ობიექტის რედაქტორი..."
 
 #: kmuddy/kmuddy.cpp:340
 #, kde-format
 msgid "&Output windows..."
-msgstr ""
+msgstr "&გამოტანის ფანჯრები..."
 
 #: kmuddy/kmuddy.cpp:344
 #, kde-format
 msgid "A&liases enabled"
-msgstr ""
+msgstr "&მეტსახელები ჩართულია"
 
 #: kmuddy/kmuddy.cpp:350
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr ""
+msgstr "&ტრიგერები ჩართულია"
 
 #: kmuddy/kmuddy.cpp:356
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr ""
+msgstr "&ტაიმერები ჩართულია"
 
 #: kmuddy/kmuddy.cpp:361
 #, kde-format
 msgid "Macro &keys enabled"
-msgstr ""
+msgstr "&მაკროს ღილაკები ჩართულია"
 
 #: kmuddy/kmuddy.cpp:366
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr ""
+msgstr "&MUD -ის მორგება..."
 
 #: kmuddy/kmuddy.cpp:371
 #, kde-format
 msgid "&Save Profile"
-msgstr ""
+msgstr "&პროფილის შენახვა"
 
 #: kmuddy/kmuddy.cpp:378
 #, kde-format
 msgid "&Session transcript..."
-msgstr ""
+msgstr "&სესიის ტრანსკრიპტი..."
 
 #: kmuddy/kmuddy.cpp:383
 #, kde-format
@@ -2770,12 +2770,12 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:401
 #, kde-format
 msgid "&Global settings..."
-msgstr ""
+msgstr "&გლობალური პარამეტრები..."
 
 #: kmuddy/kmuddy.cpp:406
 #, kde-format
 msgid "&Plugins..."
-msgstr ""
+msgstr "&დამატებები..."
 
 #: kmuddy/kmuddy.cpp:411
 #, kde-format
@@ -2829,12 +2829,12 @@ msgstr "_შემდეგი ჩანართი"
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
-msgstr ""
+msgstr "%1-ე ჩანართზე გადართვა"
 
 #: kmuddy/kmuddy.cpp:531
 #, kde-format
 msgid "&Connection"
-msgstr ""
+msgstr "&შეერთება"
 
 #: kmuddy/kmuddy.cpp:532
 #, kde-format
@@ -2850,7 +2850,7 @@ msgstr "_ხედი"
 #: kmuddy/kmuddy.cpp:534
 #, kde-format
 msgid "&Profile"
-msgstr ""
+msgstr "&პროფილი"
 
 #: kmuddy/kmuddy.cpp:535
 #, kde-format
@@ -2974,7 +2974,7 @@ msgstr ""
 #: kmuddy/macros.cpp:465
 #, kde-format
 msgid "/odel: object does not exist."
-msgstr ""
+msgstr "/odel: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:470
 #, kde-format
@@ -2989,7 +2989,7 @@ msgstr ""
 #: kmuddy/macros.cpp:495
 #, kde-format
 msgid "/omove: object does not exist."
-msgstr ""
+msgstr "/omove: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:499
 #, kde-format
@@ -2999,7 +2999,7 @@ msgstr ""
 #: kmuddy/macros.cpp:505
 #, kde-format
 msgid "/omove: group does not exist."
-msgstr ""
+msgstr "/omove: ჯგუფი არ არსებობს."
 
 #: kmuddy/macros.cpp:509
 #, kde-format
@@ -3024,7 +3024,7 @@ msgstr ""
 #: kmuddy/macros.cpp:547
 #, kde-format
 msgid "/oren: object does not exist."
-msgstr ""
+msgstr "/oren: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:553
 #, kde-format
@@ -3049,7 +3049,7 @@ msgstr ""
 #: kmuddy/macros.cpp:588
 #, kde-format
 msgid "/opriority: object does not exist."
-msgstr ""
+msgstr "/opriority: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:594
 #, kde-format
@@ -3059,12 +3059,12 @@ msgstr ""
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
-msgstr ""
+msgstr "/oenable: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
-msgstr ""
+msgstr "/odisable: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:641
 #, kde-format
@@ -3074,7 +3074,7 @@ msgstr ""
 #: kmuddy/macros.cpp:648
 #, kde-format
 msgid "/osetbattr: object does not exist."
-msgstr ""
+msgstr "/osetbattr: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
 #, kde-format
@@ -3084,32 +3084,32 @@ msgstr ""
 #: kmuddy/macros.cpp:672
 #, kde-format
 msgid "/osetiattr: object does not exist."
-msgstr ""
+msgstr "/osetiattr: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:696
 #, kde-format
 msgid "/osetsattr: object does not exist."
-msgstr ""
+msgstr "/osetsattr: ობიექტი არ არსებობს."
 
 #: kmuddy/macros.cpp:713
 #, kde-format
 msgid "/tgroupon: group does not exist."
-msgstr ""
+msgstr "/tgroupon: ჯგუფი არ არსებობს."
 
 #: kmuddy/macros.cpp:728
 #, kde-format
 msgid "/tgroupoff: group does not exist."
-msgstr ""
+msgstr "/tgroupoff: ჯგუფი არ არსებობს."
 
 #: kmuddy/macros.cpp:744
 #, kde-format
 msgid "/agroupon: group does not exist."
-msgstr ""
+msgstr "/agroupon: ჯგუფი არ არსებობს."
 
 #: kmuddy/macros.cpp:760
 #, kde-format
 msgid "/agroupoff: group does not exist."
-msgstr ""
+msgstr "/agroupoff: ჯგუფი არ არსებობს."
 
 #: kmuddy/main.cpp:30
 #, kde-format
@@ -3127,12 +3127,12 @@ msgstr "KMuddy"
 #: kmuddy/main.cpp:40
 #, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr ""
+msgstr "(c) 2002-2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:41
 #, kde-format
 msgid "Tomas Mecir"
-msgstr ""
+msgstr "Tomas Mecir"
 
 #: kmuddy/main.cpp:42
 #, kde-format
@@ -3142,7 +3142,7 @@ msgstr ""
 #: kmuddy/main.cpp:43
 #, kde-format
 msgid "Alex Bache"
-msgstr ""
+msgstr "Alex Bache"
 
 #: kmuddy/main.cpp:44
 #, kde-format
@@ -3154,7 +3154,7 @@ msgstr ""
 #: kmuddy/main.cpp:45
 #, kde-format
 msgid "Alsherok staff"
-msgstr ""
+msgstr "Alsherok staff"
 
 #: kmuddy/main.cpp:46
 #, kde-format
@@ -3164,7 +3164,7 @@ msgstr ""
 #: kmuddy/main.cpp:47
 #, kde-format
 msgid "Andrea Cascio"
-msgstr ""
+msgstr "Andrea Cascio"
 
 #: kmuddy/main.cpp:48
 #, kde-format
@@ -3174,7 +3174,7 @@ msgstr ""
 #: kmuddy/main.cpp:49
 #, kde-format
 msgid "Orion Elder"
-msgstr ""
+msgstr "Orion Elder"
 
 #: kmuddy/main.cpp:50
 #, kde-format
@@ -3184,7 +3184,7 @@ msgstr ""
 #: kmuddy/main.cpp:51
 #, kde-format
 msgid "Scott Monachello"
-msgstr ""
+msgstr "Scott Monachello"
 
 #: kmuddy/main.cpp:52
 #, kde-format
@@ -3194,7 +3194,7 @@ msgstr ""
 #: kmuddy/main.cpp:53
 #, kde-format
 msgid "Tyler Montbriand"
-msgstr ""
+msgstr "Tyler Montbriand"
 
 #: kmuddy/main.cpp:54
 #, kde-format
@@ -3204,7 +3204,7 @@ msgstr ""
 #: kmuddy/main.cpp:55
 #, kde-format
 msgid "Marco Mastroddi"
-msgstr ""
+msgstr "Marco Mastroddi"
 
 #: kmuddy/main.cpp:56
 #, kde-format
@@ -3214,7 +3214,7 @@ msgstr ""
 #: kmuddy/main.cpp:57
 #, kde-format
 msgid "Henrikki Almusa"
-msgstr ""
+msgstr "Henrikki Almusa"
 
 #: kmuddy/main.cpp:58
 #, kde-format
@@ -3224,7 +3224,7 @@ msgstr ""
 #: kmuddy/main.cpp:59
 #, kde-format
 msgid "Drossos Stamboulakis"
-msgstr ""
+msgstr "Drossos Stamboulakis"
 
 #: kmuddy/main.cpp:60
 #, kde-format
@@ -3234,7 +3234,7 @@ msgstr ""
 #: kmuddy/main.cpp:61
 #, kde-format
 msgid "Antonio J. Soler Sanchez"
-msgstr ""
+msgstr "Antonio J. Soler Sanchez"
 
 #: kmuddy/main.cpp:62
 #, kde-format
@@ -3254,7 +3254,7 @@ msgstr ""
 #: kmuddy/main.cpp:65
 #, kde-format
 msgid "Magnus Lundborg"
-msgstr ""
+msgstr "Magnus Lundborg"
 
 #: kmuddy/main.cpp:65
 #, kde-format
@@ -3264,7 +3264,7 @@ msgstr ""
 #: kmuddy/main.cpp:66
 #, kde-format
 msgid "Vladimir Lazarenko"
-msgstr ""
+msgstr "Vladimir Lazarenko"
 
 #: kmuddy/main.cpp:67
 #, kde-format
@@ -3274,7 +3274,7 @@ msgstr ""
 #: kmuddy/main.cpp:68
 #, kde-format
 msgid "Stuart Henshall"
-msgstr ""
+msgstr "Stuart Henshall"
 
 #: kmuddy/main.cpp:69
 #, kde-format
@@ -3284,7 +3284,7 @@ msgstr ""
 #: kmuddy/main.cpp:70
 #, kde-format
 msgid "Vadim Peretokin"
-msgstr ""
+msgstr "Vadim Peretokin"
 
 #: kmuddy/main.cpp:71
 #, kde-format
@@ -3294,7 +3294,7 @@ msgstr ""
 #: kmuddy/main.cpp:72
 #, kde-format
 msgid "Heiko Koehn"
-msgstr ""
+msgstr "Heiko Koehn"
 
 #: kmuddy/main.cpp:73
 #, kde-format
@@ -3304,7 +3304,7 @@ msgstr ""
 #: kmuddy/main.cpp:74
 #, kde-format
 msgid "Robert Marmorstein"
-msgstr ""
+msgstr "Robert Marmorstein"
 
 #: kmuddy/main.cpp:75
 #, kde-format
@@ -3418,7 +3418,7 @@ msgstr ""
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
 msgid "This macro does not exist."
-msgstr ""
+msgstr "ეს მაკრო არ არსებობს."
 
 #: libs/cconsole.cpp:133
 #, kde-format
@@ -3443,7 +3443,7 @@ msgstr "წუთი"
 #: libs/cconsole.cpp:148
 #, kde-format
 msgid "minutes"
-msgstr ""
+msgstr "წუთი"
 
 #: libs/cconsole.cpp:154
 #, kde-format
@@ -3453,7 +3453,7 @@ msgstr "წამი"
 #: libs/cconsole.cpp:154
 #, kde-format
 msgid "seconds"
-msgstr ""
+msgstr "წამი"
 
 #: libs/cconsole.cpp:156
 #, kde-format
@@ -3488,7 +3488,7 @@ msgstr ""
 #: plugins/mapper/cmapzonemanager.cpp:233
 #, kde-format
 msgid "This file is corrupted."
-msgstr ""
+msgstr "ეს ფაილი დაზიანებულია."
 
 #: libs/clist.cpp:479 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:236
@@ -3499,17 +3499,17 @@ msgstr ""
 #: libs/clisteditor.cpp:75
 #, kde-format
 msgid "&Apply changes"
-msgstr ""
+msgstr "&ცვლილებების გადატარება"
 
 #: libs/clisteditor.cpp:76
 #, kde-format
 msgid "&Undo changes"
-msgstr ""
+msgstr "ცვლილებების &გაუქმება"
 
 #: libs/clisteditor.cpp:217
 #, kde-format
 msgid "&Enabled"
-msgstr ""
+msgstr "&ჩართულია"
 
 #: libs/clisteditor.cpp:219
 #, kde-format
@@ -3519,7 +3519,7 @@ msgstr "&პრიორიტეტი"
 #: libs/clisteditor.cpp:224
 #, kde-format
 msgid "&Name"
-msgstr ""
+msgstr "&სახელი"
 
 #: libs/clisteditor.cpp:285
 #, kde-format
@@ -3534,7 +3534,7 @@ msgstr ""
 #: libs/clistgroup.cpp:229
 #, kde-format
 msgid "Error in file - group with no name."
-msgstr ""
+msgstr "შეცდომა ფაილში- ჯგუფი სახელის გარეშე."
 
 #: libs/clistgroup.cpp:233
 #, kde-format
@@ -3544,17 +3544,17 @@ msgstr ""
 #: libs/clistviewer.cpp:65
 #, kde-format
 msgid "Delete object"
-msgstr ""
+msgstr "ობიექტის წაშლა"
 
 #: libs/clistviewer.cpp:70 libs/clistviewer.cpp:165
 #, kde-format
 msgid "Delete group"
-msgstr ""
+msgstr "ჯგუფის წაშლა"
 
 #: libs/clistviewer.cpp:74
 #, kde-format
 msgid "Add subgroup"
-msgstr ""
+msgstr "ქვეჯგუფის დამატება"
 
 #: libs/clistviewer.cpp:79
 #, kde-format
@@ -3589,7 +3589,7 @@ msgstr "ჯგუფის შექმნა"
 #: libs/clistviewer.cpp:194
 #, kde-format
 msgid "Please enter the group name:"
-msgstr ""
+msgstr "შეიყვანეთ ჯგუფის სახელი:"
 
 #: libs/clistviewer.cpp:200
 #, kde-format
@@ -3604,7 +3604,7 @@ msgstr ""
 #: libs/cmsp.cpp:285
 #, kde-format
 msgid "MSP: Problem was: %1"
-msgstr ""
+msgstr "MSP: პრობლემა: %1"
 
 #: libs/cmsp.cpp:315
 #, kde-format
@@ -3654,57 +3654,57 @@ msgstr ""
 #: libs/coutput.cpp:232
 #, kde-format
 msgid "No, no, no!"
-msgstr ""
+msgstr "არა, არა, არა!"
 
 #: libs/coutput.cpp:233
 #, kde-format
 msgid "I don't agree with it."
-msgstr ""
+msgstr "არ ვეთანხმები."
 
 #: libs/coutput.cpp:234
 #, kde-format
 msgid "Better not."
-msgstr ""
+msgstr "სჯობს, არა."
 
 #: libs/coutput.cpp:235
 #, kde-format
 msgid "I'd probably suggest to reject."
-msgstr ""
+msgstr "გირჩევთ, უარი თქვათ."
 
 #: libs/coutput.cpp:236
 #, kde-format
 msgid "Saying no seems a bit better."
-msgstr ""
+msgstr "უარის თქმა ოდნავ უკეთესია."
 
 #: libs/coutput.cpp:237
 #, kde-format
 msgid "Saying yes seems a bit better."
-msgstr ""
+msgstr "თანხმობა ოდნავ უკეთესია."
 
 #: libs/coutput.cpp:238
 #, kde-format
 msgid "I'd probably suggest to accept."
-msgstr ""
+msgstr "გირჩევთ, დათანხმდეთ."
 
 #: libs/coutput.cpp:239
 #, kde-format
 msgid "Sounds good."
-msgstr ""
+msgstr "კარგია."
 
 #: libs/coutput.cpp:240
 #, kde-format
 msgid "I agree with it."
-msgstr ""
+msgstr "გეთანხმებით."
 
 #: libs/coutput.cpp:241
 #, kde-format
 msgid "Definitely yes!"
-msgstr ""
+msgstr "რა თქმა უნდა, გეთანხმებით!"
 
 #: libs/coutput.cpp:243
 #, kde-format
 msgid "My decision: %1"
-msgstr ""
+msgstr "ჩემი გადაწყვეტილებაა: %1"
 
 #: libs/cpluginmanager.cpp:285
 #, kde-format
@@ -3724,7 +3724,7 @@ msgstr "მომხმარებლის სახელი"
 #: libs/cstatus.cpp:41 libs/cstatus.cpp:180
 #, kde-format
 msgid "Off-line"
-msgstr ""
+msgstr "გათიშული"
 
 #: libs/cstatus.cpp:44 libs/cstatus.cpp:166 libs/cstatus.cpp:174
 #: libs/cstatus.cpp:210 libs/cstatus.cpp:258
@@ -3735,7 +3735,7 @@ msgstr "უქმე"
 #: libs/cstatus.cpp:172
 #, kde-format
 msgid "Connected"
-msgstr ""
+msgstr "დაკავშირებულია"
 
 #: libs/cstatus.cpp:175
 #, kde-format
@@ -3750,7 +3750,7 @@ msgstr "კავშირი გაწყვეტილია."
 #: libs/cstatus.cpp:183
 #, kde-format
 msgid "Connection has been closed."
-msgstr ""
+msgstr "შეერთება დაიხურა."
 
 #: libs/cvariablelist.cpp:375
 #, kde-format
@@ -3774,7 +3774,7 @@ msgstr ""
 #: plugins/converter/converterdialog.cpp:54
 #, kde-format
 msgid "Path"
-msgstr ""
+msgstr "ბილიკი"
 
 #: plugins/converter/converterplugin.cpp:74
 #, kde-format
@@ -3794,7 +3794,7 @@ msgstr ""
 #: plugins/mapper/cmapclipboard.cpp:64
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "ყველას მონიშვნა"
 
 #: plugins/mapper/cmapclipboard.cpp:68
 #, kde-format
@@ -3809,7 +3809,7 @@ msgstr "მონიშვნის ინვერსია"
 #: plugins/mapper/cmapclipboard.cpp:80
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "კოპირება"
 
 #: plugins/mapper/cmapclipboard.cpp:84
 #, kde-format
@@ -3824,27 +3824,27 @@ msgstr "ჩასმა"
 #: plugins/mapper/cmapclipboard.cpp:302 plugins/mapper/cmapclipboard.cpp:449
 #, kde-format
 msgid "Paste Element"
-msgstr ""
+msgstr "ელემენტის ჩასმა"
 
 #: plugins/mapper/cmapclipboard.cpp:315 plugins/mapper/cmapclipboard.cpp:459
 #, kde-format
 msgid "Update Properties"
-msgstr ""
+msgstr "თვისებების განახლება"
 
 #: plugins/mapper/cmapclipboard.cpp:380
 #, kde-format
 msgid "Paste Path"
-msgstr ""
+msgstr "ბილიკის ჩასმა"
 
 #: plugins/mapper/cmapclipboard.cpp:472
 #, kde-format
 msgid "Delete Elements"
-msgstr ""
+msgstr "ელემენტების წაშლა"
 
 #: plugins/mapper/cmapelement.cpp:339
 #, kde-format
 msgid "Resize Element"
-msgstr ""
+msgstr "ელემენტის ზომის შეცვლა"
 
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
 #, kde-format
@@ -3854,7 +3854,7 @@ msgstr "დონე %1"
 #: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:121
 #, kde-format
 msgid "Map #1"
-msgstr ""
+msgstr "რუკა #1"
 
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
@@ -3909,23 +3909,23 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:567
 #, kde-format
 msgid "Create Level"
-msgstr ""
+msgstr "დონის შექმნა"
 
 #: plugins/mapper/cmapmanager.cpp:636
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:34
 #, kde-format
 msgid "Create Room"
-msgstr ""
+msgstr "ოთახის შექმნა"
 
 #: plugins/mapper/cmapmanager.cpp:664 plugins/mapper/cmapmanager.cpp:693
 #, kde-format
 msgid "Create Text"
-msgstr ""
+msgstr "ტექსტის შექმნა"
 
 #: plugins/mapper/cmapmanager.cpp:764
 #, kde-format
 msgid "A path already exists at this location"
-msgstr ""
+msgstr "ამ ადგილას ბილიკი უკვე არსებობს"
 
 #: plugins/mapper/cmapmanager.cpp:764 plugins/mapper/cmapmanager.cpp:1448
 #: plugins/mapper/cmapmanager.cpp:1502 plugins/mapper/cmapmanager.cpp:1536
@@ -3939,12 +3939,12 @@ msgstr ""
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:42
 #, kde-format
 msgid "Create Path"
-msgstr ""
+msgstr "ბილიკის შექმნა"
 
 #: plugins/mapper/cmapmanager.cpp:857
 #, kde-format
 msgid "Delete Level"
-msgstr ""
+msgstr "დონის წაშლა"
 
 #: plugins/mapper/cmapmanager.cpp:891 plugins/mapper/cmapmanager.cpp:900
 #, kde-format
@@ -3989,32 +3989,32 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:1772
 #, kde-format
 msgid "Root Zone"
-msgstr ""
+msgstr "ძირითადი ზონა"
 
 #: plugins/mapper/cmapmanager.cpp:1788
 #, kde-format
 msgid "Test room 1"
-msgstr ""
+msgstr "სატესტო ოთახი 1"
 
 #: plugins/mapper/cmapmanager.cpp:1791
 #, kde-format
 msgid "Test room 2"
-msgstr ""
+msgstr "სატესტო ოთახი 2"
 
 #: plugins/mapper/cmapmanager.cpp:1794
 #, kde-format
 msgid "Test room 3"
-msgstr ""
+msgstr "სატესტო ოთახი 3"
 
 #: plugins/mapper/cmapmanager.cpp:1797
 #, kde-format
 msgid "Test room 4"
-msgstr ""
+msgstr "სატესტო ოთახი 4"
 
 #: plugins/mapper/cmapmanager.cpp:1813
 #, kde-format
 msgid "Set Special Exit"
-msgstr ""
+msgstr "სპეციალური გასასვლელის დაყენება"
 
 #: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:685
 #, kde-format
@@ -4045,37 +4045,37 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:87
 #, kde-format
 msgid "Auto Create"
-msgstr ""
+msgstr "ავტომატური შექმნა"
 
 #: plugins/mapper/cmapview.cpp:123
 #, kde-format
 msgid "&Grid"
-msgstr ""
+msgstr "&ბადე"
 
 #: plugins/mapper/cmapview.cpp:128
 #, kde-format
 msgid "Display Upper Level"
-msgstr ""
+msgstr "ზედა დონის ჩვენება"
 
 #: plugins/mapper/cmapview.cpp:133
 #, kde-format
 msgid "Display Lower Level"
-msgstr ""
+msgstr "ქვედა დონის ჩვენება"
 
 #: plugins/mapper/cmapview.cpp:138
 #, kde-format
 msgid "Delete Current Level"
-msgstr ""
+msgstr "მიმდინარე დონის ჩვენება"
 
 #: plugins/mapper/cmapview.cpp:143
 #, kde-format
 msgid "Create New Zone"
-msgstr ""
+msgstr "ახალი ზონის შექმნა"
 
 #: plugins/mapper/cmapview.cpp:148
 #, kde-format
 msgid "Delete Current Zone"
-msgstr ""
+msgstr "მიმდინარე ზონის წაშლა"
 
 #: plugins/mapper/cmapview.cpp:155
 #, kde-format
@@ -4105,7 +4105,7 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:178
 #, kde-format
 msgid "&Delete room"
-msgstr ""
+msgstr "ოთახის &წაშლა"
 
 #: plugins/mapper/cmapview.cpp:183 plugins/mapper/cmapview.cpp:195
 #: plugins/mapper/cmapview.cpp:227
@@ -4116,7 +4116,7 @@ msgstr "&თვისებები"
 #: plugins/mapper/cmapview.cpp:190
 #, kde-format
 msgid "&Delete Text"
-msgstr ""
+msgstr "ტექსტის &წაშლა"
 
 #: plugins/mapper/cmapview.cpp:202
 #, kde-format
@@ -4146,7 +4146,7 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:222
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "ბილიკის &წაშლა"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:232
@@ -4191,32 +4191,32 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:760
 #, kde-format
 msgid "Change room label position"
-msgstr ""
+msgstr "ოთახის ჭდის მდებარეობის შეცვლა"
 
 #: plugins/mapper/cmapview.cpp:786
 #, kde-format
 msgid "Change zone label position"
-msgstr ""
+msgstr "ზონის ჭდის მდებარეობის შეცვლა"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
 msgid "Current Room : "
-msgstr ""
+msgstr "მიმდინარე ოთახი : "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
 msgid "Level : "
-msgstr ""
+msgstr "დონე : "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:57
 #, kde-format
 msgid "Zone : "
-msgstr ""
+msgstr "ზონა : "
 
 #: plugins/mapper/cmapzone.cpp:34
 #, kde-format
 msgid "Unnamed Zone"
-msgstr ""
+msgstr "უსახელო ზონა"
 
 #: plugins/mapper/cmapzonemanager.cpp:231
 #, kde-format
@@ -4233,67 +4233,67 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
 #, kde-format
 msgid "Current Level"
-msgstr ""
+msgstr "მიმდინარე დონე"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr ""
+msgstr "ნაგულისხმები ბილიკის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr ""
+msgstr "ნაგულისხმები ოთახის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
 #, kde-format
 msgid "Current Position Color"
-msgstr ""
+msgstr "მიმდინარე მდებარეობისფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
 #, kde-format
 msgid "Special Exit Color"
-msgstr ""
+msgstr "სპეციალური გასასვლელის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
 #, kde-format
 msgid "Login Room Color"
-msgstr ""
+msgstr "შესვლის ოთახის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblEdit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
 #, kde-format
 msgid "Edit Mode Color"
-msgstr ""
+msgstr "ჩასწორების რეჟიმის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr ""
+msgstr "ნაგულისხმები ტექსტის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr ""
+msgstr "ნაგულისხმები ზონის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
 #, kde-format
 msgid "Selected Color"
-msgstr ""
+msgstr "არჩეული ფერი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
 #, kde-format
 msgid "Lower Level"
-msgstr ""
+msgstr "ქვედა დონა"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
@@ -4301,7 +4301,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
 #, kde-format
 msgid "Room Color"
-msgstr ""
+msgstr "ოთახის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
@@ -4309,7 +4309,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
 #, kde-format
 msgid "Path Color"
-msgstr ""
+msgstr "ბილიკის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4325,13 +4325,13 @@ msgstr "ტექსტის ფერი"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
 #, kde-format
 msgid "Zone Color"
-msgstr ""
+msgstr "ზონის ფერი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
 #, kde-format
 msgid "Upper Level"
-msgstr ""
+msgstr "ზედა დონე"
 
 #. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
@@ -4343,7 +4343,7 @@ msgstr "ფონის ფერი"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
 #, kde-format
 msgid "Grid Color"
-msgstr ""
+msgstr "ბადის ფერი"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
@@ -4395,7 +4395,7 @@ msgstr "დასავლეთი"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
 #, kde-format
 msgid "North East"
-msgstr ""
+msgstr "ჩრდილო-აღმოსავლეთი"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
@@ -4403,7 +4403,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
 #, kde-format
 msgid "South East"
-msgstr ""
+msgstr "სამხრეთ-აღმოსავლეთი"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
@@ -4411,7 +4411,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
 #, kde-format
 msgid "South West"
-msgstr ""
+msgstr "სამხრეთ-დასავლეთი"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
@@ -4436,67 +4436,67 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:143
 #, kde-format
 msgid "Kmud"
-msgstr ""
+msgstr "Kmud"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
 #, kde-format
 msgid "Valid Room Checking"
-msgstr ""
+msgstr "სწორი ოთახის შემოწმება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
 #, kde-format
 msgid "Enable valid room checking"
-msgstr ""
+msgstr "სწორი ოთახის შემოწმების ჩართვა"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
 #, kde-format
 msgid "Invalid Move Strings"
-msgstr ""
+msgstr "გადატანის არასწორი სტრიქონები"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "დამატება"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdEdit)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:68
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "ჩასწორება"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdRemove)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:75
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "მოცილება"
 
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:297
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:299
 #, kde-format
 msgid "Changed Path Properties"
-msgstr ""
+msgstr "ბილიკის თვისების ცვლილებები"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr ""
+msgstr "ბილიკის თვისებები"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
 #, kde-format
 msgid "Exits"
-msgstr ""
+msgstr "გასვლები"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grdExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
 #, kde-format
 msgid "Exit Details"
-msgstr ""
+msgstr "გასვლის დეტალები"
 
 #. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
@@ -4508,7 +4508,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
 #, kde-format
 msgid "Normal exit"
-msgstr ""
+msgstr "ნორმალური გასვლა"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4584,7 +4584,7 @@ msgstr "სა"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
 #, kde-format
 msgid "N"
-msgstr ""
+msgstr "ახ"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
@@ -4606,25 +4606,25 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
 #, kde-format
 msgid "Special Exit"
-msgstr ""
+msgstr "სპეციალური გასასვლელი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
 #, kde-format
 msgid "Special Command"
-msgstr ""
+msgstr "სპეციალური ბრძანება"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr ""
+msgstr "წყაროდან სამიზნემდე:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr ""
+msgstr "სამიზნიდან წყარომდე:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
@@ -4661,7 +4661,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "დიახ"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
@@ -4669,7 +4669,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "შეწყვეტა"
 
 #: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:223
@@ -4687,19 +4687,19 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
 #, kde-format
 msgid "&Description"
-msgstr ""
+msgstr "&აღწერა"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLabel)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
 #, kde-format
 msgid "Label:"
-msgstr ""
+msgstr "ჭდე:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDescription)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:55
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "აღწერა:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAppearance)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
@@ -4711,37 +4711,37 @@ msgstr "&გარეგნობა"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRoomColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
 #, kde-format
 msgid "Room Color:"
-msgstr ""
+msgstr "ოთახის ფერი:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr ""
+msgstr "ნაგულისხმები ოთახის ფერი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
 #, kde-format
 msgid "LabelPosition"
-msgstr ""
+msgstr "ჭდისმდებარეობა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr ""
+msgstr "&გასასვლელები"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
 #, kde-format
 msgid "Room Exits:"
-msgstr ""
+msgstr "ოთახიდან გასასვლელები:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
@@ -4753,13 +4753,13 @@ msgstr "მიმართულება"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
 #, kde-format
 msgid "Before command"
-msgstr ""
+msgstr "ბრძანებამდე"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
 #, kde-format
 msgid "After command"
-msgstr ""
+msgstr "ბრძანების შემდეგ"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
@@ -4777,7 +4777,7 @@ msgstr "&შემცველობა"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
 #, kde-format
 msgid "RoomContents:"
-msgstr ""
+msgstr "ოთახისშემცველობა:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
@@ -4789,7 +4789,7 @@ msgstr "ახალი ელემენტი"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
 #, kde-format
 msgid "Remove Item"
-msgstr ""
+msgstr "ჩანაწერისწაშლა"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
@@ -4849,7 +4849,7 @@ msgstr "ოჯახი:"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
 #, kde-format
 msgid "Color:"
-msgstr ""
+msgstr "ფერი:"
 
 #. i18n: ectx: property (text), widget (KColorButton, cmdColor)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
@@ -4861,13 +4861,13 @@ msgstr "ღილაკი"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
 #, kde-format
 msgid "S&ize"
-msgstr ""
+msgstr "&ზომა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
 #, kde-format
 msgid "Actual Size "
-msgstr ""
+msgstr "მიმდინარე ზომა "
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
@@ -4891,32 +4891,32 @@ msgstr "ფონტის ზომა"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
 #, kde-format
 msgid "Enter font size:"
-msgstr ""
+msgstr "შეიყვანეთ ფონტის ზომა:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
 #, kde-format
 msgid "Set Size"
-msgstr ""
+msgstr "ზომის დაყენება"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:37
 #, kde-format
 msgid "Text"
-msgstr ""
+msgstr "ტექსტი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
 #, kde-format
 msgid "Text:"
-msgstr ""
+msgstr "ტექსტი:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPreview)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
 #, kde-format
 msgid "Preview:"
-msgstr ""
+msgstr "მინიატურა:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
 #: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
@@ -4975,7 +4975,7 @@ msgstr "საშლელი"
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:36
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "აირჩიეთ"
 
 #: plugins/scripting/cscript.cpp:68
 #, kde-format
@@ -4985,12 +4985,12 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr ""
+msgstr "&სკრიპტის სახელი"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
 msgid "Name of this script."
-msgstr ""
+msgstr "ამ სკრიპტის სახელი."
 
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
@@ -5079,7 +5079,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
 msgid "Choose script"
-msgstr ""
+msgstr "აირჩიეთ სკრიპტი"
 
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
@@ -5094,17 +5094,17 @@ msgstr ""
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr ""
+msgstr "გაშვებული სკრიპტები"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr ""
+msgstr "&გაშვებული სკრიპტები"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
 msgid "&Terminate"
-msgstr ""
+msgstr "&შეწყვეტა"
 
 #: plugins/scripting/dlgrunninglist.cpp:54
 #, kde-format
@@ -5114,7 +5114,7 @@ msgstr "მოკვლა"
 #: plugins/scripting/scriptingplugin.cpp:65
 #, kde-format
 msgid "/exec: Script list is not available."
-msgstr ""
+msgstr "/exec: სკრიპტების სია ხელმიუწვდომელია."
 
 #: plugins/scripting/scriptingplugin.cpp:125
 #, kde-format
@@ -5129,7 +5129,7 @@ msgstr ""
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
 msgid "&Commands"
-msgstr ""
+msgstr "&ბრძანებები"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
