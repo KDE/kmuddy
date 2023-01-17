@@ -1172,7 +1172,7 @@ msgstr "Seleccioneu el directori del so"
 #: kmuddy/dialogs/dlgappsettings.cpp:78
 #, kde-format
 msgid "Application settings"
-msgstr "Configuració de l'aplicació"
+msgstr "Configureu l'aplicació"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:85
 #, kde-format
@@ -2782,7 +2782,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:59
 #, kde-format
 msgid "Transcript settings"
-msgstr "Configuració de la transcripció"
+msgstr "Configureu la transcripció"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:65 kmuddy/dialogs/dlgtranscript.cpp:120
 #, kde-format
@@ -2838,7 +2838,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:114
 #, kde-format
 msgid "Advanced transcript settings"
-msgstr "Configuració de la transcripció avançada"
+msgstr "Configureu la transcripció avançada"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:129
 #, kde-format
