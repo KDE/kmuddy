@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the kmuddy package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-12-17 19:05+0300\n"
+"PO-Revision-Date: 2023-01-18 22:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3894,7 +3894,7 @@ msgstr ""
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
 #, kde-format
 msgid "Level %1"
-msgstr "Seviye %1"
+msgstr "Düzey %1"
 
 #: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:121
 #, kde-format
@@ -3954,7 +3954,7 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:567
 #, kde-format
 msgid "Create Level"
-msgstr "Seviye Oluştur"
+msgstr "Düzey Oluştur"
 
 #: plugins/mapper/cmapmanager.cpp:636
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:34
@@ -3989,7 +3989,7 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:857
 #, kde-format
 msgid "Delete Level"
-msgstr "Seviyeyi Sil"
+msgstr "Düzeyi Sil"
 
 #: plugins/mapper/cmapmanager.cpp:891 plugins/mapper/cmapmanager.cpp:900
 #, kde-format
@@ -4251,7 +4251,7 @@ msgstr ""
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
 msgid "Level : "
-msgstr "Seviye : "
+msgstr "Düzey : "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:57
 #, kde-format
