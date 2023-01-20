@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-01-18 22:41+0300\n"
+"PO-Revision-Date: 2023-01-19 22:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -337,7 +337,7 @@ msgstr "Ctrl+Enter, eğer ayarlardan değiştirilmediyse yeni satır ekler"
 #: kmuddy/csession.cpp:88
 #, kde-format
 msgid "Switches between standard and multi-line input line."
-msgstr "Standart ve çoklu satır giriş satırı arasında geçiş yapar."
+msgstr "Standart ve çoklu satır girdi satırı arasında geçiş yapar."
 
 #: kmuddy/csessionmanager.cpp:152 kmuddy/csessionmanager.cpp:186
 #, kde-format
@@ -1028,11 +1028,17 @@ msgid ""
 "other options will NOT be taken into effect - prompt-detect trigger cannot "
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
+"Bunun etkinleştirilmesi, bu tetikleyiciyi bilgi istemi algılama "
+"tetikleyicisine dönüştürür; yani, yenisatır alınmasa bile bu tetikleyicilere "
+"metin iletilir, tetikleyici eşleşirse metin bir istem olarak görüntülenir ve "
+"diğer birçok seçenek yürürlüğe ALINMAZ - istem algılama tetikleyicisi metin "
+"gönderemez, satırları tıkamaz, bildirim yapamaz. Renklendirme hâlâ "
+"olanaklıdır."
 
 #: kmuddy/ctriggereditor.cpp:457
 #, kde-format
 msgid "Play s&ound file"
-msgstr ""
+msgstr "&Ses dosyası çal"
 
 #: kmuddy/ctriggereditor.cpp:458
 #, kde-format
@@ -1040,26 +1046,28 @@ msgid ""
 "This trigger will play a sound. Useful as a notification of important "
 "events, or to assign sounds to some events."
 msgstr ""
+"Bu tetik, bir ses çalar. Önemli olayların bildirilmesi veya kimi olaylara "
+"ses atayabilmek için yararlıdır."
 
 #: kmuddy/ctriggereditor.cpp:477
 #, kde-format
 msgid "Send output to a separate window"
-msgstr ""
+msgstr "Çıktıyı ayrı bir pencereye gönder"
 
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "This will send the matched text to a separate output window"
-msgstr ""
+msgstr "Bu, eşleşen metni ayrı bir çıktı penceresine gönderir"
 
 #: kmuddy/ctriggereditor.cpp:480 kmuddy/dialogs/dlgwindows.cpp:53
 #, kde-format
 msgid "Output Windows"
-msgstr ""
+msgstr "Çıktı Pencereleri"
 
 #: kmuddy/ctriggereditor.cpp:491
 #, kde-format
 msgid "&Gag output in main window"
-msgstr ""
+msgstr "Ana penceredeki çıktıyı &sustur"
 
 #: kmuddy/ctriggereditor.cpp:492
 #, kde-format
@@ -1067,6 +1075,8 @@ msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
 "KMuddy session window"
 msgstr ""
+"Bu, ayrı bir pencereye gönderilen çıktının ana KMuddy oturum penceresinde "
+"görüntülenmemesine neden olur"
 
 #: kmuddy/ctriggereditor.cpp:495
 #, kde-format
@@ -1076,37 +1086,37 @@ msgstr "&Pencere adı"
 #: kmuddy/ctriggereditor.cpp:499
 #, kde-format
 msgid "&Create window"
-msgstr ""
+msgstr "Pencere &oluştur"
 
 #: kmuddy/ctriggereditor.cpp:524 libs/caliaseditor.cpp:242
 #, kde-format
 msgid "&Basic"
-msgstr "Te&mel"
+msgstr "&Temel"
 
 #: kmuddy/ctriggereditor.cpp:529
 #, kde-format
 msgid "Special trigger"
-msgstr ""
+msgstr "Özel tetik"
 
 #: kmuddy/ctriggereditor.cpp:530
 #, kde-format
 msgid "Output windows"
-msgstr ""
+msgstr "Çıktı pencereleri"
 
 #: kmuddy/ctriggereditor.cpp:594
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr ""
+msgstr "Bu metin, tetiğinizle eşleşmedi."
 
 #: kmuddy/ctriggereditor.cpp:599
 #, kde-format
 msgid "This text matches your trigger."
-msgstr ""
+msgstr "Bu metin, tetiğinizle eşleşiyor."
 
 #: kmuddy/ctriggereditor.cpp:627
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr ""
+msgstr "Erişilen en çok renklendirme sayısı."
 
 #: kmuddy/ctriggereditor.cpp:710 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1116,12 +1126,12 @@ msgstr "Bilinmeyen"
 #: kmuddy/ctriggereditor.cpp:732
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Ses dosyası seç"
 
 #: kmuddy/ctriggereditor.cpp:751
 #, kde-format
 msgid "Window name is empty!"
-msgstr ""
+msgstr "Pencere adı boş!"
 
 #: kmuddy/dialogs/cdirlist.cpp:36
 #, kde-format
@@ -1148,12 +1158,12 @@ msgstr "Aşağı &Taşı"
 #: kmuddy/dialogs/cdirlist.cpp:73
 #, kde-format
 msgid "Choose sound directory"
-msgstr ""
+msgstr "Ses dizini seç"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:78
 #, kde-format
 msgid "Application settings"
-msgstr ""
+msgstr "Uygulama ayarları"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:85
 #, kde-format
@@ -1163,7 +1173,7 @@ msgstr "Pencere"
 #: kmuddy/dialogs/dlgappsettings.cpp:88
 #, kde-format
 msgid "Output area"
-msgstr ""
+msgstr "Çıktı alanı"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:91
 #, kde-format
@@ -1173,7 +1183,7 @@ msgstr "Yazıtipi"
 #: kmuddy/dialogs/dlgappsettings.cpp:94
 #, kde-format
 msgid "Input line"
-msgstr ""
+msgstr "Girdi satırı"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:97
 #, kde-format
@@ -1198,7 +1208,7 @@ msgstr "Kısayollar"
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr ""
+msgstr "Gerekmese bile sekme çubuğunu &göster"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:113
 #, kde-format
@@ -1206,16 +1216,18 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
+"Bu işaretliyse sekme çubuğu her zaman gösterilir. Aksi takdirde, yalnızca "
+"bir sekme varsa gizlenecektir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr ""
+msgstr "&Ek girdi satırını göster"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:117
 #, kde-format
 msgid "You will have two input lines instead of one."
-msgstr ""
+msgstr "Bir yerine iki girdi satırınız olacak."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
@@ -1432,23 +1444,26 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:283
 #, kde-format
 msgid "&Input line"
-msgstr ""
+msgstr "&Girdi satırı"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:289
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
 msgstr ""
+"Buradan, girdi satırı için kullanılabilecek bir yazıtipi seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:293
 #, kde-format
 msgid "&Multi-line input"
-msgstr ""
+msgstr "&Çok satırlı girdi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:299
 #, kde-format
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
+"Buradan, çok satırlı girdi penceresi için kullanılabilecek bir yazıtipi "
+"seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
@@ -1461,6 +1476,9 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
+"Bu seçeneği etkinleştirirseniz komutlar, onları gönderdikten sonra da (ENTER "
+"düğmesine basarak) girdi satırında kalacaklardır; aksi takdirde "
+"temizlenirler."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1553,7 +1571,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:361
 #, kde-format
 msgid "Background color of the input line"
-msgstr ""
+msgstr "Girdi satırının arka plan rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:363
 #, kde-format
@@ -1563,7 +1581,7 @@ msgstr "&Metin rengi"
 #: kmuddy/dialogs/dlgappsettings.cpp:366
 #, kde-format
 msgid "Color of text that you type in the input line."
-msgstr ""
+msgstr "Girdi satırına girdiğiniz metnin rengi."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1577,6 +1595,9 @@ msgid ""
 "line, and ENTER will send commands to the server. If turned on, then the "
 "behaviour of these keys gets swapped."
 msgstr ""
+"Kapatıldığında, CTRL+ENTER çok satırlı girdi satırında başka bir satır daha "
+"ekler ve ENTER düğmesi komutları sunucuya gönderir. Açılırsa bu düğmelerin "
+"davranışı değiş-tokuş yapılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
@@ -2069,7 +2090,7 @@ msgstr "S&üz:"
 #: kmuddy/dialogs/dlgmultiline.cpp:32
 #, kde-format
 msgid "Multi-line input"
-msgstr ""
+msgstr "Çok satırlı girdi"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:44
 #, kde-format
@@ -2735,7 +2756,7 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:291
 #, kde-format
 msgid "&Input"
-msgstr "&Giriş"
+msgstr "&Girdi"
 
 #: kmuddy/kmuddy.cpp:298
 #, kde-format
@@ -5049,6 +5070,9 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
+"Parametreleri içerecek biçimde yürütülecek komut. Parametrelere izin ver "
+"onay kutusunu etkinleştirirseniz komutu girdi satırından yürütürken daha çok "
+"parametre belirtebileceğinizi not edin."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
@@ -5068,6 +5092,8 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
+"Betik girdisi etkinleştirilmişse bu, tüm gönderilmiş komutların betiğe "
+"gönderilmesini etkinleştirir."
 
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
