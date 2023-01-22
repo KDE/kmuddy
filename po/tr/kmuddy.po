@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-01-19 22:29+0300\n"
+"PO-Revision-Date: 2023-01-21 05:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -63,15 +63,14 @@ msgstr "Düğme araç çubuğunda gösterilecek simge."
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr "Komutu &Geri Basımı"
+msgstr "&Basmayı Bırak Komutu"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
 msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
-msgstr ""
-"Aşağı itilen düğme aşağı itilmişken düğmeye tıklarsanız yürütülecek komut."
+msgstr "Aşağı itilen düğme basılıyken tıklarsanız yürütülecek komut."
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:133
@@ -1232,7 +1231,7 @@ msgstr "Bir yerine iki girdi satırınız olacak."
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
 msgid "&Always notify"
-msgstr ""
+msgstr "&Her zaman bildir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:120
 #, kde-format
@@ -1242,11 +1241,15 @@ msgid ""
 "trigger is activated. Note that this option only takes effect if global or "
 "local notification is enabled."
 msgstr ""
+"Bu seçiliyse ne zaman sunucudan bir metin gelirse çıktı bildirimi "
+"kullanılacaktır. Aksi takdirde, yalnızca bir bildirim tetiği "
+"etkinleştirildiğinde kullanılır. Bu seçeneğin yalnızca global veya yerel "
+"bildirimlerin etkinleştirilmiş olması durumunda çalışacağını unutmayın."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
 msgid "&Global notification"
-msgstr ""
+msgstr "&Global bildirim"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:126
 #, kde-format
@@ -1255,11 +1258,13 @@ msgid ""
 "window caption and the taskbar will try to attract your attention (some "
 "characters will blink there)."
 msgstr ""
+"Sunucudan bir metin gelirse ve KMuddy etkin değilse pencere başlığı ve görev "
+"çubuğu dikkatinizi çekmeye çalışacaktır (bazı karakterler yanıp söner)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
 msgid "&Local notification"
-msgstr ""
+msgstr "&Yerel bildirim"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:131
 #, kde-format
@@ -1268,11 +1273,13 @@ msgid ""
 "active, its tab will try to attract your attention (some characters will "
 "blink there)."
 msgstr ""
+"Sunucudan bir metin gelirse ve bu oturum şu anda etkin değilse sekmesi "
+"dikkatinizi çekmeye çalışacaktır (bazı karakterler yanıp söner)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
 msgid "Display system tray icon"
-msgstr ""
+msgstr "Sistem tepsisi simgesini göster"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:137
 #, kde-format
@@ -1283,11 +1290,16 @@ msgid ""
 "it. Your connection will remain active even if the window is hidden and you "
 "will still receive notification messages. "
 msgstr ""
+"Bu seçenek, sistem tepsisi simgesinin varlığını açıp kapatır. Simge, görev "
+"çubuğunda yer kaplamadan uygulamanın penceresini gizlemek için "
+"kullanılabilir. Simgeye tıklayarak pencereyi gizleyebilir ve yeniden "
+"tıklayarak yeniden gösterebilirsiniz. Pencere kapalıyken bile bağlantınız "
+"açık kalır ve bildirim iletilerini alırsınız."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
 msgid "Use passive popups"
-msgstr ""
+msgstr "Pasif açılır pencereler kullan"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:146
 #, kde-format
@@ -1296,11 +1308,14 @@ msgid ""
 "the system tray icon when you are in another window and alert you to the "
 "presence of activity in one of your connections. "
 msgstr ""
+"Bu seçenek, pasif açılır pencerelerin kullanımını açıp kapatır. Pasif açılır "
+"pencereler, siz başka bir penceredeyken sistem tepsisi simgesinin yanında "
+"belirirler ve bağlantılarınızdaki etkinlikten sizi haberdar ederler."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
 msgid "Auto-connect on startup"
-msgstr ""
+msgstr "Başlangıçta kendiliğinden bağlan"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:153
 #, kde-format
@@ -1309,56 +1324,61 @@ msgid ""
 "initiated immediately after starting KMuddy. Handy when you connect using "
 "one profile most of the time."
 msgstr ""
+"Bu seçenek ayarlıyken seçili bağlantılar KMuddy başlatıldıktan hemen sonra "
+"kendiliğinden bağlanırlar. Yalnızca bir profille bağlanıyorsanız kullanışlı "
+"olabilir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:156
 #, kde-format
 msgid "Auto-connect to:"
-msgstr ""
+msgstr "Şunlara kendiliğinden bağlan:"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:194
 #, kde-format
 msgid "Default &background color"
-msgstr ""
+msgstr "Öntanımlı &arka plan rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:197
 #, kde-format
 msgid "This color will be used as a standard background color."
-msgstr ""
+msgstr "Bu renk, standart arka plan rengi olarak kullanılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:199
 #, kde-format
 msgid "Default &text color"
-msgstr ""
+msgstr "Öntanımlı &metin rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:202
 #, kde-format
 msgid "This color will be used to display standard text with no defined color."
 msgstr ""
+"Bu renk, başka bir renk tanımlı değilken standart metin rengi olarak "
+"kullanılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:204
 #, kde-format
 msgid "Command &echo color"
-msgstr ""
+msgstr "Komut &yankı rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:207
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
-msgstr ""
+msgstr "Bu renk, girdiğiniz komutları görüntülemek için kullanılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:209
 #, kde-format
 msgid "&System message color"
-msgstr ""
+msgstr "&Sistem iletisi rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:212
 #, kde-format
 msgid "This color will be used for various system messages."
-msgstr ""
+msgstr "Bu renk, çeşitli sistem iletileri için kullanılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:237
 #, kde-format
 msgid "&Indentation"
-msgstr ""
+msgstr "&Girintileme"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:237
 #, kde-format
@@ -1372,11 +1392,13 @@ msgid ""
 "Indentation says how many spaces will be put to the beginning of the "
 "continued line."
 msgstr ""
+"Bir satır pek uzunsa satırın bir kısmı sonraki satıra taşınır. Girintileme, "
+"sürdürülen satırın başına kaç tane boşluk koyulacağını belirtir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:242
 #, kde-format
 msgid "&History buffer size"
-msgstr ""
+msgstr "&Geçmiş arabellek boyutu"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:242
 #, kde-format
@@ -1391,12 +1413,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:245
 #, kde-format
 msgid "lines"
-msgstr ""
+msgstr "satır"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:248
 #, kde-format
 msgid "Enable co&mmand echo"
-msgstr ""
+msgstr "Ko&mut yankısını etkinleştir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:249
 #, kde-format
@@ -1404,42 +1426,44 @@ msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
 "will also disable command echo in session transcript."
 msgstr ""
+"Komutların konsolda görüntülenmesini etkinleştirir.<p><b>Dikkat:</b> Bu, "
+"ayrıca oturum yazı dökümünde komut yankısını devre dışı bırakır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
 msgid "Enable s&ystem messages"
-msgstr ""
+msgstr "S&istem iletilerini etkinleştir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:253
 #, kde-format
 msgid "Enables displaying of system messages in the console."
-msgstr ""
+msgstr "Konsolda sistem iletilerinin görüntülenmesini etkinleştirir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enable b&linking"
-msgstr ""
+msgstr "Yanıp sönmeyi etkin&leştir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:257
 #, kde-format
 msgid "Enables support for blinking. Currently not supported."
-msgstr ""
+msgstr "Yanıp sönme desteğini etkinleştirir. Şu anda desteklenmemektedir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:273
 #, kde-format
 msgid "&Server output"
-msgstr ""
+msgstr "&Sunucu çıktısı"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:276 kmuddy/dialogs/dlgappsettings.cpp:286
 #: kmuddy/dialogs/dlgappsettings.cpp:296
 #, kde-format
 msgid "Choose..."
-msgstr "Seçin..."
+msgstr "Seç..."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:279
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
-msgstr ""
+msgstr "Buradan ana ekran için kullanılacak bir yazıtipi seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:283
 #, kde-format
@@ -1468,7 +1492,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
 msgid "&Keep sent text"
-msgstr ""
+msgstr "&Gönderilen metni tut"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:319
 #, kde-format
@@ -1483,7 +1507,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
 msgid "&Select kept text after it's sent"
-msgstr ""
+msgstr "Gönderildikten sonra tutulan metni &seç"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:323
 #, kde-format
@@ -1492,11 +1516,14 @@ msgid ""
 "to immediately type another command without deleting the old one and still "
 "be able to reuse previous command easily."
 msgstr ""
+"Bu seçeneği etkinleştirirseniz girilen komut seçilecektir. Bu, eskisini "
+"silmeden hemen başka bir komut yazmanıza ve önceki komutu kolayca yeniden "
+"kullanabilmenize olanak tanır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
 msgid "&Cursor keys browse history"
-msgstr ""
+msgstr "&İmleç düğmeleri geçmişte dolanır"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:329
 #, kde-format
@@ -1504,6 +1531,8 @@ msgid ""
 "If you enable this option, you will be able to choose previously entered "
 "commands with Up and Down keys."
 msgstr ""
+"Bu seçeneği etkinleştirirseniz Yukarı ve Aşağı düğmeleriyle girdiğiniz "
+"komutlar arasında dolanabilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:331
 #, kde-format
@@ -1516,11 +1545,14 @@ msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
 "but the last are sent as commands immediately."
 msgstr ""
+"Telnet tarzı yapıştırmayı etkinleştirir; örn. çok satırlı bir metin "
+"yapıştırıldığında son satır dışındaki tüm satırlar komut olarak anında "
+"gönderilirler."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:335
 #, kde-format
 msgid "T&rim spaces"
-msgstr ""
+msgstr "Boşlukları kır&p"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:336
 #, kde-format
@@ -1530,11 +1562,15 @@ msgid ""
 "one line, or you will encounter problems with special sequences not being "
 "detected properly."
 msgstr ""
+"Komutlardan boşlukların kırpılmasını etkinleştirir. Bu seçenek devre dışı "
+"bırakıldığında bir satırda birden çok komut yazarken boşluklar içermekten "
+"kaçınmalısınız; yoksa özel sıralamaların düzgünce algılanamamasına neden "
+"olabilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:341
 #, kde-format
 msgid "Enable &auto-completion"
-msgstr ""
+msgstr "Otomatik t&amamlamayı etkinleştir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:342
 #, kde-format
@@ -1542,31 +1578,33 @@ msgid ""
 "Auto-completion is a feature that offers you possible completions for "
 "commands, as you type them. It can also finish the command for you."
 msgstr ""
+"Otomatik tamamlama, komutları siz yazdıkça olası komutlar öneren bir "
+"özelliktir. Komutları sizin yerinize de bitirebilir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:350
 #, kde-format
 msgid "T&ype of auto-completion"
-msgstr ""
+msgstr "Otomatik tamamlama &türü"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:352
 #, kde-format
 msgid "Auto-fill"
-msgstr ""
+msgstr "Otomatik doldur"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:353
 #, kde-format
 msgid "Shortest-match auto-fill"
-msgstr ""
+msgstr "En kısa eşleşmeyi otomatik doldur"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:354
 #, kde-format
 msgid "Popup list-box"
-msgstr ""
+msgstr "Açılır liste kutusu"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:358
 #, kde-format
 msgid "&Background color"
-msgstr ""
+msgstr "&Arka plan rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:361
 #, kde-format
@@ -1586,7 +1624,7 @@ msgstr "Girdi satırına girdiğiniz metnin rengi."
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr ""
+msgstr "Çoklu satırlar için ENTER ve CTRL+ENTER'ı değiş tokuş et"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:383
 #, kde-format
