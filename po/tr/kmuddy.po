@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-01-21 05:44+0300\n"
+"PO-Revision-Date: 2023-01-26 20:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1294,7 +1294,7 @@ msgstr ""
 "çubuğunda yer kaplamadan uygulamanın penceresini gizlemek için "
 "kullanılabilir. Simgeye tıklayarak pencereyi gizleyebilir ve yeniden "
 "tıklayarak yeniden gösterebilirsiniz. Pencere kapalıyken bile bağlantınız "
-"açık kalır ve bildirim iletilerini alırsınız."
+"açık kalır ve bildirim iletilerini alırsınız. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
@@ -1310,7 +1310,7 @@ msgid ""
 msgstr ""
 "Bu seçenek, pasif açılır pencerelerin kullanımını açıp kapatır. Pasif açılır "
 "pencereler, siz başka bir penceredeyken sistem tepsisi simgesinin yanında "
-"belirirler ve bağlantılarınızdaki etkinlikten sizi haberdar ederler."
+"belirirler ve bağlantılarınızdaki etkinlikten sizi haberdar ederler. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
@@ -1650,7 +1650,7 @@ msgstr "Açık renkler"
 #: kmuddy/dialogs/dlgappsettings.cpp:429
 #, kde-format
 msgid "&Command separator string"
-msgstr ""
+msgstr "&Komut ayırıcı dizisi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:432
 #, kde-format
@@ -1658,11 +1658,13 @@ msgid ""
 "You can enter multiple commands at once, they will get executed together. "
 "Here you can enter string that can be used to separate individual commands."
 msgstr ""
+"Birden çok komut girebilirsiniz, birlikte yürütülürler. Burada, bireysel "
+"komutları ayırmak için kullanılacak diziyi girebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:436
 #, kde-format
 msgid "&Speed-walk string"
-msgstr ""
+msgstr "&Hızlı yürüme dizisi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:439
 #, kde-format
@@ -1673,11 +1675,16 @@ msgid ""
 "direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
 "connections only)."
 msgstr ""
+"Bu diziyle bir komut başlatırsanız komut hızlı yürüyüş olarak "
+"yorumlanacaktır. Her karakter tek bir komut olarak ele alınır: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Her yön için gönderilecek komutlar "
+"<i>MUD tercihlerinde</i> ayarlanabilir (yalnızca <b>profil tabanlı</b> "
+"bağlantılar)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:445
 #, kde-format
 msgid "S&peed-walk even if empty"
-msgstr ""
+msgstr "Boş olsa bile h&ızlı yürü"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:446
 #, kde-format
@@ -1688,11 +1695,17 @@ msgid ""
 "(news, for example) will be treated as speed-walking. To avoid this, you'll "
 "have to type at least one character in upper-case."
 msgstr ""
+"Bunun etkinleştirilmesi, herhangi bir hızlı yürüyüş dizisi verilmemiş olsa "
+"bile KMuddy'nin hızlı yürüyüş dizilerini genişletmesine neden olacaktır. Bu, "
+"daha hızlı hızlı yürüyüşe izin verir; ancak yalnızca geçerli hızlı yürüyüş "
+"karakterlerinden (örneğin haberler) oluşan HER komutun hızlı yürüyüş olarak "
+"ele alınacağını unutmayın. Bunu önlemek için en az bir karakteri büyük "
+"harfle yazmanız gerekir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:453
 #, kde-format
 msgid "Macro-ca&ll string"
-msgstr ""
+msgstr "Makro &çağrısı dizisi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:456
 #, kde-format
@@ -1701,11 +1714,14 @@ msgid ""
 "a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
 "(/exec calls external scripts)"
 msgstr ""
+"Bir komutu bu diziyle başlatırsanız komut bir makro çağrısı olarak ele "
+"yorumlanır.<br>Sözdizim: &lt;bu dizi&gt; &lt;komut&gt; [parametreler]  (/"
+"exec, dış betikleri çağırır)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:461
 #, kde-format
 msgid "&Repeater string"
-msgstr ""
+msgstr "&Yineleyici dizi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:464
 #, kde-format
@@ -1714,11 +1730,14 @@ msgid ""
 "sends that command 10 times. <br>Note that this also works with aliases and "
 "macro execution.<br>Repeater and number may be separated by a space (spaces)."
 msgstr ""
+"Bazı komutları yinelemenize izin verir; örneğin <i>#10 say hello</i>, komutu "
+"10 kez gönderir.<br>Bunun armalar ve makro yürütmeyle de çalıştığını "
+"aklınızda tutun.<br>Yineleyici ve sayılar boşlukla (boşluklarla) ayrılabilir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:470
 #, kde-format
 msgid "&Focus string"
-msgstr ""
+msgstr "&Odak dizisi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:473
 #, kde-format
@@ -1728,11 +1747,15 @@ msgid ""
 "connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
 "this string&gt; &lt;command&gt;"
 msgstr ""
+"Bu diziyle bir komut başlatılırsa komut bir komut-odak-çağrısı olarak "
+"yorumlanacaktır. Bu, diğer bağlı karakterlere komutlar göndermenizi sağlar."
+"<br>Sözdizim: &lt;bu dizi&gt; &lt;odak sekmesi&gt; &lt;bu dizi&gt; &lt;"
+"komut&gt;"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:479
 #, kde-format
 msgid "Send &as-is"
-msgstr ""
+msgstr "O&lduğu gibi gönder"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:482
 #, kde-format
@@ -1740,11 +1763,13 @@ msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
 "parsing. This string will be removed first."
 msgstr ""
+"Bir komut bu diziyle başlatılırsa hiçbir ayrıştırmaya maruz kalmadan olduğu "
+"gibi gönderilir. Dizi önceden kaldırılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:486
 #, kde-format
 msgid "&Expand backslashes"
-msgstr ""
+msgstr "&Ters eğik çizgileri genişlet"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:487
 #, kde-format
@@ -1752,11 +1777,14 @@ msgid ""
 "This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
 "TAB, \\\\ is \\, \\<anything else> means <anything else>."
 msgstr ""
+"Bu, ters eğik çizgi genişletmeyi etkinleştirir; örneğin: \\n satırsonudur, "
+"\\t SEKME'dir, \\\\ - \\, \\<herhangi bir şey> - <herhangi bir şey> anlamına "
+"gelir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:511
 #, kde-format
 msgid "&Enable sounds globally"
-msgstr ""
+msgstr "&Global olarak sesleri etkinleştir"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:512
 #, kde-format
@@ -1766,11 +1794,16 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol).</qt>"
 msgstr ""
+"<qt>Tüm bağlantılar için ses çalmayı etkinleştir.\n"
+"Bu ayarı MUD Tercihleri penceresinden geçersiz kılabileceğinizi aklınızda "
+"tutun.\n"
+"Bu ayar yalnızca MUD <b>MSP'yi</b> (MUD Ses Protokolü) destekliyorsa çalışır."
+"</qt>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
 msgid "Allow &downloading sounds"
-msgstr ""
+msgstr "Sesleri &indirmeye izin ver"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:518
 #, kde-format
@@ -1780,6 +1813,10 @@ msgid ""
 "be downloaded once. The downloaded files are stored in your homedir in "
 "directory\n"
 msgstr ""
+"MSP sürüm 0.3, seslerin doğrudan web'den veya FTP'den indirilmesini "
+"destekler. Bu işlevselliği buradan etkinleştirebilirsiniz. Her bir sesin "
+"yalnızca bir kez indirilebileceğini aklınızda tutun. İndirilen sesler, ana "
+"dizininizde tutulur.\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBold)
 #: kmuddy/dialogs/dlgappsettings.cpp:724 kmuddy/dialogs/dlgappsettings.cpp:733
@@ -1811,6 +1848,9 @@ msgid ""
 "speed up connecting to your MUD, as well as to use more advanced features "
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
+"Bu liste, şu an geçerli tanımlanmış profilleri gösterir.<p><b>Profiller</b>, "
+"MUD'unuza bağlanmayı hızlandırmanıza ve <i>armalar</i> veya <i>tetikler</i> "
+"gibi daha gelişmiş özelliklere erişebilmenize izin verir."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -1820,22 +1860,22 @@ msgstr "&Yeni profil"
 #: kmuddy/dialogs/dlgconnect.cpp:65
 #, kde-format
 msgid "&Modify profile"
-msgstr ""
+msgstr "Profili &değiştir"
 
 #: kmuddy/dialogs/dlgconnect.cpp:66
 #, kde-format
 msgid "&Delete profile"
-msgstr ""
+msgstr "Profili &sil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:67
 #, kde-format
 msgid "&Duplicate profile"
-msgstr ""
+msgstr "Profili &çoğalt"
 
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr ""
+msgstr "Giriş sıralaması &gönderme"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1843,16 +1883,18 @@ msgid ""
 "Login sequence won't be sent for this connect. Useful when you're creating a "
 "new character and you want to use QuickConnect for some reason."
 msgstr ""
+"Bu bağlantı için giriş sıralaması gönderilmeyecektir. Yeni bir karakter "
+"yaratırken ve QuickConnect kullanmak istediğinizde yararlıdır."
 
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
 msgid "&Offline editing"
-msgstr ""
+msgstr "&Çevrimdışı düzenleme"
 
 #: kmuddy/dialogs/dlgconnect.cpp:80
 #, kde-format
 msgid "This allows offline editing of profiles."
-msgstr ""
+msgstr "Bu, profillerin çevrimdışı olarak düzenlenmesine izin verir."
 
 #: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:57
 #, kde-format
@@ -1862,7 +1904,7 @@ msgstr "&Bağlan"
 #: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:58
 #, kde-format
 msgid "Establishes connection with specified parameters."
-msgstr ""
+msgstr "Belirtilen parametrelerle bağlantı kurar."
 
 #: kmuddy/dialogs/dlgconnect.cpp:89
 #, kde-format
@@ -1872,7 +1914,7 @@ msgstr "&Kapat"
 #: kmuddy/dialogs/dlgconnect.cpp:90
 #, kde-format
 msgid "Closes this dialog box without connecting."
-msgstr ""
+msgstr "Bağlantı kurmadan bu pencereyi kapatır."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -1880,31 +1922,33 @@ msgid ""
 "This profile cannot be deleted, because you have a connection open using "
 "this profile."
 msgstr ""
+"Bu profil silinemiyor; çünkü bu profili kullanarak açılmış bir bağlantınız "
+"var."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
 msgid "Unable to delete"
-msgstr ""
+msgstr "Silinemiyor"
 
 #: kmuddy/dialogs/dlgconnect.cpp:240
 #, kde-format
 msgid "Do you really want to delete profile %1?"
-msgstr ""
+msgstr "%1 profilini silmeyi gerçekten istiyor musunuz?"
 
 #: kmuddy/dialogs/dlgconnect.cpp:241
 #, kde-format
 msgid "Delete profile"
-msgstr ""
+msgstr "Profili sil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid "Duplicate Profile"
-msgstr ""
+msgstr "Profili Çoğalt"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid "Please enter name for the duplicated profile"
-msgstr ""
+msgstr "Çoğaltılan profil için ad girin"
 
 #: kmuddy/dialogs/dlgconnect.cpp:259
 #, kde-format
@@ -1912,21 +1956,23 @@ msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
 "have write access to the profile directory."
 msgstr ""
+"Profili çoğaltmaya çalışırken bir hata oluştu. Lütfen profil dizinine "
+"erişiminiz olduğundan emin olun."
 
 #: kmuddy/dialogs/dlgconnect.cpp:259
 #, kde-format
 msgid "Unable to duplicate"
-msgstr ""
+msgstr "Çoğaltılamıyor"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:37
 #, kde-format
 msgid "Dump output buffer"
-msgstr ""
+msgstr "Çıktı arabelleğini dök"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:43
 #, kde-format
 msgid "&Start at current position"
-msgstr ""
+msgstr "Geçerli konumda &başlat"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
@@ -1935,6 +1981,9 @@ msgid ""
 "displayed part up to the end of buffer will be dumped. Otherwise entire "
 "buffer will be dumped (default)."
 msgstr ""
+"Bu etkinleştirildiğinde, yalnızca geçmiş arabelleğinin o anda görüntülenen "
+"kısmından arabelleğin sonuna kadar olan kısmı dökülecektir. Aksi takdirde "
+"arabelleğin tamamı boşaltılacaktır (öntanımlı)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:51 kmuddy/dialogs/dlgtranscript.cpp:85
 #, kde-format
@@ -1949,7 +1998,7 @@ msgstr "&Göz At..."
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:64
 #, kde-format
 msgid "&Dump format:"
-msgstr ""
+msgstr "&Döküm biçimi:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:66
 #, kde-format
@@ -1959,18 +2008,18 @@ msgstr "HTML"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
 msgid "Plain text"
-msgstr ""
+msgstr "Düz metin"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:68
 #, kde-format
 msgid "Text with ANSI colors"
-msgstr ""
+msgstr "ANSI renkleriyle metin"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:41 kmuddy/dialogs/dlgeditprofile.cpp:197
 #: kmuddy/dialogs/dlgeditprofile.cpp:202
 #, kde-format
 msgid "Edit profile"
-msgstr ""
+msgstr "Profili düzenle"
 
 #. i18n ("&Select from MUD list"), this);
 #. connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
@@ -1978,7 +2027,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:51
 #, kde-format
 msgid "Profile &name:"
-msgstr ""
+msgstr "Profil &adı:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:53
 #, kde-format
