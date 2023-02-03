@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-01-26 20:37+0300\n"
+"PO-Revision-Date: 2023-02-02 21:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -539,52 +539,52 @@ msgstr ""
 #: kmuddy/ctranscript.cpp:174
 #, kde-format
 msgid "Session transcript has been stopped."
-msgstr "Oturumun yazıya dökümü durduruldu."
+msgstr "Oturumun yazıdökümü durduruldu."
 
 #: kmuddy/ctranscript.cpp:208
 #, kde-format
 msgid "Advanced session transcript has been stopped."
-msgstr "Gelişmiş oturum yazıya dökümü durduruldu."
+msgstr "Gelişmiş oturum yazıdökümü durduruldu."
 
 #: kmuddy/ctranscript.cpp:259
 #, kde-format
 msgid "Transcript file could not be opened."
-msgstr "Yazı dökümü dosyası açılamadı."
+msgstr "Yazıdöküm dosyası açılamadı."
 
 #: kmuddy/ctranscript.cpp:260
 #, kde-format
 msgid "Session transcript could not be started."
-msgstr "Oturumun yazıya dökümü başlatılamadı."
+msgstr "Oturumun yazıdökümü başlatılamadı."
 
 #: kmuddy/ctranscript.cpp:279
 #, kde-format
 msgid "Session transcript has just started."
-msgstr "Oturumun yazıya dökümü henüz şimdi başlatıldı."
+msgstr "Oturumun yazıdökümü henüz şimdi başlatıldı."
 
 #: kmuddy/ctranscript.cpp:288
 #, kde-format
 msgid "Session transcript has been started."
-msgstr "Oturumun yazıya dökümü başlatıldı."
+msgstr "Oturumun yazıdökümü başlatıldı."
 
 #: kmuddy/ctranscript.cpp:315
 #, kde-format
 msgid "Advanced transcript file could not be opened."
-msgstr "Gelişmiş yazı dökümü dosyası açılamadı."
+msgstr "Gelişmiş yazıdöküm dosyası açılamadı."
 
 #: kmuddy/ctranscript.cpp:316
 #, kde-format
 msgid "Advanced session transcript could not be started."
-msgstr "Gelişmiş oturum yazıya dökümü başlatılamadı."
+msgstr "Gelişmiş oturum yazıdökümü başlatılamadı."
 
 #: kmuddy/ctranscript.cpp:332
 #, kde-format
 msgid "Advanced session transcript has just started."
-msgstr "Gelişmiş oturumun yazıya dökümü henüz şimdi başlatıldı."
+msgstr "Gelişmiş oturum yazıdökümü henüz şimdi başlatıldı."
 
 #: kmuddy/ctranscript.cpp:337
 #, kde-format
 msgid "Advanced session transcript has been started."
-msgstr "Gelişmiş oturumun yazıya dökümü başlatıldı."
+msgstr "Gelişmiş oturum yazıdökümü başlatıldı."
 
 #: kmuddy/ctranscript.cpp:341
 #, kde-format
@@ -1427,7 +1427,7 @@ msgid ""
 "will also disable command echo in session transcript."
 msgstr ""
 "Komutların konsolda görüntülenmesini etkinleştirir.<p><b>Dikkat:</b> Bu, "
-"ayrıca oturum yazı dökümünde komut yankısını devre dışı bırakır."
+"ayrıca oturum yazıdökümünde komut yankısını devre dışı bırakır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
@@ -2035,6 +2035,8 @@ msgid ""
 "Enter profile name here. You can enter any name, but it must be <b>unique</"
 "b>."
 msgstr ""
+"Profil adını buraya girin. Herhangi bir adı, <b>benzersiz</b> olması "
+"koşuluyla girebilirsiniz."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:55
 #, kde-format
@@ -2044,28 +2046,31 @@ msgstr "&Sunucu:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:57
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
-msgstr ""
+msgstr "MUD'unuzun üzerinde çalıştığı sunucunun adresini girin."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:58 kmuddy/dialogs/dlgquickconnect.cpp:43
 #, kde-format
 msgid "&Port:"
-msgstr ""
+msgstr "&Kapı:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:61
 #, kde-format
 msgid "Enter port on which your MUD running (usually some 4-digit number)."
 msgstr ""
+"MUD'unuzun üzerinde çalıştığı kapıyı girin (genelde 4 rakamlı bir sayıdır)."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:63
 #, kde-format
 msgid "&Login name:"
-msgstr ""
+msgstr "&Giriş adı:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:65
 #, kde-format
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
+"MUD üzerindeki giriş bilgilerinizi buraya girin.<p><i>Bu ayar isteğe "
+"bağlıdır.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -2076,11 +2081,12 @@ msgstr "&Parola:"
 #, kde-format
 msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
+"MUD üzerindeki parolanızı buraya girin.<p><i>Bu ayar isteğe bağlıdır.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:70
 #, kde-format
 msgid "&Connect sequence"
-msgstr ""
+msgstr "&Bağlantı sıralamas"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:74
 #, kde-format
@@ -2091,51 +2097,57 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
+"Giriş yaptıktan sonra MUD'a gönderilecek komutlar.<br><b>$name</b>, "
+"kullanıcı adına genişletilir.<br><b>$password</b>, parolanıza genişletilir "
+"<p><b>Önemli :</b> Bu komutlar tam olarak yazdığınız gibi, baştaki/sondaki "
+"boşluklar kaldırılarak gönderilir. Takma ad yok, makro yok, hızlı yürüyüş "
+"yok. Ayrıca en son satır da dahil olmak üzere boş satırların da "
+"gönderileceğini unutmayın."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:197
 #, kde-format
 msgid "Profile name cannot be empty."
-msgstr ""
+msgstr "Profil adı boş olamaz."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:202
 #, kde-format
 msgid "Profile name cannot contain '/' character."
-msgstr ""
+msgstr "Profil adı '/' karakterini içeremez."
 
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
 msgid "Keygrabber"
-msgstr ""
+msgstr "Düğme yakalayıcı"
 
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
 msgid "Press the desired shortcut..."
-msgstr ""
+msgstr "İstenen kısayola basın..."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
 msgid "Import profile"
-msgstr ""
+msgstr "Profili içe aktar"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
 msgid "Export profile"
-msgstr ""
+msgstr "Profili dışa aktar"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:41
 #, kde-format
 msgid "&Profile name"
-msgstr ""
+msgstr "&Profil adı"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:54
 #, kde-format
 msgid "&Import from"
-msgstr ""
+msgstr "Şuradan &içe aktar"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:55
 #, kde-format
 msgid "&Export to"
-msgstr ""
+msgstr "Şuraya &dışa aktar"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:58
 #: kmuddy/dialogs/dlgprofilesettings.cpp:154
@@ -2153,21 +2165,23 @@ msgid ""
 "I am sorry, but import and export is currently disabled. The functionality "
 "should be re-enabled before the final release."
 msgstr ""
+"Üzgünüm; ancak içe ve dışa aktarma şu anda devre dışı. Bu özellik, nihai "
+"sürümden önce yeniden etkinleştirilecektir."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
 msgid "Choose file with profile"
-msgstr ""
+msgstr "Profil ile dosya seç"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:137
 #, kde-format
 msgid "Enter target file"
-msgstr ""
+msgstr "Hedef dosyayı gir"
 
 #: kmuddy/dialogs/dlgmudlist.cpp:57
 #, kde-format
 msgid "MUD Listing"
-msgstr ""
+msgstr "MUD Listelemesi"
 
 #: kmuddy/dialogs/dlgmudlist.cpp:67
 #, kde-format
@@ -2184,17 +2198,17 @@ msgstr "Çok satırlı girdi"
 msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
 "command."
-msgstr ""
+msgstr "MUD'a gönderilecek komutları girin. Her satır bir komutu temsil eder."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:55
 #, kde-format
 msgid "&Prefix:"
-msgstr ""
+msgstr "&Önek:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:58
 #, kde-format
 msgid "&Suffix:"
-msgstr ""
+msgstr "&Sonek:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:68
 #, kde-format
@@ -2202,6 +2216,8 @@ msgid ""
 "Prefix and suffix may contain text, that will be added to the beginning "
 "(prefix) or ending (suffix) of every line written to the multi-line editor."
 msgstr ""
+"Önek ve sonek, çok satırlı düzenleyicide yazılan her satırın başına (ön eki) "
+"veya sonuna (son eki) eklenecek metin içerebilir."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:78
 #, kde-format
@@ -2211,7 +2227,7 @@ msgstr "&Gönder"
 #: kmuddy/dialogs/dlgmultiline.cpp:79
 #, kde-format
 msgid "Sends current text to the MUD."
-msgstr ""
+msgstr "Geçerli metni MUD'a gönderir."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:80
 #, kde-format
@@ -2220,6 +2236,8 @@ msgid ""
 "prefix and/or suffix, they will be added to the beginning and ending of each "
 "command."
 msgstr ""
+"Bu, girdiğiniz tüm komutları MUD'a gönderir. Önek ve/veya sonek girdiyseniz "
+"bunlar her komutun başına ve sonuna eklenecektir."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:83
 #, kde-format
@@ -2229,17 +2247,17 @@ msgstr "&Temizle"
 #: kmuddy/dialogs/dlgmultiline.cpp:84
 #, kde-format
 msgid "Clears window contents."
-msgstr ""
+msgstr "Pencere içeriğini temizler."
 
 #: kmuddy/dialogs/dlgmxpconsole.cpp:48
 #, kde-format
 msgid "MXP Console"
-msgstr ""
+msgstr "MXP Konsolu"
 
 #: kmuddy/dialogs/dlgobjects.cpp:64
 #, kde-format
 msgid "Object Manager"
-msgstr ""
+msgstr "Nesne Yöneticisi"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
@@ -2280,12 +2298,12 @@ msgstr "Sağ"
 #: kmuddy/dialogs/dlgoutputwindow.cpp:37
 #, kde-format
 msgid "Output window"
-msgstr ""
+msgstr "Çıktı penceresi"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:43
 #, kde-format
 msgid "MUD preferences"
-msgstr ""
+msgstr "MUD tercihleri"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:50
 #, kde-format
@@ -2297,7 +2315,7 @@ msgstr "Bağlantı"
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Komutlar"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:56
 #, kde-format
@@ -2312,22 +2330,22 @@ msgstr "Ses"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:63
 #, kde-format
 msgid "MXP"
-msgstr ""
+msgstr "MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
 msgid "&Use colorized output (if available)"
-msgstr ""
+msgstr "&Renklendirilmiş çıktı kullan (kullanılabilirse)"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:70
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr ""
+msgstr "100'den &fazla yinelenmiş komuta izin verme"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
-msgstr ""
+msgstr "Başla&ngıçta telnet pazarlığına izin ver"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:77
 #, kde-format
@@ -2335,11 +2353,13 @@ msgid ""
 "Enables telnet negotiation for some option. Disabling it may resolve "
 "problems with some servers that do not understand these."
 msgstr ""
+"Bazı seçenekler için telnet görüşmesini etkinleştirir. Devre dışı bırakmak, "
+"bunları anlamayan bazı sunuculardaki sorunları çözebilir."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:81
 #, kde-format
 msgid "&Encoding:"
-msgstr ""
+msgstr "&Kodlama:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:84
 #, kde-format
@@ -2347,11 +2367,14 @@ msgid ""
 "Lets you pick the output character encoding used by the server. This usually "
 "only needs to be set for non-English servers."
 msgstr ""
+"Sunucu tarafından kullanılan çıktı karakter kodlamasını seçmenizi sağlar. "
+"Bunun genellikle yalnızca İngilizce olmayan sunucular için ayarlanması "
+"gerekir."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr ""
+msgstr "İstem sonrası yenisatırları otomatik olar&ak iliştir"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:91
 #, kde-format
@@ -2359,26 +2382,28 @@ msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
 "aligned output."
 msgstr ""
+"Çıktıyı düzgün bir şekilde hizalamak için GA ile sonlandırılan bilgi "
+"istemlerinden sonra satır beslemeleri eklenmesini sağlar."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr ""
+msgstr "İstemi ayrı bir alanda &göster"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr ""
+msgstr "İstemi durum ç&ubuğunda göster"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr ""
+msgstr "İstemi &konsolda göster"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
 msgid "Start advanced transcript when session starts"
-msgstr ""
+msgstr "Oturum başladığında gelişmiş yazıdökümü başlat"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2388,7 +2413,7 @@ msgstr "&Kuzey"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "No&rtheast"
-msgstr ""
+msgstr "K&uzeydoğu"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2398,7 +2423,7 @@ msgstr "&Doğu"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "So&utheast"
-msgstr ""
+msgstr "G&üneydoğu"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
@@ -2408,7 +2433,7 @@ msgstr "&Güney"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "Sou&thwest"
-msgstr ""
+msgstr "Gü&neybatı"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2418,7 +2443,7 @@ msgstr "&Batı"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
 msgid "Nort&hwest"
-msgstr ""
+msgstr "Ku&zeybatı"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2463,12 +2488,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
 msgid "&Transcripts directory"
-msgstr ""
+msgstr "&Yazıdökümler dizini"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr ""
+msgstr "Yazıdökümlerin öntanımlı olarak kaydedileceği dizin."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
@@ -2580,7 +2605,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
 msgid "Choose default transcript directory"
-msgstr ""
+msgstr "Öntanımlı yazıdöküm dizinini seç"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:36
 #, kde-format
@@ -2677,7 +2702,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:37
 #, kde-format
 msgid "Session Transcript"
-msgstr ""
+msgstr "Oturum Yazıdökümü"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:44
 #, kde-format
@@ -2692,7 +2717,7 @@ msgstr "Gelişmiş"
 #: kmuddy/dialogs/dlgtranscript.cpp:53
 #, kde-format
 msgid "&Enable basic transcript"
-msgstr ""
+msgstr "&Temel yazıdökümü etkinleştir"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:55
 #, kde-format
@@ -2700,21 +2725,23 @@ msgid ""
 "Enables or disabled the session transcript. Note that session transcript is "
 "automatically disabled when you disconnect."
 msgstr ""
+"Oturum yazıdökümünü etkinleştirir veya devre dışı bırakır. Bağlantınız "
+"kesildiğinde yazıya dökümün kendiliğinden devre dışı bırakıldığını not edin."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:59
 #, kde-format
 msgid "Transcript settings"
-msgstr ""
+msgstr "Yazıdöküm ayarları"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:65 kmuddy/dialogs/dlgtranscript.cpp:120
 #, kde-format
 msgid "Transcript &format"
-msgstr ""
+msgstr "Yazıdöküm &biçimi"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:74
 #, kde-format
 msgid "&Overwrite existing file"
-msgstr ""
+msgstr "&Var olan dosyanın üzerine yaz"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
@@ -2723,11 +2750,14 @@ msgid ""
 "Otherwise, new transcript will be appended to the end of an existing file "
 "(if it exists :))."
 msgstr ""
+"Bu seçeneği etkinleştirirseniz var olan yazıya döküm dosyasının üzerine "
+"yazılacaktır. Aksi takdirde, var olan bir dosyanın sonuna (varsa :)) yeni "
+"yazıdöküm eklenecektir."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:78
 #, kde-format
 msgid "Include buffer &dump"
-msgstr ""
+msgstr "Arabellek &dökümünü içer"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
@@ -2735,11 +2765,13 @@ msgid ""
 "This will cause KMuddy to add complete buffer dump to the beginning of the "
 "transcript file."
 msgstr ""
+"Bu, KMuddy'nin yazıdöküm dosyasının başına tam arabellek dökümü eklemesine "
+"neden olacaktır."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:108
 #, kde-format
 msgid "Enable &advanced transcript"
-msgstr ""
+msgstr "&Gelişmiş yazıdökümü etkinleştir"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
@@ -2748,27 +2780,32 @@ msgid ""
 "running all the time, rotates it at midnight and so. Note that normal and "
 "advanced transcripts can both be running at the same time, if you want."
 msgstr ""
+"Bu, yazıdökümün her zaman çalışmasına izin veren, onu gece yarısı döndüren "
+"vb. Gelişmiş yazıdökümü etkinleştirir. İsterseniz normal ve gelişmiş "
+"yazıdökümün aynı anda çalışabileceğini unutmayın."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:114
 #, kde-format
 msgid "Advanced transcript settings"
-msgstr ""
+msgstr "Gelişmiş yazıdöküm ayarları"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:129
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr ""
+msgstr "Günlüğü her gece yarısında &döndür"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
 msgstr ""
+"Bu, KMuddy'nin her gün gece yarısı oturum yazıdökümünü döndürmesine neden "
+"olur"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:133
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr ""
+msgstr "Satırların başına &zaman damgası ekle"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
@@ -2776,11 +2813,13 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
+"Bu seçenek, KMuddy'nin her günlük kaydı satırının önüne yerel zaman "
+"damgasını eklemesine neden olur."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:140
 #, kde-format
 msgid "Log name format"
-msgstr ""
+msgstr "Günlük adı biçimi"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
@@ -2789,6 +2828,9 @@ msgid ""
 "world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
 "combination of alpha-numeric characters."
 msgstr ""
+"Burada günlük biçimini belirleyebilirsiniz. Aşağıdaki seçenekleri "
+"kullanabilirsiniz: $W - dünya adı, $h - saat, $m - dakika, $D - gün, $M - "
+"ay, $Y - yıl ve herhangi bir alfanümerik karakter kombinasyonu."
 
 #: kmuddy/dialogs/dlgwindows.cpp:59
 #, kde-format
@@ -2908,7 +2950,7 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:378
 #, kde-format
 msgid "&Session transcript..."
-msgstr ""
+msgstr "&Oturum yazıdökümü"
 
 #: kmuddy/kmuddy.cpp:383
 #, kde-format
