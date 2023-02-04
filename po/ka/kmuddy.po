@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-01-13 15:36+0100\n"
+"PO-Revision-Date: 2023-02-03 17:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -2815,12 +2815,12 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:452
 #, kde-format
 msgid "Previous tab"
-msgstr "_წინა ჩანართი"
+msgstr "წინა ჩანართი"
 
 #: kmuddy/kmuddy.cpp:457
 #, kde-format
 msgid "Next tab"
-msgstr "_შემდეგი ჩანართი"
+msgstr "შემდეგი ჩანართი"
 
 #: kmuddy/kmuddy.cpp:463 kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473
 #: kmuddy/kmuddy.cpp:478 kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488
@@ -2845,7 +2845,7 @@ msgstr "&ჩასწორება"
 #: kmuddy/kmuddy.cpp:533 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
-msgstr "_ხედი"
+msgstr "&ხედი"
 
 #: kmuddy/kmuddy.cpp:534
 #, kde-format
