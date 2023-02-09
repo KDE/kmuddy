@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-02-02 21:42+0300\n"
+"PO-Revision-Date: 2023-02-08 19:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1875,7 +1875,7 @@ msgstr "Profili &çoğalt"
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr "Giriş sıralaması &gönderme"
+msgstr "Oturum açma sıralaması &gönderme"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1883,8 +1883,8 @@ msgid ""
 "Login sequence won't be sent for this connect. Useful when you're creating a "
 "new character and you want to use QuickConnect for some reason."
 msgstr ""
-"Bu bağlantı için giriş sıralaması gönderilmeyecektir. Yeni bir karakter "
-"yaratırken ve QuickConnect kullanmak istediğinizde yararlıdır."
+"Bu bağlantı için oturum açma sıralaması gönderilmeyecektir. Yeni bir "
+"karakter yaratırken ve QuickConnect kullanmak istediğinizde yararlıdır."
 
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
@@ -2062,14 +2062,14 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:63
 #, kde-format
 msgid "&Login name:"
-msgstr "&Giriş adı:"
+msgstr "&Kullanıcı adı:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:65
 #, kde-format
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
-"MUD üzerindeki giriş bilgilerinizi buraya girin.<p><i>Bu ayar isteğe "
+"MUD üzerindeki oturum açma bilgilerinizi buraya girin.<p><i>Bu ayar isteğe "
 "bağlıdır.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
@@ -2097,7 +2097,7 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
-"Giriş yaptıktan sonra MUD'a gönderilecek komutlar.<br><b>$name</b>, "
+"Oturum açtıktan sonra MUD'a gönderilecek komutlar.<br><b>$name</b>, "
 "kullanıcı adına genişletilir.<br><b>$password</b>, parolanıza genişletilir "
 "<p><b>Önemli :</b> Bu komutlar tam olarak yazdığınız gibi, baştaki/sondaki "
 "boşluklar kaldırılarak gönderilir. Takma ad yok, makro yok, hızlı yürüyüş "
