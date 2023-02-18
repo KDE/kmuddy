@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-02-14 11:17+0300\n"
+"PO-Revision-Date: 2023-02-17 19:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2461,22 +2461,24 @@ msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
 "used by the auto-mapper."
 msgstr ""
+"Bu bir hareket komutudur. Hızlı yürümek için kullanılın ve otomatik "
+"haritalayıcı tarafından da kullanılır."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
 msgid "External &scripts directory"
-msgstr ""
+msgstr "Dış &betikler dizini"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr ""
+msgstr "Betikleri arayacağımız öntanımlı dizin."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
-msgstr ""
+msgstr "&Çalışma dizini"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:162
 #, kde-format
@@ -2484,6 +2486,8 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
+"Betikleriniz için öntanımlı çalışma dizini. Bunu yukarısı ile aynı yapmak "
+"genelde iyi bir seçimdir."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
@@ -2498,7 +2502,7 @@ msgstr "Yazıdökümlerin öntanımlı olarak kaydedileceği dizin."
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
 msgid "&Enable sounds for this profile"
-msgstr ""
+msgstr "Bu profil için sesleri &etkinleştir"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:191
 #, kde-format
@@ -2508,16 +2512,21 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol)."
 msgstr ""
+"Bu profil için sesleri etkinleştir.\n"
+"Bunun yalnızca global tercihlerde sesleri etkinleştirmişseniz çalışacağını "
+"unutmayın.\n"
+"Ek olarak, bu yalnızca MUD'unuz <b>MSP</b>'yi (MUD Ses Protokolü) "
+"destekliyorsa çalışır."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
 msgid "Only enable these if you need them:"
-msgstr ""
+msgstr "Bunları yalnızca gereksiniminiz varsa etkinleştirin:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
 msgid "&Use MSP even if not negotiated"
-msgstr ""
+msgstr "Pazarlık yapılmamışsa bile MSP k&ullan"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:198
 #, kde-format
@@ -2529,11 +2538,17 @@ msgid ""
 "other players from sending malicious MSP sequences, if you allow downloading "
 "of sounds."
 msgstr ""
+"Bu seçenek etkinleştirildiğinde, KMuddy, MSP sıralamalarını bir pazarlık "
+"olmamışsa bile her zaman yorumlar. MSP'nin Telnet pazarlığını desteklemeyen "
+"MUD'lar için yararlıdır.\n"
+"Dikkat, seslerin indirilmesine izin veriyorsanız başka oyuncuların kötü "
+"amaçlı MSP sıralamaları göndermesini engellemek için bunu yalnızca MUD'unuz "
+"MSP destekliyorsa açın."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
 msgid "Allow &mid-line MSP sequences"
-msgstr ""
+msgstr "Orta satır &MSP sıralamalarına izin ver"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:205
 #, kde-format
@@ -2544,11 +2559,17 @@ msgid ""
 "downloading support; otherwise players could instruct your client to "
 "download any file on the net..."
 msgstr ""
+"Orta hat MSP sıralamaları, bazı MUD'ların kullanıyor gibi göründüğü MSP "
+"belirtiminin bir zMUD uzantısıdır. Bu özellik için desteği buradan "
+"etkinleştirebilirsiniz; ancak diğer oyuncuların bu sıralamaların ne olduğunu "
+"söyleyememesini veya indirme desteğini devre dışı bırakmasını sağlayın; aksi "
+"halde oyuncular istemcinize ağdaki herhangi bir dosyayı indirmesi talimatını "
+"verebilir..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
 msgid "&Use MXP"
-msgstr ""
+msgstr "MXP k&ullan"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:224
 #, kde-format
@@ -2558,17 +2579,17 @@ msgstr "Asla"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:225
 #, kde-format
 msgid "If negotiated"
-msgstr ""
+msgstr "Pazarlık edilmişse"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
 msgid "Auto-detect"
-msgstr "Otomatik Algıla"
+msgstr "Otomatik algıla"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:227
 #, kde-format
 msgid "Always on"
-msgstr ""
+msgstr "Her zaman açık"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:228
 #, kde-format
