@@ -2166,7 +2166,7 @@ msgstr "&Importa des de"
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:55
 #, kde-format
 msgid "&Export to"
-msgstr "&Exporta a"
+msgstr "&Exporta cap a"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:58
 #: kmuddy/dialogs/dlgprofilesettings.cpp:154
@@ -3629,7 +3629,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:205
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr "Incloure el prefix/sufix"
+msgstr "Inclou el prefix/sufix"
 
 #: libs/caliaseditor.cpp:206
 #, kde-format
