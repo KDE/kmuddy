@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-02-17 19:18+0300\n"
+"PO-Revision-Date: 2023-03-10 14:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -2600,11 +2600,17 @@ msgid ""
 "support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
 "look for MXP sequences.</li></ul></qt>"
 msgstr ""
+"<qt><p>Buradan MXP'nin ne zaman kullanılacağını seçebilirsiniz.</"
+"p><ul><li><b>Asla</b> MXP etiketleri asla ayrıştırılmayacaktır</li><li><b> "
+"Pazarlık edilirse</b> MXP desteği, başarılı telnet anlaşmasına bağlı "
+"olacaktır.</li><li><b>Otomatik algıla</b> MXP desteği otomatik olarak "
+"algılanacaktır.</li><li><b> Her zaman açık</b> KMuddy her zaman MXP "
+"sıralarını arayacaktır.</li></ul></qt>"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:234
 #, kde-format
 msgid "MXP &variable prefix"
-msgstr ""
+msgstr "MXP &değişken öneki"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:237
 #, kde-format
@@ -2612,16 +2618,18 @@ msgid ""
 "Prefix prepended to each MXP variable from the server. Note that changing "
 "the prefix won't affect existing variables with old prefix."
 msgstr ""
+"Sunucudan gelen her MXP değişkeninin başına eklenen önek. Öneki "
+"değiştirmenin, eski önekle geçerli değişkenleri etkilemeyeceğini unutmayın."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
 msgid "Choose default script location"
-msgstr ""
+msgstr "Öntanımlı betik konumunu seç"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr ""
+msgstr "Öntanımlı betik çalışma dizinini seç"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
@@ -2631,32 +2639,32 @@ msgstr "Öntanımlı yazıdöküm dizinini seç"
 #: kmuddy/dialogs/dlgquickconnect.cpp:36
 #, kde-format
 msgid "Quick Connect"
-msgstr ""
+msgstr "Hızlı Bağlan"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:41
 #, kde-format
 msgid "&Host:"
-msgstr ""
+msgstr "&Makine:"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:41
 #, kde-format
 msgid "Connection statistics"
-msgstr ""
+msgstr "Bağlantı istatistikleri"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:50
 #, kde-format
 msgid "&Statistics, updated every second:"
-msgstr ""
+msgstr "&İstatistikler, her saniye yenilenir:"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:53
 #, kde-format
 msgid "Counter"
-msgstr ""
+msgstr "Sayaç"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:118
 #, kde-format
 msgid "Using MCCP"
-msgstr ""
+msgstr "MCCP kullanımı"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
 #: kmuddy/dialogs/dlgstatistics.cpp:126
@@ -2673,52 +2681,52 @@ msgstr "Hayır"
 #: kmuddy/dialogs/dlgstatistics.cpp:120
 #, kde-format
 msgid "MCCP version"
-msgstr ""
+msgstr "MCCP sürümü"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:121
 #, kde-format
 msgid "N/A"
-msgstr ""
+msgstr "Yok"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:122
 #, kde-format
 msgid "Using MSP"
-msgstr ""
+msgstr "MSP kullanımı"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:125
 #, kde-format
 msgid "Using MXP"
-msgstr ""
+msgstr "MXP kullanımı"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:128
 #, kde-format
 msgid "Sent bytes"
-msgstr ""
+msgstr "Gönderilen baytlar"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:130
 #, kde-format
 msgid "Sent commands"
-msgstr ""
+msgstr "Gönderilen komutlar"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:132
 #, kde-format
 msgid "Received bytes"
-msgstr ""
+msgstr "Alınan baytlar"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:134
 #, kde-format
 msgid "... after decompression"
-msgstr ""
+msgstr "... sıkıştırma açma sonrası"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
 msgid "Received lines"
-msgstr ""
+msgstr "Alınan satırlar"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:138
 #, kde-format
 msgid "Connection time"
-msgstr ""
+msgstr "Bağlantı süresi"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:37
 #, kde-format
@@ -2856,7 +2864,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:59
 #, kde-format
 msgid "&List of output windows"
-msgstr ""
+msgstr "Çı&ktı pencerelerinin listesi"
 
 #: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
@@ -2881,7 +2889,7 @@ msgstr "&Bağlan..."
 #: kmuddy/kmuddy.cpp:256
 #, kde-format
 msgid "&QuickConnect..."
-msgstr ""
+msgstr "&Hızlı Bağlan..."
 
 #: kmuddy/kmuddy.cpp:262
 #, kde-format
@@ -2891,17 +2899,17 @@ msgstr "&Bağlantıyı Kes"
 #: kmuddy/kmuddy.cpp:268
 #, kde-format
 msgid "&Reconnect"
-msgstr ""
+msgstr "&Yeniden Bağlan"
 
 #: kmuddy/kmuddy.cpp:273
 #, kde-format
 msgid "Close &tab"
-msgstr ""
+msgstr "Sekmeyi kapa&t"
 
 #: kmuddy/kmuddy.cpp:282
 #, kde-format
 msgid "Paste &As"
-msgstr ""
+msgstr "&Farklı Yapıştır"
 
 #: kmuddy/kmuddy.cpp:291
 #, kde-format
@@ -2911,62 +2919,62 @@ msgstr "&Girdi"
 #: kmuddy/kmuddy.cpp:298
 #, kde-format
 msgid "Copy &Selection"
-msgstr ""
+msgstr "Seçimi &Kopyala"
 
 #: kmuddy/kmuddy.cpp:304
 #, kde-format
 msgid "Enable command &parsing"
-msgstr ""
+msgstr "Komut &ayrıştırmayı etkinleştir"
 
 #: kmuddy/kmuddy.cpp:311
 #, kde-format
 msgid "Ca&ncel pending commands"
-msgstr ""
+msgstr "Bekleyen komutları &iptal et"
 
 #: kmuddy/kmuddy.cpp:322
 #, kde-format
 msgid "Show &gaugebar"
-msgstr ""
+msgstr "Ö&lçeri göster"
 
 #: kmuddy/kmuddy.cpp:335
 #, kde-format
 msgid "&Object Editor..."
-msgstr ""
+msgstr "&Nesne Düzenleyici..."
 
 #: kmuddy/kmuddy.cpp:340
 #, kde-format
 msgid "&Output windows..."
-msgstr ""
+msgstr "Çı&ktı pencereleri..."
 
 #: kmuddy/kmuddy.cpp:344
 #, kde-format
 msgid "A&liases enabled"
-msgstr ""
+msgstr "Arma&lar etkin"
 
 #: kmuddy/kmuddy.cpp:350
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr ""
+msgstr "Tet&ikler etkin"
 
 #: kmuddy/kmuddy.cpp:356
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr ""
+msgstr "&Sayaçlar etkin"
 
 #: kmuddy/kmuddy.cpp:361
 #, kde-format
 msgid "Macro &keys enabled"
-msgstr ""
+msgstr "Ma&kro düğmeleri etkin"
 
 #: kmuddy/kmuddy.cpp:366
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr ""
+msgstr "&MUD Tercihleri..."
 
 #: kmuddy/kmuddy.cpp:371
 #, kde-format
 msgid "&Save Profile"
-msgstr ""
+msgstr "Profili &Kaydet"
 
 #: kmuddy/kmuddy.cpp:378
 #, kde-format
@@ -2976,17 +2984,17 @@ msgstr "&Oturum yazıdökümü"
 #: kmuddy/kmuddy.cpp:383
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr ""
+msgstr "Çıktı arabelleğini dö&k..."
 
 #: kmuddy/kmuddy.cpp:387
 #, kde-format
 msgid "&Decision assistant"
-msgstr ""
+msgstr "&Karar yardımcısı"
 
 #: kmuddy/kmuddy.cpp:401
 #, kde-format
 msgid "&Global settings..."
-msgstr ""
+msgstr "&Global ayarlar..."
 
 #: kmuddy/kmuddy.cpp:406
 #, kde-format
@@ -2996,47 +3004,47 @@ msgstr "&Eklentiler..."
 #: kmuddy/kmuddy.cpp:411
 #, kde-format
 msgid "F&ull screen mode"
-msgstr ""
+msgstr "Tam &ekran kipi"
 
 #: kmuddy/kmuddy.cpp:422
 #, kde-format
 msgid "Shift line up"
-msgstr ""
+msgstr "Satır yukarı kaydır"
 
 #: kmuddy/kmuddy.cpp:427
 #, kde-format
 msgid "Shift line down"
-msgstr ""
+msgstr "Satır aşağı kaydır"
 
 #: kmuddy/kmuddy.cpp:432
 #, kde-format
 msgid "Shift page up"
-msgstr ""
+msgstr "Sayfa yukarı kaydır"
 
 #: kmuddy/kmuddy.cpp:437
 #, kde-format
 msgid "Shift page down"
-msgstr ""
+msgstr "Sayfa aşağı kaydır"
 
 #: kmuddy/kmuddy.cpp:442
 #, kde-format
 msgid "Split-screen up"
-msgstr ""
+msgstr "Ekranı yukarı böl"
 
 #: kmuddy/kmuddy.cpp:447
 #, kde-format
 msgid "Split-screen down"
-msgstr ""
+msgstr "Ekranı aşağı böl"
 
 #: kmuddy/kmuddy.cpp:452
 #, kde-format
 msgid "Previous tab"
-msgstr ""
+msgstr "Önceki sekme"
 
 #: kmuddy/kmuddy.cpp:457
 #, kde-format
 msgid "Next tab"
-msgstr ""
+msgstr "Sonraki sekme"
 
 #: kmuddy/kmuddy.cpp:463 kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473
 #: kmuddy/kmuddy.cpp:478 kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488
@@ -3045,7 +3053,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
-msgstr ""
+msgstr "%1. sekmeye geç"
 
 #: kmuddy/kmuddy.cpp:531
 #, kde-format
@@ -3087,6 +3095,8 @@ msgstr "&Yardım"
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
+"Yeniden bağlanmak için %1 düğmesine basın veya Bağlantı / Yeniden Bağlan'ı "
+"kullanın."
 
 #: kmuddy/kmuddy.cpp:1169
 #, kde-format
@@ -3094,118 +3104,120 @@ msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
 "disconnecting, and also every five minutes."
 msgstr ""
+"Profil kaydedildi. Profillerin her bağlantı kesilişinde ve her beş dakikada "
+"bir yeniden kaydedildiğini not edin."
 
 #: kmuddy/macros.cpp:67
 #, kde-format
 msgid "/setval: Expression parsing failed."
-msgstr ""
+msgstr "/setval: İfade ayrıştırma başarısız."
 
 #: kmuddy/macros.cpp:170
 #, kde-format
 msgid "No free resources of that type."
-msgstr ""
+msgstr "Bu türden boşta özkaynak yok."
 
 #: kmuddy/macros.cpp:192
 #, kde-format
 msgid "/tick: syntax: /tick timer-name"
-msgstr ""
+msgstr "/tick: syntax: /tick timer-name"
 
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr ""
+msgstr "/tick: Olmayan bir adda bir sayaç."
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
 msgid "/tick: this timer is currently disabled."
-msgstr ""
+msgstr "/tick: Bu sayaç şu anda devre dışı."
 
 #: kmuddy/macros.cpp:209
 #, kde-format
 msgid "Timer ticks in 1 second."
 msgid_plural "Timer ticks in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sayaç 1 saniye içinde atacak."
+msgstr[1] "Sayaç %1 saniye içinde atacak."
 
 #: kmuddy/macros.cpp:211
 #, kde-format
 msgid "Timer ticks right now."
-msgstr ""
+msgstr "Sayaç şimdi atacak."
 
 #: kmuddy/macros.cpp:221
 #, kde-format
 msgid "/ticknow: syntax: /ticknow timer-name"
-msgstr ""
+msgstr "/ticknow: syntax: /ticknow timer-name"
 
 #: kmuddy/macros.cpp:363
 #, kde-format
 msgid "/else: called without the matching /if."
-msgstr ""
+msgstr "/else: Eşleşen /if olmadan çağrıldı."
 
 #: kmuddy/macros.cpp:380
 #, kde-format
 msgid "/endif: called without the matching /if."
-msgstr ""
+msgstr "/endif: Eşleşen /if olmadan çağrıldı."
 
 #: kmuddy/macros.cpp:398
 #, kde-format
 msgid "/oadd: syntax: /oadd parent name"
-msgstr ""
+msgstr "/oadd: syntax: /oadd parent name"
 
 #: kmuddy/macros.cpp:406
 #, kde-format
 msgid "/oadd: parent group does not exist."
-msgstr ""
+msgstr "/oadd: Üst grup yok."
 
 #: kmuddy/macros.cpp:410
 #, kde-format
 msgid "/oadd: parent must be a group."
-msgstr ""
+msgstr "/oadd: Üst öge bir grup olmalıdır."
 
 #: kmuddy/macros.cpp:415
 #, kde-format
 msgid "/oadd: object with this name already exists."
-msgstr ""
+msgstr "/oadd: Bu adda bir nesne halihazırda var."
 
 #: kmuddy/macros.cpp:432
 #, kde-format
 msgid "/gadd: syntax: /gadd parent name"
-msgstr ""
+msgstr "/gadd: syntax: /gadd parent name"
 
 #: kmuddy/macros.cpp:439
 #, kde-format
 msgid "/gadd: parent group does not exist."
-msgstr ""
+msgstr "/gadd: Üst grup yok."
 
 #: kmuddy/macros.cpp:443
 #, kde-format
 msgid "/gadd: the parent must be a group"
-msgstr ""
+msgstr "/gadd: Üst öge bir grup olmalıdır"
 
 #: kmuddy/macros.cpp:449
 #, kde-format
 msgid "/gadd: such group already exists in that list"
-msgstr ""
+msgstr "/gadd: Böyle bir grup listede halihazırda var"
 
 #: kmuddy/macros.cpp:465
 #, kde-format
 msgid "/odel: object does not exist."
-msgstr ""
+msgstr "/odel: Nesne yok."
 
 #: kmuddy/macros.cpp:470
 #, kde-format
 msgid "/odel: root group may not be deleted."
-msgstr ""
+msgstr "/odel: Kök grup silinemez."
 
 #: kmuddy/macros.cpp:488
 #, kde-format
 msgid "/omove: syntax: /omove object group [position]"
-msgstr ""
+msgstr "/omove: syntax: /omove object group [konum]"
 
 #: kmuddy/macros.cpp:495
 #, kde-format
 msgid "/omove: object does not exist."
-msgstr ""
+msgstr "/omove: Nesne yok."
 
 #: kmuddy/macros.cpp:499
 #, kde-format
