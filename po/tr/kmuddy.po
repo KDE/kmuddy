@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-03-10 14:04+0300\n"
+"PO-Revision-Date: 2023-04-03 13:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -3222,122 +3222,122 @@ msgstr "/omove: Nesne yok."
 #: kmuddy/macros.cpp:499
 #, kde-format
 msgid "/omove: root group may not be moved."
-msgstr ""
+msgstr "/omove: Kök grup taşınamaz."
 
 #: kmuddy/macros.cpp:505
 #, kde-format
 msgid "/omove: group does not exist."
-msgstr ""
+msgstr "/omove: Grup yok."
 
 #: kmuddy/macros.cpp:509
 #, kde-format
 msgid "/omove: target must be a group."
-msgstr ""
+msgstr "/omove: Hedef bir grup olmalı."
 
 #: kmuddy/macros.cpp:513
 #, kde-format
 msgid "/omove: object and target must be in the same list."
-msgstr ""
+msgstr "/omove: Nesne ve hedef aynı listede olmalı."
 
 #: kmuddy/macros.cpp:525
 #, kde-format
 msgid "/omove: position out of range"
-msgstr ""
+msgstr "/omove: Konum erim dışında"
 
 #: kmuddy/macros.cpp:540
 #, kde-format
 msgid "/oren: syntax: /oren object new-name"
-msgstr ""
+msgstr "/oren: Sözdizim: /oren nesne yeni adı"
 
 #: kmuddy/macros.cpp:547
 #, kde-format
 msgid "/oren: object does not exist."
-msgstr ""
+msgstr "/oren: Nesne yok."
 
 #: kmuddy/macros.cpp:553
 #, kde-format
 msgid "/oren: root group cannot be renamed."
-msgstr ""
+msgstr "/oren: Kök grup yeniden adlandırılamaz."
 
 #: kmuddy/macros.cpp:559
 #, kde-format
 msgid "/oren: a group with this name already exists."
-msgstr ""
+msgstr "/oren:. Bu adda bir grup halihazırda var."
 
 #: kmuddy/macros.cpp:566
 #, kde-format
 msgid "/oren: an object with this name already exists."
-msgstr ""
+msgstr "/oren: Bu adda bir nesne halihazırda var."
 
 #: kmuddy/macros.cpp:581
 #, kde-format
 msgid "/opriority: syntax: /opriority object priority"
-msgstr ""
+msgstr "/opriority: Sözdizim: /opriority nesne öncelik"
 
 #: kmuddy/macros.cpp:588
 #, kde-format
 msgid "/opriority: object does not exist."
-msgstr ""
+msgstr "/opriority: Nesne yok."
 
 #: kmuddy/macros.cpp:594
 #, kde-format
 msgid "/opriority: priority must be in the 1-1000 range."
-msgstr ""
+msgstr "/opriority: Öncelik, 1-1000 eriminde olmalı."
 
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
-msgstr ""
+msgstr "/oenable: Nesne yok."
 
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
-msgstr ""
+msgstr "/odisable: Nesne yok."
 
 #: kmuddy/macros.cpp:641
 #, kde-format
 msgid "/osetbattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetbattr: Sözdizim: /osetbattr nesne parametre değer"
 
 #: kmuddy/macros.cpp:648
 #, kde-format
 msgid "/osetbattr: object does not exist."
-msgstr ""
+msgstr "/osetbattr: Nesne yok."
 
 #: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
 #, kde-format
 msgid "/osetiattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetiattr: Sözdizim: /osetbattr nesne parametre değer"
 
 #: kmuddy/macros.cpp:672
 #, kde-format
 msgid "/osetiattr: object does not exist."
-msgstr ""
+msgstr "/osetiattr: Nesne yok."
 
 #: kmuddy/macros.cpp:696
 #, kde-format
 msgid "/osetsattr: object does not exist."
-msgstr ""
+msgstr "/osetsattr: Nesne yok."
 
 #: kmuddy/macros.cpp:713
 #, kde-format
 msgid "/tgroupon: group does not exist."
-msgstr ""
+msgstr "/tgroupon: Grup yok."
 
 #: kmuddy/macros.cpp:728
 #, kde-format
 msgid "/tgroupoff: group does not exist."
-msgstr ""
+msgstr "/tgroupoff: Grup yok."
 
 #: kmuddy/macros.cpp:744
 #, kde-format
 msgid "/agroupon: group does not exist."
-msgstr ""
+msgstr "/agroupon: Grup yok."
 
 #: kmuddy/macros.cpp:760
 #, kde-format
 msgid "/agroupoff: group does not exist."
-msgstr ""
+msgstr "/agroupoff: Grup yok."
 
 #: kmuddy/main.cpp:30
 #, kde-format
@@ -3345,6 +3345,8 @@ msgid ""
 "KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
 "features."
 msgstr ""
+"KMuddy, KDE tarafından yapılan çok özellikli bir MUD (Çok Kullanıcılı "
+"Zindan) istemcisidir."
 
 #: kmuddy/main.cpp:36 kmuddy/main.cpp:38
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:108
@@ -3355,7 +3357,7 @@ msgstr "KMuddy"
 #: kmuddy/main.cpp:40
 #, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr ""
+msgstr "(c) 2002-2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:41
 #, kde-format
@@ -3365,7 +3367,7 @@ msgstr "Tomas Mecir"
 #: kmuddy/main.cpp:42
 #, kde-format
 msgid "Main developer and maintainer"
-msgstr ""
+msgstr "Ana geliştirici ve bakımcı"
 
 #: kmuddy/main.cpp:43
 #, kde-format
