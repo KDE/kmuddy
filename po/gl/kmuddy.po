@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Marce Villarino <mvillarino@kde-espana.es>, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2020-01-05 19:08+0100\n"
+"PO-Revision-Date: 2023-04-23 06:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -53,7 +53,7 @@ msgid ""
 "defined in <b>global settings</b>)."
 msgstr ""
 "Orde para executar ao premer o botón. Teña en conta que pode inserir varias "
-"ordes (separadar por punto e coma ou por outro carácter definido na "
+"ordes (separadas por punto e coma ou por outro carácter definido na "
 "<b>configuración global</b>)."
 
 #: kmuddy/cbuttoneditor.cpp:83
@@ -115,12 +115,12 @@ msgstr "(o contrasinal está agochado)"
 #: kmuddy/cconnection.cpp:736
 #, kde-format
 msgid "Aliases are now enabled."
-msgstr "As abreviatuas están activadas."
+msgstr "As abreviaturas están activadas."
 
 #: kmuddy/cconnection.cpp:736
 #, kde-format
 msgid "Aliases are now disabled."
-msgstr "As abreviatuas están desactivadas."
+msgstr "As abreviaturas están desactivadas."
 
 #: kmuddy/cconnection.cpp:747
 #, kde-format
@@ -892,7 +892,7 @@ msgid ""
 msgstr ""
 "<p>Coa coincidencia global, unha abreviatura ou disparador pode coincidir "
 "con cadeas varias veces, se conteñen o padrón máis dunha vez. Por exemplo, "
-"se o padrón é «abc», só coincide unha vez con «abcabcd» se a coincidencia "
+"se o padrón é «abc», só coincide unha vez con «abcdabcd» se a coincidencia "
 "global está desactivada, pero coincide dúas veces se está activada. As "
 "accións solicitadas execútanse unha vez por cada coincidencia, así que as "
 "ordes poden enviarse varias veces, unha por cada coincidencia.</p> <p>Teña "
@@ -1726,7 +1726,7 @@ msgid ""
 msgstr ""
 "Se comeza unha orde con esta cadea, a orde interpretarase como unha "
 "execución de macro.<br>A sintaxe é &lt;esta cadea&gt; &lt;orde&gt; "
-"[parámetros]  (/exec chama ficheiros de scripting externos)."
+"[parámetros]  (/exec chama scripts externos)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:461
 #, kde-format
@@ -1809,7 +1809,7 @@ msgstr ""
 "conexións.\n"
 "Teña en conta que pode anular esta opción no diálogo de configuración de "
 "MUD.\n"
-"Teña en conta tamén que usto só funcionará se o seu MUD é compatíbel con "
+"Teña en conta tamén que isto só funcionará se o seu MUD é compatíbel con "
 "<b>MSP</b> (o protocolo de son de MUD).</qt>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
@@ -2116,7 +2116,7 @@ msgstr ""
 "contrasinal. <p><b>Importante:</b> estas ordes envíanse exactamente como as "
 "escribe, simplemente se retirar os espazos que sobran ao principio e ao "
 "final. Non pode usar abreviaturas, macros nin camiñar rapidamente. Teña "
-"tamén en conta que as liñas baleiras tamén se enviarán, incluńdo a última "
+"tamén en conta que as liñas baleiras tamén se enviarán, incluíndo a última "
 "liña."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:197
@@ -2484,12 +2484,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
 msgid "External &scripts directory"
-msgstr "Directorio de ficheiros de &scripting externos"
+msgstr "Directorio de &scripts externos"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr "Directorio predeterminado no que se buscan ficheiros de scripting."
+msgstr "Directorio predeterminado no que se buscan scripts."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
@@ -2503,8 +2503,8 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
-"Directorio de traballo predeterminado para os seus ficheiros de scripting. "
-"Adoita ser o mesmo directorio que o que se indica enriba."
+"Directorio de traballo predeterminado para os seus scripts. Adoita ser o "
+"mesmo directorio que o que se indica enriba."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
@@ -2645,14 +2645,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
 msgid "Choose default script location"
-msgstr "Escolla a localización predeterminada para os ficheiros de scripting"
+msgstr "Escolla a localización predeterminada para os scripts"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr ""
-"Escolla o directorio de traballo predeterminado para os ficheiros de "
-"scripting"
+msgstr "Escolla o directorio de traballo predeterminado para os scripts"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
@@ -2744,7 +2742,7 @@ msgstr "…tras a descompresión"
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
 msgid "Received lines"
-msgstr "Liás recibidas"
+msgstr "Liñas recibidas"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:138
 #, kde-format
@@ -2973,7 +2971,7 @@ msgstr "&Xanelas de saída…"
 #: kmuddy/kmuddy.cpp:344
 #, kde-format
 msgid "A&liases enabled"
-msgstr "As a&breviatuas están activadas"
+msgstr "As a&breviaturas están activadas"
 
 #: kmuddy/kmuddy.cpp:350
 #, kde-format
@@ -3658,7 +3656,7 @@ msgid ""
 msgstr ""
 "<p>Coa coincidencia global, unha abreviatura ou disparador pode coincidir "
 "con cadeas varias veces, se conteñen o padrón máis dunha vez. Por exemplo, "
-"se o padrón é «abc», só coincide unha vez con «abcabcd» se a coincidencia "
+"se o padrón é «abc», só coincide unha vez con «abcdabcd» se a coincidencia "
 "global está desactivada, pero coincide dúas veces se está activada. As "
 "accións solicitadas execútanse unha vez por cada coincidencia, así que as "
 "ordes poden enviarse varias veces, unha por cada coincidencia.</p> <p>Teña "
@@ -4174,7 +4172,7 @@ msgstr "Cambiar a sala de acceso"
 #: plugins/mapper/cmapmanager.cpp:413
 #, kde-format
 msgid "Remove Login Room Status"
-msgstr "Estado da retiración da sala de acceso"
+msgstr "Retirar o estado da sala de acceso"
 
 #: plugins/mapper/cmapmanager.cpp:420
 #, kde-format
@@ -4189,7 +4187,7 @@ msgstr "Cambiar a sala actual"
 #: plugins/mapper/cmapmanager.cpp:454
 #, kde-format
 msgid "Remove Current Room Status"
-msgstr "Estado da retiración da sala actual"
+msgstr "Retirar o estado da sala actual"
 
 #: plugins/mapper/cmapmanager.cpp:459
 #, kde-format
@@ -5018,11 +5016,12 @@ msgstr "Cor da sala:"
 msgid "Default room color"
 msgstr "Cor predeterminada das salas"
 
+# well-spelled: PosicionDaEtiqueta
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
 #, kde-format
 msgid "LabelPosition"
-msgstr "PosiciónDaEtiqueta"
+msgstr "PosicionDaEtiqueta"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
@@ -5066,6 +5065,7 @@ msgstr "Propiedades"
 msgid "&Contents"
 msgstr "&Contido"
 
+# well-spelled: ContidoDaSala
 #. i18n: ectx: property (text), widget (QLabel, lblContents)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
 #, kde-format
@@ -5385,7 +5385,7 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
-"Se se activa, créase un sócket de dominio de UNIX que lle permita obter e "
+"Se se activa, créase un socket de dominio de UNIX que lle permita obter e "
 "modificar valores reais de variábeis. Para máis información, consulte a "
 "documentación."
 
