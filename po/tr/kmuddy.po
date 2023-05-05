@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-04-03 13:47+0300\n"
+"PO-Revision-Date: 2023-05-04 11:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3009,22 +3009,22 @@ msgstr "Tam &ekran kipi"
 #: kmuddy/kmuddy.cpp:422
 #, kde-format
 msgid "Shift line up"
-msgstr "Satır yukarı kaydır"
+msgstr "Satırı yukarı kaydır"
 
 #: kmuddy/kmuddy.cpp:427
 #, kde-format
 msgid "Shift line down"
-msgstr "Satır aşağı kaydır"
+msgstr "Satırı aşağı kaydır"
 
 #: kmuddy/kmuddy.cpp:432
 #, kde-format
 msgid "Shift page up"
-msgstr "Sayfa yukarı kaydır"
+msgstr "Sayfayı yukarı kaydır"
 
 #: kmuddy/kmuddy.cpp:437
 #, kde-format
 msgid "Shift page down"
-msgstr "Sayfa aşağı kaydır"
+msgstr "Sayfayı aşağı kaydır"
 
 #: kmuddy/kmuddy.cpp:442
 #, kde-format
