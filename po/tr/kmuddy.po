@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-05-04 11:26+0300\n"
+"PO-Revision-Date: 2023-06-04 01:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -331,7 +331,7 @@ msgstr "Desteklenmeyen MXP isteği yok sayılıyor (%1)"
 #: kmuddy/csession.cpp:84
 #, kde-format
 msgid "Ctrl+Enter adds new line, unless changed in settings"
-msgstr "Ctrl+Enter, eğer ayarlardan değiştirilmediyse yeni satır ekler"
+msgstr "Kontrol+Giriş, eğer ayarlardan değiştirilmediyse yeni satır ekler"
 
 #: kmuddy/csession.cpp:88
 #, kde-format
@@ -361,17 +361,17 @@ msgstr "(hiçbiri)"
 #: kmuddy/cshortcut.cpp:132
 #, kde-format
 msgid "Shift"
-msgstr "Shift"
+msgstr "Üst Karakter"
 
 #: kmuddy/cshortcut.cpp:134
 #, kde-format
 msgid "Ctrl"
-msgstr "Ctrl"
+msgstr "Kontrol"
 
 #: kmuddy/cshortcut.cpp:136
 #, kde-format
 msgid "Alt"
-msgstr "Alt"
+msgstr "Seçenek"
 
 #: kmuddy/cshortcut.cpp:138
 #, kde-format
