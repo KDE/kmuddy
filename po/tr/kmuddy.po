@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-06-04 01:53+0300\n"
+"PO-Revision-Date: 2023-06-08 12:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1500,7 +1500,7 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
-"Bu seçeneği etkinleştirirseniz komutlar, onları gönderdikten sonra da (ENTER "
+"Bu seçeneği etkinleştirirseniz komutlar, onları gönderdikten sonra da (Giriş "
 "düğmesine basarak) girdi satırında kalacaklardır; aksi takdirde "
 "temizlenirler."
 
@@ -1624,7 +1624,7 @@ msgstr "Girdi satırına girdiğiniz metnin rengi."
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr "Çoklu satırlar için ENTER ve CTRL+ENTER'ı değiş tokuş et"
+msgstr "Çoklu satırlar için Giriş ve Kontrol+Giriş'i değiş tokuş et"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:383
 #, kde-format
@@ -1633,9 +1633,9 @@ msgid ""
 "line, and ENTER will send commands to the server. If turned on, then the "
 "behaviour of these keys gets swapped."
 msgstr ""
-"Kapatıldığında, CTRL+ENTER çok satırlı girdi satırında başka bir satır daha "
-"ekler ve ENTER düğmesi komutları sunucuya gönderir. Açılırsa bu düğmelerin "
-"davranışı değiş-tokuş yapılır."
+"Kapatıldığında, Kontrol+Giriş çok satırlı girdi satırında başka bir satır "
+"daha ekler ve Giriş düğmesi komutları sunucuya gönderir. Açılırsa bu "
+"düğmelerin davranışı değiş-tokuş yapılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
