@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-06-05 14:49+0200\n"
+"PO-Revision-Date: 2023-06-17 14:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1312,7 +1312,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
 msgid "Use passive popups"
-msgstr "Usar xanelas emerxentes pasivas"
+msgstr "Usar diálogos emerxentes pasivos"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:146
 #, kde-format
@@ -1561,7 +1561,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:335
 #, kde-format
 msgid "T&rim spaces"
-msgstr "Elimina&r os espazos innecesarios"
+msgstr "Recortar os espazos innecesarios"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:336
 #, kde-format
@@ -1643,7 +1643,7 @@ msgid ""
 "line, and ENTER will send commands to the server. If turned on, then the "
 "behaviour of these keys gets swapped."
 msgstr ""
-"Cando se desactiva, Ctrl+Intro inserirá outra liña na xanela de entrada de "
+"Cando se desactiva, Ctrl+Intro inserirá outra liña no campo de entrada de "
 "varias liñas, e Intro enviará as ordes ao servidor. Se se activa, o "
 "comportamento destas teclas é o oposto."
 
