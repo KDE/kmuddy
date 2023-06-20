@@ -449,7 +449,7 @@ msgid ""
 "When enabled, this variable will be shown as percentage. (of max.value, or "
 "of 100 if no max.value given)"
 msgstr ""
-"Active esta opción para mostrar a variábel como porcentaxe (do valor máximo, "
+"Active esta opción para amosar a variábel como porcentaxe (do valor máximo, "
 "ou de 100 se non se indicou un valor máximo)."
 
 #: kmuddy/ctelnet.cpp:241 kmuddy/ctelnet.cpp:315
@@ -862,7 +862,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:275
 #, kde-format
 msgid "Show but do not send"
-msgstr "Mostrar pero non enviar."
+msgstr "Amosar pero non enviar."
 
 #: kmuddy/ctriggereditor.cpp:276
 #, kde-format
@@ -871,7 +871,7 @@ msgid ""
 "displayed on the screen."
 msgstr ""
 "Active esta opción para que o texto non se envíe ao MUD, senón que só se "
-"mostre na pantalla."
+"amose na pantalla."
 
 #: kmuddy/ctriggereditor.cpp:279 libs/caliaseditor.cpp:209
 #, kde-format
@@ -994,13 +994,13 @@ msgstr "A es&te valor:"
 #: kmuddy/ctriggereditor.cpp:439
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr "Non mostrar (&silenciar) a liña."
+msgstr "Non amosar (&silenciar) a liña."
 
 #: kmuddy/ctriggereditor.cpp:440
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
-msgstr "Isto evitará que as liñas que coincidan se mostren na xanela de saída."
+msgstr "Isto evitará que as liñas que coincidan se amosen na xanela de saída."
 
 #: kmuddy/ctriggereditor.cpp:442
 #, kde-format
@@ -1039,8 +1039,8 @@ msgid ""
 msgstr ""
 "Activar esta opción converterá este disparador nun disparador de detección "
 "de entrada, é dicir, ao disparador pasaráselle texto incluso se non se "
-"recibiu un salto de liña, o texto mostrarase como unha entrada se coincide "
-"co disparador, e a meirande parte do resto de opcións non se executarán. Os "
+"recibiu un salto de liña, o texto amosarase como unha entrada se coincide co "
+"disparador, e a meirande parte do resto de opcións non se executarán. Os "
 "disparadores de detección de entrada non poden enviar texto, silenciar "
 "liñas, ou notificar. Porén, si que permiten colorar."
 
@@ -1084,7 +1084,7 @@ msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
 "KMuddy session window"
 msgstr ""
-"Isto provocará que se envíe a saída a outra xanela e non se mostre na xanela "
+"Isto provocará que se envíe a saída a outra xanela e non se amose na xanela "
 "principal da sesión de KMuddy"
 
 #: kmuddy/ctriggereditor.cpp:495
@@ -1217,7 +1217,7 @@ msgstr "Atallos"
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr "&Mostrar a barra de separadores aínda que non sexa necesaria"
+msgstr "&Amosar a barra de separadores aínda que non sexa necesaria"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:113
 #, kde-format
@@ -1225,13 +1225,13 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
-"Marque esta opción para que a barra de separadores se mostre sempre. Se non "
+"Marque esta opción para que a barra de separadores se amose sempre. Se non "
 "marca esta opción, agocharase cando só conteña un separador."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr "Mostrar unha liña de entrada au&xiliar"
+msgstr "Amosar unha liña de entrada au&xiliar"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:117
 #, kde-format
@@ -1292,7 +1292,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
 msgid "Display system tray icon"
-msgstr "Mostrar a icona na bandexa do sistema"
+msgstr "Amosar a icona na bandexa do sistema"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:137
 #, kde-format
@@ -1306,8 +1306,8 @@ msgstr ""
 "Esta opción cambia a presenza da icona da área de notificacións. A icona "
 "pode usarse para agochar a xanela da aplicacións sen ocupar espazo na barra "
 "de tarefas. Pode premer a icona para agochar a xanela e premela de novo para "
-"mostrala. A conexión continuará activa mesmo cando a xanela estea agochada, "
-"e continuará recibindo mensaxes de notificación."
+"amosala. A conexión continuará activa mesmo cando a xanela estea agochada, e "
+"continuará recibindo mensaxes de notificación."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
@@ -1365,7 +1365,7 @@ msgstr "Cor predeterminada do &texto"
 #: kmuddy/dialogs/dlgappsettings.cpp:202
 #, kde-format
 msgid "This color will be used to display standard text with no defined color."
-msgstr "Esta cor usarase para mostrar o texto estándar sen cor definida."
+msgstr "Esta cor usarase para amosar o texto estándar sen cor definida."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:204
 #, kde-format
@@ -1375,7 +1375,7 @@ msgstr "Cor de &eco de ordes"
 #: kmuddy/dialogs/dlgappsettings.cpp:207
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
-msgstr "Esta cor usarase para mostrar as ordes que insira."
+msgstr "Esta cor usarase para amosar as ordes que insira."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:209
 #, kde-format
@@ -1439,7 +1439,7 @@ msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
 "will also disable command echo in session transcript."
 msgstr ""
-"Activa a funcionalidade de mostrar as ordes na consola.<p><b>Nota:</b> isto "
+"Activa a funcionalidade de amosar as ordes na consola.<p><b>Nota:</b> isto "
 "tamén desactivará o eco das ordes na transcrición da sesión."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
@@ -1450,7 +1450,7 @@ msgstr "Activar as mensaxes do s&istema"
 #: kmuddy/dialogs/dlgappsettings.cpp:253
 #, kde-format
 msgid "Enables displaying of system messages in the console."
-msgstr "Active esta opción para mostrar as mensaxes do sistema na consola."
+msgstr "Active esta opción para amosar as mensaxes do sistema na consola."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
@@ -1609,7 +1609,7 @@ msgstr "Encher automaticamente a correspondencia máis curta"
 #: kmuddy/dialogs/dlgappsettings.cpp:354
 #, kde-format
 msgid "Popup list-box"
-msgstr "Mostrar unha lista"
+msgstr "Amosar unha lista"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:358
 #, kde-format
@@ -2410,12 +2410,12 @@ msgstr "Mo&strar a entrada nun campo distinto"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr "Mostrar a entrada na barra do es&tado"
+msgstr "Amosar a entrada na barra do es&tado"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr "Mostrar a entrada na &consola"
+msgstr "Amosar a entrada na &consola"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
@@ -2956,7 +2956,7 @@ msgstr "Ca&ncelar as ordes pendentes"
 #: kmuddy/kmuddy.cpp:322
 #, kde-format
 msgid "Show &gaugebar"
-msgstr "Mostrar a barra de &calibración"
+msgstr "Amosar a barra de &calibración"
 
 #: kmuddy/kmuddy.cpp:335
 #, kde-format
@@ -4344,12 +4344,12 @@ msgstr "&Grade"
 #: plugins/mapper/cmapview.cpp:128
 #, kde-format
 msgid "Display Upper Level"
-msgstr "Mostrar o nivel superior"
+msgstr "Amosar o nivel superior"
 
 #: plugins/mapper/cmapview.cpp:133
 #, kde-format
 msgid "Display Lower Level"
-msgstr "Mostrar o nivel inferior"
+msgstr "Amosar o nivel inferior"
 
 #: plugins/mapper/cmapview.cpp:138
 #, kde-format
@@ -5227,7 +5227,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:72
 #, kde-format
 msgid "Show &mapper"
-msgstr "Mostrar o &cartógrafo"
+msgstr "Amosar o &cartógrafo"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
