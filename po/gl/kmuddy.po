@@ -396,7 +396,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "Orde para executar ao premer a combinación de teclas definida.\n"
-"A orde pode incluír abreviaturas, chamadas de scripts e cousas similares."
+"A orde pode incluír abreviaturas, chamadas de guións e cousas similares."
 
 #: kmuddy/cshortcuteditor.cpp:76
 #, kde-format
@@ -484,7 +484,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "Orde para executar en cada golpe do temporizador.\n"
-"A orde pode incluír abreviaturas, chamadas de scripts e cousas similares."
+"A orde pode incluír abreviaturas, chamadas de guións e cousas similares."
 
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
@@ -542,7 +542,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "Orde para executar o tempo indicado antes de cada golpe do temporizador.\n"
-"A orde pode incluír abreviaturas, chamadas de scripts e cousas similares."
+"A orde pode incluír abreviaturas, chamadas de guións e cousas similares."
 
 #: kmuddy/ctranscript.cpp:174
 #, kde-format
@@ -1271,7 +1271,7 @@ msgid ""
 msgstr ""
 "Cando chega texto do servidor e KMuddy non está activo, o título da xanela e "
 "a barra de tarefas intentarán atraer a súa atención (algúns caracteres "
-"mostraranse de maneira intermitente)."
+"amosaranse de maneira intermitente)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
@@ -1286,7 +1286,7 @@ msgid ""
 "blink there)."
 msgstr ""
 "Cando chega texto do servidor esta sesión non está activa, o separador "
-"intentará atraer a súa atención (algúns caracteres mostraranse de maneira "
+"intentará atraer a súa atención (algúns caracteres amosaranse de maneira "
 "intermitente)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:136
@@ -2645,12 +2645,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
 msgid "Choose default script location"
-msgstr "Escolla a localización predeterminada para os scripts"
+msgstr "Escolla a localización predeterminada para os guións"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr "Escolla o directorio de traballo predeterminado para os scripts"
+msgstr "Escolla o directorio de traballo predeterminado para os guións"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
@@ -3403,7 +3403,7 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
-"Moitas melloras no scripting externo, o analizador interno de scripts, a "
+"Moitas melloras no scripting externo, o analizador interno de guións, a "
 "vista da saída, as abreviaturas e os disparadores, e correccións."
 
 #: kmuddy/main.cpp:45
@@ -5279,12 +5279,12 @@ msgstr "Script dunha única instancia."
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr "&Nome do script"
+msgstr "&Nome do guión"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
 msgid "Name of this script."
-msgstr "Nome do script."
+msgstr "Nome do guión."
 
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
@@ -5308,7 +5308,7 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
-"Directorio de traballo do script. O script comportarase como se o executase "
+"Directorio de traballo do guión. O guión comportarase como se o executase "
 "desde este directorio na consola."
 
 #: plugins/scripting/cscripteditor.cpp:90
@@ -5322,7 +5322,7 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
-"Se a entrada do script está activada, isto permite enviar ao script todas as "
+"Se a entrada do guión está activada, isto permite enviar ao script todas as "
 "ordes enviadas."
 
 #: plugins/scripting/cscripteditor.cpp:94
@@ -5368,7 +5368,7 @@ msgid ""
 "control for some reason, leave this on.</p>"
 msgstr ""
 "<p>Se se activa, usarase o control do fluxo para este script. O control do "
-"fluxo asegúrase de que os scripts permanecen sincronizados, é dicir, que se "
+"fluxo asegúrase de que os guións permanecen sincronizados, é dicir, que se "
 "chegan dúas liñas do servidor, a segunda non se envía a ningún script ata "
 "que todos reciban antes a primeira liña. Porén, nalgúns casos é mellor non "
 "usar esta funcionalidade.</p> <p>Se non ten motivos para desactivar o "
@@ -5392,7 +5392,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
 msgid "Choose script"
-msgstr "Escoller un script"
+msgstr "Escoller un guión"
 
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
@@ -5407,7 +5407,7 @@ msgstr "Ese script externo non existe!"
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr "Executando os scripts"
+msgstr "Executando os guións"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
@@ -5427,7 +5427,7 @@ msgstr "&Matar"
 #: plugins/scripting/scriptingplugin.cpp:65
 #, kde-format
 msgid "/exec: Script list is not available."
-msgstr "/exec: a lista de scripts non está dispoñíbel."
+msgstr "/exec: a lista de guións non está dispoñíbel."
 
 #: plugins/scripting/scriptingplugin.cpp:125
 #, kde-format
