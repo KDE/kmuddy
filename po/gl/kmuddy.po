@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-06-17 14:01+0200\n"
+"PO-Revision-Date: 2023-06-24 13:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -59,7 +59,7 @@ msgstr ""
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
 msgid "Icon displayed on the button toolbar."
-msgstr "Icona que se mostra na barra de ferramentas de botóns."
+msgstr "Icona que se amosa na barra de ferramentas de botóns."
 
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
@@ -85,12 +85,12 @@ msgstr "&Xeral"
 #: libs/caliaseditor.cpp:243
 #, kde-format
 msgid "&Script"
-msgstr "&Script"
+msgstr "&Guión"
 
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr "Script ao solta&r"
+msgstr "Guión ao solta&r"
 
 #: kmuddy/cconnection.cpp:268
 #, kde-format
@@ -196,7 +196,7 @@ msgstr "&Nome da variábel"
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
 msgid "Variable displayed by this gauge."
-msgstr "Variábel que mostra este calibrador."
+msgstr "Variábel que amosa este calibrador."
 
 #: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:64
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Variábel que contén o valor máximo (100 de maneira predeterminada)."
 #: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:74
 #, kde-format
 msgid "Caption shown next to variable value."
-msgstr "Lenda que se mostra canda o valor da variábel."
+msgstr "Lenda que se amosa canda o valor da variábel."
 
 #: kmuddy/cgaugeeditor.cpp:78
 #, kde-format
@@ -308,7 +308,7 @@ msgstr "cambiar de lugar"
 #: kmuddy/cmxpmanager.cpp:305
 #, kde-format
 msgid "send username/password"
-msgstr "enviar o nome de usuario e o contrasinal"
+msgstr "enviar o nome de persoa usuaria e o contrasinal"
 
 #: kmuddy/cmxpmanager.cpp:306
 #, kde-format
@@ -436,12 +436,12 @@ msgstr "Se xa hai algún texto na liña de entrada, debería sobrescribirse?"
 #: kmuddy/cstatusvareditor.cpp:61
 #, kde-format
 msgid "Variable displayed by this status variable."
-msgstr "Variábel que mostra esta variábel de estado."
+msgstr "Variábel que amosa esta variábel de estado."
 
 #: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
 msgid "&Show as percentage"
-msgstr "Mo&strar como porcentaxe."
+msgstr "Amo&sar como porcentaxe."
 
 #: kmuddy/cstatusvareditor.cpp:78
 #, kde-format
@@ -1167,7 +1167,7 @@ msgstr "&Baixar"
 #: kmuddy/dialogs/cdirlist.cpp:73
 #, kde-format
 msgid "Choose sound directory"
-msgstr "Escolla o directorio dos sons"
+msgstr "Escolla o cartafol dos sons"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:78
 #, kde-format
@@ -1303,7 +1303,7 @@ msgid ""
 "it. Your connection will remain active even if the window is hidden and you "
 "will still receive notification messages. "
 msgstr ""
-"Esta opción cambia a presenza da icona da área de notificacións. A icona "
+"Esta opción conmuta a presenza da icona da área de notificacións. A icona "
 "pode usarse para agochar a xanela da aplicacións sen ocupar espazo na barra "
 "de tarefas. Pode premer a icona para agochar a xanela e premela de novo para "
 "amosala. A conexión continuará activa mesmo cando a xanela estea agochada, e "
@@ -1321,7 +1321,7 @@ msgid ""
 "the system tray icon when you are in another window and alert you to the "
 "presence of activity in one of your connections. "
 msgstr ""
-"Esta opción activa o uso de mensaxes emerxentes pasivas. As mensaxes "
+"Esta opción conmuta o uso de mensaxes emerxentes pasivas. As mensaxes "
 "emerxentes pasivas aparecen preto da icona da área de notificacións do "
 "sistema cando vostede está noutra xanela, e notifícano de actividade nunha "
 "das conexións."
@@ -1660,7 +1660,7 @@ msgstr "Cores claras"
 #: kmuddy/dialogs/dlgappsettings.cpp:429
 #, kde-format
 msgid "&Command separator string"
-msgstr "&Cadea de separación de ordes"
+msgstr "&Cadea divisoria de ordes"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:432
 #, kde-format
@@ -1726,7 +1726,7 @@ msgid ""
 msgstr ""
 "Se comeza unha orde con esta cadea, a orde interpretarase como unha "
 "execución de macro.<br>A sintaxe é &lt;esta cadea&gt; &lt;orde&gt; "
-"[parámetros]  (/exec chama scripts externos)."
+"[parámetros]  (/exec chama guións externos)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:461
 #, kde-format
@@ -1807,8 +1807,8 @@ msgid ""
 msgstr ""
 "<qt>Marque esta opción para activar a reprodución de sons para todas as "
 "conexións.\n"
-"Teña en conta que pode anular esta opción no diálogo de configuración de "
-"MUD.\n"
+"Teña en conta que pode sobredefinir esta opción no diálogo de configuración "
+"de MUD.\n"
 "Teña en conta tamén que isto só funcionará se o seu MUD é compatíbel con "
 "<b>MSP</b> (o protocolo de son de MUD).</qt>"
 
@@ -1828,7 +1828,7 @@ msgstr ""
 "A versión 0.3 de MSP permite descargar ficheiros de son directamente de "
 "Internet. Pode activar esa funcionalidade aquí. Teña en conta que cada son "
 "descargarase só unha vez. Os ficheiros descargados almacénanse no seu "
-"directorio persoal, dentro do directorio\n"
+"cartafol persoal, dentro do cartafol.\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBold)
 #: kmuddy/dialogs/dlgappsettings.cpp:724 kmuddy/dialogs/dlgappsettings.cpp:733
@@ -1860,7 +1860,7 @@ msgid ""
 "speed up connecting to your MUD, as well as to use more advanced features "
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
-"Esta lista mostra os perfís definidos actualmente. <p><b>Perfís</b> "
+"Esta lista amosa os perfís definidos actualmente. <p><b>Perfís</b> "
 "permítelle acelerar a conexión ao MUD, así como usar funcionalidades máis "
 "avanzadas, como <i>abreviaturas</i> ou <i>disparadores</i>."
 
@@ -1969,7 +1969,7 @@ msgid ""
 "have write access to the profile directory."
 msgstr ""
 "Produciuse un erro ao intentar duplicar o perfil. Asegúrese de que ten "
-"acceso de escritura no directorio dos perfís."
+"acceso de escritura no cartafol dos perfís."
 
 #: kmuddy/dialogs/dlgconnect.cpp:259
 #, kde-format
@@ -2075,14 +2075,14 @@ msgstr ""
 #: kmuddy/dialogs/dlgeditprofile.cpp:63
 #, kde-format
 msgid "&Login name:"
-msgstr "&Nome de usuario:"
+msgstr "&Nome de persoa usuaria:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:65
 #, kde-format
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
-"Insira o seu nome de usuario do MUD aquí. <p><i>Esta opción non é "
+"Insira o seu nome de persoa usuaria do MUD aquí. <p><i>Esta opción non é "
 "obrigatoria.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
@@ -2112,9 +2112,9 @@ msgid ""
 "lines will also be sent, including the very last line."
 msgstr ""
 "As ordes para enviar ao MUD despois de iniciar sesión.<br> <b>$name</b> "
-"substitúese polo nome de usuario.<br> <b>$password</b> substitúese polo "
-"contrasinal. <p><b>Importante:</b> estas ordes envíanse exactamente como as "
-"escribe, simplemente se retirar os espazos que sobran ao principio e ao "
+"substitúese polo nome de persoa usuaria.<br> <b>$password</b> substitúese "
+"polo contrasinal.<p><b>Importante:</b> estas ordes envíanse exactamente como "
+"as escribe, simplemente se retirar os espazos que sobran ao principio e ao "
 "final. Non pode usar abreviaturas, macros nin camiñar rapidamente. Teña en "
 "conta ademais que as liñas baleiras tamén se enviarán, incluíndo a última "
 "liña."
@@ -2385,8 +2385,8 @@ msgid ""
 "only needs to be set for non-English servers."
 msgstr ""
 "Permítelle seleccionar a codificación de caracteres da saída que usa o "
-"servidor. Só adoita ser necesario definir esta opción para servidores que "
-"non están en inglés."
+"servidor. Normalmente só hai que definir esta opción para servidores que non "
+"están en inglés."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
@@ -2405,7 +2405,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr "Mo&strar a entrada nun campo distinto"
+msgstr "Amo&sar a entrada nun campo distinto"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
@@ -2484,18 +2484,18 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
 msgid "External &scripts directory"
-msgstr "Directorio de &scripts externos"
+msgstr "Cartafol de &guións externos"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr "Directorio predeterminado no que se buscan scripts."
+msgstr "Cartafol predeterminado no que se buscan guións."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
-msgstr "Directorio de &traballo"
+msgstr "Cartafol de &traballo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:162
 #, kde-format
@@ -2503,19 +2503,19 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
-"Directorio de traballo predeterminado para os seus scripts. Adoita ser o "
-"mesmo directorio que o que se indica enriba."
+"Cartafol de traballo predeterminado para os seus guións. Adoita ser o mesmo "
+"cartafol que o que se indica enriba."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
 msgid "&Transcripts directory"
-msgstr "Directorio das &transcricións"
+msgstr "Cartafol das &transcricións"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
 msgstr ""
-"Directorio no que se gardan as transcricións das sesións de maneira "
+"Cartafol no que se gardan as transcricións das sesións de maneira "
 "predeterminada."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
@@ -2650,12 +2650,12 @@ msgstr "Escolla a localización predeterminada para os guións"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr "Escolla o directorio de traballo predeterminado para os guións"
+msgstr "Escolla o cartafol de traballo predeterminado para os guións"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
 msgid "Choose default transcript directory"
-msgstr "Escolla o directorio predeterminado para as transcricións"
+msgstr "Escolla o cartafol predeterminado para as transcricións"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:36
 #, kde-format
@@ -2855,7 +2855,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:133
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr "Engadir a marca de hora ao comezo das liñas."
+msgstr "Engadir a marca de tempo ao comezo das liñas."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
@@ -2863,7 +2863,7 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
-"Esta opción fará que KMuddy insira unha marca de hora local diante de cada "
+"Esta opción fará que KMuddy insira unha marca de tempo local diante de cada "
 "liña de rexistro."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:140
@@ -2890,7 +2890,7 @@ msgstr "&Lista de xanelas de saída"
 #: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Show"
-msgstr "Mo&strar"
+msgstr "Amo&sar"
 
 #: kmuddy/dialogs/dlgwindows.cpp:67
 #, kde-format
@@ -3368,8 +3368,8 @@ msgid ""
 "KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
 "features."
 msgstr ""
-"KMuddy é un cliente de MUD (Multi-User Dungeon, «alxube para varios "
-"usuarios») por KDE que goza de diversas funcionalidades."
+"KMuddy é un cliente de MUD (Multi-User Dungeon, «alxube para varias "
+"persoas») por KDE que goza de diversas funcionalidades."
 
 #: kmuddy/main.cpp:36 kmuddy/main.cpp:38
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:108
@@ -3403,7 +3403,7 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
-"Moitas melloras no scripting externo, o analizador interno de guións, a "
+"Moitas melloras na guionización externa, o analizador interno de guións, a "
 "vista da saída, as abreviaturas e os disparadores, e correccións."
 
 #: kmuddy/main.cpp:45
@@ -3445,7 +3445,7 @@ msgstr "Scott Monachello"
 #: kmuddy/main.cpp:52
 #, kde-format
 msgid "Improvements in scripting, bugfixes"
-msgstr "Melloras de scripting e corrección de erros."
+msgstr "Melloras de guionización e corrección de erros."
 
 #: kmuddy/main.cpp:53
 #, kde-format
@@ -3546,7 +3546,7 @@ msgstr "Vadim Peretokin"
 #: kmuddy/main.cpp:71
 #, kde-format
 msgid "Many improvements, website"
-msgstr "Moitas melloras, autor do sitio web."
+msgstr "Moitas melloras, autoría do sitio web."
 
 #: kmuddy/main.cpp:72
 #, kde-format
@@ -3556,7 +3556,7 @@ msgstr "Heiko Koehn"
 #: kmuddy/main.cpp:73
 #, kde-format
 msgid "Scripting improvements"
-msgstr "Melloras de scripting."
+msgstr "Melloras de guionización"
 
 #: kmuddy/main.cpp:74
 #, kde-format
@@ -4003,7 +4003,7 @@ msgstr "Nome do perfil"
 #: libs/cprofilemanager.cpp:74
 #, kde-format
 msgid "Login name"
-msgstr "Nome de usuario"
+msgstr "Nome de persoa usuaria"
 
 #: libs/cstatus.cpp:41 libs/cstatus.cpp:180
 #, kde-format
@@ -4303,7 +4303,7 @@ msgstr "Sala de probas 4"
 #: plugins/mapper/cmapmanager.cpp:1813
 #, kde-format
 msgid "Set Special Exit"
-msgstr "Converter en saída especial"
+msgstr "Definir unha saída especial"
 
 #: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:685
 #, kde-format
@@ -5274,7 +5274,7 @@ msgstr "Seleccionar"
 #: plugins/scripting/cscript.cpp:68
 #, kde-format
 msgid "Sorry, single-instance script."
-msgstr "Script dunha única instancia."
+msgstr "Guión dunha única instancia."
 
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
@@ -5308,13 +5308,13 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
-"Directorio de traballo do guión. O guión comportarase como se o executase "
-"desde este directorio na consola."
+"Cartafol de traballo do guión. O guión comportarase como se o executase "
+"desde este cartafol na consola."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
 msgid "Send user commands"
-msgstr "Enviar as ordes do usuario"
+msgstr "Enviar as ordes da persoa usuaria"
 
 #: plugins/scripting/cscripteditor.cpp:91
 #, kde-format
@@ -5322,7 +5322,7 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
-"Se a entrada do guión está activada, isto permite enviar ao script todas as "
+"Se a entrada do guión está activada, isto permite enviar ao guión todas as "
 "ordes enviadas."
 
 #: plugins/scripting/cscripteditor.cpp:94
@@ -5342,7 +5342,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:98
 #, kde-format
 msgid "Single-instance script"
-msgstr "Script dunha única instancia"
+msgstr "Guión dunha única instancia"
 
 #: plugins/scripting/cscripteditor.cpp:99
 #, kde-format
@@ -5350,7 +5350,7 @@ msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
 msgstr ""
-"Non pode iniciarse unha instancia deste script se xa hai outra en execución."
+"Non pode iniciarse unha instancia deste guión se xa hai outra en execución."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
@@ -5367,7 +5367,7 @@ msgid ""
 "better not to use this feature.</p><p>If you don't need to disable flow "
 "control for some reason, leave this on.</p>"
 msgstr ""
-"<p>Se se activa, usarase o control do fluxo para este script. O control do "
+"<p>Se se activa, usarase o control do fluxo para este guión. O control do "
 "fluxo asegúrase de que os guións permanecen sincronizados, é dicir, que se "
 "chegan dúas liñas do servidor, a segunda non se envía a ningún script ata "
 "que todos reciban antes a primeira liña. Porén, nalgúns casos é mellor non "
@@ -5385,7 +5385,7 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
-"Se se activa, créase un socket de dominio de UNIX que lle permita obter e "
+"Se se activa, créase unha toma de dominio de UNIX que lle permita obter e "
 "modificar valores reais de variábeis. Para máis información, consulte a "
 "documentación."
 
@@ -5397,12 +5397,12 @@ msgstr "Escoller un guión"
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
 msgid "Choose working directory"
-msgstr "Escoller un directorio de traballo"
+msgstr "Escoller un cartafol de traballo"
 
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr "Ese script externo non existe!"
+msgstr "Ese guión externo non existe!"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
@@ -5412,7 +5412,7 @@ msgstr "Executando os guións"
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr "Executando os sc&ripts"
+msgstr "Executando os &guións"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
@@ -5432,7 +5432,7 @@ msgstr "/exec: a lista de guións non está dispoñíbel."
 #: plugins/scripting/scriptingplugin.cpp:125
 #, kde-format
 msgid "Scripts"
-msgstr "Scripts"
+msgstr "Guións"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:61
 #, kde-format
