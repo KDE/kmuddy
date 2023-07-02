@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2023-06-08 12:06+0300\n"
+"PO-Revision-Date: 2023-07-02 01:22+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -478,7 +478,7 @@ msgid ""
 "Command that will be executed on each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
-"Her imde yürütülecek komut.\n"
+"Her atımda yürütülecek komut.\n"
 "Komutlar; armalar, betik çağrıları ve benzer şeyler içerebilir."
 
 #: kmuddy/ctimereditor.cpp:74
@@ -510,7 +510,7 @@ msgstr "K&omutu önceden çalıştır"
 #: kmuddy/ctimereditor.cpp:86
 #, kde-format
 msgid "Run a command a given number of seconds before each timer tick."
-msgstr "Bir komutu, her sayaç iminden verilen saniye kadar önce çalıştır."
+msgstr "Bir komutu, her sayaç atımından verilen saniye kadar önce çalıştır."
 
 #: kmuddy/ctimereditor.cpp:88
 #, kde-format
@@ -520,7 +520,7 @@ msgstr "Komutu ilerlet"
 #: kmuddy/ctimereditor.cpp:91
 #, kde-format
 msgid "&Seconds before tick"
-msgstr "İm ö&ncesi saniye"
+msgstr "Atım ö&ncesi saniye"
 
 #: kmuddy/ctimereditor.cpp:98
 #, kde-format
@@ -533,7 +533,7 @@ msgid ""
 "Command that will be executed the specified time before each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
-"Her imden önceki belirtilen zamanda çalıştırılacak komut.\n"
+"Her atımdan önceki belirtilen zamanda çalıştırılacak komut.\n"
 "Komutlar; armalar, betik çağrıları ve benzer şeyler içerebilir."
 
 #: kmuddy/ctranscript.cpp:174
@@ -1027,12 +1027,11 @@ msgid ""
 "other options will NOT be taken into effect - prompt-detect trigger cannot "
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
-"Bunun etkinleştirilmesi, bu tetikleyiciyi bilgi istemi algılama "
-"tetikleyicisine dönüştürür; yani, yenisatır alınmasa bile bu tetikleyicilere "
-"metin iletilir, tetikleyici eşleşirse metin bir istem olarak görüntülenir ve "
-"diğer birçok seçenek yürürlüğe ALINMAZ - istem algılama tetikleyicisi metin "
-"gönderemez, satırları tıkamaz, bildirim yapamaz. Renklendirme hâlâ "
-"olanaklıdır."
+"Bunun etkinleştirilmesi, bu tetiği bir bilgi istemi algılama tetiğine "
+"dönüştürür; yani, yenisatır alınmasa bile bu tetiklere metin iletilir, tetik "
+"eşleşirse metin bir istem olarak görüntülenir ve diğer birçok seçenek "
+"yürürlüğe ALINMAZ - istem algılama tetiği metin gönderemez, satırları "
+"tıkamaz, bildirim yapamaz. Renklendirme hâlâ olanaklıdır."
 
 #: kmuddy/ctriggereditor.cpp:457
 #, kde-format
@@ -3120,12 +3119,12 @@ msgstr "Bu türden boşta özkaynak yok."
 #: kmuddy/macros.cpp:192
 #, kde-format
 msgid "/tick: syntax: /tick timer-name"
-msgstr "/tick: syntax: /tick timer-name"
+msgstr "/tick: Sözdizim: /tick sayaç-adı"
 
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr "/tick: Olmayan bir adda bir sayaç."
+msgstr "/tick: Olmayan bir adlı bir sayaç."
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
@@ -3147,7 +3146,7 @@ msgstr "Sayaç şimdi atacak."
 #: kmuddy/macros.cpp:221
 #, kde-format
 msgid "/ticknow: syntax: /ticknow timer-name"
-msgstr "/ticknow: syntax: /ticknow timer-name"
+msgstr "/ticknow: Sözdizim: /ticknow sayaç-adı"
 
 #: kmuddy/macros.cpp:363
 #, kde-format
@@ -3380,16 +3379,20 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
+"Dış betik yazımı, iç betik ayrıştırıcısı, çıktı görünümü ve armalar/"
+"tetikleyiciler, alanlarında birçok iyileştirme, hata düzeltmeleri"
 
 #: kmuddy/main.cpp:45
 #, kde-format
 msgid "Alsherok staff"
-msgstr "Alsherok staff"
+msgstr "Alsherok çalışanları"
 
 #: kmuddy/main.cpp:46
 #, kde-format
 msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
 msgstr ""
+"AFKMud kod tabanını kullanılabilir hale getirme; MCCP/MSP sınaması için "
+"kullanılıyor"
 
 #: kmuddy/main.cpp:47
 #, kde-format
@@ -3399,7 +3402,7 @@ msgstr "Andrea Cascio"
 #: kmuddy/main.cpp:48
 #, kde-format
 msgid "SuSE RPMs, speed-walking improvements"
-msgstr ""
+msgstr "SUSE RPM'leri, hızlı yürüme iyileştirmeleri"
 
 #: kmuddy/main.cpp:49
 #, kde-format
@@ -3409,7 +3412,7 @@ msgstr "Orion Elder"
 #: kmuddy/main.cpp:50
 #, kde-format
 msgid "KMuddy forum, many ideas"
-msgstr ""
+msgstr "KMuddy forumu, birçok fikir"
 
 #: kmuddy/main.cpp:51
 #, kde-format
@@ -3419,7 +3422,7 @@ msgstr "Scott Monachello"
 #: kmuddy/main.cpp:52
 #, kde-format
 msgid "Improvements in scripting, bugfixes"
-msgstr ""
+msgstr "Betik yazımı iyileştirmeleri, hata düzeltmeleri"
 
 #: kmuddy/main.cpp:53
 #, kde-format
@@ -3429,7 +3432,7 @@ msgstr "Tyler Montbriand"
 #: kmuddy/main.cpp:54
 #, kde-format
 msgid "Help with SDL support"
-msgstr ""
+msgstr "SDL desteği iyileştirmeleri"
 
 #: kmuddy/main.cpp:55
 #, kde-format
@@ -3439,7 +3442,7 @@ msgstr "Marco Mastroddi"
 #: kmuddy/main.cpp:56
 #, kde-format
 msgid "Tick timers"
-msgstr ""
+msgstr "Atım sayaçları"
 
 #: kmuddy/main.cpp:57
 #, kde-format
@@ -3449,7 +3452,7 @@ msgstr "Henrikki Almusa"
 #: kmuddy/main.cpp:58
 #, kde-format
 msgid "Commands to enable/disable groups"
-msgstr ""
+msgstr "Grupları etkinleştirmek/devre dışı bırakmak için komutlar"
 
 #: kmuddy/main.cpp:59
 #, kde-format
@@ -3459,7 +3462,7 @@ msgstr "Drossos Stamboulakis"
 #: kmuddy/main.cpp:60
 #, kde-format
 msgid "Selection improvements, full screen mode, cross-tab commands"
-msgstr ""
+msgstr "Seçim iyileştirmeleri, tam ekran kipi, çapraz sekme komutları"
 
 #: kmuddy/main.cpp:61
 #, kde-format
@@ -3469,17 +3472,17 @@ msgstr "Antonio J. Soler Sanchez"
 #: kmuddy/main.cpp:62
 #, kde-format
 msgid "Spanish translation"
-msgstr ""
+msgstr "İspanyolca çeviri"
 
 #: kmuddy/main.cpp:63
 #, kde-format
 msgid "lontau"
-msgstr ""
+msgstr "lontau"
 
 #: kmuddy/main.cpp:64
 #, kde-format
 msgid "Code to access KMuddy variables in Ruby"
-msgstr ""
+msgstr "KMuddy değişkenlerine Ruby'de erişmek için kod"
 
 #: kmuddy/main.cpp:65
 #, kde-format
@@ -3489,7 +3492,7 @@ msgstr "Magnus Lundborg"
 #: kmuddy/main.cpp:65
 #, kde-format
 msgid "Tab-expansion improvements"
-msgstr ""
+msgstr "Sekme genişletme iyileştirmeleri"
 
 #: kmuddy/main.cpp:66
 #, kde-format
@@ -3499,7 +3502,7 @@ msgstr "Vladimir Lazarenko"
 #: kmuddy/main.cpp:67
 #, kde-format
 msgid "Many improvements. Hosting KMuddy CVS."
-msgstr ""
+msgstr "Birçok iyileştirme, KMuddy CVS'sini barındırma"
 
 #: kmuddy/main.cpp:68
 #, kde-format
@@ -3509,7 +3512,7 @@ msgstr "Stuart Henshall"
 #: kmuddy/main.cpp:69
 #, kde-format
 msgid "Speed improvements."
-msgstr ""
+msgstr "Hız iyileştirmeleri"
 
 #: kmuddy/main.cpp:70
 #, kde-format
@@ -3519,32 +3522,32 @@ msgstr "Vadim Peretokin"
 #: kmuddy/main.cpp:71
 #, kde-format
 msgid "Many improvements, website"
-msgstr ""
+msgstr "Birçok iyileştirme, web sitesi"
 
 #: kmuddy/main.cpp:72
 #, kde-format
 msgid "Heiko Koehn"
-msgstr "Heiko Koehn"
+msgstr "Heiko Köhn"
 
 #: kmuddy/main.cpp:73
 #, kde-format
 msgid "Scripting improvements"
-msgstr ""
+msgstr "Betik yazımı iyileştirmeleri"
 
 #: kmuddy/main.cpp:74
 #, kde-format
 msgid "Robert Marmorstein"
-msgstr ""
+msgstr "Robert Marmorstein"
 
 #: kmuddy/main.cpp:75
 #, kde-format
 msgid "Systray icon support"
-msgstr ""
+msgstr "Sistem tepsisi simgesi desteği"
 
 #: libs/caliaseditor.cpp:94
 #, kde-format
 msgid "&Alias text"
-msgstr ""
+msgstr "&Arma metni"
 
 #: libs/caliaseditor.cpp:112
 #, kde-format
@@ -3552,16 +3555,18 @@ msgid ""
 "Type of matching. Alias will only be activated if this passes this type of "
 "test. Note that aliases are always matched as whole words."
 msgstr ""
+"Eşleştirme türü. Arma, yalnızca bu tür bir sınamayı geçerse etkinleştirilir. "
+"Armaların her zaman tam sözcükler olarak eşleştirildiğini unutmayın."
 
 #: libs/caliaseditor.cpp:134
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr ""
+msgstr "&Değiştirme metinleri"
 
 #: libs/caliaseditor.cpp:138
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr ""
+msgstr "Girdiğiniz komutun değiştirileceği komutlar."
 
 #: libs/caliaseditor.cpp:153
 #, kde-format
@@ -3569,11 +3574,14 @@ msgid ""
 "This is testing area. You can test your alias here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"Bu, sınama alanıdır. Armanızın istediğiniz şeyi yapıp yapmadığını görmek "
+"için onu burada sınayabilirsiniz. Yalnızca bir metin girin ve neler olduğuna "
+"bakın."
 
 #: libs/caliaseditor.cpp:190
 #, kde-format
 msgid "Send original command"
-msgstr ""
+msgstr "Özgün komut gönder"
 
 #: libs/caliaseditor.cpp:191
 #, kde-format
@@ -3582,6 +3590,9 @@ msgid ""
 "you enable this option, both original and replacement commands are sent "
 "(original command is sent first)."
 msgstr ""
+"Bu arma komutunuzla eşleşiyorsa bir değiştirme komutu gönderilecektir. Bu "
+"seçeneği etkinleştirirseniz hem özgün hem değiştirme komutları gönderilir "
+"(önce özgün komut gönderilir)."
 
 #: libs/caliaseditor.cpp:197
 #, kde-format
@@ -3589,11 +3600,13 @@ msgid ""
 "When enabled, this alias will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"Etkinleştirildiğinde, bu arma yalnızca eşleşen diziden önce/sonra boşluklar "
+"varsa veya bir şey yoksa metinle eşleşir."
 
 #: libs/caliaseditor.cpp:205
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr ""
+msgstr "Öneki/soneki içer"
 
 #: libs/caliaseditor.cpp:206
 #, kde-format
@@ -3601,6 +3614,7 @@ msgid ""
 "Prefix/suffix of matched text will be automatically appended to the expanded "
 "text."
 msgstr ""
+"Eşleşen metnin öneki/soneki kendiliğinden genişletilen metne iliştirilir."
 
 #: libs/caliaseditor.cpp:210
 #, kde-format
@@ -3614,16 +3628,24 @@ msgid ""
 "from a list (using the condition to check if a match is in the list), or "
 "something like that."
 msgstr ""
+"<p>Global eşleşme ile, bir arma/tetikleyici, dizgiyi birden çok kez "
+"içeriyorsa birden çok kez eşleşebilir. Örneğin, dizgi abc ise abcdabcd "
+"verildiğinde global eşleşme kapalıyken yalnızca bir kez, açıksa iki kez "
+"eşleşir. Her eşleşme için istenen işlemler gerçekleştirilir - böylece "
+"komutlar, eşleşme başına bir kez olmak üzere birden çok kez gönderilebilir.</"
+"p><p>Koşulun sağlanamaması taramayı sonlandırmaz, dolayısıyla bunu, bir "
+"listeden adları vurgulamak (eşleşmenin listede olup olmadığını denetlemek "
+"için koşulu kullanarak) veya başka bir şey için kullanabilirsiniz."
 
 #: libs/caliaseditor.cpp:310
 #, kde-format
 msgid "This text did not match your alias."
-msgstr ""
+msgstr "Bu metin armanızla eşleşmedi."
 
 #: libs/caliaseditor.cpp:315
 #, kde-format
 msgid "This text matches your alias."
-msgstr ""
+msgstr "Bu metin armanızla eşleşiyor."
 
 #: libs/caliaseditor.cpp:329
 #, kde-format
@@ -3633,22 +3655,23 @@ msgstr "Komut: "
 #: libs/ccmdparser.cpp:432
 #, kde-format
 msgid "Sorry, count is limited to 100.\n"
-msgstr ""
+msgstr "Üzgünüz, sayı 100 ile sınırlıdır.\n"
 
 #: libs/ccmdparser.cpp:435
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr ""
+msgstr "Bu sınırı, Profil / MUD Tercihleri'nde değiştirebilirsiniz."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
 msgid "Sorry, but macro calls are only available for profile connections."
 msgstr ""
+"Üzgünüz, makro çağrıları yalnızca profil bağlantılarında kullanılabilir."
 
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
 msgid "This macro does not exist."
-msgstr ""
+msgstr "Bu makro yok."
 
 #: libs/cconsole.cpp:133
 #, kde-format
@@ -3693,13 +3716,13 @@ msgstr "önce"
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr ""
+msgstr "%1 işlevi yok - boş dönüş değeri varsayılıyor."
 
 #: libs/clist.cpp:468
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
-msgstr ""
+msgstr "Bu dosya kök grubu içermiyor, dolayısıyla yüklenemiyor."
 
 #: libs/clist.cpp:471 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:229
@@ -3708,33 +3731,35 @@ msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
 "unable to open it."
 msgstr ""
+"Bu dosya KMuddy'nin daha yeni bir sürümüyle oluşturulmuş. Sizdeki sürüm bu "
+"dosyayı açamıyor."
 
 #: libs/clist.cpp:473
 #, kde-format
 msgid "This is not a KMuddy object file."
-msgstr ""
+msgstr "Bu bir KMuddy nesne dosyası değil."
 
 #: libs/clist.cpp:475 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:233
 #, kde-format
 msgid "This file is corrupted."
-msgstr ""
+msgstr "Bu dosya hasar görmüş."
 
 #: libs/clist.cpp:479 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:236
 #, kde-format
 msgid "Error at line %1, column %2: %3"
-msgstr ""
+msgstr "%1. satır %2. sütünda hata: %3"
 
 #: libs/clisteditor.cpp:75
 #, kde-format
 msgid "&Apply changes"
-msgstr ""
+msgstr "Değişiklikleri &uygula"
 
 #: libs/clisteditor.cpp:76
 #, kde-format
 msgid "&Undo changes"
-msgstr ""
+msgstr "Değişiklikleri &geri al"
 
 #: libs/clisteditor.cpp:217
 #, kde-format
@@ -3749,192 +3774,196 @@ msgstr "&Öncelik"
 #: libs/clisteditor.cpp:224
 #, kde-format
 msgid "&Name"
-msgstr "&İsim"
+msgstr "&Ad"
 
 #: libs/clisteditor.cpp:285
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
 msgstr ""
+"Bu ada sahip bir grup halihazırda var olduğundan grup yeniden "
+"adlandırılamıyor."
 
 #: libs/clisteditor.cpp:292
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
 msgstr ""
+"Bu ada sahip bir nesne halihazırda var olduğundan nesne yeniden "
+"adlandırılamıyor."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
 msgid "Error in file - group with no name."
-msgstr ""
+msgstr "Dosyada hata - adsız grup"
 
 #: libs/clistgroup.cpp:233
 #, kde-format
 msgid "Error in file - duplicate group name."
-msgstr ""
+msgstr "Dosyada hata - yinelenmiş grup adı"
 
 #: libs/clistviewer.cpp:65
 #, kde-format
 msgid "Delete object"
-msgstr ""
+msgstr "Nesneyi sil"
 
 #: libs/clistviewer.cpp:70 libs/clistviewer.cpp:165
 #, kde-format
 msgid "Delete group"
-msgstr ""
+msgstr "Grubu sil"
 
 #: libs/clistviewer.cpp:74
 #, kde-format
 msgid "Add subgroup"
-msgstr ""
+msgstr "Alt grup ekle"
 
 #: libs/clistviewer.cpp:79
 #, kde-format
 msgid "Add group"
-msgstr ""
+msgstr "Grup ekle"
 
 #: libs/clistviewer.cpp:84
 #, kde-format
 msgid "Add object"
-msgstr ""
+msgstr "Nesne ekle"
 
 #: libs/clistviewer.cpp:164
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr ""
+msgstr "Bu grubu silmeyi gerçekten istiyor musunuz?"
 
 #: libs/clistviewer.cpp:167
 #, kde-format
 msgid "Do you really want to delete this %1?"
-msgstr ""
+msgstr "Bu %1 nesnesini silmeyi gerçekten istiyor musunuz?"
 
 #: libs/clistviewer.cpp:168
 #, kde-format
 msgid "Delete %1"
-msgstr "%1 Sil"
+msgstr "Sil: %1"
 
 #: libs/clistviewer.cpp:194
 #, kde-format
 msgid "Create Group"
-msgstr ""
+msgstr "Grup Oluştur"
 
 #: libs/clistviewer.cpp:194
 #, kde-format
 msgid "Please enter the group name:"
-msgstr ""
+msgstr "Lütfen grup adını girin:"
 
 #: libs/clistviewer.cpp:200
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr ""
+msgstr "Bu ada sahip bir grup halihazırda var olduğundan grup oluşturulamıyor."
 
 #: libs/cmsp.cpp:284
 #, kde-format
 msgid "MSP: Received corrupted sound trigger!"
-msgstr ""
+msgstr "MSP: Hasar görmüş ses tetiği alındı!"
 
 #: libs/cmsp.cpp:285
 #, kde-format
 msgid "MSP: Problem was: %1"
-msgstr ""
+msgstr "MSP: Sorun şuydu: %1"
 
 #: libs/cmsp.cpp:315
 #, kde-format
 msgid "Parameter names must be followed by '='."
-msgstr ""
+msgstr "Parametre adlarından sonra '=' gelmelidir."
 
 #: libs/cmsp.cpp:340
 #, kde-format
 msgid "Parameter %1 requires a numeric argument"
-msgstr ""
+msgstr "%1 parametresi bir sayısal argüman gerektiriyor"
 
 #: libs/cmsp.cpp:351
 #, kde-format
 msgid "Value of param V is out of 0-100 range."
-msgstr ""
+msgstr "V parametresinin değeri 0-100 eriminin dışında."
 
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr ""
+msgstr "L parametresinin değeri -1;1-100 eriminin dışında."
 
 #: libs/cmsp.cpp:373
 #, kde-format
 msgid "Value of param P is out of 0-100 range."
-msgstr ""
+msgstr "P parametresinin değeri 0-100 eriminin dışında."
 
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr ""
+msgstr "C parametresinin değeri 0 veya 1 olmalıdır."
 
 #: libs/cmsp.cpp:393
 #, kde-format
 msgid "Received unfinished sequence."
-msgstr ""
+msgstr "Bitmemiş sıralama alındı."
 
 #: libs/cmsp.cpp:449
 #, kde-format
 msgid "MSP: Multiple downloads not supported, request ignored."
-msgstr ""
+msgstr "MSP: Çoklu indirmeler desteklenmiyor - istek yok sayıldı."
 
 #: libs/cmsp.cpp:469
 #, kde-format
 msgid "MSP: downloading of sounds disabled - request ignored."
-msgstr ""
+msgstr "MSP: Seslerin indirilmesi devre dışı - istek yok sayıldı."
 
 #: libs/coutput.cpp:232
 #, kde-format
 msgid "No, no, no!"
-msgstr ""
+msgstr "Hayır, hayır, hayır!"
 
 #: libs/coutput.cpp:233
 #, kde-format
 msgid "I don't agree with it."
-msgstr ""
+msgstr "Katılmıyorum."
 
 #: libs/coutput.cpp:234
 #, kde-format
 msgid "Better not."
-msgstr ""
+msgstr "Olmasa iyi olur."
 
 #: libs/coutput.cpp:235
 #, kde-format
 msgid "I'd probably suggest to reject."
-msgstr ""
+msgstr "Büyük olasılıkla reddetmeli derim."
 
 #: libs/coutput.cpp:236
 #, kde-format
 msgid "Saying no seems a bit better."
-msgstr ""
+msgstr "Hayır demek biraz daha iyi gibi."
 
 #: libs/coutput.cpp:237
 #, kde-format
 msgid "Saying yes seems a bit better."
-msgstr ""
+msgstr "Evet demek biraz daha iyi gibi."
 
 #: libs/coutput.cpp:238
 #, kde-format
 msgid "I'd probably suggest to accept."
-msgstr ""
+msgstr "Büyük olasılıkla kabul etmeli derim."
 
 #: libs/coutput.cpp:239
 #, kde-format
 msgid "Sounds good."
-msgstr ""
+msgstr "Kulağa hoş geliyor."
 
 #: libs/coutput.cpp:240
 #, kde-format
 msgid "I agree with it."
-msgstr ""
+msgstr "Katılıyorum."
 
 #: libs/coutput.cpp:241
 #, kde-format
 msgid "Definitely yes!"
-msgstr ""
+msgstr "Kesinlikle evet!"
 
 #: libs/coutput.cpp:243
 #, kde-format
 msgid "My decision: %1"
-msgstr ""
+msgstr "Kararım: %1"
 
 #: libs/cpluginmanager.cpp:285
 #, kde-format
@@ -3944,17 +3973,17 @@ msgstr "Eklentiler"
 #: libs/cprofilemanager.cpp:71
 #, kde-format
 msgid "Profile name"
-msgstr ""
+msgstr "Profil adı"
 
 #: libs/cprofilemanager.cpp:74
 #, kde-format
 msgid "Login name"
-msgstr ""
+msgstr "Oturum açma adı"
 
 #: libs/cstatus.cpp:41 libs/cstatus.cpp:180
 #, kde-format
 msgid "Off-line"
-msgstr ""
+msgstr "Çevrimdışı"
 
 #: libs/cstatus.cpp:44 libs/cstatus.cpp:166 libs/cstatus.cpp:174
 #: libs/cstatus.cpp:210 libs/cstatus.cpp:258
@@ -3980,17 +4009,17 @@ msgstr "Bağlantı kesildi."
 #: libs/cstatus.cpp:183
 #, kde-format
 msgid "Connection has been closed."
-msgstr ""
+msgstr "Bağlantı kapatıldı."
 
 #: libs/cvariablelist.cpp:375
 #, kde-format
 msgid "This is not a KMuddy variable list file."
-msgstr ""
+msgstr "Bu bir KMuddy değişken listesi dosyası değil."
 
 #: plugins/converter/converterdialog.cpp:40
 #, kde-format
 msgid "Profile Converter"
-msgstr ""
+msgstr "Profil Dönüştürücü"
 
 #: plugins/converter/converterdialog.cpp:49
 #, kde-format
@@ -4000,6 +4029,10 @@ msgid ""
 "Existing profiles will not be overwritten, even if they have the same name. "
 "The old profiles will be kept intact."
 msgstr ""
+"Dönüştürmek istediğiniz profilleri seçin ve Tamam'a basın. Bu araç, seçili "
+"profillerden gelen bilgileri içeren yeni bir profil oluşturacaktır. Aynı ada "
+"sahip olsalar bile var olan profillerin üzerine yazılmaz. Eski profiller "
+"korunur."
 
 #: plugins/converter/converterdialog.cpp:54
 #, kde-format
@@ -4009,17 +4042,17 @@ msgstr "Yol"
 #: plugins/converter/converterplugin.cpp:74
 #, kde-format
 msgid "Profile &Converter..."
-msgstr ""
+msgstr "Profil &Dönüştürücü..."
 
 #: plugins/converter/converterplugin.cpp:130
 #, kde-format
 msgid "The profiles have been successfully converted."
-msgstr ""
+msgstr "Profiller başarıyla dönüştürüldü."
 
 #: plugins/converter/converterplugin.cpp:132
 #, kde-format
 msgid "You did not specify any profiles to convert."
-msgstr ""
+msgstr "Dönüştürülecek hiçbir profil belirtmediniz."
 
 #: plugins/mapper/cmapclipboard.cpp:64
 #, kde-format
@@ -4029,7 +4062,7 @@ msgstr "Tümünü Seç"
 #: plugins/mapper/cmapclipboard.cpp:68
 #, kde-format
 msgid "Unselect All"
-msgstr "Hiçbirsini Seçme"
+msgstr "Tümünün Seçimini Kaldır"
 
 #: plugins/mapper/cmapclipboard.cpp:72
 #, kde-format
@@ -4054,27 +4087,27 @@ msgstr "Yapıştır"
 #: plugins/mapper/cmapclipboard.cpp:302 plugins/mapper/cmapclipboard.cpp:449
 #, kde-format
 msgid "Paste Element"
-msgstr ""
+msgstr "Ögeyi Yapıştır"
 
 #: plugins/mapper/cmapclipboard.cpp:315 plugins/mapper/cmapclipboard.cpp:459
 #, kde-format
 msgid "Update Properties"
-msgstr ""
+msgstr "Özellikleri Güncelle"
 
 #: plugins/mapper/cmapclipboard.cpp:380
 #, kde-format
 msgid "Paste Path"
-msgstr ""
+msgstr "Yolu Yapıştır"
 
 #: plugins/mapper/cmapclipboard.cpp:472
 #, kde-format
 msgid "Delete Elements"
-msgstr ""
+msgstr "Ögeleri Sil"
 
 #: plugins/mapper/cmapelement.cpp:339
 #, kde-format
 msgid "Resize Element"
-msgstr ""
+msgstr "Ögeyi Yeniden Boyutlandır"
 
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
 #, kde-format
@@ -4089,52 +4122,52 @@ msgstr "Harita #1"
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
-msgstr ""
+msgstr "Haritalayıcı: Yönler"
 
 #: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
-msgstr ""
+msgstr "Haritalayıcı: Hareket"
 
 #: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
-msgstr ""
+msgstr "Haritalayıcı: Renkler"
 
 #: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
-msgstr ""
+msgstr "Haritalayıcı: Hızlı Yürüme"
 
 #: plugins/mapper/cmapmanager.cpp:410
 #, kde-format
 msgid "Change Login Room"
-msgstr ""
+msgstr "Oturum Açma Odasını Değiştir"
 
 #: plugins/mapper/cmapmanager.cpp:413
 #, kde-format
 msgid "Remove Login Room Status"
-msgstr ""
+msgstr "Oturum Açma Odası Durumunu Kaldır"
 
 #: plugins/mapper/cmapmanager.cpp:420
 #, kde-format
 msgid "Set Login Room Status"
-msgstr ""
+msgstr "Oturum Açma Odası Durumunu Ayarla"
 
 #: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Change Current Room"
-msgstr ""
+msgstr "Geçerli Odayı Değiştir"
 
 #: plugins/mapper/cmapmanager.cpp:454
 #, kde-format
 msgid "Remove Current Room Status"
-msgstr ""
+msgstr "Geçerli Oda Durumunu Kaldır"
 
 #: plugins/mapper/cmapmanager.cpp:459
 #, kde-format
 msgid "Set Current Room Status"
-msgstr ""
+msgstr "Geçerli Oda Durumunu Ayarla"
 
 #: plugins/mapper/cmapmanager.cpp:567
 #, kde-format
@@ -4145,17 +4178,17 @@ msgstr "Düzey Oluştur"
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:34
 #, kde-format
 msgid "Create Room"
-msgstr ""
+msgstr "Oda Oluştur"
 
 #: plugins/mapper/cmapmanager.cpp:664 plugins/mapper/cmapmanager.cpp:693
 #, kde-format
 msgid "Create Text"
-msgstr ""
+msgstr "Metin Oluştur"
 
 #: plugins/mapper/cmapmanager.cpp:764
 #, kde-format
 msgid "A path already exists at this location"
-msgstr ""
+msgstr "Bu konumda bir yol halihazırda var"
 
 #: plugins/mapper/cmapmanager.cpp:764 plugins/mapper/cmapmanager.cpp:1448
 #: plugins/mapper/cmapmanager.cpp:1502 plugins/mapper/cmapmanager.cpp:1536
@@ -4163,13 +4196,13 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:614 plugins/mapper/cmapview.cpp:623
 #, kde-format
 msgid "KMuddy Mapper"
-msgstr ""
+msgstr "KMuddy Haritalayıcı"
 
 #: plugins/mapper/cmapmanager.cpp:777 plugins/mapper/cmapmanager.cpp:811
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:42
 #, kde-format
 msgid "Create Path"
-msgstr ""
+msgstr "Yol Oluştur"
 
 #: plugins/mapper/cmapmanager.cpp:857
 #, kde-format
@@ -4179,83 +4212,83 @@ msgstr "Düzeyi Sil"
 #: plugins/mapper/cmapmanager.cpp:891 plugins/mapper/cmapmanager.cpp:900
 #, kde-format
 msgid "Delete Element"
-msgstr ""
+msgstr "Ögeyi Sil"
 
 #: plugins/mapper/cmapmanager.cpp:1448
 #, kde-format
 msgid "Speedwalking is already in progress"
-msgstr ""
+msgstr "Halihazırda hızlı yürünüyor"
 
 #: plugins/mapper/cmapmanager.cpp:1502
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
-msgstr ""
+msgstr "Otomatik haritalayıcı, istenen odaya bir yol bulamadı"
 
 #: plugins/mapper/cmapmanager.cpp:1536
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
-msgstr ""
+msgstr "Hızlı yürüme iptal edildi; çünkü hareket sınırına ulaşıldı"
 
 #: plugins/mapper/cmapmanager.cpp:1635
 #, kde-format
 msgid "Move Elements in map"
-msgstr ""
+msgstr "Haritada Ögeleri Taşı"
 
 #: plugins/mapper/cmapmanager.cpp:1644
 #, kde-format
 msgid "Make Path Two-Way"
-msgstr ""
+msgstr "Yolu İki Yönlü Yap"
 
 #: plugins/mapper/cmapmanager.cpp:1654
 #, kde-format
 msgid "Make Path One-Way"
-msgstr ""
+msgstr "Yolu Tek Yönlü Yap"
 
 #: plugins/mapper/cmapmanager.cpp:1690 plugins/mapper/cmapmanager.cpp:1699
 #, kde-format
 msgid "Change Element Property"
-msgstr ""
+msgstr "Öge Özelliğini Değiştir"
 
 #: plugins/mapper/cmapmanager.cpp:1772
 #, kde-format
 msgid "Root Zone"
-msgstr ""
+msgstr "Kök Bölge"
 
 #: plugins/mapper/cmapmanager.cpp:1788
 #, kde-format
 msgid "Test room 1"
-msgstr ""
+msgstr "Sınama odası 1"
 
 #: plugins/mapper/cmapmanager.cpp:1791
 #, kde-format
 msgid "Test room 2"
-msgstr ""
+msgstr "Sınama odası 2"
 
 #: plugins/mapper/cmapmanager.cpp:1794
 #, kde-format
 msgid "Test room 3"
-msgstr ""
+msgstr "Sınama odası 3"
 
 #: plugins/mapper/cmapmanager.cpp:1797
 #, kde-format
 msgid "Test room 4"
-msgstr ""
+msgstr "Sınama odası 4"
 
 #: plugins/mapper/cmapmanager.cpp:1813
 #, kde-format
 msgid "Set Special Exit"
-msgstr ""
+msgstr "Özel Çıkış Ayarla"
 
 #: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:685
 #, kde-format
 msgid "Add Bend"
-msgstr ""
+msgstr "Dönemeç Ekle"
 
 #: plugins/mapper/cmappath.cpp:616
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:217
 #, kde-format
 msgid "Move Bend"
-msgstr ""
+msgstr "Dönemeci Taşı"
 
 #: plugins/mapper/cmappath.cpp:631 plugins/mapper/cmapview.cpp:703
 #, kde-format
@@ -4265,103 +4298,103 @@ msgstr "Yol Bölütünü Sil"
 #: plugins/mapper/cmapview.cpp:54 plugins/mapper/kmuddy_mapper.cpp:61
 #, kde-format
 msgid "Mapper"
-msgstr ""
+msgstr "Haritalayıcı"
 
 #: plugins/mapper/cmapview.cpp:81
 #, kde-format
 msgid "Follow Moves"
-msgstr ""
+msgstr "Hareketleri İzle"
 
 #: plugins/mapper/cmapview.cpp:87
 #, kde-format
 msgid "Auto Create"
-msgstr ""
+msgstr "Otomatik Oluştur"
 
 #: plugins/mapper/cmapview.cpp:123
 #, kde-format
 msgid "&Grid"
-msgstr ""
+msgstr "&Izgara"
 
 #: plugins/mapper/cmapview.cpp:128
 #, kde-format
 msgid "Display Upper Level"
-msgstr ""
+msgstr "Üst Düzeyi Görüntüle"
 
 #: plugins/mapper/cmapview.cpp:133
 #, kde-format
 msgid "Display Lower Level"
-msgstr ""
+msgstr "Alt Düzeyi Görüntüle"
 
 #: plugins/mapper/cmapview.cpp:138
 #, kde-format
 msgid "Delete Current Level"
-msgstr ""
+msgstr "Geçerli Düzeyi Sil"
 
 #: plugins/mapper/cmapview.cpp:143
 #, kde-format
 msgid "Create New Zone"
-msgstr ""
+msgstr "Yeni Bölge Oluştur"
 
 #: plugins/mapper/cmapview.cpp:148
 #, kde-format
 msgid "Delete Current Zone"
-msgstr ""
+msgstr "Geçerli Bölgeyi Sil"
 
 #: plugins/mapper/cmapview.cpp:155
 #, kde-format
 msgid "Map Upper Level"
-msgstr ""
+msgstr "Yukarı Düzeyi Haritala"
 
 #: plugins/mapper/cmapview.cpp:159
 #, kde-format
 msgid "Map Lower Level"
-msgstr ""
+msgstr "Aşağı Düzeyi Haritala"
 
 #: plugins/mapper/cmapview.cpp:166
 #, kde-format
 msgid "Set &Current Position"
-msgstr ""
+msgstr "&Geçerli Konumu Ayarla"
 
 #: plugins/mapper/cmapview.cpp:170
 #, kde-format
 msgid "Set Room to &Login Point"
-msgstr ""
+msgstr "Odayı &Oturum Açma Noktasına Ayarla"
 
 #: plugins/mapper/cmapview.cpp:174
 #, kde-format
 msgid "&Speed walk to room"
-msgstr ""
+msgstr "Odaya &hızlı yürü"
 
 #: plugins/mapper/cmapview.cpp:178
 #, kde-format
 msgid "&Delete room"
-msgstr ""
+msgstr "Odayı &sil"
 
 #: plugins/mapper/cmapview.cpp:183 plugins/mapper/cmapview.cpp:195
 #: plugins/mapper/cmapview.cpp:227
 #, kde-format
 msgid "&Properties"
-msgstr ""
+msgstr "&Özellikler"
 
 #: plugins/mapper/cmapview.cpp:190
 #, kde-format
 msgid "&Delete Text"
-msgstr ""
+msgstr "Metni &sil"
 
 #: plugins/mapper/cmapview.cpp:202
 #, kde-format
 msgid "&One way"
-msgstr ""
+msgstr "&Tek yön"
 
 #: plugins/mapper/cmapview.cpp:206
 #, kde-format
 msgid "&Two way"
-msgstr ""
+msgstr "&Çift yön"
 
 #: plugins/mapper/cmapview.cpp:210
 #, kde-format
 msgid "&Add Bend"
-msgstr ""
+msgstr "Dönemeç &Ekle"
 
 #: plugins/mapper/cmapview.cpp:214
 #, kde-format
@@ -4371,12 +4404,12 @@ msgstr "&Bölütü Kaldır"
 #: plugins/mapper/cmapview.cpp:218
 #, kde-format
 msgid "&Edit Bends"
-msgstr "Eğmeleri Dü&zenle"
+msgstr "Dönemeçleri Dü&zenle"
 
 #: plugins/mapper/cmapview.cpp:222
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "Yolu &Sil"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:232
@@ -4400,130 +4433,130 @@ msgstr "&Etiket"
 #: plugins/mapper/cmapview.cpp:585
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
-msgstr ""
+msgstr "O yönde bir düzey yok. Yeni bir tane oluşturmak istiyor musunuz?"
 
 #: plugins/mapper/cmapview.cpp:607
 #, kde-format
 msgid "Are you sure that you want to delete the current level?"
-msgstr ""
+msgstr "Geçerli düzeyi silmek istediğinizden emin misiniz?"
 
 #: plugins/mapper/cmapview.cpp:614
 #, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr ""
+msgstr "Lütfen yeni bölgenin adını girin:"
 
 #: plugins/mapper/cmapview.cpp:623
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
-msgstr ""
+msgstr "Geçerli bölgeyi silmek istediğinizden emin misiniz? Bu geri alınamaz."
 
 #: plugins/mapper/cmapview.cpp:760
 #, kde-format
 msgid "Change room label position"
-msgstr ""
+msgstr "Oda etiketi konumunu değiştir"
 
 #: plugins/mapper/cmapview.cpp:786
 #, kde-format
 msgid "Change zone label position"
-msgstr ""
+msgstr "Bölge etiketi konumunu değiştir"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
 msgid "Current Room : "
-msgstr ""
+msgstr "Geçerli Oda: "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
 msgid "Level : "
-msgstr "Düzey : "
+msgstr "Düzey: "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:57
 #, kde-format
 msgid "Zone : "
-msgstr ""
+msgstr "Bölge: "
 
 #: plugins/mapper/cmapzone.cpp:34
 #, kde-format
 msgid "Unnamed Zone"
-msgstr ""
+msgstr "Adsız Bölge"
 
 #: plugins/mapper/cmapzonemanager.cpp:231
 #, kde-format
 msgid "This is not a KMuddy map list."
-msgstr ""
+msgstr "Bu bir KMuddy harita listesi değil."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
 #, kde-format
 msgid "Mapper Colors Options"
-msgstr ""
+msgstr "Haritalayıcı Renk Seçenekleri"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
 #, kde-format
 msgid "Current Level"
-msgstr ""
+msgstr "Geçerli Düzey"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr ""
+msgstr "Öntanımlı Yol Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr ""
+msgstr "Öntanımlı Oda Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
 #, kde-format
 msgid "Current Position Color"
-msgstr ""
+msgstr "Geçerli Konum Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
 #, kde-format
 msgid "Special Exit Color"
-msgstr ""
+msgstr "Özel Çıkış Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
 #, kde-format
 msgid "Login Room Color"
-msgstr ""
+msgstr "Oturum Açma Odası Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblEdit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
 #, kde-format
 msgid "Edit Mode Color"
-msgstr ""
+msgstr "Düzenleme Kipi Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr ""
+msgstr "Öntanımlı Metin Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr ""
+msgstr "Öntanımlı Bölge Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
 #, kde-format
 msgid "Selected Color"
-msgstr ""
+msgstr "Seçili Renk"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
 #, kde-format
 msgid "Lower Level"
-msgstr ""
+msgstr "Alt Düzey"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
@@ -4531,7 +4564,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
 #, kde-format
 msgid "Room Color"
-msgstr ""
+msgstr "Oda Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
@@ -4539,7 +4572,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
 #, kde-format
 msgid "Path Color"
-msgstr ""
+msgstr "Yol Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4555,37 +4588,37 @@ msgstr "Metin Rengi"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
 #, kde-format
 msgid "Zone Color"
-msgstr ""
+msgstr "Bölge Rengi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
 #, kde-format
 msgid "Upper Level"
-msgstr ""
+msgstr "Üst Düzey"
 
 #. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Arka Plan Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblGrid)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
 #, kde-format
 msgid "Grid Color"
-msgstr ""
+msgstr "Izgara Rengi"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
 #, kde-format
 msgid "Directions"
-msgstr ""
+msgstr "Yönler"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsLong)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
 #, kde-format
 msgid "Long Directions Commands"
-msgstr ""
+msgstr "Uzun Yönler Komutları"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
@@ -4593,7 +4626,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:216
 #, kde-format
 msgid "North"
-msgstr ""
+msgstr "Kuzey"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblEastShort)
@@ -4601,7 +4634,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:226
 #, kde-format
 msgid "East"
-msgstr ""
+msgstr "Doğu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthShort)
@@ -4609,7 +4642,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:236
 #, kde-format
 msgid "South"
-msgstr ""
+msgstr "Güney"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblWestShort)
@@ -4617,7 +4650,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:246
 #, kde-format
 msgid "West"
-msgstr ""
+msgstr "Batı"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastShort)
@@ -4625,7 +4658,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
 #, kde-format
 msgid "North East"
-msgstr ""
+msgstr "Kuzeydoğu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
@@ -4633,7 +4666,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
 #, kde-format
 msgid "South East"
-msgstr ""
+msgstr "Güneydoğu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
@@ -4641,7 +4674,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
 #, kde-format
 msgid "South West"
-msgstr ""
+msgstr "Güneybatı"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
@@ -4649,19 +4682,19 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:306
 #, kde-format
 msgid "North West"
-msgstr ""
+msgstr "Kuzeybatı"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
 #, kde-format
 msgid "Short Directions Commands"
-msgstr ""
+msgstr "Kısa Yönler Komutları"
 
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:108
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:143
 #, kde-format
 msgid "Enter invalid movement string as a regular expression"
-msgstr ""
+msgstr "Bir düzenli ifade olarak geçersiz hareket dizisi gir"
 
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:143
 #, kde-format
@@ -4672,19 +4705,19 @@ msgstr "Kmud"
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
 #, kde-format
 msgid "Valid Room Checking"
-msgstr ""
+msgstr "Geçerli Oda Denetimi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
 #, kde-format
 msgid "Enable valid room checking"
-msgstr ""
+msgstr "Geçerli oda denetimini etkinleştir"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
 #, kde-format
 msgid "Invalid Move Strings"
-msgstr ""
+msgstr "Geçersiz Hareket Dizileri"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
@@ -4708,43 +4741,43 @@ msgstr "Kaldır"
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:299
 #, kde-format
 msgid "Changed Path Properties"
-msgstr ""
+msgstr "Değiştirilmiş Yol Özellikleri"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr ""
+msgstr "Yol Özellikleri"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
 #, kde-format
 msgid "Exits"
-msgstr ""
+msgstr "Çıkışlar"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grdExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
 #, kde-format
 msgid "Exit Details"
-msgstr ""
+msgstr "Çıkış Ayrıntıları"
 
 #. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
 #, kde-format
 msgid "Two Way Exit"
-msgstr ""
+msgstr "İki Yönlü Çıkış"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
 #, kde-format
 msgid "Normal exit"
-msgstr ""
+msgstr "Normal çıkış"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
 #, kde-format
 msgid "Source Directions"
-msgstr ""
+msgstr "Kaynak Yönleri"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
@@ -4764,7 +4797,7 @@ msgstr "D"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:190
 #, kde-format
 msgid "S"
-msgstr ""
+msgstr "G"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcW)
@@ -4784,7 +4817,7 @@ msgstr "B"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:344
 #, kde-format
 msgid "NE"
-msgstr ""
+msgstr "KD"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdNW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcNW)
@@ -4794,7 +4827,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:278
 #, kde-format
 msgid "NW"
-msgstr ""
+msgstr "KB"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcSE)
@@ -4804,7 +4837,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:212
 #, kde-format
 msgid "SE"
-msgstr ""
+msgstr "GD"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdN)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcN)
@@ -4814,7 +4847,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
 #, kde-format
 msgid "N"
-msgstr ""
+msgstr "K"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
@@ -4824,43 +4857,43 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:234
 #, kde-format
 msgid "SW"
-msgstr ""
+msgstr "GB"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
 #, kde-format
 msgid "Destination Direction"
-msgstr ""
+msgstr "Hedef Konum Yönü"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
 #, kde-format
 msgid "Special Exit"
-msgstr ""
+msgstr "Özel Çıkış"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
 #, kde-format
 msgid "Special Command"
-msgstr ""
+msgstr "Özel Komut"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr ""
+msgstr "Kaynaktan Hedefe:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr ""
+msgstr "Hedeften Kaynağa:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
 #, kde-format
 msgid "Src To Destination Commands"
-msgstr ""
+msgstr "Kaynaktan Hedefe Komutları"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcBefore)
 #. i18n: ectx: property (text), widget (QLabel, lblDestBefore)
@@ -4868,7 +4901,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:706
 #, kde-format
 msgid "Before walking path:"
-msgstr ""
+msgstr "Yolu yürümeden önce:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcAfter)
 #. i18n: ectx: property (text), widget (QLabel, lblDestAfter)
@@ -4876,13 +4909,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:719
 #, kde-format
 msgid "After walking path:"
-msgstr ""
+msgstr "Yolu yürüdükten sonra:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraDestSrcCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:694
 #, kde-format
 msgid "Destination To Source Commands"
-msgstr ""
+msgstr "Hedeften Kayğana Komutları"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdOk)
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
@@ -4905,13 +4938,13 @@ msgstr "İptal"
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:223
 #, kde-format
 msgid "Changed Room Properties"
-msgstr ""
+msgstr "Değiştirilmiş Oda Özellikleri"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
 #, kde-format
 msgid "Room Properties"
-msgstr ""
+msgstr "Oda Özellikleri"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
@@ -4935,7 +4968,7 @@ msgstr "Açıklama:"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
 #, kde-format
 msgid "&Appearance"
-msgstr ""
+msgstr "&Görünüş"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
@@ -4947,49 +4980,49 @@ msgstr "Renk"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
 #, kde-format
 msgid "Room Color:"
-msgstr ""
+msgstr "Oda Rengi:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr ""
+msgstr "Öntanımlı oda rengi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
 #, kde-format
 msgid "LabelPosition"
-msgstr ""
+msgstr "EtiketKonumu"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr ""
+msgstr "Çı&kışlar"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
 #, kde-format
 msgid "Room Exits:"
-msgstr ""
+msgstr "Oda Çıkışları:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
 #, kde-format
 msgid "Direction"
-msgstr ""
+msgstr "Yön"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
 #, kde-format
 msgid "Before command"
-msgstr ""
+msgstr "Komuttan önce"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
 #, kde-format
 msgid "After command"
-msgstr ""
+msgstr "Komuttan sonra"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
@@ -5001,13 +5034,13 @@ msgstr "Özellikler"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:533
 #, kde-format
 msgid "&Contents"
-msgstr ""
+msgstr "&İçerik"
 
 #. i18n: ectx: property (text), widget (QLabel, lblContents)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
 #, kde-format
 msgid "RoomContents:"
-msgstr ""
+msgstr "Odaİçeriği:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
@@ -5025,43 +5058,43 @@ msgstr "Ögeyi Kaldır"
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
 #, kde-format
 msgid "Speedwalk Options"
-msgstr ""
+msgstr "Hızlı Yürüme Özellikleri"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
 #, kde-format
 msgid "Limit Speedwalk Moves"
-msgstr ""
+msgstr "Hızlı Yürüme Hareketlerini Sınırla"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkLimitSpeedwalk)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:38
 #, kde-format
 msgid "Limit speedwalk moves"
-msgstr ""
+msgstr "Hızlı yürüme özelliklerini sınırla"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLimitSpeedwalk)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:53
 #, kde-format
 msgid "Number of moves before aborting:"
-msgstr ""
+msgstr "Vazgeçmeden önceki hareket sayısı:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraDelay)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:106
 #, kde-format
 msgid "Delay Speedwalk Moves"
-msgstr ""
+msgstr "Hızlı Yürüme Hareketlerini Geciktir"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
 #, kde-format
 msgid "Delay before sending next command (centi secconds)"
-msgstr ""
+msgstr "Sonraki komutu göndermeden önceki gecikme (senti saniye)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
 #, kde-format
 msgid "Text Properties"
-msgstr ""
+msgstr "Metin Özellikleri"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
@@ -5085,7 +5118,7 @@ msgstr "Renk:"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "Düğme"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
@@ -5103,13 +5136,13 @@ msgstr "Özgün Boyut "
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
 #, kde-format
 msgid "Width (pixels):"
-msgstr ""
+msgstr "Genişlik (piksel):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
 #, kde-format
 msgid "Height (pixels):"
-msgstr ""
+msgstr "Yükseklik (piksel):"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
@@ -5121,13 +5154,13 @@ msgstr "Yazıtipi Boyutu"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
 #, kde-format
 msgid "Enter font size:"
-msgstr ""
+msgstr "Yazıtipi boyutu gir:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
 #, kde-format
 msgid "Set Size"
-msgstr ""
+msgstr "Boyutu Ayarla"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
@@ -5152,7 +5185,7 @@ msgstr "Önizleme:"
 #: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
 #, kde-format
 msgid "Speedwalk Progress"
-msgstr ""
+msgstr "Hızlı Yürüme İlerlemesi"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
 #: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
@@ -5163,7 +5196,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:72
 #, kde-format
 msgid "Show &mapper"
-msgstr ""
+msgstr "&Haritalayıcıyı göster"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
@@ -5175,17 +5208,17 @@ msgstr "Araçlar"
 #: plugins/mapper/kmuddymapperpart.rc:21
 #, kde-format
 msgid "Navigation"
-msgstr ""
+msgstr "Dolaşım"
 
 #: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
 #, kde-format
 msgid "Move Elements"
-msgstr ""
+msgstr "Ögeleri Taşı"
 
 #: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
 #, kde-format
 msgid "Change element notes"
-msgstr ""
+msgstr "Öge notlarını değiştir"
 
 #: plugins/mapper/plugins/standard/cmappluginstandard.cpp:76
 #, kde-format
@@ -5210,22 +5243,22 @@ msgstr "Seç"
 #: plugins/scripting/cscript.cpp:68
 #, kde-format
 msgid "Sorry, single-instance script."
-msgstr ""
+msgstr "Üzgünüz, tek örneklik betik."
 
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr ""
+msgstr "Betik &adı"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
 msgid "Name of this script."
-msgstr ""
+msgstr "Bu betiğin adı"
 
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
 msgid "&Command to execute"
-msgstr ""
+msgstr "Yürütülecek &komut"
 
 #: plugins/scripting/cscripteditor.cpp:73
 #, kde-format
@@ -5236,7 +5269,7 @@ msgid ""
 msgstr ""
 "Parametreleri içerecek biçimde yürütülecek komut. Parametrelere izin ver "
 "onay kutusunu etkinleştirirseniz komutu girdi satırından yürütürken daha çok "
-"parametre belirtebileceğinizi not edin."
+"parametre belirtebileceğinizi aklınızda tutun."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
@@ -5244,11 +5277,13 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
+"Betiğin çalışma dizini. Betik, tam olarak sanki konsolda bu dizinden "
+"çalıştırılmış gibi davranır."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
 msgid "Send user commands"
-msgstr ""
+msgstr "Kullanıcı komutları gönder"
 
 #: plugins/scripting/cscripteditor.cpp:91
 #, kde-format
@@ -5262,7 +5297,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
 msgid "Enable communication"
-msgstr ""
+msgstr "İletişimi etkinleştir"
 
 #: plugins/scripting/cscripteditor.cpp:95
 #, kde-format
@@ -5270,11 +5305,13 @@ msgid ""
 "Enables identification of lines of server output. Refer to the manual for "
 "more information."
 msgstr ""
+"Sunucu çıktısının satırlarının tanımlanabilmesini etkinleştirir. Daha fazla "
+"bilgi için kılavuza başvurun."
 
 #: plugins/scripting/cscripteditor.cpp:98
 #, kde-format
 msgid "Single-instance script"
-msgstr ""
+msgstr "Tek örneklik betik"
 
 #: plugins/scripting/cscripteditor.cpp:99
 #, kde-format
@@ -5282,11 +5319,12 @@ msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
 msgstr ""
+"Bu betiğin bir örneği halihazırda çalışıyorsa başka bir tanesi başlatılamaz."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
 msgid "Use flow control"
-msgstr ""
+msgstr "Akış denetimi kullan"
 
 #: plugins/scripting/cscripteditor.cpp:103
 #, kde-format
@@ -5298,11 +5336,17 @@ msgid ""
 "better not to use this feature.</p><p>If you don't need to disable flow "
 "control for some reason, leave this on.</p>"
 msgstr ""
+"<p>Etkinleştirilirse bu betik için akış denetimi kullanılacaktır. Akış "
+"denetimi, betiklerin eşzamanlı tutulmasını sağlar; yani sunucudan iki satır "
+"gelirse çalışan tüm betikler ilkini alana kadar ikinci satır betiklere "
+"gönderilmez. Ancak bazı durumlarda bu özelliği kullanmamak daha iyidir.</"
+"p><p>Herhangi bir nedenle akış denetimini devre dışı bırakmanız gerekmiyorsa "
+"bunu açık bırakın.</p>"
 
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
 msgid "Communicate variables"
-msgstr ""
+msgstr "Değişkenleri ilet"
 
 #: plugins/scripting/cscripteditor.cpp:112
 #, kde-format
@@ -5310,71 +5354,74 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
+"Etkinleştirilirse gerçek değişken değerlerini elde etmenize ve "
+"değiştirmenize izin veren bir UNIX etki alanı yuvası oluşturulur. Daha fazla "
+"bilgiye belgelendirmeden ulaşabilirsiniz."
 
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
 msgid "Choose script"
-msgstr ""
+msgstr "Betik seç"
 
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
 msgid "Choose working directory"
-msgstr ""
+msgstr "Çalışma dizini seç"
 
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr ""
+msgstr "Bu tür bir dış betik yok!"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr ""
+msgstr "Çalışan betikler"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr ""
+msgstr "&Çalışan betikler"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
 msgid "&Terminate"
-msgstr ""
+msgstr "&Sonlandır"
 
 #: plugins/scripting/dlgrunninglist.cpp:54
 #, kde-format
 msgid "&Kill"
-msgstr ""
+msgstr "&Öldür"
 
 #: plugins/scripting/scriptingplugin.cpp:65
 #, kde-format
 msgid "/exec: Script list is not available."
-msgstr ""
+msgstr "/exec: Betik listesi kullanılamıyor."
 
 #: plugins/scripting/scriptingplugin.cpp:125
 #, kde-format
 msgid "Scripts"
-msgstr ""
+msgstr "Betikler"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:61
 #, kde-format
 msgid "Variable name that this trigger will be reacting on."
-msgstr ""
+msgstr "Bu tetiğin tepki vereceği değişken adı."
 
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
 msgid "&Commands"
-msgstr ""
+msgstr "&Komutlar"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
 msgid "Commands that will be executed when this trigger matches."
-msgstr ""
+msgstr "Bu tetik eşleştiğinde yürütülecek komutlar"
 
 #: plugins/vartrigs/vartrigplugin.cpp:41
 #, kde-format
 msgid "Variable Triggers"
-msgstr ""
+msgstr "Değişken Tetikleri"
 
 #: plugins/varviewer/dlgvarviewer.cpp:70
 #, kde-format
