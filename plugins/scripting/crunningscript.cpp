@@ -301,3 +301,4 @@ void cRunningScript::establishSocket (int sess)
   process->setEnvironment(env);
 }
 
+#include "moc_crunningscript.cpp"

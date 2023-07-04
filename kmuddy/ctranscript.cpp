@@ -499,3 +499,4 @@ QString cTranscript::getAFName()
   return advfname;
 }
 
+#include "moc_ctranscript.cpp"

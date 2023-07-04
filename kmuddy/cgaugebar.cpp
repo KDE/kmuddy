@@ -62,3 +62,4 @@ void cGaugeBar::removeGauge (cGauge *g)
   update ();
 }
 
+#include "moc_cgaugebar.cpp"

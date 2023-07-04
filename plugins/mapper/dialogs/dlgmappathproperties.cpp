@@ -446,3 +446,5 @@ void DlgMapPathProperties::slotSrcW()
 {
 	setSrcDirection(WEST);
 }
+
+#include "moc_dlgmappathproperties.cpp"

@@ -130,3 +130,4 @@ void cButton::objectDisabled ()
   ((cButtonList *) list())->updateButtons();
 }
 
+#include "moc_cbutton.cpp"

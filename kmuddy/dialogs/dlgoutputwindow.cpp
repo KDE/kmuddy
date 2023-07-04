@@ -86,3 +86,4 @@ void dlgOutputWindow::setFont(QFont font)
   owindow->setFont(font);
 }
 
+#include "moc_dlgoutputwindow.cpp"

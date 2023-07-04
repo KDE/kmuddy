@@ -173,3 +173,4 @@ void cMultiInputLine::keyPressEvent (QKeyEvent *e)
     QTextEdit::keyPressEvent (e);
 }
 
+#include "moc_cmultiinputline.cpp"

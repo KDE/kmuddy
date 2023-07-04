@@ -525,3 +525,4 @@ void CMapClipboard::slotInvertSelection(void)
   m_mapManager->levelChanged(m_mapManager->getActiveView()->getCurrentlyViewedLevel());
 }
 
+#include "moc_cmapclipboard.cpp"

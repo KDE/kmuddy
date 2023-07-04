@@ -312,3 +312,4 @@ void cListEditor::saveDataToObject ()
   d->saving = false;
 }
 
+#include "moc_clisteditor.cpp"

@@ -416,4 +416,4 @@ void CMapWidget::keyReleaseEvent(QKeyEvent *e)
   mapManager->getCurrentTool()->keyReleaseEvent(e);
 }
 
-
+#include "moc_cmapwidget.cpp"

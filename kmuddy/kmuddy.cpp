@@ -1338,3 +1338,4 @@ bool KMuddy::queryClose ()
   return true;
 }
 
+#include "moc_kmuddy.cpp"

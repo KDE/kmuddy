@@ -81,3 +81,4 @@ void CMapToolBase::plug (QWidget *w)
 	w->addAction(action);
 }
 
+#include "moc_cmaptoolbase.cpp"

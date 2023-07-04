@@ -476,3 +476,4 @@ QString dlgProfileSettings::variablePrefix ()
 
 #endif  //HAVE_MXP
 
+#include "moc_dlgprofilesettings.cpp"

@@ -92,3 +92,4 @@ void CMapToolEraser::toolUnselected(void)
 {
 }
 
+#include "moc_cmaptooleraser.cpp"

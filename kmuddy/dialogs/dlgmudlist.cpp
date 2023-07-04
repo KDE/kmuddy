@@ -158,3 +158,4 @@ const cMUDEntry *dlgMudList::selectedEntry ()
   return lst->entry (d->proxy->mapToSource (idx).row());
 }
 
+#include "moc_dlgmudlist.cpp"

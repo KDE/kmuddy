@@ -50,3 +50,4 @@ void cListGroupEditor::getDataFromGUI (cListObjectData *data)
   getDataFromCommonAttribEditor (data);
 }
 
+#include "moc_clistgroupeditor.cpp"

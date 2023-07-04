@@ -129,3 +129,4 @@ QSize cGaugeBarItemPrivate::sizeHint () const {
   return QSize (102, 16);
 }
 
+#include "moc_cgaugebaritem.cpp"

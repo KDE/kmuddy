@@ -1154,3 +1154,4 @@ void dlgAppSettings::putSettingsToDialog ()
   //--- NOTHING NEEDED ---
 }
 
+#include "moc_dlgappsettings.cpp"

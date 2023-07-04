@@ -397,3 +397,4 @@ void cPluginManager::passCommand (int sess, QString &command)
   if (dontSend) command = QString();
 }
 
+#include "moc_cpluginmanager.cpp"

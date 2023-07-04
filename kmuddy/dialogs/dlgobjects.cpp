@@ -243,3 +243,4 @@ void dlgObjects::activeObjectChanged (cListObject *obj)
   kDebug () << "Switched active object to " << obj->name() << "." << endl;
 }
 
+#include "moc_dlgobjects.cpp"

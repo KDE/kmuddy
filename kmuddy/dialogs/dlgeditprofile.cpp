@@ -209,3 +209,4 @@ void dlgEditProfile::accept ()
   QDialog::accept ();
 }
 
+#include "moc_dlgeditprofile.cpp"

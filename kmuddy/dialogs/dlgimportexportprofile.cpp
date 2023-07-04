@@ -140,3 +140,4 @@ void dlgImportExportProfile::browse ()
   }
 }
 
+#include "moc_dlgimportexportprofile.cpp"

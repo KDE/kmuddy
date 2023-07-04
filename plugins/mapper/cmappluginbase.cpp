@@ -97,3 +97,4 @@ void CMapPluginBase::createProfileConfigPanes()
 {
 }
 
+#include "moc_cmappluginbase.cpp"

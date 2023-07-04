@@ -274,3 +274,4 @@ void dlgConnect::doModify ()
   updateProfileFromDialog (profile);
 }
 
+#include "moc_dlgconnect.cpp"

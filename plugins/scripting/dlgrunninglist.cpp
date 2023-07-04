@@ -95,3 +95,4 @@ int dlgRunningList::selectedId ()
   return rlist->getModel()->data (idx, Qt::UserRole).toInt();
 }
 
+#include "moc_dlgrunninglist.cpp"

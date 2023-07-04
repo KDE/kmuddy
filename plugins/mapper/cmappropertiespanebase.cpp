@@ -26,3 +26,4 @@ CMapPropertiesPaneBase::CMapPropertiesPaneBase(QString title,QIcon * icon,elemen
 	setElement(element);
 }
 
+#include "moc_cmappropertiespanebase.cpp"

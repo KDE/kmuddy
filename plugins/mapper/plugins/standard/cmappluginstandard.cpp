@@ -254,3 +254,4 @@ CMapPluginStandard::DeletedElementList::iterator CMapPluginStandard::findZone(in
 	return m_deletedElements.end();
 }
 
+#include "moc_cmappluginstandard.cpp"

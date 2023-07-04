@@ -589,4 +589,4 @@ void CMapElement::writeBool(QDomElement *e,QString key,bool b)
   e->setAttribute(key, b ? "true" : "false");
 }
 
-                                                  
+#include "moc_cmapelement.cpp"

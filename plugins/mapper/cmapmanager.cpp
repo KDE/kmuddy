@@ -1823,3 +1823,4 @@ void CMapManager::generateTestMap()
   kDebug() << "test map created";
 }
 
+#include "moc_cmapmanager.cpp"

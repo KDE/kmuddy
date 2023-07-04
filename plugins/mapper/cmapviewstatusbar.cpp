@@ -152,3 +152,4 @@ void CMapViewStatusbar::renameZone(const QString &name)
   d->manager->zoneManager()->renameZone(idx, name);
 }
 
+#include "moc_cmapviewstatusbar.cpp"

@@ -114,3 +114,4 @@ void cStatusVarEditor::getDataFromGUI (cListObjectData *data)
   data->boolValues["percentage"] = d->chkpercent->isChecked();
 }
 
+#include "moc_cstatusvareditor.cpp"

@@ -419,3 +419,4 @@ void CMapToolSelect::slotStartDraging(void)
     element->setSelected(true);
 }
 
+#include "moc_cmaptoolselect.cpp"

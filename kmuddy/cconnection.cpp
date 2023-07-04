@@ -842,3 +842,4 @@ void cConnection::save ()
     d->windowlist->save();
 }
 
+#include "moc_cconnection.cpp"

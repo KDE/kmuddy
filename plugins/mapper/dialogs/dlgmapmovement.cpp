@@ -157,3 +157,4 @@ void DlgMapMovement::slotRemoveClicked(void)
     m_lstInvalidMoveStrs->removeItemWidget(item);
 }
 
+#include "moc_dlgmapmovement.cpp"

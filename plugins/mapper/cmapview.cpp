@@ -854,3 +854,4 @@ bool CMapView::queryClose()
   return true;
 }
 
+#include "moc_cmapview.cpp"

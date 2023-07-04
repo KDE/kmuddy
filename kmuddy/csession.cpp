@@ -227,3 +227,4 @@ void cSession::switchInputLines ()
   }
 }
 
+#include "moc_csession.cpp"

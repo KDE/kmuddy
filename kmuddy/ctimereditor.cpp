@@ -164,3 +164,4 @@ void cTimerEditor::getDataFromGUI (cListObjectData *data)
   data->strValues["script"] = d->script->text();
 }
 
+#include "moc_ctimereditor.cpp"

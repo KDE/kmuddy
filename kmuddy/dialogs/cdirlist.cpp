@@ -135,3 +135,4 @@ void cDirList::update ()
     listbox->setCurrentRow (item);
 }
 
+#include "moc_cdirlist.cpp"

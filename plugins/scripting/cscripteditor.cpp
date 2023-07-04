@@ -178,3 +178,4 @@ void cScriptEditor::getDataFromGUI (cListObjectData *data)
   data->boolValues["enable-variables"] = d->chkallowvars->isChecked();
 }
 
+#include "moc_cscripteditor.cpp"

@@ -47,3 +47,5 @@ void DlgSpeedwalkProgress::slotAbort()
 {
 	emit abortSpeedwalk();
 }
+
+#include "moc_dlgspeedwalkprogress.cpp"

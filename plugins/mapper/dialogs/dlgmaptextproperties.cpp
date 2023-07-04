@@ -252,3 +252,5 @@ void DlgMapTextProperties::slotUpdatePreview()
 	textScrollView->resize(txtWidth->text().toInt(),txtHeight->text().toInt());
 	textScrollView->update();
 }
+
+#include "moc_dlgmaptextproperties.cpp"

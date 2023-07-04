@@ -300,3 +300,4 @@ char dlgTranscript::advTranscriptType ()
   return advttype->currentIndex() + 1;
 }
 
+#include "moc_dlgtranscript.cpp"

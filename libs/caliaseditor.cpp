@@ -394,3 +394,4 @@ void cAliasEditor::getDataFromGUI (cListObjectData *data)
   data->boolValues["global"] = d->check5->isChecked();
 }
 
+#include "moc_caliaseditor.cpp"

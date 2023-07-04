@@ -296,3 +296,5 @@ void DlgMapRoomProperties::slotPathProperties()
   item->setText(1, path->getBeforeCommand());
   item->setText(2, path->getAfterCommand());
 }
+
+#include "moc_dlgmaproomproperties.cpp"

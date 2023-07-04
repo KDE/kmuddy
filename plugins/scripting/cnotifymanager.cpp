@@ -252,4 +252,4 @@ void cEventNotification::writeNext ()
   } // endif unable to write data (write buffer is full)
 }
 
-
+#include "moc_cnotifymanager.cpp"

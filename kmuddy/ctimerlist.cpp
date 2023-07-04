@@ -92,3 +92,4 @@ int cTimerList::tickCount ()
   return d->tickCount;
 }
 
+#include "moc_ctimerlist.cpp"

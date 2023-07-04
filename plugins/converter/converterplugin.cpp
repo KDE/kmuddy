@@ -505,3 +505,4 @@ void cConverterPlugin::convertProfile (const QString &path, const QString &name)
 }
 
 #include "converterplugin.moc"
+#include "moc_converterplugin.cpp"

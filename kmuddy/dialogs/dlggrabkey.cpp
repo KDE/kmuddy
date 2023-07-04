@@ -63,3 +63,4 @@ void dlgGrabKey::gotKey (int key, Qt::KeyboardModifiers state)
   accept ();
 }
 
+#include "moc_dlggrabkey.cpp"

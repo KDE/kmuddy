@@ -136,3 +136,4 @@ void CMapToolText::toolUnselected(void)
 	mapManager->unsetEditElement();
 }
 
+#include "moc_cmaptooltext.cpp"

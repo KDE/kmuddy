@@ -92,3 +92,4 @@ int dlgQuickConnect::port ()
   return ed2->text().toInt ();
 }
 
+#include "moc_dlgquickconnect.cpp"

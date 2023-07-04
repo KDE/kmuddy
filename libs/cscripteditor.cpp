@@ -83,3 +83,4 @@ void cScriptEditor::checkScript ()
   d->scriptError->setText (err);
 }
 
+#include "moc_cscripteditor.cpp"

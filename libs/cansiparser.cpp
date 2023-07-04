@@ -405,3 +405,4 @@ void cANSIParser::changeColor (int color)
   }
 }
 
+#include "moc_cansiparser.cpp"

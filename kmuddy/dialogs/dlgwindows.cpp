@@ -161,3 +161,4 @@ void dlgWindows::updateMe ()
     box->setCurrentRow (0);
 }
 
+#include "moc_dlgwindows.cpp"

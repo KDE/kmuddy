@@ -46,3 +46,4 @@ void DlgMapSpeedwalk::slotOkPressed()
 	m_mapManager->getMapData()->speedwalkDelay = txtDelay->value();
 }
 
+#include "moc_dlgmapspeedwalk.cpp"

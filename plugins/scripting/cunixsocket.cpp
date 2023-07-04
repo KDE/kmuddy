@@ -300,3 +300,4 @@ void cUnixSocket::sendResult (const QString &result)
   writeData (id);
 }
 
+#include "moc_cunixsocket.cpp"

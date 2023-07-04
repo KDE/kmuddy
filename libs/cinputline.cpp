@@ -430,3 +430,4 @@ void cInputLine::handleTabExpansion ()
   setCursorPosition (expandPos + tabWords[tabListPos].length());
 }
 
+#include "moc_cinputline.cpp"

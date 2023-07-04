@@ -706,3 +706,4 @@ void cConsole::linkMenuItemHandler (QAction *item)
 }
 */
 
+#include "moc_cconsole.cpp"

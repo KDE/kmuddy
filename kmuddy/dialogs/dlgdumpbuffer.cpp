@@ -162,3 +162,4 @@ void dlgDumpBuffer::setType (int t)
   ttype->setCurrentIndex (t - 1);
 }
 
+#include "moc_dlgdumpbuffer.cpp"

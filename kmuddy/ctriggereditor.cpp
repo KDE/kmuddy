@@ -944,3 +944,4 @@ void cTriggerEditor::getDataFromGUI (cListObjectData *data)
 
 }
 
+#include "moc_ctriggereditor.cpp"

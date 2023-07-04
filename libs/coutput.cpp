@@ -263,3 +263,4 @@ void cOutput::aconDown ()
   con->setScrollTextSize (aconsize);
 }
 
+#include "moc_coutput.cpp"

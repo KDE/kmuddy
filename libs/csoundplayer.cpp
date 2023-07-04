@@ -153,3 +153,4 @@ void cSoundPlayer::finished ()
   }
 }
 
+#include "moc_csoundplayer.cpp"

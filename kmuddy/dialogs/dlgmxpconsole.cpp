@@ -65,6 +65,6 @@ void dlgMXPConsole::addLine (const QString &line)
   sb->setValue (sb->maximum ());
 }
 
+#include "moc_dlgmxpconsole.cpp"
 
 #endif  //HAVE_MXP
-

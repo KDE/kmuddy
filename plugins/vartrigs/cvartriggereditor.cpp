@@ -102,3 +102,4 @@ void cVarTriggerEditor::getDataFromGUI (cListObjectData *data)
     data->strValues["command-" + QString::number (i)] = *it;
 }
 
+#include "moc_cvartriggereditor.cpp"

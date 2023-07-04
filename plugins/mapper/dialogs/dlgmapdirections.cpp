@@ -83,3 +83,5 @@ void DlgMapDirections::slotOkPressed()
 	m_mapManager->getMapData()->directions[UP+(NUM_DIRECTIONS/2)] = m_txtUpShort->text();
 	m_mapManager->getMapData()->directions[DOWN+(NUM_DIRECTIONS/2)] = m_txtDownShort->text();
 }
+
+#include "moc_dlgmapdirections.cpp"

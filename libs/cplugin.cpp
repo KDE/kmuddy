@@ -43,3 +43,4 @@ void cPlugin::sendCommand (int sess, const QString &command)
   cActionManager::self()->invokeEvent ("command", sess, command);
 }
 
+#include "moc_cplugin.cpp"

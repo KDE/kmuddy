@@ -258,3 +258,4 @@ void cStatus::timer1Tick ()
   sb->changeItem (" " + i18n ("idle") + ss, ID_IDLE);
 }
 
+#include "moc_cstatus.cpp"

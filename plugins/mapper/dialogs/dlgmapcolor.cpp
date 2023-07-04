@@ -82,3 +82,5 @@ void DlgMapColor::slotOkPressed()
 	m_mapManager->getMapData()->backgroundColor = cmdBackground->color();
 	m_mapManager->getMapData()->gridColor = cmdGrid->color();
 }
+
+#include "moc_dlgmapcolor.cpp"

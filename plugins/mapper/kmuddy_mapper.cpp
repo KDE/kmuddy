@@ -200,3 +200,4 @@ void KMuddyMapper::mapperClosed ()
 }
 
 #include "kmuddy_mapper.moc"
+#include "moc_kmuddy_mapper.cpp"

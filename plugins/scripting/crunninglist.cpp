@@ -552,3 +552,4 @@ void cRunningList::scriptTextSent ()
 
 } // scriptTextSent
 
+#include "moc_crunninglist.cpp"

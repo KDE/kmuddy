@@ -97,3 +97,4 @@ void CMapToolRoom::toolSelected(void)
 	lastPos=QPoint(-100,-100);
 }
 
+#include "moc_cmaptoolroom.cpp"

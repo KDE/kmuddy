@@ -92,4 +92,4 @@ bool cConverterDialog::display (std::list<ConversionDialogItem *> items)
   return true;
 }
 
-
+#include "moc_converterdialog.cpp"

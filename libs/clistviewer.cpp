@@ -273,3 +273,4 @@ void cListViewer::moveRight ()
   selectObject (obj);
 }
 
+#include "moc_clistviewer.cpp"
