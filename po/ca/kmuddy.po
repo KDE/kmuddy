@@ -1,16 +1,16 @@
 # Translation of kmuddy.po to Catalan
-# Copyright (C) 2018-2022 This_file_is_part_of_KDE
+# Copyright (C) 2018-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-05-08 11:09+0200\n"
+"PO-Revision-Date: 2023-07-03 11:55+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -4585,7 +4585,7 @@ msgstr "Color predeterminat de la zona"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
 #, kde-format
 msgid "Selected Color"
-msgstr "Color de seleccionat"
+msgstr "Color seleccionat"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
@@ -5470,37 +5470,3 @@ msgstr "Variable"
 #, kde-format
 msgid "Variables"
 msgstr "Variables"
-
-#~ msgid "&Dont"
-#~ msgstr "&No"
-
-#~ msgid "W&rap at position"
-#~ msgstr "A&just de línia a la posició"
-
-#~ msgid "As needed"
-#~ msgstr "Quan sigui necessari"
-
-#~ msgid ""
-#~ "Wrap at a fixed position, or at the rightmost position, if no value is "
-#~ "given."
-#~ msgstr ""
-#~ "Ajust de línia en una posició fixa, o en la posició més a la dreta, si no "
-#~ "es dona cap valor."
-
-#~ msgid "&Forced redraw after"
-#~ msgstr "&Força el redibuixat posterior"
-
-#~ msgid ""
-#~ "Forced redraw after adding a given amount of lines. Setting this to a low "
-#~ "number may prevent some displaying problems, at a cost of higher CPU "
-#~ "usage. Setting it to Never will disable the feature, redraw will only "
-#~ "occur when needed."
-#~ msgstr ""
-#~ "El fet de forçar el redibuixat posterior afegeix una quantitat "
-#~ "determinada de línies. Establir això en un nombre reduït pot evitar "
-#~ "problemes de visualització, a un cost alt d'ús de la CPU. En establir-lo "
-#~ "a «Mai» no s'inhabilitarà la característica, el redibuixat només es "
-#~ "produirà quan sigui necessari."
-
-#~ msgid "&Select from MUD list"
-#~ msgstr "&Selecciona des de la llista MUD"
