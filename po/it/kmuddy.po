@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kmuddy package.
-# Valter Mura <valtermura@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2022-12-24 09:59+0100\n"
+"PO-Revision-Date: 2023-08-05 12:52+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.07.80\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -124,12 +124,12 @@ msgstr "Gli alias sono ora disabilitati."
 #: kmuddy/cconnection.cpp:747
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr "I trigger sono ora abilitati."
+msgstr "Gli attivatori sono ora abilitati."
 
 #: kmuddy/cconnection.cpp:747
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr "I trigger sono ora disabilitati."
+msgstr "Gli attivatori sono ora disabilitati."
 
 #: kmuddy/cconnection.cpp:758
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "Alias"
 #: kmuddy/cconnection.cpp:823
 #, kde-format
 msgid "Triggers"
-msgstr "Trigger"
+msgstr "Attivatori"
 
 #: kmuddy/cconnection.cpp:824
 #, kde-format
@@ -729,7 +729,7 @@ msgstr "Backreference"
 #: kmuddy/ctriggereditor.cpp:170
 #, kde-format
 msgid "&Trigger text"
-msgstr "&Testo trigger"
+msgstr "&Testo attivatore"
 
 #: kmuddy/ctriggereditor.cpp:173 libs/caliaseditor.cpp:97
 #, kde-format
@@ -767,9 +767,9 @@ msgid ""
 "Type of matching. Trigger will only be activated if this passes this type of "
 "test. Note that triggers are always matched as whole words."
 msgstr ""
-"Tipo di corrispondenza. I trigger saranno attivati solo se ciò passa questo "
-"tipo di test. Considera che i trigger vengono sempre individuati come parole "
-"intere."
+"Tipo di corrispondenza. Gli attivatori saranno attivati solo se ciò passa "
+"questo tipo di test. Considera che gli attivatori vengono sempre individuati "
+"come parole intere."
 
 #: kmuddy/ctriggereditor.cpp:195 libs/caliaseditor.cpp:119
 #, kde-format
@@ -818,9 +818,9 @@ msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
-"Questa è un'area di test. Puoi verificare qui il tuo trigger per vedere se "
-"esegue quello che hai richiesto. Semplicemente, digita del testo e vedi cosa "
-"succede."
+"Questa è un'area di test. Puoi verificare qui il tuo attivatore per vedere "
+"se esegue quello che hai richiesto. Semplicemente, digita del testo e vedi "
+"cosa succede."
 
 #: kmuddy/ctriggereditor.cpp:263 kmuddy/ctriggereditor.cpp:526
 #: libs/caliaseditor.cpp:187 libs/caliaseditor.cpp:244
@@ -840,7 +840,7 @@ msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
-"Se abilitato, questo trigger individuerà il testo solo se sono presenti "
+"Se abilitato, questo attivatore individuerà il testo solo se sono presenti "
 "spazi o nulla prima/dopo la stringa individuata."
 
 #: kmuddy/ctriggereditor.cpp:270 libs/caliaseditor.cpp:200
@@ -889,15 +889,16 @@ msgid ""
 "names from a list (using the condition to check if a match is in the list), "
 "or something like that."
 msgstr ""
-"<p>Con la corrispondenza globale, un trigger/trigger può corrispondere più "
-"volte, se contiene più volte il modello. Per esempio, se il modello è «abc», "
-"sarà individuata una sola corrispondenza in «abcdabcd» se la corrispondenza "
-"globale è disattiva, ma due volte se è attiva. Per ciascuna corrispondenza "
-"vengono eseguite le azioni richieste - di modo che i comandi possono essere "
-"inviati più volte, uno per corrispondenza.</p><p>È da notare che "
-"l'insuccesso della condizione non interrompe la scansione, dunque puoi usare "
-"questa opzione per evidenziare nomi da un elenco (utilizzando la condizione "
-"per verificare se una corrispondenza è in esso presente), o cose simili."
+"<p>Con la corrispondenza globale, un attivatore/attivatore può corrispondere "
+"più volte, se contiene più volte il modello. Per esempio, se il modello è "
+"«abc», sarà individuata una sola corrispondenza in «abcdabcd» se la "
+"corrispondenza globale è disattiva, ma due volte se è attiva. Per ciascuna "
+"corrispondenza vengono eseguite le azioni richieste - di modo che i comandi "
+"possono essere inviati più volte, uno per corrispondenza.</p><p>È da notare "
+"che l'insuccesso della condizione non interrompe la scansione, dunque puoi "
+"usare questa opzione per evidenziare nomi da un elenco (utilizzando la "
+"condizione per verificare se una corrispondenza è in esso presente), o cose "
+"simili."
 
 #: kmuddy/ctriggereditor.cpp:302 kmuddy/ctriggereditor.cpp:309
 #, kde-format
@@ -973,7 +974,7 @@ msgstr "Sfondo"
 #: kmuddy/ctriggereditor.cpp:400
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr "Il testo &riscrive il trigger"
+msgstr "Il testo &riscrive l'attivatore"
 
 #: kmuddy/ctriggereditor.cpp:403 kmuddy/ctriggereditor.cpp:528
 #, kde-format
@@ -1027,7 +1028,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:450
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr "Trigger di a&vviso rilevamento"
+msgstr "Attivatore di a&vviso rilevamento"
 
 #: kmuddy/ctriggereditor.cpp:451
 #, kde-format
@@ -1050,7 +1051,7 @@ msgid ""
 "This trigger will play a sound. Useful as a notification of important "
 "events, or to assign sounds to some events."
 msgstr ""
-"Questo trigger riprodurrà un suono. Utile come notifica di eventi "
+"Questo attivatore riprodurrà un suono. Utile come notifica di eventi "
 "importanti, o per assegnare suoni a determinati eventi."
 
 #: kmuddy/ctriggereditor.cpp:477
@@ -1100,7 +1101,7 @@ msgstr "Di &base"
 #: kmuddy/ctriggereditor.cpp:529
 #, kde-format
 msgid "Special trigger"
-msgstr "Trigger speciale"
+msgstr "Attivatore speciale"
 
 #: kmuddy/ctriggereditor.cpp:530
 #, kde-format
@@ -1110,17 +1111,17 @@ msgstr "Finestre del risultato"
 #: kmuddy/ctriggereditor.cpp:594
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr "Questo testo non corrisponde al tuo trigger."
+msgstr "Questo testo non corrisponde al tuo attivatore."
 
 #: kmuddy/ctriggereditor.cpp:599
 #, kde-format
 msgid "This text matches your trigger."
-msgstr "Questo testo corrisponde al tuo trigger."
+msgstr "Questo testo corrisponde al tuo attivatore."
 
 #: kmuddy/ctriggereditor.cpp:627
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr "Il numero massimo di colorizzazioni è stato raggiunto."
+msgstr "Il numero massimo di colorazioni è stato raggiunto."
 
 #: kmuddy/ctriggereditor.cpp:710 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1862,7 +1863,7 @@ msgid ""
 msgstr ""
 "Quest'elenco mostra i profili attualmente definiti.<p>I <b>profili</b> ti "
 "consentono di velocizzare il collegamento al tuo MUD, e di utilizzare anche "
-"funzionalità più avanzate tipo gli <i>alias</i> o i <i>trigger</i>."
+"funzionalità più avanzate tipo gli <i>alias</i> o gli <i>attivatori</i>."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -2399,6 +2400,8 @@ msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
 "aligned output."
 msgstr ""
+"Abilita l'aggiunta di avanzamenti di riga dopo le richieste terminate da GA "
+"in modo che il risultato sia correttamente allineato."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
@@ -2575,6 +2578,12 @@ msgid ""
 "downloading support; otherwise players could instruct your client to "
 "download any file on the net..."
 msgstr ""
+"Le sequenze MSP mid-line sono un'estensione di zMUD alle specifiche MSP che "
+"pare siano utilizzate da qualche MUD. Puoi abilitare qui il supporto a "
+"questa funzionalità, ma accertati che gli altri giocatori non possano "
+"eseguire comandi say/tell/altro per queste sequenze, oppure disabilitare il "
+"supporto allo scaricamento; in caso contrario, i giocatori potrebbero "
+"istruire il tuo client a scaricare qualsiasi file che si trova in rete..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -2965,7 +2974,7 @@ msgstr "A&lias abilitati"
 #: kmuddy/kmuddy.cpp:350
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr "Tri&gger abilitati"
+msgstr "Atti&vatori abilitati"
 
 #: kmuddy/kmuddy.cpp:356
 #, kde-format
@@ -3389,7 +3398,7 @@ msgid ""
 "and aliases/triggers, bugfixes"
 msgstr ""
 "Molte migliorie agli script esterni, analizzatore script interno, vista del "
-"risultato e alias/trigger, correzione di errori"
+"risultato e alias/attivatori, correzione di errori"
 
 #: kmuddy/main.cpp:45
 #, kde-format
@@ -3638,7 +3647,7 @@ msgid ""
 "from a list (using the condition to check if a match is in the list), or "
 "something like that."
 msgstr ""
-"<p>Con la corrispondenza globale, un alias/trigger può corrispondere più "
+"<p>Con la corrispondenza globale, un alias/attivatore può corrispondere più "
 "volte, se contiene più volte il modello. Per esempio, se il modello è «abc», "
 "sarà individuata una sola corrispondenza in «abcdabcd» se la corrispondenza "
 "globale è disattiva, ma due volte se è attiva. Per ciascuna corrispondenza "
@@ -3869,7 +3878,7 @@ msgstr "Impossibile creare il gruppo, esiste già un gruppo con questo nome."
 #: libs/cmsp.cpp:284
 #, kde-format
 msgid "MSP: Received corrupted sound trigger!"
-msgstr "MSP: ricevuto trigger sonoro danneggiato!"
+msgstr "MSP: ricevuto attivatore sonoro danneggiato!"
 
 #: libs/cmsp.cpp:285
 #, kde-format
@@ -5423,7 +5432,7 @@ msgstr "Script"
 #: plugins/vartrigs/cvartriggereditor.cpp:61
 #, kde-format
 msgid "Variable name that this trigger will be reacting on."
-msgstr "Nome variabile su cui questo trigger reagirà."
+msgstr "Nome variabile su cui questo attivatore reagirà."
 
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
@@ -5433,12 +5442,12 @@ msgstr "&Comandi"
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
 msgid "Commands that will be executed when this trigger matches."
-msgstr "Comandi che saranno eseguiti quando questo trigger corrisponde."
+msgstr "Comandi che saranno eseguiti quando questo attivatore corrisponde."
 
 #: plugins/vartrigs/vartrigplugin.cpp:41
 #, kde-format
 msgid "Variable Triggers"
-msgstr "Trigger variabili"
+msgstr "Attivatori variabili"
 
 #: plugins/varviewer/dlgvarviewer.cpp:70
 #, kde-format
