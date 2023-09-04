@@ -7,13 +7,13 @@
 #
 # Antonio J. Soler Sánchez <redtony@telefonica.net>, 2004.
 # Kira J. Fernandez <kirajfdez@gmail.com>, 2011.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2018, 2019, 2021.
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-03-28 16:07+0000\n"
-"PO-Revision-Date: 2021-10-07 13:42+0200\n"
+"PO-Revision-Date: 2023-09-03 22:27+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -390,7 +390,7 @@ msgstr "Meta"
 #: kmuddy/kmuddy.cpp:287
 #, kde-format
 msgid "&Command"
-msgstr "Instru&cción"
+msgstr "O&rden"
 
 #: kmuddy/cshortcuteditor.cpp:71
 #, kde-format
@@ -435,7 +435,7 @@ msgstr "&Sobreescribir texto existente"
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr "Si hay hay texto en la línea de entrada, ¿debe ser reemplazado?"
+msgstr "Si hay hay texto en la línea de entrada, ¿se debe sustituir?"
 
 #: kmuddy/cstatusvareditor.cpp:61
 #, kde-format
@@ -537,7 +537,7 @@ msgstr "&Segundos antes del ciclo"
 #: kmuddy/ctimereditor.cpp:98
 #, kde-format
 msgid "C&ommand"
-msgstr "Instrucci&ón"
+msgstr "&Orden"
 
 #: kmuddy/ctimereditor.cpp:101
 #, kde-format
@@ -741,7 +741,7 @@ msgstr "Texto del desencadenan&te"
 #: kmuddy/ctriggereditor.cpp:173 libs/caliaseditor.cpp:97
 #, kde-format
 msgid "Command that will be replaced if you enter it."
-msgstr "Orden que será reemplazada si la introduce."
+msgstr "Orden que se sustituirá si la introduce."
 
 #: kmuddy/ctriggereditor.cpp:183 libs/caliaseditor.cpp:107
 #, kde-format
@@ -796,12 +796,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:210
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr "Instru&cción para enviar:"
+msgstr "Ó&rdenes para enviar:"
 
 #: kmuddy/ctriggereditor.cpp:214
 #, kde-format
 msgid "Command(s) that will replace command you've entered."
-msgstr "Instrucción(es) que reemplazarán al que ha introducido."
+msgstr "Órdenes que sustituirán a la que ha introducido."
 
 #: kmuddy/ctriggereditor.cpp:217 libs/caliaseditor.cpp:141
 #, kde-format
@@ -923,12 +923,12 @@ msgstr "Abandonar el grupo"
 #: kmuddy/ctriggereditor.cpp:330
 #, kde-format
 msgid "&Enable color replacement"
-msgstr "P&ermitir el reemplazo de colores"
+msgstr "Ac&tivar sustitución de colores"
 
 #: kmuddy/ctriggereditor.cpp:331 kmuddy/ctriggereditor.cpp:527
 #, kde-format
 msgid "Color replacement"
-msgstr "Reemplazo de colores"
+msgstr "Sustitución de colores"
 
 #: kmuddy/ctriggereditor.cpp:353 kmuddy/ctriggereditor.cpp:412
 #, kde-format
@@ -2586,11 +2586,11 @@ msgid ""
 "download any file on the net..."
 msgstr ""
 "Las secuencias MSP intermedias son una extensión de zMUD para las "
-"especificaciones MSP que parecen usar algunos MUDs. Puede habilitar el "
-"reconocimiento de esta característica aquí, pero asegúrese de que otros "
-"jugadores no pueden averiguar estas secuencias o deshabilitar la ayuda para "
-"descargas; de otra forma, los jugadores podrían mandar instrucciones a su "
-"cliente para que descargue cualquier archivo de la red..."
+"especificaciones MSP que parecen usar algunos MUDs. Puede activar el uso de "
+"esta función aquí, pero asegúrese de que otros jugadores no pueden averiguar "
+"estas secuencias, o desactive la ayuda para descargas; de otra forma, los "
+"jugadores podrían mandar instrucciones a su cliente para que descargue "
+"cualquier archivo de la red..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -3587,12 +3587,12 @@ msgstr ""
 #: libs/caliaseditor.cpp:134
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr "Texto(s) de &reemplazo."
+msgstr "&Textos de sustitución"
 
 #: libs/caliaseditor.cpp:138
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr "Instrucción(es) que reemplazarán al que ha introducido."
+msgstr "Órdenes que sustituirán a la que ha introducido."
 
 #: libs/caliaseditor.cpp:153
 #, kde-format
@@ -3607,7 +3607,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:190
 #, kde-format
 msgid "Send original command"
-msgstr "Enviar instrucción original"
+msgstr "Enviar orden original"
 
 #: libs/caliaseditor.cpp:191
 #, kde-format
@@ -3616,9 +3616,9 @@ msgid ""
 "you enable this option, both original and replacement commands are sent "
 "(original command is sent first)."
 msgstr ""
-"Si este alias coincide con su orden, se enviará una instrucción de "
-"reemplazo. Si habilita esta opción, se enviarán tanto la instrucción "
-"original como la de reemplazo (la orden original se envía primero)."
+"Si este alias coincide con su orden, se enviará una orden de sustitución. Si "
+"activa esta opción, se enviarán tanto la orden original como la de "
+"sustitución (la orden original se envía primero)."
 
 #: libs/caliaseditor.cpp:197
 #, kde-format
