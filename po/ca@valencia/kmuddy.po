@@ -335,7 +335,8 @@ msgstr "S'està ignorant la petició no admesa de MXP (%1)"
 #, kde-format
 msgid "Ctrl+Enter adds new line, unless changed in settings"
 msgstr ""
-"Ctrl+Retorn afig una línia nova, llevat que s'haja canviat en la configuració"
+"«Ctrl+Retorn» afig una línia nova, llevat que s'haja canviat en la "
+"configuració"
 
 #: kmuddy/csession.cpp:88
 #, kde-format
@@ -1520,7 +1521,7 @@ msgid ""
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
 "Si habiliteu esta opció, les ordres romandran en la línia d'entrada després "
-"d'enviar-les (prement Retorn); en cas contrari seran esborrades."
+"d'enviar-les (prement «Retorn»); en cas contrari seran esborrades."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
