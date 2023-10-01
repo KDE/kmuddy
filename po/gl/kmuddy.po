@@ -557,12 +557,12 @@ msgstr "Detívose a transcrición avanzada da sesión."
 #: kmuddy/ctranscript.cpp:259
 #, kde-format
 msgid "Transcript file could not be opened."
-msgstr "Non se puido abrir o ficheiro da transcrición."
+msgstr "Non foi posíbel abrir o ficheiro da transcrición."
 
 #: kmuddy/ctranscript.cpp:260
 #, kde-format
 msgid "Session transcript could not be started."
-msgstr "Non se puido iniciar a transcrición da sesión."
+msgstr "Non foi posíbel iniciar a transcrición da sesión."
 
 #: kmuddy/ctranscript.cpp:279
 #, kde-format
@@ -577,12 +577,12 @@ msgstr "Iniciouse a transcrición da sesión."
 #: kmuddy/ctranscript.cpp:315
 #, kde-format
 msgid "Advanced transcript file could not be opened."
-msgstr "Non se puido abrir o ficheiro da transcrición avanzada."
+msgstr "Non foi posíbel abrir o ficheiro da transcrición avanzada."
 
 #: kmuddy/ctranscript.cpp:316
 #, kde-format
 msgid "Advanced session transcript could not be started."
-msgstr "Non se puido iniciar a transcrición avanzada da sesión."
+msgstr "Non foi posíbel iniciar a transcrición avanzada da sesión."
 
 #: kmuddy/ctranscript.cpp:332
 #, kde-format
@@ -602,7 +602,7 @@ msgstr "A rotación da transcrición da sesión efectuarase ás doce da noite."
 #: kmuddy/ctranscript.cpp:427
 #, kde-format
 msgid "Dump file could not be opened."
-msgstr "Non se puido abrir o ficheiro de saída."
+msgstr "Non foi posíbel abrir o ficheiro de saída."
 
 #: kmuddy/ctriggereditor.cpp:119
 #, kde-format
@@ -1292,7 +1292,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
 msgid "Display system tray icon"
-msgstr "Amosar a icona na bandexa do sistema"
+msgstr "Amosar a icona na área de notificación"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:137
 #, kde-format
@@ -1935,12 +1935,12 @@ msgid ""
 "This profile cannot be deleted, because you have a connection open using "
 "this profile."
 msgstr ""
-"Non se pode eliminar este perfil porque ten unha conexión aberta que o usa."
+"Non é posíbel eliminar este perfil porque ten unha conexión aberta que o usa."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
 msgid "Unable to delete"
-msgstr "Non se pode eliminar"
+msgstr "Non é posíbel eliminar"
 
 #: kmuddy/dialogs/dlgconnect.cpp:240
 #, kde-format
@@ -1974,7 +1974,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:259
 #, kde-format
 msgid "Unable to duplicate"
-msgstr "Non se pode duplicar"
+msgstr "Non é posíbel duplicar"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:37
 #, kde-format
@@ -3807,12 +3807,12 @@ msgstr "&Nome"
 #: libs/clisteditor.cpp:285
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
-msgstr "Non se pode renomear o grupo, xa existe un grupo con ese nome."
+msgstr "Non é posíbel renomear o grupo, xa existe un grupo con ese nome."
 
 #: libs/clisteditor.cpp:292
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
-msgstr "Non se pode renomear o obxecto, xa existe un obxecto con ese nome."
+msgstr "Non é posíbel renomear o obxecto, xa existe un obxecto con ese nome."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
@@ -3877,7 +3877,7 @@ msgstr "Insira o nome do grupo:"
 #: libs/clistviewer.cpp:200
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr "Non se pode crear o grupo, xa existe un grupo con ese nome."
+msgstr "Non é posíbel crear o grupo, xa existe un grupo con ese nome."
 
 #: libs/cmsp.cpp:284
 #, kde-format
