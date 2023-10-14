@@ -1085,7 +1085,7 @@ msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
 "KMuddy session window"
 msgstr ""
-"Farà que l'eixida enviada a una finestra separada no es mostre en la "
+"Farà que l'eixida enviada cap a una finestra separada no es mostre en la "
 "finestra principal de sessió de KMuddy"
 
 #: kmuddy/ctriggereditor.cpp:495
