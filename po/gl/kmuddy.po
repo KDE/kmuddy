@@ -4464,7 +4464,7 @@ msgstr "Non hai ningún nivel nesa dirección. Quere crear un novo?"
 #: plugins/mapper/cmapview.cpp:607
 #, kde-format
 msgid "Are you sure that you want to delete the current level?"
-msgstr "Está seguro de que quere eliminar o nivel actual?"
+msgstr "Seguro que quere eliminar o nivel actual?"
 
 #: plugins/mapper/cmapview.cpp:614
 #, kde-format
@@ -4475,8 +4475,7 @@ msgstr "Insira o nome da nova zona:"
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
-msgstr ""
-"Está seguro de que quere eliminar a zona actual? Isto non pode desfacerse."
+msgstr "Seguro que quere eliminar a zona actual? Isto non pode desfacerse."
 
 #: plugins/mapper/cmapview.cpp:760
 #, kde-format
