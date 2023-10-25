@@ -1062,7 +1062,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:477
 #, kde-format
 msgid "Send output to a separate window"
-msgstr "Envia l'eixida a una finestra separada"
+msgstr "Envia l'eixida cap a una finestra separada"
 
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
@@ -5122,7 +5122,7 @@ msgstr "Retard del moviment de marxa ràpida"
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
 #, kde-format
 msgid "Delay before sending next command (centi secconds)"
-msgstr "Retard abans d'enviar la següent ordre (centèsimes de segon)"
+msgstr "Retard abans d'enviar l'ordre següent (centèsimes de segon)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
