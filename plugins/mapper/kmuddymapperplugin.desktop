@@ -25,7 +25,6 @@ Name[sl]=Orodje Kmuddy Mapper
 Name[sv]=Kmuddy-kartverktyg
 Name[tr]=KMuddy Eşleyici Araç
 Name[uk]=Засіб роботи з картами KMuddy
-Name[x-test]=xxKMuddy Mapper Toolxx
 Name[zh_CN]=KMuddy 地图编辑工具
 
 [PropertyDef::X-KMuddy-Mapper-Plugin-Name]
