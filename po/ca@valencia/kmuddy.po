@@ -419,7 +419,7 @@ msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
 msgstr ""
-"Si està marcada, l'ordre s'enviarà a MUD. En cas contrari, es col·locarà en "
+"Si se selecciona, l'ordre s'enviarà a MUD. En cas contrari, es col·locarà en "
 "la línia d'entrada."
 
 #: kmuddy/cshortcuteditor.cpp:87
@@ -855,7 +855,7 @@ msgid ""
 "When this option is on, upper case and lower case letters are treated as "
 "different characters, otherwise they're considered to be the same."
 msgstr ""
-"Quan esta opció està activada, les majúscules i minúscules es tractaran com "
+"Quan se selecciona esta opció, les majúscules i minúscules es tractaran com "
 "a caràcters diferents, altrament es considerarà que són iguals."
 
 #: kmuddy/ctriggereditor.cpp:275
@@ -1226,7 +1226,7 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
-"Si està marcada, sempre es mostrarà la barra de pestanyes. En cas contrari, "
+"Si se selecciona, sempre es mostrarà la barra de pestanyes. En cas contrari, "
 "restarà oculta -si només conté una pestanya-."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
@@ -1252,7 +1252,7 @@ msgid ""
 "trigger is activated. Note that this option only takes effect if global or "
 "local notification is enabled."
 msgstr ""
-"Si està marcada, s'utilitzarà la notificació d'eixida sempre que isca algun "
+"Si se selecciona, s'utilitzarà la notificació d'eixida sempre que isca algun "
 "text del servidor. En cas contrari, només s'utilitzarà quan s'active un "
 "desencadenant de notificació. Cal tindre en compte que esta opció només té "
 "efecte si la notificació global o local està habilitada."
@@ -1520,8 +1520,8 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
-"Si habiliteu esta opció, les ordres romandran en la línia d'entrada després "
-"d'enviar-les (prement «Retorn»); en cas contrari seran esborrades."
+"Si seleccioneu esta opció, les ordres romandran en la línia d'entrada "
+"després d'enviar-les (prement «Retorn»); en cas contrari seran esborrades."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1535,9 +1535,9 @@ msgid ""
 "to immediately type another command without deleting the old one and still "
 "be able to reuse previous command easily."
 msgstr ""
-"Si habiliteu esta opció, se seleccionaran les ordres introduïdes. Açò permet "
-"escriure immediatament una altra ordre sense eliminar l'anterior i poder "
-"tornar a utilitzar l'ordre anterior amb facilitat."
+"Si seleccioneu esta opció, se seleccionaran les ordres introduïdes. Açò "
+"permet escriure immediatament una altra ordre sense eliminar l'anterior i "
+"poder tornar a utilitzar l'ordre anterior amb facilitat."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
@@ -1550,8 +1550,8 @@ msgid ""
 "If you enable this option, you will be able to choose previously entered "
 "commands with Up and Down keys."
 msgstr ""
-"Si habiliteu esta opció, podreu triar les ordres introduïdes prèviament amb "
-"les tecles Amunt i Avall."
+"Si seleccioneu esta opció, podreu triar les ordres introduïdes prèviament "
+"amb les tecles Amunt i Avall."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:331
 #, kde-format
@@ -1653,8 +1653,8 @@ msgid ""
 "behaviour of these keys gets swapped."
 msgstr ""
 "Quan estiga desactivat, «Ctrl+Retorn» inserirà una altra línia en la línia "
-"d'entrada de múltiples línies i «Retorn» enviarà ordres al servidor. Si "
-"s'activa, s'intercanviarà este comportament."
+"d'entrada de múltiples línies i «Retorn» enviarà ordres al servidor. Si se "
+"selecciona, s'intercanviarà este comportament."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
@@ -2001,9 +2001,9 @@ msgid ""
 "displayed part up to the end of buffer will be dumped. Otherwise entire "
 "buffer will be dumped (default)."
 msgstr ""
-"Quan açò està habilitat, només es descartarà la part del cau de l'historial, "
-"des de la part que es mostra actualment fins al final del cau. En cas "
-"contrari, s'eliminarà tot el cau (de manera predeterminada)."
+"Quan està habilitat, només es descartarà la part del cau de l'historial, des "
+"de la part que es mostra actualment fins al final del cau. En cas contrari, "
+"s'eliminarà tot el cau (de manera predeterminada)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:51 kmuddy/dialogs/dlgtranscript.cpp:85
 #, kde-format
@@ -2560,9 +2560,9 @@ msgid ""
 "other players from sending malicious MSP sequences, if you allow downloading "
 "of sounds."
 msgstr ""
-"Quan esta opció està habilitada, KMuddy interpretarà les seqüències MSP tot "
-"el temps, encara que no s'haja produït cap negociació. Útil per als MUD que "
-"no admeten la negociació telnet amb el MSP.\n"
+"Quan se selecciona esta opció, KMuddy interpretarà les seqüències MSP tot el "
+"temps, encara que no s'haja produït cap negociació. Útil per als MUD que no "
+"admeten la negociació telnet amb el MSP.\n"
 "Però aneu amb compte: activeu-ho només si MUD realment admet MSP per a "
 "evitar que altres jugadors envien seqüències del MSP malicioses, si permeteu "
 "la baixada de sons."
@@ -2802,7 +2802,7 @@ msgid ""
 "Otherwise, new transcript will be appended to the end of an existing file "
 "(if it exists :))."
 msgstr ""
-"Si habiliteu esta opció, el fitxer de transcripció existent se "
+"Si seleccioneu esta opció, el fitxer de transcripció existent se "
 "sobreescriurà. En cas contrari, s'afegirà una transcripció nova al final "
 "d'un fitxer existent (si existix :))."
 
@@ -3615,8 +3615,8 @@ msgid ""
 "(original command is sent first)."
 msgstr ""
 "Si este àlies coincidix amb la vostra ordre, s'enviarà una ordre de "
-"substitució. Si habiliteu esta opció, s'enviaran les ordres originals i les "
-"de substitució (primer s'enviarà l'ordre original)."
+"substitució. Si seleccioneu esta opció, s'enviaran les ordres originals i "
+"les de substitució (primer s'enviarà l'ordre original)."
 
 #: libs/caliaseditor.cpp:197
 #, kde-format
