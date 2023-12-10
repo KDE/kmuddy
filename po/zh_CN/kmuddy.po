@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2023-11-25 02:29\n"
+"PO-Revision-Date: 2023-12-09 09:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -2814,12 +2814,12 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:452
 #, kde-format
 msgid "Previous tab"
-msgstr "上一个标签"
+msgstr "上一个标签页"
 
 #: kmuddy/kmuddy.cpp:457
 #, kde-format
 msgid "Next tab"
-msgstr "下一个标签"
+msgstr "下一个标签页"
 
 #: kmuddy/kmuddy.cpp:463 kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473
 #: kmuddy/kmuddy.cpp:478 kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488
