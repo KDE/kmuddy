@@ -19,7 +19,6 @@
 #include "cmapmanager.h"
 
 #include <kdebug.h>
-#include <kstandarddirs.h>
 #include <klocale.h>
 #include <kservicetypetrader.h>
 #include <kmessagebox.h>
@@ -29,6 +28,7 @@
 
 #include <QIcon>
 #include <QQueue>
+#include <QStandardPaths>
 #include <QTimer>
 #include <QUndoStack>
 
@@ -1681,7 +1681,7 @@ CMapFileFilterBase *CMapManager::nativeFilter(bool isLoad)
 
 QString CMapManager::defaultSavePath () const
 {
-  return KStandardDirs::locateLocal ("appdata", "maps/");
+  return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/maps/";
 }
 
 /** This is a debug function and not for genreal use */

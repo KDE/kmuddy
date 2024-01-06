@@ -18,18 +18,15 @@
 #include "cmaptooltext.h"
 
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <kiconloader.h>
 
-#include <qcursor.h>
+#include <QCursor>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmaplevel.h"
 #include "../../../cmapelement.h"
 #include "../../../cmaptext.h"
 #include "../../../cmapview.h"
-
-#include <kdebug.h>
 
 
 CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *manager)

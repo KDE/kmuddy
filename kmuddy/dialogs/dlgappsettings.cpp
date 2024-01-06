@@ -35,6 +35,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QSpinBox>
+#include <QStandardPaths>
 
 #include <kapplication.h>
 #include <kcolorbutton.h>
@@ -43,7 +44,6 @@
 #include <kshortcutsdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 
 QSpinBox *setupSpinbox (QGridLayout *layout, int row, int firstcol, const QString &label, int min, int max, const QString &specialVal, const QString &whatsThis)
 {
@@ -514,7 +514,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
       "Also note that this will only work if your MUD supports <b>MSP</b> "
       "(MUD Sound Protocol).</qt>"));
   chkallowdownloads = new QCheckBox (i18n ("Allow &downloading sounds"), frmsound);
-  QString localdir = KStandardDirs::locateLocal ("appdata", "sounds/");
+  QString localdir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/sounds/";
   chkallowdownloads->setWhatsThis( i18n ("MSP version 0.3 supports "
       "downloading of sound files directly from the web or FTP. You can "
       "enable this functionality here. Note that every sound will only be "

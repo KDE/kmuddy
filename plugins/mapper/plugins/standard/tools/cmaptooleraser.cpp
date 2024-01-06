@@ -18,10 +18,9 @@
 #include "cmaptooleraser.h"
 
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <kiconloader.h>
 
-#include <qbitmap.h>
+#include <QBitmap>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmaplevel.h"

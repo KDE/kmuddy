@@ -47,10 +47,10 @@
 #include <kapplication.h>
 #include <klocale.h>
 #include <kpushbutton.h>
-#include <kstatusbar.h>
 
 #include <QHBoxLayout>
 #include <QPushButton>
+#include <QStatusBar>
 #include <QToolTip>
 #include <QVBoxLayout>
 
@@ -98,7 +98,7 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
   _gaugebar = new cGaugeBar (sess, this);
   _gaugebar->hide();
 
-  KStatusBar *statusbar = new KStatusBar (this);
+  QStatusBar *statusbar = new QStatusBar (this);
   _status = new cStatus (sess, statusbar);
 
   QHBoxLayout *playout = new QHBoxLayout (promptinput);

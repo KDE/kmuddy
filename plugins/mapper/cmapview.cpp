@@ -21,6 +21,7 @@
 #include <QAction>
 #include <QPushButton>
 #include <QScrollArea>
+#include <QStandardPaths>
 #include <QActionGroup>
 
 #include "cmapmanager.h"
@@ -43,7 +44,6 @@
 #include <kiconloader.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
 #include <kundostack.h>
 #include <kinputdialog.h>
 
@@ -104,7 +104,8 @@ CMapView::~CMapView()
 
 void CMapView::initGUI()
 {
-  createGUI(KStandardDirs::locate("appdata", "kmuddymapperpart.rc"));
+  QString file = QStandardPaths::locate(QStandardPaths::AppDataLocation, "kmuddymapperpart.rc");
+  createGUI(file);
   mapWidget->initContexMenus();
   enableViewControls(false);
 }

@@ -18,10 +18,10 @@
 #include "cdownloader.h"
 
 #include "cmsp.h"
+#include <QDir>
+#include <QUrl>
 
 #include <kio/job.h>
-#include <kstandarddirs.h>
-#include <kurl.h>
 
 cDownloader::cDownloader (cMSP *mspObject)
 {
@@ -50,11 +50,11 @@ void cDownloader::download (QString remoteURL, QString localFile)
   
   //create all missing directories
   QString lastDir = localFile.section ("/", 0, -2, QString::SectionSkipEmpty);
-  KStandardDirs::makeDir (lastDir);
+  QDir().mkpath (lastDir);
   
   //download!!!
-  KUrl url1 (remoteURL);
-  KUrl url2;
+  QUrl url1 (remoteURL);
+  QUrl url2;
   url2.setPath (localFile);
   currentJob = KIO::file_copy (url1, url2);
   connect (currentJob, SIGNAL (result (KIO::Job *)), this,

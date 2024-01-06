@@ -772,6 +772,7 @@ void CMapPath::loadQDomElement(QDomElement *properties)
 	setBeforeCommand(properties->attribute("BeforeCommand",getAfterCommand()));
     setSpecialCmd(properties->attribute("SpecialCmd",getSpecialCmd()));
 	setSpecialExit(readBool(properties,"SpecialExit",getSpecialExit()));
+	setCords();  // fix the coords
 
 	QDomNode n = properties->namedItem("bends");
 	if (!n.isNull())

@@ -26,10 +26,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kdebug.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 
 #include <QAbstractTableModel>
 #include <QFile>
+#include <QStandardPaths>
 #include <QXmlStreamReader>
 
 #include <vector>
@@ -160,7 +160,7 @@ void cMUDList::load ()
   }
 
   // no local copy exists, try the global file (or a local file in .kde)
-  QString file = KStandardDirs::locate ("appdata", "muds.xml");
+  QString file = QStandardPaths::locate(QStandardPaths::AppDataLocation, "muds.xml");
   if (!file.isEmpty()) {
     load (file);
     return;

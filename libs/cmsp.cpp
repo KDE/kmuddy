@@ -23,10 +23,10 @@
 
 #include <stdlib.h>
 
-#include <qdir.h>
+#include <QDir>
+#include <QStandardPaths>
 
 #include <KLocalizedString>
-#include <kstandarddirs.h>
 
 using namespace std;
 
@@ -59,7 +59,7 @@ void cMSP::reset (const QString &serverName)
   cachedString = "";
   triggerContents = "";
   defaultURL = QString();
-  localdir = KStandardDirs::locateLocal ("appdata", "sounds/") + serverName;
+  localdir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/sounds/" + serverName;
   downloader->reset ();
 }
 

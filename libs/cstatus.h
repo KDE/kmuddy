@@ -19,12 +19,13 @@
 #ifndef CSTATUS_H
 #define CSTATUS_H
 
-#include <kstatusbar.h>
 #include <qobject.h>
 #include <qtimer.h>
 
 #include <cactionbase.h>
 #include <kmuddy_export.h>
+
+class QStatusBar;
 
 /**
  This class manages the status bar.
@@ -43,7 +44,7 @@ public:
   const QString connTimeString ();
   void displayVariables (const QString varText);
   void clearPartialLine ();
-  KStatusBar *statusBar() { return sb; };
+  QStatusBar *statusBar() { return sb; };
 
 protected:
   void eventNothingHandler (QString event, int session) override;
@@ -60,7 +61,7 @@ protected:
   void partialLine (const QString &line);
   void gotCommand ();
 
-  KStatusBar *sb;
+  QStatusBar *sb;
   QTimer *timer, *timer1;
   bool timing;
   int conntime;

@@ -32,21 +32,16 @@
 #include "../../cmappath.h"
 #include "../../cmapview.h"
 
-#include <qicon.h>
+#include <QIcon>
 
-#include <kdebug.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <kactioncollection.h>
 
 CMapPluginStandard::CMapPluginStandard(QObject *parent) : CMapPluginBase(parent)
 {
   CMapView *view = dynamic_cast<CMapView *>(parent);
         CMapManager *manager = view->getManager();
-	kDebug() << "CMapPluginStandard::CMapPluginStandard";
-	kDebug() << "CMapPluginStandard::CMapPluginStandard Create Tools";
         KActionCollection *acol = view->actionCollection();
-        kDebug() << "Plugin collection is "<<acol;
 
 	// Create and Add the tools to the tools list
 	toolList.append(new CMapToolSelect(acol,manager));
@@ -54,7 +49,6 @@ CMapPluginStandard::CMapPluginStandard(QObject *parent) : CMapPluginBase(parent)
 	toolList.append(new CMapToolPath(acol,manager));
 	toolList.append(new CMapToolText(acol,manager));
 	toolList.append(new CMapToolEraser(acol,manager));
-	kDebug() << "CMapPluginStandard::CMapPluginStandard Tools Created";
 
 	acol->action("toolsEraser")->setEnabled(true);
 	acol->action("toolsPath")->setEnabled(true);

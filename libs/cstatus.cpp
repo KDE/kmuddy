@@ -18,6 +18,7 @@
 
 #include "cstatus.h"
 
+#include <QStatusBar>
 #include <QTextStream>
 #include <KLocalizedString>
 
@@ -30,7 +31,7 @@
 #define ID_VARIABLES 10
 #define ID_PARTIAL 11
 
-cStatus::cStatus (int sess, KStatusBar *statusbar)
+cStatus::cStatus (int sess, QStatusBar *statusbar)
   : cActionBase ("status", sess)
 {
   sb = statusbar;

@@ -569,7 +569,12 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 
         if (e2.tagName()=="Room")
         {
-          CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 * gridWidth,y1 * gridHeight),level);
+          CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 /* * gridWidth*/ ,y1 /* * gridHeight */ ),level);
+          if (!room) {
+            kWarning()<<"NO ROOM AT "<<x1<<"/"<<y1<<" on level "<<id<<" WHEN LOADING ROOM #"<<e2.attribute("RoomID",QString::number(-1)).toInt();
+            n2 = n2.nextSibling();
+            continue;
+          }
 
           room->loadQDomElement(&e2);
           loadPluginPropertiesForElement(room,&e2);
@@ -577,6 +582,11 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
         else if (e2.tagName()=="Text")
         {
           CMapText *text = CMapElementUtil::createText(m_mapManager, QPoint (x1,y1),level,"");
+          if (!text) {
+            kDebug() << "Unable to create text";
+            n2 = n2.nextSibling();
+            continue;
+          }
           text->loadQDomElement(&e2);
           loadPluginPropertiesForElement(text,&e2);
         }

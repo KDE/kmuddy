@@ -42,7 +42,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <ktoggleaction.h>
 
 #include <map>

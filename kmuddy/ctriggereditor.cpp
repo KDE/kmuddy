@@ -46,10 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <knuminput.h>
-#include <KServiceTypeTrader>
 #include <ktextedit.h>
-
-#include <kregexpeditorinterface.h>
 
 struct cTriggerEditor::Private {
   // Basic
@@ -58,7 +55,6 @@ struct cTriggerEditor::Private {
   KLineEdit *condition;
   KTextEdit *rcmd;
   QPushButton *editregexp;
-  QDialog *regExpDialog;
 
   // Basic - testarea
   KLineEdit *text;
@@ -189,16 +185,6 @@ void cTriggerEditor::createGUI(QWidget *parent)
       "if this passes this type of test. Note that triggers are always matched as whole words."));
   comboEditLayout->addWidget (d->type);
 
-  //Check if kdeutils kregeditor is available...
-  if (!KServiceTypeTrader::self()->query("KRegExpEditor/KRegExpEditor").isEmpty()) {
-  
-    d->editregexp = new QPushButton (i18n ("&Edit..."), hbComboEdit);
-    connect (d->editregexp, SIGNAL (clicked ()), this, SLOT (editRegExp()));  
-    //hide / show button depending on what is activated in the 'type' combobox
-    connect (d->type, SIGNAL (activated (const QString &)), this, SLOT (updateEditButton (const QString &)));
-    comboEditLayout->addWidget (d->editregexp);
-  }
-  
   //condition
   QLabel *cndl = new QLabel ("Con&dition", basicPage);
   d->condition = new KLineEdit (basicPage);
@@ -528,29 +514,6 @@ void cTriggerEditor::createGUI(QWidget *parent)
   tabs->addTab (rewritePage, i18n ("Rewrite text"));
   tabs->addTab (specialPage, i18n ("Special trigger"));
   tabs->addTab (windowPage, i18n ("Output windows"));
-}
-
-void cTriggerEditor::updateEditButton (const QString &comboText)
-{
-  (comboText == "Regular expression") ? d->editregexp->show() : d->editregexp->hide();
-}
-
-void cTriggerEditor::editRegExp ()
-{
-  if (!d->regExpDialog)
-    d->regExpDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>("KRegExpEditor/KRegExpEditor");
-
-  KRegExpEditorInterface *regExpEditor = dynamic_cast<KRegExpEditorInterface *>(d->regExpDialog);
-  if (!regExpEditor) return;
-
-  //get text from cmd and put it into regExp GUI
-  regExpEditor->setRegExp (d->cmd->text());
-
-  // execute the dialog
-  bool result = d->regExpDialog->exec();
-
-  //if ok, set the cmd to the regExp created
-  if (result) d->cmd->setText (regExpEditor->regExp());
 }
 
 void cTriggerEditor::updateTest ()

@@ -20,8 +20,7 @@
 #include "cmapmanager.h"
 #include "cmapview.h"
 
-#include <kstandarddirs.h>
-#include <qactiongroup.h>
+#include <QActionGroup>
 #include <kactioncollection.h>
 
 /** The construtor for the tool */

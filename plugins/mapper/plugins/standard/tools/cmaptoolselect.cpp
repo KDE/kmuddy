@@ -26,10 +26,8 @@
 
 #include <qcursor.h>
 
-#include <kstandarddirs.h>
 #include <kiconloader.h>
 #include <klocale.h>
-#include <kdebug.h>
 
 CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager)
         : CMapToolBase(actionCollection,
@@ -37,12 +35,9 @@ CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *
                        BarIcon("kmud_select.png"),
                        manager,"toolsSelect",nullptr)
 {
-	kDebug() << "CMapToolSelect: constructor begins";
 
 	bDragging = false;
 	connect (&mouseDownTimer ,SIGNAL(timeout()),SLOT(slotStartDraging()));
-
-	kDebug() << "CMapToolSelect: constructor ends";
 }
 
 CMapToolSelect::~CMapToolSelect()
@@ -171,7 +166,6 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *
 
   mapManager->levelChanged(currentLevel);
 
-  kDebug() << "CMapToolSelect: timer start";
   mouseDownTimer.start(150);
 }
 
@@ -199,7 +193,6 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
     // Yes a drag is in action
     if (moveDrag)
     {
-      kDebug() << "CMapToolSelect: move drag";
       // An element was draged to a new position so move it
       moveElement(alignToGrid(mousePos) - alignToGrid(mouseDrag), currentLevel);
     }
@@ -230,7 +223,6 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
     }
     else
     {
-      kDebug() << "CMapToolSelect: select drag";
       bool found = false;
 
       // A rectangle selection operation was performed
@@ -405,7 +397,6 @@ void CMapToolSelect::resizeElements(QPoint mousePos,CMapLevel *currentLevel)
 /** Called when a rectange drag opertion is performed */
 void CMapToolSelect::slotStartDraging(void)
 {
-  kDebug() << "CMapToolSelect: timer stop";
   bDragging = true;
   mouseDownTimer.stop();
 

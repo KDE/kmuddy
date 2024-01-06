@@ -23,7 +23,6 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <kapplication.h>
-#include <kstandarddirs.h>
 
 #include <QDateTime>
 #include <QPushButton>

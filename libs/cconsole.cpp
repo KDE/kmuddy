@@ -323,7 +323,7 @@ void cConsole::setFont (QFont f) {
   d->text->setDefaultFont (d->font);
 
   QFontMetrics fm (f);
-  d->charWidth = fm.width ("m");
+  d->charWidth = fm.horizontalAdvance ("m");
   d->charHeight = fm.lineSpacing() + 2;
 
   fixupOutput(true);
@@ -390,7 +390,7 @@ void cConsole::setIndentation (int val) {
   d->indentChars = val;
 }
 
-void cConsole::setEnableBlinking (bool value) {
+void cConsole::setEnableBlinking (bool /*value*/) {
   // TODO
 }  
 
@@ -407,7 +407,7 @@ void cConsole::forceEmitSize () {
   emit dimensionsChanged (curCols(), curRows());
 }
 
-void cConsole::dumpBuffer (bool fromcurrent, QFile &file, char dumpType) {
+void cConsole::dumpBuffer (bool /*fromcurrent*/, QFile &file, char dumpType) {
   QString contents;
   // TODO: support 'fromcurrent'
   if ((dumpType == TRANSCRIPT_PLAIN) || (dumpType == TRANSCRIPT_ANSI))
@@ -523,7 +523,7 @@ void cConsole::forceBeginOfLine () {
   addNewText (nullptr, true);
 }
 
-void cConsole::expireNamedLinks (const QString &name) {
+void cConsole::expireNamedLinks (const QString & /*name*/) {
   // TODO
 }
 

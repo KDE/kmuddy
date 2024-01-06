@@ -19,12 +19,8 @@
 
 #include <qcolor.h>
 
-#include <kdebug.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <kiconloader.h>
-
-#include <qcursor.h>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmapview.h"
@@ -74,13 +70,10 @@ void CMapToolRoom::mouseMoveEvent(QPoint mousePos, Qt::KeyboardModifiers, Qt::Mo
 
 void CMapToolRoom::mouseEnterEvent()
 {
-
-	kDebug() << "CMapToolRoom: mouseEnterEvent";
 }
 
 void CMapToolRoom::mouseLeaveEvent()
 {
-	kDebug() << "CMapToolRoom: mouseLeaveEvent";
 	lastPos=QPoint(-100,-100);
         mapManager->getActiveView()->requestPaint();
 }
