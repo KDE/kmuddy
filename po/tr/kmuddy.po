@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:25+0000\n"
+"POT-Creation-Date: 2024-01-07 00:39+0000\n"
 "PO-Revision-Date: 2023-11-13 07:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -79,8 +79,8 @@ msgid "&General"
 msgstr "&Genel"
 
 #: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
-#: kmuddy/ctimereditor.cpp:134 kmuddy/ctriggereditor.cpp:525
-#: libs/caliaseditor.cpp:243
+#: kmuddy/ctimereditor.cpp:134 kmuddy/ctriggereditor.cpp:511
+#: libs/caliaseditor.cpp:227
 #, kde-format
 msgid "&Script"
 msgstr "B&etik"
@@ -90,97 +90,97 @@ msgstr "B&etik"
 msgid "Script when &released"
 msgstr "Bırakıldığında be&tikle"
 
-#: kmuddy/cconnection.cpp:268
+#: kmuddy/cconnection.cpp:267
 #, kde-format
 msgid "Network error: %1"
 msgstr "Ağ hatası: %1"
 
-#: kmuddy/cconnection.cpp:430
+#: kmuddy/cconnection.cpp:429
 #, kde-format
 msgid "Do you want to close connection to %1?"
 msgstr "%1 bağlantısını kapatmak istediğinizden emin misiniz?"
 
-#: kmuddy/cconnection.cpp:431
+#: kmuddy/cconnection.cpp:430
 #, kde-format
 msgid "Disconnect"
 msgstr "Bağlantıyı Kes"
 
-#: kmuddy/cconnection.cpp:515
+#: kmuddy/cconnection.cpp:514
 #, kde-format
 msgid "(password is hidden)"
 msgstr "(parola gizli)"
 
-#: kmuddy/cconnection.cpp:736
+#: kmuddy/cconnection.cpp:735
 #, kde-format
 msgid "Aliases are now enabled."
 msgstr "Armalar artık etkin."
 
-#: kmuddy/cconnection.cpp:736
+#: kmuddy/cconnection.cpp:735
 #, kde-format
 msgid "Aliases are now disabled."
 msgstr "Armalar artık devre dışı."
 
-#: kmuddy/cconnection.cpp:747
+#: kmuddy/cconnection.cpp:746
 #, kde-format
 msgid "Triggers are now enabled."
 msgstr "Tetikler artık etkin."
 
-#: kmuddy/cconnection.cpp:747
+#: kmuddy/cconnection.cpp:746
 #, kde-format
 msgid "Triggers are now disabled."
 msgstr "Tetikler artık devre dışı."
 
-#: kmuddy/cconnection.cpp:758
+#: kmuddy/cconnection.cpp:757
 #, kde-format
 msgid "Timers are now enabled."
 msgstr "Sayaçlar artık etkin."
 
-#: kmuddy/cconnection.cpp:758
+#: kmuddy/cconnection.cpp:757
 #, kde-format
 msgid "Timers are now disabled."
 msgstr "Sayaçlar artık devre dışı."
 
-#: kmuddy/cconnection.cpp:769
+#: kmuddy/cconnection.cpp:768
 #, kde-format
 msgid "Macro keys are now enabled."
 msgstr "Makro düğmeleri artık etkin."
 
-#: kmuddy/cconnection.cpp:769
+#: kmuddy/cconnection.cpp:768
 #, kde-format
 msgid "Macro keys are now disabled."
 msgstr "Makro düğmeleri artık devre dışı."
 
-#: kmuddy/cconnection.cpp:822
+#: kmuddy/cconnection.cpp:821
 #, kde-format
 msgid "Aliases"
 msgstr "Armalar"
 
-#: kmuddy/cconnection.cpp:823
+#: kmuddy/cconnection.cpp:822
 #, kde-format
 msgid "Triggers"
 msgstr "Tetikler"
 
-#: kmuddy/cconnection.cpp:824
+#: kmuddy/cconnection.cpp:823
 #, kde-format
 msgid "Buttons"
 msgstr "Düğmeler"
 
-#: kmuddy/cconnection.cpp:825
+#: kmuddy/cconnection.cpp:824
 #, kde-format
 msgid "Timers"
 msgstr "Sayaçlar"
 
-#: kmuddy/cconnection.cpp:826
+#: kmuddy/cconnection.cpp:825
 #, kde-format
 msgid "Macro Keys"
 msgstr "Makro Düğmeleri"
 
-#: kmuddy/cconnection.cpp:827
+#: kmuddy/cconnection.cpp:826
 #, kde-format
 msgid "Status variables"
 msgstr "Durum Değişkenleri"
 
-#: kmuddy/cconnection.cpp:828
+#: kmuddy/cconnection.cpp:827
 #, kde-format
 msgid "Gauges"
 msgstr "Ölçerler"
@@ -221,8 +221,8 @@ msgstr "&Renk"
 msgid "Color used to paint this gauge."
 msgstr "Bu ölçeri boyamak için kullanılan renk."
 
-#: kmuddy/cmudlist.cpp:64 kmuddy/ctriggereditor.cpp:225
-#: libs/caliaseditor.cpp:149 plugins/converter/converterdialog.cpp:54
+#: kmuddy/cmudlist.cpp:64 kmuddy/ctriggereditor.cpp:211
+#: libs/caliaseditor.cpp:133 plugins/converter/converterdialog.cpp:54
 #: plugins/scripting/crunninglist.cpp:57
 #, kde-format
 msgid "Name"
@@ -536,227 +536,227 @@ msgstr ""
 "Her atımdan önceki belirtilen zamanda çalıştırılacak komut.\n"
 "Komutlar; armalar, betik çağrıları ve benzer şeyler içerebilir."
 
-#: kmuddy/ctranscript.cpp:174
+#: kmuddy/ctranscript.cpp:173
 #, kde-format
 msgid "Session transcript has been stopped."
 msgstr "Oturumun yazıdökümü durduruldu."
 
-#: kmuddy/ctranscript.cpp:208
+#: kmuddy/ctranscript.cpp:207
 #, kde-format
 msgid "Advanced session transcript has been stopped."
 msgstr "Gelişmiş oturum yazıdökümü durduruldu."
 
-#: kmuddy/ctranscript.cpp:259
+#: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Transcript file could not be opened."
 msgstr "Yazıdöküm dosyası açılamadı."
 
-#: kmuddy/ctranscript.cpp:260
+#: kmuddy/ctranscript.cpp:259
 #, kde-format
 msgid "Session transcript could not be started."
 msgstr "Oturumun yazıdökümü başlatılamadı."
 
-#: kmuddy/ctranscript.cpp:279
+#: kmuddy/ctranscript.cpp:278
 #, kde-format
 msgid "Session transcript has just started."
 msgstr "Oturumun yazıdökümü henüz şimdi başlatıldı."
 
-#: kmuddy/ctranscript.cpp:288
+#: kmuddy/ctranscript.cpp:287
 #, kde-format
 msgid "Session transcript has been started."
 msgstr "Oturumun yazıdökümü başlatıldı."
 
-#: kmuddy/ctranscript.cpp:315
+#: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced transcript file could not be opened."
 msgstr "Gelişmiş yazıdöküm dosyası açılamadı."
 
-#: kmuddy/ctranscript.cpp:316
+#: kmuddy/ctranscript.cpp:315
 #, kde-format
 msgid "Advanced session transcript could not be started."
 msgstr "Gelişmiş oturum yazıdökümü başlatılamadı."
 
-#: kmuddy/ctranscript.cpp:332
+#: kmuddy/ctranscript.cpp:331
 #, kde-format
 msgid "Advanced session transcript has just started."
 msgstr "Gelişmiş oturum yazıdökümü henüz şimdi başlatıldı."
 
-#: kmuddy/ctranscript.cpp:337
+#: kmuddy/ctranscript.cpp:336
 #, kde-format
 msgid "Advanced session transcript has been started."
 msgstr "Gelişmiş oturum yazıdökümü başlatıldı."
 
-#: kmuddy/ctranscript.cpp:341
+#: kmuddy/ctranscript.cpp:340
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
 msgstr "Oturumun yazıya dökümü, gece yarısında döndürülecek."
 
-#: kmuddy/ctranscript.cpp:427
+#: kmuddy/ctranscript.cpp:426
 #, kde-format
 msgid "Dump file could not be opened."
 msgstr "Döküm dosyası açılamadı."
 
-#: kmuddy/ctriggereditor.cpp:119
+#: kmuddy/ctriggereditor.cpp:115
 #, kde-format
 msgid "Keep"
 msgstr "Tut"
 
-#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Black"
 msgstr "Siyah"
 
-#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Red"
 msgstr "Kırmızı"
 
-#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Green"
 msgstr "Yeşil"
 
-#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Yellow"
 msgstr "Sarı"
 
-#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Blue"
 msgstr "Mavi"
 
-#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Magenta"
 msgstr "Mor"
 
-#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Cyan"
 msgstr "Camgöbeği"
 
-#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Gray"
 msgstr "Gri"
 
-#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Dark gray"
 msgstr "Koyu Gri"
 
-#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright red"
 msgstr "Açık Kırmızı"
 
-#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright green"
 msgstr "Açık Yeşil"
 
-#: kmuddy/ctriggereditor.cpp:131 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright yellow"
 msgstr "Açık Sarı"
 
-#: kmuddy/ctriggereditor.cpp:132 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright blue"
 msgstr "Açık Mavi"
 
-#: kmuddy/ctriggereditor.cpp:133 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright magenta"
 msgstr "Açık Mor"
 
-#: kmuddy/ctriggereditor.cpp:134 kmuddy/dialogs/dlgappsettings.cpp:75
+#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:75
 #, kde-format
 msgid "Bright cyan"
 msgstr "Açık Camgöbeği"
 
-#: kmuddy/ctriggereditor.cpp:135 kmuddy/dialogs/dlgappsettings.cpp:75
+#: kmuddy/ctriggereditor.cpp:131 kmuddy/dialogs/dlgappsettings.cpp:75
 #, kde-format
 msgid "White"
 msgstr "Beyaz"
 
-#: kmuddy/ctriggereditor.cpp:136
+#: kmuddy/ctriggereditor.cpp:132
 #, kde-format
 msgid "Other"
 msgstr "Diğer"
 
-#: kmuddy/ctriggereditor.cpp:141
+#: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Whole line"
 msgstr "Tüm satır"
 
-#: kmuddy/ctriggereditor.cpp:142
+#: kmuddy/ctriggereditor.cpp:138
 #, kde-format
 msgid "Matching text"
 msgstr "Eşleşen metin"
 
-#: kmuddy/ctriggereditor.cpp:143
+#: kmuddy/ctriggereditor.cpp:139
 #, kde-format
 msgid "Prefix"
 msgstr "Önek"
 
-#: kmuddy/ctriggereditor.cpp:144
+#: kmuddy/ctriggereditor.cpp:140
 #, kde-format
 msgid "Suffix"
 msgstr "Sonek"
 
-#: kmuddy/ctriggereditor.cpp:145
+#: kmuddy/ctriggereditor.cpp:141
 #, kde-format
 msgid "Full prefix"
 msgstr "Tam önek"
 
-#: kmuddy/ctriggereditor.cpp:146
+#: kmuddy/ctriggereditor.cpp:142
 #, kde-format
 msgid "Full suffix"
 msgstr "Tam sonek"
 
-#: kmuddy/ctriggereditor.cpp:147
+#: kmuddy/ctriggereditor.cpp:143
 #, kde-format
 msgid "Backreference"
 msgstr "Geri başvuru"
 
-#: kmuddy/ctriggereditor.cpp:170
+#: kmuddy/ctriggereditor.cpp:166
 #, kde-format
 msgid "&Trigger text"
 msgstr "&Tetik metni"
 
-#: kmuddy/ctriggereditor.cpp:173 libs/caliaseditor.cpp:97
+#: kmuddy/ctriggereditor.cpp:169 libs/caliaseditor.cpp:91
 #, kde-format
 msgid "Command that will be replaced if you enter it."
 msgstr "Girerseniz onun yerine geçecek komut."
 
-#: kmuddy/ctriggereditor.cpp:183 libs/caliaseditor.cpp:107
+#: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:101
 #, kde-format
 msgid "Exact match"
 msgstr "Tam eşleşme"
 
-#: kmuddy/ctriggereditor.cpp:184 libs/caliaseditor.cpp:108
+#: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:102
 #, kde-format
 msgid "Sub-string"
 msgstr "Alt dizi"
 
-#: kmuddy/ctriggereditor.cpp:185 libs/caliaseditor.cpp:109
+#: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:103
 #, kde-format
 msgid "Begins with"
 msgstr "Şununla başlar"
 
-#: kmuddy/ctriggereditor.cpp:186 libs/caliaseditor.cpp:110
+#: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:104
 #, kde-format
 msgid "Ends with"
 msgstr "Şununla biter"
 
-#: kmuddy/ctriggereditor.cpp:187 libs/caliaseditor.cpp:111
+#: kmuddy/ctriggereditor.cpp:183 libs/caliaseditor.cpp:105
 #, kde-format
 msgid "Regular expression"
 msgstr "Düzenli ifade"
 
-#: kmuddy/ctriggereditor.cpp:188
+#: kmuddy/ctriggereditor.cpp:184
 #, kde-format
 msgid ""
 "Type of matching. Trigger will only be activated if this passes this type of "
@@ -766,12 +766,7 @@ msgstr ""
 "etkinleştirilir. Tetiklerin her zaman tam sözcük olarak eşleştirildiğini "
 "dikkate alın."
 
-#: kmuddy/ctriggereditor.cpp:195 libs/caliaseditor.cpp:119
-#, kde-format
-msgid "&Edit..."
-msgstr "Dü&zenle..."
-
-#: kmuddy/ctriggereditor.cpp:206 libs/caliaseditor.cpp:130
+#: kmuddy/ctriggereditor.cpp:192 libs/caliaseditor.cpp:114
 #, kde-format
 msgid ""
 "Conditional triggering. If this is set, the actions will only fire if the "
@@ -780,33 +775,33 @@ msgstr ""
 "Koşulsal tetikleme. Bu ayarlanmışsa eylemler yalnızca koşul doğruysa "
 "tetiklenir (sıfır değilse)."
 
-#: kmuddy/ctriggereditor.cpp:210
+#: kmuddy/ctriggereditor.cpp:196
 #, kde-format
 msgid "&Command(s) to send:"
 msgstr "&Gönderilecek komut(lar):"
 
-#: kmuddy/ctriggereditor.cpp:214
+#: kmuddy/ctriggereditor.cpp:200
 #, kde-format
 msgid "Command(s) that will replace command you've entered."
 msgstr "Girdiğiniz komutun yerine geçecek komut(lar)."
 
-#: kmuddy/ctriggereditor.cpp:217 libs/caliaseditor.cpp:141
+#: kmuddy/ctriggereditor.cpp:203 libs/caliaseditor.cpp:125
 #, kde-format
 msgid "Test area"
 msgstr "Sınama alanı"
 
-#: kmuddy/ctriggereditor.cpp:219 libs/caliaseditor.cpp:143
+#: kmuddy/ctriggereditor.cpp:205 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
 msgstr "&Metin: "
 
-#: kmuddy/ctriggereditor.cpp:225 kmuddy/dialogs/dlgstatistics.cpp:53
-#: libs/caliaseditor.cpp:149 plugins/varviewer/dlgvarviewer.cpp:71
+#: kmuddy/ctriggereditor.cpp:211 kmuddy/dialogs/dlgstatistics.cpp:53
+#: libs/caliaseditor.cpp:133 plugins/varviewer/dlgvarviewer.cpp:71
 #, kde-format
 msgid "Value"
 msgstr "Değer"
 
-#: kmuddy/ctriggereditor.cpp:229
+#: kmuddy/ctriggereditor.cpp:215
 #, kde-format
 msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
@@ -816,19 +811,19 @@ msgstr ""
 "yapmadığını burada sınayabilirsiniz. Yalnızca birkaç metin girin ve neler "
 "olduğunu görün."
 
-#: kmuddy/ctriggereditor.cpp:263 kmuddy/ctriggereditor.cpp:526
-#: libs/caliaseditor.cpp:187 libs/caliaseditor.cpp:244
+#: kmuddy/ctriggereditor.cpp:249 kmuddy/ctriggereditor.cpp:512
+#: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
 msgstr "&Seçenekler"
 
-#: kmuddy/ctriggereditor.cpp:266 libs/caliaseditor.cpp:196
+#: kmuddy/ctriggereditor.cpp:252 libs/caliaseditor.cpp:180
 #, kde-format
 msgid "Whole words only"
 msgstr "Yalnızca tam sözcükler"
 
-#: kmuddy/ctriggereditor.cpp:267
+#: kmuddy/ctriggereditor.cpp:253
 #, kde-format
 msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
@@ -837,12 +832,12 @@ msgstr ""
 "Etkinleştirildiğinde, bu tetik, eşleşen diziden önce/sonra boşluklar vrasa "
 "veya bir şey yoksa eşleşecektir."
 
-#: kmuddy/ctriggereditor.cpp:270 libs/caliaseditor.cpp:200
+#: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:184
 #, kde-format
 msgid "Case sensitive"
 msgstr "BÜYÜK/küçük harf duyarlı"
 
-#: kmuddy/ctriggereditor.cpp:271 libs/caliaseditor.cpp:201
+#: kmuddy/ctriggereditor.cpp:257 libs/caliaseditor.cpp:185
 #, kde-format
 msgid ""
 "When this option is on, upper case and lower case letters are treated as "
@@ -851,12 +846,12 @@ msgstr ""
 "Bu seçenek açıkken, BÜYÜK ve küçük harfler ayrı karakterler olarak işlem "
 "görürler; aksi takdirde özel bir işlem uygulanmaz."
 
-#: kmuddy/ctriggereditor.cpp:275
+#: kmuddy/ctriggereditor.cpp:261
 #, kde-format
 msgid "Show but do not send"
 msgstr "Göster; ancak gönderme"
 
-#: kmuddy/ctriggereditor.cpp:276
+#: kmuddy/ctriggereditor.cpp:262
 #, kde-format
 msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
@@ -864,12 +859,12 @@ msgid ""
 msgstr ""
 "Etkinleştirildiğinde, metin MUD'a gönderilmez, yalnızca ekranda görüntülenir."
 
-#: kmuddy/ctriggereditor.cpp:279 libs/caliaseditor.cpp:209
+#: kmuddy/ctriggereditor.cpp:265 libs/caliaseditor.cpp:193
 #, kde-format
 msgid "Global matching"
 msgstr "Global eşleşme"
 
-#: kmuddy/ctriggereditor.cpp:280
+#: kmuddy/ctriggereditor.cpp:266
 #, kde-format
 msgid ""
 "<p>With global matching, one trigger/trigger can match multiple times, if it "
@@ -890,114 +885,114 @@ msgstr ""
 "kullanabilirsiniz (bir eşleşmenin listede olup olmadığını denetlemek için "
 "koşulu kullanarak) veya buna benzer şeyler yapabilirsiniz."
 
-#: kmuddy/ctriggereditor.cpp:302 kmuddy/ctriggereditor.cpp:309
+#: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
 #, kde-format
 msgid "Continue matching"
 msgstr "Eşleşmeyi sürdür"
 
-#: kmuddy/ctriggereditor.cpp:303 kmuddy/ctriggereditor.cpp:310
+#: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
 #, kde-format
 msgid "Stop matching"
 msgstr "Eşleşmeyi durdur"
 
-#: kmuddy/ctriggereditor.cpp:304 kmuddy/ctriggereditor.cpp:311
+#: kmuddy/ctriggereditor.cpp:290 kmuddy/ctriggereditor.cpp:297
 #, kde-format
 msgid "Leave group"
 msgstr "Gruptan ayrıl"
 
-#: kmuddy/ctriggereditor.cpp:330
+#: kmuddy/ctriggereditor.cpp:316
 #, kde-format
 msgid "&Enable color replacement"
 msgstr "&Renk değiştirmeyi etkinleştir"
 
-#: kmuddy/ctriggereditor.cpp:331 kmuddy/ctriggereditor.cpp:527
+#: kmuddy/ctriggereditor.cpp:317 kmuddy/ctriggereditor.cpp:513
 #, kde-format
 msgid "Color replacement"
 msgstr "Renk değiştirme"
 
-#: kmuddy/ctriggereditor.cpp:353 kmuddy/ctriggereditor.cpp:412
+#: kmuddy/ctriggereditor.cpp:339 kmuddy/ctriggereditor.cpp:398
 #, kde-format
 msgid "&Back-reference"
 msgstr "&Geri Başvuru"
 
-#: kmuddy/ctriggereditor.cpp:356
+#: kmuddy/ctriggereditor.cpp:342
 #, kde-format
 msgid "&Add"
 msgstr "&Ekle"
 
-#: kmuddy/ctriggereditor.cpp:357
+#: kmuddy/ctriggereditor.cpp:343
 #, kde-format
 msgid "&Remove"
 msgstr "&Kaldır"
 
-#: kmuddy/ctriggereditor.cpp:358
+#: kmuddy/ctriggereditor.cpp:344
 #, kde-format
 msgid "&Colorize"
 msgstr "&Renklendir"
 
-#: kmuddy/ctriggereditor.cpp:360
+#: kmuddy/ctriggereditor.cpp:346
 #, kde-format
 msgid "&Foreground"
 msgstr "Ö&n Plan"
 
-#: kmuddy/ctriggereditor.cpp:362
+#: kmuddy/ctriggereditor.cpp:348
 #, kde-format
 msgid "&Background"
 msgstr "&Arka Plan"
 
-#: kmuddy/ctriggereditor.cpp:378
+#: kmuddy/ctriggereditor.cpp:364
 #, kde-format
 msgid "Type"
 msgstr "Tür"
 
-#: kmuddy/ctriggereditor.cpp:378
+#: kmuddy/ctriggereditor.cpp:364
 #, kde-format
 msgid "Foreground"
 msgstr "Ön Plan"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
-#: kmuddy/ctriggereditor.cpp:378 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
+#: kmuddy/ctriggereditor.cpp:364 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
 #, kde-format
 msgid "Background"
 msgstr "Arka Plan"
 
-#: kmuddy/ctriggereditor.cpp:400
+#: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
 msgstr "Metin &yeniden yazma tetiği"
 
-#: kmuddy/ctriggereditor.cpp:403 kmuddy/ctriggereditor.cpp:528
+#: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:514
 #, kde-format
 msgid "Rewrite text"
 msgstr "Metni yeniden yaz"
 
-#: kmuddy/ctriggereditor.cpp:407
+#: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
 msgstr "Satırın &bu kısmını değiştir:"
 
-#: kmuddy/ctriggereditor.cpp:415
+#: kmuddy/ctriggereditor.cpp:401
 #, kde-format
 msgid "&To this value:"
 msgstr "B&u değere:"
 
-#: kmuddy/ctriggereditor.cpp:439
+#: kmuddy/ctriggereditor.cpp:425
 #, kde-format
 msgid "Do not show (&gag) the line"
 msgstr "Sa&tırı gösterme"
 
-#: kmuddy/ctriggereditor.cpp:440
+#: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
 msgstr "Bu, eşleşen satırın çıktı penceresinde gösterilmesini önleyecektir."
 
-#: kmuddy/ctriggereditor.cpp:442
+#: kmuddy/ctriggereditor.cpp:428
 #, kde-format
 msgid "&Notify"
 msgstr "&Bildir"
 
-#: kmuddy/ctriggereditor.cpp:443
+#: kmuddy/ctriggereditor.cpp:429
 #, kde-format
 msgid ""
 "This setting only takes effect if you have disabled the \"Always notify\" "
@@ -1013,12 +1008,12 @@ msgstr ""
 "Yalnızca bazı etkinliklerden haberiniz olmasını istiyorsanız (anlatılar, "
 "savaş, ...) yararlıdır."
 
-#: kmuddy/ctriggereditor.cpp:450
+#: kmuddy/ctriggereditor.cpp:436
 #, kde-format
 msgid "&Prompt-detection trigger"
 msgstr "İ&stem algılama tetiği"
 
-#: kmuddy/ctriggereditor.cpp:451
+#: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid ""
 "Enabling this will turn this trigger into a prompt detection trigger, that "
@@ -1033,12 +1028,12 @@ msgstr ""
 "yürürlüğe ALINMAZ - istem algılama tetiği metin gönderemez, satırları "
 "tıkamaz, bildirim yapamaz. Renklendirme hâlâ olanaklıdır."
 
-#: kmuddy/ctriggereditor.cpp:457
+#: kmuddy/ctriggereditor.cpp:443
 #, kde-format
 msgid "Play s&ound file"
 msgstr "&Ses dosyası çal"
 
-#: kmuddy/ctriggereditor.cpp:458
+#: kmuddy/ctriggereditor.cpp:444
 #, kde-format
 msgid ""
 "This trigger will play a sound. Useful as a notification of important "
@@ -1047,27 +1042,27 @@ msgstr ""
 "Bu tetik, bir ses çalar. Önemli olayların bildirilmesi veya kimi olaylara "
 "ses atayabilmek için yararlıdır."
 
-#: kmuddy/ctriggereditor.cpp:477
+#: kmuddy/ctriggereditor.cpp:463
 #, kde-format
 msgid "Send output to a separate window"
 msgstr "Çıktıyı ayrı bir pencereye gönder"
 
-#: kmuddy/ctriggereditor.cpp:478
+#: kmuddy/ctriggereditor.cpp:464
 #, kde-format
 msgid "This will send the matched text to a separate output window"
 msgstr "Bu, eşleşen metni ayrı bir çıktı penceresine gönderir"
 
-#: kmuddy/ctriggereditor.cpp:480 kmuddy/dialogs/dlgwindows.cpp:53
+#: kmuddy/ctriggereditor.cpp:466 kmuddy/dialogs/dlgwindows.cpp:53
 #, kde-format
 msgid "Output Windows"
 msgstr "Çıktı Pencereleri"
 
-#: kmuddy/ctriggereditor.cpp:491
+#: kmuddy/ctriggereditor.cpp:477
 #, kde-format
 msgid "&Gag output in main window"
 msgstr "Ana penceredeki çıktıyı &sustur"
 
-#: kmuddy/ctriggereditor.cpp:492
+#: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
@@ -1076,57 +1071,57 @@ msgstr ""
 "Bu, ayrı bir pencereye gönderilen çıktının ana KMuddy oturum penceresinde "
 "görüntülenmemesine neden olur"
 
-#: kmuddy/ctriggereditor.cpp:495
+#: kmuddy/ctriggereditor.cpp:481
 #, kde-format
 msgid "&Window name"
 msgstr "&Pencere adı"
 
-#: kmuddy/ctriggereditor.cpp:499
+#: kmuddy/ctriggereditor.cpp:485
 #, kde-format
 msgid "&Create window"
 msgstr "Pencere &oluştur"
 
-#: kmuddy/ctriggereditor.cpp:524 libs/caliaseditor.cpp:242
+#: kmuddy/ctriggereditor.cpp:510 libs/caliaseditor.cpp:226
 #, kde-format
 msgid "&Basic"
 msgstr "&Temel"
 
-#: kmuddy/ctriggereditor.cpp:529
+#: kmuddy/ctriggereditor.cpp:515
 #, kde-format
 msgid "Special trigger"
 msgstr "Özel tetik"
 
-#: kmuddy/ctriggereditor.cpp:530
+#: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Output windows"
 msgstr "Çıktı pencereleri"
 
-#: kmuddy/ctriggereditor.cpp:594
+#: kmuddy/ctriggereditor.cpp:557
 #, kde-format
 msgid "This text did not match your trigger."
 msgstr "Bu metin, tetiğinizle eşleşmedi."
 
-#: kmuddy/ctriggereditor.cpp:599
+#: kmuddy/ctriggereditor.cpp:562
 #, kde-format
 msgid "This text matches your trigger."
 msgstr "Bu metin, tetiğinizle eşleşiyor."
 
-#: kmuddy/ctriggereditor.cpp:627
+#: kmuddy/ctriggereditor.cpp:590
 #, kde-format
 msgid "Maximum number of colorizations reached."
 msgstr "Erişilen en çok renklendirme sayısı."
 
-#: kmuddy/ctriggereditor.cpp:710 plugins/mapper/cmapviewstatusbar.cpp:61
+#: kmuddy/ctriggereditor.cpp:673 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kmuddy/ctriggereditor.cpp:732
+#: kmuddy/ctriggereditor.cpp:695
 #, kde-format
 msgid "Choose sound file"
 msgstr "Ses dosyası seç"
 
-#: kmuddy/ctriggereditor.cpp:751
+#: kmuddy/ctriggereditor.cpp:714
 #, kde-format
 msgid "Window name is empty!"
 msgstr "Pencere adı boş!"
@@ -3544,12 +3539,12 @@ msgstr "Robert Marmorstein"
 msgid "Systray icon support"
 msgstr "Sistem tepsisi simgesi desteği"
 
-#: libs/caliaseditor.cpp:94
+#: libs/caliaseditor.cpp:88
 #, kde-format
 msgid "&Alias text"
 msgstr "&Arma metni"
 
-#: libs/caliaseditor.cpp:112
+#: libs/caliaseditor.cpp:106
 #, kde-format
 msgid ""
 "Type of matching. Alias will only be activated if this passes this type of "
@@ -3558,17 +3553,17 @@ msgstr ""
 "Eşleştirme türü. Arma, yalnızca bu tür bir sınamayı geçerse etkinleştirilir. "
 "Armaların her zaman tam sözcükler olarak eşleştirildiğini unutmayın."
 
-#: libs/caliaseditor.cpp:134
+#: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
 msgstr "&Değiştirme metinleri"
 
-#: libs/caliaseditor.cpp:138
+#: libs/caliaseditor.cpp:122
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
 msgstr "Girdiğiniz komutun değiştirileceği komutlar."
 
-#: libs/caliaseditor.cpp:153
+#: libs/caliaseditor.cpp:137
 #, kde-format
 msgid ""
 "This is testing area. You can test your alias here to see if it does what "
@@ -3578,12 +3573,12 @@ msgstr ""
 "için onu burada sınayabilirsiniz. Yalnızca bir metin girin ve neler olduğuna "
 "bakın."
 
-#: libs/caliaseditor.cpp:190
+#: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
 msgstr "Özgün komut gönder"
 
-#: libs/caliaseditor.cpp:191
+#: libs/caliaseditor.cpp:175
 #, kde-format
 msgid ""
 "If this alias matches your command, a replacement command will be sent. If "
@@ -3594,7 +3589,7 @@ msgstr ""
 "seçeneği etkinleştirirseniz hem özgün hem değiştirme komutları gönderilir "
 "(önce özgün komut gönderilir)."
 
-#: libs/caliaseditor.cpp:197
+#: libs/caliaseditor.cpp:181
 #, kde-format
 msgid ""
 "When enabled, this alias will only match the text if there are spaces or "
@@ -3603,12 +3598,12 @@ msgstr ""
 "Etkinleştirildiğinde, bu arma yalnızca eşleşen diziden önce/sonra boşluklar "
 "varsa veya bir şey yoksa metinle eşleşir."
 
-#: libs/caliaseditor.cpp:205
+#: libs/caliaseditor.cpp:189
 #, kde-format
 msgid "Include prefix/suffix"
 msgstr "Öneki/soneki içer"
 
-#: libs/caliaseditor.cpp:206
+#: libs/caliaseditor.cpp:190
 #, kde-format
 msgid ""
 "Prefix/suffix of matched text will be automatically appended to the expanded "
@@ -3616,7 +3611,7 @@ msgid ""
 msgstr ""
 "Eşleşen metnin öneki/soneki kendiliğinden genişletilen metne iliştirilir."
 
-#: libs/caliaseditor.cpp:210
+#: libs/caliaseditor.cpp:194
 #, kde-format
 msgid ""
 "<p>With global matching, one alias/trigger can match multiple times, if it "
@@ -3637,17 +3632,17 @@ msgstr ""
 "listeden adları vurgulamak (eşleşmenin listede olup olmadığını denetlemek "
 "için koşulu kullanarak) veya başka bir şey için kullanabilirsiniz."
 
-#: libs/caliaseditor.cpp:310
+#: libs/caliaseditor.cpp:271
 #, kde-format
 msgid "This text did not match your alias."
 msgstr "Bu metin armanızla eşleşmedi."
 
-#: libs/caliaseditor.cpp:315
+#: libs/caliaseditor.cpp:276
 #, kde-format
 msgid "This text matches your alias."
 msgstr "Bu metin armanızla eşleşiyor."
 
-#: libs/caliaseditor.cpp:329
+#: libs/caliaseditor.cpp:290
 #, kde-format
 msgid "Command: "
 msgstr "Komut: "
@@ -3980,33 +3975,33 @@ msgstr "Profil adı"
 msgid "Login name"
 msgstr "Oturum açma adı"
 
-#: libs/cstatus.cpp:41 libs/cstatus.cpp:180
+#: libs/cstatus.cpp:42 libs/cstatus.cpp:181
 #, kde-format
 msgid "Off-line"
 msgstr "Çevrimdışı"
 
-#: libs/cstatus.cpp:44 libs/cstatus.cpp:166 libs/cstatus.cpp:174
-#: libs/cstatus.cpp:210 libs/cstatus.cpp:258
+#: libs/cstatus.cpp:45 libs/cstatus.cpp:167 libs/cstatus.cpp:175
+#: libs/cstatus.cpp:211 libs/cstatus.cpp:259
 #, kde-format
 msgid "idle"
 msgstr "boşta"
 
-#: libs/cstatus.cpp:172
+#: libs/cstatus.cpp:173
 #, kde-format
 msgid "Connected"
 msgstr "Bağlandı"
 
-#: libs/cstatus.cpp:175
+#: libs/cstatus.cpp:176
 #, kde-format
 msgid "Connected."
 msgstr "Bağlandı."
 
-#: libs/cstatus.cpp:181
+#: libs/cstatus.cpp:182
 #, kde-format
 msgid "Disconnected."
 msgstr "Bağlantı kesildi."
 
-#: libs/cstatus.cpp:183
+#: libs/cstatus.cpp:184
 #, kde-format
 msgid "Connection has been closed."
 msgstr "Bağlantı kapatıldı."
@@ -4175,7 +4170,7 @@ msgid "Create Level"
 msgstr "Düzey Oluştur"
 
 #: plugins/mapper/cmapmanager.cpp:636
-#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:34
+#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:30
 #, kde-format
 msgid "Create Room"
 msgstr "Oda Oluştur"
@@ -4192,14 +4187,14 @@ msgstr "Bu konumda bir yol halihazırda var"
 
 #: plugins/mapper/cmapmanager.cpp:764 plugins/mapper/cmapmanager.cpp:1448
 #: plugins/mapper/cmapmanager.cpp:1502 plugins/mapper/cmapmanager.cpp:1536
-#: plugins/mapper/cmapview.cpp:585 plugins/mapper/cmapview.cpp:607
-#: plugins/mapper/cmapview.cpp:614 plugins/mapper/cmapview.cpp:623
+#: plugins/mapper/cmapview.cpp:586 plugins/mapper/cmapview.cpp:608
+#: plugins/mapper/cmapview.cpp:615 plugins/mapper/cmapview.cpp:624
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr "KMuddy Haritalayıcı"
 
 #: plugins/mapper/cmapmanager.cpp:777 plugins/mapper/cmapmanager.cpp:811
-#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:42
+#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:41
 #, kde-format
 msgid "Create Path"
 msgstr "Yol Oluştur"
@@ -4279,18 +4274,18 @@ msgstr "Sınama odası 4"
 msgid "Set Special Exit"
 msgstr "Özel Çıkış Ayarla"
 
-#: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:685
+#: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:686
 #, kde-format
 msgid "Add Bend"
 msgstr "Dönemeç Ekle"
 
 #: plugins/mapper/cmappath.cpp:616
-#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:217
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
 msgstr "Dönemeci Taşı"
 
-#: plugins/mapper/cmappath.cpp:631 plugins/mapper/cmapview.cpp:703
+#: plugins/mapper/cmappath.cpp:631 plugins/mapper/cmapview.cpp:704
 #, kde-format
 msgid "Delete Path Segment"
 msgstr "Yol Bölütünü Sil"
@@ -4310,153 +4305,153 @@ msgstr "Hareketleri İzle"
 msgid "Auto Create"
 msgstr "Otomatik Oluştur"
 
-#: plugins/mapper/cmapview.cpp:123
+#: plugins/mapper/cmapview.cpp:124
 #, kde-format
 msgid "&Grid"
 msgstr "&Izgara"
 
-#: plugins/mapper/cmapview.cpp:128
+#: plugins/mapper/cmapview.cpp:129
 #, kde-format
 msgid "Display Upper Level"
 msgstr "Üst Düzeyi Görüntüle"
 
-#: plugins/mapper/cmapview.cpp:133
+#: plugins/mapper/cmapview.cpp:134
 #, kde-format
 msgid "Display Lower Level"
 msgstr "Alt Düzeyi Görüntüle"
 
-#: plugins/mapper/cmapview.cpp:138
+#: plugins/mapper/cmapview.cpp:139
 #, kde-format
 msgid "Delete Current Level"
 msgstr "Geçerli Düzeyi Sil"
 
-#: plugins/mapper/cmapview.cpp:143
+#: plugins/mapper/cmapview.cpp:144
 #, kde-format
 msgid "Create New Zone"
 msgstr "Yeni Bölge Oluştur"
 
-#: plugins/mapper/cmapview.cpp:148
+#: plugins/mapper/cmapview.cpp:149
 #, kde-format
 msgid "Delete Current Zone"
 msgstr "Geçerli Bölgeyi Sil"
 
-#: plugins/mapper/cmapview.cpp:155
+#: plugins/mapper/cmapview.cpp:156
 #, kde-format
 msgid "Map Upper Level"
 msgstr "Yukarı Düzeyi Haritala"
 
-#: plugins/mapper/cmapview.cpp:159
+#: plugins/mapper/cmapview.cpp:160
 #, kde-format
 msgid "Map Lower Level"
 msgstr "Aşağı Düzeyi Haritala"
 
-#: plugins/mapper/cmapview.cpp:166
+#: plugins/mapper/cmapview.cpp:167
 #, kde-format
 msgid "Set &Current Position"
 msgstr "&Geçerli Konumu Ayarla"
 
-#: plugins/mapper/cmapview.cpp:170
+#: plugins/mapper/cmapview.cpp:171
 #, kde-format
 msgid "Set Room to &Login Point"
 msgstr "Odayı &Oturum Açma Noktasına Ayarla"
 
-#: plugins/mapper/cmapview.cpp:174
+#: plugins/mapper/cmapview.cpp:175
 #, kde-format
 msgid "&Speed walk to room"
 msgstr "Odaya &hızlı yürü"
 
-#: plugins/mapper/cmapview.cpp:178
+#: plugins/mapper/cmapview.cpp:179
 #, kde-format
 msgid "&Delete room"
 msgstr "Odayı &sil"
 
-#: plugins/mapper/cmapview.cpp:183 plugins/mapper/cmapview.cpp:195
-#: plugins/mapper/cmapview.cpp:227
+#: plugins/mapper/cmapview.cpp:184 plugins/mapper/cmapview.cpp:196
+#: plugins/mapper/cmapview.cpp:228
 #, kde-format
 msgid "&Properties"
 msgstr "&Özellikler"
 
-#: plugins/mapper/cmapview.cpp:190
+#: plugins/mapper/cmapview.cpp:191
 #, kde-format
 msgid "&Delete Text"
 msgstr "Metni &sil"
 
-#: plugins/mapper/cmapview.cpp:202
+#: plugins/mapper/cmapview.cpp:203
 #, kde-format
 msgid "&One way"
 msgstr "&Tek yön"
 
-#: plugins/mapper/cmapview.cpp:206
+#: plugins/mapper/cmapview.cpp:207
 #, kde-format
 msgid "&Two way"
 msgstr "&Çift yön"
 
-#: plugins/mapper/cmapview.cpp:210
+#: plugins/mapper/cmapview.cpp:211
 #, kde-format
 msgid "&Add Bend"
 msgstr "Dönemeç &Ekle"
 
-#: plugins/mapper/cmapview.cpp:214
+#: plugins/mapper/cmapview.cpp:215
 #, kde-format
 msgid "&Remove Segment"
 msgstr "&Bölütü Kaldır"
 
-#: plugins/mapper/cmapview.cpp:218
+#: plugins/mapper/cmapview.cpp:219
 #, kde-format
 msgid "&Edit Bends"
 msgstr "Dönemeçleri Dü&zenle"
 
-#: plugins/mapper/cmapview.cpp:222
+#: plugins/mapper/cmapview.cpp:223
 #, kde-format
 msgid "&Delete Path"
 msgstr "Yolu &Sil"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
-#: plugins/mapper/cmapview.cpp:232
+#: plugins/mapper/cmapview.cpp:233
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
 #, kde-format
 msgid "Hide"
 msgstr "Gizle"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
-#: plugins/mapper/cmapview.cpp:241
+#: plugins/mapper/cmapview.cpp:242
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
 #, kde-format
 msgid "Custom"
 msgstr "Özel"
 
-#: plugins/mapper/cmapview.cpp:244
+#: plugins/mapper/cmapview.cpp:245
 #, kde-format
 msgid "&Label"
 msgstr "&Etiket"
 
-#: plugins/mapper/cmapview.cpp:585
+#: plugins/mapper/cmapview.cpp:586
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "O yönde bir düzey yok. Yeni bir tane oluşturmak istiyor musunuz?"
 
-#: plugins/mapper/cmapview.cpp:607
+#: plugins/mapper/cmapview.cpp:608
 #, kde-format
 msgid "Are you sure that you want to delete the current level?"
 msgstr "Geçerli düzeyi silmek istediğinizden emin misiniz?"
 
-#: plugins/mapper/cmapview.cpp:614
+#: plugins/mapper/cmapview.cpp:615
 #, kde-format
 msgid "Please enter the name of the new zone:"
 msgstr "Lütfen yeni bölgenin adını girin:"
 
-#: plugins/mapper/cmapview.cpp:623
+#: plugins/mapper/cmapview.cpp:624
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
 msgstr "Geçerli bölgeyi silmek istediğinizden emin misiniz? Bu geri alınamaz."
 
-#: plugins/mapper/cmapview.cpp:760
+#: plugins/mapper/cmapview.cpp:761
 #, kde-format
 msgid "Change room label position"
 msgstr "Oda etiketi konumunu değiştir"
 
-#: plugins/mapper/cmapview.cpp:786
+#: plugins/mapper/cmapview.cpp:787
 #, kde-format
 msgid "Change zone label position"
 msgstr "Bölge etiketi konumunu değiştir"
@@ -5164,7 +5159,7 @@ msgstr "Boyutu Ayarla"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
-#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:37
+#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:34
 #, kde-format
 msgid "Text"
 msgstr "Metin"
@@ -5220,7 +5215,7 @@ msgstr "Ögeleri Taşı"
 msgid "Change element notes"
 msgstr "Öge notlarını değiştir"
 
-#: plugins/mapper/plugins/standard/cmappluginstandard.cpp:76
+#: plugins/mapper/plugins/standard/cmappluginstandard.cpp:70
 #, kde-format
 msgid "Notes"
 msgstr "Notlar"
@@ -5230,12 +5225,12 @@ msgstr "Notlar"
 msgid "Notes:"
 msgstr "Notlar:"
 
-#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:59
+#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:58
 #, kde-format
 msgid "Eraser"
 msgstr "Silgi"
 
-#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:36
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:34
 #, kde-format
 msgid "Select"
 msgstr "Seç"
@@ -5393,12 +5388,12 @@ msgstr "&Sonlandır"
 msgid "&Kill"
 msgstr "&Öldür"
 
-#: plugins/scripting/scriptingplugin.cpp:65
+#: plugins/scripting/scriptingplugin.cpp:64
 #, kde-format
 msgid "/exec: Script list is not available."
 msgstr "/exec: Betik listesi kullanılamıyor."
 
-#: plugins/scripting/scriptingplugin.cpp:125
+#: plugins/scripting/scriptingplugin.cpp:124
 #, kde-format
 msgid "Scripts"
 msgstr "Betikler"
@@ -5432,3 +5427,6 @@ msgstr "Değişken"
 #, kde-format
 msgid "Variables"
 msgstr "Değişkenler"
+
+#~ msgid "&Edit..."
+#~ msgstr "Dü&zenle..."
