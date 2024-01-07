@@ -83,7 +83,6 @@
 #include <kwindowsystem.h>
 #include <kpassivepopup.h>
 #include <KSystemTrayIcon>
-#include <kdebug.h>
 
 KMuddy *KMuddy::_self = nullptr;
 
@@ -1199,7 +1198,18 @@ void KMuddy::switchShortcuts (bool value)
 
 void KMuddy::showSettingsDialog ()
 {
-  dlgAppSettings::showSettingsDialog();
+  //so first we have to create the dialog...
+  dlgAppSettings *sdlg = new dlgAppSettings (this);
+
+  //next we fill in its data
+  sdlg->putSettingsToDialog ();
+
+  //dialog is ready - show it!
+  sdlg->exec ();
+
+  //further action is handled via slots issued by buttons, so that we only
+  //have to destroy the dialog...
+  delete sdlg;
 }
 
 void KMuddy::showConnPrefsDialog ()

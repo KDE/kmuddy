@@ -25,9 +25,9 @@ set(dialogs_LIB_SRCS
     dlgwindows.cpp
     dlgmxpconsole.cpp
     dlgobjects.cpp
-    dlgmudlist.cpp )
+    )
 
 add_library(dialogs STATIC ${dialogs_LIB_SRCS})
 
-target_link_libraries(dialogs KF5::I18n KF5::KDELibs4Support Qt5::Widgets KF5::WidgetsAddons)
+target_link_libraries(dialogs KF5::I18n Qt5::Widgets KF5::WidgetsAddons)
 

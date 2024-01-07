@@ -22,7 +22,7 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <kpushbutton.h>
+#include <QPushButton>
 #include <klineedit.h>
 #include <klocale.h>
 
@@ -75,12 +75,12 @@ dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
   QFrame *bt = new QFrame (page);
   layout->addWidget (bt);
   QHBoxLayout *btlayout = new QHBoxLayout (bt);
-  KPushButton *bt1 = new KPushButton (i18n ("&Send"), bt);
+  QPushButton *bt1 = new QPushButton (i18n ("&Send"), bt);
   bt1->setToolTip ( i18n ("Sends current text to the MUD."));
   bt1->setWhatsThis (i18n ("This will send all the commands you've "
     "entered to the MUD. If you've entered prefix and/or suffix, they will be added "
     "to the beginning and ending of each command."));
-  KPushButton *bt2 = new KPushButton (i18n ("&Clear"), bt);
+  QPushButton *bt2 = new QPushButton (i18n ("&Clear"), bt);
   bt2->setToolTip ( i18n ("Clears window contents."));
   btlayout->addWidget (bt1);
   btlayout->addWidget (bt2);

@@ -41,7 +41,6 @@ set(kmuddy_SRCS
    cmultiinputline.cpp 
    macros.cpp 
    csessionmanager.cpp
-   cmudlist.cpp
    cbutton.cpp
    cbuttonlist.cpp
    cbuttoneditor.cpp

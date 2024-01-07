@@ -21,13 +21,13 @@
 
 #include <qcheckbox.h>
 #include <qcombobox.h>
+#include <QFileDialog>
 #include <QDialogButtonBox>
 #include <qlabel.h>
 #include <qpushbutton.h>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFrame>
-#include <kfiledialog.h>
 #include <klineedit.h>
 #include <klocale.h>
 
@@ -107,7 +107,7 @@ QSize dlgDumpBuffer::sizeHint() const
 
 void dlgDumpBuffer::browseFiles ()
 {
-  fname->setText (KFileDialog::getSaveFileName ());
+  fname->setText (QFileDialog::getSaveFileName ());
 }
 
 bool dlgDumpBuffer::curPos ()

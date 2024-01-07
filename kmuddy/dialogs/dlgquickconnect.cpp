@@ -24,10 +24,11 @@
 #include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
+#include <QSpinBox>
 
 #include <KLocalizedString>
-#include <klineedit.h>
 #include <krestrictedline.h>
 
 dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
@@ -39,10 +40,11 @@ dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
   
   //put some edit boxes there
   QLabel *l1 = new QLabel (i18n ("&Host:"), this);
-  ed1 = new KLineEdit (this);
+  ed1 = new QLineEdit (this);
   QLabel *l2 = new QLabel (i18n ("&Port:"), this);
-  ed2 = new KRestrictedLine (this);
-  ed2->setValidChars ("0123456789");
+  ed2 = new QSpinBox (this);
+  ed2->setRange(1, 65535);
+  ed2->setValue(23);
   int w = max (l1->width(), l2->width());
   l1->setFixedWidth (w);
   l2->setFixedWidth (w);
@@ -89,7 +91,7 @@ QString dlgQuickConnect::host ()
 
 int dlgQuickConnect::port ()
 {
-  return ed2->text().toInt ();
+  return ed2->value();
 }
 
 #include "moc_dlgquickconnect.cpp"

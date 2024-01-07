@@ -21,8 +21,8 @@
 
 #include <QDialog>
 
-class KLineEdit;
-class KRestrictedLine;
+class QLineEdit;
+class QSpinBox;
 
 /**
 QuickConnect dialog - handled by cConnection.
@@ -41,8 +41,8 @@ public:
   int port ();
 
 protected:
-  KLineEdit *ed1;
-  KRestrictedLine *ed2;
+  QLineEdit *ed1;
+  QSpinBox *ed2;
 };
 
 #endif

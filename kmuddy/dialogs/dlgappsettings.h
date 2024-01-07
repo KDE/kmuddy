@@ -47,7 +47,6 @@ public:
   dlgAppSettings(QWidget *parent=nullptr);
   ~dlgAppSettings() override;
 
-  static void showSettingsDialog ();
   QSize sizeHint() const override;
 
 //functions to get/set values

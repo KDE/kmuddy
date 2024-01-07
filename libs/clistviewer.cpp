@@ -165,7 +165,7 @@ void cListViewer::deleteObject () {
     message1 = i18n ("Do you really want to delete this %1?", d->list->objName());
     message2 = i18n ("Delete %1", d->list->objName());
   }
-  if (KMessageBox::questionTwoActions (this, message1, message2, KGuiItem(i18n("Delete")), KStandardGuiItem::cancel()) != KMessageBox::Yes) return;
+  if (KMessageBox::questionTwoActions (this, message1, message2, KGuiItem(i18n("Delete")), KStandardGuiItem::cancel()) != KMessageBox::PrimaryAction) return;
 
   // verify that the object still exists
   if (!cListManager::self()->objectId (d->currentItem)) return;

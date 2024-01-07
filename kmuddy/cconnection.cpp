@@ -138,7 +138,6 @@ cConnection::~cConnection ()
   delete d;
 }
 
-#include <kdebug.h>
 void cConnection::eventNothingHandler (QString event, int)
 {
   cTelnet *telnet = dynamic_cast<cTelnet *>(object ("telnet", sess()));

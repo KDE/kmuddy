@@ -26,14 +26,14 @@
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QGridLayout>
+#include <QInputDialog>
+#include <QPushButton>
 #include <QSortFilterProxyModel>
 #include <QTreeView>
 #include <QVBoxLayout>
 
-#include <kinputdialog.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <kpushbutton.h>
 
 dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
 {
@@ -61,10 +61,10 @@ dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
   QWidget *vb = new QWidget (this);
   QVBoxLayout *vblayout = new QVBoxLayout (vb);
   vblayout->setSpacing (5);
-  KPushButton *addButton = new KPushButton (i18n ("&New profile"), vb);
-  KPushButton *modifyButton = new KPushButton (i18n ("&Modify profile"), vb);
-  KPushButton *deleteButton = new KPushButton (i18n ("&Delete profile"), vb);
-  KPushButton *duplicateButton = new KPushButton (i18n ("&Duplicate profile"), vb);
+  QPushButton *addButton = new QPushButton (i18n ("&New profile"), vb);
+  QPushButton *modifyButton = new QPushButton (i18n ("&Modify profile"), vb);
+  QPushButton *deleteButton = new QPushButton (i18n ("&Delete profile"), vb);
+  QPushButton *duplicateButton = new QPushButton (i18n ("&Duplicate profile"), vb);
   vblayout->addWidget (addButton);
   vblayout->addWidget (modifyButton);
   vblayout->addWidget (deleteButton);
@@ -236,9 +236,7 @@ void dlgConnect::deletePressed ()
     return;
   }
 
-  if (KMessageBox::questionYesNoCancel (this,
-        i18n ("Do you really want to delete profile %1?", mgr->visibleProfileName (profile)),
-        i18n ("Delete profile")) != KMessageBox::Yes)
+  if (KMessageBox::questionTwoActions (this, i18n ("Do you really want to delete profile %1?", mgr->visibleProfileName (profile)), i18n ("Delete profile"), KGuiItem(i18n("Delete")), KStandardGuiItem::cancel()) != KMessageBox::PrimaryAction)
     return;
 
   // wants to delete
@@ -254,7 +252,7 @@ void dlgConnect::duplicatePressed ()
   if (!sett) return;
   
   bool ok;
-  QString newName = KInputDialog::getText (i18n ("Duplicate Profile"), i18n ("Please enter name for the duplicated profile"), mgr->visibleProfileName (profile), &ok, this);
+  QString newName = QInputDialog::getText (this, i18n ("Duplicate Profile"), i18n ("Please enter name for the duplicated profile"), QLineEdit::Normal, mgr->visibleProfileName (profile), &ok);
   if (!mgr->duplicateProfile (profile, newName))
     KMessageBox::error (this, i18n ("There was an error trying to duplicate the profile. Please ensure that you have write access to the profile directory."), i18n ("Unable to duplicate"));
 }

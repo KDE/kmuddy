@@ -21,18 +21,15 @@
 //needed by gcc 3.2
 #define max(a,b) (((a) >= (b)) ? (a) : (b))
 
-#include "cmudlist.h"
-#include "dlgmudlist.h"
-
 #include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
+#include <QSpinBox>
 
 #include <klocale.h>
 #include <kpassworddialog.h>
-#include <klineedit.h>
-#include <krestrictedline.h>
 #include <kmessagebox.h>
 #include <ktextedit.h>
 
@@ -43,29 +40,24 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   //create main dialog's widget
   QGridLayout *layout = new QGridLayout (this);
 
-  // create the button that opens the MUD listing
-//  QPushButton *btlist = new QPushButton (i18n ("&Select from MUD list"), this);
-//  connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
-
   // put some edit boxes there
   QLabel *l1 = new QLabel (i18n ("Profile &name:"), this);
-  ed1 = new KLineEdit (this);
-  ed1->setWhatsThis( i18n ("Enter profile name here. You can enter any "
-  "name, but it must be <b>unique</b>."));
+  ed1 = new QLineEdit (this);
+  ed1->setWhatsThis( i18n ("Enter profile name here. You can enter any name, but it must be <b>unique</b>."));
   QLabel *l2 = new QLabel (i18n ("&Server:"), this);
-  ed2 = new KLineEdit (this);
+  ed2 = new QLineEdit (this);
   ed2->setWhatsThis( i18n ("Enter address of the server where your MUD is running."));
   QLabel *l3 = new QLabel (i18n ("&Port:"), this);
-  ed3 = new KRestrictedLine (this);
-  ed3->setValidChars ("0123456789");
-  ed3->setWhatsThis( i18n ("Enter port on which your MUD running (usually some 4-digit number)."));
-  ed3->setFixedWidth (80);
+  ed3 = new QSpinBox (this);
+  ed3->setRange(1, 65535);
+  ed3->setValue(23);
+  ed3->setWhatsThis( i18n ("Enter port on which your MUD is running (usually some 4-digit number)."));
   QLabel *l4 = new QLabel (i18n ("&Login name:"), this);
-  ed4 = new KLineEdit (this);
+  ed4 = new QLineEdit (this);
   ed4->setWhatsThis( i18n ("Enter your login name on the MUD here.<p><i>This setting is optional.</i>"));
   QLabel *l5 = new QLabel (i18n ("Pass&word:"), this);
-  ed5 = new KLineEdit (this);
-  ed5->setEchoMode (KLineEdit::Password);
+  ed5 = new QLineEdit (this);
+  ed5->setEchoMode (QLineEdit::Password);
   ed5->setWhatsThis( i18n ("Enter your password on the MUD here.<p><i>This setting is optional.</i>"));
   QLabel *l6 = new QLabel (i18n ("&Connect sequence"), this);
   connstr = new KTextEdit (this);
@@ -130,7 +122,7 @@ QString dlgEditProfile::server ()
 
 int dlgEditProfile::port ()
 {
-  return ed3->text().toInt ();
+  return ed3->value();
 }
 
 QString dlgEditProfile::login ()
@@ -160,7 +152,7 @@ void dlgEditProfile::setServer (QString server)
 
 void dlgEditProfile::setPort (int port)
 {
-  ed3->setText (QString::number (port));
+  ed3->setValue (port);
 }
 
 void dlgEditProfile::setLogin (QString login)
@@ -176,15 +168,6 @@ void dlgEditProfile::setPassword (QString password)
 void dlgEditProfile::setConnectionString (QStringList conn)
 {
   connstr->setPlainText (conn.join ("\n"));
-}
-
-void dlgEditProfile::openMudList ()
-{
-  const cMUDEntry *e = dlgMudList::getEntry (this);
-  if (!e) return;
-  setName (e->name);
-  setServer (e->host);  // TODO: perhaps add an ability to set IP instead of name ?
-  setPort (e->port);
 }
 
 void dlgEditProfile::accept ()

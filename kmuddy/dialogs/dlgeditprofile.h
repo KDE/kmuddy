@@ -21,9 +21,9 @@
 
 #include <QDialog>
 
-class KLineEdit;
+class QLineEdit;
 class KTextEdit;
-class KRestrictedLine;
+class QSpinBox;
 
 /**
 Dialog used to edit basic profile settings (server, port, ...)
@@ -54,12 +54,11 @@ public:
   void setConnectionString (QStringList conn);  
 protected slots:
   void accept() override;
-  void openMudList ();
 
 protected:
-  KLineEdit *ed1, *ed2, *ed4, *ed5;
+  QLineEdit *ed1, *ed2, *ed4, *ed5;
   KTextEdit *connstr;
-  KRestrictedLine *ed3;
+  QSpinBox *ed3;
 };
 
 #endif

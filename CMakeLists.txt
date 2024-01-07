@@ -2,7 +2,7 @@ project(kmuddy)
 
 cmake_minimum_required(VERSION 2.8.12)
 
-find_package(ECM 1.6.0 REQUIRED CONFIG)
+find_package(ECM REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})
 
 # temporary, cleaning the errors

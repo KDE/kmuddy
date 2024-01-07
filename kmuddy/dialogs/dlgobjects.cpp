@@ -32,9 +32,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kactioncollection.h>
 #include <klocale.h>
 #include <ktoolbar.h>
-#include <kdebug.h>
 
 #include <QComboBox>
+#include <QDebug>
 #include <QDialogButtonBox>
 #include <QSplitter>
 #include <QStackedWidget>
@@ -204,7 +204,7 @@ void dlgObjects::switchList ()
   
   d->viewer->setList (list);
 
-  kDebug() << "Switching active list: " << d->currentList << " in session " << d->currentSession << endl;
+  qDebug() << "Switching active list: " << d->currentList << " in session " << d->currentSession;
 }
 
 void dlgObjects::saveChanges ()
@@ -240,7 +240,7 @@ void dlgObjects::activeObjectChanged (cListObject *obj)
   // activate the proper editor
   d->editorStack->setCurrentWidget (editor);
 
-  kDebug () << "Switched active object to " << obj->name() << "." << endl;
+  qDebug () << "Switched active object to " << obj->name() << ".";
 }
 
 #include "moc_dlgobjects.cpp"

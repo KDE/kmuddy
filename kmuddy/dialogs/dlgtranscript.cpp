@@ -26,7 +26,8 @@
 #include <qgroupbox.h>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <kfiledialog.h>
+#include <QFileDialog>
+
 #include <klineedit.h>
 #include <klocale.h>
 
@@ -197,7 +198,7 @@ void dlgTranscript::updateAdvDialog (bool how)
 
 void dlgTranscript::browseFiles ()
 {
-  fname->setText (KFileDialog::getSaveFileName ());
+  fname->setText (QFileDialog::getSaveFileName ());
 }
 
 QString dlgTranscript::getFName ()

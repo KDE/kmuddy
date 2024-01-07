@@ -27,6 +27,7 @@
 //a lot of include files...
 #include <QCheckBox>
 #include <QComboBox>
+#include <QFontDialog>
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QHBoxLayout>
@@ -40,7 +41,6 @@
 #include <kapplication.h>
 #include <kcolorbutton.h>
 #include <kconfig.h>
-#include <kfontdialog.h>
 #include <kshortcutsdialog.h>
 #include <klineedit.h>
 #include <klocale.h>
@@ -402,23 +402,22 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   QGroupBox *colorsbox2 = new QGroupBox (i18n ("Bright colors"), frmcolors);
   QVBoxLayout *colors1layout = new QVBoxLayout (colorsbox1);
   QVBoxLayout *colors2layout = new QVBoxLayout (colorsbox2);
-  for (int i = 0; i < 8; i++)
+  QGroupBox *parentbox = colorsbox1;
+  QVBoxLayout *parentlayout = colors1layout;
+  for (int i = 0; i < 16; i++)
   {
-    KHBox *colorboxn = new KHBox (colorsbox1);
+    // Move to the second layout at the half
+    if (i == 8) {
+      parentbox = colorsbox2;
+      parentlayout = colors2layout;
+    }
+    QWidget *colorboxn = new QWidget (parentbox);
+    QVBoxLayout *layout = new QVBoxLayout (colorboxn);
     QLabel *l = new QLabel (cltext[i], colorboxn);
     cbutton[i] = new KColorButton (colorboxn);
-    colorboxn->setStretchFactor (l, 2);
-    colorboxn->setStretchFactor (cbutton[i], 1);
-    colors1layout->addWidget (colorboxn);
-  }
-  for (int i = 8; i < 16; i++)
-  {
-    KHBox *colorboxn = new KHBox (colorsbox2);
-    QLabel *l = new QLabel (cltext[i], colorboxn);
-    cbutton[i] = new KColorButton (colorboxn);
-    colorboxn->setStretchFactor (l, 1);
-    colorboxn->setStretchFactor (cbutton[i], 0);
-    colors2layout->addWidget (colorboxn);
+    layout->addWidget(l, 2);
+    layout->addWidget(cbutton[i], 1);
+    parentlayout->addWidget (colorboxn);
   }
   colorlayout->addWidget (colorsbox1);
   colorlayout->addWidget (colorsbox2);
@@ -549,23 +548,6 @@ dlgAppSettings::~dlgAppSettings()
 QSize dlgAppSettings::sizeHint() const
 {
   return QSize (600, 400);
-}
-
-void dlgAppSettings::showSettingsDialog ()
-{
-  //so first we have to create the dialog...
-  // TODO: make it a parent of the main window - this could fail ...
-  dlgAppSettings *sdlg = new dlgAppSettings (KApplication::kApplication()->activeWindow());
-
-  //next we fill in its data
-  sdlg->putSettingsToDialog ();
-
-  //dialog is ready - show it!
-  sdlg->exec ();
-
-  //further action is handled via slots issued by buttons, so that we only
-  //have to destroy the dialog...
-  delete sdlg;
 }
 
 int dlgAppSettings::getcolorindex (int which)
@@ -718,7 +700,9 @@ void dlgAppSettings::setAutoConnect (const QString &ac)
 
 void dlgAppSettings::fontchooser1 ()
 {
-  if (KFontDialog::getFont (font[0], KFontChooser::FixedFontsOnly, this))
+  bool ok;
+  font[0] = QFontDialog::getFont (&ok, font[0], this, QString(), QFontDialog::MonospacedFonts);
+  if (ok)
     fonted1->setText (font[0].family() + ", " +
           QString::number(font[0].pointSize()) +
           (font[0].bold() ? (" " + i18n("Bold")) : (QString) "") +
@@ -727,7 +711,9 @@ void dlgAppSettings::fontchooser1 ()
 
 void dlgAppSettings::fontchooser2 ()
 {
-  if (KFontDialog::getFont (font[1], KFontChooser::NoDisplayFlags, this))
+  bool ok;
+  font[1] = QFontDialog::getFont (&ok, font[1], this);
+  if (ok)
     fonted2->setText (font[1].family() + ", " +
           QString::number(font[1].pointSize()) +
           (font[1].bold() ? (" " + i18n("Bold")) : (QString) "") +
@@ -736,7 +722,9 @@ void dlgAppSettings::fontchooser2 ()
 
 void dlgAppSettings::fontchooser3 ()
 {
-  if (KFontDialog::getFont (font[2], KFontChooser::NoDisplayFlags, this))
+  bool ok;
+  font[2] = QFontDialog::getFont (&ok, font[2], this);
+  if (ok)
     fonted3->setText (font[2].family() + ", " +
           QString::number(font[2].pointSize()) +
           (font[2].bold() ? (" " + i18n("Bold")) : (QString) "") +
