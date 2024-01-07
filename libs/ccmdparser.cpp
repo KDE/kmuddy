@@ -137,7 +137,6 @@ QStringList cCmdParser::parse (const QString &command, bool expandAliases)
   return result;
 }
 
-#include <kdebug.h>
 QStringList cCmdParser::parseCommand (const QString &command, bool expandAliases)
 {
   QStringList result, res;

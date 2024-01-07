@@ -27,12 +27,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cprofilesettings.h"
 #include "ctextchunk.h"
 
+#include <QRandomGenerator>
 #include <QScrollBar>
 #include <QVBoxLayout>
 
-#include <kapplication.h>
 #include <KLocalizedString>
-#include <krandom.h>
 
 cOutput::cOutput (int sess, QWidget *parent) : QWidget(parent), cActionBase ("output", sess)
 {
@@ -227,7 +226,7 @@ void cOutput::makeDecision ()
 {
   QString ss;
   //generate a random number in 0..9 range
-  int which = KRandom::random() % 10;
+  int which = QRandomGenerator::global()->bounded(0, 10);
   switch (which) {
     case 0: ss = i18n ("No, no, no!"); break;
     case 1: ss = i18n ("I don't agree with it."); break;

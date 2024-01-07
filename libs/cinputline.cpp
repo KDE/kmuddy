@@ -46,7 +46,7 @@ class cCompletion : public KCompletion {
 cInputLine::cInputLine (int sess, QString objName, QWidget *parent)
 : KLineEdit(parent), cActionBase (objName, sess)
 {
-  connect (this, SIGNAL (returnPressed (const QString &)), this, SLOT (handleEnter (const QString &)));
+  connect (this, SIGNAL (returnKeyPressed (const QString &)), this, SLOT (handleEnter (const QString &)));
 
   //default values for selection
   ss = sl = 0;
@@ -211,7 +211,7 @@ void cInputLine::keyPressEvent (QKeyEvent *e)
   // apparently newer versions of Qt don't send this event, so we need to
   if ((e->key() == Qt::Key_Return) || (e->key() == Qt::Key_Enter))
   {
-    returnPressed (text());
+    returnKeyPressed (text());
     e->accept();
     return;
   }
@@ -332,7 +332,7 @@ void cInputLine::paste (const QString &txt)
     for (int i = 0; i < t.length(); ++i) {
       if (t[i] == '\n') {
         insert (line);
-        returnPressed (text());
+        returnKeyPressed (text());
         line = "";
       }
       else

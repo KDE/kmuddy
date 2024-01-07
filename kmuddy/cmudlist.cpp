@@ -24,10 +24,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <cglobalsettings.h>
 
-#include <kdebug.h>
 #include <klocale.h>
 
 #include <QAbstractTableModel>
+#include <QDebug>
 #include <QFile>
 #include <QStandardPaths>
 #include <QXmlStreamReader>
@@ -171,7 +171,7 @@ void cMUDList::load (const QString &file)
 {
   QFile f (file);
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kDebug() << "No MUD list file - nothing to do." << endl;
+    qDebug() << "No MUD list file - nothing to do.";
     return;  // nothing to do
   }
   QXmlStreamReader *reader = new QXmlStreamReader (&f);
@@ -230,7 +230,7 @@ void cMUDList::load (const QString &file)
   else reader->raiseError ("This file is corrupted.");
 
   if (reader->hasError()) {
-    kDebug() << ("Error in profiles.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString()) << endl;
+    qDebug() << ("Error in profiles.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString());
   }
 
   // close the file

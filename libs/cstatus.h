@@ -25,6 +25,7 @@
 #include <cactionbase.h>
 #include <kmuddy_export.h>
 
+class QLabel;
 class QStatusBar;
 
 /**
@@ -35,7 +36,7 @@ class QStatusBar;
 class KMUDDY_EXPORT cStatus : public QObject, public cActionBase {
    Q_OBJECT
 public: 
-  cStatus (int sess, KStatusBar *statusbar);
+  cStatus (int sess, QStatusBar *statusbar);
   ~cStatus() override;
   void showTimer ();
   void hideTimer ();
@@ -62,6 +63,7 @@ protected:
   void gotCommand ();
 
   QStatusBar *sb;
+  QLabel *labelDimension, *labelTimer, *labelIdle, *labelConnected, *labelVariables, *labelPartial;
   QTimer *timer, *timer1;
   bool timing;
   int conntime;

@@ -27,11 +27,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QLabel>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QSpinBox>
 #include <QVBoxLayout>
 
 #include <KLocalizedString>
 #include <kmessagebox.h>
-#include <knuminput.h>
 #include <klineedit.h>
 
 struct cListEditor::Private {
@@ -41,7 +41,7 @@ struct cListEditor::Private {
   cListObjectData guiData;   // data, as filled into the GUI
 
   // GUI elements of the common attrib editor
-  KIntNumInput *edpriority;
+  QSpinBox *edpriority;
   QCheckBox *chkenabled;
   KLineEdit *edname;
 
@@ -215,16 +215,17 @@ QWidget *cListEditor::createCommonAttribEditor (QWidget *parent)
   QGridLayout *layout = new QGridLayout (widget);
   layout->setSpacing (5);
   d->chkenabled = new QCheckBox (i18n ("&Enabled"), widget);
-  d->edpriority = new KIntNumInput (widget);
-  d->edpriority->setLabel (i18n ("&Priority"), Qt::AlignLeft);
-  d->edpriority->setRange (1, 1000, 1);
-  d->edpriority->setSliderEnabled (false);
+  d->edpriority = new QSpinBox (widget);
+  d->edpriority->setRange (1, 1000);
   d->edname = new KLineEdit (widget);
   d->edname->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
+  QLabel *plabel = new QLabel (i18n("&Priority"), widget);
+  plabel->setBuddy (d->edpriority);
   QLabel *label = new QLabel (i18n("&Name"), widget);
   label->setBuddy (d->edname);
   layout->addWidget (d->chkenabled, 0, 0, 1, 2);
-  layout->addWidget (d->edpriority, 1, 0, 1, 2);
+  layout->addWidget (plabel, 1, 0);
+  layout->addWidget (d->edpriority, 1, 1);
   layout->addWidget (label, 2, 0);
   layout->addWidget (d->edname, 2, 1);
   return widget;

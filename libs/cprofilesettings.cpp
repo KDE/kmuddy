@@ -24,8 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cprofilemanager.h"
 
-#include <kdebug.h>
-
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QXmlStreamReader>
@@ -168,12 +167,12 @@ void cProfileSettings::save ()
   dir.remove ("settings.backup");
   
   if (!QFile(path + "/settings.xml").copy (path + "/settings.backup")) {
-    kDebug() << "Unable to backup settings.xml." << endl;  // not fatal, may simply not exist
+    qDebug() << "Unable to backup settings.xml.";  // not fatal, may simply not exist
   }
   
   QFile f (path + "/settings.xml");
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-    kDebug() << "Unable to open settings.xml for writing." << endl;
+    qDebug() << "Unable to open settings.xml for writing.";
     return;  // problem
   }
   // save the profile file
@@ -232,7 +231,7 @@ void cProfileSettings::load ()
 
   QFile f (path + "/settings.xml");
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kWarning() << "No settings file - nothing to do." << endl;
+    qWarning() << "No settings file - nothing to do.";
     return;  // no profiles - nothing to do
   }
   QXmlStreamReader *reader = new QXmlStreamReader (&f);
@@ -256,7 +255,7 @@ void cProfileSettings::load ()
             else if (type == "string")
               setString (name, value);
             else
-              kDebug() << "Unrecognized setting type " << type << endl;
+              qDebug() << "Unrecognized setting type " << type;
           }
         }
       } else reader->raiseError ("Unknown profile file version.");
@@ -264,7 +263,7 @@ void cProfileSettings::load ()
   else reader->raiseError ("This file is corrupted.");
 
   if (reader->hasError()) {
-    kWarning() << ("Error in settings.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString()) << endl;
+    qWarning() << ("Error in settings.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString());
   }
 
   // close the file

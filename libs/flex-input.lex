@@ -1,4 +1,5 @@
 %option noyywrap
+%option nounput
 %{
 /*
 Copyright 2005-2011 Tomas Mecir <kmuddy@kmuddy.com>

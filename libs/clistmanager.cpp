@@ -27,13 +27,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <map>
 
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QStandardItemModel>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 
-#include <kdebug.h>
 
 using namespace std;
 
@@ -240,7 +240,7 @@ void cListManager::loadList (int sessId, cList *list)
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kDebug() << "No " << fName << " file - nothing to do." << endl;
+    qDebug() << "No " << fName << " file - nothing to do.";
     list->listLoaded ();  // mark the list as loaded
     return;  // no profiles - nothing to do
   }
@@ -266,12 +266,12 @@ void cListManager::saveList (int sessId, cList *list)
   dir.remove (list->name() + ".backup");
   QString fName = list->name() + ".xml";
   if (!QFile(path + "/" + fName).copy (path + "/" + list->name() + ".backup")) {
-    kDebug() << "Unable to backup " << fName << endl;  // not fatal, may simply not exist
+    qDebug() << "Unable to backup " << fName;  // not fatal, may simply not exist
   }
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-    kDebug() << "Unable to open " << (path + "/" + fName) << " for writing." << endl;
+    qDebug() << "Unable to open " << (path + "/" + fName) << " for writing.";
     return;  // problem
   }
 

@@ -18,31 +18,39 @@
 
 #include "cstatus.h"
 
+#include <QLabel>
 #include <QStatusBar>
 #include <QTextStream>
 #include <KLocalizedString>
 
 #include "cprofilesettings.h"
 
-#define ID_DIMENSION 1
-#define ID_TIMER 2
-#define ID_IDLE 3
-#define ID_CONNECTED 5
-#define ID_VARIABLES 10
-#define ID_PARTIAL 11
-
 cStatus::cStatus (int sess, QStatusBar *statusbar)
   : cActionBase ("status", sess)
 {
   sb = statusbar;
 
-  sb->insertItem ("", ID_PARTIAL);
-  sb->insertItem ("", ID_VARIABLES, 20);
-  sb->setItemAlignment (ID_VARIABLES, Qt::AlignLeft | Qt::AlignVCenter);
-  sb->insertPermanentItem (" " + i18n ("Off-line") + " ", ID_CONNECTED);
-  sb->insertPermanentItem (" ??x?? ", ID_DIMENSION);
-  sb->insertPermanentItem (" 0:00:00 ", ID_TIMER);
-  sb->insertPermanentItem (" " + i18n ("idle") + " 0:00 ", ID_IDLE);
+//  QLabel *labelDimension, *labelTimer, *labelIdle, *labelConnected, *labelVariables, *labelPartial;
+
+  labelPartial = new QLabel();
+  sb->addWidget(labelPartial);
+
+  labelVariables = new QLabel();
+  labelVariables->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+  sb->addWidget(labelVariables, 20);
+
+  labelConnected = new QLabel(" " + i18n ("Off-line") + " ");
+  sb->addPermanentWidget(labelConnected);
+
+  labelDimension = new QLabel(" ??x?? ");
+  sb->addPermanentWidget(labelDimension);
+
+  labelTimer = new QLabel(" 0:00:00 ");
+  sb->addPermanentWidget(labelTimer);
+  
+  labelIdle = new QLabel(" " + i18n ("idle") + " 0:00 ");
+  sb->addPermanentWidget(labelIdle);
+
   timerShown = true;
 
   //dimension will be signaled soon - don't bother with it now...
@@ -118,7 +126,7 @@ void cStatus::showTimer ()
   if (!timerShown)
   {
     timerReset ();
-    sb->changeItem (" 0:00:00 ", ID_TIMER);
+    labelTimer->setText (" 0:00:00 ");
   }
   timerShown = true;
 }
@@ -128,7 +136,7 @@ void cStatus::hideTimer ()
   if (timerShown)
   {
     timerStop ();
-    sb->changeItem ("", ID_TIMER);  //item is invisible when its text is empty
+    labelTimer->setText(QString());   //item is invisible when its text is empty
   }
   timerShown = false;
 }
@@ -141,7 +149,7 @@ void cStatus::showMessage (const QString & message)
 void cStatus::dimensionsChanged (int x, int y)
 {
   QString s = " " + QString::number (x) + "x" + QString::number (y) + " ";
-  sb->changeItem (s, ID_DIMENSION);
+  labelDimension->setText(s);
 }
 
 void cStatus::timerStart ()
@@ -154,7 +162,7 @@ void cStatus::timerStop ()
   timing = false;
 
   timer1->stop ();
-  sb->changeItem ("", ID_IDLE);
+  labelIdle->setText(QString());
 }
 
 void cStatus::timerReset ()
@@ -163,24 +171,24 @@ void cStatus::timerReset ()
   conntime = 0;
   idletime1 = 0;
   if (timerShown)
-    sb->changeItem (" 0:00:00 ", ID_TIMER);
-  sb->changeItem (" " + i18n ("idle") + " 0:00", ID_IDLE);
+    labelTimer->setText (" 0:00:00 ");
+  labelIdle->setText (" " + i18n ("idle") + " 0:00");
   timer1->start (1000);
 }
 
 void cStatus::connected ()
 {
-  sb->changeItem (" " + i18n ("Connected") + " ", ID_CONNECTED);
-  sb->changeItem ("", ID_PARTIAL);
-  sb->changeItem (" " + i18n ("idle") + " 0:00 ", ID_IDLE);
+  labelConnected->setText (" " + i18n ("Connected") + " ");
+  labelPartial->setText (QString());
+  labelIdle->setText (" " + i18n ("idle") + " 0:00");
   showMessage (i18n ("Connected."));
 }
 
 void cStatus::disconnected ()
 {
-  sb->changeItem (" " + i18n ("Off-line") + " ", ID_CONNECTED);
+  labelConnected->setText (" " + i18n ("Off-line") + " ");
   showMessage (i18n ("Disconnected."));
-  sb->changeItem ("", ID_PARTIAL);
+  labelPartial->setText (QString());
   invokeEvent ("message", sess(), i18n ("Connection has been closed."));
   timerStop ();
 }
@@ -191,14 +199,14 @@ void cStatus::partialLine (const QString &line)
   //connection
   cProfileSettings *sett = settings ();
   if ((!sett) || sett->getBool ("prompt-status"))
-    sb->changeItem (line, ID_PARTIAL);
+    labelPartial->setText (line);
   else
     clearPartialLine();  // clear existing prompt, if any
 }
 
 void cStatus::clearPartialLine ()
 {
-  sb->changeItem (QString(), ID_PARTIAL);
+  labelPartial->setText (QString());
 }
 
 void cStatus::gotCommand ()
@@ -208,7 +216,7 @@ void cStatus::gotCommand ()
     idletime1 = 0;
     timer1->stop ();
     timer1->start (1000);
-    sb->changeItem (" " + i18n ("idle") + " 0:00 ", ID_IDLE);
+    labelIdle->setText (" " + i18n ("idle") + " 0:00 ");
   }
 }
 
@@ -226,7 +234,7 @@ const QString cStatus::connTimeString ()
 
 void cStatus::displayVariables (const QString varText)
 {
-  sb->changeItem (varText, ID_VARIABLES);
+  labelVariables->setText(varText);
 }
 
 void cStatus::timerTick ()
@@ -237,7 +245,7 @@ void cStatus::timerTick ()
     conntime++;
 
     s2 = connTimeString ();
-    sb->changeItem (s2, ID_TIMER);
+    labelTimer->setText (s2);
   }
 }
 
@@ -251,12 +259,13 @@ void cStatus::timer1Tick ()
   h = (idletime1 - s) / 3600;
   
   QString ss;
+  QTextStream(&ss) << " " << h << ":" << m << ":" << s << " ";
   if (h > 0)
-    ss.sprintf (" %d:%02d:%02d ", h, m, s);
+    ss = QString(" %1:%2:%3 ").arg(h).arg(m, 2, 10, QChar('0')).arg(s, 2, 10, QChar('0'));
   else
-    ss.sprintf (" %d:%02d ", m, s);
+    ss = QString(" %1:%2 ").arg(m, 2, 10, QChar('0')).arg(s, 2, 10, QChar('0'));
 
-  sb->changeItem (" " + i18n ("idle") + ss, ID_IDLE);
+  labelIdle->setText (" " + i18n ("idle") + ss);
 }
 
 #include "moc_cstatus.cpp"

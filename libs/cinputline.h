@@ -19,7 +19,7 @@
 #ifndef CINPUTLINE_H
 #define CINPUTLINE_H
 
-#include <klineedit.h>
+#include <KLineEdit>
 
 #include <cactionbase.h>
 #include <kmuddy_export.h>

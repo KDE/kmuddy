@@ -25,8 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cactionbase.h"
 
 #include <kactioncollection.h>
-#include <kdebug.h>
 #include <kmainwindow.h>
+
+#include <QDebug>
 #include <QWidget>
 
 #include <list>
@@ -111,7 +112,7 @@ void cActionManager::unregisterSession (int id)
   std::list<cActionBase *>::iterator itl;
   
   for (it = d->sessions[id]->objects.begin(); it != d->sessions[id]->objects.end(); ++it) {
-    kWarning() << "Object " << it->first << " in session " << id << " was not deleted properly.";
+    qWarning() << "Object " << it->first << " in session " << id << " was not deleted properly.";
     delList.push_back (it->second);
   }
   for (itl = delList.begin(); itl != delList.end(); ++itl)

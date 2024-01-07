@@ -25,20 +25,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clist.h"
 #include "clistmanager.h"
 #include "clistgroup.h"
-#include <kaction.h>
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <KLocalizedString>
-#include <kinputdialog.h>
 #include <kmessagebox.h>
 
+#include <QAction>
 #include <QContextMenuEvent>
 #include <QHeaderView>
 #include <QIcon>
+#include <QInputDialog>
 #include <QMenu>
 #include <QStandardItemModel>
 #include <QRegExpValidator>
-
-#include <kdebug.h>
 
 struct cListViewer::Private {
   cList *list;
@@ -61,26 +59,26 @@ cListViewer::cListViewer (QWidget *parent)
   d->col = new KActionCollection (this);
 
   // create the actions and popup menus
-  KAction *actDeleteObj = new KAction (this);
+  QAction *actDeleteObj = new QAction (this);
   actDeleteObj->setText (i18n ("Delete object"));
   actDeleteObj->setIcon (QIcon::fromTheme ("list-remove"));
   connect (actDeleteObj, SIGNAL (triggered()), this, SLOT (deleteObject()));
   d->col->addAction ("DeleteObject", actDeleteObj);
-  KAction *actDeleteGroup = new KAction (this);
+  QAction *actDeleteGroup = new QAction (this);
   actDeleteGroup->setText (i18n ("Delete group"));
   connect (actDeleteGroup, SIGNAL (triggered()), this, SLOT (deleteObject()));
   d->col->addAction ("DeleteGroup", actDeleteGroup);
-  KAction *actAddSubGroup = new KAction (this);
+  QAction *actAddSubGroup = new QAction (this);
   actAddSubGroup->setText (i18n ("Add subgroup"));
   actAddSubGroup->setIcon (QIcon::fromTheme ("folder-new"));
   connect (actAddSubGroup, SIGNAL (triggered()), this, SLOT (addGroup()));
   d->col->addAction ("AddSubGroup", actAddSubGroup);
-  KAction *actAddGroup = new KAction (this);
+  QAction *actAddGroup = new QAction (this);
   actAddGroup->setText (i18n ("Add group"));
   actAddGroup->setIcon (QIcon::fromTheme ("folder-new"));
   connect (actAddGroup, SIGNAL (triggered()), this, SLOT (addGroup()));
   d->col->addAction ("AddGroup", actAddGroup);
-  KAction *actAddObject = new KAction (this);
+  QAction *actAddObject = new QAction (this);
   actAddObject->setText (i18n ("Add object"));
   actAddObject->setIcon (QIcon::fromTheme ("list-add"));
   connect (actAddObject, SIGNAL (triggered()), this, SLOT (addObject()));
@@ -167,7 +165,7 @@ void cListViewer::deleteObject () {
     message1 = i18n ("Do you really want to delete this %1?", d->list->objName());
     message2 = i18n ("Delete %1", d->list->objName());
   }
-  if (KMessageBox::questionYesNo (this, message1, message2) != KMessageBox::Yes) return;
+  if (KMessageBox::questionTwoActions (this, message1, message2, KGuiItem(i18n("Delete")), KStandardGuiItem::cancel()) != KMessageBox::Yes) return;
 
   // verify that the object still exists
   if (!cListManager::self()->objectId (d->currentItem)) return;
@@ -191,8 +189,13 @@ void cListViewer::addGroup () {
 
   // ask for group name
   bool ok = false;
-  QString name = KInputDialog::getText (i18n ("Create Group"), i18n ("Please enter the group name:"), QString(), &ok, this, d->validator);
+  QString name = QInputDialog::getText (this, i18n ("Create Group"), i18n ("Please enter the group name:"), QLineEdit::Normal, QString(), &ok);
   if (!ok) return;
+  int pos = 0;
+  if (d->validator->validate(name, pos) != QValidator::Acceptable) {
+    KMessageBox::error (this, i18n ("Cannot create the group, as the provided name is not valid."));
+    return;
+  }
 
   // check if such group exists yet
   cListGroup *g = d->list->group (name);

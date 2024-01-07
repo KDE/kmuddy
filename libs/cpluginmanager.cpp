@@ -25,16 +25,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cactionmanager.h"
 #include "cplugin.h"
 
-#include <kdebug.h>
-#include <kdialog.h>
+#include <QDebug>
+#include <QDialog>
 #include <KLocalizedString>
-#include <KPluginInfo>
-#include <kpluginselector.h>
-#include <KServiceTypeTrader>
-//#include <kparts/componentfactory.h>
-#include <kparts/plugin.h>
+#include <KPluginWidget>
+#include <KPluginFactory>
 
 #include <list>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace std;
 
@@ -160,24 +161,12 @@ void cPluginManager::eventChunkHandler (QString event, int session, cTextChunk *
 void cPluginManager::findPlugins ()
 {
   pluginInfo.clear ();
-  KPluginInfo::List pi = KPluginInfo::fromServices (KServiceTypeTrader::self()->query (
-      QString::fromLatin1("KMuddy/Plugin"),
-      QString::fromLatin1("(Type == 'Service') and ([X-KMuddy-Version] == 2)")));
-  
-  // fill in the associative array with plugin info
-  KPluginInfo::List::Iterator it;
-  for (it = pi.begin(); it != pi.end(); ++it) {
-    KPluginInfo info = *it;
-    kDebug() << "Found plugin: " << info.name();
-    pluginInfo[info.name()] = info;
+  QVector< KPluginMetaData > pi = KPluginMetaData::findPlugins ("kmuddy");
+  for (auto pinfo : pi) {
+    QString name = pinfo.name();
+    qDebug() << "Found plugin: " << name;
+    pluginInfo[name] = pinfo;
   }
-}
-
-KPluginInfo cPluginManager::getPluginInfo (const QString &name)
-{
-  if (pluginInfo.count (name))
-    return pluginInfo[name];
-  return KPluginInfo(QString());
 }
 
 bool cPluginManager::loadPlugin (const QString &name)
@@ -186,18 +175,15 @@ bool cPluginManager::loadPlugin (const QString &name)
     return false;
   if (!(pluginInfo.count (name)))  //we know nothing of that plug-in
     return false;
-  
-  KService::Ptr service = pluginInfo[name].service();
-  KPluginFactory *factory = KPluginLoader (*service).factory();
-  cPlugin *plugin = factory->create<cPlugin> (nullptr);
 
-  if (!plugin) {
-    kDebug() << "Failed to load plugin: " << name;
-  pluginInfo[name].setPluginEnabled (false);
+  KPluginFactory::Result<cPlugin> res = KPluginFactory::instantiatePlugin<cPlugin>(pluginInfo[name]);
+  if (!res) {
+    qDebug() << "Failed to load plugin: " << name;
     return false;
   }
 
-  pluginInfo[name].setPluginEnabled (true);
+  cPlugin *plugin = res.plugin;
+
   loadedPlugins[name] = plugin;
   plugins.insert (pair<int, cPlugin *>(plugin->priority(), plugin));
   
@@ -213,7 +199,7 @@ bool cPluginManager::loadPlugin (const QString &name)
   }
   plugin->setActiveSession (activeSess);
   plugin->sessionSwitch (activeSess);
-  kDebug() << "Loaded plugin: " << name;
+  qDebug() << "Loaded plugin: " << name;
   return true;
 }
 
@@ -223,7 +209,6 @@ bool cPluginManager::unloadPlugin (const QString &name)
     return false;
   cPlugin *p = loadedPlugins[name];
   loadedPlugins.erase (name);
-  pluginInfo[name].setPluginEnabled (false);
   //remove plugin from the priority list
   for (it = plugins.begin(); it != plugins.end(); ++it)
     if (it->second == p)
@@ -239,7 +224,7 @@ bool cPluginManager::unloadPlugin (const QString &name)
     p->sessionRemove (sit->first, false);
   }
   
-  kDebug() << "Unloaded plugin: " << name;
+  qDebug() << "Unloaded plugin: " << name;
 
   delete p;
   return true;
@@ -252,18 +237,16 @@ bool cPluginManager::isLoaded (const QString &name)
 
 void cPluginManager::loadAll ()
 {
-  map<QString, KPluginInfo>::iterator it;
-  for (it = pluginInfo.begin(); it != pluginInfo.end(); ++it)
-    if (!(noload.contains (it->first)))
-      loadPlugin (it->first);
+  for (auto e : pluginInfo)
+    if (e.second.isEnabled(pluginConfig))
+      loadPlugin (e.first);
 }
 
 void cPluginManager::unloadUnwanted ()
 {
-  QStringList::iterator it;
-  for (it = noload.begin(); it != noload.end(); ++it)
-    if (isLoaded (*it))
-      unloadPlugin (*it);
+  for (auto e : pluginInfo)
+    if (isLoaded(e.first) && (!e.second.isEnabled(pluginConfig)))
+      unloadPlugin (e.first);
 }
 
 void cPluginManager::unloadAll ()
@@ -281,22 +264,27 @@ void cPluginManager::unloadAll ()
 
 void cPluginManager::showPluginsDialog ()
 {
-  pluginDialog = new KDialog (nullptr);
-  pluginDialog->setCaption (i18n ("Plugins"));
-  pluginDialog->setButtons (KDialog::Ok | KDialog::Cancel | KDialog::Apply);
-  pluginDialog->setInitialSize (QSize (400, 300));
+  pluginDialog = new QDialog (nullptr);
+  pluginDialog->setWindowTitle (i18n ("Plugins"));
+  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
+  QVBoxLayout *mainLayout = new QVBoxLayout;
+  pluginDialog->setLayout(mainLayout);
+  pluginSelector = new KPluginWidget (pluginDialog);
+  mainLayout->addWidget(pluginSelector);
+  pluginDialog->connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+  pluginDialog->connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+  mainLayout->addWidget(buttonBox);
+  pluginDialog->resize (QSize (400, 300));
 
-  pluginSelector = new KPluginSelector (pluginDialog);
-  pluginDialog->setMainWidget (pluginSelector);
 
-  connect (pluginDialog, SIGNAL (okClicked()), this, SLOT (applyPluginDialog ()));
-  connect (pluginDialog, SIGNAL (applyClicked()), this, SLOT (applyPluginDialog ()));
+  connect (pluginSelector, &KPluginWidget::changed, this, &cPluginManager::applyPluginDialog);
 
-  QList<KPluginInfo> list;
-  map<QString, KPluginInfo>::iterator itp;
+  QVector<KPluginMetaData> list;
+  map<QString, KPluginMetaData>::iterator itp;
   for (itp = pluginInfo.begin(); itp != pluginInfo.end(); ++itp)
     list.append (itp->second);
-  pluginSelector->addPlugins (list, KPluginSelector::IgnoreConfigFile);
+  pluginSelector->addPlugins (list, QString());
+  // TODO - set up the config file and group
   // pluginSelector->load ();
 
   pluginDialog->exec ();
@@ -307,15 +295,6 @@ void cPluginManager::showPluginsDialog ()
 
 void cPluginManager::applyPluginDialog ()
 {
-  // we construct the new list of disabled plug-ins
-  pluginSelector->updatePluginsState ();
-  QStringList nl;
-  map<QString, KPluginInfo>::iterator itp;
-  for (itp = pluginInfo.begin(); itp != pluginInfo.end(); ++itp)
-    if (!itp->second.isPluginEnabled())
-      nl += itp->second.name();
-  noload = nl;
-  
   // unload unwanted plug-ins, load newly wanted ones
   unloadUnwanted ();
   loadAll ();

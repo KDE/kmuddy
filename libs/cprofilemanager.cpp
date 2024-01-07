@@ -23,12 +23,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cprofilemanager.h"
 
 #include <QAbstractTableModel>
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 
-#include <kdebug.h>
 #include <KLocalizedString>
 
 #include <map>
@@ -378,7 +378,7 @@ void cProfileManager::load ()
   // create the XML loader
   QFile f (path + "/profiles.xml");
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kDebug() << "No profiles file - nothing to do." << endl;
+    qDebug() << "No profiles file - nothing to do.";
     return;  // no profiles - nothing to do
   }
   QXmlStreamReader *reader = new QXmlStreamReader (&f);
@@ -410,7 +410,7 @@ void cProfileManager::load ()
   else reader->raiseError ("This file is corrupted.");
 
   if (reader->hasError()) {
-    kDebug() << ("Error in profiles.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString()) << endl;
+    qDebug() << ("Error in profiles.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString());
   }
 
   // close the file
@@ -433,13 +433,13 @@ void cProfileManager::save ()
   // backup the old profile file, if any
   dir.remove ("profiles.backup");
   if (!QFile(path + "/profiles.xml").copy (path + "/profiles.backup")) {
-    kDebug() << "Unable to backup profiles.xml." << endl;  // not fatal, may simply not exist
+    qDebug() << "Unable to backup profiles.xml.";  // not fatal, may simply not exist
   }
 
   QFile f (path + "/profiles.xml");
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text))
   {
-    kDebug() << "Unable to open profile.xml for writing." << endl;
+    qDebug() << "Unable to open profile.xml for writing.";
     return;
   }
   // save the profile file

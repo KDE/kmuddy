@@ -31,13 +31,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <qstringlist.h>
 #include <map>
 
+#include <KConfigGroup>
+#include <KPluginMetaData>
+
 using namespace std;
 
 class cPlugin;
 class cTextChunk;
-class KPluginInfo;
-class KDialog;
-class KPluginSelector;
+class QDialog;
+class KPluginWidget;
 
 /**
 Plug-in manager handles plug-in information, loads plug-ins, and passes data/events to them as needed.
@@ -60,13 +62,12 @@ Q_OBJECT
   bool isLoaded (const QString &name);
 
   /** list of plug-ins that should not be loaded - from preferences */
-  void setNoAutoLoadList (QStringList noAutoLoad) { noload = noAutoLoad; };
-  QStringList noAutoLoadList () { return noload; };
+  void setConfigGroup (const KConfigGroup &group) { pluginConfig = group; }
   
   /** Load all available plug-ins expect those that should not be loaded.
   This ensures that all newly installed plug-ins get loaded initially. */
   void loadAll ();
-  /** unload all plug-ins that are currently loaded, but are included in noload list */
+  /** unload all plug-ins that are currently loaded, but are to be disabled */
   void unloadUnwanted ();
   /** unload all plug-ins */
   void unloadAll ();
@@ -103,22 +104,21 @@ protected:
   void passPrompt (int sess, cTextChunk *chunk);
   void passCommand (int sess, QString &command);
   
-  KPluginInfo getPluginInfo (const QString &name);
-  map<QString, KPluginInfo> pluginInfo;
+  map<QString, KPluginMetaData> pluginInfo;
   map<QString, cPlugin *> loadedPlugins;
   /** plug-ins sorted by priority */
   multimap<int, cPlugin *> plugins;
   /** iterator, it's not a local variable, so that passing data to plug-ins is a bit faster :) */
   multimap<int, cPlugin *>::iterator it;
-  QStringList noload;
+  KConfigGroup pluginConfig;
   /** existing sessions */
   map<int, bool> sessions;
   /** active session */
   int activeSess;
   bool lastGagged;
 
-  KDialog *pluginDialog;
-  KPluginSelector *pluginSelector;
+  QDialog *pluginDialog;
+  KPluginWidget *pluginSelector;
 };
 
 #endif

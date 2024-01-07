@@ -23,11 +23,10 @@
 #include "cansiparser.h"
 #include "cpluginmanager.h"
 
-#include <kaction.h>
 #include <kactioncollection.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <kglobal.h>
+#include <KSharedConfig>
 
 #include <QDir>
 #include <QFontDatabase>
@@ -267,7 +266,7 @@ void cGlobalSettings::setProfilePath (const QString &path)
 void cGlobalSettings::load ()
 {
   // loads settings from kmuddyrc
-  KSharedConfig::Ptr config = KGlobal::config ();
+  KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
   //reparse config configuration - needed to make updating of settings
   //via IPC work
@@ -319,16 +318,14 @@ void cGlobalSettings::load ()
 
   // Plugins
   g = config->group ("Plugins");
-  QStringList nl;
-  nl = g.readEntry ("Do not load", nl);
-  cPluginManager::self()->setNoAutoLoadList (nl);
+  cPluginManager::self()->setConfigGroup(g);
 }
 
 // TODO: what to do with this ? KDE4 apps can't read old config, can they ?
 void cGlobalSettings::loadOldConfig ()
 {
   //Loads settings from kmuddyrc. Defaults are used if necessary.
-  KSharedConfig::Ptr config = KGlobal::config ();
+  KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
   //reparse config configuration - needed to make updating of settings
   //via IPC work
@@ -429,7 +426,7 @@ void cGlobalSettings::loadOldConfig ()
 void cGlobalSettings::save ()
 {
   //Saves settings back to kmuddyrc.
-  KSharedConfig::Ptr config = KGlobal::config ();
+  KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
   config->deleteGroup ("Boolean values");
   KConfigGroup g = config->group ("Boolean values");
@@ -464,9 +461,7 @@ void cGlobalSettings::save ()
   acol->setConfigGroup ("Shortcuts");
   acol->writeSettings ();
 
-  //Plugins
-  g = config->group ("Plugins");
-  g.writeEntry ("Do not load", cPluginManager::self()->noAutoLoadList());
+  //Plugins save automatically
 
   config->sync ();
 }

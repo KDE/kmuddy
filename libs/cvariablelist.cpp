@@ -22,9 +22,9 @@
 #include "cvalue.h"
 #include "cvariable.h"
 
-#include <kdebug.h>
 #include <KLocalizedString>
 
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QXmlStreamReader>
@@ -349,7 +349,7 @@ void cVariableList::load ()
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kDebug() << "No " << fName << " file - nothing to do." << endl;
+    qDebug() << "No " << fName << " file - nothing to do.";
     return;  // no profiles - nothing to do
   }
 
@@ -382,7 +382,7 @@ void cVariableList::load ()
                                 QString::number (reader->lineNumber()),
                                 QString::number (reader->columnNumber()),
                                 reader->errorString());
-    kWarning() << lastError << endl;
+    qWarning() << lastError;
   }
   delete reader;
   f.close ();
@@ -400,12 +400,12 @@ void cVariableList::save ()
   dir.remove ("variables.backup");
   QString fName = "variables.xml";
   if (!QFile(path + "/" + fName).copy (path + "/variables.backup")) {
-    kDebug() << "Unable to backup " << fName << endl;  // not fatal, may simply not exist
+    qDebug() << "Unable to backup " << fName;  // not fatal, may simply not exist
   }
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-    kDebug() << "Unable to open " << (path + "/" + fName) << " for writing." << endl;
+    qDebug() << "Unable to open " << (path + "/" + fName) << " for writing.";
     return;  // problem
   }
 

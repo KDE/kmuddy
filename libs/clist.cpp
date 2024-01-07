@@ -100,7 +100,7 @@ class cListModel : public QAbstractItemModel {
 
     if (role == Qt::UserRole) {
       // here we return the object/group
-      return qVariantFromValue (obj);
+      return QVariant::fromValue (obj);
     }
 
     if (role == Qt::DecorationRole) {

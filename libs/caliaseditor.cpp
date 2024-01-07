@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QSplitter>
 #include <QTabWidget>
@@ -38,18 +39,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QVBoxLayout>
 
 #include <KLocalizedString>
-#include <klineedit.h>
-#include <ktextedit.h>
+#include <KTextEdit>
 
 struct cAliasEditor::Private {
   // Basic
-  KLineEdit *cmd;
+  QLineEdit *cmd;
   QComboBox *type;
-  KLineEdit *condition;
+  QLineEdit *condition;
   KTextEdit *rcmd;
 
   // Basic - testarea
-  KLineEdit *text;
+  QLineEdit *text;
   QLabel *matched, *replacement;
   QTreeWidget *variables;
 
@@ -86,7 +86,7 @@ void cAliasEditor::createGUI(QWidget *parent)
 
   // command
   QLabel *cl = new QLabel (i18n ("&Alias text"), basicPage);
-  d->cmd = new KLineEdit (basicPage);
+  d->cmd = new QLineEdit (basicPage);
   cl->setBuddy (d->cmd);
   d->cmd->setWhatsThis (i18n ("Command that will be replaced if you enter it."));
   
@@ -109,7 +109,7 @@ void cAliasEditor::createGUI(QWidget *parent)
 
   //condition
   QLabel *cndl = new QLabel ("Con&dition", basicPage);
-  d->condition = new KLineEdit (basicPage);
+  d->condition = new QLineEdit (basicPage);
   cndl->setBuddy (d->condition);
   d->condition->setWhatsThis( i18n ("Conditional triggering. If this is set, the actions "
       "will only fire if the condition is true (that means, if it evaluates as non-zero)."));
@@ -125,7 +125,7 @@ void cAliasEditor::createGUI(QWidget *parent)
   QGroupBox *testarea = new QGroupBox (i18n ("Test area"), basicTab);
   QGridLayout *testlayout = new QGridLayout (testarea);
   QLabel *textlabel = new QLabel (i18n ("&Text: "), testarea);
-  d->text = new KLineEdit (testarea);
+  d->text = new QLineEdit (testarea);
   textlabel->setBuddy (d->text);
   d->matched = new QLabel ("", testarea);
   d->replacement = new QLabel ("", testarea);

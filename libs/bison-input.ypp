@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
    
    // Functions required by Flex/Bison
    int yylex(void);
-   void yyerror(char *);
+   void yyerror(const char *);
    
    // Compile an expression into a list of instructions
    bool compile(const char        *source_code,
@@ -133,7 +133,7 @@ arg_list:   expr
 // Function to handle errors (required by Bison)
 //***************************************************************
 
-void yyerror(char *)
+void yyerror(const char *)
 {
 } // yyerror
 
