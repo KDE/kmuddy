@@ -5148,6 +5148,3 @@ msgstr "Proměnná"
 #, kde-format
 msgid "Variables"
 msgstr "Proměnné"
-
-#~ msgid "&Edit..."
-#~ msgstr "&Upravit..."
