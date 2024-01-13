@@ -34,7 +34,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QLabel>
 #include <QGridLayout>
 #include <QHBoxLayout>
+#include <QLineEdit>
 #include <QPushButton>
+#include <QSpinBox>
 #include <QSplitter>
 #include <QTabWidget>
 #include <QTreeWidget>
@@ -42,22 +44,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kcolorbutton.h>
 #include <kfiledialog.h>
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
 #include <knuminput.h>
 #include <ktextedit.h>
 
 struct cTriggerEditor::Private {
   // Basic
-  KLineEdit *cmd;
+  QLineEdit *cmd;
   QComboBox *type;
-  KLineEdit *condition;
+  QLineEdit *condition;
   KTextEdit *rcmd;
   QPushButton *editregexp;
 
   // Basic - testarea
-  KLineEdit *text;
+  QLineEdit *text;
   QLabel *matched, *replacement;
   QTreeWidget *variables;
 
@@ -72,7 +73,7 @@ struct cTriggerEditor::Private {
   QCheckBox *chkiscolor;
   QComboBox *clrtype, *fgselect, *bgselect;
   KColorButton *fgcolsel, *bgcolsel;
-  KIntNumInput *backrefno;
+  QSpinBox *backrefno;
   QTreeWidget *colorizations;
 #define MAX_COLORIZATIONS 10
   int cnum;
@@ -83,19 +84,19 @@ struct cTriggerEditor::Private {
   // Rewrite
   QCheckBox *chkrewrite;
   QComboBox *cbrewritevar;
-  KIntNumInput *rewritebackrefno;
-  KLineEdit *edrewritetext;
+  QSpinBox *rewritebackrefno;
+  QLineEdit *edrewritetext;
 
   // Special
   QCheckBox *chkgag, *chknotify, *chkprompt;
   QCheckBox *chksound;
-  KLineEdit *edsoundname;
+  QLineEdit *edsoundname;
 
   // Windows
   QCheckBox *chkwindow;
   QComboBox *windowlist;
   QCheckBox *chkgagoutput;
-  KLineEdit *wname;
+  QLineEdit *wname;
 };
 
 //color list
@@ -164,7 +165,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
 
   // command
   QLabel *cl = new QLabel (i18n ("&Trigger text"), basicPage);
-  d->cmd = new KLineEdit (basicPage);
+  d->cmd = new QLineEdit (basicPage);
   cl->setBuddy (d->cmd);
   d->cmd->setWhatsThis (i18n ("Command that will be replaced if you enter it."));
   
@@ -187,7 +188,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
 
   //condition
   QLabel *cndl = new QLabel ("Con&dition", basicPage);
-  d->condition = new KLineEdit (basicPage);
+  d->condition = new QLineEdit (basicPage);
   cndl->setBuddy (d->condition);
   d->condition->setWhatsThis( i18n ("Conditional triggering. If this is set, the actions "
       "will only fire if the condition is true (that means, if it evaluates as non-zero)."));
@@ -203,7 +204,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   QGroupBox *testarea = new QGroupBox (i18n ("Test area"), basicTab);
   QGridLayout *testlayout = new QGridLayout (testarea);
   QLabel *textlabel = new QLabel (i18n ("&Text: "), testarea);
-  d->text = new KLineEdit (testarea);
+  d->text = new QLineEdit (testarea);
   textlabel->setBuddy (d->text);
   d->matched = new QLabel ("", testarea);
   d->replacement = new QLabel ("", testarea);
@@ -335,10 +336,8 @@ void cTriggerEditor::createGUI(QWidget *parent)
   d->bgselect->addItems (colorlist);
   d->fgcolsel = new KColorButton (Qt::white, onecolor);
   d->bgcolsel = new KColorButton (Qt::black, onecolor);
-  d->backrefno = new KIntNumInput (onecolor);
-  d->backrefno->setLabel (i18n ("&Back-reference"), Qt::AlignLeft);
-  d->backrefno->setRange (0, 100, 1);
-  d->backrefno->setSliderEnabled (false);
+  d->backrefno = new QSpinBox (onecolor);
+  d->backrefno->setRange (0, 100);
   QPushButton *btadd = new QPushButton (i18n ("&Add"), onecolor);
   QPushButton *btremove = new QPushButton (i18n ("&Remove"), onecolor);
   QLabel *l1 = new QLabel (i18n ("&Colorize"), onecolor);
@@ -347,6 +346,8 @@ void cTriggerEditor::createGUI(QWidget *parent)
   l2->setBuddy (d->fgselect);
   QLabel *l3 = new QLabel (i18n ("&Background"), onecolor);
   l3->setBuddy (d->bgselect);
+  QLabel *l4 = new QLabel (i18n ("&Back-reference"), onecolor);
+  l4->setBuddy (d->backrefno);
 
   onecolorlayout->addWidget (l1, 0, 0);
   onecolorlayout->addWidget (l2, 0, 1);
@@ -356,9 +357,10 @@ void cTriggerEditor::createGUI(QWidget *parent)
   onecolorlayout->addWidget (d->bgselect, 1, 2);
   onecolorlayout->addWidget (d->fgcolsel, 2, 1);
   onecolorlayout->addWidget (d->bgcolsel, 2, 2);
-  onecolorlayout->addWidget (d->backrefno, 3, 0);
-  onecolorlayout->addWidget (btadd, 3, 1);
-  onecolorlayout->addWidget (btremove, 3, 2);
+  onecolorlayout->addWidget (l4, 3, 0);
+  onecolorlayout->addWidget (d->backrefno, 4, 0);
+  onecolorlayout->addWidget (btadd, 4, 1);
+  onecolorlayout->addWidget (btremove, 4, 2);
 
   d->colorizations = new QTreeWidget (colorgroup);
   d->colorizations->setHeaderLabels (QStringList() << i18n ("Type") << i18n ("Foreground") << i18n ("Background"));
@@ -390,23 +392,24 @@ void cTriggerEditor::createGUI(QWidget *parent)
   QGridLayout *rewritegrouplayout = new QGridLayout (rewritegroup);
   rewritegrouplayout->setSpacing (10);
 
-  QLabel *l4 = new QLabel (i18n ("&Change this part of line:"), rewritegroup);
+  QLabel *l5 = new QLabel (i18n ("&Change this part of line:"), rewritegroup);
   d->cbrewritevar = new QComboBox (rewritegroup);
   d->cbrewritevar->addItems (types);
-  l4->setBuddy (d->cbrewritevar);
-  d->rewritebackrefno = new KIntNumInput (rewritegroup);
-  d->rewritebackrefno->setLabel (i18n ("&Back-reference"), Qt::AlignLeft);
-  d->rewritebackrefno->setRange (0, 100, 1);
-  d->rewritebackrefno->setSliderEnabled (false);
-  QLabel *l5 = new QLabel (i18n ("&To this value:"), rewritegroup);
-  d->edrewritetext = new KLineEdit (rewritegroup);
-  l5->setBuddy (d->edrewritetext);
+  l5->setBuddy (d->cbrewritevar);
+  QLabel *l6 = new QLabel (i18n ("&Back-reference"), rewritegroup);
+  d->rewritebackrefno = new QSpinBox (rewritegroup);
+  d->rewritebackrefno->setRange (0, 100);
+  l6->setBuddy(d->rewritebackrefno);
+  QLabel *l7 = new QLabel (i18n ("&To this value:"), rewritegroup);
+  d->edrewritetext = new QLineEdit (rewritegroup);
+  l7->setBuddy (d->edrewritetext);
 
-  rewritegrouplayout->addWidget (l4, 0, 0);
-  rewritegrouplayout->addWidget (l5, 2, 0);
+  rewritegrouplayout->addWidget (l5, 0, 0);
+  rewritegrouplayout->addWidget (l6, 1, 0);
+  rewritegrouplayout->addWidget (l7, 2, 0);
   rewritegrouplayout->addWidget (d->cbrewritevar, 0, 1);
   rewritegrouplayout->addWidget (d->edrewritetext, 2, 1);
-  rewritegrouplayout->addWidget (d->rewritebackrefno, 1, 0, 1, 2);
+  rewritegrouplayout->addWidget (d->rewritebackrefno, 1, 1);
   rewritegrouplayout->addWidget (new QWidget (rewritegroup), 3, 0);
   rewritegrouplayout->setRowStretch (3, 0);
   
@@ -444,7 +447,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   d->chksound->setWhatsThis( i18n ("This trigger will play a sound. Useful "
     "as a notification of important events, or to assign sounds to some "
     "events."));
-  d->edsoundname = new KLineEdit (specialPage);
+  d->edsoundname = new QLineEdit (specialPage);
   QPushButton *button = new QPushButton ("&Browse...", specialPage);
   connect (button, SIGNAL (clicked ()), this, SLOT (browseForSoundFile ()));
 
@@ -479,7 +482,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
       "be displayed in main KMuddy session window"));
 
   QLabel *wnl = new QLabel (i18n ("&Window name"), outwindow);
-  d->wname = new KLineEdit (outwindow);
+  d->wname = new QLineEdit (outwindow);
   wnl->setBuddy(d->wname);
 
   QPushButton *createwindow = new QPushButton (i18n ("&Create window"), outwindow);

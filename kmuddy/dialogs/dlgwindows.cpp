@@ -24,8 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cwindowlist.h"
 
-#include <kapplication.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QDialogButtonBox>
 #include <QLabel>

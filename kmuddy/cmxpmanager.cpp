@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kmuddy-version.h"
 #include "cmxpconsole.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 // from ctextchunk.h
 #define ATTRIB_BOLD 1

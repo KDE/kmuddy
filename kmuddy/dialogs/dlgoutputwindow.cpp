@@ -23,15 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "dlgoutputwindow.h"
 #include "cconsole.h"
 
-#include <klocale.h>
-#include <kdeversion.h>
+#include <KLocalizedString>
 
-#include <kwindowsystem.h>
-
-#include <netwm_def.h>
 #include <QVBoxLayout>
 
-dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent)
+dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent, Qt::Tool)
 {
   //initial size
   setWindowTitle (i18n ("Output window"));
@@ -46,8 +42,6 @@ dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent)
   //no session information yet, will set it when it's available
   sess = 0;
   owindow->setSession (0);
-
-  KWindowSystem::setType(this->winId(), NET::Utility);
 
   layout->setMargin (0);
   layout->addWidget(owindow);
@@ -81,7 +75,7 @@ void dlgOutputWindow::setOutputWindowName(const QString &name)
     this->setWindowTitle(name);
 }
 
-void dlgOutputWindow::setFont(QFont font)
+void dlgOutputWindow::setFont(const QFont &font)
 {
   owindow->setFont(font);
 }

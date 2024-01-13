@@ -22,7 +22,7 @@
 #include <QDockWidget>
 
 class QTextEdit;
-class KLineEdit;
+class QLineEdit;
 
 /**
 Multi-line input dialog.
@@ -44,7 +44,7 @@ protected slots:
 protected:
   /** the most important stuff here... */
   QTextEdit *editor;
-  KLineEdit *prefix, *suffix;
+  QLineEdit *prefix, *suffix;
 };
 
 #endif

@@ -26,7 +26,7 @@ class QComboBox;
 class QGroupBox;
 class QLabel;
 class QPushButton;
-class KLineEdit;
+class QLineEdit;
 
 /**
 Configures session transcript.
@@ -71,7 +71,7 @@ protected:
   QCheckBox *includetimestamp;
   QCheckBox *overwrite, *allowansi;
   QCheckBox *includedump;
-  KLineEdit *fname, *afname;
+  QLineEdit *fname, *afname;
 
   QGroupBox *transbox;
   QGroupBox *advtrans;

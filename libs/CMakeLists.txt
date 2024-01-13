@@ -55,7 +55,7 @@ set(kmuddycore_LIB_SRCS
 
 add_library(kmuddycore SHARED ${kmuddycore_LIB_SRCS})
 
-target_link_libraries(kmuddycore KF5::KCMUtils KF5::I18n KF5::TextWidgets KF5::XmlGui KF5::KIOCore KF5::Completion Qt5::Script Qt5::Multimedia)
+target_link_libraries(kmuddycore KF5::KCMUtils KF5::CoreAddons KF5::I18n KF5::TextWidgets KF5::XmlGui KF5::KIOCore KF5::Completion Qt5::Script Qt5::Multimedia)
 
 set_target_properties(kmuddycore PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS kmuddycore DESTINATION ${KDE_INSTALL_LIBDIR} )

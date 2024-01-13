@@ -25,7 +25,7 @@
 class QCheckBox;
 class QComboBox;
 class QPushButton;
-class KLineEdit;
+class QLineEdit;
 class KCodecAction;
 class cDirList;
 
@@ -93,15 +93,15 @@ protected:
   KCodecAction *codecAction;
   QCheckBox *lpmudstyle, *statusprompt, *consoleprompt;
   QCheckBox *autoadvtranscript;
-  KLineEdit *edcmd[10];
-  KLineEdit *edscriptdir, *edscriptworkdir;
-  KLineEdit *edtranscriptdir;
+  QLineEdit *edcmd[10];
+  QLineEdit *edscriptdir, *edscriptworkdir;
+  QLineEdit *edtranscriptdir;
   QCheckBox *usemsp;
   cDirList *dirlist;
   QCheckBox *alwaysmsp, *midlinemsp;
 #ifdef HAVE_MXP
   QComboBox *cbmxpallowed;
-  KLineEdit *edvarprefix;
+  QLineEdit *edvarprefix;
 #endif
 };
 

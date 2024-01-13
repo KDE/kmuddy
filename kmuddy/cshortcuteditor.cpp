@@ -29,14 +29,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QCheckBox>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 #include <QTabWidget>
 
-#include <klineedit.h>
-#include <klocale.h>
-#include "kpushbutton.h"
+#include <KLocalizedString>
 
 struct cShortcutEditor::Private {
-  KLineEdit *cmd;
+  QLineEdit *cmd;
   QCheckBox *chksendit, *chkoverwrite;
   QLabel *lblkey;
   int key, modifiers;
@@ -66,7 +66,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   
   //command
   QLabel *lbl1 = new QLabel (i18n ("&Command"), basicPage);
-  d->cmd = new KLineEdit (basicPage);
+  d->cmd = new QLineEdit (basicPage);
   lbl1->setBuddy (d->cmd);
   d->cmd->setWhatsThis( i18n ("Command that will be executed when you press the "
       "defined key combination.\n"
@@ -77,7 +77,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   d->lblkey = new QLabel (basicPage);
   d->lblkey->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
   d->lblkey->setLineWidth (2);
-  KPushButton *btgrab = new KPushButton (i18n ("Grab shortcut..."), basicPage);
+  QPushButton *btgrab = new QPushButton (i18n ("Grab shortcut..."), basicPage);
   connect (btgrab, SIGNAL (clicked ()), this, SLOT (grabKey ()));
 
   d->chksendit = new QCheckBox (i18n ("&Send command"), basicPage);

@@ -31,7 +31,7 @@
 #include <QTreeWidget>
 #include <QTimer>
 #include <QVBoxLayout>
-#include <klocale.h>
+#include <KLocalizedString>
 
 dlgStatistics::dlgStatistics (QWidget *parent)
   : QDockWidget (parent), cActionBase ("dialog-statistics", 0)

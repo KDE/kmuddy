@@ -23,7 +23,7 @@
 
 class QCheckBox;
 class QComboBox;
-class KLineEdit;
+class QLineEdit;
 
 /**
 Dump Buffer dialog.
@@ -47,7 +47,7 @@ protected slots:
 protected:
   QCheckBox *chkcurpos;
   QComboBox *ttype;
-  KLineEdit *fname;
+  QLineEdit *fname;
 };
 
 #endif

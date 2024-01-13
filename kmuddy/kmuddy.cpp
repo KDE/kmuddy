@@ -70,18 +70,12 @@
 #include <kaboutapplicationdialog.h>
 #include <kactioncollection.h>
 #include <kactionmenu.h>
-#include <kapplication.h>
 #include <khelpmenu.h>
-#include <kinputdialog.h>
 #include <KIconLoader>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
-#include <kshortcut.h>
-#include <kstatusbar.h>
 #include <ktoggleaction.h>
 #include <ktoolbar.h>
-#include <kwindowsystem.h>
-#include <kpassivepopup.h>
 #include <KSystemTrayIcon>
 
 KMuddy *KMuddy::_self = nullptr;

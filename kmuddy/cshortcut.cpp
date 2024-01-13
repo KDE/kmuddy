@@ -23,11 +23,11 @@
 #include "cscripteval.h"
 
 #include <qkeysequence.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cShortcut::Private {
   QString command;
-  int key, modifiers;
+  unsigned int key, modifiers;
   bool send, overwrite;
 };
 

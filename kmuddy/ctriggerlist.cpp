@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ctriggereditor.h"
 
 #include <kmessagebox.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 //used in loop detection
 #define MAXTRIGGERS 50

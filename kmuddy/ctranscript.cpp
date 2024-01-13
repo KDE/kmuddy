@@ -33,7 +33,7 @@
 #include <QFile>
 #include <QPushButton>
 #include <QTimer>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -128,7 +128,7 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
   if (includetimestamp)
   {
     QTime time = QTime::currentTime ();
-    timestamp.sprintf ("[%02d:%02d:%02d.%02d] ", time.hour(), time.minute(), time.second(), time.msec() / 10);
+    timestamp = QString("[%1:%2:%3.%4] ").arg(time.hour(), 2, QChar('0')).arg(time.minute(), 2, QChar('0')).arg(time.second(), 2, QChar('0')).arg(time.msec() / 10, 2, QChar('0'));
     advfile.write (timestamp.toLatin1());
   }
  
@@ -454,19 +454,18 @@ void cTranscript::timeout()
 
 void cTranscript::setAFName(const QString &what)
 {
-  QString day, month, year, hour, min;
   QString sessname;
 
   QDate date = QDate::currentDate();
   QTime time = QTime::currentTime();
   
   fileformat = what;
-  
-  day.sprintf("%02d", date.day());
-  month.sprintf("%02d", date.month());
-  year.sprintf("%02d", date.year());
-  hour.sprintf("%02d", time.hour());
-  min.sprintf("%02d", time.minute());
+
+  QString day   = QString("%1").arg(date.day(), 2, QChar('0'));
+  QString month = QString("%1").arg(date.month(),  2, QChar('0'));
+  QString year  = QString("%1").arg(date.year(),   2, QChar('0'));
+  QString hour  = QString("%1").arg(time.hour(),   2, QChar('0'));
+  QString min   = QString("%1").arg(time.minute(), 2, QChar('0'));
 
   if (settings()) {
     cProfileManager *pm = cProfileManager::self();

@@ -18,9 +18,6 @@
 
 #include "dlgquickconnect.h"
 
-//needed by gcc 3.2
-#define max(a,b) (((a) >= (b)) ? (a) : (b))
-
 #include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QLabel>
@@ -29,7 +26,6 @@
 #include <QSpinBox>
 
 #include <KLocalizedString>
-#include <krestrictedline.h>
 
 dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
 {
@@ -45,7 +41,7 @@ dlgQuickConnect::dlgQuickConnect(QWidget *parent) : QDialog (parent)
   ed2 = new QSpinBox (this);
   ed2->setRange(1, 65535);
   ed2->setValue(23);
-  int w = max (l1->width(), l2->width());
+  int w = std::max (l1->width(), l2->width());
   l1->setFixedWidth (w);
   l2->setFixedWidth (w);
   ed1->setGeometry (ed1->x(), ed1->y(), 200, ed1->height());

@@ -23,8 +23,7 @@
 #include <QListWidget>
 #include <QPushButton>
 
-#include <kapplication.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 cDirList::cDirList (QWidget *parent) : QWidget(parent)
 {

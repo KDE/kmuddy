@@ -27,14 +27,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGroupBox>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QLineEdit>
 #include <QTabWidget>
 
 #include <KIconButton>
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cButtonEditor::Private {
-  KLineEdit *caption, *command, *command2;
+  QLineEdit *caption, *command, *command2;
   KIconButton *icon;
   QGroupBox *pushdown;
   cScriptEditor *script, *scriptrel;
@@ -63,13 +63,13 @@ void cButtonEditor::createGUI(QWidget *parent)
   
   // caption
   QLabel *lbl1 = new QLabel (i18n ("&Caption"), basicPage);
-  d->caption = new KLineEdit (basicPage);
+  d->caption = new QLineEdit (basicPage);
   lbl1->setBuddy (d->caption);
   d->caption->setWhatsThis( i18n ("Caption of this button."));
 
   //command
   QLabel *lblc1 = new QLabel (i18n ("Co&mmand"), basicPage);
-  d->command = new KLineEdit (basicPage);
+  d->command = new QLineEdit (basicPage);
   lblc1->setBuddy (d->command);
   d->command->setWhatsThis( i18n ("Command that will be executed if you click on the button. "
       "Note that you can enter multiple commands here (separated by semi-colons, "
@@ -89,7 +89,7 @@ void cButtonEditor::createGUI(QWidget *parent)
 
   //command2
   QLabel *lblc2 = new QLabel (i18n ("&Un-press command"), d->pushdown);
-  d->command2 = new KLineEdit (d->pushdown);
+  d->command2 = new QLineEdit (d->pushdown);
   lblc2->setBuddy (d->command2);
   d->command2->setWhatsThis (i18n ("Command that will be executed if you click on the push-down "
         "button while it's pushed down."));

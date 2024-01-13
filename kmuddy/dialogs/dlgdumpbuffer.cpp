@@ -28,8 +28,9 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFrame>
-#include <klineedit.h>
-#include <klocale.h>
+#include <QLineEdit>
+
+#include <KLocalizedString>
 
 dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
 {
@@ -49,7 +50,7 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
   QFrame *fileframe = new QFrame (this);
   QHBoxLayout *filelayout = new QHBoxLayout (fileframe);
   QLabel *lblname = new QLabel (i18n ("&File:"), fileframe);
-  fname = new KLineEdit (fileframe);
+  fname = new QLineEdit (fileframe);
   lblname->setBuddy (fname);
   QPushButton *filebutton = new QPushButton (i18n ("&Browse..."), fileframe);
 

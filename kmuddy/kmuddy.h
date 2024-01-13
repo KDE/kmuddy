@@ -22,7 +22,7 @@
 #include "cactionbase.h"
 #include "cactionmanager.h"
 
-#include <kmainwindow.h>
+#include <KMainWindow>
 
 class QMenu;
 class QTimer;

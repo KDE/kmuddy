@@ -33,10 +33,8 @@
 #include "cmxpmanager.h"
 #endif
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
-#include <kapplication.h>
-#include <ksocketfactory.h>
 
 #include <QTextCodec>
 #include <QTcpSocket>
@@ -251,7 +249,9 @@ void cTelnet::connectIt (const QString &address, int port, cProfileSettings *set
   cActionManager::self()->invokeEvent ("message", sess(), i18n ("Connecting..."));
   d->hostName = address;
   d->hostPort = port;
-  d->socket = KSocketFactory::connectToHost ("telnet", address, port);
+  // TODO add QSslSocket support
+  d->socket = new QTcpSocket(this);
+  d->socket->connectToHost(address, port);
   d->socket->setSocketOption (QAbstractSocket::KeepAliveOption, 1);
   setupSocketHandlers ();
 }

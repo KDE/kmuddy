@@ -29,15 +29,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QLabel>
+#include <QLineEdit>
+#include <QSpinBox>
 #include <QTabWidget>
 
-#include <klineedit.h>
-#include <klocale.h>
-#include <knuminput.h>
+#include <KLocalizedString>
 
 struct cTimerEditor::Private {
-  KLineEdit *cmd, *advcmd;
-  KIntNumInput *interval, *advinterval;
+  QLineEdit *cmd, *advcmd;
+  QSpinBox *interval, *advinterval;
   QCheckBox *chksingleshot, *chkadvance;
   cScriptEditor *script;
 };
@@ -65,16 +65,15 @@ void cTimerEditor::createGUI(QWidget *parent)
   
   //command
   QLabel *lbl1 = new QLabel (i18n ("&Command"), basicPage);
-  d->cmd = new KLineEdit (basicPage);
+  d->cmd = new QLineEdit (basicPage);
   lbl1->setBuddy (d->cmd);
   d->cmd->setWhatsThis( i18n ("Command that will be executed on each tick.\n"
       "Command can include aliases, script calls and similar stuff."));
 
   //interval
   QLabel *lbl2 = new QLabel (i18n ("&Interval"), basicPage);
-  d->interval = new KIntNumInput (basicPage);
-  d->interval->setMinimum (1);
-  d->interval->setMaximum (3600);  //max = 1 hod.
+  d->interval = new QSpinBox (basicPage);
+  d->interval->setRange(1, 3600);
   d->interval->setSuffix (i18n (" secs"));
   lbl2->setBuddy (d->interval);
 
@@ -89,14 +88,14 @@ void cTimerEditor::createGUI(QWidget *parent)
   QGridLayout *advancelayout = new QGridLayout (grpadvance);
 
   QLabel *lbl3 = new QLabel (i18n ("&Seconds before tick"), grpadvance);
-  d->advinterval = new KIntNumInput (grpadvance);
-  d->advinterval->setMinimum (1);
+  d->advinterval = new QSpinBox (grpadvance);
+  d->advinterval->setRange(1, 180);
   d->advinterval->setMaximum (180);
   d->advinterval->setSuffix (i18n (" secs"));
   lbl3->setBuddy (d->interval);
 
   QLabel *lbl4 = new QLabel (i18n ("C&ommand"), basicPage);
-  d->advcmd = new KLineEdit (basicPage);
+  d->advcmd = new QLineEdit (basicPage);
   lbl4->setBuddy (d->advcmd);
   d->cmd->setWhatsThis( i18n ("Command that will be executed the specified time before each tick.\n"
       "Command can include aliases, script calls and similar stuff."));

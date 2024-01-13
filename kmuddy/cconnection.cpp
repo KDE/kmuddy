@@ -21,8 +21,7 @@
 #include <config-mxp.h>
 
 #include <kmessagebox.h>
-#include <klocale.h>
-#include <kapplication.h>
+#include <KLocalizedString>
 
 #include <QDateTime>
 #include <QPushButton>
@@ -221,8 +220,6 @@ void cConnection::eventNothingHandler (QString event, int)
 
       //also schedule automatic saving of settings and objects
       d->saver->start (AUTOSAVE_INTERVAL * 60 * 1000);
-      (KApplication::kApplication())->processEvents ();
-
     } else
     {
       KMuddy::self()->disableAdvancedOptions ();
@@ -424,9 +421,9 @@ bool cConnection::handleDisconnect ()
   if (!isConnected())
     return true;    //no longer connected
   //ask if he really wants to disconnect
-  if (KMessageBox::questionYesNoCancel (KMuddy::self(),
+  if (KMessageBox::questionTwoActionsCancel (KMuddy::self(),
         i18n("Do you want to close connection to %1?", d->caption),
-        i18n("Disconnect")) == KMessageBox::Yes)
+        i18n("Disconnect"), KGuiItem(i18n("Close connection")), KGuiItem(i18n("Stay connected"))) == KMessageBox::PrimaryAction)
   {
     disconnect ();
     return true;

@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <qfont.h>
 #include <QDialog>
-#include <kwindowsystem.h>
 
 class cConsole;
 class cTextChunk;
@@ -45,7 +44,7 @@ public:
   QSize sizeHint() const override;
   void addLine (cTextChunk *chunk);
   void setOutputWindowName(const QString &name);
-  void setFont(QFont font);
+  void setFont(const QFont &font);
   void setSession (int _sess);
   cConsole *console() { return owindow; };
 protected:

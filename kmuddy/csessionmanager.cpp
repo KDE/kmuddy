@@ -31,9 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ctelnet.h"
 #include "kmuddy.h"
 
-#include <kapplication.h>
 #include <kdialog.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QIcon>
 

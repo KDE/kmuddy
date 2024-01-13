@@ -42,7 +42,7 @@ public:
 protected:
   friend class cShortcut;
   bool matched;
-  int currentKey;
+  unsigned int currentKey;
   Qt::KeyboardModifiers currentModifiers;
 };
 

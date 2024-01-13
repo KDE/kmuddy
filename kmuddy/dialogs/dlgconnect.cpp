@@ -32,7 +32,7 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
 
 dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)

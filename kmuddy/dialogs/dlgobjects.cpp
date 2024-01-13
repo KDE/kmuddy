@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "clistviewer.h"
 
 #include <kactioncollection.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <ktoolbar.h>
 
 #include <QComboBox>

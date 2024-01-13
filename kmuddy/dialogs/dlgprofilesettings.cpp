@@ -26,13 +26,12 @@
 #include <QFileDialog>
 #include <QIcon>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QGridLayout>
 #include <QVBoxLayout>
 
-#include <kapplication.h>
 #include <kcodecaction.h>
-#include <klineedit.h>
 #include <KLocalizedString>
 
 dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
@@ -131,7 +130,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   for (int i = 0; i < 10; i++)
   {
     cl[i] = new QLabel (texts[i], frmcommands);
-    edcmd[i] = new KLineEdit ("", frmcommands);
+    edcmd[i] = new QLineEdit ("", frmcommands);
     cl[i]->setBuddy (edcmd[i]);
     edcmd[i]->setWhatsThis( mcommandhelp);
   }
@@ -149,21 +148,21 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   QGridLayout *dirslayout = new QGridLayout (frmdirs);
 
   QLabel *sl1 = new QLabel (i18n ("External &scripts directory"), frmdirs);
-  edscriptdir = new KLineEdit (frmdirs);
+  edscriptdir = new QLineEdit (frmdirs);
   sl1->setBuddy (edscriptdir);
   QPushButton *locbutton = new QPushButton (i18n ("Browse..."), frmdirs);
   edscriptdir->setWhatsThis( i18n ("Default directory where we will look for "
       "scripts."));
 
   QLabel *sl2 = new QLabel (i18n ("&Working directory"), frmdirs);
-  edscriptworkdir = new KLineEdit (frmdirs);
+  edscriptworkdir = new QLineEdit (frmdirs);
   sl2->setBuddy (edscriptworkdir);
   QPushButton *wrkbutton = new QPushButton (i18n ("Browse..."), frmdirs);
   edscriptworkdir->setWhatsThis( i18n ("Default working directory for your "
       "scripts. Making this the same as above is usually a good choice."));
 
   QLabel *sl3 = new QLabel (i18n ("&Transcripts directory"), frmdirs);
-  edtranscriptdir = new KLineEdit (frmdirs);
+  edtranscriptdir = new QLineEdit (frmdirs);
   sl3->setBuddy (edtranscriptdir);
   QPushButton *trnbutton = new QPushButton (i18n ("Browse..."), frmdirs);
   edtranscriptdir->setWhatsThis( i18n ("Directory where session "
@@ -232,7 +231,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
       "<li><b>Always on</b> KMuddy will always look for MXP sequences.</li></ul></qt>"));
 
   QLabel *lblmxp2 = new QLabel (i18n ("MXP &variable prefix"), frmmxp);
-  edvarprefix = new KLineEdit (frmmxp);
+  edvarprefix = new QLineEdit (frmmxp);
   lblmxp2->setBuddy (edvarprefix);
   edvarprefix->setWhatsThis( i18n ("Prefix prepended to each MXP variable from the server. "
       "Note that changing the prefix won't affect existing variables with old prefix."));

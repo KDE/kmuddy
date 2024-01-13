@@ -34,16 +34,15 @@
 #include <QVBoxLayout>
 #include <QIcon>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QSpinBox>
 #include <QStandardPaths>
 
-#include <kapplication.h>
 #include <kcolorbutton.h>
 #include <kconfig.h>
 #include <kshortcutsdialog.h>
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 QSpinBox *setupSpinbox (QGridLayout *layout, int row, int firstcol, const QString &label, int min, int max, const QString &specialVal, const QString &whatsThis)
 {
@@ -426,14 +425,14 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   QGridLayout *charlayout = new QGridLayout (frmchars);
    //row 1
   QLabel *chl1 = new QLabel (i18n ("&Command separator string"), frmchars);
-  edcmdseparator = new KLineEdit (frmchars);
+  edcmdseparator = new QLineEdit (frmchars);
   chl1->setBuddy (edcmdseparator);
   edcmdseparator->setWhatsThis( i18n ("You can enter multiple commands at "
         "once, they will get executed together. Here you can enter string "
         "that can be used to separate individual commands."));
    //row 2  
   QLabel *chl2 = new QLabel (i18n ("&Speed-walk string"), frmchars);
-  edspeedwalk = new KLineEdit (frmchars);
+  edspeedwalk = new QLineEdit (frmchars);
   chl2->setBuddy (edspeedwalk);
   edspeedwalk->setWhatsThis( i18n ("If you start a command with this string, "
         "the command will be interpreted as speed-walking. Every character "
@@ -450,7 +449,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
         "this, you'll have to type at least one character in upper-case."));
    //row 4
   QLabel *chl3 = new QLabel (i18n ("Macro-ca&ll string"), frmchars);
-  edscript = new KLineEdit (frmchars);
+  edscript = new QLineEdit (frmchars);
   chl3->setBuddy (edscript);
   edscript->setWhatsThis( i18n ("If you start a command with this string, "
         "the command will be interpreted as a macro-call.<br>"
@@ -458,7 +457,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
         "[parameters]  (/exec calls external scripts)"));
    //row 5
   QLabel *chl4 = new QLabel (i18n ("&Repeater string"), frmchars);
-  edmulticmd = new KLineEdit (frmchars);
+  edmulticmd = new QLineEdit (frmchars);
   chl4->setBuddy (edmulticmd);
   edmulticmd->setWhatsThis( i18n ("Allows you to repeat some command. For "
         "example, typing <i>#10 say hello</i> sends that command 10 times. "
@@ -467,7 +466,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
 
     //row 6
   QLabel *chl5 = new QLabel (i18n ("&Focus string"), frmchars);
-  edfocus = new KLineEdit (frmchars);
+  edfocus = new QLineEdit (frmchars);
   chl5->setBuddy (edfocus);
   edfocus->setWhatsThis( i18n("If a command is started with this string, "
         "the command will be interpreted as a command-focus-call. This will "
@@ -476,7 +475,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
 
     //row 7
   QLabel *chl6 = new QLabel (i18n ("Send &as-is"), frmchars);
-  ednoparse = new KLineEdit (frmchars);
+  ednoparse = new QLineEdit (frmchars);
   chl6->setBuddy (ednoparse);
   ednoparse->setWhatsThis( i18n("If a command is started with this string, "
         "it will be sent as-is, without any parsing. This string will be removed first." ));

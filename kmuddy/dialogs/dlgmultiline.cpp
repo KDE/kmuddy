@@ -23,8 +23,9 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPushButton>
-#include <klineedit.h>
-#include <klocale.h>
+#include <QLineEdit>
+
+#include <KLocalizedString>
 
 dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
 {
@@ -53,10 +54,10 @@ dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
   layout->addWidget (ps);
   QHBoxLayout *pslayout = new QHBoxLayout (ps);
   QLabel *l1 = new QLabel (i18n ("&Prefix:"), ps);
-  prefix = new KLineEdit (ps);
+  prefix = new QLineEdit (ps);
   l1->setBuddy (prefix);
   QLabel *l2 = new QLabel (i18n ("&Suffix:"), ps);
-  suffix = new KLineEdit (ps);
+  suffix = new QLineEdit (ps);
   l2->setBuddy (suffix);
   pslayout->setSpacing (5);
   pslayout->addWidget (l1);

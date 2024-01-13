@@ -1,4 +1,4 @@
-//
+/
 // C++ Implementation: cstatusvareditor
 //
 // Description: 
@@ -27,13 +27,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QCheckBox>
 #include <QGridLayout>
 #include <QLabel>
+#include <QLineEdit>
 #include <QRegExpValidator>
 
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cStatusVarEditor::Private {
-  KLineEdit *var, *maxvar, *caption;
+  QLineEdit *var, *maxvar, *caption;
   QCheckBox *chkpercent;
 };
 
@@ -55,21 +55,21 @@ void cStatusVarEditor::createGUI(QWidget *parent)
   
   //variable
   QLabel *lbl1 = new QLabel (i18n ("&Variable name"), parent);
-  d->var = new KLineEdit (parent);
+  d->var = new QLineEdit (parent);
   d->var->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
   lbl1->setBuddy (d->var);
   d->var->setWhatsThis( i18n ("Variable displayed by this status variable."));
   
   //max variable
   QLabel *lbl2 = new QLabel (i18n ("&Max. variable (optional)"), parent);
-  d->maxvar = new KLineEdit (parent);
+  d->maxvar = new QLineEdit (parent);
   d->maxvar->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
   lbl2->setBuddy (d->maxvar);
   d->maxvar->setWhatsThis( i18n ("Variable holding the maximum value (default=100)"));
   
   //caption
   QLabel *lbl3 = new QLabel (i18n ("&Caption"), parent);
-  d->caption = new KLineEdit (parent);
+  d->caption = new QLineEdit (parent);
   lbl3->setBuddy (d->caption);
   d->caption->setWhatsThis( i18n ("Caption shown next to variable value."));
 

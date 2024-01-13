@@ -37,7 +37,7 @@
 #include "cmxpmanager.h"
 #endif //HAVE_MXP
 
-#include <knotification.h>
+#include <QApplication>
 #include <qtimer.h>
 
 cTextProcessor::cTextProcessor (int sess) : cActionBase ("textproc", sess)
@@ -187,7 +187,7 @@ void cTextProcessor::gotNewText (const QString &text)
       for (int i = 0; i < 8; i++)
         txt += QChar (' ');
     else if (text[i] == '\a')  //beep
-      KNotification::beep ();
+      QApplication::beep();
     else
       txt += text[i];
   }

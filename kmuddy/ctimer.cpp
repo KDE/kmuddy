@@ -21,7 +21,7 @@
 #include "cscripteval.h"
 #include "ctimerlist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cTimer::Private {
   int nextLaunch;

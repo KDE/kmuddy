@@ -17,7 +17,7 @@
  ***************************************************************************/
 
 #include <KAboutData>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <QApplication>
 #include <Kdelibs4ConfigMigrator>
 

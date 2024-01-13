@@ -26,9 +26,9 @@
 class QLabel;
 class QComboBox;
 class QCheckBox;
+class QLineEdit;
 class QSpinBox;
 class KColorButton;
-class KLineEdit;
 class KShortcutsEditor;
 class cDirList;
 
@@ -173,7 +173,7 @@ protected:
 //Colors
   KColorButton *cbutton[16];
 //Characters
-  KLineEdit *edcmdseparator, *edspeedwalk, *edscript, *edmulticmd, *edfocus, *ednoparse;
+  QLineEdit *edcmdseparator, *edspeedwalk, *edscript, *edmulticmd, *edfocus, *ednoparse;
   QCheckBox *chkemptywalk, *chkexpandBS;
 //MSP
   QCheckBox *chkallowmsp, *chkallowdownloads;

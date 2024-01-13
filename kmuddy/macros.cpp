@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ctimer.h"
 #include "cvariablelist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 using namespace std;
 

@@ -27,9 +27,9 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFileDialog>
+#include <QLineEdit>
 
-#include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 dlgTranscript::dlgTranscript (QWidget *parent) :
     KPageDialog (parent)
@@ -84,7 +84,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
   QFrame *fileframe = new QFrame (transbox);
   QVBoxLayout *filelayout = new QVBoxLayout (fileframe);
   lblname = new QLabel (i18n ("&File:"), fileframe);
-  fname = new KLineEdit (fileframe);
+  fname = new QLineEdit (fileframe);
   lblname->setBuddy (fname);
   filebutton = new QPushButton (i18n ("&Browse..."), fileframe);
 
@@ -143,7 +143,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
       "options: $W - world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and "
       "any combination of alpha-numeric characters."));
   
-  afname = new KLineEdit (afileframe);
+  afname = new QLineEdit (afileframe);
   logformat->setBuddy(afname);
   
   afilelayout->setSpacing (5);

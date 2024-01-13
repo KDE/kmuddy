@@ -28,10 +28,10 @@
 #include <QPushButton>
 #include <QSpinBox>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kpassworddialog.h>
 #include <kmessagebox.h>
-#include <ktextedit.h>
+#include <KTextEdit>
 
 dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
 {

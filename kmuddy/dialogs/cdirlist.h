@@ -20,7 +20,6 @@
 
 #include <qstringlist.h>
 #include <QWidget>
-#include <kvbox.h>
 
 class QListWidget;
 class QPushButton;

@@ -911,8 +911,8 @@ void chunkLink::parseMenu ()
   if (!isMenu())
     return;
 
-  QStringList targets = _target.split ('|', QString::KeepEmptyParts);
-  QStringList hints = _hint.split ('|', QString::KeepEmptyParts);
+  QStringList targets = _target.split ('|', Qt::KeepEmptyParts);
+  QStringList hints = _hint.split ('|', Qt::KeepEmptyParts);
   //first hint is the main hint, what follows (if anything) are hints for individual commands
   if (!hints.empty())
   {

@@ -44,9 +44,7 @@
 #include "cgaugelist.h"
 #include "cstatusvarlist.h"
 
-#include <kapplication.h>
-#include <klocale.h>
-#include <kpushbutton.h>
+#include <KLocalizedString>
 
 #include <QHBoxLayout>
 #include <QPushButton>
@@ -126,8 +124,6 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
   //the button switches between standard input and multi-line input
   connect (switchlinebutton, SIGNAL (clicked ()), this, SLOT (switchInputLines ()));
 
-  KApplication::kApplication()->processEvents ();
-
   addGlobalEventHandler ("global-settings-changed", 50, PT_NOTHING);
   
   addEventHandler ("var-changed", 50, PT_STRING);
@@ -178,7 +174,7 @@ void cSession::eventNothingHandler (QString event, int)
   }
 }
 
-void cSession::eventStringHandler (QString event, int session,
+void cSession::eventStringHandler (QString event, int /*session*/,
     QString &par1, const QString &)
 {
   // pass variable changes to lists that need them
