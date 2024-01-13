@@ -143,10 +143,10 @@ public:
   void setAllowMSP (bool val);
   void setAllowDownloads (bool val);
 
-protected:
-
   /** put settings to the dialog */
   void putSettingsToDialog ();
+
+protected:
 
 //Window
   QCheckBox *chkalwaystabbar, *chkauxinput;

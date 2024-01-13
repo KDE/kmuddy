@@ -49,7 +49,7 @@ set(kmuddy_SRCS
 
 add_executable(kmuddy ${kmuddy_SRCS})
 
-set (KMUDDY_LIBRARIES kmuddycore dialogs KF5::I18n KF5::TextWidgets KF5::XmlGui KF5::IconThemes z )
+set (KMUDDY_LIBRARIES kmuddycore dialogs KF5::I18n KF5::TextWidgets KF5::XmlGui KF5::IconThemes KF5::Notifications z )
 if (MXP_FOUND)
   set (KMUDDY_LIBRARIES ${KMUDDY_LIBRARIES} ${MXP_LIBRARIES})
 endif (MXP_FOUND)
@@ -73,4 +73,5 @@ ecm_install_icons(ICONS
 )
 
 install (FILES org.kde.kmuddy.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install (FILES kmuddy.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 

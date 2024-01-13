@@ -28,7 +28,7 @@ class QMenu;
 class QTimer;
 class KHelpMenu;
 class QMenuBar;
-class KSystemTrayIcon;
+class KStatusNotifierItem;
 class KToolBar;
 
 class dlgConnect;
@@ -211,7 +211,7 @@ protected:
   KHelpMenu *helpMenu;
 
   /**System Tray Icon*/
-  KSystemTrayIcon *sysIcon;
+  KStatusNotifierItem *sysIcon;
 
   //notification
   bool globalnotify, localnotify, alwaysnotify, systrayenabled, passivepopup;

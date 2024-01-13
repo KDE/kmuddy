@@ -1,0 +1,11 @@
+[Global]
+IconName=kmuddy
+DesktopEntry=org.kde.kmuddy
+Comment=KMuddy
+
+[Event/Activity]
+Name=New Text Received
+Comment=A new text has been received in an active session.
+Action=None
+Urgency=Low
+

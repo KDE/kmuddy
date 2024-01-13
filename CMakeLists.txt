@@ -15,7 +15,7 @@ include(FeatureSummary)
 include(ECMInstallIcons)
 
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Script Multimedia)
-find_package(KF5 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive)
+find_package(KF5 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive Notifications)
 
 find_package(MXP)
 if (MXP_FOUND)

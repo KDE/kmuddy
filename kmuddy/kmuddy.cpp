@@ -60,6 +60,7 @@
 #include <ctime>
 
 #include <QAction>
+#include <QApplication>
 #include <QDesktopWidget>
 #include <QIcon>
 #include <QKeyEvent>
@@ -74,9 +75,10 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <kmessagebox.h>
+#include <KNotification>
 #include <ktoggleaction.h>
 #include <ktoolbar.h>
-#include <KSystemTrayIcon>
+#include <KStatusNotifierItem>
 
 KMuddy *KMuddy::_self = nullptr;
 
@@ -135,11 +137,8 @@ void KMuddy::eventNothingHandler (QString event, int session)
     }
     else if (systrayenabled && !sysIcon){
       // Load the system tray icon
-      sysIcon = new KSystemTrayIcon(QIcon::fromTheme ("kmuddy.png"), this);
-      sysIcon->show ();
-      QAction* quitAction = sysIcon->actionCollection()->action("file_quit");
-      quitAction->disconnect ();
-      connect (quitAction, SIGNAL (activated()), this, SLOT(close()));
+      sysIcon = new KStatusNotifierItem(this);
+      sysIcon->setIconByName("kmuddy");
     }
     setAutoConnect (gs->getString ("auto-connect"));
   }
@@ -628,8 +627,6 @@ void KMuddy::prepareObjects ()
   //set up the window
   setCentralWidget (central);
 
-  KApplication::kApplication()->processEvents ();
-
   //read saved keys for acol object
   acol->setConfigGroup ("Shortcuts");
   acol->readSettings ();
@@ -663,11 +660,11 @@ void KMuddy::pasteCommand ()
   //If we do, sends a newline (no big deal, may even be a 'feature')
   //All depends on how we want this set up; atm not allowing empty clipboard
 
-  if ((KApplication::kApplication())->clipboard()->text().isNull())
+  QClipboard *clipboard = QApplication::clipboard();
+  if (clipboard->text().isNull())
     return;
 
-  QString txt =
-    (KApplication::kApplication())->clipboard()->text(QClipboard::Clipboard);
+  QString txt = clipboard->text(QClipboard::Clipboard);
   am->invokeEvent ("send-command", activeSession(), txt);
 }
 
@@ -988,11 +985,15 @@ void KMuddy::requestNotify (int sess)
   //global notify
   if (globalnotify && (!isActiveWindow ())){
     // ask the window manager to draw attention to the window
-    KWindowSystem::demandAttention (topLevelWidget()->winId());
+    QApplication::alert(this);
     if (systrayenabled && sysIcon && passivepopup){
+      KNotification *notification = new KNotification("Activity");
+      notification->setText(i18n("Activity in the KMuddy Window"));
       QPixmap px;
       px.load("kmuddy.png");
-      KPassivePopup::message (KPassivePopup::Balloon, "KMuddy", "Activity in the KMuddy Window", px, sysIcon, 1200);
+      notification->setPixmap(px);
+      connect(notification, QOverload<unsigned int>::of(&KNotification::activated), this, [sess]() { cSessionManager::self()->changeSession (sess); });
+      notification->sendEvent();
     }
   }
 
@@ -1332,7 +1333,6 @@ bool KMuddy::queryClose ()
   for (it = sess.begin(); it != sess.end(); ++it) {
     //switch to that session => the user knows which one is about to close
     cSessionManager::self()->setSession (*it);
-    kapp->processEvents ();
     //disconnect, asking the user whether he really wants to
     cConnection *connection = dynamic_cast<cConnection *>(am->object ("connection", *it));
     if (!connection->handleDisconnect())
