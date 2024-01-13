@@ -27,10 +27,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cscripteval.h"
 #include "kmuddy.h"
 
-#include <kicon.h>
 #include <ktoolbar.h>
 
 #include <QAction>
+#include <QIcon>
 
 struct cButton::Private {
   QString command, command2;
@@ -63,7 +63,7 @@ void cButton::attribChanged (const QString &name)
     updateVisibleName ();
   }
   else if (name == "icon") {
-    d->action->setIcon (KIcon (strVal ("icon")));
+    d->action->setIcon (QIcon::fromTheme (strVal ("icon")));
   }
   else if (name == "pushdown") {
     d->action->setCheckable (boolVal ("pushdown"));

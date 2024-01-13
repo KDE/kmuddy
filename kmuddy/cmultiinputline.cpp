@@ -59,7 +59,7 @@ cMultiInputLine::~cMultiInputLine()
   removeGlobalEventHandler ("global-settings-changed");
 }
 
-void cMultiInputLine::eventNothingHandler (QString event, int session)
+void cMultiInputLine::eventNothingHandler (QString event, int)
 {
   if (event == "global-settings-changed") {
     cGlobalSettings *gs = cGlobalSettings::self();

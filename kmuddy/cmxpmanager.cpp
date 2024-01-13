@@ -79,7 +79,7 @@ void cMXPManager::eventNothingHandler (QString event, int)
   }
 }
 
-QString cMXPManager::actionIntHandler (QString action, int, int par1, int par2)
+QString cMXPManager::actionIntHandler (QString action, int, int par1, int /*par2*/)
 {
   if (action == "set-active") {
     setMXPActive (par1 != 0);
@@ -255,6 +255,8 @@ void cMXPManager::processResult (mxpResult *res)
     }
     break;
     case 22: {  //gauge
+/*
+// TODO We need to re-enable the MXP gauges !
       gaugeStruct *gs = (gaugeStruct *) res->data;
       QString var = gs->variable ? QString (gs->variable) : QString();
       QString maxvar = gs->maxvariable ? QString (gs->maxvariable) : QString();
@@ -262,21 +264,23 @@ void cMXPManager::processResult (mxpResult *res)
       QColor color = toColor (gs->color);
 
       cGaugeList *gl = dynamic_cast<cGaugeList *>(object ("gaugelist"));
-#warning We need to re-enable the MXP gauges !
-      //if (gl && (!var.isEmpty()))
-        //gl->requestGauge (var, maxvar, caption, color, false);
+      if (gl && (!var.isEmpty()))
+        gl->requestGauge (var, maxvar, caption, color, false);
+*/
     }
     break;
     case 23: {  //status bar
+/*
+// TODO We need to re-enable the MXP status variables !
       statStruct *ss = (statStruct *) res->data;
       QString var = ss->variable ? QString (ss->variable) : QString();
       QString maxvar = ss->maxvariable ? QString (ss->maxvariable) : QString();
       QString caption = ss->caption ? QString::fromLocal8Bit (ss->caption) : QString();
 
       cStatusVarList *svl = dynamic_cast<cStatusVarList *>(object ("statusvarlist"));
-#warning We need to re-enable the MXP status variables !
-      //if (svl && (!var.isEmpty()))
-        //svl->requestStatusVar (var, maxvar, caption, false, false);
+      if (svl && (!var.isEmpty()))
+        svl->requestStatusVar (var, maxvar, caption, false, false);
+*/
     }
     break;
     case -1: {  //error

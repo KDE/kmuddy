@@ -30,6 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QCheckBox>
 #include <QComboBox>
 #include <QDialog>
+#include <QFileDialog>
 #include <QGroupBox>
 #include <QLabel>
 #include <QGridLayout>
@@ -43,10 +44,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QVBoxLayout>
 
 #include <kcolorbutton.h>
-#include <kfiledialog.h>
 #include <KLocalizedString>
 #include <kmessagebox.h>
-#include <knuminput.h>
 #include <ktextedit.h>
 
 struct cTriggerEditor::Private {
@@ -108,7 +107,6 @@ cTriggerEditor::cTriggerEditor (QWidget *parent)
   : cListEditor (parent)
 {
   d = new Private;
-  d->regExpDialog = nullptr;
 
   if (!cltextk) {
     cltextk = new QString[18];
@@ -694,8 +692,7 @@ void cTriggerEditor::updateColorizationsList ()
 void cTriggerEditor::browseForSoundFile ()
 {
   //open some file and place its name to the edit box
-  QString fName = KFileDialog::getOpenFileName (QUrl(),
-        "audio/x-wav audio/mpeg audio/ogg", this, i18n ("Choose sound file"));
+  QString fName = QFileDialog::getOpenFileName (this, i18n ("Choose sound file"), QString(), "audio/x-wav audio/mpeg audio/ogg");
   if (!(fName.isEmpty()))
     d->edsoundname->setText (fName);
 }

@@ -31,7 +31,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ctelnet.h"
 #include "kmuddy.h"
 
-#include <kdialog.h>
 #include <KLocalizedString>
 
 #include <QIcon>
@@ -159,8 +158,6 @@ int cSessionManager::addSession (bool profile)
   //just to be sure...
   cActionManager::self()->setActiveSession (which);
 
-  (KApplication::kApplication())->processEvents();
-
   //apply global settings to the newly created session
   //this also shows/hides the tabbar if needed
   cGlobalSettings::self()->notifyChange ();
@@ -253,7 +250,7 @@ void cSessionManager::changeSession (int which)
 
   //global caption
   int tab = getTabBySession (which);
-  KMuddy::self()->setPlainCaption (KDialog::makeStandardCaption (d->widget->tabText (tab)));
+  KMuddy::self()->setCaption (d->widget->tabText (tab));
 
   //update menus (active items and such)
   int s = activeSession();
@@ -281,7 +278,7 @@ void cSessionManager::setSessionName (int which, QString name, bool defName)
   //change icon to Ok (we'll change it later if it's not correct)
   setIcon (which, IconOk);
   if (which == activeSession ())
-    KMuddy::self()->setPlainCaption (KDialog::makeStandardCaption (name));
+    KMuddy::self()->setCaption (name);
 }
 
 bool cSessionManager::alwaysTabBar ()

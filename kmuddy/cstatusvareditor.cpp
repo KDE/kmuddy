@@ -1,4 +1,3 @@
-/
 // C++ Implementation: cstatusvareditor
 //
 // Description: 
