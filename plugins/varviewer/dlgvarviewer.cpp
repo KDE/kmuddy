@@ -74,6 +74,7 @@ class VariableModel : public QAbstractTableModel {
   }
 
   void listChanged (cVariableList *newList) {
+    beginResetModel();
     pos.clear ();
     count = 0;
     list = newList;
@@ -83,7 +84,7 @@ class VariableModel : public QAbstractTableModel {
       for (QStringList::iterator it = vars.begin(); it != vars.end(); ++it)
         pos[*it] = count++;
     }
-    reset ();
+    endResetModel();
   }
 
   void variableChanged (const QString &name) {
