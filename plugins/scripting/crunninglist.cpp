@@ -24,7 +24,7 @@
 
 #include <QAbstractTableModel>
 #include <QRegExp>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <stdlib.h>
 

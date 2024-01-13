@@ -24,7 +24,7 @@
 #include <QVBoxLayout>
 
 #include <kaction.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 dlgRunningList::dlgRunningList (QWidget *parent) : QDockWidget (parent)
 {

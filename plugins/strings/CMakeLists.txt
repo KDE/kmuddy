@@ -4,17 +4,15 @@ include_directories( ${CMAKE_SOURCE_DIR}/libs    )
 
 ########### next target ###############
 
-set(kmuddystringsplugin_PART_SRCS stringsplugin.cpp )
+set(kmuddystringsplugin_SRCS stringsplugin.cpp )
 
-add_library(kmuddystringsplugin MODULE ${kmuddystringsplugin_PART_SRCS})
+kcoreaddons_add_plugin(kmuddystringsplugin
+SOURCES
+${kmuddystringsplugin_SRCS}
+INSTALL_NAMESPACE
+    "kmuddy"
+)
 
-target_link_libraries(kmuddystringsplugin  KF5::KDELibs4Support KF5::Parts  kmuddycore )
-
-install(TARGETS kmuddystringsplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-
-########### install files ###############
-
-install( FILES  kmuddystringsplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+target_link_libraries(kmuddystringsplugin KF5::CoreAddons kmuddycore )
 
 

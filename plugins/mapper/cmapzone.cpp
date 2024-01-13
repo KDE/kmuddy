@@ -17,7 +17,7 @@
 
 #include "cmapzone.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <qfontmetrics.h>
 
@@ -26,8 +26,6 @@
 #include "cmaptext.h"
 #include "cmappath.h"
 #include "cmapelementutil.h"
-
-#include <kdebug.h>
 
 CMapZone::CMapZone(CMapManager *manager) : CMapElement(manager,QRect(-1,-1,0,0),nullptr)
 {

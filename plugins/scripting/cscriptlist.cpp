@@ -23,7 +23,7 @@
 #include "cscript.h"
 #include "cscripteditor.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cScriptList::Private {
   QString nameToFind;

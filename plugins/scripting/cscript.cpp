@@ -22,7 +22,7 @@
 #include "crunningscript.h"
 #include "cscriptlist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <QProcess>
 
 cScript::cScript (cList *list) : cListObject (list)

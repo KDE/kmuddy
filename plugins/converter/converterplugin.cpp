@@ -51,7 +51,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QXmlStreamWriter>
 
 #include <kaction.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>

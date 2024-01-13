@@ -23,7 +23,7 @@
 #include "cmaproom.h"
 #include "cmapview.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 CMapLevel::CMapLevel(CMapManager *mapManager, int pos): m_mapManager(mapManager)
 {

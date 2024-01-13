@@ -1,6 +1,6 @@
-project(kmuddy)
+cmake_minimum_required(VERSION 3.16)
 
-cmake_minimum_required(VERSION 2.8.12)
+project(kmuddy)
 
 find_package(ECM REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})

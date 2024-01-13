@@ -4,23 +4,19 @@ include_directories( ${CMAKE_SOURCE_DIR}/libs   ${CMAKE_CURRENT_SOURCE_DIR} ${CM
 
 ########### next target ###############
 
-set(kmuddyvartrigplugin_PART_SRCS 
+set(kmuddyvartrigplugin_SRCS 
    vartrigplugin.cpp 
    cvartrigger.cpp 
    cvartriggerlist.cpp
    cvartriggereditor.cpp
    )
 
-add_library(kmuddyvartrigplugin MODULE ${kmuddyvartrigplugin_PART_SRCS})
+kcoreaddons_add_plugin(kmuddyvartrigplugin
+SOURCES
+${kmuddyvartrigplugin_SRCS}
+INSTALL_NAMESPACE
+    "kmuddy"
+)
 
-target_link_libraries(kmuddyvartrigplugin KF5::KDELibs4Support KF5::Parts  kmuddycore )
-
-install(TARGETS kmuddyvartrigplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-
-########### install files ###############
-
-install( FILES  kmuddyvartrigplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-
-
+target_link_libraries(kmuddyvartrigplugin KF5::CoreAddons kmuddycore )
 

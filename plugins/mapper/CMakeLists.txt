@@ -4,7 +4,7 @@ include_directories( ${CMAKE_SOURCE_DIR}/libs   ${CMAKE_CURRENT_SOURCE_DIR} ${CM
 
 ########### next target ###############
 
-set(kmuddymapper_PART_SRCS 
+set(kmuddymapper_SRCS 
    kmuddy_mapper.cpp 
    cmaptoolbase.cpp 
    cmaplevel.cpp 
@@ -57,7 +57,7 @@ set(kmuddymapper_PART_SRCS
    plugins/standard/propertyPanes/cmapnotespane.cpp
    )
 
-ki18n_wrap_ui (kmuddymapper_PART_SRCS
+ki18n_wrap_ui (kmuddymapper_SRCS
    dialogs/dlgmapcolorbase.ui
    dialogs/dlgmapmovementbase.ui
    dialogs/dlgmapspeedwalkbase.ui
@@ -68,18 +68,20 @@ ki18n_wrap_ui (kmuddymapper_PART_SRCS
    dialogs/dlgmapdirectionsbase.ui
    )
 
-add_library(kmuddymapper MODULE ${kmuddymapper_PART_SRCS})
 
-target_link_libraries(kmuddymapper  KF5::KDELibs4Support KF5::Parts KF5::WidgetsAddons KF5::Service KF5::Archive kmuddycore )
+kcoreaddons_add_plugin(kmuddymapperplugin
+SOURCES
+${kmuddymapper_SRCS}
+INSTALL_NAMESPACE
+    "kmuddy"
+)
 
-install(TARGETS kmuddymapper DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+target_link_libraries(kmuddymapperplugin KF5::CoreAddons KF5::WidgetsAddons KF5::Service KF5::Archive kmuddycore )
 
 
 ########### install files ###############
 
-install( FILES kmuddymapper.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install( FILES kmuddymapperpart.rc DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy )
-install( FILES kmuddymapperplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
 install( FILES kmud_grid.png kmud_create.png kmud_follow.png DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy/toolbar )
 install( FILES plugins/standard/tools/kmud_select.png plugins/standard/tools/kmud_room.png plugins/standard/tools/kmud_text.png plugins/standard/tools/kmud_path.png plugins/standard/tools/kmud_eraser.png DESTINATION ${KDE_INSTALL_DATADIR}/kmuddy/toolbar )
 

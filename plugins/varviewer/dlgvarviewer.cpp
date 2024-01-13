@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cactionmanager.h"
 #include "cvariablelist.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QAbstractTableModel>
 #include <QTreeView>

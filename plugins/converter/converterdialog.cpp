@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "converterdialog.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QLabel>
 #include <QTreeWidget>

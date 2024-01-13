@@ -22,7 +22,6 @@
 #include <QMenu>
 
 #include <kaction.h>
-#include <klocale.h>
 
 
 class CMapManager;

@@ -41,7 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kmainwindow.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <ktoggleaction.h>
 
 #include <map>

@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 K_PLUGIN_FACTORY (kmuddyvartrigplugin, registerPlugin<cVarTrigPlugin>();)
 K_EXPORT_PLUGIN (kmuddyvartrigplugin("kmuddy"))

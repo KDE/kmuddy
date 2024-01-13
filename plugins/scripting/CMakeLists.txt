@@ -4,7 +4,7 @@ include_directories( ${CMAKE_SOURCE_DIR}/libs   ${CMAKE_CURRENT_SOURCE_DIR} ${CM
 
 ########### next target ###############
 
-set(kmuddyscriptingplugin_PART_SRCS 
+set(kmuddyscriptingplugin_SRCS 
    scriptingplugin.cpp 
    cscript.cpp 
    cscriptlist.cpp
@@ -16,16 +16,13 @@ set(kmuddyscriptingplugin_PART_SRCS
    dlgrunninglist.cpp 
    )
 
-add_library(kmuddyscriptingplugin MODULE ${kmuddyscriptingplugin_PART_SRCS})
 
-target_link_libraries(kmuddyscriptingplugin KF5::KDELibs4Support KF5::Parts kmuddycore )
+kcoreaddons_add_plugin(kmuddyscriptingplugin
+SOURCES
+${kmuddyscriptingplugin_SRCS}
+INSTALL_NAMESPACE
+    "kmuddy"
+)
 
-install(TARGETS kmuddyscriptingplugin DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-
-########### install files ###############
-
-install( FILES  kmuddyscriptingplugin.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-
-
+target_link_libraries(kmuddyscriptingplugin KF5::CoreAddons kmuddycore )
 

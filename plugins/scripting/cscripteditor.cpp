@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QRegExpValidator>
 #include "kfiledialog.h"
 #include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 struct cScriptEditor::Private {
   KLineEdit *workdir, *cmd, *sname;

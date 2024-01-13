@@ -19,8 +19,7 @@
 
 #include <stdlib.h>
 
-#include <kdebug.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kconfiggroup.h>
 
 #include "cmaplevel.h"

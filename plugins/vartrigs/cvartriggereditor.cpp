@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QRegExpValidator>
 
 #include <klineedit.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <ktextedit.h>
 
 struct cVarTriggerEditor::Private {

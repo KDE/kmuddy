@@ -26,6 +26,7 @@
 #include <kactioncollection.h>
 #include <kxmlguifactory.h>
 
+#include <KLocalizedString>
 
 #include "cmapmanager.h"
 #include "cmapzone.h"

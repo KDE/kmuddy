@@ -18,8 +18,7 @@
 
 #include "cmapmanager.h"
 
-#include <kdebug.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kservicetypetrader.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>

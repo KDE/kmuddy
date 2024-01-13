@@ -1,21 +1,18 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/lib    )
+include_directories( ${CMAKE_SOURCE_DIR}/libs    )
 
 
 ########### next target ###############
 
-set(kmuddyplugintemplate_PART_SRCS plugin_template.cpp )
+set(kmuddytemplateplugin_SRCS plugin_template.cpp )
 
-add_library(kmuddyplugintemplate MODULE ${kmuddyplugintemplate_PART_SRCS})
+kcoreaddons_add_plugin(kmuddytemplateplugin
+SOURCES
+${kmuddytemplateplugin_SRCS}
+INSTALL_NAMESPACE
+    "kmuddy"
+)
 
-target_link_libraries(kmuddyplugintemplate kmuddycore )
-
-install(TARGETS kmuddyplugintemplate DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-
-########### install files ###############
-
-install( FILES  kmuddyplugintemplate.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-
+target_link_libraries(kmuddytemplateplugin KF5::CoreAddons kmuddycore )
 
 
