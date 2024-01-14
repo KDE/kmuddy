@@ -19,7 +19,7 @@
 
 #include <qcolor.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kiconloader.h>
 
 #include "../../../cmapmanager.h"

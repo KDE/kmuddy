@@ -22,11 +22,11 @@
 #include <qstring.h>
 #include <qcolor.h>
 #include <qpoint.h>
+#include <QDebug>
 
 #include "cmapmanager.h"
 #include "cmaplevel.h"
 
-#include <kdebug.h>
 
 CMapText::CMapText(QString str,QFont f,QColor col,CMapManager *manager,QPoint pos,CMapLevel *level) : CMapElement(manager,level)
 {	
@@ -130,8 +130,8 @@ int CMapText::getActualToFontSize(QSize size,QFont font,QStringList *text)
 		int tmpWidth = 0;
 		for (QStringList::iterator it = text->begin(); it != text->end(); ++it)
 		{
-			if (fm.width(*it) > tmpWidth)
-				tmpWidth = fm.width(*it);
+			if (fm.horizontalAdvance(*it) > tmpWidth)
+				tmpWidth = fm.horizontalAdvance(*it);
 		}
 
 		fontSize = QSize(tmpWidth,fm.height());
@@ -145,8 +145,8 @@ int CMapText::getActualToFontSize(QSize size,QFont font,QStringList *text)
 		int tmpWidth = 0;
 		for (QStringList::iterator it = text->begin(); it != text->end(); ++it)
 		{
-			if (fm.width(*it) > tmpWidth)
-				tmpWidth = fm.width(*it);
+			if (fm.horizontalAdvance(*it) > tmpWidth)
+				tmpWidth = fm.horizontalAdvance(*it);
 		}
 
 		fontSize = QSize(tmpWidth,fm.height());
@@ -268,7 +268,7 @@ QPoint CMapText::convertOffsetToCursor(QPoint offset)
 
 		for (int pos = 0 ; pos <=(int)s.length() ; pos ++)
 		{
-			int charWidth =fm.width(s.left(pos));
+			int charWidth =fm.horizontalAdvance(s.left(pos));
 			if (charWidth>offset.x())
 			{
 				x = pos -1;
@@ -279,7 +279,7 @@ QPoint CMapText::convertOffsetToCursor(QPoint offset)
 
 		if (!found)
 		{
-			x = (int)fm.width(s);
+			x = (int)fm.horizontalAdvance(s);
 		}
 	}
 
@@ -297,7 +297,7 @@ QPoint CMapText::convertPosToCursor(QPoint mousePos)
 /** This method is called when the element looses it's edit mode */
 void CMapText::editModeUnsetEvent(void)
 {
-	kDebug() << "CMapText::editModeUnsetEvent";
+	qDebug() << "CMapText::editModeUnsetEvent";
 	//FIXME_jp: Make sure elements are deleted
 
 	if (m_text.count()==0)
@@ -485,7 +485,7 @@ void CMapText::setActualCursorPosition(void)
         int x = 0;
         if ((m_text.count() >= m_cursorPos.y()) && (m_cursorPos.y() > 0)) {
 	  QString s = m_text.at(m_cursorPos.y()-1);
-	  x = fm.width(s.left(m_cursorPos.x()));
+	  x = fm.horizontalAdvance(s.left(m_cursorPos.x()));
         }
 
 	m_cursorOffset.setX(x);
@@ -591,8 +591,8 @@ void CMapText::setTextSize(void)
 
 	for (QStringList::iterator it = m_text.begin(); it != m_text.end(); ++it)
 	{
-		if (fm.width(*it)>width)
-			width = fm.width(*it);
+		if (fm.horizontalAdvance(*it)>width)
+			width = fm.horizontalAdvance(*it);
 
 		height+=fm.height();
 	}

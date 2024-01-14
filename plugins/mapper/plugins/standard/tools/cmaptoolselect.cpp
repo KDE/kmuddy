@@ -27,7 +27,7 @@
 #include <qcursor.h>
 
 #include <kiconloader.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager)
         : CMapToolBase(actionCollection,

@@ -29,10 +29,11 @@
 #include <QScrollArea>
 #include <QPixmap>
 #include <QVBoxLayout>
+#include <QDebug>
 
 #include <kcolorbutton.h>
 #include <knuminput.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "../cmaptext.h"
 #include "../cmapmanager.h"
@@ -44,8 +45,6 @@
 
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
-
-#include <kdebug.h>
 
 CMapTextPreview::CMapTextPreview(CMapManager *manager,QWidget *parent)
 	: QWidget(parent)
@@ -104,8 +103,6 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 
 	text = textElement;
 	mapManager = manager;
-	QString width;
-	QString height;
 	QVBoxLayout *vbox = new QVBoxLayout((QWidget *)fraPreview);
 	textScrollView = new CMapTextPreview(mapManager,fraPreview);
         QScrollArea *textScrollArea = new QScrollArea (fraPreview);
@@ -114,8 +111,8 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 	textScrollView->show();
 	fillFamilyList();
 	setFont(text->getFont());
-	width.sprintf("%d",text->getWidth());
-	height.sprintf("%d",text->getHeight());
+	QString width = QString::number (text->getWidth());
+	QString height = QString::number (text->getHeight());
 	txtText->setText(text->getText());
 	txtWidth->setText(width);
 	txtHeight->setText(height);
@@ -150,8 +147,7 @@ void DlgMapTextProperties::setFont(QFont font)
 	
 	QString family = font.family();
 	family = family.trimmed();
-	QString size;
-	size.sprintf("%d",font.pointSize());	
+	QString size = QString::number(font.pointSize());
 	
 	for (int i = 0 ; i<lstFamily->count();i++)
 	{
@@ -171,7 +167,7 @@ void DlgMapTextProperties::setFont(QFont font)
 
 void DlgMapTextProperties::slotSetSize(void)
 {
-	kDebug() << "CMapTextPreview::slotSetSize1 ";
+	qDebug() << "CMapTextPreview::slotSetSize1 ";
 	int fontSize = txtFontSize->text().toInt();
 	textFont.setPointSize(fontSize);
 	QFontMetrics fm(textFont);	
@@ -186,8 +182,8 @@ void DlgMapTextProperties::slotSetSize(void)
 			tmpWidth = fm.width(*it);
     }
 
-	width.sprintf("%d",tmpWidth);
-	height.sprintf("%d",fm.height() * textList.count());
+	QString width = QString::number(tmpWidth);
+	QString height = QString::number(fm.height() * textList.count());
 	txtWidth->setText(width);
 	txtHeight->setText(height);
 	txtFontSize->setText("");

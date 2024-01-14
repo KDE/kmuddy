@@ -34,7 +34,7 @@
 
 #include <QIcon>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kactioncollection.h>
 
 CMapPluginStandard::CMapPluginStandard(QObject *parent) : CMapPluginBase(parent)

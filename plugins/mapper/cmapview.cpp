@@ -23,6 +23,8 @@
 #include <QScrollArea>
 #include <QStandardPaths>
 #include <QActionGroup>
+#include <QDebug>
+#include <QInputDialog>
 
 #include "cmapmanager.h"
 #include "cmapzone.h"
@@ -40,16 +42,12 @@
 #include <kselectaction.h>
 #include <ktoggleaction.h>
 #include <kactioncollection.h>
-#include <kdebug.h>
-#include <kiconloader.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kmessagebox.h>
-#include <kundostack.h>
-#include <kinputdialog.h>
 
 CMapView::CMapView(CMapManager *manager,QWidget *parent) : KXmlGuiWindow(parent)
 {
-  kDebug() << "CMapView::CMapView create view";
+  qDebug() << "CMapView::CMapView create view";
 
   setCaption (i18n ("Mapper"));
   setAttribute (Qt::WA_DeleteOnClose, false);  // do not delete on close
@@ -79,13 +77,13 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : KXmlGuiWindow(parent)
   setStatusBar(statusbar);
 
   cmdFollowMode = new QPushButton(i18n("Follow Moves"),statusbar);
-  cmdFollowMode->setIcon(BarIcon("kmud_follow.png"));
+  cmdFollowMode->setIcon(QIcon::fromTheme("kmud_follow.png"));
   cmdFollowMode->setCheckable(true);
   cmdFollowMode->setFocusProxy(this);
   statusbar->addFollowButton(cmdFollowMode);
 
   cmdCreateMode = new QPushButton(i18n("Auto Create"),statusbar);
-  cmdCreateMode->setIcon(BarIcon("kmud_create.png"));
+  cmdCreateMode->setIcon(QIcon::fromTheme("kmud_create.png"));
   cmdCreateMode->setCheckable(true);
   cmdCreateMode->setFocusProxy(this);
   statusbar->addFollowButton(cmdCreateMode);
@@ -99,7 +97,7 @@ CMapView::CMapView(CMapManager *manager,QWidget *parent) : KXmlGuiWindow(parent)
 
 CMapView::~CMapView()
 {
-  kDebug() << "CMapView::~CMapView()";
+  qDebug() << "CMapView::~CMapView()";
 }
 
 void CMapView::initGUI()
@@ -112,8 +110,8 @@ void CMapView::initGUI()
 
 void CMapView::initMenus()
 {
-  kDebug() << "begin initMenus";
-  kDebug() << "Main collection is "<<actionCollection();
+  qDebug() << "begin initMenus";
+  qDebug() << "Main collection is "<<actionCollection();
 
   // Edit menu
   mapManager->getCommandHistory()->createUndoAction(actionCollection(), "editUndo");
@@ -122,32 +120,32 @@ void CMapView::initMenus()
   // Tools menu
   m_toolsGrid = new KToggleAction (this);
   m_toolsGrid->setText ( i18n("&Grid"));
-  m_toolsGrid->setIcon (BarIcon("kmud_grid.png"));
+  m_toolsGrid->setIcon (QIcon::fromTheme("kmud_grid.png"));
   connect (m_toolsGrid, SIGNAL (triggered()), this, SLOT(slotToolsGrid()));
   actionCollection()->addAction ("toolsGrid", m_toolsGrid);
   m_toolsUpLevel = new QAction (this);
   m_toolsUpLevel->setText ( i18n("Display Upper Level"));
-  m_toolsUpLevel->setIcon (BarIcon("arrow-up"));
+  m_toolsUpLevel->setIcon (QIcon::fromTheme("arrow-up"));
   connect (m_toolsUpLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelUp()));
   actionCollection()->addAction ("toolsLevelUp", m_toolsUpLevel);
   m_toolsDownLevel = new QAction (this);
   m_toolsDownLevel->setText ( i18n("Display Lower Level"));
-  m_toolsDownLevel->setIcon (BarIcon("arrow-down"));
+  m_toolsDownLevel->setIcon (QIcon::fromTheme("arrow-down"));
   connect (m_toolsDownLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDown()));
   actionCollection()->addAction ("toolsLevelDown", m_toolsDownLevel);
   m_toolsDeleteLevel = new QAction (this);
   m_toolsDeleteLevel->setText ( i18n("Delete Current Level"));
-  m_toolsDeleteLevel->setIcon (BarIcon("edit-delete"));
+  m_toolsDeleteLevel->setIcon (QIcon::fromTheme("edit-delete"));
   connect (m_toolsDeleteLevel, SIGNAL (triggered()), this, SLOT(slotToolsLevelDelete()));
   actionCollection()->addAction ("toolsLevelDelete", m_toolsDeleteLevel);
   m_toolsCreateZone = new QAction (this);
   m_toolsCreateZone->setText ( i18n("Create New Zone"));
-  m_toolsCreateZone->setIcon (BarIcon("task-new"));
+  m_toolsCreateZone->setIcon (QIcon::fromTheme("task-new"));
   connect (m_toolsCreateZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneCreate()));
   actionCollection()->addAction ("toolsZoneCreate", m_toolsCreateZone);
   m_toolsDeleteZone = new QAction (this);
   m_toolsDeleteZone->setText ( i18n("Delete Current Zone"));
-  m_toolsDeleteZone->setIcon (BarIcon("edit-delete"));
+  m_toolsDeleteZone->setIcon (QIcon::fromTheme("edit-delete"));
   connect (m_toolsDeleteZone, SIGNAL (triggered()), this, SLOT(slotToolsZoneDelete()));
   actionCollection()->addAction ("toolsZoneDelete", m_toolsDeleteZone);
 
@@ -177,24 +175,24 @@ void CMapView::initMenus()
   actionCollection()->addAction ("roomWalkTo", action);
   action = new QAction (this);
   action->setText (i18n("&Delete room"));
-  action->setIcon (SmallIcon("edit-delete"));
+  action->setIcon (QIcon::fromTheme("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomDelete()));
   actionCollection()->addAction ("roomDelete", action);
   action = new QAction (this);
   action->setText (i18n("&Properties"));
-  action->setIcon (SmallIcon("document-properties"));
+  action->setIcon (QIcon::fromTheme("document-properties"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotRoomProperties()));
   actionCollection()->addAction ("roomProperties", action);
 
   // Text Popup Actions
   action = new QAction (this);
   action->setText (i18n("&Delete Text"));
-  action->setIcon (SmallIcon("edit-delete"));
+  action->setIcon (QIcon::fromTheme("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotTextDelete()));
   actionCollection()->addAction ("textDelete", action);
   action = new QAction (this);
   action->setText (i18n("&Properties"));
-  action->setIcon (SmallIcon("document-properties"));
+  action->setIcon (QIcon::fromTheme("document-properties"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotTextProperties()));
   actionCollection()->addAction ("textProperties", action);
 
@@ -221,7 +219,7 @@ void CMapView::initMenus()
   actionCollection()->addAction ("pathEditBends", action);
   action = new QAction (this);
   action->setText (i18n("&Delete Path"));
-  action->setIcon (SmallIcon("edit-delete"));
+  action->setIcon (QIcon::fromTheme("edit-delete"));
   connect (action, SIGNAL (triggered()), this, SLOT(slotPathDelete()));
   actionCollection()->addAction ("pathDelete", action);
   action = new QAction (this);
@@ -583,7 +581,7 @@ void CMapView::levelShift(bool up)
     return;
   }
 
-  if (KMessageBox::warningYesNo (nullptr, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningTwoActions (this, i18n("There is no level in that direction. Do you want to create a new one?"),i18n("KMuddy Mapper"),KGuiItem(i18n("Create New Level")),KStandardGuiItem::cancel()) != KMessageBox::PrimaryAction) return;
 
   mapManager->createLevel(up ? UP : DOWN);
 }
@@ -605,14 +603,14 @@ void CMapView::slotToolsLevelDelete()
   int count = mapManager->getZone()->levelCount();
   if (count <= 1) return;
 
-  if (KMessageBox::warningYesNo (nullptr,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningTwoActions (this,i18n("Are you sure that you want to delete the current level?"),i18n("KMuddy Mapper"),KGuiItem(i18n("Delete")),KStandardGuiItem::cancel()) != KMessageBox::PrimaryAction) return;
   mapManager->deleteLevel(level);
 }
 
 void CMapView::slotToolsZoneCreate()
 {
   bool ok;
-  QString name = KInputDialog::getText(i18n("KMuddy Mapper"), i18n("Please enter the name of the new zone:"), QString(), &ok);
+  QString name = QInputDialog::getText(this, i18n("KMuddy Mapper"), i18n("Please enter the name of the new zone:"), QLineEdit::Normal, QString(), &ok);
   if (!ok) return;
   if (!name.length()) return;
   mapManager->zoneManager()->createZone(name);
@@ -621,7 +619,7 @@ void CMapView::slotToolsZoneCreate()
 void CMapView::slotToolsZoneDelete()
 {
   CMapZoneManager *zm = mapManager->zoneManager();
-  if (KMessageBox::warningYesNo (nullptr,i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper")) != KMessageBox::Yes) return;
+  if (KMessageBox::warningTwoActions (this, i18n("Are you sure that you want to delete the current zone? This cannot be undone."),i18n("KMuddy Mapper"),KGuiItem(i18n("Delete")),KStandardGuiItem::cancel()) != KMessageBox::PrimaryAction) return;
   zm->deleteZone(zm->activeZone());
 }
 
@@ -682,7 +680,7 @@ void CMapView::slotPathTwoWay(void)
 /** Used to add a bend to the path under the pointer */
 void CMapView::slotPathAddBend(void)
 {
-  kDebug() << "CMapView::CMapManager slotPathAddBend";
+  qDebug() << "CMapView::CMapManager slotPathAddBend";
   mapManager->openCommandGroup(i18n("Add Bend"));
   CMapPath *path = (CMapPath *)m_selectedElement;
 

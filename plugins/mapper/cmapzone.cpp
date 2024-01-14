@@ -20,6 +20,8 @@
 #include <KLocalizedString>
 
 #include <qfontmetrics.h>
+#include <QDebug>
+#include <QFontDatabase>
 
 #include "cmapmanager.h"
 #include "cmaplevel.h"
@@ -54,7 +56,7 @@ CMapZone::~CMapZone()
   //FIXME_jp : when this is undone there are extra levels, this needs fixing
   // Delete the levels in the zone
   while (levelCount()) {
-    kWarning() << "deleteing a zone and found levels that should already have been deleted!!";
+    qWarning() << "deleteing a zone and found levels that should already have been deleted!!";
     delete firstLevel();
   }
 }
@@ -186,11 +188,10 @@ void CMapZone::setLabelPosition(labelPosTyp pos)
 		labelPosition = pos;
 	    QPoint p;
 
-		QFont font;
-		font = kapp->font();
+		QFont font = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
 
 		QFontMetrics fm(font);
-		int width = fm.width(getLabel());
+		int width = fm.horizontalAdvance(getLabel());
 		int height = fm.height();
 
 		switch (pos)
@@ -382,7 +383,7 @@ void CMapZone::insertLevel(CMapLevel *level, int pos)
 {
   QStandardItem *item = new QStandardItem(level->getName());
   item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-  item->setData(QVariant(qVariantFromValue((void *) level)), Qt::UserRole + 1);
+  item->setData(QVariant::fromValue((void *) level), Qt::UserRole + 1);
 
   if ((pos >= 0) && (pos < (int)levelCount()))
     mapLevelModel.insertRow(pos, item);

@@ -21,7 +21,7 @@
 #include <QComboBox>
 #include <QPushButton>
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "cmapzone.h"
 #include "cmapzonemanager.h"

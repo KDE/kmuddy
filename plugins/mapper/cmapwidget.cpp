@@ -22,7 +22,6 @@
 #include <QScrollBar>
 #include <QToolTip>
 
-#include <kapplication.h>
 #include <kactioncollection.h>
 #include <kxmlguifactory.h>
 

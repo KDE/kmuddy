@@ -21,7 +21,7 @@
 #include "../cmapcmdnotes.h"
 #include "../../../cmapmanager.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QLabel>
 

@@ -22,9 +22,9 @@
 #include <kservicetypetrader.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
-#include <kfiledialog.h>
 #include <kpagedialog.h>
 
+#include <QDebug>
 #include <QIcon>
 #include <QQueue>
 #include <QStandardPaths>
@@ -76,7 +76,7 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   m_sessId (sessId),
   mapperPlugin (mapper)
 {
-  kDebug() << "constructor begins";
+  qDebug() << "constructor begins";
 
   // register action handlers
   addEventHandler ("dialog-create", 50, PT_STRING);
@@ -130,12 +130,12 @@ CMapManager::CMapManager (QWidget *parent, KMuddyMapper *mapper, int sessId) :
   openMapView ();
   setUndoActive (true);
 
-  kDebug() << "constructor ends";
+  qDebug() << "constructor ends";
 }
 
 CMapManager::~CMapManager()
 {
-  kDebug() << "CMapManager::~CMapManager() start";
+  qDebug() << "CMapManager::~CMapManager() start";
   removeEventHandler ("dialog-create");
   removeEventHandler ("dialog-save");
 
@@ -148,10 +148,11 @@ CMapManager::~CMapManager()
   if (commandHistory)
     delete commandHistory;
 
-  qDeleteAll(m_fileFilter);
+  for (CMapFileFilterBase *filter : m_fileFilter)
+    delete filter;
   m_fileFilter.clear();
 
-  kDebug() << "CMapManager::~CMapManager() end";
+  qDebug() << "CMapManager::~CMapManager() end";
 }
 
 void CMapManager::eventStringHandler (QString event, int, QString &par1, const QString &)
@@ -231,7 +232,7 @@ QList<CMapPropertiesPaneBase *> CMapManager::createPropertyPanes(elementTyp type
 /** This will setup the import/export file filters */
 void CMapManager::initFileFilters()
 {
-  m_fileFilter.append(new CMapFileFilterXML(this));
+  m_fileFilter.push_back(new CMapFileFilterXML(this));
 }
 
 #include "plugins/standard/cmappluginstandard.h"
@@ -240,21 +241,19 @@ void CMapManager::initFileFilters()
 void CMapManager::initPlugins()
 {
   int pluginCount = 0;
-  toolList.clear();
-  pluginList.clear();
-  kDebug() << "Loading Static Plugins...\n";
+  qDebug() << "Loading Static Plugins...\n";
   // These used to be plug-ins, but now I'm linking them in statically, and just pretend that they are plug-ins.
   // This is because linking to the mapper part is causing issues.
   CMapPluginBase *plugin;
   plugin = new CMapPluginStandard (activeView);
-  pluginList.append (plugin);
+  pluginList.push_back (plugin);
 
   for (CMapPluginBase *plugin : pluginList)
   {
-    kDebug() << "Tools in plugin : " << plugin->getToolList()->count();
+    qDebug() << "Tools in plugin : " << plugin->getToolList()->count();
     foreach (CMapToolBase *tool, *plugin->getToolList())
     {
-      toolList.append(tool);
+      toolList.push_back(tool);
     }
 
 //      getActiveView()->insertChildClient(plugin);
@@ -262,30 +261,30 @@ void CMapManager::initPlugins()
     pluginCount++;
   }
 
-  kDebug() << "Finished loading " << pluginCount << " plugins\n";
-  kDebug() << "Finished loading " << toolList.count() << " tools\n";
+  qDebug() << "Finished loading " << pluginCount << " plugins\n";
+  qDebug() << "Finished loading " << toolList.size() << " tools\n";
   
-  if (!toolList.isEmpty())
+  if (!toolList.empty())
   {
-    currentTool = toolList.first();
+    currentTool = toolList.front();
     currentTool->setChecked(true);
   }
   else
   {
-    kWarning() << "No tools loaded!\n";
+    qWarning() << "No tools loaded!\n";
     currentTool = nullptr;
   }
 
     if (pluginCount==0)
     {
-    kWarning() << "No plugins loaded!\n";
+    qWarning() << "No plugins loaded!\n";
     }
 
-     kDebug() << "XML File : " << activeView->xmlFile(); 
+     qDebug() << "XML File : " << activeView->xmlFile(); 
 }
 
 /** Used to get a list of the plugins */
-QLinkedList<CMapPluginBase *> CMapManager::getPluginList()
+std::vector<CMapPluginBase *> CMapManager::getPluginList()
 {
   return pluginList;
 }
@@ -1704,7 +1703,7 @@ void CMapManager::changeProperties(CMapElement *element,QString key,int oldData,
 /** This is a debug function and not for genreal use */
 void CMapManager::generateTestMap()
 {
-  kDebug() << "creating test map";
+  qDebug() << "creating test map";
   bool smallMap = false;
 
   /////////////////////////////////////////////////////////////////////
@@ -1819,7 +1818,7 @@ void CMapManager::generateTestMap()
     addCommand(cmd);
   }
   closeCommandGroup();
-  kDebug() << "test map created";
+  qDebug() << "test map created";
 }
 
 #include "moc_cmapmanager.cpp"

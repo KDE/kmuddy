@@ -17,7 +17,7 @@
 
 #include "cmapdata.h"
 
-#include <kglobalsettings.h>
+#include <QFontDatabase>
 
 #include "cmaplevel.h"
 
@@ -39,7 +39,7 @@ CMapData::CMapData()
 	validRoomCheck = false;
 
 	defaultTextColor = Qt::black;
-	defaultTextFont = KGlobalSettings::generalFont();
+	defaultTextFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
 
 	failedMoveMsg.clear();
 

@@ -18,10 +18,10 @@
 #include "cmapclipboard.h"
 
 #include <kactioncollection.h>
-#include <kdebug.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QAction>
+#include <QDebug>
 
 #include "cmapmanager.h"
 #include "cmappath.h"
@@ -41,11 +41,11 @@ CMapClipboard::CMapClipboard(CMapManager *mapManager, CMapView *view, QObject *p
   m_view(view),
   m_parent(parent)
 {
-	kDebug() << "CMapClipboard::CMapClipboard constructor begins";
+	qDebug() << "CMapClipboard::CMapClipboard constructor begins";
 
 	m_clipboard = nullptr;
 	initActions();
-	kDebug() << "CMapClipboard::CMapClipboard constructor ends";
+	qDebug() << "CMapClipboard::CMapClipboard constructor ends";
 }
 
 CMapClipboard::~CMapClipboard()
@@ -120,8 +120,7 @@ void CMapClipboard::slotCopy()
     {
       if (!element->getSelected()) continue;
       group++;
-      QString grp;
-      grp.sprintf("%d",group);
+      QString grp = QString::number(group);
       KConfigGroup clipGroup = m_clipboard->group(grp);
 
       switch (element->getElementType())
@@ -175,8 +174,7 @@ void CMapClipboard::slotCopy()
         if (link)
         {
           linkGroup++;
-          QString grp;
-          grp.sprintf("LINK%d",linkGroup);
+          QString grp = "LINK" + QString::number(linkGroup);
           KConfigGroup clipGroup = m_clipboard->group(grp);
 
           text->saveProperties(clipGroup);
@@ -202,8 +200,7 @@ void CMapClipboard::slotCopy()
 void CMapClipboard::copyPath(int *pathGroup,CMapPath *path)
 {
 	(*pathGroup)++;
-	QString grp;
-	grp.sprintf("PATH%d",*pathGroup);
+        QString grp = "PATH" + QString::number(*pathGroup);
         KConfigGroup pGroup = m_clipboard->group(grp);
 
 	path->saveProperties(pGroup);
@@ -255,8 +252,7 @@ void CMapClipboard::pasteElements()
 		for (int i=1;i<=elements; i++)
 		{
 			// Change to the group for the current element
-			QString grp;
-			grp.sprintf("%d",i);
+			QString grp = QString::number(i);
                         KConfigGroup group = m_clipboard->group(grp);
 	
 			// Get the level number in the zone that the element is to be insterted into
@@ -334,8 +330,7 @@ void CMapClipboard::pastePaths()
 		for (int i=1;i<=paths; i++)
 		{
 			// Change to the group for the current element
-			QString grp;
-			grp.sprintf("PATH%d",i);
+			QString grp = "PATH" + QString::number(i);
                         KConfigGroup group = m_clipboard->group(grp);
 
 			int srcLevelNum = group.readEntry("SrcLevelNum",-5);
@@ -398,8 +393,7 @@ void CMapClipboard::pasteLinks()
 		for (int i=1;i<=links; i++)
 		{
 			// Change to the group for the current element
-			QString grp;
-			grp.sprintf("LINK%d",i);
+			QString grp = "LINK" + QString::number(i);
                         KConfigGroup group = m_clipboard->group(grp);
 
 			int linkLevelNum = group.readEntry("LinkLevelNum",-5);

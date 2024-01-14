@@ -19,9 +19,7 @@
 #define CMAPFILEFILTERBASE_H
 
 
-#include <qfile.h>
-
-#include <kurl.h>
+#include <QString>
 
 class CMapManager;
 

@@ -17,7 +17,7 @@
 
 #include "cmaptoolpath.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kiconloader.h>
 
 #include <QBitmap>

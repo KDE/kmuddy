@@ -21,8 +21,9 @@
 #include <QDir>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
-#include <kdebug.h>
-#include <klocale.h>
+#include <QDebug>
+
+#include <KLocalizedString>
 #include <kmessagebox.h>
 
 #include "cmapmanager.h"
@@ -170,7 +171,7 @@ int CMapZoneManager::createZoneEntry(const QString &name, const QString &file)
 
   QStandardItem *item = new QStandardItem(name);
   item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-  item->setData(QVariant(qVariantFromValue((void *) i)), Qt::UserRole + 1);
+  item->setData(QVariant::fromValue((void *) i), Qt::UserRole + 1);
 
   d->zones.appendRow(item);
   return d->zones.rowCount() - 1;
@@ -201,7 +202,7 @@ void CMapZoneManager::loadMapList()
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    kDebug() << "No " << fName << " file - nothing to do." << endl;
+    qDebug() << "No " << fName << " file - nothing to do.";
     return;
   }
 
@@ -233,7 +234,7 @@ void CMapZoneManager::loadMapList()
     reader->raiseError (i18n ("This file is corrupted."));
 
   if (reader->hasError()) {
-    kDebug() << i18n ("Error at line %1, column %2: %3",
+    qDebug() << i18n ("Error at line %1, column %2: %3",
                             QString::number (reader->lineNumber()),
                             QString::number (reader->columnNumber()),
                             reader->errorString());
@@ -259,12 +260,12 @@ void CMapZoneManager::saveMapList()
 
   dir.remove ("maps.backup");
   if (!QFile(path + "/" + fName).copy (path + "/" + "maps.backup")) {
-    kDebug() << "Unable to backup " << fName << endl;  // not fatal, may simply not exist
+    qDebug() << "Unable to backup " << fName;  // not fatal, may simply not exist
   }
 
   QFile f (path + "/" + fName);
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-    kDebug() << "Unable to open " << (path + "/" + fName) << " for writing." << endl;
+    qDebug() << "Unable to open " << (path + "/" + fName) << " for writing.";
     return;  // problem
   }
 

@@ -21,7 +21,6 @@
 #include <QWidget>
 #include <QMenu>
 
-#include <kaction.h>
 
 
 class CMapManager;

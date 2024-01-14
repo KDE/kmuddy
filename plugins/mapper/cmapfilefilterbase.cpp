@@ -17,14 +17,6 @@
 
 #include "cmapfilefilterbase.h"
 
-#include "cmapmanager.h"
-
-#include <ktemporaryfile.h>
-#include <kio/netaccess.h>
-#include <kio/jobclasses.h>
-
-#include <qstring.h>
-
 CMapFileFilterBase::CMapFileFilterBase(CMapManager *manager)
 {
 	m_mapManager = manager;

@@ -23,9 +23,6 @@
 #include <qicon.h>
 #include <qevent.h>
 
-#include <kaction.h>
-#include <ktoggleaction.h>
-
 #include <kmuddy_export.h>
 
 class CMapManager;
@@ -33,6 +30,7 @@ class CMapLevel;
 
 class QActionGroup;
 class KActionCollection;
+class KToggleAction;
 
 /**
   *@author Kmud Developer Team

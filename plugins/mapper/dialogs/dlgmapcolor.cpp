@@ -19,7 +19,6 @@
 #include "dlgmapcolor.h"
 
 #include <kcolorbutton.h>
-#include <kdebug.h>
 
 #include <qcolor.h>
 

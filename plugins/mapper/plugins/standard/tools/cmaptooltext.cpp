@@ -17,7 +17,7 @@
 
 #include "cmaptooltext.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kiconloader.h>
 
 #include <QCursor>

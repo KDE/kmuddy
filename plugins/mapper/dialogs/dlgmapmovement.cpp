@@ -25,7 +25,7 @@
 #include <QListWidget>
 #include <qinputdialog.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kregexpeditorinterface.h>
 #include <KServiceTypeTrader>
 

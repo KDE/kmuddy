@@ -59,7 +59,7 @@ QString CMapFilter::processCommand (const QString &command)
 
 QString CMapFilter::executeBeforeCommand (const QString &command)
 {
-  QString specialCmd = "";
+  QString specialCmd;
   directionTyp dir = mapManager->textToDirection(command);
   if (dir == SPECIAL)
     specialCmd = command;
@@ -73,12 +73,12 @@ QString CMapFilter::executeBeforeCommand (const QString &command)
     if (!roomCmd.trimmed().isEmpty())
       return roomCmd + "\n";
   }
-  return QString::null;
+  return QString();
 }
 
 QString CMapFilter::executeAfterCommand (const QString &command)
 {
-  QString specialCmd = "";
+  QString specialCmd;
   directionTyp dir = mapManager->textToDirection(command);
   if (dir == SPECIAL)
     specialCmd = command;
@@ -92,7 +92,7 @@ QString CMapFilter::executeAfterCommand (const QString &command)
     if (!roomCmd.trimmed().isEmpty())
       return "\n" + roomCmd;
   }
-  return QString::null;
+  return QString();
 }
 
 /** This method is called when output is sent to the mud */

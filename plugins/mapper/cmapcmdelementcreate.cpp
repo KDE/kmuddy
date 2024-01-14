@@ -26,7 +26,7 @@
 
 #include "cmapcmdelementproperties.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <QDebug>
 
 CMapCmdElementCreate::CMapCmdElementCreate(CMapManager *mapManager,QString name) : CMapCommand(name),CMapElementUtil(mapManager)
@@ -44,7 +44,7 @@ CMapCmdElementCreate::~CMapCmdElementCreate()
 
 QList<CMapElement *> *CMapCmdElementCreate::getElements()
 {
-  if (!executed) qWarning() << "CMapCmdElementCreate::getElements called without actually executing the command, this will not work!" << endl;
+  if (!executed) qWarning() << "CMapCmdElementCreate::getElements called without actually executing the command, this will not work!";
 
   return &elements;
 }

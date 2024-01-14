@@ -29,8 +29,6 @@
 
 #include "dialogs/dlgmappathproperties.h"
 
-#include <kdebug.h>
-
 CMapElementUtil::CMapElementUtil(CMapManager *mapManager)
 {
 	manager = mapManager;

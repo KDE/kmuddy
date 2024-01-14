@@ -17,7 +17,7 @@
 
 #include "cmapelement.h"
 
-#include <stdlib.h>
+#include <QDebug>
 
 #include <KLocalizedString>
 #include <kconfiggroup.h>
@@ -445,7 +445,7 @@ void CMapElement::saveQDomElement(QDomDocument *,QDomElement *properties)
 	}
 	else
 	{
-		kDebug() << "CMapElement::saveQDomElement - properties pointer is null";
+		qDebug() << "CMapElement::saveQDomElement - properties pointer is null";
 	}
 }
 

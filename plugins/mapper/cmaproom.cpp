@@ -17,12 +17,12 @@
 
 #include "cmaproom.h"
 
-#include <stdlib.h>
 #include <math.h>
 
 #include <qfontmetrics.h>
 #include <qregion.h>
 #include <qsize.h>
+#include <QDebug>
 
 #include "cmapmanager.h"
 #include "cmappath.h"
@@ -31,7 +31,6 @@
 #include "cmapelementutil.h"
 #include "cmapview.h"
 
-#include <kdebug.h>
 
 CMapRoom::CMapRoom(CMapManager *manager,QRect rect,CMapLevel *level) : CMapElement(manager,rect,level)
 {
@@ -87,7 +86,7 @@ CMapRoom::~CMapRoom()
 
   if (textElement)
   {
-    kDebug() << "CMapRoom room delete so delete text element";
+    qDebug() << "CMapRoom room delete so delete text element";
     getManager()->deleteElement(textElement);
   }
 }
@@ -390,7 +389,7 @@ void CMapRoom::setLabelPosition(labelPosTyp pos)
 		}
 
 		QFontMetrics fm(font);
-		int width = fm.width(getLabel());
+		int width = fm.horizontalAdvance(getLabel());
 		int height = fm.height();
 
 		switch (pos)

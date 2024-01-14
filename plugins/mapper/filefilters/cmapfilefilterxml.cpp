@@ -18,13 +18,14 @@
 #include "cmapfilefilterxml.h"
 
 #include <kmessagebox.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kzip.h>
 #include <ktemporaryfile.h>
 
 #include <qfile.h>
 #include <qdom.h>
 #include <qfileinfo.h>
+#include <QDebug>
 
 #include <set>
 
@@ -35,8 +36,6 @@
 #include "../cmaplevel.h"
 #include "../cmapelementutil.h"
 #include "../cmappluginbase.h"
-
-#include <kdebug.h>
 
 CMapFileFilterXML::CMapFileFilterXML(CMapManager *manager) : CMapFileFilterBase(manager)
 {
@@ -98,9 +97,9 @@ int CMapFileFilterXML::saveData(const QString &filename)
 	QString result = saveXMLFile();
 	if (!result.isEmpty())
 	{
-		kDebug() << "Write map.xml : " << result.size();
+		qDebug() << "Write map.xml : " << result.size();
 		zip.writeFile("map.xml", QString(), QString(), result.toLocal8Bit().data(), result.size());
-		kDebug() << "Done write";		
+		qDebug() << "Done write";		
 
 	}
 	
@@ -298,7 +297,7 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
 
   if (!doc.setContent( buffer))
   {
-    kDebug() << "Unable to open the map file, not a valid xml document";
+    qDebug() << "Unable to open the map file, not a valid xml document";
     // file.close();
     return -1;
   }
@@ -318,14 +317,14 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
     if (major != "1" || minor != "0")
     {
        //TODO_jp : Output error message
-      kDebug() << "This version can't be loaded";
+      qDebug() << "This version can't be loaded";
       return -4;
     }
   }
   else
   {
     //TODO_jp : Output error message
-    kDebug() << "Unable to find version";    
+    qDebug() << "Unable to find version";    
     return -2;
   }
 
@@ -334,7 +333,7 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
   if (rootZoneNode.isNull())
   {
     //TODO_jp : Output error message
-    kDebug() << "Unable to find root zone";
+    qDebug() << "Unable to find root zone";
     return -2;
   }
 
@@ -349,7 +348,7 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
   if (pathsNode.isNull())
   {
     //TODO_jp : Output error message
-    kDebug() << "Unable to find paths";
+    qDebug() << "Unable to find paths";
     return -2;
   }
 
@@ -366,7 +365,7 @@ int CMapFileFilterXML::loadXMLData(const QByteArray & buffer)
   if (pathsNode.isNull())
   {
     //TODO_jp : Output error message
-    kDebug() << "Unable to find links";
+    qDebug() << "Unable to find links";
     return -2;
   }
 
@@ -392,7 +391,7 @@ int CMapFileFilterXML::loadLinks(QDomElement *pathsNode)
 
 		if (e.isNull() )
 		{
-			kDebug() << "Unable to find link element ";
+			qDebug() << "Unable to find link element ";
 			return -2;
 		}
 
@@ -404,7 +403,7 @@ int CMapFileFilterXML::loadLinks(QDomElement *pathsNode)
 
 			if (srcLevelID == -2 || destLevelID == -2)
 			{
-				kDebug() << "Unable to find link end points";
+				qDebug() << "Unable to find link end points";
 				return -2;				
 			}
 
@@ -421,7 +420,7 @@ int CMapFileFilterXML::loadLinks(QDomElement *pathsNode)
 
 			if (textID == -2 || destID == -2 || destTyp == -2 || srcTyp == -2)
 			{
-				kDebug() << "Unable to find link end points";
+				qDebug() << "Unable to find link end points";
 				return -2;
 			}
 
@@ -465,7 +464,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
 
     if (srcLevelID == -2 || destLevelID == -2)
     {
-      kDebug() << "Unable to find path end points";
+      qDebug() << "Unable to find path end points";
       continue;
     }
     CMapLevel *srcLevel = m_mapManager->findLevel(srcLevelID);
@@ -476,7 +475,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
 
     if (destRoomID == -2 || srcRoomID == -2)
     {
-      kDebug() << "Unable to find path end points";
+      qDebug() << "Unable to find path end points";
       continue;
     }
 
@@ -485,7 +484,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
 
     if (srcRoom==nullptr || destRoom==nullptr)
     {				
-      kDebug() << "Src or Dest room is NULL while creating path";
+      qDebug() << "Src or Dest room is NULL while creating path";
       continue;
     }
 
@@ -495,7 +494,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
 
     if (srcRoom->getPathTarget(srcDir, specialCmd))
     {
-      kDebug() << "Duplicate path, ignoring";
+      qDebug() << "Duplicate path, ignoring";
       continue;
     }
 
@@ -503,7 +502,7 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
     path->loadQDomElement(&e);
     loadPluginPropertiesForElement(path,&e);
   } while (!n.isNull());
-  kDebug() << "loadPaths Here 4";	
+  qDebug() << "loadPaths Here 4";	
 
   return 0;
 }
@@ -531,7 +530,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 
     if (e.isNull() )
     {
-      kDebug() << "Unable to find element ";
+      qDebug() << "Unable to find element ";
       return -2;
     }
 
@@ -541,7 +540,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
       QString id = e.attribute("ID","-2");
       if (id=="-2")
       {
-        kDebug() << "Unable to find level ID";
+        qDebug() << "Unable to find level ID";
         return -2;
       }
       level->setLevelID(id.toInt());
@@ -554,7 +553,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 
         if (e2.isNull() )
         {
-          kDebug() << "Unable to find element ";
+          qDebug() << "Unable to find element ";
           return -2;
         }
 
@@ -563,7 +562,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 
         if (x1==-1 || y1==-1)
         {
-          kDebug() << "Unable to find pos ";
+          qDebug() << "Unable to find pos ";
           return -2;
         }
 
@@ -571,7 +570,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
         {
           CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 /* * gridWidth*/ ,y1 /* * gridHeight */ ),level);
           if (!room) {
-            kWarning()<<"NO ROOM AT "<<x1<<"/"<<y1<<" on level "<<id<<" WHEN LOADING ROOM #"<<e2.attribute("RoomID",QString::number(-1)).toInt();
+            qWarning()<<"NO ROOM AT "<<x1<<"/"<<y1<<" on level "<<id<<" WHEN LOADING ROOM #"<<e2.attribute("RoomID",QString::number(-1)).toInt();
             n2 = n2.nextSibling();
             continue;
           }
@@ -583,7 +582,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
         {
           CMapText *text = CMapElementUtil::createText(m_mapManager, QPoint (x1,y1),level,"");
           if (!text) {
-            kDebug() << "Unable to create text";
+            qDebug() << "Unable to create text";
             n2 = n2.nextSibling();
             continue;
           }
@@ -592,7 +591,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
         }
         else
         {
-          kDebug() << "Unknown Type :  " << e2.tagName();
+          qDebug() << "Unknown Type :  " << e2.tagName();
         }
 
         n2 = n2.nextSibling();
@@ -690,7 +689,7 @@ void CMapFileFilterXML::loadPluginPropertiesForElement(CMapElement *element,QDom
 						{
 							QDomNode n2 = attribs.item(i);
 
-							kDebug() << "Attrib " << n2.nodeName() << " = " << n2.nodeValue();
+							qDebug() << "Attrib " << n2.nodeName() << " = " << n2.nodeValue();
 							pluginProperties.group("Properties").writeEntry(n2.nodeName(),n2.nodeValue());
 							
 						}

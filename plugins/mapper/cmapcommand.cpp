@@ -17,8 +17,6 @@
 
 #include "cmapcommand.h"
 
-#include <kapplication.h>
-
 
 CMapCommand::CMapCommand(QString name) : QUndoCommand()
 

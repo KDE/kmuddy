@@ -26,7 +26,7 @@
 #include "cmappath.h"
 #include "cmapcmdelementproperties.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 CMapCmdElementDelete::CMapCmdElementDelete(CMapManager *mapManager,QString name,bool delOpsite) : CMapCommand(name),CMapElementUtil(mapManager)
 {
@@ -93,8 +93,7 @@ void CMapCmdElementDelete::undo()
 
 void CMapCmdElementDelete::addElement(KMemConfig *newElementProperties)
 {
-	QString grpName ="";
-	grpName.sprintf("%d",groups++);
+	QString grpName = QString::number(groups++);
 	KConfigGroup grp = properties->group(grpName);
 
 	newElementProperties->group("Properties").copyTo(&grp);

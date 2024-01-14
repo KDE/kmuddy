@@ -24,23 +24,20 @@
 #include <qcolor.h>
 #include <qpoint.h>
 #include <qobject.h>
-#include <QLinkedList>
 #include <QStringList>
 #include <qcursor.h>
 
-#include <kurl.h>
-#include <kapplication.h>
 #include <kconfig.h>
-#include <kaction.h>
 #include <kselectaction.h>
 #include <ktoggleaction.h>
-#include <kstatusbar.h>
 #include <kconfiggroup.h>
 
 #include "cactionbase.h"
 
 #include "cmapcommand.h"
 #include "cmapdata.h"
+
+#include <vector>
 
 #include <kmuddy_export.h>
 
@@ -88,7 +85,7 @@ public:
   void eventStringHandler (QString event, int, QString &par1, const QString &) override;
 
   /** Used to get a list of the plugins */
-  QLinkedList<CMapPluginBase *> getPluginList();
+  std::vector<CMapPluginBase *> getPluginList();
   /**
    * Used to create a new view of the map
    * actually returns a CMapView*,  dynamic_cast if necessary
@@ -293,7 +290,7 @@ private:
 
 private:
   /** A list of import/export filters */
-  QLinkedList<CMapFileFilterBase *> m_fileFilter;
+  std::vector<CMapFileFilterBase *> m_fileFilter;
   /** If this is true then commands are added to the history, otherwise they are not */
   bool m_commandsActive;
   /** The filter used to proces mud input/output */
@@ -307,7 +304,7 @@ private:
   /** The current tool */
   CMapToolBase *currentTool;
   /** A list of all loaded tools */
-  QLinkedList<CMapToolBase *> toolList;
+  std::vector<CMapToolBase *> toolList;
   /** The undo/redo history */
   QUndoStack *commandHistory;
   /** Points the command history currently being used */
@@ -325,7 +322,7 @@ private:
   /** A pointer to the map data */
   CMapData *mapData;
   /** A list of all the plugins */
-  QLinkedList<CMapPluginBase *> pluginList;
+  std::vector<CMapPluginBase *> pluginList;
   /** pointer to the speedwalk status indicaor */
   DlgSpeedwalkProgress *speedwalkProgressDlg;
 

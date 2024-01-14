@@ -21,7 +21,6 @@
 #include <qlayout.h>
 
 #include <kxmlguiwindow.h>
-#include <klocale.h>
 #include <kmuddy_export.h>
 
 class QLabel;

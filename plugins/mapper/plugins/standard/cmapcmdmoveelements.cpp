@@ -17,8 +17,8 @@
 
 #include "cmapcmdmoveelements.h"
 
-#include <kdebug.h>
-#include <klocale.h>
+#include <QDebug>
+#include <KLocalizedString>
 
 #include "../../cmapmanager.h"
 #include "../../cmapelement.h"
@@ -37,18 +37,18 @@ CMapCmdMoveElements::~CMapCmdMoveElements()
 
 void CMapCmdMoveElements::addElement(CMapElement *element)
 {
-	kDebug() << "CMapCmdMoveElements::addElement 1";
+	qDebug() << "CMapCmdMoveElements::addElement 1";
 	struct elemProp properties;
 	properties.pos = QPoint(element->getX(),element->getY());
-	kDebug() << "CMapCmdMoveElements::addElement 1.0 : " << element->getX();
+	qDebug() << "CMapCmdMoveElements::addElement 1.0 : " << element->getX();
         CMapLevel *level = element->getLevel();
         if (!level) return;
 	properties.level = level->getLevelID();
 
-	kDebug() << "CMapCmdMoveElements::addElement 1.1";
+	qDebug() << "CMapCmdMoveElements::addElement 1.1";
 	if (element->getElementType()==TEXT)
 	{
-		kDebug() << "CMapCmdMoveElements::addElement 1.2";
+		qDebug() << "CMapCmdMoveElements::addElement 1.2";
 		CMapElement *lnkElement = ((CMapText *) element)->getLinkElement();
 		if (lnkElement!=nullptr)
 		{
@@ -65,13 +65,13 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 	}
 	else
 	{
-		kDebug() << "CMapCmdMoveElements::addElement 2";
+		qDebug() << "CMapCmdMoveElements::addElement 2";
 		properties.labelPos = 0;
 	}
 
-	kDebug() << "CMapCmdMoveElements::addElement 3";	
+	qDebug() << "CMapCmdMoveElements::addElement 3";	
 	elements.append(properties);
-	kDebug() << "CMapCmdMoveElements::addElement 4";
+	qDebug() << "CMapCmdMoveElements::addElement 4";
 }
 
 void CMapCmdMoveElements::redo()

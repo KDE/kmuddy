@@ -22,7 +22,7 @@
 #include "../../cmapmanager.h"
 #include "../../cmapelement.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 CMapCMDNotes::CMapCMDNotes(CMapPluginStandard *plugin,CMapElement *element,QString note) : CMapCommand (i18n("Change element notes"))
 {

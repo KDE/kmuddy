@@ -22,8 +22,7 @@
 #include <qpushbutton.h>
 #include <qlabel.h>
 #include <qtabwidget.h>
-
-#include <klocale.h>
+#include <QLocale>
 
 #include "../cmapmanager.h"
 #include "../cmapcmdelementcreate.h"
@@ -33,7 +32,8 @@
 #include "../cmappath.h"
 #include "../cmappluginbase.h"
 #include "../cmappropertiespanebase.h"
-#include <kdebug.h>
+
+#include <KLocalizedString>
 
 DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pathProperties,bool undoable,QWidget *parent)
 	: QDialog(parent)
@@ -127,7 +127,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathEl
 		connect(cmdCancel,SIGNAL(clicked()),pane,SLOT(slotCancel()));
 	}
 
-kDebug()<<optTwoWay->isChecked();
+qDebug()<<optTwoWay->isChecked();
 }
 
 DlgMapPathProperties::~DlgMapPathProperties()

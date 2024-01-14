@@ -34,10 +34,10 @@
 #include <qlistwidget.h>
 #include <qtabwidget.h>
 #include <qtreewidget.h>
+#include <QDebug>
 
 #include <kcolorbutton.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <KLocalizedString>
 
 DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomElement,QWidget *parent )
 	: QDialog(parent)
@@ -80,7 +80,7 @@ void DlgMapRoomProperties::regenerateExits(void)
   foreach (CMapPath *path, *room->getPathList())
   {
     QString direction = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
-    kDebug() << "Path : " << path->getSrcDir() << "," << path->getSpecialCmd() << "," << direction;	
+    qDebug() << "Path : " << path->getSrcDir() << "," << path->getSpecialCmd() << "," << direction;	
 
     item = new QTreeWidgetItem();
     item->setText(0, direction);

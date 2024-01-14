@@ -24,9 +24,9 @@
 
 #include <qregion.h>
 #include <QPolygon>
+#include <QDebug>
 
 #include <math.h>
-#include <stdlib.h>
 
 #include "cmaplevel.h"
 #include "cmapcmdelementproperties.h"
@@ -875,7 +875,7 @@ QPoint CMapPath::deletePathSeg(int seg)
 
   for( PointList::Iterator point = bendList.begin(); point != bendList.end(); ++point )
   {
-    kDebug() << "Bend : " << (*point).x() << "," << (*point).y();	
+    qDebug() << "Bend : " << (*point).x() << "," << (*point).y();	
   }
 
   if (seg > (int) bendList.count()) seg = bendList.count();
