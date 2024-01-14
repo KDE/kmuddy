@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-07 00:39+0000\n"
+"POT-Creation-Date: 2024-01-14 01:57+0000\n"
 "PO-Revision-Date: 2020-03-10 11:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -31,7 +31,7 @@ msgid "Your emails"
 msgstr "alvarenga@kde.org"
 
 #: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
-#: kmuddy/cstatusvareditor.cpp:71
+#: kmuddy/cstatusvareditor.cpp:70
 #, kde-format
 msgid "&Caption"
 msgstr "&Legenda"
@@ -77,13 +77,13 @@ msgstr ""
 "pressionado."
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
-#: kmuddy/ctimereditor.cpp:133
+#: kmuddy/ctimereditor.cpp:132
 #, kde-format
 msgid "&General"
 msgstr "&Geral"
 
 #: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
-#: kmuddy/ctimereditor.cpp:134 kmuddy/ctriggereditor.cpp:511
+#: kmuddy/ctimereditor.cpp:133 kmuddy/ctriggereditor.cpp:512
 #: libs/caliaseditor.cpp:227
 #, kde-format
 msgid "&Script"
@@ -94,102 +94,114 @@ msgstr "&Script"
 msgid "Script when &released"
 msgstr "Sc&ript quando lançado"
 
-#: kmuddy/cconnection.cpp:267
+#: kmuddy/cconnection.cpp:263
 #, kde-format
 msgid "Network error: %1"
 msgstr "Erro de rede: %1"
 
-#: kmuddy/cconnection.cpp:429
+#: kmuddy/cconnection.cpp:425
 #, kde-format
 msgid "Do you want to close connection to %1?"
 msgstr "Deseja fechar a conexão a %1?"
 
-#: kmuddy/cconnection.cpp:430
+#: kmuddy/cconnection.cpp:426
 #, kde-format
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: kmuddy/cconnection.cpp:514
+#: kmuddy/cconnection.cpp:426
+#, fuzzy, kde-format
+#| msgid "No connection"
+msgid "Close connection"
+msgstr "Sem conexão"
+
+#: kmuddy/cconnection.cpp:426
+#, fuzzy, kde-format
+#| msgid "Connected"
+msgid "Stay connected"
+msgstr "Conectado"
+
+#: kmuddy/cconnection.cpp:510
 #, kde-format
 msgid "(password is hidden)"
 msgstr "(a senha está oculta)"
 
-#: kmuddy/cconnection.cpp:735
+#: kmuddy/cconnection.cpp:731
 #, kde-format
 msgid "Aliases are now enabled."
 msgstr "Os apelidos estão agora habilitados."
 
-#: kmuddy/cconnection.cpp:735
+#: kmuddy/cconnection.cpp:731
 #, kde-format
 msgid "Aliases are now disabled."
 msgstr "Os apelidos estão agora desabilitados."
 
-#: kmuddy/cconnection.cpp:746
+#: kmuddy/cconnection.cpp:742
 #, kde-format
 msgid "Triggers are now enabled."
 msgstr "Os acionamentos estão agora habilitados."
 
-#: kmuddy/cconnection.cpp:746
+#: kmuddy/cconnection.cpp:742
 #, kde-format
 msgid "Triggers are now disabled."
 msgstr "Os acionamentos estão agora desabilitados."
 
-#: kmuddy/cconnection.cpp:757
+#: kmuddy/cconnection.cpp:753
 #, kde-format
 msgid "Timers are now enabled."
 msgstr "Os cronômetros estão agora habilitados."
 
-#: kmuddy/cconnection.cpp:757
+#: kmuddy/cconnection.cpp:753
 #, kde-format
 msgid "Timers are now disabled."
 msgstr "Os cronômetros estão agora desabilitados."
 
-#: kmuddy/cconnection.cpp:768
+#: kmuddy/cconnection.cpp:764
 #, kde-format
 msgid "Macro keys are now enabled."
 msgstr "As teclas de macro estão agora habilitadas."
 
-#: kmuddy/cconnection.cpp:768
+#: kmuddy/cconnection.cpp:764
 #, kde-format
 msgid "Macro keys are now disabled."
 msgstr "As teclas de macros estão agora desabilitadas."
 
-#: kmuddy/cconnection.cpp:821
+#: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Aliases"
 msgstr "Apelidos"
 
-#: kmuddy/cconnection.cpp:822
+#: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Triggers"
 msgstr "Acionamentos"
 
-#: kmuddy/cconnection.cpp:823
+#: kmuddy/cconnection.cpp:819
 #, kde-format
 msgid "Buttons"
 msgstr "Botões"
 
-#: kmuddy/cconnection.cpp:824
+#: kmuddy/cconnection.cpp:820
 #, kde-format
 msgid "Timers"
 msgstr "Cronômetros"
 
-#: kmuddy/cconnection.cpp:825
+#: kmuddy/cconnection.cpp:821
 #, kde-format
 msgid "Macro Keys"
 msgstr "Teclas de macro"
 
-#: kmuddy/cconnection.cpp:826
+#: kmuddy/cconnection.cpp:822
 #, kde-format
 msgid "Status variables"
 msgstr "Variáveis de status"
 
-#: kmuddy/cconnection.cpp:827
+#: kmuddy/cconnection.cpp:823
 #, kde-format
 msgid "Gauges"
 msgstr "Indicadores"
 
-#: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:57
+#: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:56
 #: plugins/vartrigs/cvartriggereditor.cpp:57
 #, kde-format
 msgid "&Variable name"
@@ -200,17 +212,17 @@ msgstr "Nome da &variável"
 msgid "Variable displayed by this gauge."
 msgstr "A variável apresentada neste indicador."
 
-#: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:64
+#: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
 #, kde-format
 msgid "&Max. variable (optional)"
 msgstr "Variável &máxima (opcional)"
 
-#: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:68
+#: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
 #, kde-format
 msgid "Variable holding the maximum value (default=100)"
 msgstr "A variável que contém o valor máximo (padrão=100)"
 
-#: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:74
+#: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:73
 #, kde-format
 msgid "Caption shown next to variable value."
 msgstr "Título apresentado após o valor da variável."
@@ -225,131 +237,99 @@ msgstr "&Cor"
 msgid "Color used to paint this gauge."
 msgstr "A cor usada para pintar este indicador."
 
-#: kmuddy/cmudlist.cpp:64 kmuddy/ctriggereditor.cpp:211
-#: libs/caliaseditor.cpp:133 plugins/converter/converterdialog.cpp:54
-#: plugins/scripting/crunninglist.cpp:57
-#, kde-format
-msgid "Name"
-msgstr "Nome"
-
-#: kmuddy/cmudlist.cpp:65 libs/cprofilemanager.cpp:72
-#, kde-format
-msgid "Server"
-msgstr "Servidor"
-
-#: kmuddy/cmudlist.cpp:66 libs/cprofilemanager.cpp:73
-#, kde-format
-msgid "Port"
-msgstr "Porta"
-
-#: kmuddy/cmudlist.cpp:67
-#, kde-format
-msgid "WWW"
-msgstr "WWW"
-
-#: kmuddy/cmudlist.cpp:68
-#, kde-format
-msgid "IP"
-msgstr "IP"
-
-#: kmuddy/cmudlist.cpp:69
-#, kde-format
-msgid "Codebase"
-msgstr "Código base"
-
-#: kmuddy/cmxpmanager.cpp:295
+#: kmuddy/cmxpmanager.cpp:299
 #, kde-format
 msgid "line tag"
 msgstr "marca da linha"
 
-#: kmuddy/cmxpmanager.cpp:296
+#: kmuddy/cmxpmanager.cpp:300
 #, kde-format
 msgid "expire link"
 msgstr "linha de expiração"
 
-#: kmuddy/cmxpmanager.cpp:297
+#: kmuddy/cmxpmanager.cpp:301
 #, kde-format
 msgid "horizontal line"
 msgstr "linha horizontal"
 
-#: kmuddy/cmxpmanager.cpp:298
+#: kmuddy/cmxpmanager.cpp:302
 #, kde-format
 msgid "create window"
 msgstr "criar uma janela"
 
-#: kmuddy/cmxpmanager.cpp:299
+#: kmuddy/cmxpmanager.cpp:303
 #, kde-format
 msgid "create internal window"
 msgstr "criar uma janela interna"
 
-#: kmuddy/cmxpmanager.cpp:300
+#: kmuddy/cmxpmanager.cpp:304
 #, kde-format
 msgid "close window"
 msgstr "fechar a janela"
 
-#: kmuddy/cmxpmanager.cpp:301
+#: kmuddy/cmxpmanager.cpp:305
 #, kde-format
 msgid "set active window"
 msgstr "definir a janela ativa"
 
-#: kmuddy/cmxpmanager.cpp:302
+#: kmuddy/cmxpmanager.cpp:306
 #, kde-format
 msgid "move cursor"
 msgstr "mover o cursor"
 
-#: kmuddy/cmxpmanager.cpp:303
+#: kmuddy/cmxpmanager.cpp:307
 #, kde-format
 msgid "erase text"
 msgstr "limpar o texto"
 
-#: kmuddy/cmxpmanager.cpp:304
+#: kmuddy/cmxpmanager.cpp:308
 #, kde-format
 msgid "relocate"
 msgstr "mudar de posição"
 
-#: kmuddy/cmxpmanager.cpp:305
+#: kmuddy/cmxpmanager.cpp:309
 #, kde-format
 msgid "send username/password"
 msgstr "enviar usuário/senha"
 
-#: kmuddy/cmxpmanager.cpp:306
+#: kmuddy/cmxpmanager.cpp:310
 #, kde-format
 msgid "image"
 msgstr "imagem"
 
-#: kmuddy/cmxpmanager.cpp:307
+#: kmuddy/cmxpmanager.cpp:311
 #, kde-format
 msgid "image map"
 msgstr "mapa da imagem"
 
-#: kmuddy/cmxpmanager.cpp:308
+#: kmuddy/cmxpmanager.cpp:312
 #, kde-format
 msgid "unknown"
 msgstr "desconhecido"
 
-#: kmuddy/cmxpmanager.cpp:310
+#: kmuddy/cmxpmanager.cpp:314
 #, kde-format
 msgid "Ignoring unsupported MXP request (%1)"
 msgstr "Ignorando o pedido MXP não suportado (%1)"
 
-#: kmuddy/csession.cpp:84
+#: kmuddy/csession.cpp:82
 #, kde-format
 msgid "Ctrl+Enter adds new line, unless changed in settings"
 msgstr ""
 "O Ctrl+Enter adiciona uma linha nova, a menos que tenha sido alterado nas "
 "configurações"
 
-#: kmuddy/csession.cpp:88
+#: kmuddy/csession.cpp:86
 #, kde-format
 msgid "Switches between standard and multi-line input line."
 msgstr "Muda entre uma linha de introdução de dados normal e multilinhas."
 
-#: kmuddy/csessionmanager.cpp:152 kmuddy/csessionmanager.cpp:186
+#: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
 #, kde-format
 msgid "No connection"
 msgstr "Sem conexão"
 
-#: kmuddy/csessionmanager.cpp:215
+#: kmuddy/csessionmanager.cpp:211
 #, kde-format
 msgid "Connection closed."
 msgstr "Conexão encerrada."
@@ -385,7 +365,7 @@ msgid "Meta"
 msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
-#: kmuddy/kmuddy.cpp:287
+#: kmuddy/kmuddy.cpp:279
 #, kde-format
 msgid "&Command"
 msgstr "&Comando"
@@ -435,17 +415,17 @@ msgid ""
 "If there already is some text in the input line, should it be overwritten?"
 msgstr "Se já existir algum texto no campo, deverá ser substituído?"
 
-#: kmuddy/cstatusvareditor.cpp:61
+#: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
 msgid "Variable displayed by this status variable."
 msgstr "A variável apresentada por esta variável de status."
 
-#: kmuddy/cstatusvareditor.cpp:77
+#: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
 msgid "&Show as percentage"
 msgstr "Mo&strar como porcentagem"
 
-#: kmuddy/cstatusvareditor.cpp:78
+#: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
 msgid ""
 "When enabled, this variable will be shown as percentage. (of max.value, or "
@@ -454,12 +434,12 @@ msgstr ""
 "Se estiver habilitado, esta variável aparecerá como uma porcentagem. (do "
 "valor máximo ou de 100, caso um valor máximo não tenha sido indicado)"
 
-#: kmuddy/ctelnet.cpp:241 kmuddy/ctelnet.cpp:315
+#: kmuddy/ctelnet.cpp:239 kmuddy/ctelnet.cpp:315
 #, kde-format
 msgid "--- A connection has been established ---"
 msgstr "--- Foi estabelecida uma conexão ---"
 
-#: kmuddy/ctelnet.cpp:251
+#: kmuddy/ctelnet.cpp:249
 #, kde-format
 msgid "Connecting..."
 msgstr "Conectando..."
@@ -494,51 +474,51 @@ msgstr ""
 msgid "&Interval"
 msgstr "&Intervalo"
 
-#: kmuddy/ctimereditor.cpp:78 kmuddy/ctimereditor.cpp:95
+#: kmuddy/ctimereditor.cpp:77 kmuddy/ctimereditor.cpp:94
 #, kde-format
 msgid " secs"
 msgstr " s"
 
-#: kmuddy/ctimereditor.cpp:82
+#: kmuddy/ctimereditor.cpp:81
 #, kde-format
 msgid "&Single-shot"
 msgstr "&Execução única"
 
-#: kmuddy/ctimereditor.cpp:83
+#: kmuddy/ctimereditor.cpp:82
 #, kde-format
 msgid "When enabled, the timer will only be executed once and then disabled."
 msgstr ""
 "Quando estiver habilitado, o temporizador será executado apenas uma vez e "
 "depois será desabilitado."
 
-#: kmuddy/ctimereditor.cpp:85
+#: kmuddy/ctimereditor.cpp:84
 #, kde-format
 msgid "&Run a command in advance"
 msgstr "Executa&r um comando antecipadamente"
 
-#: kmuddy/ctimereditor.cpp:86
+#: kmuddy/ctimereditor.cpp:85
 #, kde-format
 msgid "Run a command a given number of seconds before each timer tick."
 msgstr ""
 "Executa um comando em um período em segundos indicado, antes de cada impulso "
 "do temporizador."
 
-#: kmuddy/ctimereditor.cpp:88
+#: kmuddy/ctimereditor.cpp:87
 #, kde-format
 msgid "Advance command"
 msgstr "Comando de avanço"
 
-#: kmuddy/ctimereditor.cpp:91
+#: kmuddy/ctimereditor.cpp:90
 #, kde-format
 msgid "&Seconds before tick"
 msgstr "&Segundos antes do impulso"
 
-#: kmuddy/ctimereditor.cpp:98
+#: kmuddy/ctimereditor.cpp:97
 #, kde-format
 msgid "C&ommand"
 msgstr "C&omando"
 
-#: kmuddy/ctimereditor.cpp:101
+#: kmuddy/ctimereditor.cpp:100
 #, kde-format
 msgid ""
 "Command that will be executed the specified time before each tick.\n"
@@ -608,167 +588,167 @@ msgstr "A transcrição da sessão será tratada à meia-noite."
 msgid "Dump file could not be opened."
 msgstr "Não foi possível abrir o arquivo de exportação dos dados."
 
-#: kmuddy/ctriggereditor.cpp:115
+#: kmuddy/ctriggereditor.cpp:114
 #, kde-format
 msgid "Keep"
 msgstr "Manter"
 
-#: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:115 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Black"
 msgstr "Preto"
 
-#: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Red"
 msgstr "Vermelho"
 
-#: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
+#: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Green"
 msgstr "Verde"
 
-#: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Yellow"
 msgstr "Amarelo"
 
-#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Blue"
 msgstr "Azul"
 
-#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Magenta"
 msgstr "Magenta"
 
-#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Cyan"
 msgstr "Ciano"
 
-#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
+#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Gray"
 msgstr "Cinza"
 
-#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Dark gray"
 msgstr "Cinza escuro"
 
-#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright red"
 msgstr "Vermelho claro"
 
-#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
+#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright green"
 msgstr "Verde claro"
 
-#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright yellow"
 msgstr "Amarelo claro"
 
-#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright blue"
 msgstr "Azul claro"
 
-#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
+#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright magenta"
 msgstr "Magenta claro"
 
-#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:75
+#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright cyan"
 msgstr "Ciano claro"
 
-#: kmuddy/ctriggereditor.cpp:131 kmuddy/dialogs/dlgappsettings.cpp:75
+#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "White"
 msgstr "Branco"
 
-#: kmuddy/ctriggereditor.cpp:132
+#: kmuddy/ctriggereditor.cpp:131
 #, kde-format
 msgid "Other"
 msgstr "Outra"
 
-#: kmuddy/ctriggereditor.cpp:137
+#: kmuddy/ctriggereditor.cpp:136
 #, kde-format
 msgid "Whole line"
 msgstr "Linha completa"
 
-#: kmuddy/ctriggereditor.cpp:138
+#: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Matching text"
 msgstr "Texto correspondente"
 
-#: kmuddy/ctriggereditor.cpp:139
+#: kmuddy/ctriggereditor.cpp:138
 #, kde-format
 msgid "Prefix"
 msgstr "Prefixo"
 
-#: kmuddy/ctriggereditor.cpp:140
+#: kmuddy/ctriggereditor.cpp:139
 #, kde-format
 msgid "Suffix"
 msgstr "Sufixo"
 
-#: kmuddy/ctriggereditor.cpp:141
+#: kmuddy/ctriggereditor.cpp:140
 #, kde-format
 msgid "Full prefix"
 msgstr "Prefixo completo"
 
-#: kmuddy/ctriggereditor.cpp:142
+#: kmuddy/ctriggereditor.cpp:141
 #, kde-format
 msgid "Full suffix"
 msgstr "Sufixo completo"
 
-#: kmuddy/ctriggereditor.cpp:143
+#: kmuddy/ctriggereditor.cpp:142
 #, kde-format
 msgid "Backreference"
 msgstr "Referência anterior"
 
-#: kmuddy/ctriggereditor.cpp:166
+#: kmuddy/ctriggereditor.cpp:165
 #, kde-format
 msgid "&Trigger text"
 msgstr "&Texto para acionar"
 
-#: kmuddy/ctriggereditor.cpp:169 libs/caliaseditor.cpp:91
+#: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
 msgid "Command that will be replaced if you enter it."
 msgstr "O comando que será substituído se introduzi-lo."
 
-#: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:101
+#: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
 #, kde-format
 msgid "Exact match"
 msgstr "Ocorrência exata"
 
-#: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:102
+#: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
 #, kde-format
 msgid "Sub-string"
 msgstr "Subsequência"
 
-#: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:103
+#: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
 #, kde-format
 msgid "Begins with"
 msgstr "Começa com"
 
-#: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:104
+#: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:104
 #, kde-format
 msgid "Ends with"
 msgstr "Termina com"
 
-#: kmuddy/ctriggereditor.cpp:183 libs/caliaseditor.cpp:105
+#: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:105
 #, kde-format
 msgid "Regular expression"
 msgstr "Expressão regular"
 
-#: kmuddy/ctriggereditor.cpp:184
+#: kmuddy/ctriggereditor.cpp:183
 #, kde-format
 msgid ""
 "Type of matching. Trigger will only be activated if this passes this type of "
@@ -778,7 +758,7 @@ msgstr ""
 "neste tipo de teste. Lembre-se de que os acionamentos correspondem sempre a "
 "palavras completas."
 
-#: kmuddy/ctriggereditor.cpp:192 libs/caliaseditor.cpp:114
+#: kmuddy/ctriggereditor.cpp:191 libs/caliaseditor.cpp:114
 #, kde-format
 msgid ""
 "Conditional triggering. If this is set, the actions will only fire if the "
@@ -788,33 +768,40 @@ msgstr ""
 "acionadas se a condição for verdadeira (isto é, caso seja avaliada como "
 "diferente de zero)."
 
-#: kmuddy/ctriggereditor.cpp:196
+#: kmuddy/ctriggereditor.cpp:195
 #, kde-format
 msgid "&Command(s) to send:"
 msgstr "&Comando(s) a enviar:"
 
-#: kmuddy/ctriggereditor.cpp:200
+#: kmuddy/ctriggereditor.cpp:199
 #, kde-format
 msgid "Command(s) that will replace command you've entered."
 msgstr "O(s) comando(s) que irá(ão) substituir o comando introduzido."
 
-#: kmuddy/ctriggereditor.cpp:203 libs/caliaseditor.cpp:125
+#: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
 #, kde-format
 msgid "Test area"
 msgstr "Área de teste"
 
-#: kmuddy/ctriggereditor.cpp:205 libs/caliaseditor.cpp:127
+#: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
 msgstr "&Texto: "
 
-#: kmuddy/ctriggereditor.cpp:211 kmuddy/dialogs/dlgstatistics.cpp:53
+#: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
+#: plugins/converter/converterdialog.cpp:54
+#: plugins/scripting/crunninglist.cpp:57
+#, kde-format
+msgid "Name"
+msgstr "Nome"
+
+#: kmuddy/ctriggereditor.cpp:210 kmuddy/dialogs/dlgstatistics.cpp:53
 #: libs/caliaseditor.cpp:133 plugins/varviewer/dlgvarviewer.cpp:71
 #, kde-format
 msgid "Value"
 msgstr "Valor"
 
-#: kmuddy/ctriggereditor.cpp:215
+#: kmuddy/ctriggereditor.cpp:214
 #, kde-format
 msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
@@ -824,19 +811,19 @@ msgstr ""
 "se ele faz o que você deseja. Simplesmente digite algum texto e veja o que "
 "acontece."
 
-#: kmuddy/ctriggereditor.cpp:249 kmuddy/ctriggereditor.cpp:512
+#: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
 #: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
 msgstr "&Opções"
 
-#: kmuddy/ctriggereditor.cpp:252 libs/caliaseditor.cpp:180
+#: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
 #, kde-format
 msgid "Whole words only"
 msgstr "Somente palavras inteiras"
 
-#: kmuddy/ctriggereditor.cpp:253
+#: kmuddy/ctriggereditor.cpp:252
 #, kde-format
 msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
@@ -845,12 +832,12 @@ msgstr ""
 "Quando estiver habilitado, este acionamento só irá corresponder ao texto "
 "caso existam espaços ou nada antes/depois do texto correspondente."
 
-#: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:184
+#: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
 #, kde-format
 msgid "Case sensitive"
 msgstr "Diferenciar maiúsculas de minúsculas"
 
-#: kmuddy/ctriggereditor.cpp:257 libs/caliaseditor.cpp:185
+#: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:185
 #, kde-format
 msgid ""
 "When this option is on, upper case and lower case letters are treated as "
@@ -860,12 +847,12 @@ msgstr ""
 "tratadas como caracteres diferentes. Caso contrário, são consideradas como "
 "sendo iguais."
 
-#: kmuddy/ctriggereditor.cpp:261
+#: kmuddy/ctriggereditor.cpp:260
 #, kde-format
 msgid "Show but do not send"
 msgstr "Mostrar mas não enviar"
 
-#: kmuddy/ctriggereditor.cpp:262
+#: kmuddy/ctriggereditor.cpp:261
 #, kde-format
 msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
@@ -874,12 +861,12 @@ msgstr ""
 "Quando estiver habilitado, o texto não será enviado para o MUD, sendo apenas "
 "exibido na tela."
 
-#: kmuddy/ctriggereditor.cpp:265 libs/caliaseditor.cpp:193
+#: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
 msgid "Global matching"
 msgstr "Correspondência global"
 
-#: kmuddy/ctriggereditor.cpp:266
+#: kmuddy/ctriggereditor.cpp:265
 #, kde-format
 msgid ""
 "<p>With global matching, one trigger/trigger can match multiple times, if it "
@@ -902,60 +889,60 @@ msgstr ""
 "realçar os nomes de uma lista (usando a condição para verificar se uma "
 "correspondência consta na lista) ou algo do gênero."
 
-#: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
+#: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
 #, kde-format
 msgid "Continue matching"
 msgstr "Continuar a correspondência"
 
-#: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
+#: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
 #, kde-format
 msgid "Stop matching"
 msgstr "Parar a correspondência"
 
-#: kmuddy/ctriggereditor.cpp:290 kmuddy/ctriggereditor.cpp:297
+#: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
 #, kde-format
 msgid "Leave group"
 msgstr "Sair do grupo"
 
-#: kmuddy/ctriggereditor.cpp:316
+#: kmuddy/ctriggereditor.cpp:315
 #, kde-format
 msgid "&Enable color replacement"
 msgstr "Habilitar a substituição d&e cores"
 
-#: kmuddy/ctriggereditor.cpp:317 kmuddy/ctriggereditor.cpp:513
+#: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
 #, kde-format
 msgid "Color replacement"
 msgstr "Substituição de cores"
 
-#: kmuddy/ctriggereditor.cpp:339 kmuddy/ctriggereditor.cpp:398
-#, kde-format
-msgid "&Back-reference"
-msgstr "Referência &anterior"
-
-#: kmuddy/ctriggereditor.cpp:342
+#: kmuddy/ctriggereditor.cpp:339
 #, kde-format
 msgid "&Add"
 msgstr "&Adicionar"
 
-#: kmuddy/ctriggereditor.cpp:343
+#: kmuddy/ctriggereditor.cpp:340
 #, kde-format
 msgid "&Remove"
 msgstr "&Remover"
 
-#: kmuddy/ctriggereditor.cpp:344
+#: kmuddy/ctriggereditor.cpp:341
 #, kde-format
 msgid "&Colorize"
 msgstr "&Colorir"
 
-#: kmuddy/ctriggereditor.cpp:346
+#: kmuddy/ctriggereditor.cpp:343
 #, kde-format
 msgid "&Foreground"
 msgstr "P&rimeiro plano"
 
-#: kmuddy/ctriggereditor.cpp:348
+#: kmuddy/ctriggereditor.cpp:345
 #, kde-format
 msgid "&Background"
 msgstr "&Plano de fundo"
+
+#: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
+#, kde-format
+msgid "&Back-reference"
+msgstr "Referência &anterior"
 
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
@@ -978,7 +965,7 @@ msgstr "Plano de fundo"
 msgid "Text &rewrite trigger"
 msgstr "Acionamento de &reescrita do texto"
 
-#: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:514
+#: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
 msgid "Rewrite text"
 msgstr "Reescrever o texto"
@@ -993,24 +980,24 @@ msgstr "A&lterar esta parte da linha:"
 msgid "&To this value:"
 msgstr "Para es&te valor:"
 
-#: kmuddy/ctriggereditor.cpp:425
+#: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
 msgstr "Não mostrar a &linha"
 
-#: kmuddy/ctriggereditor.cpp:426
+#: kmuddy/ctriggereditor.cpp:427
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
 msgstr ""
 "Isto evitará que a linha correspondente seja exibida na janela do resultado."
 
-#: kmuddy/ctriggereditor.cpp:428
+#: kmuddy/ctriggereditor.cpp:429
 #, kde-format
 msgid "&Notify"
 msgstr "&Notificar"
 
-#: kmuddy/ctriggereditor.cpp:429
+#: kmuddy/ctriggereditor.cpp:430
 #, kde-format
 msgid ""
 "This setting only takes effect if you have disabled the \"Always notify\" "
@@ -1026,12 +1013,12 @@ msgstr ""
 "É útil se quiser apenas ser notificado em caso de alguns eventos (conversas, "
 "combates, ...)."
 
-#: kmuddy/ctriggereditor.cpp:436
+#: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
 msgstr "Acionamento de detecção da &linha de comando"
 
-#: kmuddy/ctriggereditor.cpp:437
+#: kmuddy/ctriggereditor.cpp:438
 #, kde-format
 msgid ""
 "Enabling this will turn this trigger into a prompt detection trigger, that "
@@ -1048,12 +1035,12 @@ msgstr ""
 "da linha de comando não poderá enviar o texto, silenciar as linhas ou fazer "
 "notificações. A coloração ainda é possível."
 
-#: kmuddy/ctriggereditor.cpp:443
+#: kmuddy/ctriggereditor.cpp:444
 #, kde-format
 msgid "Play s&ound file"
 msgstr "Reproduzir arquivo de s&om"
 
-#: kmuddy/ctriggereditor.cpp:444
+#: kmuddy/ctriggereditor.cpp:445
 #, kde-format
 msgid ""
 "This trigger will play a sound. Useful as a notification of important "
@@ -1062,28 +1049,28 @@ msgstr ""
 "Este acionamento irá reproduzir um som. É útil como uma notificação de "
 "acionamentos importantes ou para atribuir sons a alguns eventos."
 
-#: kmuddy/ctriggereditor.cpp:463
+#: kmuddy/ctriggereditor.cpp:464
 #, kde-format
 msgid "Send output to a separate window"
 msgstr "Enviar o resultado para uma janela separada"
 
-#: kmuddy/ctriggereditor.cpp:464
+#: kmuddy/ctriggereditor.cpp:465
 #, kde-format
 msgid "This will send the matched text to a separate output window"
 msgstr ""
 "Isto irá enviar o texto correspondente para uma janela de resultado separada"
 
-#: kmuddy/ctriggereditor.cpp:466 kmuddy/dialogs/dlgwindows.cpp:53
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
 #, kde-format
 msgid "Output Windows"
 msgstr "Janelas de resultado"
 
-#: kmuddy/ctriggereditor.cpp:477
+#: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
 msgstr "&Omitir o resultado na janela principal"
 
-#: kmuddy/ctriggereditor.cpp:478
+#: kmuddy/ctriggereditor.cpp:479
 #, kde-format
 msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
@@ -1092,47 +1079,47 @@ msgstr ""
 "Isto fará com que o resultado enviado para uma janela separada não seja "
 "apresentado na janela de sessões principal do KMuddy"
 
-#: kmuddy/ctriggereditor.cpp:481
+#: kmuddy/ctriggereditor.cpp:482
 #, kde-format
 msgid "&Window name"
 msgstr "Nome da &janela"
 
-#: kmuddy/ctriggereditor.cpp:485
+#: kmuddy/ctriggereditor.cpp:486
 #, kde-format
 msgid "&Create window"
 msgstr "&Criar uma janela"
 
-#: kmuddy/ctriggereditor.cpp:510 libs/caliaseditor.cpp:226
+#: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
 #, kde-format
 msgid "&Basic"
 msgstr "&Básico"
 
-#: kmuddy/ctriggereditor.cpp:515
+#: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Special trigger"
 msgstr "Acionamento especial"
 
-#: kmuddy/ctriggereditor.cpp:516
+#: kmuddy/ctriggereditor.cpp:517
 #, kde-format
 msgid "Output windows"
 msgstr "Janelas de resultado"
 
-#: kmuddy/ctriggereditor.cpp:557
+#: kmuddy/ctriggereditor.cpp:558
 #, kde-format
 msgid "This text did not match your trigger."
 msgstr "Este texto não correspondeu ao seu acionamento."
 
-#: kmuddy/ctriggereditor.cpp:562
+#: kmuddy/ctriggereditor.cpp:563
 #, kde-format
 msgid "This text matches your trigger."
 msgstr "Este texto corresponde ao seu acionamento."
 
-#: kmuddy/ctriggereditor.cpp:590
+#: kmuddy/ctriggereditor.cpp:591
 #, kde-format
 msgid "Maximum number of colorizations reached."
 msgstr "O número máximo de colorações foi atingido."
 
-#: kmuddy/ctriggereditor.cpp:673 plugins/mapper/cmapviewstatusbar.cpp:61
+#: kmuddy/ctriggereditor.cpp:674 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
 msgid "Unknown"
 msgstr "Desconhecido"
@@ -1147,84 +1134,85 @@ msgstr "Escolher arquivo de som"
 msgid "Window name is empty!"
 msgstr "O nome da janela está em branco!"
 
-#: kmuddy/dialogs/cdirlist.cpp:36
+#: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
 msgid "&Add..."
 msgstr "&Adicionar..."
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
-#: kmuddy/dialogs/cdirlist.cpp:37 plugins/mapper/cmapclipboard.cpp:76
+#: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
+#: libs/clistviewer.cpp:168 plugins/mapper/cmapclipboard.cpp:76
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
 #, kde-format
 msgid "Delete"
 msgstr "Excluir"
 
-#: kmuddy/dialogs/cdirlist.cpp:38
+#: kmuddy/dialogs/cdirlist.cpp:37
 #, kde-format
 msgid "Move &up"
 msgstr "Mover para &cima"
 
-#: kmuddy/dialogs/cdirlist.cpp:39
+#: kmuddy/dialogs/cdirlist.cpp:38
 #, kde-format
 msgid "Move &down"
 msgstr "Mover para &baixo"
 
-#: kmuddy/dialogs/cdirlist.cpp:73
+#: kmuddy/dialogs/cdirlist.cpp:72
 #, kde-format
 msgid "Choose sound directory"
 msgstr "Escolher a pasta de sons"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:78
+#: kmuddy/dialogs/dlgappsettings.cpp:77
 #, kde-format
 msgid "Application settings"
 msgstr "Configurações do aplicativo"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:85
+#: kmuddy/dialogs/dlgappsettings.cpp:84
 #, kde-format
 msgid "Window"
 msgstr "Janela"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:88
+#: kmuddy/dialogs/dlgappsettings.cpp:87
 #, kde-format
 msgid "Output area"
 msgstr "Área de resultados"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:91
+#: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
 msgid "Font"
 msgstr "Fonte"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:94
+#: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
 msgid "Input line"
 msgstr "Campo de texto"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:97
+#: kmuddy/dialogs/dlgappsettings.cpp:96
 #, kde-format
 msgid "Colors"
 msgstr "Cores"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:100
+#: kmuddy/dialogs/dlgappsettings.cpp:99
 #, kde-format
 msgid "Strings"
 msgstr "Strings"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:103
+#: kmuddy/dialogs/dlgappsettings.cpp:102
 #, kde-format
 msgid "Sounds"
 msgstr "Sons"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:106
+#: kmuddy/dialogs/dlgappsettings.cpp:105
 #, kde-format
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:112
+#: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
 msgstr "&Mostrar a barra de abas mesmo se desnecessária"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:113
+#: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
 msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
@@ -1233,22 +1221,22 @@ msgstr ""
 "Se esta opção estiver assinalada, a barra de abas sempre será apresentada. "
 "Caso contrário, ficará oculta se existir somente uma aba."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:116
+#: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
 msgid "Show au&xiliary input line"
 msgstr "Mostrar a linha de dados au&xiliar"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:117
+#: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "You will have two input lines instead of one."
 msgstr "Você terá dois campos de texto em vez de apenas um."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:119
+#: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
 msgid "&Always notify"
 msgstr "Notific&ar sempre"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:120
+#: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
 msgid ""
 "If this is checked, output notification will be used whenever some text "
@@ -1261,12 +1249,12 @@ msgstr ""
 "quando for ativado um acionamento. Lembre-se de que esta opção só funcionará "
 "se as notificações globais ou locais estiverem habilitadas."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:125
+#: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
 msgid "&Global notification"
 msgstr "Notificação &global"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:126
+#: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
 msgid ""
 "When some text comes from the server and KMuddy is not currently active, "
@@ -1277,12 +1265,12 @@ msgstr ""
 "janela e a barra de tarefas irão tentar atrair a sua atenção (alguns "
 "caracteres ficarão intermitentes)."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:130
+#: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
 msgid "&Local notification"
 msgstr "Notificação &local"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:131
+#: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
 msgid ""
 "When some text comes from the server and this session is not currently "
@@ -1292,12 +1280,12 @@ msgstr ""
 "Quando algum texto vem do servidor e esta sessão não estiver ativa, a aba "
 "tentará atrair a sua atenção (alguns caracteres ficarão intermitentes)."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:136
+#: kmuddy/dialogs/dlgappsettings.cpp:135
 #, kde-format
 msgid "Display system tray icon"
 msgstr "Exibir ícone na área de notificação"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:137
+#: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
 msgid ""
 "This option toggles the presence of the system tray icon. The icon can be "
@@ -1312,12 +1300,12 @@ msgstr ""
 "e clicar novamente restaurá-la. A sua conexão permanecerá ativa, mesmo que a "
 "janela esteja oculta e você receberá às mensagens de notificação. "
 
-#: kmuddy/dialogs/dlgappsettings.cpp:145
+#: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
 msgid "Use passive popups"
 msgstr "Usar mensagens passivas"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:146
+#: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
 msgid ""
 "This option toggles the use of passive popups. Passive popups appear near "
@@ -1328,12 +1316,12 @@ msgstr ""
 "perto do ícone da área de notificação quando você estiver em outra janela e "
 "avisa-o da presença de atividade em uma das suas conexões. "
 
-#: kmuddy/dialogs/dlgappsettings.cpp:152
+#: kmuddy/dialogs/dlgappsettings.cpp:151
 #, kde-format
 msgid "Auto-connect on startup"
 msgstr "Conectar automaticamente na inicialização"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:153
+#: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
 msgid ""
 "With this option set, the selected connection will be automatically "
@@ -1344,63 +1332,63 @@ msgstr ""
 "logo após o início do KMuddy. É útil quando você conecta usando um único "
 "perfil na maioria das vezes."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:156
+#: kmuddy/dialogs/dlgappsettings.cpp:155
 #, kde-format
 msgid "Auto-connect to:"
 msgstr "Conectar automaticamente a:"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:194
+#: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
 msgstr "&Cor de fundo padrão"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:197
+#: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
 msgid "This color will be used as a standard background color."
 msgstr "Esta cor será usada como a cor de fundo normal."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:199
+#: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
 msgstr "Cor do &texto padrão"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:202
+#: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
 msgid "This color will be used to display standard text with no defined color."
 msgstr ""
 "Esta cor será usada para mostrar o texto normal sem qualquer cor definida."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:204
+#: kmuddy/dialogs/dlgappsettings.cpp:203
 #, kde-format
 msgid "Command &echo color"
 msgstr "Cor do &eco dos comandos"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:207
+#: kmuddy/dialogs/dlgappsettings.cpp:206
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
 msgstr "Esta cor será usada para mostrar os comandos que você introduziu."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:209
+#: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
 msgid "&System message color"
 msgstr "Cor das mensagens do &sistema"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:212
+#: kmuddy/dialogs/dlgappsettings.cpp:211
 #, kde-format
 msgid "This color will be used for various system messages."
 msgstr "Esta cor será usada para as diversas mensagens do sistema."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:237
+#: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
 msgid "&Indentation"
 msgstr "&Endentação"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:237
+#: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
 msgid "None"
 msgstr "Nenhuma"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:238
+#: kmuddy/dialogs/dlgappsettings.cpp:237
 #, kde-format
 msgid ""
 "When a line is too long, part of it will be moved to the next line. "
@@ -1411,12 +1399,12 @@ msgstr ""
 "seguinte. A endentação indica quantos espaços serão colocados no início da "
 "linha de continuada."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:242
+#: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
 msgid "&History buffer size"
 msgstr "Tamanho do &histórico do buffer"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:242
+#: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
 msgid ""
 "Size of output scroll-back buffer. Please note that this setting will only "
@@ -1426,17 +1414,17 @@ msgstr ""
 "afetará as novas conexões, sendo que as existentes manterão a configuração "
 "anterior."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:245
+#: kmuddy/dialogs/dlgappsettings.cpp:244
 #, kde-format
 msgid "lines"
 msgstr "linhas"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:248
+#: kmuddy/dialogs/dlgappsettings.cpp:247
 #, kde-format
 msgid "Enable co&mmand echo"
 msgstr "Habilitar o eco dos co&mandos"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:249
+#: kmuddy/dialogs/dlgappsettings.cpp:248
 #, kde-format
 msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
@@ -1445,70 +1433,70 @@ msgstr ""
 "Habilita a apresentação dos comandos no console.<p><b>Lembre-se:</b> Isto "
 "irá também desabilitar o eco dos comandos na transcrição da sessão."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:252
+#: kmuddy/dialogs/dlgappsettings.cpp:251
 #, kde-format
 msgid "Enable s&ystem messages"
 msgstr "Habilitar as mensagens do s&istema"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:253
+#: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
 msgid "Enables displaying of system messages in the console."
 msgstr "Habilita a apresentação das mensagens do sistema no console."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:256
+#: kmuddy/dialogs/dlgappsettings.cpp:255
 #, kde-format
 msgid "Enable b&linking"
 msgstr "Habilitar a &intermitência"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:257
+#: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enables support for blinking. Currently not supported."
 msgstr "Habilita o suporte à &intermitência. Não suportado atualmente."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:273
+#: kmuddy/dialogs/dlgappsettings.cpp:272
 #, kde-format
 msgid "&Server output"
 msgstr "Resultado do &servidor"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:276 kmuddy/dialogs/dlgappsettings.cpp:286
-#: kmuddy/dialogs/dlgappsettings.cpp:296
+#: kmuddy/dialogs/dlgappsettings.cpp:275 kmuddy/dialogs/dlgappsettings.cpp:285
+#: kmuddy/dialogs/dlgappsettings.cpp:295
 #, kde-format
 msgid "Choose..."
 msgstr "Escolher..."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:279
+#: kmuddy/dialogs/dlgappsettings.cpp:278
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
 msgstr "Aqui você pode escolher a fonte a ser usada na área principal."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:283
+#: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
 msgid "&Input line"
 msgstr "&Campo de texto"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:289
+#: kmuddy/dialogs/dlgappsettings.cpp:288
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
 msgstr "Aqui você pode escolher a fonte a ser usada no campo de texto."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:293
+#: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
 msgid "&Multi-line input"
 msgstr "Campo &multilinhas"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:299
+#: kmuddy/dialogs/dlgappsettings.cpp:298
 #, kde-format
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
 "Aqui você pode escolher a fonte a ser usada no campo de texto multilinhas."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:318
+#: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
 msgid "&Keep sent text"
 msgstr "&Manter o texto enviado"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:319
+#: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
 msgid ""
 "If you enable this option, commands will remain in the input line after you "
@@ -1517,12 +1505,12 @@ msgstr ""
 "Se habilitar esta opção, os comandos irão permanecer no campo de texto após "
 "o seu envio (ao pressionar ENTER); caso contrário, serão limpos."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:322
+#: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
 msgid "&Select kept text after it's sent"
 msgstr "&Selecionar o texto mantido após o envio"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:323
+#: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
 msgid ""
 "If you enable this option, entered command will be selected. This allows you "
@@ -1533,12 +1521,12 @@ msgstr ""
 "permite-lhe escrever imediatamente outro comando sem excluir o antigo, "
 "podendo ainda reutilizar o comando anterior de forma simples."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:328
+#: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
 msgid "&Cursor keys browse history"
 msgstr "As teclas de &cursor navegam pelo histórico"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:329
+#: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
 msgid ""
 "If you enable this option, you will be able to choose previously entered "
@@ -1547,12 +1535,12 @@ msgstr ""
 "Se habilitar esta opção, você poderá escolher os comandos introduzidos "
 "anteriormente com as teclas Para cima e Para baixo."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:331
+#: kmuddy/dialogs/dlgappsettings.cpp:330
 #, kde-format
 msgid "Telnet-style &paste"
 msgstr "&Colar ao estilo do Telnet"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:332
+#: kmuddy/dialogs/dlgappsettings.cpp:331
 #, kde-format
 msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
@@ -1562,12 +1550,12 @@ msgstr ""
 "texto em várias linhas, todas elas, com exceção da última, serão enviadas "
 "imediatamente como comandos."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:335
+#: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
 msgid "T&rim spaces"
 msgstr "Elimina&r espaços"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:336
+#: kmuddy/dialogs/dlgappsettings.cpp:335
 #, kde-format
 msgid ""
 "Enables trimming of spaces from commands. Note that with this option "
@@ -1580,12 +1568,12 @@ msgstr ""
 "vários comandos em uma linha. Caso contrário, você poderá ter problemas com "
 "as sequências especiais, não sendo corretamente detectadas."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:341
+#: kmuddy/dialogs/dlgappsettings.cpp:340
 #, kde-format
 msgid "Enable &auto-completion"
 msgstr "H&abilitar a complementação automática"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:342
+#: kmuddy/dialogs/dlgappsettings.cpp:341
 #, kde-format
 msgid ""
 "Auto-completion is a feature that offers you possible completions for "
@@ -1595,52 +1583,52 @@ msgstr ""
 "complementações possíveis dos comandos, à medida que as escreve. Ela também "
 "poderá completar o comando para você."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:350
+#: kmuddy/dialogs/dlgappsettings.cpp:349
 #, kde-format
 msgid "T&ype of auto-completion"
 msgstr "T&ipo de complementação automática"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:352
+#: kmuddy/dialogs/dlgappsettings.cpp:351
 #, kde-format
 msgid "Auto-fill"
 msgstr "Preenchimento automático"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:353
+#: kmuddy/dialogs/dlgappsettings.cpp:352
 #, kde-format
 msgid "Shortest-match auto-fill"
 msgstr "Preenchimento automático por ocorrência menor"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:354
+#: kmuddy/dialogs/dlgappsettings.cpp:353
 #, kde-format
 msgid "Popup list-box"
 msgstr "Lista de mensagens"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:358
+#: kmuddy/dialogs/dlgappsettings.cpp:357
 #, kde-format
 msgid "&Background color"
 msgstr "&Cor do plano de fundo"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:361
+#: kmuddy/dialogs/dlgappsettings.cpp:360
 #, kde-format
 msgid "Background color of the input line"
 msgstr "A cor do plano de fundo do campo de texto"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:363
+#: kmuddy/dialogs/dlgappsettings.cpp:362
 #, kde-format
 msgid "&Text color"
 msgstr "Cor do &texto"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:366
+#: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
 msgid "Color of text that you type in the input line."
 msgstr "A cor do texto que você digitar no campo de texto."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:382
+#: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
 msgstr "&Trocar o ENTER e o CTRL+ENTER no campo multilinhas"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:383
+#: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
 msgid ""
 "When turned off, CTRL+ENTER will insert another line in the multi-line input "
@@ -1652,22 +1640,22 @@ msgstr ""
 "servidor. Caso esteja ligada, o comportamento destas teclas será então "
 "invertido."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:401
+#: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
 msgid "Dark colors"
 msgstr "Cores escuras"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:402
+#: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
 msgid "Bright colors"
 msgstr "Cores claras"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:429
+#: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
 msgstr "Texto de separação dos &comandos"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:432
+#: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
 msgid ""
 "You can enter multiple commands at once, they will get executed together. "
@@ -1677,12 +1665,12 @@ msgstr ""
 "conjunto. Aqui você poderá digitar o texto que será usado para separar os "
 "comandos individuais."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:436
+#: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
 msgstr "Texto de &corrida"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:439
+#: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
 msgid ""
 "If you start a command with this string, the command will be interpreted as "
@@ -1697,12 +1685,12 @@ msgstr ""
 "para cada direção poderão ser definidos nas <i>preferências do MUD</i> "
 "(somente nas conexões <b>baseadas em perfis</b>)."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:445
+#: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
 msgid "S&peed-walk even if empty"
 msgstr "&Corrida mesmo que vazio"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:446
+#: kmuddy/dialogs/dlgappsettings.cpp:444
 #, kde-format
 msgid ""
 "Enabling this will cause KMuddy to expand speed-walk strings even if no "
@@ -1718,12 +1706,12 @@ msgstr ""
 "tratados como uma corrida. Para evitar isto, você precisa digitar pelo menos "
 "um caractere em maiúsculo."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:453
+#: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
 msgid "Macro-ca&ll string"
 msgstr "Texto de chamadas de &macros"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:456
+#: kmuddy/dialogs/dlgappsettings.cpp:454
 #, kde-format
 msgid ""
 "If you start a command with this string, the command will be interpreted as "
@@ -1734,12 +1722,12 @@ msgstr ""
 "uma chamada de macro.<br>A sintaxe é &lt;este texto&gt; &lt;comando&gt; "
 "[parâmetros]  (o /exec carrega programas externos)"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:461
+#: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
 msgstr "Texto de &repetição"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:464
+#: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
 msgid ""
 "Allows you to repeat some command. For example, typing <i>#10 say hello</i> "
@@ -1751,12 +1739,12 @@ msgstr ""
 "funciona com apelidos e com a execução de macros.<br>O repetidor e o número "
 "poderão ser separados por espaço(s)."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:470
+#: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
 msgstr "Texto de &foco"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:473
+#: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
 msgid ""
 "If a command is started with this string, the command will be interpreted as "
@@ -1769,12 +1757,12 @@ msgstr ""
 "conectados.<br>A sintaxe é &lt;esta string&gt; &lt;aba de foco&gt; &lt;este "
 "texto&gt; &lt;comando&gt;"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:479
+#: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
 msgid "Send &as-is"
 msgstr "Envi&ar como está"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:482
+#: kmuddy/dialogs/dlgappsettings.cpp:480
 #, kde-format
 msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
@@ -1783,12 +1771,12 @@ msgstr ""
 "Se um comando começar com este texto, será enviado como estiver, sem "
 "qualquer processamento. Este texto será removido primeiro."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:486
+#: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
 msgid "&Expand backslashes"
 msgstr "&Expandir as barras invertidas"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:487
+#: kmuddy/dialogs/dlgappsettings.cpp:485
 #, kde-format
 msgid ""
 "This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
@@ -1797,12 +1785,12 @@ msgstr ""
 "Isto irá habilitar a expansão das barras invertidas, isto é: \\n é o fim-da-"
 "linha, o \\t é um TAB, o \\\\ é um \\, \\<outra coisa> é <outra coisa>."
 
-#: kmuddy/dialogs/dlgappsettings.cpp:511
+#: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
 msgid "&Enable sounds globally"
 msgstr "Habilitar os sons globalm&ente"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:512
+#: kmuddy/dialogs/dlgappsettings.cpp:510
 #, kde-format
 msgid ""
 "<qt>Enable playing sounds for all connections.\n"
@@ -1816,12 +1804,12 @@ msgstr ""
 "Lembre-se também de que isto só funcionará se o seu MUD suportar o <b>MSP</"
 "b> (MUD Sound Protocol).</qt>"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:516
+#: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
 msgid "Allow &downloading sounds"
 msgstr "Permitir o &download de sons"
 
-#: kmuddy/dialogs/dlgappsettings.cpp:518
+#: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
 msgid ""
 "MSP version 0.3 supports downloading of sound files directly from the web or "
@@ -1835,18 +1823,18 @@ msgstr ""
 "baixados serão armazenados na sua pasta pessoal\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBold)
-#: kmuddy/dialogs/dlgappsettings.cpp:724 kmuddy/dialogs/dlgappsettings.cpp:733
-#: kmuddy/dialogs/dlgappsettings.cpp:742 kmuddy/dialogs/dlgappsettings.cpp:751
-#: kmuddy/dialogs/dlgappsettings.cpp:760 kmuddy/dialogs/dlgappsettings.cpp:769
+#: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
+#: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
+#: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
 #, kde-format
 msgid "Bold"
 msgstr "Negrito"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkItalic)
-#: kmuddy/dialogs/dlgappsettings.cpp:725 kmuddy/dialogs/dlgappsettings.cpp:734
-#: kmuddy/dialogs/dlgappsettings.cpp:743 kmuddy/dialogs/dlgappsettings.cpp:752
-#: kmuddy/dialogs/dlgappsettings.cpp:761 kmuddy/dialogs/dlgappsettings.cpp:770
+#: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
+#: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
+#: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
 #, kde-format
 msgid "Italic"
@@ -1913,12 +1901,12 @@ msgstr "Ediçã&o desconectada"
 msgid "This allows offline editing of profiles."
 msgstr "Isto permite a edição desconectada dos perfis."
 
-#: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:57
+#: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
 #, kde-format
 msgid "&Connect"
 msgstr "&Conectar"
 
-#: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:58
+#: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
 #, kde-format
 msgid "Establishes connection with specified parameters."
 msgstr "Estabelece uma conexão com os parâmetros indicados."
@@ -1947,27 +1935,27 @@ msgstr ""
 msgid "Unable to delete"
 msgstr "Não foi possível excluir"
 
-#: kmuddy/dialogs/dlgconnect.cpp:240
+#: kmuddy/dialogs/dlgconnect.cpp:239
 #, kde-format
 msgid "Do you really want to delete profile %1?"
 msgstr "Deseja realmente excluir o perfil %1?"
 
-#: kmuddy/dialogs/dlgconnect.cpp:241
+#: kmuddy/dialogs/dlgconnect.cpp:239
 #, kde-format
 msgid "Delete profile"
 msgstr "Excluir perfil"
 
-#: kmuddy/dialogs/dlgconnect.cpp:257
+#: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Duplicate Profile"
 msgstr "Duplicar perfil"
 
-#: kmuddy/dialogs/dlgconnect.cpp:257
+#: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Please enter name for the duplicated profile"
 msgstr "Digite o nome do perfil duplicado"
 
-#: kmuddy/dialogs/dlgconnect.cpp:259
+#: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
@@ -1976,22 +1964,22 @@ msgstr ""
 "Ocorreu um erro ao tentar duplicar o perfil. Certifique-se de que tem "
 "permissões de escrita na pasta do perfil."
 
-#: kmuddy/dialogs/dlgconnect.cpp:259
+#: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid "Unable to duplicate"
 msgstr "Não foi possível duplicar"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:37
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:38
 #, kde-format
 msgid "Dump output buffer"
 msgstr "Exportar os resultados"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:43
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
 msgid "&Start at current position"
 msgstr "Iniciar na po&sição atual"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:44
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:45
 #, kde-format
 msgid ""
 "When this is enabled, only the part of history buffer from currently "
@@ -2002,51 +1990,48 @@ msgstr ""
 "visível até o fim dos dados será exportada. Caso contrário, será exportado "
 "todo o histórico (padrão)."
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:51 kmuddy/dialogs/dlgtranscript.cpp:85
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
 #, kde-format
 msgid "&File:"
 msgstr "&Arquivo:"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:54 kmuddy/dialogs/dlgtranscript.cpp:88
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
 #, kde-format
 msgid "&Browse..."
 msgstr "&Navegar..."
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:64
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
 msgid "&Dump format:"
 msgstr "Formato &da exportação:"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:66
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
 msgid "HTML"
 msgstr "HTML"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:67
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:68
 #, kde-format
 msgid "Plain text"
 msgstr "Texto simples"
 
-#: kmuddy/dialogs/dlgdumpbuffer.cpp:68
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:69
 #, kde-format
 msgid "Text with ANSI colors"
 msgstr "Texto com cores ANSI"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:41 kmuddy/dialogs/dlgeditprofile.cpp:197
-#: kmuddy/dialogs/dlgeditprofile.cpp:202
+#: kmuddy/dialogs/dlgeditprofile.cpp:38 kmuddy/dialogs/dlgeditprofile.cpp:180
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
 msgid "Edit profile"
 msgstr "Editar perfil"
 
-#. i18n ("&Select from MUD list"), this);
-#. connect (btlist, SIGNAL (clicked()), this, SLOT (openMudList()));
-#. put some edit boxes there
-#: kmuddy/dialogs/dlgeditprofile.cpp:51
+#: kmuddy/dialogs/dlgeditprofile.cpp:44
 #, kde-format
 msgid "Profile &name:"
 msgstr "&Nome do perfil:"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:53
+#: kmuddy/dialogs/dlgeditprofile.cpp:46
 #, kde-format
 msgid ""
 "Enter profile name here. You can enter any name, but it must be <b>unique</"
@@ -2055,56 +2040,57 @@ msgstr ""
 "Indique aqui o nome do perfil. Você poderá indicar qualquer nome, desde que "
 "seja <b>único</b>."
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:55
+#: kmuddy/dialogs/dlgeditprofile.cpp:47
 #, kde-format
 msgid "&Server:"
 msgstr "&Servidor:"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:57
+#: kmuddy/dialogs/dlgeditprofile.cpp:49
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
 msgstr "Digite o endereço do servidor onde o seu MUD está sendo executado."
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:58 kmuddy/dialogs/dlgquickconnect.cpp:43
+#: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
 #, kde-format
 msgid "&Port:"
 msgstr "&Porta:"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:61
-#, kde-format
-msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#: kmuddy/dialogs/dlgeditprofile.cpp:54
+#, fuzzy, kde-format
+#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
 "Digite a porta onde o seu MUD está sendo executado (normalmente um número de "
 "4 algarismos)."
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:63
+#: kmuddy/dialogs/dlgeditprofile.cpp:55
 #, kde-format
 msgid "&Login name:"
 msgstr "Nome da &conta:"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:65
+#: kmuddy/dialogs/dlgeditprofile.cpp:57
 #, kde-format
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
 "Digite aqui o nome da sua conta no MUD.<p><i>Esta definição é opcional.</i>"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:66
+#: kmuddy/dialogs/dlgeditprofile.cpp:58
 #, kde-format
 msgid "Pass&word:"
 msgstr "&Senha:"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:69
+#: kmuddy/dialogs/dlgeditprofile.cpp:61
 #, kde-format
 msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr "Digite aqui a sua senha no MUD.<p><i>Esta definição é opcional.</i>"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:70
+#: kmuddy/dialogs/dlgeditprofile.cpp:62
 #, kde-format
 msgid "&Connect sequence"
 msgstr "Sequên&cia de conexão"
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:74
+#: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
 msgid ""
 "Commands to be sent to the MUD after logging in.<br><b>$name</b> expands to "
@@ -2120,12 +2106,12 @@ msgstr ""
 "apelidos, macros ou corridas. Lembre-se também de que as linhas em branco "
 "serão igualmente enviadas, incluindo a última linha."
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:197
+#: kmuddy/dialogs/dlgeditprofile.cpp:180
 #, kde-format
 msgid "Profile name cannot be empty."
 msgstr "O nome do perfil não pode estar em branco."
 
-#: kmuddy/dialogs/dlgeditprofile.cpp:202
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
 msgid "Profile name cannot contain '/' character."
 msgstr "O nome do perfil não pode conter o caractere '/'."
@@ -2166,9 +2152,9 @@ msgid "&Export to"
 msgstr "&Exportar para"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:58
-#: kmuddy/dialogs/dlgprofilesettings.cpp:154
-#: kmuddy/dialogs/dlgprofilesettings.cpp:161
-#: kmuddy/dialogs/dlgprofilesettings.cpp:168
+#: kmuddy/dialogs/dlgprofilesettings.cpp:153
+#: kmuddy/dialogs/dlgprofilesettings.cpp:160
+#: kmuddy/dialogs/dlgprofilesettings.cpp:167
 #: plugins/scripting/cscripteditor.cpp:72
 #: plugins/scripting/cscripteditor.cpp:81
 #, kde-format
@@ -2194,22 +2180,12 @@ msgstr "Escolher o arquivo do perfil"
 msgid "Enter target file"
 msgstr "Indique o arquivo de destino"
 
-#: kmuddy/dialogs/dlgmudlist.cpp:57
-#, kde-format
-msgid "MUD Listing"
-msgstr "Lista dos MUDs"
-
-#: kmuddy/dialogs/dlgmudlist.cpp:67
-#, kde-format
-msgid "&Filter:"
-msgstr "&Filtro:"
-
-#: kmuddy/dialogs/dlgmultiline.cpp:32
+#: kmuddy/dialogs/dlgmultiline.cpp:33
 #, kde-format
 msgid "Multi-line input"
 msgstr "Campo multilinhas"
 
-#: kmuddy/dialogs/dlgmultiline.cpp:44
+#: kmuddy/dialogs/dlgmultiline.cpp:45
 #, kde-format
 msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
@@ -2218,17 +2194,17 @@ msgstr ""
 "Indique os comandos que serão enviados para o MUD. Cada linha representa um "
 "comando."
 
-#: kmuddy/dialogs/dlgmultiline.cpp:55
+#: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
 msgid "&Prefix:"
 msgstr "&Prefixo:"
 
-#: kmuddy/dialogs/dlgmultiline.cpp:58
+#: kmuddy/dialogs/dlgmultiline.cpp:59
 #, kde-format
 msgid "&Suffix:"
 msgstr "&Sufixo:"
 
-#: kmuddy/dialogs/dlgmultiline.cpp:68
+#: kmuddy/dialogs/dlgmultiline.cpp:69
 #, kde-format
 msgid ""
 "Prefix and suffix may contain text, that will be added to the beginning "
@@ -2237,17 +2213,17 @@ msgstr ""
 "O prefixo e o sufixo poderão conter texto, sendo este adicionado ao início "
 "(prefixo) ou ao fim (sufixo) de cada linha escrita no campo multilinhas."
 
-#: kmuddy/dialogs/dlgmultiline.cpp:78
+#: kmuddy/dialogs/dlgmultiline.cpp:79
 #, kde-format
 msgid "&Send"
 msgstr "&Enviar"
 
-#: kmuddy/dialogs/dlgmultiline.cpp:79
+#: kmuddy/dialogs/dlgmultiline.cpp:80
 #, kde-format
 msgid "Sends current text to the MUD."
 msgstr "Envia o texto atual para o MUD."
 
-#: kmuddy/dialogs/dlgmultiline.cpp:80
+#: kmuddy/dialogs/dlgmultiline.cpp:81
 #, kde-format
 msgid ""
 "This will send all the commands you've entered to the MUD. If you've entered "
@@ -2258,12 +2234,12 @@ msgstr ""
 "introduzido um prefixo e/ou um sufixo, eles serão adicionados no início e no "
 "fim de cada comando, respectivamente."
 
-#: kmuddy/dialogs/dlgmultiline.cpp:83
+#: kmuddy/dialogs/dlgmultiline.cpp:84
 #, kde-format
 msgid "&Clear"
 msgstr "&Limpar"
 
-#: kmuddy/dialogs/dlgmultiline.cpp:84
+#: kmuddy/dialogs/dlgmultiline.cpp:85
 #, kde-format
 msgid "Clears window contents."
 msgstr "Limpa o conteúdo da janela."
@@ -2314,59 +2290,59 @@ msgstr "Esquerda"
 msgid "Right"
 msgstr "Direita"
 
-#: kmuddy/dialogs/dlgoutputwindow.cpp:37
+#: kmuddy/dialogs/dlgoutputwindow.cpp:33
 #, kde-format
 msgid "Output window"
 msgstr "Janela de resultados"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:43
+#: kmuddy/dialogs/dlgprofilesettings.cpp:42
 #, kde-format
 msgid "MUD preferences"
 msgstr "Preferências do MUD"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:50
+#: kmuddy/dialogs/dlgprofilesettings.cpp:49
 #, kde-format
 msgid "Connection"
 msgstr "Conexão"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabCommands)
-#: kmuddy/dialogs/dlgprofilesettings.cpp:53
+#: kmuddy/dialogs/dlgprofilesettings.cpp:52
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
 #, kde-format
 msgid "Commands"
 msgstr "Comandos"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:56
+#: kmuddy/dialogs/dlgprofilesettings.cpp:55
 #, kde-format
 msgid "Folders"
 msgstr "Pastas"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:59
+#: kmuddy/dialogs/dlgprofilesettings.cpp:58
 #, kde-format
 msgid "Sound"
 msgstr "Som"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:63
+#: kmuddy/dialogs/dlgprofilesettings.cpp:62
 #, kde-format
 msgid "MXP"
 msgstr "MXP"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:69
+#: kmuddy/dialogs/dlgprofilesettings.cpp:68
 #, kde-format
 msgid "&Use colorized output (if available)"
 msgstr "&Usar um resultado colorido (se disponível)"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:70
+#: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
 msgstr "Não permitir mais &de 100 comandos repetidos"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:76
+#: kmuddy/dialogs/dlgprofilesettings.cpp:75
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
 msgstr "Habilitar a &negociação com o Telnet na inicialização"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:77
+#: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
 msgid ""
 "Enables telnet negotiation for some option. Disabling it may resolve "
@@ -2375,12 +2351,12 @@ msgstr ""
 "Habilita a negociação com o Telnet para alguma opção. A desabilitação da "
 "mesma poderá resolver problemas com alguns servidores que não a compreendem."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:81
+#: kmuddy/dialogs/dlgprofilesettings.cpp:80
 #, kde-format
 msgid "&Encoding:"
 msgstr "&Codificação:"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:84
+#: kmuddy/dialogs/dlgprofilesettings.cpp:83
 #, kde-format
 msgid ""
 "Lets you pick the output character encoding used by the server. This usually "
@@ -2390,12 +2366,12 @@ msgstr ""
 "servidor. Isto normalmente só precisa ser definido para os servidores que "
 "não estão em Inglês."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:90
+#: kmuddy/dialogs/dlgprofilesettings.cpp:89
 #, kde-format
 msgid "&Auto-append newlines after prompt"
 msgstr "&Adicionar automaticamente novas linhas após a linha de comando"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:91
+#: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
@@ -2404,77 +2380,77 @@ msgstr ""
 "Habilita a adição de mudanças de linha após as linhas de comando terminadas "
 "em GA, para que o resultado esteja devidamente alinhado."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:94
+#: kmuddy/dialogs/dlgprofilesettings.cpp:93
 #, kde-format
 msgid "&Show prompt in a separate field"
 msgstr "Mo&strar a linha de comando em um campo separado"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:98
+#: kmuddy/dialogs/dlgprofilesettings.cpp:97
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
 msgstr "Mos&trar a linha de comando na barra de status"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:101
+#: kmuddy/dialogs/dlgprofilesettings.cpp:100
 #, kde-format
 msgid "Show prompt in the &console"
 msgstr "Mostrar a linha de &comandos no console"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:104
+#: kmuddy/dialogs/dlgprofilesettings.cpp:103
 #, kde-format
 msgid "Start advanced transcript when session starts"
 msgstr "Iniciar a transcrição avançada ao iniciar a sessão"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
 msgid "&North"
 msgstr "&Norte"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
 msgid "No&rtheast"
 msgstr "No&rdeste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
 msgid "&East"
 msgstr "&Leste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "So&utheast"
 msgstr "S&udeste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "&South"
 msgstr "&Sul"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "Sou&thwest"
 msgstr "Su&doeste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "&West"
 msgstr "&Oeste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "Nort&hwest"
 msgstr "No&roeste"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "&Up"
 msgstr "Para &cima"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "&Down"
 msgstr "Para &baixo"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:129
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
 msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
@@ -2483,23 +2459,23 @@ msgstr ""
 "Este é um comando de movimento. É usado nas corridas e será também usado no "
 "mapeamento automático."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:151
+#: kmuddy/dialogs/dlgprofilesettings.cpp:150
 #, kde-format
 msgid "External &scripts directory"
 msgstr "Pa&sta de scripts externos"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:155
+#: kmuddy/dialogs/dlgprofilesettings.cpp:154
 #, kde-format
 msgid "Default directory where we will look for scripts."
 msgstr "A pasta padrão onde os scripts serão pesquisados."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:158
+#: kmuddy/dialogs/dlgprofilesettings.cpp:157
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
 msgstr "Pasta de &trabalho"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:162
+#: kmuddy/dialogs/dlgprofilesettings.cpp:161
 #, kde-format
 msgid ""
 "Default working directory for your scripts. Making this the same as above is "
@@ -2508,22 +2484,22 @@ msgstr ""
 "A pasta de trabalho padrão para os seus scripts. Normalmente, é uma boa "
 "ideia ela ser igual à pasta anterior."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:165
+#: kmuddy/dialogs/dlgprofilesettings.cpp:164
 #, kde-format
 msgid "&Transcripts directory"
 msgstr "Pasta de &transcrições"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:169
+#: kmuddy/dialogs/dlgprofilesettings.cpp:168
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
 msgstr "A pasta onde as transcrições da sessão serão salvas por padrão."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:190
+#: kmuddy/dialogs/dlgprofilesettings.cpp:189
 #, kde-format
 msgid "&Enable sounds for this profile"
 msgstr "Habilitar sons para &este perfil"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:191
+#: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
 msgid ""
 "Enable playing sounds with this profile.\n"
@@ -2537,17 +2513,17 @@ msgstr ""
 "Lembre-se também de que só irá funcionar se o seu MUD suportar o <b>MSP</b> "
 "(MUD Sound Protocol)."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:196
+#: kmuddy/dialogs/dlgprofilesettings.cpp:195
 #, kde-format
 msgid "Only enable these if you need them:"
 msgstr "Somente habilitá-los se forem necessários:"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:197
+#: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
 msgid "&Use MSP even if not negotiated"
 msgstr "&Usar o MSP mesmo que não seja negociado"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:198
+#: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
 msgid ""
 "When this option is enabled, KMuddy will interpret MSP sequences all the "
@@ -2564,12 +2540,12 @@ msgstr ""
 "MSP, para evitar que outros jogadores enviem sequências de MSP mal-"
 "intencionadas, caso permita a transferência de sons."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:204
+#: kmuddy/dialogs/dlgprofilesettings.cpp:203
 #, kde-format
 msgid "Allow &mid-line MSP sequences"
 msgstr "Permitir as sequências MSP de &meia-linha"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:205
+#: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
 msgid ""
 "Mid-line MSP sequences are a zMUD's extension to the MSP spec that some MUDs "
@@ -2585,32 +2561,32 @@ msgstr ""
 "Caso contrário, os jogadores poderão dizer ao seu cliente para transferir "
 "qualquer arquivo da rede..."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:221
+#: kmuddy/dialogs/dlgprofilesettings.cpp:220
 #, kde-format
 msgid "&Use MXP"
 msgstr "&Usar o MXP"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:224
+#: kmuddy/dialogs/dlgprofilesettings.cpp:223
 #, kde-format
 msgid "Never"
 msgstr "Nunca"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:225
+#: kmuddy/dialogs/dlgprofilesettings.cpp:224
 #, kde-format
 msgid "If negotiated"
 msgstr "Se negociado"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:226
+#: kmuddy/dialogs/dlgprofilesettings.cpp:225
 #, kde-format
 msgid "Auto-detect"
 msgstr "Detectar automaticamente"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:227
+#: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
 msgid "Always on"
 msgstr "Sempre ligado"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:228
+#: kmuddy/dialogs/dlgprofilesettings.cpp:227
 #, kde-format
 msgid ""
 "<qt><p>Here you can choose when will MXP be used.</p><ul><li><b>Never</b> "
@@ -2626,12 +2602,12 @@ msgstr ""
 "suporte de MXP será detectado automaticamente.</li><li><b>Sempre ligado</b> "
 "o KMuddy irá sempre procurar por sequências de MXP.</li></ul></qt>"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:234
+#: kmuddy/dialogs/dlgprofilesettings.cpp:233
 #, kde-format
 msgid "MXP &variable prefix"
 msgstr "Prefixo das &variáveis do MXP"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:237
+#: kmuddy/dialogs/dlgprofilesettings.cpp:236
 #, kde-format
 msgid ""
 "Prefix prepended to each MXP variable from the server. Note that changing "
@@ -2641,27 +2617,27 @@ msgstr ""
 "de que a mudança do prefixo não irá afetar as variáveis existentes com o "
 "prefixo antigo."
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:397
+#: kmuddy/dialogs/dlgprofilesettings.cpp:396
 #, kde-format
 msgid "Choose default script location"
 msgstr "Escolher a localização padrão do script"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:402
+#: kmuddy/dialogs/dlgprofilesettings.cpp:401
 #, kde-format
 msgid "Choose default script working directory"
 msgstr "Escolher a pasta de trabalho padrão do script"
 
-#: kmuddy/dialogs/dlgprofilesettings.cpp:407
+#: kmuddy/dialogs/dlgprofilesettings.cpp:406
 #, kde-format
 msgid "Choose default transcript directory"
 msgstr "Escolher a pasta padrão das transcrições"
 
-#: kmuddy/dialogs/dlgquickconnect.cpp:36
+#: kmuddy/dialogs/dlgquickconnect.cpp:33
 #, kde-format
 msgid "Quick Connect"
 msgstr "Conexão rápida"
 
-#: kmuddy/dialogs/dlgquickconnect.cpp:41
+#: kmuddy/dialogs/dlgquickconnect.cpp:38
 #, kde-format
 msgid "&Host:"
 msgstr "&Máquina:"
@@ -2748,27 +2724,27 @@ msgstr "Linhas recebidas"
 msgid "Connection time"
 msgstr "Tempo de conexão"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:37
+#: kmuddy/dialogs/dlgtranscript.cpp:38
 #, kde-format
 msgid "Session Transcript"
 msgstr "Transcrição da sessão"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:44
+#: kmuddy/dialogs/dlgtranscript.cpp:45
 #, kde-format
 msgid "Basic"
 msgstr "Básico"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:45
+#: kmuddy/dialogs/dlgtranscript.cpp:46
 #, kde-format
 msgid "Advanced"
 msgstr "Avançado"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:53
+#: kmuddy/dialogs/dlgtranscript.cpp:54
 #, kde-format
 msgid "&Enable basic transcript"
 msgstr "&Habilitar transcrição básica"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:55
+#: kmuddy/dialogs/dlgtranscript.cpp:56
 #, kde-format
 msgid ""
 "Enables or disabled the session transcript. Note that session transcript is "
@@ -2777,22 +2753,22 @@ msgstr ""
 "Habilita ou desabilita a transcrição da sessão. Lembre-se de que esta é "
 "automaticamente desabilitada quando você se desconectar."
 
-#: kmuddy/dialogs/dlgtranscript.cpp:59
+#: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
 msgid "Transcript settings"
 msgstr "Configurações da transcrição"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:65 kmuddy/dialogs/dlgtranscript.cpp:120
+#: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
 #, kde-format
 msgid "Transcript &format"
 msgstr "&Formato da transcrição"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:74
+#: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
 msgid "&Overwrite existing file"
 msgstr "S&obrescrever o arquivo existente"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:75
+#: kmuddy/dialogs/dlgtranscript.cpp:76
 #, kde-format
 msgid ""
 "If you enable this option, existing transcript file will be overwritten. "
@@ -2803,12 +2779,12 @@ msgstr ""
 "substituído. Caso contrário, será adicionada a nova transcrição ao fim do "
 "arquivo existente (se ele existir)."
 
-#: kmuddy/dialogs/dlgtranscript.cpp:78
+#: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
 msgid "Include buffer &dump"
 msgstr "Incluir a exportação &de dados"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:79
+#: kmuddy/dialogs/dlgtranscript.cpp:80
 #, kde-format
 msgid ""
 "This will cause KMuddy to add complete buffer dump to the beginning of the "
@@ -2817,12 +2793,12 @@ msgstr ""
 "Isto fará com que o KMuddy adicione a exportação completa dos dados para o "
 "início do arquivo da transcrição."
 
-#: kmuddy/dialogs/dlgtranscript.cpp:108
+#: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
 msgid "Enable &advanced transcript"
 msgstr "H&abilitar a transcrição avançada"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:109
+#: kmuddy/dialogs/dlgtranscript.cpp:110
 #, kde-format
 msgid ""
 "This will enable advanced transcript, which allows you to have transcript "
@@ -2834,17 +2810,17 @@ msgstr ""
 "que as transcrições normais e avançadas podem ambas estar em execução ao "
 "mesmo tempo, caso queira isto."
 
-#: kmuddy/dialogs/dlgtranscript.cpp:114
+#: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
 msgid "Advanced transcript settings"
 msgstr "Configurações avançadas da transcrição"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:129
+#: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
 msgstr "A&rmazenar o registro à meia-noite de cada dia"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:130
+#: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
@@ -2852,12 +2828,12 @@ msgstr ""
 "Isto fará com que o KMuddy armazene a transcrição da sessão todos os dias à "
 "meia-noite"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:133
+#: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
 msgstr "An&teceder as linhas com a hora"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:134
+#: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
 msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
@@ -2866,12 +2842,12 @@ msgstr ""
 "Esta opção fará com que o KMuddy introduza a hora local à frente de cada "
 "linha do registro"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:140
+#: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
 msgid "Log name format"
 msgstr "Formato do nome do registro"
 
-#: kmuddy/dialogs/dlgtranscript.cpp:141
+#: kmuddy/dialogs/dlgtranscript.cpp:142
 #, kde-format
 msgid ""
 "Here you can specify log format. You can use the following options: $W - "
@@ -2882,242 +2858,247 @@ msgstr ""
 "$W - nome mundial, $h - horas, $m - minutos, $D - dia, $M - mês, $Y - ano, "
 "bem como qualquer outra combinação de caracteres alfanuméricos."
 
-#: kmuddy/dialogs/dlgwindows.cpp:59
+#: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
 msgid "&List of output windows"
 msgstr "&Lista das janelas de resultados"
 
-#: kmuddy/dialogs/dlgwindows.cpp:66
+#: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
 msgid "&Show"
 msgstr "Mo&strar"
 
-#: kmuddy/dialogs/dlgwindows.cpp:67
+#: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Hide"
 msgstr "&Ocultar"
 
-#: kmuddy/dialogs/dlgwindows.cpp:68
+#: kmuddy/dialogs/dlgwindows.cpp:67
 #, kde-format
 msgid "&Delete"
 msgstr "E&xcluir"
 
-#: kmuddy/kmuddy.cpp:249
+#: kmuddy/kmuddy.cpp:241
 #, kde-format
 msgid "&Connect..."
 msgstr "&Conectar..."
 
-#: kmuddy/kmuddy.cpp:256
+#: kmuddy/kmuddy.cpp:248
 #, kde-format
 msgid "&QuickConnect..."
 msgstr "Conexão &rápida..."
 
-#: kmuddy/kmuddy.cpp:262
+#: kmuddy/kmuddy.cpp:254
 #, kde-format
 msgid "&Disconnect"
 msgstr "&Desconectar"
 
-#: kmuddy/kmuddy.cpp:268
+#: kmuddy/kmuddy.cpp:260
 #, kde-format
 msgid "&Reconnect"
 msgstr "&Reconectar"
 
-#: kmuddy/kmuddy.cpp:273
+#: kmuddy/kmuddy.cpp:265
 #, kde-format
 msgid "Close &tab"
 msgstr "&Fechar aba"
 
-#: kmuddy/kmuddy.cpp:282
+#: kmuddy/kmuddy.cpp:274
 #, kde-format
 msgid "Paste &As"
 msgstr "Col&ar como"
 
-#: kmuddy/kmuddy.cpp:291
+#: kmuddy/kmuddy.cpp:283
 #, kde-format
 msgid "&Input"
 msgstr "&Entrada"
 
-#: kmuddy/kmuddy.cpp:298
+#: kmuddy/kmuddy.cpp:290
 #, kde-format
 msgid "Copy &Selection"
 msgstr "Copiar &seleção"
 
-#: kmuddy/kmuddy.cpp:304
+#: kmuddy/kmuddy.cpp:296
 #, kde-format
 msgid "Enable command &parsing"
 msgstr "Habilitar o &processamento de comandos"
 
-#: kmuddy/kmuddy.cpp:311
+#: kmuddy/kmuddy.cpp:303
 #, kde-format
 msgid "Ca&ncel pending commands"
 msgstr "Ca&ncelar os comandos pendentes"
 
-#: kmuddy/kmuddy.cpp:322
+#: kmuddy/kmuddy.cpp:314
 #, kde-format
 msgid "Show &gaugebar"
 msgstr "Mostrar a barra de &indicadores"
 
-#: kmuddy/kmuddy.cpp:335
+#: kmuddy/kmuddy.cpp:327
 #, kde-format
 msgid "&Object Editor..."
 msgstr "Editor de &objetos..."
 
-#: kmuddy/kmuddy.cpp:340
+#: kmuddy/kmuddy.cpp:332
 #, kde-format
 msgid "&Output windows..."
 msgstr "Janelas de resultad&os..."
 
-#: kmuddy/kmuddy.cpp:344
+#: kmuddy/kmuddy.cpp:336
 #, kde-format
 msgid "A&liases enabled"
 msgstr "Ape&lidos habilitados"
 
-#: kmuddy/kmuddy.cpp:350
+#: kmuddy/kmuddy.cpp:342
 #, kde-format
 msgid "Tri&ggers enabled"
 msgstr "A&cionamentos habilitados"
 
-#: kmuddy/kmuddy.cpp:356
+#: kmuddy/kmuddy.cpp:348
 #, kde-format
 msgid "Tim&ers enabled"
 msgstr "Cronôm&etros habilitados"
 
-#: kmuddy/kmuddy.cpp:361
+#: kmuddy/kmuddy.cpp:353
 #, kde-format
 msgid "Macro &keys enabled"
 msgstr "Teclas de &macros habilitadas"
 
-#: kmuddy/kmuddy.cpp:366
+#: kmuddy/kmuddy.cpp:358
 #, kde-format
 msgid "&MUD Preferences..."
 msgstr "Preferências do &MUD..."
 
-#: kmuddy/kmuddy.cpp:371
+#: kmuddy/kmuddy.cpp:363
 #, kde-format
 msgid "&Save Profile"
 msgstr "&Salvar perfil"
 
-#: kmuddy/kmuddy.cpp:378
+#: kmuddy/kmuddy.cpp:370
 #, kde-format
 msgid "&Session transcript..."
 msgstr "Transcrição da &sessão..."
 
-#: kmuddy/kmuddy.cpp:383
+#: kmuddy/kmuddy.cpp:375
 #, kde-format
 msgid "Dump output &buffer..."
 msgstr "Exportar os dados do res&ultado..."
 
-#: kmuddy/kmuddy.cpp:387
+#: kmuddy/kmuddy.cpp:379
 #, kde-format
 msgid "&Decision assistant"
 msgstr "Assistente de &decisões"
 
-#: kmuddy/kmuddy.cpp:401
+#: kmuddy/kmuddy.cpp:393
 #, kde-format
 msgid "&Global settings..."
 msgstr "Configuração &global..."
 
-#: kmuddy/kmuddy.cpp:406
+#: kmuddy/kmuddy.cpp:398
 #, kde-format
 msgid "&Plugins..."
 msgstr "&Plugins..."
 
-#: kmuddy/kmuddy.cpp:411
+#: kmuddy/kmuddy.cpp:403
 #, kde-format
 msgid "F&ull screen mode"
 msgstr "&Modo de tela inteira"
 
-#: kmuddy/kmuddy.cpp:422
+#: kmuddy/kmuddy.cpp:414
 #, kde-format
 msgid "Shift line up"
 msgstr "Subir uma linha"
 
-#: kmuddy/kmuddy.cpp:427
+#: kmuddy/kmuddy.cpp:419
 #, kde-format
 msgid "Shift line down"
 msgstr "Descer uma linha"
 
-#: kmuddy/kmuddy.cpp:432
+#: kmuddy/kmuddy.cpp:424
 #, kde-format
 msgid "Shift page up"
 msgstr "Subir uma página"
 
-#: kmuddy/kmuddy.cpp:437
+#: kmuddy/kmuddy.cpp:429
 #, kde-format
 msgid "Shift page down"
 msgstr "Descer uma página"
 
-#: kmuddy/kmuddy.cpp:442
+#: kmuddy/kmuddy.cpp:434
 #, kde-format
 msgid "Split-screen up"
 msgstr "Subir tela"
 
-#: kmuddy/kmuddy.cpp:447
+#: kmuddy/kmuddy.cpp:439
 #, kde-format
 msgid "Split-screen down"
 msgstr "Descer tela"
 
-#: kmuddy/kmuddy.cpp:452
+#: kmuddy/kmuddy.cpp:444
 #, kde-format
 msgid "Previous tab"
 msgstr "Aba anterior"
 
-#: kmuddy/kmuddy.cpp:457
+#: kmuddy/kmuddy.cpp:449
 #, kde-format
 msgid "Next tab"
 msgstr "Próxima aba"
 
-#: kmuddy/kmuddy.cpp:463 kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473
-#: kmuddy/kmuddy.cpp:478 kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488
-#: kmuddy/kmuddy.cpp:493 kmuddy/kmuddy.cpp:498 kmuddy/kmuddy.cpp:503
-#: kmuddy/kmuddy.cpp:508
+#: kmuddy/kmuddy.cpp:455 kmuddy/kmuddy.cpp:460 kmuddy/kmuddy.cpp:465
+#: kmuddy/kmuddy.cpp:470 kmuddy/kmuddy.cpp:475 kmuddy/kmuddy.cpp:480
+#: kmuddy/kmuddy.cpp:485 kmuddy/kmuddy.cpp:490 kmuddy/kmuddy.cpp:495
+#: kmuddy/kmuddy.cpp:500
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Mudar para a aba %1"
 
-#: kmuddy/kmuddy.cpp:531
+#: kmuddy/kmuddy.cpp:523
 #, kde-format
 msgid "&Connection"
 msgstr "&Conexão"
 
-#: kmuddy/kmuddy.cpp:532
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Edit"
 msgstr "&Editar"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:533 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:525 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "E&xibir"
 
-#: kmuddy/kmuddy.cpp:534
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Profile"
 msgstr "&Perfil"
 
-#: kmuddy/kmuddy.cpp:535
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Tools"
 msgstr "Ferramen&tas"
 
-#: kmuddy/kmuddy.cpp:536
+#: kmuddy/kmuddy.cpp:528
 #, kde-format
 msgid "&Settings"
 msgstr "&Configurações"
 
-#: kmuddy/kmuddy.cpp:537
+#: kmuddy/kmuddy.cpp:529
 #, kde-format
 msgid "&Help"
 msgstr "Aj&uda"
 
-#: kmuddy/kmuddy.cpp:915
+#: kmuddy/kmuddy.cpp:905
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr "Parar reconectar, pressione %1 ou use a Conexão/Reconexão."
 
-#: kmuddy/kmuddy.cpp:1169
+#: kmuddy/kmuddy.cpp:991
+#, kde-format
+msgid "Activity in the KMuddy Window"
+msgstr ""
+
+#: kmuddy/kmuddy.cpp:1163
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
@@ -3674,12 +3655,12 @@ msgstr "Este texto corresponde ao seu apelido."
 msgid "Command: "
 msgstr "Comando: "
 
-#: libs/ccmdparser.cpp:432
+#: libs/ccmdparser.cpp:431
 #, kde-format
 msgid "Sorry, count is limited to 100.\n"
 msgstr "Infelizmente, a quantidade está limitada a 100.\n"
 
-#: libs/ccmdparser.cpp:435
+#: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
 msgstr "Você pode desabilitar este limite no Perfil / Preferências do MUD."
@@ -3789,7 +3770,7 @@ msgstr "&Desfazer alterações"
 msgid "&Enabled"
 msgstr "&Habilitado"
 
-#: libs/clisteditor.cpp:219
+#: libs/clisteditor.cpp:222
 #, kde-format
 msgid "&Priority"
 msgstr "&Prioridade"
@@ -3799,13 +3780,13 @@ msgstr "&Prioridade"
 msgid "&Name"
 msgstr "&Nome"
 
-#: libs/clisteditor.cpp:285
+#: libs/clisteditor.cpp:286
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
 msgstr ""
 "Não foi possível renomear o grupo porque já existe outro com o mesmo nome."
 
-#: libs/clisteditor.cpp:292
+#: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
 msgstr ""
@@ -3821,57 +3802,64 @@ msgstr "Erro no arquivo - grupo sem nome."
 msgid "Error in file - duplicate group name."
 msgstr "Erro no arquivo - grupo com nome duplicado."
 
-#: libs/clistviewer.cpp:65
+#: libs/clistviewer.cpp:63
 #, kde-format
 msgid "Delete object"
 msgstr "Excluir objeto"
 
-#: libs/clistviewer.cpp:70 libs/clistviewer.cpp:165
+#: libs/clistviewer.cpp:68 libs/clistviewer.cpp:163
 #, kde-format
 msgid "Delete group"
 msgstr "Excluir grupo"
 
-#: libs/clistviewer.cpp:74
+#: libs/clistviewer.cpp:72
 #, kde-format
 msgid "Add subgroup"
 msgstr "Adicionar subgrupo"
 
-#: libs/clistviewer.cpp:79
+#: libs/clistviewer.cpp:77
 #, kde-format
 msgid "Add group"
 msgstr "Adicionar grupo"
 
-#: libs/clistviewer.cpp:84
+#: libs/clistviewer.cpp:82
 #, kde-format
 msgid "Add object"
 msgstr "Adicionar objeto"
 
-#: libs/clistviewer.cpp:164
+#: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
 msgstr "Deseja realmente excluir este grupo?"
 
-#: libs/clistviewer.cpp:167
+#: libs/clistviewer.cpp:165
 #, kde-format
 msgid "Do you really want to delete this %1?"
 msgstr "Deseja realmente excluir este %1?"
 
-#: libs/clistviewer.cpp:168
+#: libs/clistviewer.cpp:166
 #, kde-format
 msgid "Delete %1"
 msgstr "Excluir %1"
 
-#: libs/clistviewer.cpp:194
+#: libs/clistviewer.cpp:192
 #, kde-format
 msgid "Create Group"
 msgstr "Criar grupo"
 
-#: libs/clistviewer.cpp:194
+#: libs/clistviewer.cpp:192
 #, kde-format
 msgid "Please enter the group name:"
 msgstr "Digite o nome do grupo:"
 
-#: libs/clistviewer.cpp:200
+#: libs/clistviewer.cpp:196
+#, fuzzy, kde-format
+#| msgid "Cannot create the group, as a group with this name already exists."
+msgid "Cannot create the group, as the provided name is not valid."
+msgstr ""
+"Não foi possível criar o grupo porque já existe outro com o mesmo nome."
+
+#: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
 msgstr ""
@@ -3932,62 +3920,62 @@ msgstr "MSP: Os downloads múltiplos não são suportadas; o pedido foi ignorado
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr "MSP: o download de sons está desabilitado - o pedido foi ignorado."
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:231
 #, kde-format
 msgid "No, no, no!"
 msgstr "Não, não, não!"
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "I don't agree with it."
 msgstr "Não concordo com ela."
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Better not."
 msgstr "É melhor não."
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to reject."
 msgstr "Iria sugerir que rejeitasse."
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:235
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr "Dizer que não parece ser o melhor."
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:236
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr "Dizer que sim parece ser o melhor."
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:237
 #, kde-format
 msgid "I'd probably suggest to accept."
 msgstr "Iria sugerir que aceitasse."
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:238
 #, kde-format
 msgid "Sounds good."
 msgstr "Parece bem."
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:239
 #, kde-format
 msgid "I agree with it."
 msgstr "Concordo com isso."
 
-#: libs/coutput.cpp:241
+#: libs/coutput.cpp:240
 #, kde-format
 msgid "Definitely yes!"
 msgstr "Claro que sim!"
 
-#: libs/coutput.cpp:243
+#: libs/coutput.cpp:242
 #, kde-format
 msgid "My decision: %1"
 msgstr "Minha decisão: %1"
 
-#: libs/cpluginmanager.cpp:285
+#: libs/cpluginmanager.cpp:268
 #, kde-format
 msgid "Plugins"
 msgstr "Plugins"
@@ -3997,38 +3985,48 @@ msgstr "Plugins"
 msgid "Profile name"
 msgstr "Nome do perfil"
 
+#: libs/cprofilemanager.cpp:72
+#, kde-format
+msgid "Server"
+msgstr "Servidor"
+
+#: libs/cprofilemanager.cpp:73
+#, kde-format
+msgid "Port"
+msgstr "Porta"
+
 #: libs/cprofilemanager.cpp:74
 #, kde-format
 msgid "Login name"
 msgstr "Nome da conta"
 
-#: libs/cstatus.cpp:42 libs/cstatus.cpp:181
+#: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
 msgid "Off-line"
 msgstr "Desligado"
 
-#: libs/cstatus.cpp:45 libs/cstatus.cpp:167 libs/cstatus.cpp:175
-#: libs/cstatus.cpp:211 libs/cstatus.cpp:259
+#: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
+#: libs/cstatus.cpp:219 libs/cstatus.cpp:268
 #, kde-format
 msgid "idle"
 msgstr "ocioso"
 
-#: libs/cstatus.cpp:173
+#: libs/cstatus.cpp:181
 #, kde-format
 msgid "Connected"
 msgstr "Conectado"
 
-#: libs/cstatus.cpp:176
+#: libs/cstatus.cpp:184
 #, kde-format
 msgid "Connected."
 msgstr "Conectado."
 
-#: libs/cstatus.cpp:182
+#: libs/cstatus.cpp:190
 #, kde-format
 msgid "Disconnected."
 msgstr "Desconectado."
 
-#: libs/cstatus.cpp:184
+#: libs/cstatus.cpp:192
 #, kde-format
 msgid "Connection has been closed."
 msgstr "A conexão foi encerrada."
@@ -5458,6 +5456,21 @@ msgstr "Variável"
 #, kde-format
 msgid "Variables"
 msgstr "Variáveis"
+
+#~ msgid "WWW"
+#~ msgstr "WWW"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "Codebase"
+#~ msgstr "Código base"
+
+#~ msgid "MUD Listing"
+#~ msgstr "Lista dos MUDs"
+
+#~ msgid "&Filter:"
+#~ msgstr "&Filtro:"
 
 #~ msgid "&Edit..."
 #~ msgstr "&Editar..."
