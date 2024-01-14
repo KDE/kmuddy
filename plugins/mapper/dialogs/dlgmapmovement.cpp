@@ -26,8 +26,6 @@
 #include <qinputdialog.h>
 
 #include <KLocalizedString>
-#include <kregexpeditorinterface.h>
-#include <KServiceTypeTrader>
 
 DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {
@@ -82,72 +80,26 @@ void DlgMapMovement::slotValidCheckStateChanged(bool state)
 
 void DlgMapMovement::slotAddClicked(void)
 {
-	
-	QString text = "";
-	bool ok = false;	
+  bool ok = false;	
 
-        QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>("KRegExpEditor/KRegExpEditor");
-	if ( editorDialog )
-	{
-		// kdeutils was installed, so the dialog was found fetch the editor interface
-		KRegExpEditorInterface *editor = dynamic_cast<KRegExpEditorInterface *>(editorDialog);
-		Q_ASSERT( editor ); // This should not fail!
-
-		// now use the editor.
-		editor->setRegExp("");
-
-		// Finally exec the dialog
-		if (editorDialog->exec())
-		{
-			ok = true;
-			text = editor->regExp();
-		}
-	}
-	else
-	{
-		text = QInputDialog::getText(this, i18n("KMuddy"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, QString(), &ok);
-	}
-
-    if ( ok && !text.isEmpty() )
-      m_lstInvalidMoveStrs->addItem(text);
+  QString text = QInputDialog::getText(this, i18n("KMuddy"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, QString(), &ok);
+  if ( ok && !text.isEmpty() )
+    m_lstInvalidMoveStrs->addItem(text);
 }
 
 void DlgMapMovement::slotEditClicked(void)
 {
-	int current =  m_lstInvalidMoveStrs->currentRow();
-	if (current!=-1)
-	{
-		bool ok;
-		QString text = "";
+  int current =  m_lstInvalidMoveStrs->currentRow();
+  if (current!=-1)
+  {
+    bool ok;
+    QString text = QInputDialog::getText(this, i18n("KMuddy"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, m_lstInvalidMoveStrs->item(current)->text(), &ok);
 
-                QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>("KRegExpEditor/KRegExpEditor");
-		if ( editorDialog )
-		{
-			// kdeutils was installed, so the dialog was found fetch the editor interface
-			KRegExpEditorInterface *editor = dynamic_cast<KRegExpEditorInterface *>(editorDialog);
-			Q_ASSERT( editor ); // This should not fail!
-
-			// now use the editor.
-			editor->setRegExp("");
-
-			// Finally exec the dialog
-			if (editorDialog->exec())
-			{
-				ok = true;
-				text = editor->regExp();
-			}
-		}
-		else
-		{
-
-			text = QInputDialog::getText(this, i18n("Kmud"), i18n("Enter invalid movement string as a regular expression"), QLineEdit::Normal, m_lstInvalidMoveStrs->item(current)->text(), &ok);
-		}
-
-		if ( ok && !text.isEmpty() )
-		{
-			m_lstInvalidMoveStrs->item(current)->setText(text);
-		}
-	}
+    if ( ok && !text.isEmpty() )
+    {
+      m_lstInvalidMoveStrs->item(current)->setText(text);
+    }
+  }
 }
 
 void DlgMapMovement::slotRemoveClicked(void)

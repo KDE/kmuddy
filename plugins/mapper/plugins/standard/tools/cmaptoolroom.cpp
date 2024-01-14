@@ -20,7 +20,6 @@
 #include <qcolor.h>
 
 #include <KLocalizedString>
-#include <kiconloader.h>
 
 #include "../../../cmapmanager.h"
 #include "../../../cmapview.h"
@@ -28,7 +27,7 @@
 CMapToolRoom::CMapToolRoom(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Create Room"),
-                   BarIcon("kmud_room.png"),
+                   QIcon::fromTheme("kmud_room.png"),
                    manager,"toolsRoom",nullptr)
 
 {

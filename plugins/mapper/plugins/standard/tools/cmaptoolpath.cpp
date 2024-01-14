@@ -18,7 +18,6 @@
 #include "cmaptoolpath.h"
 
 #include <KLocalizedString>
-#include <kiconloader.h>
 
 #include <QBitmap>
 
@@ -39,7 +38,7 @@ static unsigned char path2_bits[] = {			// second path cursor bitmap
 CMapToolPath::CMapToolPath(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Create Path"),
-                   BarIcon(("kmud_path.png")),
+                   QIcon::fromTheme(("kmud_path.png")),
                    manager,"toolsPath",nullptr)
 {
 		QBitmap pathStart_cb = QBitmap::fromData (QSize(16,16), path1_bits);

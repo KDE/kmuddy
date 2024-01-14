@@ -6,7 +6,6 @@ include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR}    )
 
 set(kmuddyconverterplugin_SRCS
     converterplugin.cpp
-    converterdialog.cpp
     cgenericitem.cpp
     cgenericlist.cpp
     csaveablefield.cpp
@@ -23,6 +22,7 @@ set(kmuddyconverterplugin_SRCS
     cvalue.cpp
     cvariable.cpp
     cvartrigger.cpp
+    converterdialog.cpp
     )
 
 

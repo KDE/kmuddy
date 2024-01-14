@@ -154,14 +154,14 @@ void CMapPluginStandard::beforeElementDeleted(CMapElement *element)
     e.id = ((CMapRoom *)element)->getRoomID();
     e.level = element->getLevel()->getLevelID();
     e.note = note;
-    m_deletedElements.append(e);
+    m_deletedElements.push_back(e);
   }
 
   if (element->getElementType() == ZONE)
   {
     e.id = ((CMapZone *)element)->getZoneID();
     e.note = note;
-    m_deletedElements.append(e);
+    m_deletedElements.push_back(e);
   }
 
   removeNote(element);

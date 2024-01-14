@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CONVERTERDIALOG_H
 #define CONVERTERDIALOG_H
 
-#include <kdialog.h>
+#include <QDialog>
 #include <list>
 
 /** Defined one item of the conversion dialog. */
@@ -34,7 +34,7 @@ struct ConversionDialogItem {
 
 /** Converter dialog - displays the dialog and lets the user pick profiles to convert */
 
-class cConverterDialog: public KDialog {
+class cConverterDialog: public QDialog {
 Q_OBJECT
 public:
   cConverterDialog (QWidget *parent);

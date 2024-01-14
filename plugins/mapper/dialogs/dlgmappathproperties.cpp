@@ -23,6 +23,7 @@
 #include <qlabel.h>
 #include <qtabwidget.h>
 #include <QLocale>
+#include <QDebug>
 
 #include "../cmapmanager.h"
 #include "../cmapcmdelementcreate.h"

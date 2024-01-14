@@ -20,7 +20,7 @@
 
 #include "../../cmapcommand.h"
 
-#include <QLinkedList>
+#include <list>
 #include <QPoint>
 
 
@@ -49,9 +49,8 @@ private:
 		QPoint pos;
 		int labelPos;
 	};
-	typedef QLinkedList<struct elemProp> PropList;
 
-	PropList elements;
+	std::list<elemProp> elements;
 	CMapManager *m_mapManager;
 	QPoint m_offset;
 };

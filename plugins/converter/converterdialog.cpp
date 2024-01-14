@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KLocalizedString>
 
+#include <QDialogButtonBox>
 #include <QLabel>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -32,19 +33,18 @@ struct cConverterDialog::Private {
   QTreeWidget *tree;
 };
 
-cConverterDialog::cConverterDialog (QWidget *parent) : KDialog (parent)
+cConverterDialog::cConverterDialog (QWidget *parent) : QDialog (parent)
 {
   d = new Private;
 
-  setInitialSize (QSize (500, 400));
-  setCaption (i18n ("Profile Converter"));
+  resize (QSize (500, 400));
+  setWindowTitle (i18n ("Profile Converter"));
 
-  setButtons (KDialog::Ok | KDialog::Cancel);
+  QDialogButtonBox *buttons = new QDialogButtonBox (QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
 
   //create main dialog's widget
   QWidget *page = new QWidget (this);
   QVBoxLayout *layout = new QVBoxLayout (page);
-  setMainWidget (page);
 
   QLabel *label = new QLabel (i18n ("Pick profiles that you would like to convert and press Ok. This tool will create a new profile containing the information from the chosen profiles. Existing profiles will not be overwritten, even if they have the same name. The old profiles will be kept intact."), this);
   label->setWordWrap (true);
@@ -58,6 +58,7 @@ cConverterDialog::cConverterDialog (QWidget *parent) : KDialog (parent)
 
   layout->addWidget (label);
   layout->addWidget (d->tree);
+  layout->addWidget (buttons);
 }
 
 cConverterDialog::~cConverterDialog ()

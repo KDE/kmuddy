@@ -28,6 +28,7 @@
 #include <QIcon>
 #include <QQueue>
 #include <QStandardPaths>
+#include <QStatusBar>
 #include <QTimer>
 #include <QUndoStack>
 

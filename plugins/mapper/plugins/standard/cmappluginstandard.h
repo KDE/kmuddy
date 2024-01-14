@@ -19,7 +19,7 @@
 #define CMAPPLUGINSTANDARD_H
 
 #include <QMap>
-#include <QLinkedList>
+#include <list>
 
 #include "../../cmappluginbase.h"
 
@@ -105,9 +105,8 @@ private:
 		QString note;
 	};
 
-	typedef QLinkedList<DeletedElement> DeletedElementList;
+	typedef std::list<DeletedElement> DeletedElementList;
 
-	
 	DeletedElementList::iterator findRoom(int level,int id,bool *found);
 	DeletedElementList::iterator findZone(int id,bool *found);	
 	

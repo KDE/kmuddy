@@ -139,6 +139,7 @@ void KMuddy::eventNothingHandler (QString event, int session)
       // Load the system tray icon
       sysIcon = new KStatusNotifierItem(this);
       sysIcon->setIconByName("kmuddy");
+      sysIcon->setStatus(KStatusNotifierItem::Active);
     }
     setAutoConnect (gs->getString ("auto-connect"));
   }

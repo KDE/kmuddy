@@ -18,7 +18,6 @@
 #include "cmaptooleraser.h"
 
 #include <KLocalizedString>
-#include <kiconloader.h>
 
 #include <QBitmap>
 
@@ -56,7 +55,7 @@ static unsigned char delete_cm_bits[] = {       // delete cursor bitmap mask
 CMapToolEraser::CMapToolEraser(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Eraser"),
-                   BarIcon("kmud_eraser.png"),
+                   QIcon::fromTheme("kmud_eraser.png"),
                    manager,"toolsEraser",nullptr)
 {
 

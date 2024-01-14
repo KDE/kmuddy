@@ -18,7 +18,6 @@
 #include "cmaptooltext.h"
 
 #include <KLocalizedString>
-#include <kiconloader.h>
 
 #include <QCursor>
 
@@ -32,7 +31,7 @@
 CMapToolText::CMapToolText(KActionCollection *actionCollection,CMapManager *manager)
 	: CMapToolBase(actionCollection,
                    i18n("Text"),
-                   BarIcon("kmud_text.png"),
+                   QIcon::fromTheme("kmud_text.png"),
                    manager,"toolsText",nullptr)
 {
 	textCursor = new QCursor(Qt::IBeamCursor);

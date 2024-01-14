@@ -19,9 +19,7 @@
 
 #include "../cmapmanager.h"
 
-#include <knuminput.h>
-
-#include <qcheckbox.h>
+#include <QCheckBox>
 
 DlgMapSpeedwalk::DlgMapSpeedwalk(CMapManager *mapManager, QWidget *parent) : QWidget (parent)
 {

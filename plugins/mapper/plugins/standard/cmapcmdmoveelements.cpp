@@ -38,7 +38,7 @@ CMapCmdMoveElements::~CMapCmdMoveElements()
 void CMapCmdMoveElements::addElement(CMapElement *element)
 {
 	qDebug() << "CMapCmdMoveElements::addElement 1";
-	struct elemProp properties;
+	elemProp properties;
 	properties.pos = QPoint(element->getX(),element->getY());
 	qDebug() << "CMapCmdMoveElements::addElement 1.0 : " << element->getX();
         CMapLevel *level = element->getLevel();
@@ -70,17 +70,15 @@ void CMapCmdMoveElements::addElement(CMapElement *element)
 	}
 
 	qDebug() << "CMapCmdMoveElements::addElement 3";	
-	elements.append(properties);
+	elements.push_back(properties);
 	qDebug() << "CMapCmdMoveElements::addElement 4";
 }
 
 void CMapCmdMoveElements::redo()
 {
   CMapLevel *level = nullptr;	
-  for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
+  for( elemProp &prop : elements )
   {
-    struct elemProp prop = *it;
-
     level = m_mapManager->findLevel(prop.level);
     CMapElement *elm = level->findElementAt(prop.pos);
     if (!elm) continue;
@@ -121,10 +119,8 @@ void CMapCmdMoveElements::redo()
 void CMapCmdMoveElements::undo()
 {
   CMapLevel *level = nullptr;
-  for( PropList::Iterator it = elements.begin(); it != elements.end(); ++it )
+  for( elemProp &prop : elements )
   {
-    struct elemProp prop = *it;
-
     level = m_mapManager->findLevel(prop.level);
     CMapElement *elm = level->findElementAt(prop.pos + m_offset);
     if (elm)

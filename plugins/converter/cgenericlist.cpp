@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QFile>
 #include <QXmlStreamWriter>
-#include <kdebug.h>
+#include <QDebug>
 
 cGenericList::cGenericList () :
     cList ("generic")
@@ -53,7 +53,7 @@ bool cGenericList::saveList (const QString &file)
    // save the list contents
   QFile f (file);
   if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-    kDebug() << "Unable to open " << file << " for writing." << endl;
+    qDebug() << "Unable to open " << file << " for writing.";
     return false;  // problem
   }
 

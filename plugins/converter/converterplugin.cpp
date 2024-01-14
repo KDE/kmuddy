@@ -46,11 +46,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cvariable.h"
 #include "cvartrigger.h"
 
+#include <QAction>
 #include <QDir>
 #include <QFile>
 #include <QXmlStreamWriter>
 
-#include <kaction.h>
 #include <KLocalizedString>
 #include <kmessagebox.h>
 #include <kpluginfactory.h>
@@ -63,14 +63,14 @@ K_EXPORT_PLUGIN (cConverterPluginFactory("kmuddy"))
 // the main plug-in code which registers the functions:
 
 struct cConverterPluginPrivate {
-  KAction *converter;
+  QAction *converter;
 };
 
 cConverterPlugin::cConverterPlugin (QObject *, const QVariantList &)
 {
   d = new cConverterPluginPrivate;
 
-  d->converter = new KAction (this);
+  d->converter = new QAction (this);
   d->converter->setText (i18n ("Profile &Converter..."));
   connect (d->converter, SIGNAL (triggered()), this, SLOT (converterDialog()));
  

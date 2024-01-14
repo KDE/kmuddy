@@ -20,7 +20,6 @@
 #include <kmessagebox.h>
 #include <KLocalizedString>
 #include <kzip.h>
-#include <ktemporaryfile.h>
 
 #include <qfile.h>
 #include <qdom.h>
@@ -98,7 +97,7 @@ int CMapFileFilterXML::saveData(const QString &filename)
 	if (!result.isEmpty())
 	{
 		qDebug() << "Write map.xml : " << result.size();
-		zip.writeFile("map.xml", QString(), QString(), result.toLocal8Bit().data(), result.size());
+		zip.writeFile("map.xml", result.toLocal8Bit());
 		qDebug() << "Done write";		
 
 	}
@@ -516,9 +515,6 @@ int CMapFileFilterXML::loadPaths(QDomElement *pathsNode)
   */  
 int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 {
-  int gridWidth = m_mapManager->getMapData()->gridSize.width();
-  int gridHeight = m_mapManager->getMapData()->gridSize.height();
-
   // Wipe the default level.
   while (m_mapManager->getZone()->levelCount())
     delete m_mapManager->getZone()->firstLevel();
@@ -568,7 +564,7 @@ int CMapFileFilterXML::loadZone(QDomElement *zoneNode)
 
         if (e2.tagName()=="Room")
         {
-          CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1 /* * gridWidth*/ ,y1 /* * gridHeight */ ),level);
+          CMapRoom *room = CMapElementUtil::createRoom(m_mapManager, QPoint(x1, y1),level);
           if (!room) {
             qWarning()<<"NO ROOM AT "<<x1<<"/"<<y1<<" on level "<<id<<" WHEN LOADING ROOM #"<<e2.attribute("RoomID",QString::number(-1)).toInt();
             n2 = n2.nextSibling();
@@ -685,7 +681,7 @@ void CMapFileFilterXML::loadPluginPropertiesForElement(CMapElement *element,QDom
 
 						QDomNamedNodeMap attribs = e.attributes();
 
-						for (unsigned int i=0; i<attribs.length();i++)
+						for (int i=0; i<attribs.length();i++)
 						{
 							QDomNode n2 = attribs.item(i);
 

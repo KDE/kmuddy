@@ -32,7 +32,6 @@
 #include <QDebug>
 
 #include <kcolorbutton.h>
-#include <knuminput.h>
 #include <KLocalizedString>
 
 #include "../cmaptext.h"
@@ -171,15 +170,13 @@ void DlgMapTextProperties::slotSetSize(void)
 	int fontSize = txtFontSize->text().toInt();
 	textFont.setPointSize(fontSize);
 	QFontMetrics fm(textFont);	
-	QString width;
-	QString height;
 	QStringList textList;
 	CMapText::stringToList(txtText->toPlainText(),&textList);
 	int tmpWidth = 0;
 	for (QStringList::iterator it = textList.begin(); it != textList.end(); ++it)
 	{
-		if (fm.width(*it) > tmpWidth)
-			tmpWidth = fm.width(*it);
+		if (fm.horizontalAdvance(*it) > tmpWidth)
+			tmpWidth = fm.horizontalAdvance(*it);
     }
 
 	QString width = QString::number(tmpWidth);

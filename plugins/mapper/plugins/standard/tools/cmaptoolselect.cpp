@@ -24,15 +24,15 @@
 #include "../../../cmappath.h"
 #include "../cmapcmdmoveelements.h"
 
-#include <qcursor.h>
+#include <QCursor>
+#include <QApplication>
 
-#include <kiconloader.h>
 #include <KLocalizedString>
 
 CMapToolSelect::CMapToolSelect(KActionCollection *actionCollection,CMapManager *manager)
         : CMapToolBase(actionCollection,
                        i18n("Select"),
-                       BarIcon("kmud_select.png"),
+                       QIcon::fromTheme("kmud_select.png"),
                        manager,"toolsSelect",nullptr)
 {
 
