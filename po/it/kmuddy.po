@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-14 01:57+0000\n"
+"POT-Creation-Date: 2024-01-15 01:37+0000\n"
 "PO-Revision-Date: 2023-08-05 12:52+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -362,7 +362,7 @@ msgid "Meta"
 msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
-#: kmuddy/kmuddy.cpp:279
+#: kmuddy/kmuddy.cpp:280
 #, kde-format
 msgid "&Command"
 msgstr "&Comando"
@@ -1128,6 +1128,7 @@ msgstr "&Aggiungi..."
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
 #: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
 #: libs/clistviewer.cpp:168 plugins/mapper/cmapclipboard.cpp:76
+#: plugins/mapper/cmapview.cpp:606 plugins/mapper/cmapview.cpp:622
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
 #, kde-format
 msgid "Delete"
@@ -2872,227 +2873,227 @@ msgstr "&Nascondi"
 msgid "&Delete"
 msgstr "&Elimina"
 
-#: kmuddy/kmuddy.cpp:241
+#: kmuddy/kmuddy.cpp:242
 #, kde-format
 msgid "&Connect..."
 msgstr "&Connetti..."
 
-#: kmuddy/kmuddy.cpp:248
+#: kmuddy/kmuddy.cpp:249
 #, kde-format
 msgid "&QuickConnect..."
 msgstr "Conness&ione rapida..."
 
-#: kmuddy/kmuddy.cpp:254
+#: kmuddy/kmuddy.cpp:255
 #, kde-format
 msgid "&Disconnect"
 msgstr "&Disconnetti"
 
-#: kmuddy/kmuddy.cpp:260
+#: kmuddy/kmuddy.cpp:261
 #, kde-format
 msgid "&Reconnect"
 msgstr "&Riconnetti"
 
-#: kmuddy/kmuddy.cpp:265
+#: kmuddy/kmuddy.cpp:266
 #, kde-format
 msgid "Close &tab"
 msgstr "Chiudi &scheda"
 
-#: kmuddy/kmuddy.cpp:274
+#: kmuddy/kmuddy.cpp:275
 #, kde-format
 msgid "Paste &As"
 msgstr "Incolla &come"
 
-#: kmuddy/kmuddy.cpp:283
+#: kmuddy/kmuddy.cpp:284
 #, kde-format
 msgid "&Input"
 msgstr "&Immissione"
 
-#: kmuddy/kmuddy.cpp:290
+#: kmuddy/kmuddy.cpp:291
 #, kde-format
 msgid "Copy &Selection"
 msgstr "Copia &selezione"
 
-#: kmuddy/kmuddy.cpp:296
+#: kmuddy/kmuddy.cpp:297
 #, kde-format
 msgid "Enable command &parsing"
 msgstr "Abilita &analisi dei comandi"
 
-#: kmuddy/kmuddy.cpp:303
+#: kmuddy/kmuddy.cpp:304
 #, kde-format
 msgid "Ca&ncel pending commands"
 msgstr "A&nulla comandi in sospeso"
 
-#: kmuddy/kmuddy.cpp:314
+#: kmuddy/kmuddy.cpp:315
 #, kde-format
 msgid "Show &gaugebar"
 msgstr "Mostra barra di &misurazione"
 
-#: kmuddy/kmuddy.cpp:327
+#: kmuddy/kmuddy.cpp:328
 #, kde-format
 msgid "&Object Editor..."
 msgstr "Editor &oggetti..."
 
-#: kmuddy/kmuddy.cpp:332
+#: kmuddy/kmuddy.cpp:333
 #, kde-format
 msgid "&Output windows..."
 msgstr "Finestre del &risultato..."
 
-#: kmuddy/kmuddy.cpp:336
+#: kmuddy/kmuddy.cpp:337
 #, kde-format
 msgid "A&liases enabled"
 msgstr "A&lias abilitati"
 
-#: kmuddy/kmuddy.cpp:342
+#: kmuddy/kmuddy.cpp:343
 #, kde-format
 msgid "Tri&ggers enabled"
 msgstr "Atti&vatori abilitati"
 
-#: kmuddy/kmuddy.cpp:348
+#: kmuddy/kmuddy.cpp:349
 #, kde-format
 msgid "Tim&ers enabled"
 msgstr "Tim&er abilitati"
 
-#: kmuddy/kmuddy.cpp:353
+#: kmuddy/kmuddy.cpp:354
 #, kde-format
 msgid "Macro &keys enabled"
 msgstr "Tasti &macro abilitati"
 
-#: kmuddy/kmuddy.cpp:358
+#: kmuddy/kmuddy.cpp:359
 #, kde-format
 msgid "&MUD Preferences..."
 msgstr "Preferenze &MUD..."
 
-#: kmuddy/kmuddy.cpp:363
+#: kmuddy/kmuddy.cpp:364
 #, kde-format
 msgid "&Save Profile"
 msgstr "&Salva profilo"
 
-#: kmuddy/kmuddy.cpp:370
+#: kmuddy/kmuddy.cpp:371
 #, kde-format
 msgid "&Session transcript..."
 msgstr "Trascrizione &sessione..."
 
-#: kmuddy/kmuddy.cpp:375
+#: kmuddy/kmuddy.cpp:376
 #, kde-format
 msgid "Dump output &buffer..."
 msgstr "Dump &buffer del risultato..."
 
-#: kmuddy/kmuddy.cpp:379
+#: kmuddy/kmuddy.cpp:380
 #, kde-format
 msgid "&Decision assistant"
 msgstr "Assistente alle &decisioni"
 
-#: kmuddy/kmuddy.cpp:393
+#: kmuddy/kmuddy.cpp:394
 #, kde-format
 msgid "&Global settings..."
 msgstr "Impostazioni &globali..."
 
-#: kmuddy/kmuddy.cpp:398
+#: kmuddy/kmuddy.cpp:399
 #, kde-format
 msgid "&Plugins..."
 msgstr "&Estensioni..."
 
-#: kmuddy/kmuddy.cpp:403
+#: kmuddy/kmuddy.cpp:404
 #, kde-format
 msgid "F&ull screen mode"
 msgstr "Mo&dalità a schermo intero"
 
-#: kmuddy/kmuddy.cpp:414
+#: kmuddy/kmuddy.cpp:415
 #, kde-format
 msgid "Shift line up"
 msgstr "Sposta riga in alto"
 
-#: kmuddy/kmuddy.cpp:419
+#: kmuddy/kmuddy.cpp:420
 #, kde-format
 msgid "Shift line down"
 msgstr "Sposta riga in basso"
 
-#: kmuddy/kmuddy.cpp:424
+#: kmuddy/kmuddy.cpp:425
 #, kde-format
 msgid "Shift page up"
 msgstr "Sposta pagina su"
 
-#: kmuddy/kmuddy.cpp:429
+#: kmuddy/kmuddy.cpp:430
 #, kde-format
 msgid "Shift page down"
 msgstr "Sposta pagina giù"
 
-#: kmuddy/kmuddy.cpp:434
+#: kmuddy/kmuddy.cpp:435
 #, kde-format
 msgid "Split-screen up"
 msgstr "Dividi schermo verso l'alto"
 
-#: kmuddy/kmuddy.cpp:439
+#: kmuddy/kmuddy.cpp:440
 #, kde-format
 msgid "Split-screen down"
 msgstr "Dividi schermo verso il basso"
 
-#: kmuddy/kmuddy.cpp:444
+#: kmuddy/kmuddy.cpp:445
 #, kde-format
 msgid "Previous tab"
 msgstr "Scheda precedente"
 
-#: kmuddy/kmuddy.cpp:449
+#: kmuddy/kmuddy.cpp:450
 #, kde-format
 msgid "Next tab"
 msgstr "Scheda successiva"
 
-#: kmuddy/kmuddy.cpp:455 kmuddy/kmuddy.cpp:460 kmuddy/kmuddy.cpp:465
-#: kmuddy/kmuddy.cpp:470 kmuddy/kmuddy.cpp:475 kmuddy/kmuddy.cpp:480
-#: kmuddy/kmuddy.cpp:485 kmuddy/kmuddy.cpp:490 kmuddy/kmuddy.cpp:495
-#: kmuddy/kmuddy.cpp:500
+#: kmuddy/kmuddy.cpp:456 kmuddy/kmuddy.cpp:461 kmuddy/kmuddy.cpp:466
+#: kmuddy/kmuddy.cpp:471 kmuddy/kmuddy.cpp:476 kmuddy/kmuddy.cpp:481
+#: kmuddy/kmuddy.cpp:486 kmuddy/kmuddy.cpp:491 kmuddy/kmuddy.cpp:496
+#: kmuddy/kmuddy.cpp:501
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Passa alla scheda %1"
 
-#: kmuddy/kmuddy.cpp:523
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Connection"
 msgstr "&Connessione"
 
-#: kmuddy/kmuddy.cpp:524
+#: kmuddy/kmuddy.cpp:525
 #, kde-format
 msgid "&Edit"
 msgstr "&Modifica"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:525 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:526 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "&Visualizza"
 
-#: kmuddy/kmuddy.cpp:526
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Profile"
 msgstr "&Profilo"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:528
 #, kde-format
 msgid "&Tools"
 msgstr "S&trumenti"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:529
 #, kde-format
 msgid "&Settings"
 msgstr "Imp&ostazioni"
 
-#: kmuddy/kmuddy.cpp:529
+#: kmuddy/kmuddy.cpp:530
 #, kde-format
 msgid "&Help"
 msgstr "&Aiuto"
 
-#: kmuddy/kmuddy.cpp:905
+#: kmuddy/kmuddy.cpp:906
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr "Per ricollegarti, premi %1 o usa Connessione / Riconnetti."
 
-#: kmuddy/kmuddy.cpp:991
+#: kmuddy/kmuddy.cpp:992
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:1163
+#: kmuddy/kmuddy.cpp:1164
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
@@ -3342,7 +3343,8 @@ msgstr ""
 "KMuddy è un client MUD (Multi-User Dungeon) di KDE con molte funzionalità."
 
 #: kmuddy/main.cpp:36 kmuddy/main.cpp:38
-#: plugins/mapper/dialogs/dlgmapmovement.cpp:108
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
 #, kde-format
 msgid "KMuddy"
 msgstr "KMuddy"
@@ -3723,7 +3725,7 @@ msgstr ""
 "Questo file non contiene il gruppo root, e non può essere dunque caricato."
 
 #: libs/clist.cpp:471 libs/cvariablelist.cpp:373
-#: plugins/mapper/cmapzonemanager.cpp:229
+#: plugins/mapper/cmapzonemanager.cpp:230
 #, kde-format
 msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
@@ -3738,13 +3740,13 @@ msgid "This is not a KMuddy object file."
 msgstr "Il file non è un oggetto KMuddy."
 
 #: libs/clist.cpp:475 libs/cvariablelist.cpp:377
-#: plugins/mapper/cmapzonemanager.cpp:233
+#: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
 msgstr "Questo file è danneggiato."
 
 #: libs/clist.cpp:479 libs/cvariablelist.cpp:381
-#: plugins/mapper/cmapzonemanager.cpp:236
+#: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
 msgstr "Errore alla riga %1, colonna %2: %3"
@@ -4028,7 +4030,7 @@ msgstr "La connessione è stata chiusa."
 msgid "This is not a KMuddy variable list file."
 msgstr "Il file non è un elenco di variabili KMuddy."
 
-#: plugins/converter/converterdialog.cpp:40
+#: plugins/converter/converterdialog.cpp:41
 #, kde-format
 msgid "Profile Converter"
 msgstr "Convertitore di profili"
@@ -4096,27 +4098,27 @@ msgstr "Taglia"
 msgid "Paste"
 msgstr "Incolla"
 
-#: plugins/mapper/cmapclipboard.cpp:302 plugins/mapper/cmapclipboard.cpp:449
+#: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
 #, kde-format
 msgid "Paste Element"
 msgstr "Incolla elemento"
 
-#: plugins/mapper/cmapclipboard.cpp:315 plugins/mapper/cmapclipboard.cpp:459
+#: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
 #, kde-format
 msgid "Update Properties"
 msgstr "Aggiorna proprietà"
 
-#: plugins/mapper/cmapclipboard.cpp:380
+#: plugins/mapper/cmapclipboard.cpp:375
 #, kde-format
 msgid "Paste Path"
 msgstr "Incolla percorso"
 
-#: plugins/mapper/cmapclipboard.cpp:472
+#: plugins/mapper/cmapclipboard.cpp:466
 #, kde-format
 msgid "Delete Elements"
 msgstr "Elimina elementi"
 
-#: plugins/mapper/cmapelement.cpp:339
+#: plugins/mapper/cmapelement.cpp:338
 #, kde-format
 msgid "Resize Element"
 msgstr "Ridimensiona elemento"
@@ -4126,340 +4128,346 @@ msgstr "Ridimensiona elemento"
 msgid "Level %1"
 msgstr "Livello %1"
 
-#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:121
+#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
 msgstr "Mappa #1"
 
-#: plugins/mapper/cmapmanager.cpp:194
+#: plugins/mapper/cmapmanager.cpp:195
 #, kde-format
 msgid "Mapper: Directions"
 msgstr "Creatore di mappe: direzioni"
 
-#: plugins/mapper/cmapmanager.cpp:197
+#: plugins/mapper/cmapmanager.cpp:198
 #, kde-format
 msgid "Mapper: Movement"
 msgstr "Creatore di mappe: movimento"
 
-#: plugins/mapper/cmapmanager.cpp:200
+#: plugins/mapper/cmapmanager.cpp:201
 #, kde-format
 msgid "Mapper: Colors"
 msgstr "Creatore di mappe: colori"
 
-#: plugins/mapper/cmapmanager.cpp:203
+#: plugins/mapper/cmapmanager.cpp:204
 #, kde-format
 msgid "Mapper: Speedwalk"
 msgstr "Creatore di mappe: marcia"
 
-#: plugins/mapper/cmapmanager.cpp:410
+#: plugins/mapper/cmapmanager.cpp:409
 #, kde-format
 msgid "Change Login Room"
 msgstr "Cambia stanza accesso"
 
-#: plugins/mapper/cmapmanager.cpp:413
+#: plugins/mapper/cmapmanager.cpp:412
 #, kde-format
 msgid "Remove Login Room Status"
 msgstr "Rimuovi stato stanza accesso"
 
-#: plugins/mapper/cmapmanager.cpp:420
+#: plugins/mapper/cmapmanager.cpp:419
 #, kde-format
 msgid "Set Login Room Status"
 msgstr "Imposta stato stanza accesso"
 
-#: plugins/mapper/cmapmanager.cpp:452
+#: plugins/mapper/cmapmanager.cpp:451
 #, kde-format
 msgid "Change Current Room"
 msgstr "Cambia stanza attuale"
 
-#: plugins/mapper/cmapmanager.cpp:454
+#: plugins/mapper/cmapmanager.cpp:453
 #, kde-format
 msgid "Remove Current Room Status"
 msgstr "Rimuovi stato stanza attuale"
 
-#: plugins/mapper/cmapmanager.cpp:459
+#: plugins/mapper/cmapmanager.cpp:458
 #, kde-format
 msgid "Set Current Room Status"
 msgstr "Imposta stato stanza attuale"
 
-#: plugins/mapper/cmapmanager.cpp:567
+#: plugins/mapper/cmapmanager.cpp:566
 #, kde-format
 msgid "Create Level"
 msgstr "Crea livello"
 
-#: plugins/mapper/cmapmanager.cpp:636
-#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:30
+#: plugins/mapper/cmapmanager.cpp:635
+#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
 msgstr "Crea stanza"
 
-#: plugins/mapper/cmapmanager.cpp:664 plugins/mapper/cmapmanager.cpp:693
+#: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
 #, kde-format
 msgid "Create Text"
 msgstr "Crea testo"
 
-#: plugins/mapper/cmapmanager.cpp:764
+#: plugins/mapper/cmapmanager.cpp:763
 #, kde-format
 msgid "A path already exists at this location"
 msgstr "Esiste già un percorso in questa posizione"
 
-#: plugins/mapper/cmapmanager.cpp:764 plugins/mapper/cmapmanager.cpp:1448
-#: plugins/mapper/cmapmanager.cpp:1502 plugins/mapper/cmapmanager.cpp:1536
-#: plugins/mapper/cmapview.cpp:586 plugins/mapper/cmapview.cpp:608
-#: plugins/mapper/cmapview.cpp:615 plugins/mapper/cmapview.cpp:624
+#: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
+#: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
+#: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr "Creatore di mappe per KMuddy"
 
-#: plugins/mapper/cmapmanager.cpp:777 plugins/mapper/cmapmanager.cpp:811
-#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:41
+#: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
+#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
 msgstr "Crea percorso"
 
-#: plugins/mapper/cmapmanager.cpp:857
+#: plugins/mapper/cmapmanager.cpp:856
 #, kde-format
 msgid "Delete Level"
 msgstr "Elimina livello"
 
-#: plugins/mapper/cmapmanager.cpp:891 plugins/mapper/cmapmanager.cpp:900
+#: plugins/mapper/cmapmanager.cpp:890 plugins/mapper/cmapmanager.cpp:899
 #, kde-format
 msgid "Delete Element"
 msgstr "Elimina elemento"
 
-#: plugins/mapper/cmapmanager.cpp:1448
+#: plugins/mapper/cmapmanager.cpp:1447
 #, kde-format
 msgid "Speedwalking is already in progress"
 msgstr "La marcia è già in corso"
 
-#: plugins/mapper/cmapmanager.cpp:1502
+#: plugins/mapper/cmapmanager.cpp:1501
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr ""
 "Il creatore di mappe automatico non è riuscito a trovare un percorso alla "
 "stanza richiesta"
 
-#: plugins/mapper/cmapmanager.cpp:1536
+#: plugins/mapper/cmapmanager.cpp:1535
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
 msgstr "Interruzione della marcia poiché è stato raggiunto il limite di mosse"
 
-#: plugins/mapper/cmapmanager.cpp:1635
+#: plugins/mapper/cmapmanager.cpp:1634
 #, kde-format
 msgid "Move Elements in map"
 msgstr "Sposta elementi nella mappa"
 
-#: plugins/mapper/cmapmanager.cpp:1644
+#: plugins/mapper/cmapmanager.cpp:1643
 #, kde-format
 msgid "Make Path Two-Way"
 msgstr "Crea percorso a due sensi"
 
-#: plugins/mapper/cmapmanager.cpp:1654
+#: plugins/mapper/cmapmanager.cpp:1653
 #, kde-format
 msgid "Make Path One-Way"
 msgstr "Crea percorso a senso unico"
 
-#: plugins/mapper/cmapmanager.cpp:1690 plugins/mapper/cmapmanager.cpp:1699
+#: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
 #, kde-format
 msgid "Change Element Property"
 msgstr "Cambia proprietà elemento"
 
-#: plugins/mapper/cmapmanager.cpp:1772
+#: plugins/mapper/cmapmanager.cpp:1771
 #, kde-format
 msgid "Root Zone"
 msgstr "Zona root"
 
-#: plugins/mapper/cmapmanager.cpp:1788
+#: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 1"
 msgstr "Stanza test 1"
 
-#: plugins/mapper/cmapmanager.cpp:1791
+#: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 2"
 msgstr "Stanza test 2"
 
-#: plugins/mapper/cmapmanager.cpp:1794
+#: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 3"
 msgstr "Stanza test 3"
 
-#: plugins/mapper/cmapmanager.cpp:1797
+#: plugins/mapper/cmapmanager.cpp:1796
 #, kde-format
 msgid "Test room 4"
 msgstr "Stanza test 4"
 
-#: plugins/mapper/cmapmanager.cpp:1813
+#: plugins/mapper/cmapmanager.cpp:1812
 #, kde-format
 msgid "Set Special Exit"
 msgstr "Imposta uscita speciale"
 
-#: plugins/mapper/cmappath.cpp:604 plugins/mapper/cmapview.cpp:686
+#: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
 msgstr "Aggiungi curva"
 
-#: plugins/mapper/cmappath.cpp:616
+#: plugins/mapper/cmappath.cpp:615
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
 msgstr "Sposta curva"
 
-#: plugins/mapper/cmappath.cpp:631 plugins/mapper/cmapview.cpp:704
+#: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
 msgstr "Elimina segmento percorso"
 
-#: plugins/mapper/cmapview.cpp:54 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
 #, kde-format
 msgid "Mapper"
 msgstr "Creatore di mappe"
 
-#: plugins/mapper/cmapview.cpp:81
+#: plugins/mapper/cmapview.cpp:79
 #, kde-format
 msgid "Follow Moves"
 msgstr "Segui le mosse"
 
-#: plugins/mapper/cmapview.cpp:87
+#: plugins/mapper/cmapview.cpp:85
 #, kde-format
 msgid "Auto Create"
 msgstr "Crea automaticamente"
 
-#: plugins/mapper/cmapview.cpp:124
+#: plugins/mapper/cmapview.cpp:122
 #, kde-format
 msgid "&Grid"
 msgstr "&Griglia"
 
-#: plugins/mapper/cmapview.cpp:129
+#: plugins/mapper/cmapview.cpp:127
 #, kde-format
 msgid "Display Upper Level"
 msgstr "Mostra livello superiore"
 
-#: plugins/mapper/cmapview.cpp:134
+#: plugins/mapper/cmapview.cpp:132
 #, kde-format
 msgid "Display Lower Level"
 msgstr "Mostra livello inferiore"
 
-#: plugins/mapper/cmapview.cpp:139
+#: plugins/mapper/cmapview.cpp:137
 #, kde-format
 msgid "Delete Current Level"
 msgstr "Elimina livello attuale"
 
-#: plugins/mapper/cmapview.cpp:144
+#: plugins/mapper/cmapview.cpp:142
 #, kde-format
 msgid "Create New Zone"
 msgstr "Crea nuova zona"
 
-#: plugins/mapper/cmapview.cpp:149
+#: plugins/mapper/cmapview.cpp:147
 #, kde-format
 msgid "Delete Current Zone"
 msgstr "Elimina zona attuale"
 
-#: plugins/mapper/cmapview.cpp:156
+#: plugins/mapper/cmapview.cpp:154
 #, kde-format
 msgid "Map Upper Level"
 msgstr "Mappa livello superiore"
 
-#: plugins/mapper/cmapview.cpp:160
+#: plugins/mapper/cmapview.cpp:158
 #, kde-format
 msgid "Map Lower Level"
 msgstr "Mappa livello inferiore"
 
-#: plugins/mapper/cmapview.cpp:167
+#: plugins/mapper/cmapview.cpp:165
 #, kde-format
 msgid "Set &Current Position"
 msgstr "Imposta posizione a&ttuale"
 
-#: plugins/mapper/cmapview.cpp:171
+#: plugins/mapper/cmapview.cpp:169
 #, kde-format
 msgid "Set Room to &Login Point"
 msgstr "Imposta stanza al punto di &accesso"
 
-#: plugins/mapper/cmapview.cpp:175
+#: plugins/mapper/cmapview.cpp:173
 #, kde-format
 msgid "&Speed walk to room"
 msgstr "&Marcia alla stanza"
 
-#: plugins/mapper/cmapview.cpp:179
+#: plugins/mapper/cmapview.cpp:177
 #, kde-format
 msgid "&Delete room"
 msgstr "&Elimina stanza"
 
-#: plugins/mapper/cmapview.cpp:184 plugins/mapper/cmapview.cpp:196
-#: plugins/mapper/cmapview.cpp:228
+#: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
+#: plugins/mapper/cmapview.cpp:226
 #, kde-format
 msgid "&Properties"
 msgstr "&Proprietà"
 
-#: plugins/mapper/cmapview.cpp:191
+#: plugins/mapper/cmapview.cpp:189
 #, kde-format
 msgid "&Delete Text"
 msgstr "&Elimina testo"
 
-#: plugins/mapper/cmapview.cpp:203
+#: plugins/mapper/cmapview.cpp:201
 #, kde-format
 msgid "&One way"
 msgstr "Senso &unico"
 
-#: plugins/mapper/cmapview.cpp:207
+#: plugins/mapper/cmapview.cpp:205
 #, kde-format
 msgid "&Two way"
 msgstr "&Due sensi"
 
-#: plugins/mapper/cmapview.cpp:211
+#: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
 msgstr "&Aggiungi curva"
 
-#: plugins/mapper/cmapview.cpp:215
+#: plugins/mapper/cmapview.cpp:213
 #, kde-format
 msgid "&Remove Segment"
 msgstr "&Rimuovi segmento"
 
-#: plugins/mapper/cmapview.cpp:219
+#: plugins/mapper/cmapview.cpp:217
 #, kde-format
 msgid "&Edit Bends"
 msgstr "&Modifica curve"
 
-#: plugins/mapper/cmapview.cpp:223
+#: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
 msgstr "&Elimina percorso"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
-#: plugins/mapper/cmapview.cpp:233
+#: plugins/mapper/cmapview.cpp:231
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
 #, kde-format
 msgid "Hide"
 msgstr "Nascondi"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
-#: plugins/mapper/cmapview.cpp:242
+#: plugins/mapper/cmapview.cpp:240
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
 #, kde-format
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: plugins/mapper/cmapview.cpp:245
+#: plugins/mapper/cmapview.cpp:243
 #, kde-format
 msgid "&Label"
 msgstr "&Etichetta"
 
-#: plugins/mapper/cmapview.cpp:586
+#: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "Non vi sono livelli in quella direzione. Vuoi crearne uno nuovo?"
 
-#: plugins/mapper/cmapview.cpp:608
+#: plugins/mapper/cmapview.cpp:584
+#, fuzzy, kde-format
+#| msgid "Create Level"
+msgid "Create New Level"
+msgstr "Crea livello"
+
+#: plugins/mapper/cmapview.cpp:606
 #, kde-format
 msgid "Are you sure that you want to delete the current level?"
 msgstr "Vuoi davvero eliminare il livello attuale?"
 
-#: plugins/mapper/cmapview.cpp:615
+#: plugins/mapper/cmapview.cpp:613
 #, kde-format
 msgid "Please enter the name of the new zone:"
 msgstr "Inserisci il nome della nuova zona:"
 
-#: plugins/mapper/cmapview.cpp:624
+#: plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
@@ -4467,12 +4475,12 @@ msgstr ""
 "Vuoi davvero eliminare la zona attuale? Quest'azione non può essere "
 "annullata."
 
-#: plugins/mapper/cmapview.cpp:761
+#: plugins/mapper/cmapview.cpp:759
 #, kde-format
 msgid "Change room label position"
 msgstr "Cambia posizione etichetta stanza"
 
-#: plugins/mapper/cmapview.cpp:787
+#: plugins/mapper/cmapview.cpp:785
 #, kde-format
 msgid "Change zone label position"
 msgstr "Cambia posizione etichetta zona"
@@ -4497,7 +4505,7 @@ msgstr "Zona: "
 msgid "Unnamed Zone"
 msgstr "Zona senza nome"
 
-#: plugins/mapper/cmapzonemanager.cpp:231
+#: plugins/mapper/cmapzonemanager.cpp:232
 #, kde-format
 msgid "This is not a KMuddy map list."
 msgstr "Quest'elenco non è una mappa di KMuddy."
@@ -4706,16 +4714,11 @@ msgstr "Nord-ovest"
 msgid "Short Directions Commands"
 msgstr "Comandi direzioni brevi"
 
-#: plugins/mapper/dialogs/dlgmapmovement.cpp:108
-#: plugins/mapper/dialogs/dlgmapmovement.cpp:143
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
 #, kde-format
 msgid "Enter invalid movement string as a regular expression"
 msgstr "Inserisci stringa di movimento non valido come espressione regolare"
-
-#: plugins/mapper/dialogs/dlgmapmovement.cpp:143
-#, kde-format
-msgid "Kmud"
-msgstr "Kmud"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
@@ -4753,8 +4756,8 @@ msgstr "Modifica"
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: plugins/mapper/dialogs/dlgmappathproperties.cpp:297
-#: plugins/mapper/dialogs/dlgmappathproperties.cpp:299
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:298
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
 #, kde-format
 msgid "Changed Path Properties"
 msgstr "Proprietà percorso modificate"
@@ -4951,7 +4954,7 @@ msgid "Cancel"
 msgstr "Annulla"
 
 #: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
-#: plugins/mapper/dialogs/dlgmaptextproperties.cpp:223
+#: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
 msgstr "Proprietà stanza modificate"
@@ -5180,7 +5183,7 @@ msgstr "Imposta dimensione"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
-#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:34
+#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
 msgstr "Testo"
@@ -5246,7 +5249,7 @@ msgstr "Note"
 msgid "Notes:"
 msgstr "Note:"
 
-#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:58
+#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:57
 #, kde-format
 msgid "Eraser"
 msgstr "Gomma"
@@ -5446,10 +5449,13 @@ msgstr "Attivatori variabili"
 msgid "Variable"
 msgstr "Variabile"
 
-#: plugins/varviewer/dlgvarviewer.cpp:140
+#: plugins/varviewer/dlgvarviewer.cpp:141
 #, kde-format
 msgid "Variables"
 msgstr "Variabili"
+
+#~ msgid "Kmud"
+#~ msgstr "Kmud"
 
 #~ msgid "WWW"
 #~ msgstr "WWW"
