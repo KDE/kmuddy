@@ -2,10 +2,34 @@
 IconName=kmuddy
 DesktopEntry=org.kde.kmuddy
 Comment=KMuddy
+Comment[ca]=KMuddy
+Comment[ca@valencia]=KMuddy
+Comment[eo]=KMuddy
+Comment[nl]=KMuddy
+Comment[sl]=KMuddy
+Comment[tr]=KMuddy
+Comment[uk]=KMuddy
+Comment[x-test]=xxKMuddyxx
 
 [Event/Activity]
 Name=New Text Received
+Name[ca]=S'ha rebut text nou
+Name[ca@valencia]=S'ha rebut text nou
+Name[eo]=Ricevis Novan Tektson
+Name[nl]=Nieuwe tekst ontvangen
+Name[sl]=Prejeto novo besedilo
+Name[tr]=Yeni Metin Alındı
+Name[uk]=Отримано новий текст
+Name[x-test]=xxNew Text Receivedxx
 Comment=A new text has been received in an active session.
+Comment[ca]=S'ha rebut un text nou en una sessió activa.
+Comment[ca@valencia]=S'ha rebut un text nou en una sessió activa.
+Comment[eo]=Nova tektso estis ricevita en aktiva seanco.
+Comment[nl]=Een nieuwe tekst is in een actieve sessie ontvangen.
+Comment[sl]=V aktivni seji je bilo prejeto novo besedilo.
+Comment[tr]=Etkin bir oturumda yeni bir metin alındı.
+Comment[uk]=В активному сеансі отримано новий текст.
+Comment[x-test]=xxA new text has been received in an active session.xx
 Action=None
 Urgency=Low
 
