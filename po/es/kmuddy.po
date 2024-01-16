@@ -7,13 +7,13 @@
 #
 # Antonio J. Soler Sánchez <redtony@telefonica.net>, 2004.
 # Kira J. Fernandez <kirajfdez@gmail.com>, 2011.
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2023-09-03 22:27+0200\n"
+"PO-Revision-Date: 2024-01-15 03:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kira J. Fernández"
+msgstr "Eloy Cuadra,Kira J. Fernández"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kirajfdez@gmail.com"
+msgstr "ecuadra@eloihr.net,kirajfdez@gmail.com"
 
 #: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
 #: kmuddy/cstatusvareditor.cpp:70
@@ -112,16 +112,14 @@ msgid "Disconnect"
 msgstr "Desconectar"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Sin conexión"
+msgstr "Cerrar conexión"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Conectado"
+msgstr "Permanecer conectado"
 
 #: kmuddy/cconnection.cpp:510
 #, kde-format
@@ -1311,7 +1309,7 @@ msgid ""
 "presence of activity in one of your connections. "
 msgstr ""
 "Esta opción activa o desactiva el uso de ventanas emergentes pasivas. Estas "
-"aparecen cerca del icono de la bandeja del sistema cuando usted está en otra "
+"aparecen cerca del icono de la bandeja del sistema cuando esté en otra "
 "ventana y le avisan de la presencia de actividad en una de sus conexiones."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:151
@@ -1364,9 +1362,7 @@ msgstr "Color de &eco local"
 #: kmuddy/dialogs/dlgappsettings.cpp:206
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
-msgstr ""
-"Este color se utilizará para mostrar el eco de los comandos introducidos por "
-"usted."
+msgstr "Este color se usará para mostrar el eco de las órdenes introducidas."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
@@ -1954,7 +1950,7 @@ msgstr "Duplicar perfil"
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Please enter name for the duplicated profile"
-msgstr "Por favor, introduzca un nombre para el perfil duplicado"
+msgstr "Introduzca un nombre para el perfil duplicado"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1962,8 +1958,8 @@ msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
 "have write access to the profile directory."
 msgstr ""
-"Ha habido un error al intentar duplicar el perfil. Por favor, asegúrese de "
-"que tiene permisos de escritura en el directorio de perfiles."
+"Ha habido un error al intentar duplicar el perfil. Asegúrese de que tiene "
+"permisos de escritura en el directorio de perfiles."
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -2057,8 +2053,7 @@ msgid "&Port:"
 msgstr "&Puerto:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
-#, fuzzy, kde-format
-#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
 "Introduzca el puerto en el que se está ejecutando MUD (habitualmente un "
@@ -2104,9 +2099,9 @@ msgid ""
 msgstr ""
 "Órdenes que se envían a MUD después del inicio de sesión.<br><b>$name</b> se "
 "expande al nombre de usuario.<br><b>$password</b> se expande a su contraseña."
-"<p><b>Importante:</b> estas órdenes se envían tal como usted las teclea, con "
-"los espacios iniciales y finales eliminados. Sin alias, ni macros, ni "
-"atajos. Tenga en cuenta también que también se envían las líneas en blanco, "
+"<p><b>Importante:</b> estas órdenes se envían tal como se teclean, con los "
+"espacios iniciales y finales eliminados. Sin alias, ni macros, ni atajos. "
+"Tenga en cuenta también que también se envían las líneas en blanco, "
 "incluyendo la última."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:180
@@ -3099,7 +3094,7 @@ msgstr "Para reconectar, presione %1 o use Conexión / Reconectar."
 #: kmuddy/kmuddy.cpp:992
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Actividad en la ventana de KMuddy"
 
 #: kmuddy/kmuddy.cpp:1164
 #, kde-format
@@ -3854,13 +3849,12 @@ msgstr "Crear grupo"
 #: libs/clistviewer.cpp:192
 #, kde-format
 msgid "Please enter the group name:"
-msgstr "Por favor, introduzca el nombre del grupo:"
+msgstr "Introduzca el nombre del grupo:"
 
 #: libs/clistviewer.cpp:196
-#, fuzzy, kde-format
-#| msgid "Cannot create the group, as a group with this name already exists."
+#, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr "No se puede crear el grupo. Ya existe un grupo con ese nombre."
+msgstr "No se puede crear el grupo. El nombre proporcionado no es válido."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
@@ -4458,10 +4452,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "No existe ningún nivel en esa dirección. ¿Desea crear uno nuevo?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Crear nivel"
+msgstr "Crear nuevo nivel"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -4471,7 +4464,7 @@ msgstr "¿Seguro que desea borrar el nivel actual?"
 #: plugins/mapper/cmapview.cpp:613
 #, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr "Por favor, introduzca el nombre de la nueva zona:"
+msgstr "Introduzca el nombre de la nueva zona:"
 
 #: plugins/mapper/cmapview.cpp:622
 #, kde-format

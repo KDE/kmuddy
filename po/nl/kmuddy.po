@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2024-01-14 14:21+0100\n"
+"PO-Revision-Date: 2024-01-15 10:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -4452,10 +4452,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "Er is in die richting geen niveau, Wilt u een nieuw niveau aanmaken?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Niveau aanmaken"
+msgstr "Nieuw niveau aanmaken"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format

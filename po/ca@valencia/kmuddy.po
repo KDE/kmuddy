@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2024-01-14 11:26+0100\n"
+"PO-Revision-Date: 2024-01-15 10:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -4457,10 +4457,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "No hi ha cap nivell en esta direcció. Voleu crear-ne un de nou?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Crea un nivell"
+msgstr "Crea un nivell nou"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -5460,6 +5459,3 @@ msgstr "Variable"
 #, kde-format
 msgid "Variables"
 msgstr "Variables"
-
-#~ msgid "Kmud"
-#~ msgstr "Kmud"
