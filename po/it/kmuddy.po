@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kmuddy package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2023-08-05 12:52+0200\n"
+"PO-Revision-Date: 2024-01-15 19:24+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -107,16 +107,14 @@ msgid "Disconnect"
 msgstr "Disconnetti"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Nessuna connessione"
+msgstr "Chiudi la connessione"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Connesso"
+msgstr "Rimani connesso"
 
 #: kmuddy/cconnection.cpp:510
 #, kde-format
@@ -1021,6 +1019,13 @@ msgid ""
 "other options will NOT be taken into effect - prompt-detect trigger cannot "
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
+"Abilitare questa opzione trasformerà questo attivatore in uno di rilevamento "
+"richiesta, ossia: il testo sarà passato a questi attivatori anche se non è "
+"stata ricevuta alcuna istruzione di ritorno a capo, il testo sarà "
+"visualizzato come avviso se l'attivatore concorda, e la maggior parte delle "
+"altre opzioni NON sarà applicata (l'attivatore di avviso rilevamento non "
+"potrà inviare testo, imbavagliare righe, fare notifiche). La colorazione è "
+"ancora possibile."
 
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
@@ -2050,8 +2055,7 @@ msgid "&Port:"
 msgstr "&Porta:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
-#, fuzzy, kde-format
-#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
 "Inserisci la porta in cui il tuo MUD è in esecuzione (in genere è un numero "
@@ -3091,7 +3095,7 @@ msgstr "Per ricollegarti, premi %1 o usa Connessione / Riconnetti."
 #: kmuddy/kmuddy.cpp:992
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Attività nella finestra di KMuddy"
 
 #: kmuddy/kmuddy.cpp:1164
 #, kde-format
@@ -3849,10 +3853,9 @@ msgid "Please enter the group name:"
 msgstr "Inserisci il nome del gruppo:"
 
 #: libs/clistviewer.cpp:196
-#, fuzzy, kde-format
-#| msgid "Cannot create the group, as a group with this name already exists."
+#, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr "Impossibile creare il gruppo, esiste già un gruppo con questo nome."
+msgstr "Impossibile creare il gruppo, il nome fornito non è valido."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
@@ -4452,10 +4455,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "Non vi sono livelli in quella direzione. Vuoi crearne uno nuovo?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Crea livello"
+msgstr "Crea nuovo livello"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
