@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2024-01-13 06:02\n"
+"PO-Revision-Date: 2024-01-21 14:14\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -102,16 +102,14 @@ msgid "Disconnect"
 msgstr "断开"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "无连接"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "已连接"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:510
 #, kde-format
@@ -4163,10 +4161,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr ""
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "创建关卡"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -5141,15 +5138,3 @@ msgstr "浮动"
 #, kde-format
 msgid "Variables"
 msgstr "变量"
-
-#~ msgid "Kmud"
-#~ msgstr "Kmud"
-
-#~ msgid "WWW"
-#~ msgstr "WWW"
-
-#~ msgid "IP"
-#~ msgstr "IP"
-
-#~ msgid "&Filter:"
-#~ msgstr "过滤(&F)："
