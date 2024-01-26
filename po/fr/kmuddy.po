@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013, 2020, 2021.
+# SPDX-FileCopyrightText: 2013, 2020, 2021, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-15 01:37+0000\n"
-"PO-Revision-Date: 2023-02-17 18:37+0100\n"
+"PO-Revision-Date: 2024-01-23 14:08+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: fr\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -111,16 +111,14 @@ msgid "Disconnect"
 msgstr "Se déconnecter"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Aucune connexion"
+msgstr "Fermer la connexion"
 
 #: kmuddy/cconnection.cpp:426
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Connecté"
+msgstr "Rester connecté"
 
 #: kmuddy/cconnection.cpp:510
 #, kde-format
@@ -2085,11 +2083,10 @@ msgid "&Port:"
 msgstr "&Port :"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
-#, fuzzy, kde-format
-#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
-"Saisissez un numéro de port sur lequel votre « MUD » s'exécute (en général, "
+"Saisissez un numéro de port sur lequel votre « MUD » s'exécute (En général, "
 "un nombre à 4 chiffres)."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:55
@@ -3136,7 +3133,7 @@ msgstr ""
 #: kmuddy/kmuddy.cpp:992
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Activité dans la fenêtre de KMuddy"
 
 #: kmuddy/kmuddy.cpp:1164
 #, kde-format
@@ -3904,10 +3901,10 @@ msgid "Please enter the group name:"
 msgstr "Veuillez saisir le nom du groupe:"
 
 #: libs/clistviewer.cpp:196
-#, fuzzy, kde-format
-#| msgid "Cannot create the group, as a group with this name already exists."
+#, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr "Impossible de créer le groupe car un groupe de ce nom existe déjà."
+msgstr ""
+"Impossible de créer le groupe car le nom de groupe fourni est non valable."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
@@ -4512,10 +4509,9 @@ msgstr ""
 "niveau ?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Créer un niveau"
+msgstr "Créer un nouveau niveau"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
