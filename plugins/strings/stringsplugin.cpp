@@ -27,8 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 
-K_PLUGIN_FACTORY (cStringsPluginFactory, registerPlugin<cStringsPlugin>();)
-K_EXPORT_PLUGIN (cStringsPluginFactory("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cStringsPlugin, "stringsplugin.json")
 
     
 // all function implementations start here:

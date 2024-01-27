@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "Implements a mapper",
+        "Name": "Mapper",
+        "EnabledByDefault": true,
+        "License": "GPL"
+    }
+}
+

@@ -56,8 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 
-K_PLUGIN_FACTORY (cConverterPluginFactory, registerPlugin<cConverterPlugin>();)
-K_EXPORT_PLUGIN (cConverterPluginFactory("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cConverterPlugin, "converterplugin.json")
 
 
 // the main plug-in code which registers the functions:

@@ -271,8 +271,8 @@ void cPluginManager::showPluginsDialog ()
   pluginDialog->setLayout(mainLayout);
   pluginSelector = new KPluginWidget (pluginDialog);
   mainLayout->addWidget(pluginSelector);
-  pluginDialog->connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-  pluginDialog->connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+  pluginDialog->connect(buttonBox, &QDialogButtonBox::accepted, this, &cPluginManager::closeDialog);
+  pluginDialog->connect(buttonBox, &QDialogButtonBox::rejected, this, &cPluginManager::closeDialog);
   mainLayout->addWidget(buttonBox);
   pluginDialog->resize (QSize (400, 300));
 
@@ -298,6 +298,13 @@ void cPluginManager::applyPluginDialog ()
   // unload unwanted plug-ins, load newly wanted ones
   unloadUnwanted ();
   loadAll ();
+}
+
+void cPluginManager::closeDialog()
+{
+  pluginDialog->close();
+  delete pluginDialog;
+  pluginDialog = nullptr;
 }
 
 void cPluginManager::passSessionAdd (int sess)

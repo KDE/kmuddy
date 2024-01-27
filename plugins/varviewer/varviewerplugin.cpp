@@ -32,8 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 
-K_PLUGIN_FACTORY (cVarViewerPluginFactory, registerPlugin<cVarViewerPlugin>();)
-K_EXPORT_PLUGIN (cVarViewerPluginFactory("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cVarViewerPlugin, "varviewerplugin.json")
 
 struct cVarViewerPluginPrivate
 {

@@ -79,6 +79,7 @@ public slots:
 protected slots:
   /** apply settings from the plugins dialog */
   void applyPluginDialog ();
+  void closeDialog();
   
 protected:
   cPluginManager ();

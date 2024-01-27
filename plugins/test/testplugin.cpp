@@ -92,8 +92,7 @@ class cTestList : public cList {
 
 };
 
-K_PLUGIN_FACTORY (cTestPluginFactory, registerPlugin<cTestPlugin>();)
-K_EXPORT_PLUGIN (cTestPluginFactory("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cTestPlugin, "testplugin.json")
 
 cTestPlugin::cTestPlugin (QObject *, const QVariantList &)
 {

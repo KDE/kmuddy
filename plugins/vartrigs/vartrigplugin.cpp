@@ -31,8 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <kpluginloader.h>
 #include <KLocalizedString>
 
-K_PLUGIN_FACTORY (kmuddyvartrigplugin, registerPlugin<cVarTrigPlugin>();)
-K_EXPORT_PLUGIN (kmuddyvartrigplugin("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cVarTrigPlugin, "vartrigplugin.json")
 
 cVarTrigPlugin::cVarTrigPlugin (QObject *, const QVariantList &)
     : cActionBase ("vartrigplugin", 0)

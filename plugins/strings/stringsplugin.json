@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "Defines various string manipulation functions",
+        "Name": "Strings",
+        "EnabledByDefault": true,
+        "License": "GPL"
+    }
+}
+

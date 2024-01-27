@@ -46,8 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <map>
 
-K_PLUGIN_FACTORY (kmuddyscriptingplugin, registerPlugin<cScriptingPlugin>();)
-K_EXPORT_PLUGIN (kmuddyscriptingplugin("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(cScriptingPlugin, "scriptingplugin.json")
 
 
 // Macros exec and notify:

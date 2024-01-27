@@ -27,8 +27,7 @@
 #include <QDockWidget>
 #include <map>
 
-K_PLUGIN_FACTORY (KMuddyMapperFactory, registerPlugin<KMuddyMapper>();)
-K_EXPORT_PLUGIN (KMuddyMapperFactory("kmuddy"))
+K_PLUGIN_CLASS_WITH_JSON(KMuddyMapper, "mapperplugin.json")
 
 struct MapperSession {
   CMapManager *manager;

@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "Provides an interface for viewing variable values",
+        "Name": "Variable Viewer",
+        "EnabledByDefault": true,
+        "License": "GPL"
+    }
+}
+
