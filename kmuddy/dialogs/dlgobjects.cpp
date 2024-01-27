@@ -89,19 +89,19 @@ dlgObjects::dlgObjects (QWidget *parent)
   d->aUp = new QAction (this);
   d->aUp->setText (i18n ("Up"));
   d->aUp->setIcon (QIcon::fromTheme ("arrow-up"));
-  connect (d->aUp, SIGNAL (triggered()), d->viewer, SLOT (moveUp()));
+  connect (d->aUp, &QAction::triggered, d->viewer, &cListViewer::moveUp);
   d->aDown = new QAction(this);
   d->aDown->setText (i18n ("Down"));
   d->aDown->setIcon (QIcon::fromTheme ("arrow-down"));
-  connect (d->aDown, SIGNAL (triggered()), d->viewer, SLOT (moveDown()));
+  connect (d->aDown, &QAction::triggered, d->viewer, &cListViewer::moveDown);
   d->aLeft = new QAction (this);
   d->aLeft->setText (i18n ("Left"));
   d->aLeft->setIcon (QIcon::fromTheme ("arrow-left"));
-  connect (d->aLeft, SIGNAL (triggered()), d->viewer, SLOT (moveLeft()));
+  connect (d->aLeft, &QAction::triggered, d->viewer, &cListViewer::moveLeft);
   d->aRight = new QAction (this);
   d->aRight->setText (i18n ("Right"));
   d->aRight->setIcon (QIcon::fromTheme ("arrow-right"));
-  connect (d->aRight, SIGNAL (triggered()), d->viewer, SLOT (moveRight()));
+  connect (d->aRight, &QAction::triggered, d->viewer, &cListViewer::moveRight);
 
   KActionCollection *col = d->viewer->actionCollection ();
   d->toolbar->addAction (col->action ("AddGroup"));
@@ -127,9 +127,8 @@ dlgObjects::dlgObjects (QWidget *parent)
   mainLayout->addWidget (page);
   mainLayout->addWidget (buttons);
 
-  connect (d->lists, SIGNAL (currentIndexChanged (int)),
-      this, SLOT (listChanged (int)));
-  connect (d->viewer, SIGNAL (itemActivated (cListObject *)), this, SLOT (activeObjectChanged (cListObject *)));
+  connect (d->lists, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &dlgObjects::listChanged);
+  connect (d->viewer, &cListViewer::itemActivated, this, &dlgObjects::activeObjectChanged);
   connect (this, &QDialog::accepted, this, &dlgObjects::saveChanges);
   connect (this, &QDialog::rejected, this, &dlgObjects::saveChanges);
 

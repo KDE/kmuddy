@@ -156,8 +156,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   autoconnect = new QComboBox (frmwindow);
   lblac->setBuddy (autoconnect);
   autoconnect->setModel (cProfileManager::self()->model());
-  connect (chkautoconnect, SIGNAL (toggled (bool)), lblac, SLOT (setEnabled (bool)));
-  connect (chkautoconnect, SIGNAL (toggled (bool)), autoconnect, SLOT (setEnabled (bool)));
+  connect (chkautoconnect, &QCheckBox::toggled, lblac, &QLabel::setEnabled);
+  connect (chkautoconnect, &QCheckBox::toggled, autoconnect, &QLabel::setEnabled);
   
   // initial state
   chkautoconnect->setChecked (false);
@@ -274,7 +274,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   fonted1->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
   QPushButton *bfont1 = new QPushButton (i18n ("Choose..."), frmfont);
   fl1->setBuddy (bfont1);
-  connect (bfont1, SIGNAL (clicked()), this, SLOT (fontchooser1 ()));
+  connect (bfont1, &QPushButton::clicked, this, &dlgAppSettings::fontchooser1);
   QString serveroutput = i18n ("Here you can select a font that will be used for main display.");
   fonted1->setWhatsThis( serveroutput);
   bfont1->setWhatsThis( serveroutput);
@@ -284,7 +284,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   fonted2->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
   QPushButton *bfont2 = new QPushButton (i18n ("Choose..."), frmfont);
   fl2->setBuddy (bfont2);
-  connect (bfont2, SIGNAL (clicked()), this, SLOT (fontchooser2 ()));
+  connect (bfont2, &QPushButton::clicked, this, &dlgAppSettings::fontchooser2);
   QString inputline = i18n ("Here you can select a font that will be used for the input line.");
   fonted2->setWhatsThis( inputline);
   bfont2->setWhatsThis( inputline);
@@ -294,7 +294,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   fonted3->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
   QPushButton *bfont3 = new QPushButton (i18n ("Choose..."), frmfont);
   fl3->setBuddy (bfont3);
-  connect (bfont3, SIGNAL (clicked()), this, SLOT (fontchooser3 ()));
+  connect (bfont3, &QPushButton::clicked, this, &dlgAppSettings::fontchooser3);
   QString minputline = i18n ("Here you can select a font that will be used for the multi-line input window.");
   fonted3->setWhatsThis( minputline);
   bfont3->setWhatsThis( minputline);
@@ -323,7 +323,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
         "command will be selected. This allows you to immediately type another "
         "command without deleting the old one and still be able to reuse previous "
         "command easily."));
-  connect (chkkeeptext, SIGNAL (toggled (bool)), chkselectkepttext, SLOT (setEnabled (bool)));
+  connect (chkkeeptext, &QCheckBox::toggled, chkselectkepttext, &QCheckBox::setEnabled);
   chkarrowshistory = new QCheckBox (i18n ("&Cursor keys browse history"), frminput);
   chkarrowshistory->setWhatsThis( i18n ("If you enable this option, you "
         "will be able to choose previously entered commands with Up and Down keys."));
@@ -352,7 +352,7 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   comboactype->addItem (i18n ("Shortest-match auto-fill"));
   comboactype->addItem (i18n ("Popup list-box"));
   comboactype->setWhatsThis( autocompldesc);
-  connect (chkautocompletion, SIGNAL (toggled (bool)), comboactype, SLOT (setEnabled (bool)));
+  connect (chkautocompletion, &QCheckBox::toggled, comboactype, &QComboBox::setEnabled);
     //bg color
   QLabel *inputlabel2 = new QLabel (i18n ("&Background color"), inputcombos);
   comboinputbkcolor = new QComboBox (inputcombos);
@@ -534,8 +534,8 @@ dlgAppSettings::dlgAppSettings (QWidget *parent) : KPageDialog (parent)
   cActionManager::self()->invokeEvent ("dialog-create", 0, "app-prefs");
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (this, SIGNAL (accepted()), this, SLOT (getSettingsFromDialog()));
-  connect (button (QDialogButtonBox::Apply), SIGNAL (clicked()), this, SLOT (getSettingsFromDialog()));
+  connect (this, &dlgAppSettings::accepted, this, &dlgAppSettings::getSettingsFromDialog);
+  connect (button (QDialogButtonBox::Apply), &QPushButton::clicked, this, &dlgAppSettings::getSettingsFromDialog);
 }
 
 dlgAppSettings::~dlgAppSettings()
