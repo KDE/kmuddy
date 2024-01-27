@@ -270,6 +270,7 @@ void cPluginManager::showPluginsDialog ()
   QVBoxLayout *mainLayout = new QVBoxLayout;
   pluginDialog->setLayout(mainLayout);
   pluginSelector = new KPluginWidget (pluginDialog);
+  pluginSelector->setConfig(pluginConfig);
   mainLayout->addWidget(pluginSelector);
   pluginDialog->connect(buttonBox, &QDialogButtonBox::accepted, this, &cPluginManager::closeDialog);
   pluginDialog->connect(buttonBox, &QDialogButtonBox::rejected, this, &cPluginManager::closeDialog);
@@ -283,9 +284,8 @@ void cPluginManager::showPluginsDialog ()
   map<QString, KPluginMetaData>::iterator itp;
   for (itp = pluginInfo.begin(); itp != pluginInfo.end(); ++itp)
     list.append (itp->second);
-  pluginSelector->addPlugins (list, QString());
-  // TODO - set up the config file and group
-  // pluginSelector->load ();
+  pluginSelector->addPlugins (list, QString("KMuddy"));
+  pluginSelector->load();
 
   pluginDialog->exec ();
 
@@ -296,6 +296,7 @@ void cPluginManager::showPluginsDialog ()
 void cPluginManager::applyPluginDialog ()
 {
   // unload unwanted plug-ins, load newly wanted ones
+  pluginSelector->save();
   unloadUnwanted ();
   loadAll ();
 }
