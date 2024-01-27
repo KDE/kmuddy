@@ -74,8 +74,8 @@ cListEditor::cListEditor (QWidget *parent)
 
   QPushButton *saveButton = new QPushButton (i18n ("&Apply changes"), buttonBar);
   QPushButton *undoButton = new QPushButton (i18n ("&Undo changes"), buttonBar);
-  connect (saveButton, SIGNAL (clicked()), this, SLOT (saveClicked ()));
-  connect (undoButton, SIGNAL (clicked()), this, SLOT (undoClicked ()));
+  connect (saveButton, &QPushButton::clicked, this, &cListEditor::saveClicked);
+  connect (undoButton, &QPushButton::clicked, this, &cListEditor::undoClicked);
   
   layout->addWidget (d->centralBar);
   layout->addWidget (buttonBar);
@@ -93,7 +93,7 @@ cListEditor::~cListEditor ()
 void cListEditor::setObject (cListObject *obj)
 {
   if (d->obj) {
-    disconnect (d->obj, SIGNAL (changed (cListObject *)), this, SLOT (objectChanged (cListObject *)));
+    disconnect (d->obj, &cListObject::changed, this, &cListEditor::objectChanged);
     d->obj = nullptr;
   }
 
@@ -106,7 +106,7 @@ void cListEditor::setObject (cListObject *obj)
 
   d->obj = obj;
   d->objNum = cListManager::self()->objectId (obj);
-  connect (d->obj, SIGNAL (changed (cListObject *)), this, SLOT (objectChanged (cListObject *)));
+  connect (d->obj, &cListObject::changed, this, &cListEditor::objectChanged);
   loadDataFromObject ();
   fillGUI (d->data);
 }

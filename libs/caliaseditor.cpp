@@ -214,13 +214,13 @@ void cAliasEditor::createGUI(QWidget *parent)
 
 
   //make testarea work!
-  connect (d->text, SIGNAL (textChanged (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->cmd, SIGNAL (textChanged (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->rcmd, SIGNAL (textChanged ()), this, SLOT (updateTest ()));
-  connect (d->type, SIGNAL (activated (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->check3, SIGNAL (toggled(bool)), this, SLOT (updateTest (bool)));
-  connect (d->check2, SIGNAL (toggled(bool)), this, SLOT (updateTest (bool)));
-  connect (d->check4, SIGNAL (toggled(bool)), this, SLOT (updateTest (bool)));
+  connect (d->text, &QLineEdit::textChanged, this, &cAliasEditor::updateTest);
+  connect (d->cmd, &QLineEdit::textChanged, this, &cAliasEditor::updateTest);
+  connect (d->rcmd, &KTextEdit::textChanged, this, &cAliasEditor::updateTest);
+  connect (d->type, QOverload<int>::of(&QComboBox::activated), this, &cAliasEditor::updateTest);
+  connect (d->check3, &QCheckBox::toggled, this, &cAliasEditor::updateTest);
+  connect (d->check2, &QCheckBox::toggled, this, &cAliasEditor::updateTest);
+  connect (d->check4, &QCheckBox::toggled, this, &cAliasEditor::updateTest);
 
 
   tabs->addTab (basicTab, i18n ("&Basic"));
@@ -229,17 +229,6 @@ void cAliasEditor::createGUI(QWidget *parent)
 }
 
 void cAliasEditor::updateTest ()
-{
-  updateTest (QString());
-}
-
-void cAliasEditor::updateTest (bool)
-{
-  //this slot is activated when WholeWords status changed in alias mode
-  updateTest (QString());
-}
-
-void cAliasEditor::updateTest (const QString &)
 {
   QString txt = d->text->text();
   // pattern used to test

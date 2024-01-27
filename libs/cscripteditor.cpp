@@ -45,8 +45,8 @@ cScriptEditor::cScriptEditor (QWidget *parent) : QWidget (parent)
   d->scriptError = new QLabel (this);
   d->scriptChecker = new QTimer (this);
   d->scriptChecker->setSingleShot (true);
-  connect (d->script, SIGNAL (textChanged()), this, SLOT (timedCheckScript()));
-  connect (d->scriptChecker, SIGNAL (timeout()), this, SLOT (checkScript()));
+  connect (d->script, &KTextEdit::textChanged, this, &cScriptEditor::timedCheckScript);
+  connect (d->scriptChecker, &QTimer::timeout, this, &cScriptEditor::checkScript);
 
   scriptlayout->setSpacing (10);
   scriptlayout->addWidget (d->script);

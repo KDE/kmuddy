@@ -46,7 +46,7 @@ class cCompletion : public KCompletion {
 cInputLine::cInputLine (int sess, QString objName, QWidget *parent)
 : KLineEdit(parent), cActionBase (objName, sess)
 {
-  connect (this, SIGNAL (returnKeyPressed (const QString &)), this, SLOT (handleEnter (const QString &)));
+  connect (this, &cInputLine::returnKeyPressed, this, &cInputLine::handleEnter);
 
   //default values for selection
   ss = sl = 0;

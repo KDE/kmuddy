@@ -31,7 +31,7 @@ cCmdQueues::cCmdQueues (int sess)
  : QObject (), cActionBase ("cmdqueues", sess)
 {
   waitTimer = new QTimer;
-  connect (waitTimer, SIGNAL (timeout ()), this, SLOT (timeout ()));
+  connect (waitTimer, &QTimer::timeout, this, &cCmdQueues::timeout);
   
   // this must react BEFORE the triggers ! Other wise we'll get weird results with queues that
   // are invoked from a trigger and want to wait for the same pattern that invoked the trigger

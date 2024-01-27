@@ -46,7 +46,7 @@ cSoundPlayer::~cSoundPlayer()
 
 void cSoundPlayer::init ()
 {
-  connect (&d->player, SIGNAL (stateChanged(QMediaPlayer::State)), this, SLOT (stateChanged(QMediaPlayer::State)));
+  connect (&d->player, &QMediaPlayer::stateChanged, this, &cSoundPlayer::stateChanged);
 }
 
 bool cSoundPlayer::isPlaying ()

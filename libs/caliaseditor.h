@@ -37,8 +37,6 @@ class KMUDDY_EXPORT cAliasEditor : public cListEditor {
   void fillGUI (const cListObjectData &data) override;
   void getDataFromGUI (cListObjectData *data) override;
  protected slots:
-  void updateTest (const QString &);
-  void updateTest (bool);
   void updateTest ();
  protected:
   struct Private;

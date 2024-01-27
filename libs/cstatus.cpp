@@ -58,8 +58,8 @@ cStatus::cStatus (int sess, QStatusBar *statusbar)
   timing = false;
   timer = new QTimer;
   timer1 = new QTimer;
-  connect (timer, SIGNAL (timeout ()), this, SLOT (timerTick ()));
-  connect (timer1, SIGNAL (timeout ()), this, SLOT (timer1Tick ()));
+  connect (timer, &QTimer::timeout, this, &cStatus::timerTick);
+  connect (timer1, &QTimer::timeout, this, &cStatus::timer1Tick);
   timer->start (1000);
 
   timerTick ();

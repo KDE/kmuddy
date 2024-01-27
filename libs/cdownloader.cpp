@@ -57,11 +57,10 @@ void cDownloader::download (QString remoteURL, QString localFile)
   QUrl url2;
   url2.setPath (localFile);
   currentJob = KIO::file_copy (url1, url2);
-  connect (currentJob, SIGNAL (result (KIO::Job *)), this,
-        SLOT (slotResult (KIO::Job *)));
+  connect (currentJob, &KJob::result, this, &cDownloader::slotResult);
 }
 
-void cDownloader::slotResult (KIO::Job *job)
+void cDownloader::slotResult (KJob *job)
 {
   //download complete or failed or something
   int error = job->error ();

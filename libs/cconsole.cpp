@@ -229,8 +229,8 @@ cConsole::cConsole(QWidget *parent) : QGraphicsView(parent) {
   setVerticalScrollBarPolicy (Qt::ScrollBarAlwaysOn);
 
   //and connect() slider so that aconsole is shown/hidden as needed
-  connect (verticalScrollBar (), SIGNAL (sliderMoved (int)), this, SLOT (sliderChanged (int)));
-  connect (verticalScrollBar (), SIGNAL (valueChanged (int)), this, SLOT (sliderChanged (int)));
+  connect (verticalScrollBar (), &QScrollBar::sliderMoved, this, &cConsole::sliderChanged);
+  connect (verticalScrollBar (), &QScrollBar::valueChanged, this, &cConsole::sliderChanged);
     
   d->text = new QTextDocument;
   d->text->setUndoRedoEnabled (false);

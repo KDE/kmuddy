@@ -50,12 +50,9 @@ cOutput::cOutput (int sess, QWidget *parent) : QWidget(parent), cActionBase ("ou
   setFocusPolicy (Qt::NoFocus);
 
   // connect cConsole to us ...
-  connect (con, SIGNAL (dimensionsChanged (int, int)), this,
-      SLOT (dimensionsChanged (int, int)));
-  connect (con, SIGNAL (sendCommand (const QString &)), this,
-      SLOT (sendCommand (const QString &)));
-  connect (con, SIGNAL (promptCommand (const QString &)), this,
-      SLOT (promptCommand (const QString &)));
+  connect (con, &cConsole::dimensionsChanged, this, &cOutput::dimensionsChanged);
+  connect (con, &cConsole::sendCommand, this, &cOutput::sendCommand);
+  connect (con, &cConsole::promptCommand, this, &cOutput::promptCommand);
 
   // react on events
   addEventHandler ("display-line", 20, PT_TEXTCHUNK);

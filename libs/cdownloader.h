@@ -26,8 +26,7 @@
 
 class cMSP;
 
-//forward declaration for KIO::Job
-namespace KIO { class Job; }
+class KJob;
 
 /**
 Class used to download stuff.
@@ -44,10 +43,10 @@ public:
   void reset ();
   void download (QString remoteURL, QString localFile);
 protected slots:
-  void slotResult (KIO::Job *job);
+  void slotResult (KJob *job);
 protected:
   cMSP *msp;
-  KIO::Job *currentJob;
+  KJob *currentJob;
 };
 
 #endif  //CDOWNLOADER_H
