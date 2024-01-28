@@ -373,9 +373,9 @@ void cTriggerEditor::createGUI(QWidget *parent)
   colorlayout->addWidget (d->chkiscolor);
   colorlayout->addWidget (colorgroup);
 
-  connect (d->chkiscolor, SIGNAL (toggled (bool)), colorgroup, SLOT (setEnabled (bool)));
-  connect (btadd, SIGNAL (clicked ()), this, SLOT (addColorization ()));
-  connect (btremove, SIGNAL (clicked ()), this, SLOT (removeColorization ()));
+  connect (d->chkiscolor, &QCheckBox::toggled, colorgroup, &QGroupBox::setEnabled);
+  connect (btadd, &QPushButton::clicked, this, &cTriggerEditor::addColorization);
+  connect (btremove, &QPushButton::clicked, this, &cTriggerEditor::removeColorization);
   d->chkiscolor->setChecked (false);
   colorgroup->setEnabled (false);
 
@@ -384,7 +384,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   QVBoxLayout *rewritelayout = new QVBoxLayout (rewritePage);
   
   d->chkrewrite = new QCheckBox (i18n ("Text &rewrite trigger"), rewritePage);
-  connect (d->chkrewrite, SIGNAL (toggled (bool)), this, SLOT (rewriteChanged (bool)));
+  connect (d->chkrewrite, &QCheckBox::toggled, this, &cTriggerEditor::rewriteChanged);
 
   QGroupBox *rewritegroup = new QGroupBox (i18n ("Rewrite text"), rewritePage);
   QGridLayout *rewritegrouplayout = new QGridLayout (rewritegroup);
@@ -411,7 +411,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   rewritegrouplayout->addWidget (new QWidget (rewritegroup), 3, 0);
   rewritegrouplayout->setRowStretch (3, 0);
   
-  connect (d->chkrewrite, SIGNAL (toggled (bool)), rewritegroup, SLOT (setEnabled (bool)));
+  connect (d->chkrewrite, &QCheckBox::toggled, rewritegroup, &QGroupBox::setEnabled);
   d->chkrewrite->setChecked (false);
   rewritegroup->setEnabled (false);
   
@@ -447,7 +447,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
     "events."));
   d->edsoundname = new QLineEdit (specialPage);
   QPushButton *button = new QPushButton ("&Browse...", specialPage);
-  connect (button, SIGNAL (clicked ()), this, SLOT (browseForSoundFile ()));
+  connect (button, &QPushButton::clicked, this, &cTriggerEditor::browseForSoundFile);
 
   speciallayout->setSpacing (10);
   speciallayout->addWidget (d->chkgag, 0, 0);
@@ -466,7 +466,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   
   QGroupBox *outwindow = new QGroupBox(i18n ("Output Windows"), windowPage);
   QVBoxLayout *owlayout = new QVBoxLayout (outwindow);
-  connect (d->chkwindow, SIGNAL (toggled (bool)), outwindow, SLOT (setEnabled (bool)));
+  connect (d->chkwindow, &QCheckBox::toggled, outwindow, &QGroupBox::setEnabled);
   d->chkwindow->setChecked (false);
   outwindow->setEnabled (false);
   
@@ -484,7 +484,7 @@ void cTriggerEditor::createGUI(QWidget *parent)
   wnl->setBuddy(d->wname);
 
   QPushButton *createwindow = new QPushButton (i18n ("&Create window"), outwindow);
-  connect (createwindow, SIGNAL (clicked ()), this, SLOT (createOutputWindow ()));
+  connect (createwindow, &QPushButton::clicked, this, &cTriggerEditor::createOutputWindow);
 
   owlayout->addWidget (wll);
   owlayout->addWidget (d->windowlist);
@@ -500,12 +500,12 @@ void cTriggerEditor::createGUI(QWidget *parent)
 
 
   //make testarea work!
-  connect (d->text, SIGNAL (textChanged (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->cmd, SIGNAL (textChanged (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->rcmd, SIGNAL (textChanged ()), this, SLOT (updateTest ()));
-  connect (d->type, SIGNAL (activated (const QString &)), this, SLOT (updateTest (const QString &)));
-  connect (d->check1, SIGNAL (toggled(bool)), this, SLOT (updateTest (bool)));
-  connect (d->check2, SIGNAL (toggled(bool)), this, SLOT (updateTest (bool)));
+  connect (d->text, &QLineEdit::textChanged, this, &cTriggerEditor::updateTest);
+  connect (d->cmd, &QLineEdit::textChanged, this, &cTriggerEditor::updateTest);
+  connect (d->rcmd, &KTextEdit::textChanged, this, &cTriggerEditor::updateTest);
+  connect (d->type, QOverload<int>::of(&QComboBox::activated), this, &cTriggerEditor::updateTest);
+  connect (d->check1, &QCheckBox::toggled, this, &cTriggerEditor::updateTest);
+  connect (d->check2, &QCheckBox::toggled, this, &cTriggerEditor::updateTest);
 
 
   tabs->addTab (basicTab, i18n ("&Basic"));
@@ -518,17 +518,6 @@ void cTriggerEditor::createGUI(QWidget *parent)
 }
 
 void cTriggerEditor::updateTest ()
-{
-  updateTest (QString());
-}
-
-void cTriggerEditor::updateTest (bool)
-{
-  //this slot is activated when WholeWords status changed in trigger mode
-  updateTest (QString());
-}
-
-void cTriggerEditor::updateTest (const QString &)
 {
   QString txt = d->text->text();
   // pattern used to test
