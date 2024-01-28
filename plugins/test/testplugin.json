@@ -1,9 +1,8 @@
 {
     "KPlugin": {
         "Description": "Testing Plugin",
-        "Name": "Test",
         "EnabledByDefault": true,
-        "License": "GPL"
+        "License": "GPL",
+        "Name": "Test"
     }
 }
-

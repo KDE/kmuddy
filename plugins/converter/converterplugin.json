@@ -1,9 +1,8 @@
 {
     "KPlugin": {
         "Description": "Converts profiles from older KMuddy versions",
-        "Name": "Profile Converter",
         "EnabledByDefault": true,
-        "License": "GPL"
+        "License": "GPL",
+        "Name": "Profile Converter"
     }
 }
-

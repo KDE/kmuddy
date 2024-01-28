@@ -1,9 +1,8 @@
 {
     "KPlugin": {
         "Description": "Implements support for external scripting",
-        "Name": "External Scripting",
         "EnabledByDefault": true,
-        "License": "GPL"
+        "License": "GPL",
+        "Name": "External Scripting"
     }
 }
-

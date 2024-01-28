@@ -1,9 +1,8 @@
 {
     "KPlugin": {
         "Description": "Adds support for variable triggers",
-        "Name": "Variable Triggers",
         "EnabledByDefault": true,
-        "License": "GPL"
+        "License": "GPL",
+        "Name": "Variable Triggers"
     }
 }
-
