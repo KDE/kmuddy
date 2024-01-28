@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 01:37+0000\n"
+"POT-Creation-Date: 2024-01-28 01:38+0000\n"
 "PO-Revision-Date: 2024-01-15 10:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -3612,17 +3612,17 @@ msgstr ""
 "listeden adları vurgulamak (eşleşmenin listede olup olmadığını denetlemek "
 "için koşulu kullanarak) veya başka bir şey için kullanabilirsiniz."
 
-#: libs/caliaseditor.cpp:271
+#: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
 msgstr "Bu metin armanızla eşleşmedi."
 
-#: libs/caliaseditor.cpp:276
+#: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
 msgstr "Bu metin armanızla eşleşiyor."
 
-#: libs/caliaseditor.cpp:290
+#: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
 msgstr "Komut: "
@@ -3890,57 +3890,57 @@ msgstr "MSP: Çoklu indirmeler desteklenmiyor - istek yok sayıldı."
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr "MSP: Seslerin indirilmesi devre dışı - istek yok sayıldı."
 
-#: libs/coutput.cpp:231
+#: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
 msgstr "Hayır, hayır, hayır!"
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
 msgstr "Katılmıyorum."
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
 msgstr "Olmasa iyi olur."
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
 msgstr "Büyük olasılıkla reddetmeli derim."
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr "Hayır demek biraz daha iyi gibi."
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr "Evet demek biraz daha iyi gibi."
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
 msgstr "Büyük olasılıkla kabul etmeli derim."
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
 msgstr "Kulağa hoş geliyor."
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
 msgstr "Katılıyorum."
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
 msgstr "Kesinlikle evet!"
 
-#: libs/coutput.cpp:242
+#: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
 msgstr "Kararım: %1"
@@ -4029,17 +4029,17 @@ msgstr ""
 msgid "Path"
 msgstr "Yol"
 
-#: plugins/converter/converterplugin.cpp:74
+#: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
 msgstr "Profil &Dönüştürücüsü..."
 
-#: plugins/converter/converterplugin.cpp:130
+#: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
 msgstr "Profiller başarıyla dönüştürüldü."
 
-#: plugins/converter/converterplugin.cpp:132
+#: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
 msgstr "Dönüştürülecek hiçbir profil belirtmediniz."
@@ -4285,7 +4285,7 @@ msgstr "Dönemeci Taşı"
 msgid "Delete Path Segment"
 msgstr "Yol Bölütünü Sil"
 
-#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, kde-format
 msgid "Mapper"
 msgstr "Haritalayıcı"
@@ -5183,7 +5183,7 @@ msgstr "Hızlı Yürüme İlerlemesi"
 msgid "x"
 msgstr "x"
 
-#: plugins/mapper/kmuddy_mapper.cpp:72
+#: plugins/mapper/kmuddy_mapper.cpp:71
 #, kde-format
 msgid "Show &mapper"
 msgstr "&Haritalayıcıyı göster"
@@ -5383,12 +5383,12 @@ msgstr "&Sonlandır"
 msgid "&Kill"
 msgstr "&Öldür"
 
-#: plugins/scripting/scriptingplugin.cpp:64
+#: plugins/scripting/scriptingplugin.cpp:63
 #, kde-format
 msgid "/exec: Script list is not available."
 msgstr "/exec: Betik listesi kullanılamıyor."
 
-#: plugins/scripting/scriptingplugin.cpp:124
+#: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
 msgid "Scripts"
 msgstr "Betikler"
@@ -5408,7 +5408,7 @@ msgstr "&Komutlar"
 msgid "Commands that will be executed when this trigger matches."
 msgstr "Bu tetik eşleştiğinde yürütülecek komutlar"
 
-#: plugins/vartrigs/vartrigplugin.cpp:41
+#: plugins/vartrigs/vartrigplugin.cpp:40
 #, kde-format
 msgid "Variable Triggers"
 msgstr "Değişken Tetikleri"

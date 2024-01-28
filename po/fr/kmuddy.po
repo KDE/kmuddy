@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 01:37+0000\n"
+"POT-Creation-Date: 2024-01-28 01:38+0000\n"
 "PO-Revision-Date: 2024-01-23 14:08+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -3686,17 +3686,17 @@ msgstr ""
 "utilisant la condition pour s'assurer s'il y a une correspondance dans la "
 "liste), ou quelque chose de similaire."
 
-#: libs/caliaseditor.cpp:271
+#: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
 msgstr "Ce texte n'a pas correspondu à votre alias."
 
-#: libs/caliaseditor.cpp:276
+#: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
 msgstr "Ce texte correspond à votre alias."
 
-#: libs/caliaseditor.cpp:290
+#: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
 msgstr "Commande : "
@@ -3968,57 +3968,57 @@ msgstr ""
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr "MSP : téléchargement de sons désactivés. Demande ignorée."
 
-#: libs/coutput.cpp:231
+#: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
 msgstr "Non, non, non !"
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
 msgstr "Je ne suis pas d'accord avec ceci !"
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
 msgstr "Pas mieux."
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
 msgstr "Je vais sûrement proposer de rejeter."
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr "Rien à dire qui semble un peu mieux."
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr "Dire « Oui » me semble un peu mieux."
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
 msgstr "Je vais sûrement proposer d'accepter."
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
 msgstr "Le son semble correct."
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
 msgstr "Je suis d'accord avec ceci."
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
 msgstr "Vraiment oui !"
 
-#: libs/coutput.cpp:242
+#: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
 msgstr "Ma décision : %1"
@@ -4107,17 +4107,17 @@ msgstr ""
 msgid "Path"
 msgstr "Emplacement"
 
-#: plugins/converter/converterplugin.cpp:74
+#: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
 msgstr "&Convertisseur de profils..."
 
-#: plugins/converter/converterplugin.cpp:130
+#: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
 msgstr "Les profils ont été convertis avec succès."
 
-#: plugins/converter/converterplugin.cpp:132
+#: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
 msgstr "Vous n'avez spécifié aucun profil à convertir."
@@ -4366,7 +4366,7 @@ msgstr "Déplacer un virage"
 msgid "Delete Path Segment"
 msgstr "Supprimer un segment de chemin"
 
-#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, kde-format
 msgid "Mapper"
 msgstr "Outil de correspondance"
@@ -5270,7 +5270,7 @@ msgstr "Avancement des tapis roulants"
 msgid "x"
 msgstr "x"
 
-#: plugins/mapper/kmuddy_mapper.cpp:72
+#: plugins/mapper/kmuddy_mapper.cpp:71
 #, kde-format
 msgid "Show &mapper"
 msgstr "Afficher l'outil de corres&pondance"
@@ -5472,12 +5472,12 @@ msgstr "&Terminer"
 msgid "&Kill"
 msgstr "&Tuer"
 
-#: plugins/scripting/scriptingplugin.cpp:64
+#: plugins/scripting/scriptingplugin.cpp:63
 #, kde-format
 msgid "/exec: Script list is not available."
 msgstr "/exec : impossible d'obtenir la liste des scripts."
 
-#: plugins/scripting/scriptingplugin.cpp:124
+#: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
 msgid "Scripts"
 msgstr "Scripts"
@@ -5499,7 +5499,7 @@ msgstr ""
 "Commandes qui seront exécutées lorsque la condition du déclencheur est "
 "atteinte"
 
-#: plugins/vartrigs/vartrigplugin.cpp:41
+#: plugins/vartrigs/vartrigplugin.cpp:40
 #, kde-format
 msgid "Variable Triggers"
 msgstr "Déclencheurs variables"

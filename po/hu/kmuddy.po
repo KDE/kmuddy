@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 01:37+0000\n"
+"POT-Creation-Date: 2024-01-28 01:38+0000\n"
 "PO-Revision-Date: 2014-04-01 19:47+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -3375,17 +3375,17 @@ msgid ""
 "something like that."
 msgstr ""
 
-#: libs/caliaseditor.cpp:271
+#: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
 msgstr ""
 
-#: libs/caliaseditor.cpp:276
+#: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
 msgstr ""
 
-#: libs/caliaseditor.cpp:290
+#: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
 msgstr "Parancs: "
@@ -3646,57 +3646,57 @@ msgstr ""
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr ""
 
-#: libs/coutput.cpp:231
+#: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
 msgstr ""
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
 msgstr ""
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
 msgstr ""
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
 msgstr ""
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr ""
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr ""
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
 msgstr ""
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
 msgstr ""
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
 msgstr ""
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
 msgstr ""
 
-#: libs/coutput.cpp:242
+#: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
 msgstr ""
@@ -3781,17 +3781,17 @@ msgstr ""
 msgid "Path"
 msgstr "Elérési út"
 
-#: plugins/converter/converterplugin.cpp:74
+#: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
 msgstr "Profilátala&kító…"
 
-#: plugins/converter/converterplugin.cpp:130
+#: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
 msgstr ""
 
-#: plugins/converter/converterplugin.cpp:132
+#: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
 msgstr ""
@@ -4038,7 +4038,7 @@ msgstr ""
 msgid "Delete Path Segment"
 msgstr ""
 
-#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, kde-format
 msgid "Mapper"
 msgstr ""
@@ -4947,7 +4947,7 @@ msgstr ""
 msgid "x"
 msgstr "x"
 
-#: plugins/mapper/kmuddy_mapper.cpp:72
+#: plugins/mapper/kmuddy_mapper.cpp:71
 #, kde-format
 msgid "Show &mapper"
 msgstr ""
@@ -5128,12 +5128,12 @@ msgstr "&Leállítás"
 msgid "&Kill"
 msgstr "&Kilövés"
 
-#: plugins/scripting/scriptingplugin.cpp:64
+#: plugins/scripting/scriptingplugin.cpp:63
 #, kde-format
 msgid "/exec: Script list is not available."
 msgstr ""
 
-#: plugins/scripting/scriptingplugin.cpp:124
+#: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
 msgid "Scripts"
 msgstr "Parancsfájlok"
@@ -5153,7 +5153,7 @@ msgstr "&Parancsok"
 msgid "Commands that will be executed when this trigger matches."
 msgstr ""
 
-#: plugins/vartrigs/vartrigplugin.cpp:41
+#: plugins/vartrigs/vartrigplugin.cpp:40
 #, kde-format
 msgid "Variable Triggers"
 msgstr "Változótriggerek"

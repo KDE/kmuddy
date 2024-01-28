@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 01:37+0000\n"
+"POT-Creation-Date: 2024-01-28 01:38+0000\n"
 "PO-Revision-Date: 2024-01-15 10:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -3639,17 +3639,17 @@ msgstr ""
 "markeren (door het gebruik van de mogelijkheid van een controle of een "
 "overeenkomst in een lijst voorkomt), of iets dergelijks."
 
-#: libs/caliaseditor.cpp:271
+#: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
 msgstr "Deze tekst komt niet met uw alias overeen."
 
-#: libs/caliaseditor.cpp:276
+#: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
 msgstr "Deze tekst komt met uw alias overeen."
 
-#: libs/caliaseditor.cpp:290
+#: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
 msgstr "Commando: "
@@ -3916,57 +3916,57 @@ msgstr "MSP: Meervoudige downloads wordt niet ondersteund, verzoek genegeerd."
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr "MSP: downloaden van geluiden uitgeschakeld - verzoek genegeerd."
 
-#: libs/coutput.cpp:231
+#: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
 msgstr "Nee, nee, nee!"
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
 msgstr "Ik ben er het niet mee eens."
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
 msgstr "Beter van niet."
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
 msgstr "Waarschijnlijk adviseer ik dit af te wijzen."
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr "Nee zeggen is misschien een beter idee."
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr "Ja zeggen is misschien een beter idee."
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
 msgstr "Waarschijnlijk adviseer ik dit te accepteren."
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
 msgstr "Klinkt goed."
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
 msgstr "Ik ben er het mee eens."
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
 msgstr "Helemaal mee eens!"
 
-#: libs/coutput.cpp:242
+#: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
 msgstr "Mijn beslissing: %1"
@@ -4055,17 +4055,17 @@ msgstr ""
 msgid "Path"
 msgstr "Pad"
 
-#: plugins/converter/converterplugin.cpp:74
+#: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
 msgstr "Profielconverter..."
 
-#: plugins/converter/converterplugin.cpp:130
+#: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
 msgstr "Het profiel is met succes geconverteerd."
 
-#: plugins/converter/converterplugin.cpp:132
+#: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
 msgstr "U heeft geen profielen voor conversie opgegeven."
@@ -4311,7 +4311,7 @@ msgstr "Kromme verplaatsen"
 msgid "Delete Path Segment"
 msgstr "Pad segment verwijderen"
 
-#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, kde-format
 msgid "Mapper"
 msgstr "Mapper"
@@ -5209,7 +5209,7 @@ msgstr "Voortgang van snelwandelen"
 msgid "x"
 msgstr "x"
 
-#: plugins/mapper/kmuddy_mapper.cpp:72
+#: plugins/mapper/kmuddy_mapper.cpp:71
 #, kde-format
 msgid "Show &mapper"
 msgstr "Toon &mapper"
@@ -5411,12 +5411,12 @@ msgstr "&Beëindigen"
 msgid "&Kill"
 msgstr "&Afbreken"
 
-#: plugins/scripting/scriptingplugin.cpp:64
+#: plugins/scripting/scriptingplugin.cpp:63
 #, kde-format
 msgid "/exec: Script list is not available."
 msgstr "/exec: lijst met scripts is niet beschikbaar."
 
-#: plugins/scripting/scriptingplugin.cpp:124
+#: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
 msgid "Scripts"
 msgstr "Scripts"
@@ -5437,7 +5437,7 @@ msgid "Commands that will be executed when this trigger matches."
 msgstr ""
 "Commando's die uitgevoerd zullen worden wanneer deze trigger  overeenkomt."
 
-#: plugins/vartrigs/vartrigplugin.cpp:41
+#: plugins/vartrigs/vartrigplugin.cpp:40
 #, kde-format
 msgid "Variable Triggers"
 msgstr "Trigger variabele"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 01:37+0000\n"
+"POT-Creation-Date: 2024-01-28 01:38+0000\n"
 "PO-Revision-Date: 2016-09-01 20:19+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -3378,17 +3378,17 @@ msgid ""
 "something like that."
 msgstr ""
 
-#: libs/caliaseditor.cpp:271
+#: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
 msgstr ""
 
-#: libs/caliaseditor.cpp:276
+#: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
 msgstr ""
 
-#: libs/caliaseditor.cpp:290
+#: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
 msgstr "Príkaz: "
@@ -3649,57 +3649,57 @@ msgstr ""
 msgid "MSP: downloading of sounds disabled - request ignored."
 msgstr ""
 
-#: libs/coutput.cpp:231
+#: libs/coutput.cpp:228
 #, fuzzy, kde-format
 msgid "No, no, no!"
 msgstr "Nie"
 
-#: libs/coutput.cpp:232
+#: libs/coutput.cpp:229
 #, fuzzy, kde-format
 msgid "I don't agree with it."
 msgstr "Nehrajte sa s nožnicami."
 
-#: libs/coutput.cpp:233
+#: libs/coutput.cpp:230
 #, fuzzy, kde-format
 msgid "Better not."
 msgstr "Nenájdené"
 
-#: libs/coutput.cpp:234
+#: libs/coutput.cpp:231
 #, fuzzy, kde-format
 msgid "I'd probably suggest to reject."
 msgstr "Stlačením Zrušiť odmietnete použitie tohto súboru. "
 
-#: libs/coutput.cpp:235
+#: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
 msgstr ""
 
-#: libs/coutput.cpp:236
+#: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
 msgstr ""
 
-#: libs/coutput.cpp:237
+#: libs/coutput.cpp:234
 #, fuzzy, kde-format
 msgid "I'd probably suggest to accept."
 msgstr "Akceptovať rýchly Back-to-back"
 
-#: libs/coutput.cpp:238
+#: libs/coutput.cpp:235
 #, fuzzy, kde-format
 msgid "Sounds good."
 msgstr "Dobrá práca!"
 
-#: libs/coutput.cpp:239
+#: libs/coutput.cpp:236
 #, fuzzy, kde-format
 msgid "I agree with it."
 msgstr "Neúplný názov hostiteľa; ukončite ho pomocou '/'"
 
-#: libs/coutput.cpp:240
+#: libs/coutput.cpp:237
 #, fuzzy, kde-format
 msgid "Definitely yes!"
 msgstr "áno: %@ @ %@ kb/s"
 
-#: libs/coutput.cpp:242
+#: libs/coutput.cpp:239
 #, fuzzy, kde-format
 msgid "My decision: %1"
 msgstr "Rozhodovateľ"
@@ -3784,17 +3784,17 @@ msgstr ""
 msgid "Path"
 msgstr "Cesta"
 
-#: plugins/converter/converterplugin.cpp:74
+#: plugins/converter/converterplugin.cpp:73
 #, fuzzy, kde-format
 msgid "Profile &Converter..."
 msgstr "Prevod jednotiek"
 
-#: plugins/converter/converterplugin.cpp:130
+#: plugins/converter/converterplugin.cpp:129
 #, fuzzy, kde-format
 msgid "The profiles have been successfully converted."
 msgstr "%1 bol úspešne spárovaný"
 
-#: plugins/converter/converterplugin.cpp:132
+#: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
 msgstr ""
@@ -4040,7 +4040,7 @@ msgstr "Ohnúť šrafovanie"
 msgid "Delete Path Segment"
 msgstr "Vrátiť posledný segment cesty:"
 
-#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:61
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, fuzzy, kde-format
 msgid "Mapper"
 msgstr "Mapovač RPC"
@@ -4941,7 +4941,7 @@ msgstr "&Ukazovateľ priebehu"
 msgid "x"
 msgstr "x"
 
-#: plugins/mapper/kmuddy_mapper.cpp:72
+#: plugins/mapper/kmuddy_mapper.cpp:71
 #, fuzzy, kde-format
 msgid "Show &mapper"
 msgstr "Mapovač RPC"
@@ -5122,12 +5122,12 @@ msgstr "Ukončiť"
 msgid "&Kill"
 msgstr "Zabiť"
 
-#: plugins/scripting/scriptingplugin.cpp:64
+#: plugins/scripting/scriptingplugin.cpp:63
 #, fuzzy, kde-format
 msgid "/exec: Script list is not available."
 msgstr "Zoznam zmien ešte nie je dostupný."
 
-#: plugins/scripting/scriptingplugin.cpp:124
+#: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
 msgid "Scripts"
 msgstr "Skripty"
@@ -5147,7 +5147,7 @@ msgstr "&Príkazy"
 msgid "Commands that will be executed when this trigger matches."
 msgstr ""
 
-#: plugins/vartrigs/vartrigplugin.cpp:41
+#: plugins/vartrigs/vartrigplugin.cpp:40
 #, fuzzy, kde-format
 msgid "Variable Triggers"
 msgstr "Očakávané spúšťače (triggers-awaited)"
