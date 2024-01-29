@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 01:38+0000\n"
+"POT-Creation-Date: 2024-01-29 01:34+0000\n"
 "PO-Revision-Date: 2024-01-15 10:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1081,32 +1081,32 @@ msgstr "Özel tetik"
 msgid "Output windows"
 msgstr "Çıktı pencereleri"
 
-#: kmuddy/ctriggereditor.cpp:558
+#: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
 msgstr "Bu metin, tetiğinizle eşleşmedi."
 
-#: kmuddy/ctriggereditor.cpp:563
+#: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
 msgstr "Bu metin, tetiğinizle eşleşiyor."
 
-#: kmuddy/ctriggereditor.cpp:591
+#: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
 msgstr "Erişilen en çok renklendirme sayısı."
 
-#: kmuddy/ctriggereditor.cpp:674 plugins/mapper/cmapviewstatusbar.cpp:61
+#: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kmuddy/ctriggereditor.cpp:695
+#: kmuddy/ctriggereditor.cpp:684
 #, kde-format
 msgid "Choose sound file"
 msgstr "Ses dosyası seç"
 
-#: kmuddy/ctriggereditor.cpp:714
+#: kmuddy/ctriggereditor.cpp:703
 #, kde-format
 msgid "Window name is empty!"
 msgstr "Pencere adı boş!"
@@ -2974,104 +2974,104 @@ msgstr "&Eklentiler..."
 msgid "F&ull screen mode"
 msgstr "Tam &ekran kipi"
 
-#: kmuddy/kmuddy.cpp:415
+#: kmuddy/kmuddy.cpp:414
 #, kde-format
 msgid "Shift line up"
 msgstr "Satırı yukarı kaydır"
 
-#: kmuddy/kmuddy.cpp:420
+#: kmuddy/kmuddy.cpp:419
 #, kde-format
 msgid "Shift line down"
 msgstr "Satırı aşağı kaydır"
 
-#: kmuddy/kmuddy.cpp:425
+#: kmuddy/kmuddy.cpp:424
 #, kde-format
 msgid "Shift page up"
 msgstr "Sayfayı yukarı kaydır"
 
-#: kmuddy/kmuddy.cpp:430
+#: kmuddy/kmuddy.cpp:429
 #, kde-format
 msgid "Shift page down"
 msgstr "Sayfayı aşağı kaydır"
 
-#: kmuddy/kmuddy.cpp:435
+#: kmuddy/kmuddy.cpp:434
 #, kde-format
 msgid "Split-screen up"
 msgstr "Ekranı yukarı böl"
 
-#: kmuddy/kmuddy.cpp:440
+#: kmuddy/kmuddy.cpp:439
 #, kde-format
 msgid "Split-screen down"
 msgstr "Ekranı aşağı böl"
 
-#: kmuddy/kmuddy.cpp:445
+#: kmuddy/kmuddy.cpp:444
 #, kde-format
 msgid "Previous tab"
 msgstr "Önceki sekme"
 
-#: kmuddy/kmuddy.cpp:450
+#: kmuddy/kmuddy.cpp:449
 #, kde-format
 msgid "Next tab"
 msgstr "Sonraki sekme"
 
-#: kmuddy/kmuddy.cpp:456 kmuddy/kmuddy.cpp:461 kmuddy/kmuddy.cpp:466
-#: kmuddy/kmuddy.cpp:471 kmuddy/kmuddy.cpp:476 kmuddy/kmuddy.cpp:481
-#: kmuddy/kmuddy.cpp:486 kmuddy/kmuddy.cpp:491 kmuddy/kmuddy.cpp:496
-#: kmuddy/kmuddy.cpp:501
+#: kmuddy/kmuddy.cpp:455 kmuddy/kmuddy.cpp:460 kmuddy/kmuddy.cpp:465
+#: kmuddy/kmuddy.cpp:470 kmuddy/kmuddy.cpp:475 kmuddy/kmuddy.cpp:480
+#: kmuddy/kmuddy.cpp:485 kmuddy/kmuddy.cpp:490 kmuddy/kmuddy.cpp:495
+#: kmuddy/kmuddy.cpp:500
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "%1. sekmeye geç"
 
-#: kmuddy/kmuddy.cpp:524
+#: kmuddy/kmuddy.cpp:523
 #, kde-format
 msgid "&Connection"
 msgstr "&Bağlantı"
 
-#: kmuddy/kmuddy.cpp:525
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Edit"
 msgstr "Dü&zen"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:526 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:525 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "&Görünüm"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Profile"
 msgstr "&Profil"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Tools"
 msgstr "&Araçlar"
 
-#: kmuddy/kmuddy.cpp:529
+#: kmuddy/kmuddy.cpp:528
 #, kde-format
 msgid "&Settings"
 msgstr "Ayar&lar"
 
-#: kmuddy/kmuddy.cpp:530
+#: kmuddy/kmuddy.cpp:529
 #, kde-format
 msgid "&Help"
 msgstr "&Yardım"
 
-#: kmuddy/kmuddy.cpp:906
+#: kmuddy/kmuddy.cpp:905
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
 "Yeniden bağlanmak için %1 düğmesine basın veya Bağlantı / Yeniden Bağlan'ı "
 "kullanın."
 
-#: kmuddy/kmuddy.cpp:992
+#: kmuddy/kmuddy.cpp:991
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr "KMuddy penceresindeki etkinlik"
 
-#: kmuddy/kmuddy.cpp:1164
+#: kmuddy/kmuddy.cpp:1163
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-28 01:38+0000\n"
+"POT-Creation-Date: 2024-01-29 01:34+0000\n"
 "PO-Revision-Date: 2024-01-15 10:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1091,32 +1091,32 @@ msgstr "Speciale trigger"
 msgid "Output windows"
 msgstr "Uitvoervensters"
 
-#: kmuddy/ctriggereditor.cpp:558
+#: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
 msgstr "Deze tekst komt niet overeen met uw trigger."
 
-#: kmuddy/ctriggereditor.cpp:563
+#: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
 msgstr "Deze tekst komt met uw trigger overeen."
 
-#: kmuddy/ctriggereditor.cpp:591
+#: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
 msgstr "Maximaal aantal ingekleurd."
 
-#: kmuddy/ctriggereditor.cpp:674 plugins/mapper/cmapviewstatusbar.cpp:61
+#: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: kmuddy/ctriggereditor.cpp:695
+#: kmuddy/ctriggereditor.cpp:684
 #, kde-format
 msgid "Choose sound file"
 msgstr "Kies geluidsbestand"
 
-#: kmuddy/ctriggereditor.cpp:714
+#: kmuddy/ctriggereditor.cpp:703
 #, kde-format
 msgid "Window name is empty!"
 msgstr "Vensternaam is leeg!"
@@ -2999,104 +2999,104 @@ msgstr "&Plug-ins..."
 msgid "F&ull screen mode"
 msgstr "Mod&us volledig scherm"
 
-#: kmuddy/kmuddy.cpp:415
+#: kmuddy/kmuddy.cpp:414
 #, kde-format
 msgid "Shift line up"
 msgstr "Een regel omhoog schuiven"
 
-#: kmuddy/kmuddy.cpp:420
+#: kmuddy/kmuddy.cpp:419
 #, kde-format
 msgid "Shift line down"
 msgstr "Een regel omlaag schuiven"
 
-#: kmuddy/kmuddy.cpp:425
+#: kmuddy/kmuddy.cpp:424
 #, kde-format
 msgid "Shift page up"
 msgstr "Een pagina omhoog schuiven"
 
-#: kmuddy/kmuddy.cpp:430
+#: kmuddy/kmuddy.cpp:429
 #, kde-format
 msgid "Shift page down"
 msgstr "Een pagina omlaag schuiven"
 
-#: kmuddy/kmuddy.cpp:435
+#: kmuddy/kmuddy.cpp:434
 #, kde-format
 msgid "Split-screen up"
 msgstr "Gesplitst venster boven"
 
-#: kmuddy/kmuddy.cpp:440
+#: kmuddy/kmuddy.cpp:439
 #, kde-format
 msgid "Split-screen down"
 msgstr "Gesplitst venster onder"
 
-#: kmuddy/kmuddy.cpp:445
+#: kmuddy/kmuddy.cpp:444
 #, kde-format
 msgid "Previous tab"
 msgstr "Vorig tabblad"
 
-#: kmuddy/kmuddy.cpp:450
+#: kmuddy/kmuddy.cpp:449
 #, kde-format
 msgid "Next tab"
 msgstr "Volgend tabblad"
 
-#: kmuddy/kmuddy.cpp:456 kmuddy/kmuddy.cpp:461 kmuddy/kmuddy.cpp:466
-#: kmuddy/kmuddy.cpp:471 kmuddy/kmuddy.cpp:476 kmuddy/kmuddy.cpp:481
-#: kmuddy/kmuddy.cpp:486 kmuddy/kmuddy.cpp:491 kmuddy/kmuddy.cpp:496
-#: kmuddy/kmuddy.cpp:501
+#: kmuddy/kmuddy.cpp:455 kmuddy/kmuddy.cpp:460 kmuddy/kmuddy.cpp:465
+#: kmuddy/kmuddy.cpp:470 kmuddy/kmuddy.cpp:475 kmuddy/kmuddy.cpp:480
+#: kmuddy/kmuddy.cpp:485 kmuddy/kmuddy.cpp:490 kmuddy/kmuddy.cpp:495
+#: kmuddy/kmuddy.cpp:500
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Ga naar tabblad %1"
 
-#: kmuddy/kmuddy.cpp:524
+#: kmuddy/kmuddy.cpp:523
 #, kde-format
 msgid "&Connection"
 msgstr "&Verbinding"
 
-#: kmuddy/kmuddy.cpp:525
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Edit"
 msgstr "B&ewerken"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:526 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:525 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "&Beeld"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Profile"
 msgstr "&Profiel"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Tools"
 msgstr "H&ulpmiddelen"
 
-#: kmuddy/kmuddy.cpp:529
+#: kmuddy/kmuddy.cpp:528
 #, kde-format
 msgid "&Settings"
 msgstr "In&stellingen"
 
-#: kmuddy/kmuddy.cpp:530
+#: kmuddy/kmuddy.cpp:529
 #, kde-format
 msgid "&Help"
 msgstr "&Help"
 
-#: kmuddy/kmuddy.cpp:906
+#: kmuddy/kmuddy.cpp:905
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
 "Voor opnieuw verbinding, drukt u op %1 of u gebruikt Verbinding/Opnieuw "
 "verbinden."
 
-#: kmuddy/kmuddy.cpp:992
+#: kmuddy/kmuddy.cpp:991
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr "Activiteit in het KMuddy venster"
 
-#: kmuddy/kmuddy.cpp:1164
+#: kmuddy/kmuddy.cpp:1163
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
