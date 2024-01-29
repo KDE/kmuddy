@@ -1,8 +1,16 @@
 {
     "KPlugin": {
         "Description": "Defines various string manipulation functions",
+        "Description[ca]": "Defineix diverses funcions de manipulació de cadenes",
+        "Description[tr]": "Çeşitli dizi manipülasyon işlevleri tanımlar",
+        "Description[uk]": "Визначає різні функції для роботи з рядками",
+        "Description[x-test]": "xxDefines various string manipulation functionsxx",
         "EnabledByDefault": true,
         "License": "GPL",
-        "Name": "Strings"
+        "Name": "Strings",
+        "Name[ca]": "Cadenes",
+        "Name[tr]": "Diziler",
+        "Name[uk]": "Рядки",
+        "Name[x-test]": "xxStringsxx"
     }
 }

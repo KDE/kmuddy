@@ -1,8 +1,16 @@
 {
     "KPlugin": {
         "Description": "Adds support for variable triggers",
+        "Description[ca]": "Afegeix la implementació per a desencadenants variables",
+        "Description[tr]": "Değişken tetikleyicileri için destek ekler",
+        "Description[uk]": "Додає підтримку перемикання за змінними",
+        "Description[x-test]": "xxAdds support for variable triggersxx",
         "EnabledByDefault": true,
         "License": "GPL",
-        "Name": "Variable Triggers"
+        "Name": "Variable Triggers",
+        "Name[ca]": "Desencadenants variables",
+        "Name[tr]": "Değişken Tetikleyicileri",
+        "Name[uk]": "Умовні зміни",
+        "Name[x-test]": "xxVariable Triggersxx"
     }
 }

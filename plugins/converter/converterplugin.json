@@ -1,8 +1,16 @@
 {
     "KPlugin": {
         "Description": "Converts profiles from older KMuddy versions",
+        "Description[ca]": "Converteix els perfils de versions antigues del KMuddy",
+        "Description[tr]": "Profilleri eski KMuddy sürümlerinden dönüştürür",
+        "Description[uk]": "Перетворює дані профілів старих версій KMuddy",
+        "Description[x-test]": "xxConverts profiles from older KMuddy versionsxx",
         "EnabledByDefault": true,
         "License": "GPL",
-        "Name": "Profile Converter"
+        "Name": "Profile Converter",
+        "Name[ca]": "Convertidor de perfils",
+        "Name[tr]": "Profil Dönüştürücüsü",
+        "Name[uk]": "Засіб перетворення профілів",
+        "Name[x-test]": "xxProfile Converterxx"
     }
 }

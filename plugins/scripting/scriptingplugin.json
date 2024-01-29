@@ -1,8 +1,16 @@
 {
     "KPlugin": {
         "Description": "Implements support for external scripting",
+        "Description[ca]": "Implementa el suport per a la creació de scripts externs",
+        "Description[tr]": "Dış betikler yazımı için destek gerçekler",
+        "Description[uk]": "Реалізує підтримку зовнішніх скриптів",
+        "Description[x-test]": "xxImplements support for external scriptingxx",
         "EnabledByDefault": true,
         "License": "GPL",
-        "Name": "External Scripting"
+        "Name": "External Scripting",
+        "Name[ca]": "Creació de scripts externs",
+        "Name[tr]": "Dış Betik Yazımı",
+        "Name[uk]": "Зовнішні скрипти",
+        "Name[x-test]": "xxExternal Scriptingxx"
     }
 }

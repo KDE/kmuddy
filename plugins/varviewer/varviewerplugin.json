@@ -1,8 +1,16 @@
 {
     "KPlugin": {
         "Description": "Provides an interface for viewing variable values",
+        "Description[ca]": "Proporciona una interfície per a visualitzar valors de variables",
+        "Description[tr]": "Değişken değerlerini görüntülemek için bir arayüz sağlar",
+        "Description[uk]": "Забезпечує роботу інтерфейсу для перегляду значень змінних",
+        "Description[x-test]": "xxProvides an interface for viewing variable valuesxx",
         "EnabledByDefault": true,
         "License": "GPL",
-        "Name": "Variable Viewer"
+        "Name": "Variable Viewer",
+        "Name[ca]": "Visualitzador de variables",
+        "Name[tr]": "Değişken Görüntüleyicisi",
+        "Name[uk]": "Перегляд змінних",
+        "Name[x-test]": "xxVariable Viewerxx"
     }
 }
