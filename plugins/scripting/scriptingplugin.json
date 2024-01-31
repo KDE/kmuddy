@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Implements support for external scripting",
         "Description[ca]": "Implementa el suport per a la creació de scripts externs",
+        "Description[es]": "Permite el uso de scripts externos",
         "Description[gl]": "Permite usar guións externos.",
         "Description[nl]": "Implementeert ondersteuning voor externe scripting.",
         "Description[sl]": "Doda podporo za zunanje skripte",

@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Provides an interface for viewing variable values",
         "Description[ca]": "Proporciona una interfície per a visualitzar valors de variables",
+        "Description[es]": "Proporciona una interfaz para visualizar valores de variables",
         "Description[gl]": "Fornece unha interface para ver os valores de variábeis.",
         "Description[nl]": "Levert een interface voor het bekijken van waarden van variabelen",
         "Description[sl]": "Zagotavlja vmesnik za ogled vrednosti spremenljivk",

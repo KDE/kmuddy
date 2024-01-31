@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Testing Plugin",
         "Description[ca]": "Connector de proves",
+        "Description[es]": "Complemento de pruebas",
         "Description[gl]": "Complemento de proba.",
         "Description[nl]": "Plug-in voor testen",
         "Description[sl]": "Testiranje vtičnika",
@@ -12,6 +13,7 @@
         "License": "GPL",
         "Name": "Test",
         "Name[ca]": "Prova",
+        "Name[es]": "Prueba",
         "Name[gl]": "Proba",
         "Name[nl]": "Test",
         "Name[sl]": "Test",

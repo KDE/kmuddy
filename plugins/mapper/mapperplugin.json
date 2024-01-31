@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Implements a mapper",
         "Description[ca]": "Implementa un mapador",
+        "Description[es]": "Implementa un mapeador",
         "Description[gl]": "Implementa un cartógrafo.",
         "Description[nl]": "Implementeert een mapper",
         "Description[sl]": "Implementira preslikovalnik",
@@ -12,6 +13,7 @@
         "License": "GPL",
         "Name": "Mapper",
         "Name[ca]": "Mapador",
+        "Name[es]": "Mapeador",
         "Name[gl]": "Cartógrafo",
         "Name[nl]": "Mapper",
         "Name[sl]": "Preslikovalnik",

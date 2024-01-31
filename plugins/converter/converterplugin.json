@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Converts profiles from older KMuddy versions",
         "Description[ca]": "Converteix els perfils de versions antigues del KMuddy",
+        "Description[es]": "Convierte perfiles desde versiones antiguas de KMuddy",
         "Description[gl]": "Converte perfís de versións anteriores de KMuddy.",
         "Description[nl]": "Converteert profielen van oude KMuddy-versies.",
         "Description[sl]": "Ta vtičnik pretvori profile iz starih različic KMuddy",

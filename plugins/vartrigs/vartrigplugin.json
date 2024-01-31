@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Adds support for variable triggers",
         "Description[ca]": "Afegeix la implementació per a desencadenants variables",
+        "Description[es]": "Permite el uso de disparadores de variables",
         "Description[gl]": "Permite disparadores de variábeis.",
         "Description[nl]": "Voegt ondersteuning voor variabele triggers toe.",
         "Description[sl]": "Doda podporo za zunanje skripte",
