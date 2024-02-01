@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "Implements a mapper",
+        "Description[ca@valencia]": "Implementa un mapador",
         "Description[ca]": "Implementa un mapador",
         "Description[es]": "Implementa un mapeador",
+        "Description[fr]": "Fournit un outil de correspondance",
         "Description[gl]": "Implementa un cartógrafo.",
         "Description[nl]": "Implementeert een mapper",
         "Description[sl]": "Implementira preslikovalnik",
@@ -12,8 +14,10 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Mapper",
+        "Name[ca@valencia]": "Mapador",
         "Name[ca]": "Mapador",
         "Name[es]": "Mapeador",
+        "Name[fr]": "Outil de correspondance",
         "Name[gl]": "Cartógrafo",
         "Name[nl]": "Mapper",
         "Name[sl]": "Preslikovalnik",

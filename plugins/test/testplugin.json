@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "Testing Plugin",
+        "Description[ca@valencia]": "Connector de proves",
         "Description[ca]": "Connector de proves",
         "Description[es]": "Complemento de pruebas",
+        "Description[fr]": "Test en cours du module externe",
         "Description[gl]": "Complemento de proba.",
         "Description[nl]": "Plug-in voor testen",
         "Description[sl]": "Testiranje vtičnika",
@@ -12,8 +14,10 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Test",
+        "Name[ca@valencia]": "Prova",
         "Name[ca]": "Prova",
         "Name[es]": "Prueba",
+        "Name[fr]": "Tester",
         "Name[gl]": "Proba",
         "Name[nl]": "Test",
         "Name[sl]": "Test",
