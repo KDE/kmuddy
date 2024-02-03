@@ -102,13 +102,13 @@ dlgConnect::dlgConnect(QWidget *parent) : QDialog (parent)
   layout->addWidget (buttons, 4, 0, 1, 2);
   
   //connect signals
-  connect (addButton, SIGNAL(clicked()), this, SLOT(addPressed()));
-  connect (modifyButton, SIGNAL(clicked()), this, SLOT(modifyPressed()));
-  connect (deleteButton, SIGNAL(clicked()), this, SLOT(deletePressed()));
-  connect (duplicateButton, SIGNAL(clicked()), this, SLOT(duplicatePressed()));
+  connect (addButton, &QPushButton::clicked, this, &dlgConnect::addPressed);
+  connect (modifyButton, &QPushButton::clicked, this, &dlgConnect::modifyPressed);
+  connect (deleteButton, &QPushButton::clicked, this, &dlgConnect::deletePressed);
+  connect (duplicateButton, &QPushButton::clicked, this, &dlgConnect::duplicatePressed);
   
-  connect (lw->selectionModel(), SIGNAL (selectionChanged (const QItemSelection &, const QItemSelection &)), this, SLOT (selectionChanged (const QItemSelection &)));
-  connect (lw, SIGNAL (doubleClicked (const QModelIndex &)), this, SLOT (doubleClicked (const QModelIndex &)));
+  connect (lw->selectionModel(), &QItemSelectionModel::selectionChanged, this, &dlgConnect::selectionChanged);
+  connect (lw, &QTreeView::doubleClicked, this, &dlgConnect::doubleClicked);
 
   lw->setFocus ();
 }
@@ -162,7 +162,7 @@ void dlgConnect::addPressed ()
   mdlg = new dlgEditProfile (this);
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (mdlg, SIGNAL (accepted()), this, SLOT (doAdd ()));
+  connect (mdlg, &dlgEditProfile::accepted, this, &dlgConnect::doAdd);
 
   //fill in default login sequence
   QStringList ls;
@@ -186,7 +186,7 @@ void dlgConnect::modifyPressed ()
   mdlg = new dlgEditProfile (this);
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (mdlg, SIGNAL (accepted()), this, SLOT (doModify ()));
+  connect (mdlg, &dlgEditProfile::accepted, this, &dlgConnect::doModify);
 
   mdlg->setName (mgr->visibleProfileName (profile));
   mdlg->setServer (sett->getString ("server"));

@@ -122,7 +122,7 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
   _scripteval->addObject ("kmuddy", _scriptapi);
 
   //the button switches between standard input and multi-line input
-  connect (switchlinebutton, SIGNAL (clicked ()), this, SLOT (switchInputLines ()));
+  connect (switchlinebutton, &QPushButton::clicked, this, &cSession::switchInputLines);
 
   addGlobalEventHandler ("global-settings-changed", 50, PT_NOTHING);
   

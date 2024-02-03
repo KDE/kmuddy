@@ -213,8 +213,8 @@ void cTranscript::configure ()
   tdlg = new dlgTranscript (cActionManager::self()->mainWidget());
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (tdlg, SIGNAL (accepted()), this, SLOT (applyTranscript ()));
-  connect (tdlg->button (QDialogButtonBox::Apply), SIGNAL (clicked()), this, SLOT (applyTranscript ()));
+  connect (tdlg, &dlgTranscript::accepted, this, &cTranscript::applyTranscript);
+  connect (tdlg->button (QDialogButtonBox::Apply), &QPushButton::clicked, this, &cTranscript::applyTranscript);
 
   //next we fill in its data
   tdlg->setEnabled (running);
@@ -301,7 +301,7 @@ void cTranscript::startAdvTranscript ()
     return; // no transcript if advanced filename failed
   
   transtimer = new QTimer();
-  connect (transtimer, SIGNAL (timeout ()), this, SLOT (timeout ()));
+  connect (transtimer, &QTimer::timeout, this, &cTranscript::timeout);
 
   cProfileSettings *sett = settings ();
   af = sett ? sett->getString ("transcript-directory") : QDir::homePath();
@@ -407,7 +407,7 @@ void cTranscript::dumpBuffer ()
   bdlg->setFileName (fName);
   bdlg->setType (TRANSCRIPT_HTML);
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (bdlg, SIGNAL (accepted()), this, SLOT (doDumpBuffer ()));
+  connect (bdlg, &dlgDumpBuffer::accepted, this, &cTranscript::doDumpBuffer);
 
   //dialog is ready - show it!
   bdlg->exec ();

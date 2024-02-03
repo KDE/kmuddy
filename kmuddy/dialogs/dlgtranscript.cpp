@@ -52,7 +52,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
 
   //enable transcript checkbox
   enabletranscript = new QCheckBox (i18n ("&Enable basic transcript"), page);
-  connect (enabletranscript, SIGNAL (toggled (bool)), this, SLOT (updateDialog (bool)));
+  connect (enabletranscript, &QCheckBox::toggled, this, &dlgTranscript::updateDialog);
   enabletranscript->setWhatsThis( i18n ("Enables or disabled the session transcript. "
       "Note that session transcript is automatically disabled when you disconnect."));
   
@@ -94,7 +94,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
   filelayout->addWidget (filebutton);
 
   //connect the Browse button!
-  connect (filebutton, SIGNAL (clicked ()), this, SLOT (browseFiles ()));
+  connect (filebutton, &QPushButton::clicked, this, &dlgTranscript::browseFiles);
   
   transboxlayout->setSpacing (5);
   transboxlayout->addWidget (typebox);
@@ -111,7 +111,7 @@ dlgTranscript::dlgTranscript (QWidget *parent) :
         "which allows you to have transcript running all the time, rotates it at "
         "midnight and so. Note that normal and advanced transcripts can both be "
         "running at the same time, if you want."));
-  connect (enableadvtranscript, SIGNAL (toggled (bool)), this, SLOT (updateAdvDialog (bool)));
+  connect (enableadvtranscript, &QCheckBox::toggled, this, &dlgTranscript::updateAdvDialog);
   advtrans = new QGroupBox(i18n ("Advanced transcript settings"), advpage);
   QVBoxLayout *advtranslayout = new QVBoxLayout (advtrans);
   

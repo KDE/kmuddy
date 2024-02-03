@@ -85,8 +85,8 @@ dlgMultiLine::dlgMultiLine (QWidget *parent) : QDockWidget (parent)
   bt2->setToolTip ( i18n ("Clears window contents."));
   btlayout->addWidget (bt1);
   btlayout->addWidget (bt2);
-  connect (bt1, SIGNAL (clicked ()), this, SLOT (sendClicked ()));
-  connect (bt2, SIGNAL (clicked ()), editor, SLOT (clear ()));
+  connect (bt1, &QPushButton::clicked, this, &dlgMultiLine::sendClicked);
+  connect (bt2, &QPushButton::clicked, editor, &QTextEdit::clear);
 }
 
 dlgMultiLine::~dlgMultiLine ()

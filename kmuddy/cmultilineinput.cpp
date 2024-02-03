@@ -69,7 +69,7 @@ void cMultiLineInput::init ()
   multiline->setObjectName ("multiline");
   wnd->addDockWidget (Qt::BottomDockWidgetArea, multiline);
   multiline->setFloating (true);
-  connect (multiline, SIGNAL (commands (const QStringList &)), this, SLOT (sendInput (const QStringList &)));
+  connect (multiline, &dlgMultiLine::commands, this, &cMultiLineInput::sendInput);
 }
 
 void cMultiLineInput::sendInput (const QStringList &list)

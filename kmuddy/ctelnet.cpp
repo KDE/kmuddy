@@ -259,11 +259,11 @@ void cTelnet::connectIt (const QString &address, int port, cProfileSettings *set
 void cTelnet::setupSocketHandlers ()
 {
   if (!d->socket) return;
-  connect (d->socket, SIGNAL(connected()), this, SLOT (socketConnected ()));
-  connect (d->socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT (socketFailed ()));
-  connect (d->socket, SIGNAL(readyRead()), this, SLOT (socketRead ()));
-  connect (d->socket, SIGNAL(disconnected()), this, SLOT (socketClosed ()));
-  connect (d->socket, SIGNAL(hostFound()), this, SLOT (socketHostFound ()));
+  connect (d->socket, &QTcpSocket::connected, this, &cTelnet::socketConnected);
+  connect (d->socket, &QTcpSocket::errorOccurred, this, &cTelnet::socketFailed);
+  connect (d->socket, &QTcpSocket::readyRead, this, &cTelnet::socketRead);
+  connect (d->socket, &QTcpSocket::disconnected, this, &cTelnet::socketClosed);
+  connect (d->socket, &QTcpSocket::hostFound, this, &cTelnet::socketHostFound);
 }
 
 void cTelnet::setupEncoding ()

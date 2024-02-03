@@ -43,7 +43,7 @@ cTimerList::cTimerList () :
 
   d->tickCount = 0;
   d->timer = new QTimer;
-  connect (d->timer, SIGNAL (timeout ()), this, SLOT (timeout ()));
+  connect (d->timer, &QTimer::timeout, this, &cTimerList::timeout);
   d->timer->start (1000);
 }
 

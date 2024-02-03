@@ -61,7 +61,7 @@ dlgStatistics::dlgStatistics (QWidget *parent)
 
   //establish auto-updating of data
   updateTimer = new QTimer;
-  connect (updateTimer, SIGNAL (timeout()), this, SLOT (update()));
+  connect (updateTimer, &QTimer::timeout, this, &dlgStatistics::update);
   updateTimer->start (1000);
 
   //no focus - we don't want this dialog to get focus

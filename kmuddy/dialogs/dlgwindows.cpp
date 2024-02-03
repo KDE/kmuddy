@@ -88,9 +88,9 @@ void dlgWindows::createDialog()
   
   updateMe();
   
-  connect (btshow, SIGNAL (clicked ()), this, SLOT (wshow ()));
-  connect (bthide, SIGNAL (clicked ()), this, SLOT (whide ()));
-  connect (btdelete, SIGNAL (clicked ()), this, SLOT (remove ()));
+  connect (btshow, &QPushButton::clicked, this, &dlgWindows::wshow);
+  connect (bthide, &QPushButton::clicked, this, &dlgWindows::whide);
+  connect (btdelete, &QPushButton::clicked, this, &dlgWindows::remove);
 
 }
 

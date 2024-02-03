@@ -41,7 +41,7 @@ cButton::cButton (cList *list) : cListObject (list)
 {
   d = new Private;
   d->action = new QAction (nullptr);
-  connect (d->action, SIGNAL (triggered (bool)), this, SLOT (execute (bool)));
+  connect (d->action, &QAction::triggered, this, &cButton::execute);
 }
 
 cButton::~cButton()

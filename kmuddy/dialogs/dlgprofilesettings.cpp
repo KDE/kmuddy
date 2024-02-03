@@ -83,7 +83,7 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   btencoding->setWhatsThis( i18n ("Lets you pick the output character encoding used by the server. This usually only needs to be set for non-English servers."));
   codecAction = new KCodecAction (this);
   btencoding->setMenu (codecAction->menu ());
-  connect (codecAction, SIGNAL (triggered (const QString &)), this, SLOT (encodingChanged (const QString &)));
+  connect (codecAction, &KCodecAction::textTriggered, this, &dlgProfileSettings::encodingChanged);
 
   // LPMud prompt handling
   lpmudstyle = new QCheckBox (i18n ("&Auto-append newlines after prompt"), frmconn);
@@ -168,9 +168,9 @@ dlgProfileSettings::dlgProfileSettings (QWidget *parent) : KPageDialog (parent)
   edtranscriptdir->setWhatsThis( i18n ("Directory where session "
         "transcripts will be saved by default."));
 
-  connect (locbutton, SIGNAL (clicked()), this, SLOT (choosedir1()));
-  connect (wrkbutton, SIGNAL (clicked()), this, SLOT (choosedir2()));
-  connect (trnbutton, SIGNAL (clicked()), this, SLOT (choosedir3()));
+  connect (locbutton, &QPushButton::clicked, this, &dlgProfileSettings::choosedir1);
+  connect (wrkbutton, &QPushButton::clicked, this, &dlgProfileSettings::choosedir2);
+  connect (trnbutton, &QPushButton::clicked, this, &dlgProfileSettings::choosedir3);
   
   dirslayout->setSpacing (5);
   dirslayout->addWidget (sl1, 0, 0);

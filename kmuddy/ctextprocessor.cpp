@@ -54,7 +54,7 @@ cTextProcessor::cTextProcessor (int sess) : cActionBase ("textproc", sess)
 
   elapsedticks = 0;
   pdtimer = new QTimer;
-  connect (pdtimer, SIGNAL (timeout ()), this, SLOT (timeout ()));
+  connect (pdtimer, &QTimer::timeout, this, &cTextProcessor::timeout);
   pdtimer->start (250);
   
   // some events ahd stuff ...
@@ -69,27 +69,21 @@ cTextProcessor::cTextProcessor (int sess) : cActionBase ("textproc", sess)
   cANSIParser *ap = dynamic_cast<cANSIParser *>(object ("ansiparser", sess));
 #ifdef HAVE_MXP
   cMXPManager *mxpmanager = dynamic_cast<cMXPManager *>(object ("mxpmanager", sess));
-  connect (mxpmanager, SIGNAL (gotNewText (const QString &)),
-      ap, SLOT (parseText (const QString &)));
-  connect (mxpmanager, SIGNAL (gotNewLine ()), this, SLOT (gotNewLine ()));
-  connect (mxpmanager, SIGNAL (gotFgColor (QColor)), this, SLOT (gotFgColor (QColor)));
-  connect (mxpmanager, SIGNAL (gotBgColor (QColor)), this, SLOT (gotBgColor (QColor)));
-  connect (mxpmanager, SIGNAL (gotAttrib (int)), this, SLOT (gotAttrib (int)));
-  connect (mxpmanager, SIGNAL (gotALink (const QString &, const QString &, const QString &,
-      const QString &)), this, SLOT (gotALink (const QString &, const QString &,
-      const QString &, const QString &)));
-  connect (mxpmanager, SIGNAL (gotSENDLink (const QString &, const QString &, const QString &,
-      const QString &, bool, bool)), this, SLOT (gotSENDLink (const QString &,
-      const QString &, const QString &, const QString &, bool, bool)));
-  connect (mxpmanager, SIGNAL (gotExpire (const QString &)), this,
-      SLOT (gotExpire (const QString &)));
+  connect (mxpmanager, &cMXPManager::gotNewText, ap, &cANSIParser::parseText);
+  connect (mxpmanager, &cMXPManager::gotNewLine, this, &cTextProcessor::gotNewLine );
+  connect (mxpmanager, &cMXPManager::gotFgColor, this, &cTextProcessor::gotFgColor);
+  connect (mxpmanager, &cMXPManager::gotBgColor, this, &cTextProcessor::gotBgColor);
+  connect (mxpmanager, &cMXPManager::gotAttrib, this, &cTextProcessor::gotAttrib);
+  connect (mxpmanager, &cMXPManager::gotALink, this, &cTextProcessor::gotALink);
+  connect (mxpmanager, &cMXPManager::gotSENDLink, this, &cTextProcessor::gotSENDLink);
+  connect (mxpmanager, &cMXPManager::gotExpire, this, &cTextProcessor::gotExpire);
   
 #endif
-  connect (this, SIGNAL (plainText (const QString &)), ap, SLOT (parseText (const QString &)));
-  connect (ap, SIGNAL (fgColor (QColor)), this, SLOT (gotFgColor (QColor)));
-  connect (ap, SIGNAL (bgColor (QColor)), this, SLOT (gotBgColor (QColor)));
-  connect (ap, SIGNAL (attrib (int)), this, SLOT (gotAttrib (int)));
-  connect (ap, SIGNAL (plainText (const QString &)), this, SLOT (gotNewText (const QString &)));
+  connect (this, &cTextProcessor::plainText, ap, &cANSIParser::parseText);
+  connect (ap, &cANSIParser::fgColor, this, &cTextProcessor::gotFgColor);
+  connect (ap, &cANSIParser::bgColor, this, &cTextProcessor::gotBgColor);
+  connect (ap, &cANSIParser::attrib, this, &cTextProcessor::gotAttrib);
+  connect (ap, &cANSIParser::plainText, this, &cTextProcessor::gotNewText);
 }
 
 cTextProcessor::~cTextProcessor ()

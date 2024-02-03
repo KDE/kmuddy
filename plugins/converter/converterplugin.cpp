@@ -71,7 +71,7 @@ cConverterPlugin::cConverterPlugin (QObject *, const QVariantList &)
 
   d->converter = new QAction (this);
   d->converter->setText (i18n ("Profile &Converter..."));
-  connect (d->converter, SIGNAL (triggered()), this, SLOT (converterDialog()));
+  connect (d->converter, &QAction::triggered, this, &cConverterPlugin::converterDialog);
  
   cMenuManager *menu = cMenuManager::self();
   menu->plug (d->converter, "tools-slot3");

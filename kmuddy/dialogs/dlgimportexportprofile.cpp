@@ -73,7 +73,7 @@ dlgImportExportProfile::dlgImportExportProfile (bool isImport,
   layout->addWidget (buttons, 0, 3, 0, 2);
   layout->setRowStretch (2, 10);
 
-  connect (button, SIGNAL (clicked()), this, SLOT (browse ()));
+  connect (button, &QPushButton::clicked, this, &dlgImportExportProfile::browse);
 }                                                                       
 
 dlgImportExportProfile::~dlgImportExportProfile ()

@@ -47,10 +47,10 @@ cDirList::cDirList (QWidget *parent) : QWidget(parent)
   layout->addWidget (btdown, 3, 1);
   
   //establish connections
-  connect (btadd, SIGNAL (clicked ()), this, SLOT (addEntry ()));
-  connect (btdel, SIGNAL (clicked ()), this, SLOT (removeEntry ()));
-  connect (btup, SIGNAL (clicked ()), this, SLOT (moveEntryUp ()));
-  connect (btdown, SIGNAL (clicked ()), this, SLOT (moveEntryDown ()));
+  connect (btadd, &QPushButton::clicked, this, &cDirList::addEntry);
+  connect (btdel, &QPushButton::clicked, this, &cDirList::removeEntry);
+  connect (btup, &QPushButton::clicked, this, &cDirList::moveEntryUp);
+  connect (btdown, &QPushButton::clicked, this, &cDirList::moveEntryDown);
   
   //update our contents
   update ();

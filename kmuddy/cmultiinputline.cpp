@@ -44,7 +44,7 @@ cMultiInputLine::cMultiInputLine (int sess, QWidget *parent)
   //height: 2 lines
   setLinesHeight (2);
 
-  connect (this, SIGNAL (textChanged ()), this, SLOT (updateHeight()));
+  connect (this, &cMultiInputLine::textChanged, this, &cMultiInputLine::updateHeight);
 
   keeptext = true;
   selectkepttext = true;

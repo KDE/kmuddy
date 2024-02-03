@@ -110,7 +110,7 @@ cConnection::cConnection (int sess) : cActionBase ("connection", sess)
   d->windowlist = nullptr;
 
   d->saver = new QTimer;
-  connect (d->saver, SIGNAL (timeout ()), this, SLOT (saveSession ()));
+  connect (d->saver, &QTimer::timeout, this, &cConnection::saveSession);
 
   addEventHandler ("connected", 10, PT_NOTHING);
   addEventHandler ("save", 10, PT_NOTHING);
@@ -211,8 +211,7 @@ void cConnection::eventNothingHandler (QString event, int)
         if ((seqn > 1) || ((seqn == 1) && (d->loginSeq[0].length() > 0)))
         {
           d->connecting = new QTimer;
-          connect (d->connecting, SIGNAL (timeout()), this,
-              SLOT (sendLoginAndPassword()));
+          connect (d->connecting, &QTimer::timeout, this, &cConnection::sendLoginAndPassword);
           telnet->waitingForData();
           d->connecting->start (400);
         }
@@ -315,10 +314,8 @@ void cConnection::showConnPrefsDialog ()
   d->sdlg = new dlgProfileSettings (KMuddy::self());
 
   //then we connect() all its signals - this handles everything that the dialog offers...
-  connect (d->sdlg, SIGNAL (accepted()), this,
-      SLOT (getSettingsFromDialog()));
-  connect (d->sdlg->button (QDialogButtonBox::Apply), SIGNAL (clicked()), this,
-      SLOT (getSettingsFromDialog()));
+  connect (d->sdlg, &dlgProfileSettings::accepted, this, &cConnection::getSettingsFromDialog);
+  connect (d->sdlg->button (QDialogButtonBox::Apply), &QPushButton::clicked, this, &cConnection::getSettingsFromDialog);
 
   //next we fill in its data
   putSettingsToDialog ();
@@ -549,8 +546,7 @@ void cConnection::sendLoginAndPassword ()
         {
           d->connecting->stop ();
           //I have no idea why this is needed
-          QObject::disconnect (d->connecting, SIGNAL (timeout()),
-              this, SLOT (sendLoginAndPassword()));
+          QObject::disconnect (d->connecting, &QTimer::timeout, this, &cConnection::sendLoginAndPassword);
           delete d->connecting;
           d->connecting = nullptr;
           wasData = false;
@@ -568,8 +564,7 @@ void cConnection::sendLoginAndPassword ()
   {
     d->connecting->stop ();
     //I have no idea why this is needed
-    QObject::disconnect (d->connecting, SIGNAL (timeout()),
-        this, SLOT (sendLoginAndPassword()));
+    QObject::disconnect (d->connecting, &QTimer::timeout, this, &cConnection::sendLoginAndPassword);
     delete d->connecting;
     d->connecting = nullptr;
     wasData = false;

@@ -77,13 +77,8 @@ dlgDumpBuffer::dlgDumpBuffer (QWidget *parent) : QDialog (parent)
   connect (buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
   connect (buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-  //connect the Browse button!
-  connect (filebutton, SIGNAL (clicked ()), this, SLOT (browseFiles ()));
-
-  //connect the qcombobox to our function
-  connect (ttype, SIGNAL (activated (int)), this, SLOT (updateFname(int)));
-  
-  //    connect( pathCombo, SIGNAL( activated( const QString & ) ), this, SLOT ( changePath( const QString & ) ) );
+  connect (filebutton, &QPushButton::clicked, this, &dlgDumpBuffer::browseFiles);
+  connect (ttype, QOverload<int>::of(&QComboBox::activated), this, &dlgDumpBuffer::updateFname);
   
   layout->setSpacing (5);
   layout->addWidget (chkcurpos);

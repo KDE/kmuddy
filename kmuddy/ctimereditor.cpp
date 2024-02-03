@@ -118,7 +118,7 @@ void cTimerEditor::createGUI(QWidget *parent)
   basicLayout->addWidget (grpadvance, 4, 0, 1, 2);
   basicLayout->addWidget (commonEditor, 5, 0, 1, 2);
 
-  connect (d->chkadvance, SIGNAL (toggled(bool)), grpadvance, SLOT (setEnabled (bool)));
+  connect (d->chkadvance, &QCheckBox::toggled, grpadvance, &QGroupBox::setEnabled);
   // initial state
   d->chkadvance->setChecked (false);
   grpadvance->setEnabled (false);

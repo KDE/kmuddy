@@ -78,7 +78,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   d->lblkey->setFrameStyle (QFrame::StyledPanel | QFrame::Sunken);
   d->lblkey->setLineWidth (2);
   QPushButton *btgrab = new QPushButton (i18n ("Grab shortcut..."), basicPage);
-  connect (btgrab, SIGNAL (clicked ()), this, SLOT (grabKey ()));
+  connect (btgrab, &QPushButton::clicked, this, &cShortcutEditor::grabKey);
 
   d->chksendit = new QCheckBox (i18n ("&Send command"), basicPage);
   d->chksendit->setWhatsThis( i18n ("If checked, the command will be sent "
@@ -87,7 +87,7 @@ void cShortcutEditor::createGUI(QWidget *parent)
   d->chkoverwrite = new QCheckBox (i18n ("&Overwrite existing text"), basicPage);
   d->chkoverwrite->setWhatsThis( i18n ("If there already is some text in "
       "the input line, should it be overwritten?"));
-  connect (d->chksendit, SIGNAL (toggled (bool)), d->chkoverwrite, SLOT (setDisabled (bool)));
+  connect (d->chksendit, &QCheckBox::toggled, d->chkoverwrite, &QCheckBox::setDisabled);
    
   QWidget *commonEditor = createCommonAttribEditor (basicPage);
 
