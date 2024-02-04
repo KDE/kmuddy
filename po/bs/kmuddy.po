@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-29 01:34+0000\n"
+"POT-Creation-Date: 2024-02-04 01:36+0000\n"
 "PO-Revision-Date: 2015-02-22 22:21+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -92,109 +92,109 @@ msgstr "&Skripta"
 msgid "Script when &released"
 msgstr "Skripta koja se izvrši kada se &pusti"
 
-#: kmuddy/cconnection.cpp:263
+#: kmuddy/cconnection.cpp:262
 #, kde-format
 msgid "Network error: %1"
 msgstr "Mrežna greška: %1"
 
-#: kmuddy/cconnection.cpp:425
+#: kmuddy/cconnection.cpp:422
 #, kde-format
 msgid "Do you want to close connection to %1?"
 msgstr "Da li želite da zatvorite konekciju do %1?"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Disconnect"
 msgstr "Prekini vezu"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, fuzzy, kde-format
 #| msgid "No connection"
 msgid "Close connection"
 msgstr "Nema konekcije"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, fuzzy, kde-format
 #| msgid "Connected"
 msgid "Stay connected"
 msgstr "Povezano"
 
-#: kmuddy/cconnection.cpp:510
+#: kmuddy/cconnection.cpp:507
 #, kde-format
 msgid "(password is hidden)"
 msgstr "(šifra je sakrivena)"
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
 msgstr "Pseudonimi su sada omogućeni."
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
 msgstr "Pseudonimi su sada isključeni."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
 msgstr "Aktivatori su sada omogućeni."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
 msgstr "Aktivatori su sada isključeni."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
 msgstr "Tajmeri su sada omogućeni."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
 msgstr "Tajmeri su sada isključeni."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
 msgstr "Makro ključevi su sada omogućeni."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
 msgstr "Makro ključevi su sada isključeni."
 
-#: kmuddy/cconnection.cpp:817
+#: kmuddy/cconnection.cpp:812
 #, kde-format
 msgid "Aliases"
 msgstr "Pseudonimi"
 
-#: kmuddy/cconnection.cpp:818
+#: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
 msgstr "Okidači"
 
-#: kmuddy/cconnection.cpp:819
+#: kmuddy/cconnection.cpp:814
 #, kde-format
 msgid "Buttons"
 msgstr "Dugmad"
 
-#: kmuddy/cconnection.cpp:820
+#: kmuddy/cconnection.cpp:815
 #, kde-format
 msgid "Timers"
 msgstr "Tajmeri"
 
-#: kmuddy/cconnection.cpp:821
+#: kmuddy/cconnection.cpp:816
 #, kde-format
 msgid "Macro Keys"
 msgstr "Makro ključevi."
 
-#: kmuddy/cconnection.cpp:822
+#: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
 msgstr "Statusne promjenljive."
 
-#: kmuddy/cconnection.cpp:823
+#: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Gauges"
 msgstr "Mjerači"

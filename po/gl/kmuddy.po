@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-29 01:34+0000\n"
+"POT-Creation-Date: 2024-02-04 01:36+0000\n"
 "PO-Revision-Date: 2024-01-15 19:35+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -92,107 +92,107 @@ msgstr "&Guión"
 msgid "Script when &released"
 msgstr "Guión ao solta&r"
 
-#: kmuddy/cconnection.cpp:263
+#: kmuddy/cconnection.cpp:262
 #, kde-format
 msgid "Network error: %1"
 msgstr "Erro de rede: %1"
 
-#: kmuddy/cconnection.cpp:425
+#: kmuddy/cconnection.cpp:422
 #, kde-format
 msgid "Do you want to close connection to %1?"
 msgstr "Quere pechar a conexión a %1?"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Close connection"
 msgstr "Pechar a conexión"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Stay connected"
 msgstr "Manter a conexión"
 
-#: kmuddy/cconnection.cpp:510
+#: kmuddy/cconnection.cpp:507
 #, kde-format
 msgid "(password is hidden)"
 msgstr "(o contrasinal está agochado)"
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
 msgstr "As abreviaturas están activadas."
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
 msgstr "As abreviaturas están desactivadas."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
 msgstr "Os disparadores están activados."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
 msgstr "Os disparadores están desactivados."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
 msgstr "Os temporizadores están activados."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
 msgstr "Os temporizadores están desactivados."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
 msgstr "As teclas de macros están activadas."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
 msgstr "As teclas de macros están desactivadas."
 
-#: kmuddy/cconnection.cpp:817
+#: kmuddy/cconnection.cpp:812
 #, kde-format
 msgid "Aliases"
 msgstr "Abreviaturas"
 
-#: kmuddy/cconnection.cpp:818
+#: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
 msgstr "Disparadores"
 
-#: kmuddy/cconnection.cpp:819
+#: kmuddy/cconnection.cpp:814
 #, kde-format
 msgid "Buttons"
 msgstr "Botóns"
 
-#: kmuddy/cconnection.cpp:820
+#: kmuddy/cconnection.cpp:815
 #, kde-format
 msgid "Timers"
 msgstr "Temporizadores"
 
-#: kmuddy/cconnection.cpp:821
+#: kmuddy/cconnection.cpp:816
 #, kde-format
 msgid "Macro Keys"
 msgstr "Teclas de macros"
 
-#: kmuddy/cconnection.cpp:822
+#: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
 msgstr "Variábeis de estado"
 
-#: kmuddy/cconnection.cpp:823
+#: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Gauges"
 msgstr "Calibrador"

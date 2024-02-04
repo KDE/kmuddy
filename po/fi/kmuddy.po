@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-29 01:34+0000\n"
+"POT-Creation-Date: 2024-02-04 01:36+0000\n"
 "PO-Revision-Date: 2016-02-09 20:51+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -90,109 +90,109 @@ msgstr "&Skripti"
 msgid "Script when &released"
 msgstr ""
 
-#: kmuddy/cconnection.cpp:263
+#: kmuddy/cconnection.cpp:262
 #, kde-format
 msgid "Network error: %1"
 msgstr "Verkkovirhe: %1"
 
-#: kmuddy/cconnection.cpp:425
+#: kmuddy/cconnection.cpp:422
 #, kde-format
 msgid "Do you want to close connection to %1?"
 msgstr "Haluatko katkaista yhteyden koneeseen %1?"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Disconnect"
 msgstr "Katkaise yhteys"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, fuzzy, kde-format
 #| msgid "No connection"
 msgid "Close connection"
 msgstr "Ei yhteyttä"
 
-#: kmuddy/cconnection.cpp:426
+#: kmuddy/cconnection.cpp:423
 #, fuzzy, kde-format
 #| msgid "Connected"
 msgid "Stay connected"
 msgstr "Yhdistetty"
 
-#: kmuddy/cconnection.cpp:510
+#: kmuddy/cconnection.cpp:507
 #, kde-format
 msgid "(password is hidden)"
 msgstr "(salasana piilotetaan)"
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
 msgstr "Aliakset ovat nyt käytössä."
 
-#: kmuddy/cconnection.cpp:731
+#: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
 msgstr "Aliakset on nyt poistettu käytöstä."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
 msgstr "Liipaisimet ovat nyt käytössä."
 
-#: kmuddy/cconnection.cpp:742
+#: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
 msgstr "Liipaisimet on nyt poistettu käytöstä."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
 msgstr "Ajastimet ovat nyt käytössä."
 
-#: kmuddy/cconnection.cpp:753
+#: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
 msgstr "Ajastimet on nyt poistettu käytöstä."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
 msgstr "Makronäppäimet ovat nyt käytössä."
 
-#: kmuddy/cconnection.cpp:764
+#: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
 msgstr "Makronäppäimet on nyt poistettu käytöstä."
 
-#: kmuddy/cconnection.cpp:817
+#: kmuddy/cconnection.cpp:812
 #, kde-format
 msgid "Aliases"
 msgstr "Aliakset"
 
-#: kmuddy/cconnection.cpp:818
+#: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
 msgstr "Liipaisimet"
 
-#: kmuddy/cconnection.cpp:819
+#: kmuddy/cconnection.cpp:814
 #, kde-format
 msgid "Buttons"
 msgstr "Painikkeet"
 
-#: kmuddy/cconnection.cpp:820
+#: kmuddy/cconnection.cpp:815
 #, kde-format
 msgid "Timers"
 msgstr "Ajastimet"
 
-#: kmuddy/cconnection.cpp:821
+#: kmuddy/cconnection.cpp:816
 #, kde-format
 msgid "Macro Keys"
 msgstr "Makronäppäimet"
 
-#: kmuddy/cconnection.cpp:822
+#: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
 msgstr "Tilamuuttujat"
 
-#: kmuddy/cconnection.cpp:823
+#: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Gauges"
 msgstr ""
