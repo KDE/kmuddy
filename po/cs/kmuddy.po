@@ -104,16 +104,14 @@ msgid "Disconnect"
 msgstr "Odpojit"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Žádné připojení"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Připojen"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -4168,10 +4166,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr ""
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Vytvořit úroveň"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -5146,12 +5143,3 @@ msgstr "Proměnná"
 #, kde-format
 msgid "Variables"
 msgstr "Proměnné"
-
-#~ msgid "WWW"
-#~ msgstr "WWW"
-
-#~ msgid "IP"
-#~ msgstr "IP"
-
-#~ msgid "&Filter:"
-#~ msgstr "&Filtr:"
