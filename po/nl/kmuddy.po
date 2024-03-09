@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-04 01:36+0000\n"
-"PO-Revision-Date: 2024-01-15 10:14+0100\n"
+"PO-Revision-Date: 2024-03-08 13:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1153,7 +1153,7 @@ msgstr "Kies map geluiden"
 #: kmuddy/dialogs/dlgappsettings.cpp:77
 #, kde-format
 msgid "Application settings"
-msgstr "Programma-instellingen"
+msgstr "Toepassingsinstellingen"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:84
 #, kde-format
