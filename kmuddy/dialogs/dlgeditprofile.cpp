@@ -59,7 +59,7 @@ dlgEditProfile::dlgEditProfile(QWidget *parent) : QDialog (parent)
   ed5 = new QLineEdit (this);
   ed5->setEchoMode (QLineEdit::Password);
   ed5->setWhatsThis( i18n ("Enter your password on the MUD here.<p><i>This setting is optional.</i>"));
-  QLabel *l6 = new QLabel (i18n ("&Connect sequence"), this);
+  QLabel *l6 = new QLabel (i18nc ("Commands sent after connection is established", "&Connect sequence"), this);
   connstr = new KTextEdit (this);
   connstr->setAcceptRichText (false);
   connstr->setWordWrapMode (QTextOption::NoWrap);
