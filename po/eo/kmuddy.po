@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-04 01:36+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -32,17 +32,17 @@ msgstr ""
 #: kmuddy/cstatusvareditor.cpp:70
 #, kde-format
 msgid "&Caption"
-msgstr ""
+msgstr "&Caption"
 
 #: kmuddy/cbuttoneditor.cpp:68
 #, kde-format
 msgid "Caption of this button."
-msgstr ""
+msgstr "Titolo de ĉi tiu butono."
 
 #: kmuddy/cbuttoneditor.cpp:71
 #, kde-format
 msgid "Co&mmand"
-msgstr ""
+msgstr "Ko&mando"
 
 #: kmuddy/cbuttoneditor.cpp:74
 #, kde-format
@@ -55,12 +55,12 @@ msgstr ""
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
 msgid "Icon displayed on the button toolbar."
-msgstr ""
+msgstr "Piktogramo montrata sur la butona ilobreto."
 
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr ""
+msgstr "&Malpremi komandon"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "&Skripto"
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr ""
+msgstr "Skripto kiam &eldonita"
 
 #: kmuddy/cconnection.cpp:262
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Reta eraro: %1"
 #: kmuddy/cconnection.cpp:422
 #, kde-format
 msgid "Do you want to close connection to %1?"
-msgstr ""
+msgstr "Ĉu vi volas fermi konekton al %1?"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
@@ -105,57 +105,57 @@ msgstr "Malkonekti"
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Close connection"
-msgstr ""
+msgstr "Fermi konekton"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Stay connected"
-msgstr ""
+msgstr "Resti konektita"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
 msgid "(password is hidden)"
-msgstr ""
+msgstr "(pasvorto estas kaŝita)"
 
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
-msgstr ""
+msgstr "Aliasoj nun estas ebligitaj."
 
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
-msgstr ""
+msgstr "Aliasoj nun estas malŝaltitaj."
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr ""
+msgstr "Ekigiloj nun estas ebligitaj."
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr ""
+msgstr "Ekigiloj nun estas malŝaltitaj."
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
-msgstr ""
+msgstr "Temporiziloj nun estas ebligitaj."
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
-msgstr ""
+msgstr "Temporiziloj nun estas malŝaltitaj."
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
-msgstr ""
+msgstr "Makroŝlosiloj nun estas ebligitaj."
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
-msgstr ""
+msgstr "Makroŝlosiloj nun estas malŝaltitaj."
 
 #: kmuddy/cconnection.cpp:812
 #, kde-format
@@ -165,7 +165,7 @@ msgstr "Kaŝnomo"
 #: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
-msgstr ""
+msgstr "Ellasiloj"
 
 #: kmuddy/cconnection.cpp:814
 #, kde-format
@@ -180,43 +180,43 @@ msgstr "Tempigiloj"
 #: kmuddy/cconnection.cpp:816
 #, kde-format
 msgid "Macro Keys"
-msgstr ""
+msgstr "Makro-klavoj"
 
 #: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
-msgstr ""
+msgstr "Statusvariabloj"
 
 #: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Gauges"
-msgstr ""
+msgstr "Mezuriloj"
 
 #: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:56
 #: plugins/vartrigs/cvartriggereditor.cpp:57
 #, kde-format
 msgid "&Variable name"
-msgstr ""
+msgstr "&Nomo de variablo"
 
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
 msgid "Variable displayed by this gauge."
-msgstr ""
+msgstr "Variablo montrata de ĉi tiu mezurilo."
 
 #: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
 #, kde-format
 msgid "&Max. variable (optional)"
-msgstr ""
+msgstr "&Maks. variablo (laŭvola)"
 
 #: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
 #, kde-format
 msgid "Variable holding the maximum value (default=100)"
-msgstr ""
+msgstr "Variablo tenanta la maksimuman valoron (defaŭlte=100)"
 
 #: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:73
 #, kde-format
 msgid "Caption shown next to variable value."
-msgstr ""
+msgstr "Titolo montrita apud varia valoro."
 
 #: kmuddy/cgaugeeditor.cpp:78
 #, kde-format
@@ -226,32 +226,32 @@ msgstr "&Koloro"
 #: kmuddy/cgaugeeditor.cpp:81
 #, kde-format
 msgid "Color used to paint this gauge."
-msgstr ""
+msgstr "Koloro uzata por pentri ĉi tiun mezurilon."
 
 #: kmuddy/cmxpmanager.cpp:299
 #, kde-format
 msgid "line tag"
-msgstr ""
+msgstr "linio-etikedo"
 
 #: kmuddy/cmxpmanager.cpp:300
 #, kde-format
 msgid "expire link"
-msgstr ""
+msgstr "eksvalida ligilo"
 
 #: kmuddy/cmxpmanager.cpp:301
 #, kde-format
 msgid "horizontal line"
-msgstr ""
+msgstr "horizontala linio"
 
 #: kmuddy/cmxpmanager.cpp:302
 #, kde-format
 msgid "create window"
-msgstr ""
+msgstr "krei fenestron"
 
 #: kmuddy/cmxpmanager.cpp:303
 #, kde-format
 msgid "create internal window"
-msgstr ""
+msgstr "krei internan fenestron"
 
 #: kmuddy/cmxpmanager.cpp:304
 #, kde-format
@@ -261,27 +261,27 @@ msgstr "fermi fenestron"
 #: kmuddy/cmxpmanager.cpp:305
 #, kde-format
 msgid "set active window"
-msgstr ""
+msgstr "agordi aktivan fenestron"
 
 #: kmuddy/cmxpmanager.cpp:306
 #, kde-format
 msgid "move cursor"
-msgstr ""
+msgstr "movi kursoron"
 
 #: kmuddy/cmxpmanager.cpp:307
 #, kde-format
 msgid "erase text"
-msgstr ""
+msgstr "forviŝi tekston"
 
 #: kmuddy/cmxpmanager.cpp:308
 #, kde-format
 msgid "relocate"
-msgstr ""
+msgstr "translokiĝi"
 
 #: kmuddy/cmxpmanager.cpp:309
 #, kde-format
 msgid "send username/password"
-msgstr ""
+msgstr "sendi uzantnomon/pasvorton"
 
 #: kmuddy/cmxpmanager.cpp:310
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "bildo"
 #: kmuddy/cmxpmanager.cpp:311
 #, kde-format
 msgid "image map"
-msgstr ""
+msgstr "bildmapo"
 
 #: kmuddy/cmxpmanager.cpp:312
 #, kde-format
@@ -301,22 +301,22 @@ msgstr "nekonata"
 #: kmuddy/cmxpmanager.cpp:314
 #, kde-format
 msgid "Ignoring unsupported MXP request (%1)"
-msgstr ""
+msgstr "Ignorante nesubtenitan MXP-peton (%1)"
 
 #: kmuddy/csession.cpp:82
 #, kde-format
 msgid "Ctrl+Enter adds new line, unless changed in settings"
-msgstr ""
+msgstr "Ctrl+Enter aldonas novan linion, krom se ŝanĝite en agordoj"
 
 #: kmuddy/csession.cpp:86
 #, kde-format
 msgid "Switches between standard and multi-line input line."
-msgstr ""
+msgstr "Ŝaltas inter norma kaj plurlinia eniglinio."
 
 #: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
 #, kde-format
 msgid "No connection"
-msgstr ""
+msgstr "Neniu konekto"
 
 #: kmuddy/csessionmanager.cpp:211
 #, kde-format
@@ -357,7 +357,7 @@ msgstr "Meta"
 #: kmuddy/kmuddy.cpp:280
 #, kde-format
 msgid "&Command"
-msgstr ""
+msgstr "&Komando"
 
 #: kmuddy/cshortcuteditor.cpp:71
 #, kde-format
@@ -374,12 +374,12 @@ msgstr "Ŝparvojo"
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
 msgid "Grab shortcut..."
-msgstr ""
+msgstr "Ekpreni ŝparvojon..."
 
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
 msgid "&Send command"
-msgstr ""
+msgstr "&Sendi komandon"
 
 #: kmuddy/cshortcuteditor.cpp:84
 #, kde-format
@@ -391,7 +391,7 @@ msgstr ""
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
 msgid "&Overwrite existing text"
-msgstr ""
+msgstr "&Anstataŭigi ekzistantan tekston"
 
 #: kmuddy/cshortcuteditor.cpp:88
 #, kde-format
@@ -402,12 +402,12 @@ msgstr ""
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
 msgid "Variable displayed by this status variable."
-msgstr ""
+msgstr "Variablo montrata de ĉi tiu statusvariablo."
 
 #: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
 msgid "&Show as percentage"
-msgstr ""
+msgstr "&Montri kiel procento"
 
 #: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
@@ -419,7 +419,7 @@ msgstr ""
 #: kmuddy/ctelnet.cpp:239 kmuddy/ctelnet.cpp:315
 #, kde-format
 msgid "--- A connection has been established ---"
-msgstr ""
+msgstr "--- Konekto estis establita ---"
 
 #: kmuddy/ctelnet.cpp:249
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "Konektante..."
 #: kmuddy/ctelnet.cpp:1067
 #, kde-format
 msgid "The remote server has been found, attempting connection."
-msgstr ""
+msgstr "La fora servilo estas trovita, provante konekton."
 
 #: kmuddy/ctimer.cpp:78
 #, kde-format
@@ -439,7 +439,7 @@ msgstr " sek"
 #: kmuddy/ctimer.cpp:80
 #, kde-format
 msgid ", single-shot"
-msgstr ""
+msgstr ", sol-pafo"
 
 #: kmuddy/ctimereditor.cpp:70
 #, kde-format
@@ -451,47 +451,49 @@ msgstr ""
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
 msgid "&Interval"
-msgstr ""
+msgstr "&Intervalo"
 
 #: kmuddy/ctimereditor.cpp:77 kmuddy/ctimereditor.cpp:94
 #, kde-format
 msgid " secs"
-msgstr ""
+msgstr " sek"
 
 #: kmuddy/ctimereditor.cpp:81
 #, kde-format
 msgid "&Single-shot"
-msgstr ""
+msgstr "&Unupa pafo"
 
 #: kmuddy/ctimereditor.cpp:82
 #, kde-format
 msgid "When enabled, the timer will only be executed once and then disabled."
 msgstr ""
+"Kiam ĝi estas ebligita, la tempigilo nur estos plenumita unufoje kaj poste "
+"malŝaltita."
 
 #: kmuddy/ctimereditor.cpp:84
 #, kde-format
 msgid "&Run a command in advance"
-msgstr ""
+msgstr "&Ruli komandon anticipe"
 
 #: kmuddy/ctimereditor.cpp:85
 #, kde-format
 msgid "Run a command a given number of seconds before each timer tick."
-msgstr ""
+msgstr "Ruli komandon difinitan nombron da sekundoj antaŭ ĉiu tempigilo."
 
 #: kmuddy/ctimereditor.cpp:87
 #, kde-format
 msgid "Advance command"
-msgstr ""
+msgstr "Antaŭa komando"
 
 #: kmuddy/ctimereditor.cpp:90
 #, kde-format
 msgid "&Seconds before tick"
-msgstr ""
+msgstr "&Sekundoj antaŭ tick"
 
 #: kmuddy/ctimereditor.cpp:97
 #, kde-format
 msgid "C&ommand"
-msgstr ""
+msgstr "K&omando"
 
 #: kmuddy/ctimereditor.cpp:100
 #, kde-format
@@ -503,62 +505,62 @@ msgstr ""
 #: kmuddy/ctranscript.cpp:173
 #, kde-format
 msgid "Session transcript has been stopped."
-msgstr ""
+msgstr "La transskribo de la seanco estas ĉesigita."
 
 #: kmuddy/ctranscript.cpp:207
 #, kde-format
 msgid "Advanced session transcript has been stopped."
-msgstr ""
+msgstr "Altnivela seanco-transskribo estas ĉesigita."
 
 #: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Transcript file could not be opened."
-msgstr ""
+msgstr "Transskriba dosiero ne povis esti malfermita."
 
 #: kmuddy/ctranscript.cpp:259
 #, kde-format
 msgid "Session transcript could not be started."
-msgstr ""
+msgstr "Seanca transskribo ne eblis komenci."
 
 #: kmuddy/ctranscript.cpp:278
 #, kde-format
 msgid "Session transcript has just started."
-msgstr ""
+msgstr "Seanca transskribo ĵus komenciĝis."
 
 #: kmuddy/ctranscript.cpp:287
 #, kde-format
 msgid "Session transcript has been started."
-msgstr ""
+msgstr "Seanca transskribo estis komencita."
 
 #: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced transcript file could not be opened."
-msgstr ""
+msgstr "Altnivela transskriba dosiero ne povus esti malfermita."
 
 #: kmuddy/ctranscript.cpp:315
 #, kde-format
 msgid "Advanced session transcript could not be started."
-msgstr ""
+msgstr "Altnivela seanco-transskribo ne eblis komenci."
 
 #: kmuddy/ctranscript.cpp:331
 #, kde-format
 msgid "Advanced session transcript has just started."
-msgstr ""
+msgstr "Altnivela seanco-transskribo ĵus komenciĝis."
 
 #: kmuddy/ctranscript.cpp:336
 #, kde-format
 msgid "Advanced session transcript has been started."
-msgstr ""
+msgstr "Altnivela seanco-transskribo estis komencita."
 
 #: kmuddy/ctranscript.cpp:340
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
-msgstr ""
+msgstr "La transskribo de la seanco estos turnita je noktomezo."
 
 #: kmuddy/ctranscript.cpp:426
 #, kde-format
 msgid "Dump file could not be opened."
-msgstr ""
+msgstr "Elĵetdosiero ne povis esti malfermita."
 
 #: kmuddy/ctriggereditor.cpp:114
 #, kde-format
@@ -608,37 +610,37 @@ msgstr "Griza"
 #: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Dark gray"
-msgstr ""
+msgstr "Malhela griza"
 
 #: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright red"
-msgstr ""
+msgstr "Brila ruĝa"
 
 #: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright green"
-msgstr ""
+msgstr "Brila verda"
 
 #: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright yellow"
-msgstr ""
+msgstr "Brila flava"
 
 #: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright blue"
-msgstr ""
+msgstr "Brila bluo"
 
 #: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright magenta"
-msgstr ""
+msgstr "Brila magento"
 
 #: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright cyan"
-msgstr ""
+msgstr "Brila cejana"
 
 #: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
@@ -653,12 +655,12 @@ msgstr "Alia"
 #: kmuddy/ctriggereditor.cpp:136
 #, kde-format
 msgid "Whole line"
-msgstr ""
+msgstr "Tuta linio"
 
 #: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Matching text"
-msgstr ""
+msgstr "Kongrua teksto"
 
 #: kmuddy/ctriggereditor.cpp:138
 #, kde-format
@@ -673,47 +675,47 @@ msgstr "Sufikso"
 #: kmuddy/ctriggereditor.cpp:140
 #, kde-format
 msgid "Full prefix"
-msgstr ""
+msgstr "Plena prefikso"
 
 #: kmuddy/ctriggereditor.cpp:141
 #, kde-format
 msgid "Full suffix"
-msgstr ""
+msgstr "Plena sufikso"
 
 #: kmuddy/ctriggereditor.cpp:142
 #, kde-format
 msgid "Backreference"
-msgstr ""
+msgstr "Malantaŭreferenco"
 
 #: kmuddy/ctriggereditor.cpp:165
 #, kde-format
 msgid "&Trigger text"
-msgstr ""
+msgstr "&Eligi tekston"
 
 #: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
 msgid "Command that will be replaced if you enter it."
-msgstr ""
+msgstr "Komando kiu estos anstataŭigita se vi enigas ĝin."
 
 #: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
 #, kde-format
 msgid "Exact match"
-msgstr ""
+msgstr "Ĝuste kongruo"
 
 #: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
 #, kde-format
 msgid "Sub-string"
-msgstr ""
+msgstr "Subĉeno"
 
 #: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
 #, kde-format
 msgid "Begins with"
-msgstr ""
+msgstr "Komencas kun"
 
 #: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:104
 #, kde-format
 msgid "Ends with"
-msgstr ""
+msgstr "Finiĝas per"
 
 #: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:105
 #, kde-format
@@ -737,22 +739,22 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr ""
+msgstr "&Komando(j) por sendi:"
 
 #: kmuddy/ctriggereditor.cpp:199
 #, kde-format
 msgid "Command(s) that will replace command you've entered."
-msgstr ""
+msgstr "Komando(j) kiu anstataŭigos komandon, kiun vi enigis."
 
 #: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
 #, kde-format
 msgid "Test area"
-msgstr ""
+msgstr "Testareo"
 
 #: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
-msgstr ""
+msgstr "&Teksto:"
 
 #: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
 #: plugins/converter/converterdialog.cpp:54
@@ -784,7 +786,7 @@ msgstr "&Opcioj"
 #: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
 #, kde-format
 msgid "Whole words only"
-msgstr ""
+msgstr "Nur tutaj vortoj"
 
 #: kmuddy/ctriggereditor.cpp:252
 #, kde-format
@@ -808,7 +810,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:260
 #, kde-format
 msgid "Show but do not send"
-msgstr ""
+msgstr "Montri sed ne sendu"
 
 #: kmuddy/ctriggereditor.cpp:261
 #, kde-format
@@ -820,7 +822,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
 msgid "Global matching"
-msgstr ""
+msgstr "Ĉiea kongruo"
 
 #: kmuddy/ctriggereditor.cpp:265
 #, kde-format
@@ -838,27 +840,27 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
 #, kde-format
 msgid "Continue matching"
-msgstr ""
+msgstr "Daŭrigi kongruon"
 
 #: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
 #, kde-format
 msgid "Stop matching"
-msgstr ""
+msgstr "Ĉesigi kongrui"
 
 #: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
 #, kde-format
 msgid "Leave group"
-msgstr ""
+msgstr "Forlasi grupon"
 
 #: kmuddy/ctriggereditor.cpp:315
 #, kde-format
 msgid "&Enable color replacement"
-msgstr ""
+msgstr "&Ebligi koloranstataŭigon"
 
 #: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
 #, kde-format
 msgid "Color replacement"
-msgstr ""
+msgstr "Koloro anstataŭigo"
 
 #: kmuddy/ctriggereditor.cpp:339
 #, kde-format
@@ -878,7 +880,7 @@ msgstr "&Kolorigi"
 #: kmuddy/ctriggereditor.cpp:343
 #, kde-format
 msgid "&Foreground"
-msgstr ""
+msgstr "&Malfono"
 
 #: kmuddy/ctriggereditor.cpp:345
 #, kde-format
@@ -888,7 +890,7 @@ msgstr "&Fono"
 #: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
 #, kde-format
 msgid "&Back-reference"
-msgstr ""
+msgstr "&Malantaŭa referenco"
 
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
@@ -909,27 +911,27 @@ msgstr "Fono"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr ""
+msgstr "Teksto &reskriba ellasilo"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
 msgid "Rewrite text"
-msgstr ""
+msgstr "Reskribi tekston"
 
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
-msgstr ""
+msgstr "&Ŝanĝi ĉi tiun linioparton:"
 
 #: kmuddy/ctriggereditor.cpp:401
 #, kde-format
 msgid "&To this value:"
-msgstr ""
+msgstr "&Al ĉi tiu valoro:"
 
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr ""
+msgstr "Ne montri (&gag) la linion"
 
 #: kmuddy/ctriggereditor.cpp:427
 #, kde-format
@@ -940,7 +942,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:429
 #, kde-format
 msgid "&Notify"
-msgstr ""
+msgstr "&Sciigi"
 
 #: kmuddy/ctriggereditor.cpp:430
 #, kde-format
@@ -955,7 +957,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr ""
+msgstr "&Prompt-detekta ellasilo"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -970,7 +972,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
 msgid "Play s&ound file"
-msgstr ""
+msgstr "Ludi s&ondosieron"
 
 #: kmuddy/ctriggereditor.cpp:445
 #, kde-format
@@ -982,22 +984,22 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:464
 #, kde-format
 msgid "Send output to a separate window"
-msgstr ""
+msgstr "Sendi eligon al aparta fenestro"
 
 #: kmuddy/ctriggereditor.cpp:465
 #, kde-format
 msgid "This will send the matched text to a separate output window"
-msgstr ""
+msgstr "Ĉi tio sendos la kongruan tekston al aparta eligfenestro"
 
 #: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
 #, kde-format
 msgid "Output Windows"
-msgstr ""
+msgstr "Eligaj Fenestroj"
 
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
-msgstr ""
+msgstr "&Gag eligo en ĉefa fenestro"
 
 #: kmuddy/ctriggereditor.cpp:479
 #, kde-format
@@ -1009,12 +1011,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
 msgid "&Window name"
-msgstr ""
+msgstr "&Fenestronomo"
 
 #: kmuddy/ctriggereditor.cpp:486
 #, kde-format
 msgid "&Create window"
-msgstr ""
+msgstr "&Krei fenestron"
 
 #: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
 #, kde-format
@@ -1024,27 +1026,27 @@ msgstr "&Baza"
 #: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Special trigger"
-msgstr ""
+msgstr "Speciala ellasilo"
 
 #: kmuddy/ctriggereditor.cpp:517
 #, kde-format
 msgid "Output windows"
-msgstr ""
+msgstr "Eligo fenestroj"
 
 #: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr ""
+msgstr "Ĉi tiu teksto ne kongruis kun via ellasilo."
 
 #: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
-msgstr ""
+msgstr "Ĉi tiu teksto kongruas kun via ellasilo."
 
 #: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr ""
+msgstr "Maksimuma nombro da kolorigoj atingita."
 
 #: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1059,7 +1061,7 @@ msgstr "Elekti sondosieron"
 #: kmuddy/ctriggereditor.cpp:703
 #, kde-format
 msgid "Window name is empty!"
-msgstr ""
+msgstr "Fenestra nomo estas malplena!"
 
 #: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
@@ -1078,7 +1080,7 @@ msgstr "Forigi"
 #: kmuddy/dialogs/cdirlist.cpp:37
 #, kde-format
 msgid "Move &up"
-msgstr ""
+msgstr "Movi s&upren"
 
 #: kmuddy/dialogs/cdirlist.cpp:38
 #, kde-format
@@ -1088,12 +1090,12 @@ msgstr "Movi malsu&pren"
 #: kmuddy/dialogs/cdirlist.cpp:72
 #, kde-format
 msgid "Choose sound directory"
-msgstr ""
+msgstr "Elekti sondosierujon"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:77
 #, kde-format
 msgid "Application settings"
-msgstr ""
+msgstr "Aplikaj agordoj"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:84
 #, kde-format
@@ -1103,7 +1105,7 @@ msgstr "Fenestro"
 #: kmuddy/dialogs/dlgappsettings.cpp:87
 #, kde-format
 msgid "Output area"
-msgstr ""
+msgstr "Eliga areo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
@@ -1113,7 +1115,7 @@ msgstr "Tiparo"
 #: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
 msgid "Input line"
-msgstr ""
+msgstr "Eniga linio"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:96
 #, kde-format
@@ -1138,7 +1140,7 @@ msgstr "Ŝparvojoj"
 #: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr ""
+msgstr "Mo&ntri la langeton eĉ se ne necesas"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
@@ -1150,17 +1152,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr ""
+msgstr "Montri &helpan eniglinion"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "You will have two input lines instead of one."
-msgstr ""
+msgstr "Vi havos du enigliniojn anstataŭ unu."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
 msgid "&Always notify"
-msgstr ""
+msgstr "&Ĉiam sciigi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
@@ -1174,7 +1176,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
 msgid "&Global notification"
-msgstr ""
+msgstr "Ĉiea scii&go"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
@@ -1187,7 +1189,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
 msgid "&Local notification"
-msgstr ""
+msgstr "&Loka sciigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
@@ -1215,7 +1217,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
 msgid "Use passive popups"
-msgstr ""
+msgstr "Uzi pasivajn ŝprucfenestrojn"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
@@ -1228,7 +1230,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:151
 #, kde-format
 msgid "Auto-connect on startup"
-msgstr ""
+msgstr "Aŭtomate konekti ĉe ekfunkciigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
@@ -1241,47 +1243,48 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:155
 #, kde-format
 msgid "Auto-connect to:"
-msgstr ""
+msgstr "Aŭtomate konekti al:"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr ""
+msgstr "Defaŭlta fonkoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
 msgid "This color will be used as a standard background color."
-msgstr ""
+msgstr "Ĉi tiu koloro estos uzata kiel norma fonkoloro."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr ""
+msgstr "Defaŭlta tekstkoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
 msgid "This color will be used to display standard text with no defined color."
 msgstr ""
+"Ĉi tiu koloro estos uzata por montri norman tekston sen difinita koloro."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:203
 #, kde-format
 msgid "Command &echo color"
-msgstr ""
+msgstr "Komando &eĥa koloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:206
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
-msgstr ""
+msgstr "Ĉi tiu koloro estos uzata por montri komandojn, kiujn vi enigis."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
 msgid "&System message color"
-msgstr ""
+msgstr "&Sistema mesaĝkoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:211
 #, kde-format
 msgid "This color will be used for various system messages."
-msgstr ""
+msgstr "Ĉi tiu koloro estos uzata por diversaj sistemaj mesaĝoj."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
@@ -1304,7 +1307,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
 msgid "&History buffer size"
-msgstr ""
+msgstr "&Historia bufrograndeco"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
@@ -1321,7 +1324,7 @@ msgstr "linioj"
 #: kmuddy/dialogs/dlgappsettings.cpp:247
 #, kde-format
 msgid "Enable co&mmand echo"
-msgstr ""
+msgstr "Ebligi ko&mandan eĥon"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:248
 #, kde-format
@@ -1333,27 +1336,27 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:251
 #, kde-format
 msgid "Enable s&ystem messages"
-msgstr ""
+msgstr "Ebligi s&istemajn mesaĝojn"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
 msgid "Enables displaying of system messages in the console."
-msgstr ""
+msgstr "Ebligas montradon de sistemaj mesaĝoj en la konzolo."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:255
 #, kde-format
 msgid "Enable b&linking"
-msgstr ""
+msgstr "Ebligi pa&lpebrumon"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enables support for blinking. Currently not supported."
-msgstr ""
+msgstr "Ebligas subtenon por palpebrumado. Nuntempe ne subtenata."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:272
 #, kde-format
 msgid "&Server output"
-msgstr ""
+msgstr "&Servila eligo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:275 kmuddy/dialogs/dlgappsettings.cpp:285
 #: kmuddy/dialogs/dlgappsettings.cpp:295
@@ -1364,22 +1367,22 @@ msgstr "Elekti..."
 #: kmuddy/dialogs/dlgappsettings.cpp:278
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
-msgstr ""
+msgstr "Ĉi tie vi povas elekti tiparon, kiu estos uzata por ĉefa ekrano."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
 msgid "&Input line"
-msgstr ""
+msgstr "&Eniga linio"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:288
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
-msgstr ""
+msgstr "Ĉi tie vi povas elekti tiparon, kiu estos uzata por la eniga linio."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
 msgid "&Multi-line input"
-msgstr ""
+msgstr "&Multlinia enigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:298
 #, kde-format
@@ -1390,7 +1393,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
 msgid "&Keep sent text"
-msgstr ""
+msgstr "&Konservi senditan tekston"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
@@ -1402,7 +1405,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
 msgid "&Select kept text after it's sent"
-msgstr ""
+msgstr "&Elekti konservitan tekston post kiam ĝi estas sendita"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1415,7 +1418,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
 msgid "&Cursor keys browse history"
-msgstr ""
+msgstr "&Kursoklavoj foliumas historion"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
@@ -1427,7 +1430,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:330
 #, kde-format
 msgid "Telnet-style &paste"
-msgstr ""
+msgstr "Telnet-stila &alglui"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:331
 #, kde-format
@@ -1439,7 +1442,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
 msgid "T&rim spaces"
-msgstr ""
+msgstr "T&rim spacoj"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:335
 #, kde-format
@@ -1453,7 +1456,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:340
 #, kde-format
 msgid "Enable &auto-completion"
-msgstr ""
+msgstr "Ebligi &aŭtomatan kompletigon"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:341
 #, kde-format
@@ -1465,47 +1468,47 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:349
 #, kde-format
 msgid "T&ype of auto-completion"
-msgstr ""
+msgstr "T&speco de aŭtomata kompletigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:351
 #, kde-format
 msgid "Auto-fill"
-msgstr ""
+msgstr "Aŭtomata plenigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:352
 #, kde-format
 msgid "Shortest-match auto-fill"
-msgstr ""
+msgstr "Plej mallonga kongrua aŭtomata plenigo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:353
 #, kde-format
 msgid "Popup list-box"
-msgstr ""
+msgstr "Ŝprucfenestro-listkesto"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:357
 #, kde-format
 msgid "&Background color"
-msgstr ""
+msgstr "Fona koloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:360
 #, kde-format
 msgid "Background color of the input line"
-msgstr ""
+msgstr "Fonkoloro de la eniga linio"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:362
 #, kde-format
 msgid "&Text color"
-msgstr ""
+msgstr "&Tekstokoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
 msgid "Color of text that you type in the input line."
-msgstr ""
+msgstr "Koloro de teksto, kiun vi tajpas en la eniga linio."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr ""
+msgstr "S&swap ENTER kaj CTRL+ENTER por plurlinio"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1518,17 +1521,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
 msgid "Dark colors"
-msgstr ""
+msgstr "Malhelaj koloroj"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
 msgid "Bright colors"
-msgstr ""
+msgstr "Brilaj koloroj"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr ""
+msgstr "&Komand-apartiga ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -1540,7 +1543,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
-msgstr ""
+msgstr "Rapido-mar&ŝa ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
@@ -1555,7 +1558,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
 msgid "S&peed-walk even if empty"
-msgstr ""
+msgstr "Ra&pid-marŝi eĉ se malplena"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:444
 #, kde-format
@@ -1570,7 +1573,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
 msgid "Macro-ca&ll string"
-msgstr ""
+msgstr "Makro-ca&ll ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:454
 #, kde-format
@@ -1583,7 +1586,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr ""
+msgstr "&Ripetilo ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1596,7 +1599,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
-msgstr ""
+msgstr "&Fokus-ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
@@ -1610,7 +1613,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
 msgid "Send &as-is"
-msgstr ""
+msgstr "Sendi &kiel-estas"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:480
 #, kde-format
@@ -1622,7 +1625,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
 msgid "&Expand backslashes"
-msgstr ""
+msgstr "&Vastigi inversajn oblikvojn"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:485
 #, kde-format
@@ -1634,7 +1637,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
 msgid "&Enable sounds globally"
-msgstr ""
+msgstr "&Ebligi sonojn globale"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:510
 #, kde-format
@@ -1648,7 +1651,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
 msgid "Allow &downloading sounds"
-msgstr ""
+msgstr "Permesi &elŝuti sonojn"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
@@ -1693,27 +1696,27 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
 msgid "&New profile"
-msgstr ""
+msgstr "&Nova profilo"
 
 #: kmuddy/dialogs/dlgconnect.cpp:65
 #, kde-format
 msgid "&Modify profile"
-msgstr ""
+msgstr "&Modifi profilon"
 
 #: kmuddy/dialogs/dlgconnect.cpp:66
 #, kde-format
 msgid "&Delete profile"
-msgstr ""
+msgstr "&Forigi profilon"
 
 #: kmuddy/dialogs/dlgconnect.cpp:67
 #, kde-format
 msgid "&Duplicate profile"
-msgstr ""
+msgstr "&Dobligi profilon"
 
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr ""
+msgstr "Ne &sendi ensalutsekvencon"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1725,12 +1728,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
 msgid "&Offline editing"
-msgstr ""
+msgstr "Eksterreta redaktad&o"
 
 #: kmuddy/dialogs/dlgconnect.cpp:80
 #, kde-format
 msgid "This allows offline editing of profiles."
-msgstr ""
+msgstr "Ĉi tio permesas eksterrete redaktadon de profiloj."
 
 #: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
 #, kde-format
@@ -1740,7 +1743,7 @@ msgstr "&Konekti"
 #: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
 #, kde-format
 msgid "Establishes connection with specified parameters."
-msgstr ""
+msgstr "Establas konekton kun specifitaj parametroj."
 
 #: kmuddy/dialogs/dlgconnect.cpp:89
 #, kde-format
@@ -1750,7 +1753,7 @@ msgstr "Fer&mi"
 #: kmuddy/dialogs/dlgconnect.cpp:90
 #, kde-format
 msgid "Closes this dialog box without connecting."
-msgstr ""
+msgstr "Fermas ĉi tiun dialogkeston sen konektiĝi."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -1762,12 +1765,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
 msgid "Unable to delete"
-msgstr ""
+msgstr "Ne eblas forigi"
 
 #: kmuddy/dialogs/dlgconnect.cpp:239
 #, kde-format
 msgid "Do you really want to delete profile %1?"
-msgstr ""
+msgstr "Ĉu vi vere volas forigi profilon %1?"
 
 #: kmuddy/dialogs/dlgconnect.cpp:239
 #, kde-format
@@ -1777,12 +1780,12 @@ msgstr "Forigi profilon"
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Duplicate Profile"
-msgstr ""
+msgstr "Duobligi Profilon"
 
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Please enter name for the duplicated profile"
-msgstr ""
+msgstr "Bonvolu enigi nomon por la duobligita profilo"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1794,17 +1797,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
 msgid "Unable to duplicate"
-msgstr ""
+msgstr "Ne eblas duobligi"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:38
 #, kde-format
 msgid "Dump output buffer"
-msgstr ""
+msgstr "Elĵeta eligobufro"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
 msgid "&Start at current position"
-msgstr ""
+msgstr "Komen&ci ĉe nuna pozicio"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:45
 #, kde-format
@@ -1827,7 +1830,7 @@ msgstr "&Trarigardi..."
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
 msgid "&Dump format:"
-msgstr ""
+msgstr "&Elĵeta formato:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
@@ -1842,7 +1845,7 @@ msgstr "Simpla teksto"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:69
 #, kde-format
 msgid "Text with ANSI colors"
-msgstr ""
+msgstr "Teksto kun ANSI-koloroj"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:38 kmuddy/dialogs/dlgeditprofile.cpp:180
 #: kmuddy/dialogs/dlgeditprofile.cpp:185
@@ -1870,7 +1873,7 @@ msgstr "&Servilo:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:49
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
-msgstr ""
+msgstr "Enigu adreson de la servilo, kie via MUD funkcias."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
 #, kde-format
@@ -1880,12 +1883,12 @@ msgstr "&Pordo:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
 #, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
-msgstr ""
+msgstr "Enigu la pordon, sur kiu funkcias via MUD (kutime iu 4-cifera nombro)."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:55
 #, kde-format
 msgid "&Login name:"
-msgstr ""
+msgstr "Ensa&lutnomo:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:57
 #, kde-format
@@ -1902,11 +1905,12 @@ msgstr "Pas&vorto:"
 #, kde-format
 msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
+"Enigu vian pasvorton sur la MUD ĉi tie.<p><i>Ĉi tiu agordo estas laŭvola.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
 #, kde-format
 msgid "&Connect sequence"
-msgstr ""
+msgstr "&Konekti sekvencon"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -1926,17 +1930,17 @@ msgstr "Profila nomo ne povas esti malplena."
 #: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
 msgid "Profile name cannot contain '/' character."
-msgstr ""
+msgstr "Profila nomo ne povas enhavi signon '/'."
 
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
 msgid "Keygrabber"
-msgstr ""
+msgstr "Ŝlosilkaptilo"
 
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
 msgid "Press the desired shortcut..."
-msgstr ""
+msgstr "Premu la deziratan ŝparvojon..."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
@@ -1946,22 +1950,22 @@ msgstr "Importi profilon"
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
 msgid "Export profile"
-msgstr ""
+msgstr "Eksporti profilon"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:41
 #, kde-format
 msgid "&Profile name"
-msgstr ""
+msgstr "&Profilonomo"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:54
 #, kde-format
 msgid "&Import from"
-msgstr ""
+msgstr "&Importi de"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:55
 #, kde-format
 msgid "&Export to"
-msgstr ""
+msgstr "&Eksporti al"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:58
 #: kmuddy/dialogs/dlgprofilesettings.cpp:153
@@ -1983,17 +1987,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
 msgid "Choose file with profile"
-msgstr ""
+msgstr "Elekti dosieron kun profilo"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:137
 #, kde-format
 msgid "Enter target file"
-msgstr ""
+msgstr "Enigi celdosieron"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:33
 #, kde-format
 msgid "Multi-line input"
-msgstr ""
+msgstr "Plurlinia enigo"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:45
 #, kde-format
@@ -2005,12 +2009,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
 msgid "&Prefix:"
-msgstr ""
+msgstr "&Prefikso:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:59
 #, kde-format
 msgid "&Suffix:"
-msgstr ""
+msgstr "&Sufikso:"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:69
 #, kde-format
@@ -2027,7 +2031,7 @@ msgstr "&Sendi"
 #: kmuddy/dialogs/dlgmultiline.cpp:80
 #, kde-format
 msgid "Sends current text to the MUD."
-msgstr ""
+msgstr "Sendas aktualan tekston al la MUD."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:81
 #, kde-format
@@ -2045,17 +2049,17 @@ msgstr "&Forviŝi"
 #: kmuddy/dialogs/dlgmultiline.cpp:85
 #, kde-format
 msgid "Clears window contents."
-msgstr ""
+msgstr "Purigas fenestroenhavon."
 
 #: kmuddy/dialogs/dlgmxpconsole.cpp:48
 #, kde-format
 msgid "MXP Console"
-msgstr ""
+msgstr "MXP-konzolo"
 
 #: kmuddy/dialogs/dlgobjects.cpp:64
 #, kde-format
 msgid "Object Manager"
-msgstr ""
+msgstr "Objekta Administranto"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
@@ -2096,12 +2100,12 @@ msgstr "Dekstra"
 #: kmuddy/dialogs/dlgoutputwindow.cpp:33
 #, kde-format
 msgid "Output window"
-msgstr ""
+msgstr "Eligo fenestro"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:42
 #, kde-format
 msgid "MUD preferences"
-msgstr ""
+msgstr "MUD-preferoj"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:49
 #, kde-format
@@ -2128,22 +2132,22 @@ msgstr "Sono"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:62
 #, kde-format
 msgid "MXP"
-msgstr ""
+msgstr "MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:68
 #, kde-format
 msgid "&Use colorized output (if available)"
-msgstr ""
+msgstr "&Uzi kolorigitan eligon (se disponeblas)"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr ""
+msgstr "&Ne permesi pli ol 100 ripetajn komandojn"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:75
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
-msgstr ""
+msgstr "Ebligi tel&net-intertraktadon ĉe ekfunkciigo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
@@ -2167,7 +2171,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:89
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr ""
+msgstr "&Aŭtomate aldoni novliniojn post invito"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
@@ -2179,22 +2183,22 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:93
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr ""
+msgstr "&Montri invitilon en aparta kampo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:97
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr ""
+msgstr "Montri invitilon en la s&tatobreto"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:100
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr ""
+msgstr "Montri invitilon en la &konzolo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:103
 #, kde-format
 msgid "Start advanced transcript when session starts"
-msgstr ""
+msgstr "Komenci altnivelan transskribon kiam seanco komenciĝas"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
@@ -2204,7 +2208,7 @@ msgstr "&Nordo"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
 msgid "No&rtheast"
-msgstr ""
+msgstr "No&rdoriente"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:125
 #, kde-format
@@ -2214,7 +2218,7 @@ msgstr "Ori&ento"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "So&utheast"
-msgstr ""
+msgstr "S&udoriente"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2224,7 +2228,7 @@ msgstr "&Sudo"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "Sou&thwest"
-msgstr ""
+msgstr "Sudokciden&te"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
@@ -2234,7 +2238,7 @@ msgstr "&Okzidento"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "Nort&hwest"
-msgstr ""
+msgstr "Nordo&kcidente"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
@@ -2256,18 +2260,18 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:150
 #, kde-format
 msgid "External &scripts directory"
-msgstr ""
+msgstr "Ekstera &script-dosierujo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:154
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr ""
+msgstr "Defaŭlta dosierujo kie ni serĉos skriptojn."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:157
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
-msgstr ""
+msgstr "&Labordosierujo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:161
 #, kde-format
@@ -2279,17 +2283,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:164
 #, kde-format
 msgid "&Transcripts directory"
-msgstr ""
+msgstr "Dosierujo de &Transskribaĵoj"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:168
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr ""
+msgstr "Dosierujo kie seancaj transskribaĵoj estos konservitaj defaŭlte."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:189
 #, kde-format
 msgid "&Enable sounds for this profile"
-msgstr ""
+msgstr "&Ebligi sonojn por ĉi tiu profilo"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
@@ -2303,12 +2307,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:195
 #, kde-format
 msgid "Only enable these if you need them:"
-msgstr ""
+msgstr "Ebligi ĉi tiujn nur se vi bezonas ilin:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
 msgid "&Use MSP even if not negotiated"
-msgstr ""
+msgstr "&Uzi MSP eĉ se ne intertraktita"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
@@ -2324,7 +2328,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:203
 #, kde-format
 msgid "Allow &mid-line MSP sequences"
-msgstr ""
+msgstr "Permesi &mez-liniajn MSP-sekvencojn"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
@@ -2339,7 +2343,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:220
 #, kde-format
 msgid "&Use MXP"
-msgstr ""
+msgstr "&Uzi MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:223
 #, kde-format
@@ -2349,7 +2353,7 @@ msgstr "Neniam"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:224
 #, kde-format
 msgid "If negotiated"
-msgstr ""
+msgstr "Se intertraktata"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:225
 #, kde-format
@@ -2359,7 +2363,7 @@ msgstr "Aŭtomate detekti"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
 msgid "Always on"
-msgstr ""
+msgstr "Ĉiam ŝaltita"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:227
 #, kde-format
@@ -2374,7 +2378,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:233
 #, kde-format
 msgid "MXP &variable prefix"
-msgstr ""
+msgstr "MXP &variabla prefikso"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:236
 #, kde-format
@@ -2386,17 +2390,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:396
 #, kde-format
 msgid "Choose default script location"
-msgstr ""
+msgstr "Elekti defaŭltan skripto-lokon"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:401
 #, kde-format
 msgid "Choose default script working directory"
-msgstr ""
+msgstr "Elekti defaŭltan skriptan labordosierujon"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:406
 #, kde-format
 msgid "Choose default transcript directory"
-msgstr ""
+msgstr "Elekti defaŭltan transskriban dosierujon"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:33
 #, kde-format
@@ -2411,12 +2415,12 @@ msgstr "&Servilo:"
 #: kmuddy/dialogs/dlgstatistics.cpp:41
 #, kde-format
 msgid "Connection statistics"
-msgstr ""
+msgstr "Konekto-statistiko"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:50
 #, kde-format
 msgid "&Statistics, updated every second:"
-msgstr ""
+msgstr "&Statistiko, ĝisdatigita ĉiun sekundon:"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:53
 #, kde-format
@@ -2426,7 +2430,7 @@ msgstr "Nombrilo"
 #: kmuddy/dialogs/dlgstatistics.cpp:118
 #, kde-format
 msgid "Using MCCP"
-msgstr ""
+msgstr "Uzante MCCP"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
 #: kmuddy/dialogs/dlgstatistics.cpp:126
@@ -2443,7 +2447,7 @@ msgstr "Ne"
 #: kmuddy/dialogs/dlgstatistics.cpp:120
 #, kde-format
 msgid "MCCP version"
-msgstr ""
+msgstr "MCCP-versio"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:121
 #, kde-format
@@ -2453,47 +2457,47 @@ msgstr "N/A"
 #: kmuddy/dialogs/dlgstatistics.cpp:122
 #, kde-format
 msgid "Using MSP"
-msgstr ""
+msgstr "Uzante MSP"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:125
 #, kde-format
 msgid "Using MXP"
-msgstr ""
+msgstr "Uzante MXP"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:128
 #, kde-format
 msgid "Sent bytes"
-msgstr ""
+msgstr "Senditaj bajtoj"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:130
 #, kde-format
 msgid "Sent commands"
-msgstr ""
+msgstr "Senditaj komandoj"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:132
 #, kde-format
 msgid "Received bytes"
-msgstr ""
+msgstr "Ricevitaj bajtoj"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:134
 #, kde-format
 msgid "... after decompression"
-msgstr ""
+msgstr "... post malkunpremo"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
 msgid "Received lines"
-msgstr ""
+msgstr "Ricevitaj linioj"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:138
 #, kde-format
 msgid "Connection time"
-msgstr ""
+msgstr "Tempo de konekto"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:38
 #, kde-format
 msgid "Session Transcript"
-msgstr ""
+msgstr "Seanca Transskribo"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:45
 #, kde-format
@@ -2508,7 +2512,7 @@ msgstr "Altnivela"
 #: kmuddy/dialogs/dlgtranscript.cpp:54
 #, kde-format
 msgid "&Enable basic transcript"
-msgstr ""
+msgstr "&Ebligi bazan transskribon"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:56
 #, kde-format
@@ -2520,17 +2524,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
 msgid "Transcript settings"
-msgstr ""
+msgstr "Transskribaj agordoj"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
 #, kde-format
 msgid "Transcript &format"
-msgstr ""
+msgstr "Transskriba &formato"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
 msgid "&Overwrite existing file"
-msgstr ""
+msgstr "&Anstataŭigi ekzistantan dosieron"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:76
 #, kde-format
@@ -2543,7 +2547,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
 msgid "Include buffer &dump"
-msgstr ""
+msgstr "Inkluzivi bufron &dump"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:80
 #, kde-format
@@ -2555,7 +2559,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
 msgid "Enable &advanced transcript"
-msgstr ""
+msgstr "Ebligi &altnivelan transskribon"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:110
 #, kde-format
@@ -2568,12 +2572,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
 msgid "Advanced transcript settings"
-msgstr ""
+msgstr "Altnivelaj transskribaj agordoj"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr ""
+msgstr "&Rotaci protokolon je noktomezo ĉiutage"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
@@ -2584,7 +2588,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr ""
+msgstr "Antaŭmeti liniojn per &tempostampo"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
@@ -2596,7 +2600,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
 msgid "Log name format"
-msgstr ""
+msgstr "Formato de protokolnomo"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:142
 #, kde-format
@@ -2609,7 +2613,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
 msgid "&List of output windows"
-msgstr ""
+msgstr "&Listo de eligfenestroj"
 
 #: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
@@ -2629,12 +2633,12 @@ msgstr "&Forigi"
 #: kmuddy/kmuddy.cpp:242
 #, kde-format
 msgid "&Connect..."
-msgstr ""
+msgstr "&Konekti..."
 
 #: kmuddy/kmuddy.cpp:249
 #, kde-format
 msgid "&QuickConnect..."
-msgstr ""
+msgstr "&QuickConnect..."
 
 #: kmuddy/kmuddy.cpp:255
 #, kde-format
@@ -2649,137 +2653,137 @@ msgstr "&Rekonekti"
 #: kmuddy/kmuddy.cpp:266
 #, kde-format
 msgid "Close &tab"
-msgstr ""
+msgstr "Fermi lange&ton"
 
 #: kmuddy/kmuddy.cpp:275
 #, kde-format
 msgid "Paste &As"
-msgstr ""
+msgstr "&Alglui Kiel"
 
 #: kmuddy/kmuddy.cpp:284
 #, kde-format
 msgid "&Input"
-msgstr ""
+msgstr "&Enigo"
 
 #: kmuddy/kmuddy.cpp:291
 #, kde-format
 msgid "Copy &Selection"
-msgstr ""
+msgstr "Kopii &Selektaĵon"
 
 #: kmuddy/kmuddy.cpp:297
 #, kde-format
 msgid "Enable command &parsing"
-msgstr ""
+msgstr "Ebligi &analizadon de komando"
 
 #: kmuddy/kmuddy.cpp:304
 #, kde-format
 msgid "Ca&ncel pending commands"
-msgstr ""
+msgstr "Ca&celi pritraktatajn komandojn"
 
 #: kmuddy/kmuddy.cpp:315
 #, kde-format
 msgid "Show &gaugebar"
-msgstr ""
+msgstr "Montri &mezurilon"
 
 #: kmuddy/kmuddy.cpp:328
 #, kde-format
 msgid "&Object Editor..."
-msgstr ""
+msgstr "&Objekta Redaktilo..."
 
 #: kmuddy/kmuddy.cpp:333
 #, kde-format
 msgid "&Output windows..."
-msgstr ""
+msgstr "&Eligi fenestrojn..."
 
 #: kmuddy/kmuddy.cpp:337
 #, kde-format
 msgid "A&liases enabled"
-msgstr ""
+msgstr "A&liasoj ebligitaj"
 
 #: kmuddy/kmuddy.cpp:343
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr ""
+msgstr "Tri&ggers ebligitaj"
 
 #: kmuddy/kmuddy.cpp:349
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr ""
+msgstr "Temporizistoj ebligitaj"
 
 #: kmuddy/kmuddy.cpp:354
 #, kde-format
 msgid "Macro &keys enabled"
-msgstr ""
+msgstr "Makroaj &klavoj ebligitaj"
 
 #: kmuddy/kmuddy.cpp:359
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr ""
+msgstr "&MUD-Preferoj..."
 
 #: kmuddy/kmuddy.cpp:364
 #, kde-format
 msgid "&Save Profile"
-msgstr ""
+msgstr "&Konservi Profilon"
 
 #: kmuddy/kmuddy.cpp:371
 #, kde-format
 msgid "&Session transcript..."
-msgstr ""
+msgstr "&Seanco-transskribo..."
 
 #: kmuddy/kmuddy.cpp:376
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr ""
+msgstr "Elĵeti eligo&bufron..."
 
 #: kmuddy/kmuddy.cpp:380
 #, kde-format
 msgid "&Decision assistant"
-msgstr ""
+msgstr "&Decida asistanto"
 
 #: kmuddy/kmuddy.cpp:394
 #, kde-format
 msgid "&Global settings..."
-msgstr ""
+msgstr "&Ĉieaj agordoj..."
 
 #: kmuddy/kmuddy.cpp:399
 #, kde-format
 msgid "&Plugins..."
-msgstr ""
+msgstr "&Aldonaĵoj..."
 
 #: kmuddy/kmuddy.cpp:404
 #, kde-format
 msgid "F&ull screen mode"
-msgstr ""
+msgstr "F&plenekrana reĝimo"
 
 #: kmuddy/kmuddy.cpp:414
 #, kde-format
 msgid "Shift line up"
-msgstr ""
+msgstr "Ŝanĝi vicigon"
 
 #: kmuddy/kmuddy.cpp:419
 #, kde-format
 msgid "Shift line down"
-msgstr ""
+msgstr "Movi linion malsupren"
 
 #: kmuddy/kmuddy.cpp:424
 #, kde-format
 msgid "Shift page up"
-msgstr ""
+msgstr "Movi paĝon supren"
 
 #: kmuddy/kmuddy.cpp:429
 #, kde-format
 msgid "Shift page down"
-msgstr ""
+msgstr "Movi paĝon malsupren"
 
 #: kmuddy/kmuddy.cpp:434
 #, kde-format
 msgid "Split-screen up"
-msgstr ""
+msgstr "Split-ekrano supren"
 
 #: kmuddy/kmuddy.cpp:439
 #, kde-format
 msgid "Split-screen down"
-msgstr ""
+msgstr "Split-ekrano malsupren"
 
 #: kmuddy/kmuddy.cpp:444
 #, kde-format
@@ -2798,12 +2802,12 @@ msgstr "Sekva langeto"
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
-msgstr ""
+msgstr "Ŝalti al langeto %1"
 
 #: kmuddy/kmuddy.cpp:523
 #, kde-format
 msgid "&Connection"
-msgstr ""
+msgstr "&Konekto"
 
 #: kmuddy/kmuddy.cpp:524
 #, kde-format
@@ -2819,7 +2823,7 @@ msgstr "&Vido"
 #: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Profile"
-msgstr ""
+msgstr "&Profilo"
 
 #: kmuddy/kmuddy.cpp:527
 #, kde-format
@@ -2839,12 +2843,12 @@ msgstr "&Helpo"
 #: kmuddy/kmuddy.cpp:905
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
-msgstr ""
+msgstr "Por rekonekti, premu %1 aŭ uzu Konekti/Rekonekti."
 
 #: kmuddy/kmuddy.cpp:991
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Agado en la KMuddy Fenestro"
 
 #: kmuddy/kmuddy.cpp:1163
 #, kde-format
@@ -2856,27 +2860,27 @@ msgstr ""
 #: kmuddy/macros.cpp:67
 #, kde-format
 msgid "/setval: Expression parsing failed."
-msgstr ""
+msgstr "/setval: Esprim-analizo malsukcesis."
 
 #: kmuddy/macros.cpp:170
 #, kde-format
 msgid "No free resources of that type."
-msgstr ""
+msgstr "Neniuj liberaj rimedoj de tiu tipo."
 
 #: kmuddy/macros.cpp:192
 #, kde-format
 msgid "/tick: syntax: /tick timer-name"
-msgstr ""
+msgstr "/tick: sintakso: /tick timer-name"
 
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr ""
+msgstr "/tick: tempigilo kun tiu nomo ne ekzistas."
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
 msgid "/tick: this timer is currently disabled."
-msgstr ""
+msgstr "/tick: ĉi tiu tempigilo estas nuntempe malŝaltita."
 
 #: kmuddy/macros.cpp:209
 #, kde-format
@@ -2888,202 +2892,202 @@ msgstr[1] ""
 #: kmuddy/macros.cpp:211
 #, kde-format
 msgid "Timer ticks right now."
-msgstr ""
+msgstr "Temporizilo nun."
 
 #: kmuddy/macros.cpp:221
 #, kde-format
 msgid "/ticknow: syntax: /ticknow timer-name"
-msgstr ""
+msgstr "/ticknow: sintakso: /ticknow timer-name"
 
 #: kmuddy/macros.cpp:363
 #, kde-format
 msgid "/else: called without the matching /if."
-msgstr ""
+msgstr "/else: vokita sen la kongrua /if."
 
 #: kmuddy/macros.cpp:380
 #, kde-format
 msgid "/endif: called without the matching /if."
-msgstr ""
+msgstr "/endif: vokita sen la kongrua /if."
 
 #: kmuddy/macros.cpp:398
 #, kde-format
 msgid "/oadd: syntax: /oadd parent name"
-msgstr ""
+msgstr "/oadd: sintakso: /oadd gepatra nomo"
 
 #: kmuddy/macros.cpp:406
 #, kde-format
 msgid "/oadd: parent group does not exist."
-msgstr ""
+msgstr "/oadd: gepatra grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:410
 #, kde-format
 msgid "/oadd: parent must be a group."
-msgstr ""
+msgstr "/oadd: patro devas esti grupo."
 
 #: kmuddy/macros.cpp:415
 #, kde-format
 msgid "/oadd: object with this name already exists."
-msgstr ""
+msgstr "/oadd: objekto kun ĉi tiu nomo jam ekzistas."
 
 #: kmuddy/macros.cpp:432
 #, kde-format
 msgid "/gadd: syntax: /gadd parent name"
-msgstr ""
+msgstr "/gadd: sintakso: /gadd gepatra nomo"
 
 #: kmuddy/macros.cpp:439
 #, kde-format
 msgid "/gadd: parent group does not exist."
-msgstr ""
+msgstr "/gadd: gepatra grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:443
 #, kde-format
 msgid "/gadd: the parent must be a group"
-msgstr ""
+msgstr "/gadd: la gepatro devas esti grupo"
 
 #: kmuddy/macros.cpp:449
 #, kde-format
 msgid "/gadd: such group already exists in that list"
-msgstr ""
+msgstr "/gadd: tia grupo jam ekzistas en tiu listo"
 
 #: kmuddy/macros.cpp:465
 #, kde-format
 msgid "/odel: object does not exist."
-msgstr ""
+msgstr "/odel: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:470
 #, kde-format
 msgid "/odel: root group may not be deleted."
-msgstr ""
+msgstr "/odel: radikgrupo eble ne estas forigita."
 
 #: kmuddy/macros.cpp:488
 #, kde-format
 msgid "/omove: syntax: /omove object group [position]"
-msgstr ""
+msgstr "/omove: sintakso: /omove objektogrupo [pozicio]"
 
 #: kmuddy/macros.cpp:495
 #, kde-format
 msgid "/omove: object does not exist."
-msgstr ""
+msgstr "/omove: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:499
 #, kde-format
 msgid "/omove: root group may not be moved."
-msgstr ""
+msgstr "/omove: radikgrupo eble ne estas movita."
 
 #: kmuddy/macros.cpp:505
 #, kde-format
 msgid "/omove: group does not exist."
-msgstr ""
+msgstr "/omove: grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:509
 #, kde-format
 msgid "/omove: target must be a group."
-msgstr ""
+msgstr "/omove: celo devas esti grupo."
 
 #: kmuddy/macros.cpp:513
 #, kde-format
 msgid "/omove: object and target must be in the same list."
-msgstr ""
+msgstr "/omove: objekto kaj celo devas esti en la sama listo."
 
 #: kmuddy/macros.cpp:525
 #, kde-format
 msgid "/omove: position out of range"
-msgstr ""
+msgstr "/omove: pozicio ekster intervalo"
 
 #: kmuddy/macros.cpp:540
 #, kde-format
 msgid "/oren: syntax: /oren object new-name"
-msgstr ""
+msgstr "/oren: sintakso: /oren objekto nova-nomo"
 
 #: kmuddy/macros.cpp:547
 #, kde-format
 msgid "/oren: object does not exist."
-msgstr ""
+msgstr "/oren: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:553
 #, kde-format
 msgid "/oren: root group cannot be renamed."
-msgstr ""
+msgstr "/oren: radikogrupo ne povas esti renomita."
 
 #: kmuddy/macros.cpp:559
 #, kde-format
 msgid "/oren: a group with this name already exists."
-msgstr ""
+msgstr "/oren: grupo kun ĉi tiu nomo jam ekzistas."
 
 #: kmuddy/macros.cpp:566
 #, kde-format
 msgid "/oren: an object with this name already exists."
-msgstr ""
+msgstr "/oren: objekto kun ĉi tiu nomo jam ekzistas."
 
 #: kmuddy/macros.cpp:581
 #, kde-format
 msgid "/opriority: syntax: /opriority object priority"
-msgstr ""
+msgstr "/opriority: sintakso: /priority objektoprioritato"
 
 #: kmuddy/macros.cpp:588
 #, kde-format
 msgid "/opriority: object does not exist."
-msgstr ""
+msgstr "/prioritato: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:594
 #, kde-format
 msgid "/opriority: priority must be in the 1-1000 range."
-msgstr ""
+msgstr "/prioritato: prioritato devas esti en la intervalo 1-1000."
 
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
-msgstr ""
+msgstr "/oenable: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
-msgstr ""
+msgstr "/odisable: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:641
 #, kde-format
 msgid "/osetbattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetbattr: sintakso: /osetbattr objekta parametrovaloro"
 
 #: kmuddy/macros.cpp:648
 #, kde-format
 msgid "/osetbattr: object does not exist."
-msgstr ""
+msgstr "/osetbattr: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
 #, kde-format
 msgid "/osetiattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetiattr: sintakso: /osetbattr objekta parametrovaloro"
 
 #: kmuddy/macros.cpp:672
 #, kde-format
 msgid "/osetiattr: object does not exist."
-msgstr ""
+msgstr "/osetiattr: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:696
 #, kde-format
 msgid "/osetsattr: object does not exist."
-msgstr ""
+msgstr "/osetsattr: objekto ne ekzistas."
 
 #: kmuddy/macros.cpp:713
 #, kde-format
 msgid "/tgroupon: group does not exist."
-msgstr ""
+msgstr "/tgroupon: grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:728
 #, kde-format
 msgid "/tgroupoff: group does not exist."
-msgstr ""
+msgstr "/tgroupoff: grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:744
 #, kde-format
 msgid "/agroupon: group does not exist."
-msgstr ""
+msgstr "/agroupon: grupo ne ekzistas."
 
 #: kmuddy/macros.cpp:760
 #, kde-format
 msgid "/agroupoff: group does not exist."
-msgstr ""
+msgstr "/agroupoff: grupo ne ekzistas."
 
 #: kmuddy/main.cpp:30
 #, kde-format
@@ -3102,7 +3106,7 @@ msgstr "KMuddy"
 #: kmuddy/main.cpp:40
 #, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr ""
+msgstr "(c) 2002-2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:41
 #, kde-format
@@ -3112,12 +3116,12 @@ msgstr "Tomas Mecir"
 #: kmuddy/main.cpp:42
 #, kde-format
 msgid "Main developer and maintainer"
-msgstr ""
+msgstr "Ĉefa programisto kaj prizorganto"
 
 #: kmuddy/main.cpp:43
 #, kde-format
 msgid "Alex Bache"
-msgstr ""
+msgstr "Alex Bache"
 
 #: kmuddy/main.cpp:44
 #, kde-format
@@ -3129,87 +3133,87 @@ msgstr ""
 #: kmuddy/main.cpp:45
 #, kde-format
 msgid "Alsherok staff"
-msgstr ""
+msgstr "Alsherok-kunlaborantaro"
 
 #: kmuddy/main.cpp:46
 #, kde-format
 msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
-msgstr ""
+msgstr "por liberigado de AFKMud-kodbazo, uzita por testi MCCP/MSP"
 
 #: kmuddy/main.cpp:47
 #, kde-format
 msgid "Andrea Cascio"
-msgstr ""
+msgstr "Andrea Cascio"
 
 #: kmuddy/main.cpp:48
 #, kde-format
 msgid "SuSE RPMs, speed-walking improvements"
-msgstr ""
+msgstr "SuSE RPM-oj, plibonigoj pri rapid-marŝado"
 
 #: kmuddy/main.cpp:49
 #, kde-format
 msgid "Orion Elder"
-msgstr ""
+msgstr "Orion Elder"
 
 #: kmuddy/main.cpp:50
 #, kde-format
 msgid "KMuddy forum, many ideas"
-msgstr ""
+msgstr "KMuddy forumo, multaj ideoj"
 
 #: kmuddy/main.cpp:51
 #, kde-format
 msgid "Scott Monachello"
-msgstr ""
+msgstr "Scott Monachello"
 
 #: kmuddy/main.cpp:52
 #, kde-format
 msgid "Improvements in scripting, bugfixes"
-msgstr ""
+msgstr "Pliboniĝoj en skripto, korektoj"
 
 #: kmuddy/main.cpp:53
 #, kde-format
 msgid "Tyler Montbriand"
-msgstr ""
+msgstr "Tyler Montbriand"
 
 #: kmuddy/main.cpp:54
 #, kde-format
 msgid "Help with SDL support"
-msgstr ""
+msgstr "Helpo kun SDL-subteno"
 
 #: kmuddy/main.cpp:55
 #, kde-format
 msgid "Marco Mastroddi"
-msgstr ""
+msgstr "Marco Mastroddi"
 
 #: kmuddy/main.cpp:56
 #, kde-format
 msgid "Tick timers"
-msgstr ""
+msgstr "Tiktak-tempumiloj"
 
 #: kmuddy/main.cpp:57
 #, kde-format
 msgid "Henrikki Almusa"
-msgstr ""
+msgstr "Henrikki Almusa"
 
 #: kmuddy/main.cpp:58
 #, kde-format
 msgid "Commands to enable/disable groups"
-msgstr ""
+msgstr "Komandoj por ebligi/malŝalti grupojn"
 
 #: kmuddy/main.cpp:59
 #, kde-format
 msgid "Drossos Stamboulakis"
-msgstr ""
+msgstr "Drossos Stamboulakis"
 
 #: kmuddy/main.cpp:60
 #, kde-format
 msgid "Selection improvements, full screen mode, cross-tab commands"
-msgstr ""
+msgstr "Elektaj plibonigoj, plenekrana reĝimo, kruc-tablaj komandoj"
 
 #: kmuddy/main.cpp:61
 #, kde-format
 msgid "Antonio J. Soler Sanchez"
-msgstr ""
+msgstr "Antonio J. Soler Sanchez"
 
 #: kmuddy/main.cpp:62
 #, kde-format
@@ -3219,77 +3223,77 @@ msgstr "Hispana traduko"
 #: kmuddy/main.cpp:63
 #, kde-format
 msgid "lontau"
-msgstr ""
+msgstr "lontau"
 
 #: kmuddy/main.cpp:64
 #, kde-format
 msgid "Code to access KMuddy variables in Ruby"
-msgstr ""
+msgstr "Kodo por aliri KMuddy-variablojn en Ruby"
 
 #: kmuddy/main.cpp:65
 #, kde-format
 msgid "Magnus Lundborg"
-msgstr ""
+msgstr "Magnus Lundborg"
 
 #: kmuddy/main.cpp:65
 #, kde-format
 msgid "Tab-expansion improvements"
-msgstr ""
+msgstr "Pliboniĝoj de langetoj"
 
 #: kmuddy/main.cpp:66
 #, kde-format
 msgid "Vladimir Lazarenko"
-msgstr ""
+msgstr "Vladimir Lazarenko"
 
 #: kmuddy/main.cpp:67
 #, kde-format
 msgid "Many improvements. Hosting KMuddy CVS."
-msgstr ""
+msgstr "Multaj plibonigoj. Gastigante KMuddy CVS."
 
 #: kmuddy/main.cpp:68
 #, kde-format
 msgid "Stuart Henshall"
-msgstr ""
+msgstr "Stuart Henshall"
 
 #: kmuddy/main.cpp:69
 #, kde-format
 msgid "Speed improvements."
-msgstr ""
+msgstr "Plibonigoj pri rapideco."
 
 #: kmuddy/main.cpp:70
 #, kde-format
 msgid "Vadim Peretokin"
-msgstr ""
+msgstr "Vadim Peretokin"
 
 #: kmuddy/main.cpp:71
 #, kde-format
 msgid "Many improvements, website"
-msgstr ""
+msgstr "Multaj plibonigoj, retejo"
 
 #: kmuddy/main.cpp:72
 #, kde-format
 msgid "Heiko Koehn"
-msgstr ""
+msgstr "Heiko Koehn"
 
 #: kmuddy/main.cpp:73
 #, kde-format
 msgid "Scripting improvements"
-msgstr ""
+msgstr "Skriptaj plibonigoj"
 
 #: kmuddy/main.cpp:74
 #, kde-format
 msgid "Robert Marmorstein"
-msgstr ""
+msgstr "Robert Marmorstein"
 
 #: kmuddy/main.cpp:75
 #, kde-format
 msgid "Systray icon support"
-msgstr ""
+msgstr "Systray-piktogramo subteno"
 
 #: libs/caliaseditor.cpp:88
 #, kde-format
 msgid "&Alias text"
-msgstr ""
+msgstr "&Kaŝnomo teksto"
 
 #: libs/caliaseditor.cpp:106
 #, kde-format
@@ -3301,12 +3305,12 @@ msgstr ""
 #: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr ""
+msgstr "&Anstataŭaĵo(j) teksto(j)"
 
 #: libs/caliaseditor.cpp:122
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr ""
+msgstr "Komando(j) kiu anstataŭigos komandon, kiun vi enigis."
 
 #: libs/caliaseditor.cpp:137
 #, kde-format
@@ -3318,7 +3322,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
-msgstr ""
+msgstr "Sendi originan komandon"
 
 #: libs/caliaseditor.cpp:175
 #, kde-format
@@ -3338,7 +3342,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:189
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr ""
+msgstr "Inkluzivi prefikson/finaĵon"
 
 #: libs/caliaseditor.cpp:190
 #, kde-format
@@ -3363,12 +3367,12 @@ msgstr ""
 #: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
-msgstr ""
+msgstr "Ĉi tiu teksto ne kongruis kun via kaŝnomo."
 
 #: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
-msgstr ""
+msgstr "Ĉi tiu teksto kongruas kun via kaŝnomo."
 
 #: libs/caliaseditor.cpp:279
 #, kde-format
@@ -3378,22 +3382,22 @@ msgstr "Komando: "
 #: libs/ccmdparser.cpp:431
 #, kde-format
 msgid "Sorry, count is limited to 100.\n"
-msgstr ""
+msgstr "Pardonu, kalkulo estas limigita al 100.\n"
 
 #: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr ""
+msgstr "Vi povas malŝalti ĉi tiun limon en Profilo/MUD-Preferoj."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
 msgid "Sorry, but macro calls are only available for profile connections."
-msgstr ""
+msgstr "Pardonu, sed makrovokoj disponeblas nur por profilkonektoj."
 
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
 msgid "This macro does not exist."
-msgstr ""
+msgstr "Ĉi tiu makroo ne ekzistas."
 
 #: libs/cconsole.cpp:133
 #, kde-format
@@ -3433,12 +3437,12 @@ msgstr "sekundoj"
 #: libs/cconsole.cpp:156
 #, kde-format
 msgid "ago"
-msgstr ""
+msgstr "antaŭ"
 
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr ""
+msgstr "Funkcio %1 ne ekzistas - supozante malplenan revenan valoron."
 
 #: libs/clist.cpp:468
 #, kde-format
@@ -3457,34 +3461,34 @@ msgstr ""
 #: libs/clist.cpp:473
 #, kde-format
 msgid "This is not a KMuddy object file."
-msgstr ""
+msgstr "Ĉi tio ne estas objektodosiero de KMuddy."
 
 #: libs/clist.cpp:475 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
-msgstr ""
+msgstr "Ĉi tiu dosiero estas koruptita."
 
 #: libs/clist.cpp:479 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
-msgstr ""
+msgstr "Eraro ĉe linio %1, kolumno %2: %3"
 
 #: libs/clisteditor.cpp:75
 #, kde-format
 msgid "&Apply changes"
-msgstr ""
+msgstr "&Apliki ŝanĝojn"
 
 #: libs/clisteditor.cpp:76
 #, kde-format
 msgid "&Undo changes"
-msgstr ""
+msgstr "&Malfari ŝanĝojn"
 
 #: libs/clisteditor.cpp:217
 #, kde-format
 msgid "&Enabled"
-msgstr ""
+msgstr "&Ebligita"
 
 #: libs/clisteditor.cpp:222
 #, kde-format
@@ -3499,22 +3503,22 @@ msgstr "&Nomo"
 #: libs/clisteditor.cpp:286
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
-msgstr ""
+msgstr "Ne povas renomi la grupon, ĉar grupo kun ĉi tiu nomo jam ekzistas."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
-msgstr ""
+msgstr "Ne povas renomi la objekton, ĉar objekto kun ĉi tiu nomo jam ekzistas."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
 msgid "Error in file - group with no name."
-msgstr ""
+msgstr "Eraro en dosiero - grupo sen nomo."
 
 #: libs/clistgroup.cpp:233
 #, kde-format
 msgid "Error in file - duplicate group name."
-msgstr ""
+msgstr "Eraro en dosiero - duplikata grupnomo."
 
 #: libs/clistviewer.cpp:63
 #, kde-format
@@ -3524,32 +3528,32 @@ msgstr "Forigi objekton"
 #: libs/clistviewer.cpp:68 libs/clistviewer.cpp:163
 #, kde-format
 msgid "Delete group"
-msgstr ""
+msgstr "Forigi grupon"
 
 #: libs/clistviewer.cpp:72
 #, kde-format
 msgid "Add subgroup"
-msgstr ""
+msgstr "Aldoni subgrupon"
 
 #: libs/clistviewer.cpp:77
 #, kde-format
 msgid "Add group"
-msgstr ""
+msgstr "Aldoni grupon"
 
 #: libs/clistviewer.cpp:82
 #, kde-format
 msgid "Add object"
-msgstr ""
+msgstr "Aldoni objekton"
 
 #: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr ""
+msgstr "Ĉu vi vere volas forigi ĉi tiun grupon?"
 
 #: libs/clistviewer.cpp:165
 #, kde-format
 msgid "Do you really want to delete this %1?"
-msgstr ""
+msgstr "Ĉu vi vere volas forigi ĉi tiun %1?"
 
 #: libs/clistviewer.cpp:166
 #, kde-format
@@ -3564,127 +3568,127 @@ msgstr "Krei Grupon"
 #: libs/clistviewer.cpp:192
 #, kde-format
 msgid "Please enter the group name:"
-msgstr ""
+msgstr "Bonvolu enigi la grupnomon:"
 
 #: libs/clistviewer.cpp:196
 #, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr ""
+msgstr "Ne povas krei la grupon, ĉar la provizita nomo ne validas."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr ""
+msgstr "Ne povas krei la grupon, ĉar grupo kun ĉi tiu nomo jam ekzistas."
 
 #: libs/cmsp.cpp:284
 #, kde-format
 msgid "MSP: Received corrupted sound trigger!"
-msgstr ""
+msgstr "MSP: Ricevis koruptitan soneksilon!"
 
 #: libs/cmsp.cpp:285
 #, kde-format
 msgid "MSP: Problem was: %1"
-msgstr ""
+msgstr "MSP: Problemo estis: %1"
 
 #: libs/cmsp.cpp:315
 #, kde-format
 msgid "Parameter names must be followed by '='."
-msgstr ""
+msgstr "Parametronomoj devas esti sekvataj de '='."
 
 #: libs/cmsp.cpp:340
 #, kde-format
 msgid "Parameter %1 requires a numeric argument"
-msgstr ""
+msgstr "Parametro %1 postulas numeran argumenton"
 
 #: libs/cmsp.cpp:351
 #, kde-format
 msgid "Value of param V is out of 0-100 range."
-msgstr ""
+msgstr "Valoro de param V estas el 0-100 intervalo."
 
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr ""
+msgstr "Valoro de param L estas ekster -1;1-100-intervalo."
 
 #: libs/cmsp.cpp:373
 #, kde-format
 msgid "Value of param P is out of 0-100 range."
-msgstr ""
+msgstr "Valoro de parametro P estas el 0-100 intervalo."
 
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr ""
+msgstr "Valoro de parametro C devas esti 0 aŭ 1."
 
 #: libs/cmsp.cpp:393
 #, kde-format
 msgid "Received unfinished sequence."
-msgstr ""
+msgstr "Ricevita nefinita sekvenco."
 
 #: libs/cmsp.cpp:449
 #, kde-format
 msgid "MSP: Multiple downloads not supported, request ignored."
-msgstr ""
+msgstr "MSP: Multoblaj elŝutoj ne subtenataj, peto ignorita."
 
 #: libs/cmsp.cpp:469
 #, kde-format
 msgid "MSP: downloading of sounds disabled - request ignored."
-msgstr ""
+msgstr "MSP: elŝuto de sonoj malebligita - peto ignorita."
 
 #: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
-msgstr ""
+msgstr "Ne, ne, ne!"
 
 #: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
-msgstr ""
+msgstr "Mi ne konsentas kun ĝi."
 
 #: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
-msgstr ""
+msgstr "Pli bone ne."
 
 #: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
-msgstr ""
+msgstr "Mi verŝajne sugestus malakcepti."
 
 #: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
-msgstr ""
+msgstr "Dir ne ŝajnas iom pli bona."
 
 #: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
-msgstr ""
+msgstr "Diranta jes ŝajnas iom pli bona."
 
 #: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
-msgstr ""
+msgstr "Mi verŝajne sugestus akcepti."
 
 #: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
-msgstr ""
+msgstr "Sonas bone."
 
 #: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
-msgstr ""
+msgstr "Mi konsentas kun ĝi."
 
 #: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
-msgstr ""
+msgstr "Certe jes!"
 
 #: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
-msgstr ""
+msgstr "Mia decido: %1"
 
 #: libs/cpluginmanager.cpp:268
 #, kde-format
@@ -3709,12 +3713,12 @@ msgstr "Pordo"
 #: libs/cprofilemanager.cpp:74
 #, kde-format
 msgid "Login name"
-msgstr ""
+msgstr "Ensalutnomo"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
 msgid "Off-line"
-msgstr ""
+msgstr "Eksterrete"
 
 #: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
 #: libs/cstatus.cpp:219 libs/cstatus.cpp:268
@@ -3740,12 +3744,12 @@ msgstr "Malkonektita."
 #: libs/cstatus.cpp:192
 #, kde-format
 msgid "Connection has been closed."
-msgstr ""
+msgstr "Konekto estis fermita."
 
 #: libs/cvariablelist.cpp:375
 #, kde-format
 msgid "This is not a KMuddy variable list file."
-msgstr ""
+msgstr "Ĉi tio ne estas KMuddy-varia listdosiero."
 
 #: plugins/converter/converterdialog.cpp:41
 #, kde-format
@@ -3769,17 +3773,17 @@ msgstr "Vojo"
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr ""
+msgstr "Profila &Konvertilo..."
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
-msgstr ""
+msgstr "La profiloj estis sukcese konvertitaj."
 
 #: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
-msgstr ""
+msgstr "Vi ne specifis iujn ajn profilojn por konverti."
 
 #: plugins/mapper/cmapclipboard.cpp:64
 #, kde-format
@@ -3814,27 +3818,27 @@ msgstr "Alglui"
 #: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
 #, kde-format
 msgid "Paste Element"
-msgstr ""
+msgstr "Alglui Elementon"
 
 #: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
 #, kde-format
 msgid "Update Properties"
-msgstr ""
+msgstr "Ĝisdatigi Propraĵojn"
 
 #: plugins/mapper/cmapclipboard.cpp:375
 #, kde-format
 msgid "Paste Path"
-msgstr ""
+msgstr "Alglui Vojon"
 
 #: plugins/mapper/cmapclipboard.cpp:466
 #, kde-format
 msgid "Delete Elements"
-msgstr ""
+msgstr "Forigi Elementojn"
 
 #: plugins/mapper/cmapelement.cpp:338
 #, kde-format
 msgid "Resize Element"
-msgstr ""
+msgstr "Regrandigi Elementon"
 
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
 #, kde-format
@@ -3844,57 +3848,57 @@ msgstr "Nivelo %1"
 #: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
-msgstr ""
+msgstr "Mapo #1"
 
 #: plugins/mapper/cmapmanager.cpp:195
 #, kde-format
 msgid "Mapper: Directions"
-msgstr ""
+msgstr "Mapisto: Direktoj"
 
 #: plugins/mapper/cmapmanager.cpp:198
 #, kde-format
 msgid "Mapper: Movement"
-msgstr ""
+msgstr "Mapisto: Movado"
 
 #: plugins/mapper/cmapmanager.cpp:201
 #, kde-format
 msgid "Mapper: Colors"
-msgstr ""
+msgstr "Mapisto: Koloroj"
 
 #: plugins/mapper/cmapmanager.cpp:204
 #, kde-format
 msgid "Mapper: Speedwalk"
-msgstr ""
+msgstr "Mapisto: Speedwalk"
 
 #: plugins/mapper/cmapmanager.cpp:409
 #, kde-format
 msgid "Change Login Room"
-msgstr ""
+msgstr "Ŝanĝi Ensaluta Ĉambro"
 
 #: plugins/mapper/cmapmanager.cpp:412
 #, kde-format
 msgid "Remove Login Room Status"
-msgstr ""
+msgstr "Forigi Ensalutan Ĉambro-Statuson"
 
 #: plugins/mapper/cmapmanager.cpp:419
 #, kde-format
 msgid "Set Login Room Status"
-msgstr ""
+msgstr "Meti Ensalutan Ĉambro-Statuson"
 
 #: plugins/mapper/cmapmanager.cpp:451
 #, kde-format
 msgid "Change Current Room"
-msgstr ""
+msgstr "Ŝanĝi Nunan Ĉambron"
 
 #: plugins/mapper/cmapmanager.cpp:453
 #, kde-format
 msgid "Remove Current Room Status"
-msgstr ""
+msgstr "Forigi Nunan Ĉambron"
 
 #: plugins/mapper/cmapmanager.cpp:458
 #, kde-format
 msgid "Set Current Room Status"
-msgstr ""
+msgstr "Agordi Nunan Ĉambron"
 
 #: plugins/mapper/cmapmanager.cpp:566
 #, kde-format
@@ -3910,12 +3914,12 @@ msgstr "Krei Ĉambron"
 #: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
 #, kde-format
 msgid "Create Text"
-msgstr ""
+msgstr "Krei Tekston"
 
 #: plugins/mapper/cmapmanager.cpp:763
 #, kde-format
 msgid "A path already exists at this location"
-msgstr ""
+msgstr "Pado jam ekzistas ĉe ĉi tiu loko"
 
 #: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
 #: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
@@ -3923,13 +3927,13 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
-msgstr ""
+msgstr "KMuddy Mapper"
 
 #: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
-msgstr ""
+msgstr "Krei Vojon"
 
 #: plugins/mapper/cmapmanager.cpp:856
 #, kde-format
@@ -3944,83 +3948,83 @@ msgstr "Forigi Elementon"
 #: plugins/mapper/cmapmanager.cpp:1447
 #, kde-format
 msgid "Speedwalking is already in progress"
-msgstr ""
+msgstr "Speedwalking jam estas en progreso"
 
 #: plugins/mapper/cmapmanager.cpp:1501
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
-msgstr ""
+msgstr "La aŭtomapper ne povis trovi vojon al petita ĉambro"
 
 #: plugins/mapper/cmapmanager.cpp:1535
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
-msgstr ""
+msgstr "Speedwalk ĉesas ĉar movlimo estis atingita"
 
 #: plugins/mapper/cmapmanager.cpp:1634
 #, kde-format
 msgid "Move Elements in map"
-msgstr ""
+msgstr "Movi Elementojn en mapo"
 
 #: plugins/mapper/cmapmanager.cpp:1643
 #, kde-format
 msgid "Make Path Two-Way"
-msgstr ""
+msgstr "Igi Padon Dudirekta"
 
 #: plugins/mapper/cmapmanager.cpp:1653
 #, kde-format
 msgid "Make Path One-Way"
-msgstr ""
+msgstr "Igi Padon Unudirekta"
 
 #: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
 #, kde-format
 msgid "Change Element Property"
-msgstr ""
+msgstr "Ŝanĝi Elementan Proprecon"
 
 #: plugins/mapper/cmapmanager.cpp:1771
 #, kde-format
 msgid "Root Zone"
-msgstr ""
+msgstr "Radika Zono"
 
 #: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 1"
-msgstr ""
+msgstr "Testĉambro 1"
 
 #: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 2"
-msgstr ""
+msgstr "Testĉambro 2"
 
 #: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 3"
-msgstr ""
+msgstr "Testĉambro 3"
 
 #: plugins/mapper/cmapmanager.cpp:1796
 #, kde-format
 msgid "Test room 4"
-msgstr ""
+msgstr "Testĉambro 4"
 
 #: plugins/mapper/cmapmanager.cpp:1812
 #, kde-format
 msgid "Set Special Exit"
-msgstr ""
+msgstr "Agordi Specialan Eliron"
 
 #: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
-msgstr ""
+msgstr "Aldoni Bend"
 
 #: plugins/mapper/cmappath.cpp:615
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
-msgstr ""
+msgstr "Movi Bend"
 
 #: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
-msgstr ""
+msgstr "Forigi Vojan Segmenton"
 
 #: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:60
 #, kde-format
@@ -4030,12 +4034,12 @@ msgstr "Kmuddy Mapper"
 #: plugins/mapper/cmapview.cpp:79
 #, kde-format
 msgid "Follow Moves"
-msgstr ""
+msgstr "Sekvi Movojn"
 
 #: plugins/mapper/cmapview.cpp:85
 #, kde-format
 msgid "Auto Create"
-msgstr ""
+msgstr "Aŭtomata Kreo"
 
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
@@ -4045,57 +4049,57 @@ msgstr "&Krado"
 #: plugins/mapper/cmapview.cpp:127
 #, kde-format
 msgid "Display Upper Level"
-msgstr ""
+msgstr "Montri Supran Nivelon"
 
 #: plugins/mapper/cmapview.cpp:132
 #, kde-format
 msgid "Display Lower Level"
-msgstr ""
+msgstr "Montri Malsupran Nivelon"
 
 #: plugins/mapper/cmapview.cpp:137
 #, kde-format
 msgid "Delete Current Level"
-msgstr ""
+msgstr "Forigi Nunan Nivelon"
 
 #: plugins/mapper/cmapview.cpp:142
 #, kde-format
 msgid "Create New Zone"
-msgstr ""
+msgstr "Krei Novan Zonon"
 
 #: plugins/mapper/cmapview.cpp:147
 #, kde-format
 msgid "Delete Current Zone"
-msgstr ""
+msgstr "Forigi Nunan Zonon"
 
 #: plugins/mapper/cmapview.cpp:154
 #, kde-format
 msgid "Map Upper Level"
-msgstr ""
+msgstr "Mapo de Supra Nivelo"
 
 #: plugins/mapper/cmapview.cpp:158
 #, kde-format
 msgid "Map Lower Level"
-msgstr ""
+msgstr "Mapo Malsupra Nivelo"
 
 #: plugins/mapper/cmapview.cpp:165
 #, kde-format
 msgid "Set &Current Position"
-msgstr ""
+msgstr "Agordi Aktualan Pozi&cion"
 
 #: plugins/mapper/cmapview.cpp:169
 #, kde-format
 msgid "Set Room to &Login Point"
-msgstr ""
+msgstr "Agordi Ĉambron al Ensa&lutpunkto"
 
 #: plugins/mapper/cmapview.cpp:173
 #, kde-format
 msgid "&Speed walk to room"
-msgstr ""
+msgstr "&Rapide marŝi al ĉambro"
 
 #: plugins/mapper/cmapview.cpp:177
 #, kde-format
 msgid "&Delete room"
-msgstr ""
+msgstr "&Forigi ĉambron"
 
 #: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
 #: plugins/mapper/cmapview.cpp:226
@@ -4106,37 +4110,37 @@ msgstr "&Ecoj"
 #: plugins/mapper/cmapview.cpp:189
 #, kde-format
 msgid "&Delete Text"
-msgstr ""
+msgstr "&Forigi Tekston"
 
 #: plugins/mapper/cmapview.cpp:201
 #, kde-format
 msgid "&One way"
-msgstr ""
+msgstr "&Unudirekta"
 
 #: plugins/mapper/cmapview.cpp:205
 #, kde-format
 msgid "&Two way"
-msgstr ""
+msgstr "&Dudirekta"
 
 #: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
-msgstr ""
+msgstr "&Aldoni Bend"
 
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
 msgid "&Remove Segment"
-msgstr ""
+msgstr "Fo&rigi Segmenton"
 
 #: plugins/mapper/cmapview.cpp:217
 #, kde-format
 msgid "&Edit Bends"
-msgstr ""
+msgstr "R&edakti Kurbojn"
 
 #: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "&Forigi Vojon"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:231
@@ -4160,22 +4164,22 @@ msgstr "&Etikedo"
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
-msgstr ""
+msgstr "Ne estas nivelo en tiu direkto. Ĉu vi volas krei novan?"
 
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "Create New Level"
-msgstr ""
+msgstr "Krei Novan Nivelon"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
 msgid "Are you sure that you want to delete the current level?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi la nunan nivelon?"
 
 #: plugins/mapper/cmapview.cpp:613
 #, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr ""
+msgstr "Bonvolu enigi la nomon de la nova zono:"
 
 #: plugins/mapper/cmapview.cpp:622
 #, kde-format
@@ -4186,97 +4190,97 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:759
 #, kde-format
 msgid "Change room label position"
-msgstr ""
+msgstr "Ŝanĝi ĉambran etikedpozicion"
 
 #: plugins/mapper/cmapview.cpp:785
 #, kde-format
 msgid "Change zone label position"
-msgstr ""
+msgstr "Ŝanĝi zonan etikedpozicion"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
 msgid "Current Room : "
-msgstr ""
+msgstr "Nuna Ĉambro:"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
 msgid "Level : "
-msgstr ""
+msgstr "Nivelo:"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:57
 #, kde-format
 msgid "Zone : "
-msgstr ""
+msgstr "Zono:"
 
 #: plugins/mapper/cmapzone.cpp:34
 #, kde-format
 msgid "Unnamed Zone"
-msgstr ""
+msgstr "Nenomita Zono"
 
 #: plugins/mapper/cmapzonemanager.cpp:232
 #, kde-format
 msgid "This is not a KMuddy map list."
-msgstr ""
+msgstr "Ĉi tio ne estas mapo-listo de KMuddy."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
 #, kde-format
 msgid "Mapper Colors Options"
-msgstr ""
+msgstr "Mapper Koloroj Opcioj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
 #, kde-format
 msgid "Current Level"
-msgstr ""
+msgstr "Nuna Nivelo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr ""
+msgstr "Defaŭlta Voja Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr ""
+msgstr "Defaŭlta Ĉambra Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
 #, kde-format
 msgid "Current Position Color"
-msgstr ""
+msgstr "Nuna Pozicio Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
 #, kde-format
 msgid "Special Exit Color"
-msgstr ""
+msgstr "Speciala Elira Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
 #, kde-format
 msgid "Login Room Color"
-msgstr ""
+msgstr "Ensaluta Ĉambrokoloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblEdit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
 #, kde-format
 msgid "Edit Mode Color"
-msgstr ""
+msgstr "Koloro de Redakta Reĝimo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr ""
+msgstr "Defaŭlta Teksta Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr ""
+msgstr "Defaŭlta Zono-Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -4288,7 +4292,7 @@ msgstr "Elektita Koloro"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
 #, kde-format
 msgid "Lower Level"
-msgstr ""
+msgstr "Malsupra Nivelo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
@@ -4296,7 +4300,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
 #, kde-format
 msgid "Room Color"
-msgstr ""
+msgstr "Ĉambra Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
@@ -4304,7 +4308,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
 #, kde-format
 msgid "Path Color"
-msgstr ""
+msgstr "Voja Koloro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4320,13 +4324,13 @@ msgstr "Teksta Koloro"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
 #, kde-format
 msgid "Zone Color"
-msgstr ""
+msgstr "Zono Koloro"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
 #, kde-format
 msgid "Upper Level"
-msgstr ""
+msgstr "Supra Nivelo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
@@ -4350,7 +4354,7 @@ msgstr "Direktoj"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
 #, kde-format
 msgid "Long Directions Commands"
-msgstr ""
+msgstr "Longaj Direktoj Komandoj"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
@@ -4390,7 +4394,7 @@ msgstr "Okcidenta"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
 #, kde-format
 msgid "North East"
-msgstr ""
+msgstr "Nordoriento"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
@@ -4398,7 +4402,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
 #, kde-format
 msgid "South East"
-msgstr ""
+msgstr "Sudoriento"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
@@ -4406,7 +4410,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
 #, kde-format
 msgid "South West"
-msgstr ""
+msgstr "Sud-Okcidento"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
@@ -4420,31 +4424,31 @@ msgstr "North West"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
 #, kde-format
 msgid "Short Directions Commands"
-msgstr ""
+msgstr "Mallongaj Direktoj Komandoj"
 
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:85
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:96
 #, kde-format
 msgid "Enter invalid movement string as a regular expression"
-msgstr ""
+msgstr "Enigi nevalidan movĉenon kiel regulan esprimon"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
 #, kde-format
 msgid "Valid Room Checking"
-msgstr ""
+msgstr "Kontrolo pri Valida Ĉambro"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
 #, kde-format
 msgid "Enable valid room checking"
-msgstr ""
+msgstr "Ebligi kontrolon pri valida ĉambro"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
 #, kde-format
 msgid "Invalid Move Strings"
-msgstr ""
+msgstr "Nevalidaj Movaj Ĉenoj"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
@@ -4468,43 +4472,43 @@ msgstr "Forigi"
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
 #, kde-format
 msgid "Changed Path Properties"
-msgstr ""
+msgstr "Ŝanĝitaj Vodaj Propraĵoj"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr ""
+msgstr "Padaj Propraĵoj"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
 #, kde-format
 msgid "Exits"
-msgstr ""
+msgstr "Elirejoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grdExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
 #, kde-format
 msgid "Exit Details"
-msgstr ""
+msgstr "Eliro Detaloj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
 #, kde-format
 msgid "Two Way Exit"
-msgstr ""
+msgstr "Dudirekta Elirejo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
 #, kde-format
 msgid "Normal exit"
-msgstr ""
+msgstr "Normala eliro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
 #, kde-format
 msgid "Source Directions"
-msgstr ""
+msgstr "Fontaj Direktoj"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
@@ -4590,37 +4594,37 @@ msgstr "SW"
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
 #, kde-format
 msgid "Destination Direction"
-msgstr ""
+msgstr "Destinita Direkto"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
 #, kde-format
 msgid "Special Exit"
-msgstr ""
+msgstr "Speciala Eliro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
 #, kde-format
 msgid "Special Command"
-msgstr ""
+msgstr "Speciala Komando"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr ""
+msgstr "Fonto al Celo:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr ""
+msgstr "Celo al Fonto:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
 #, kde-format
 msgid "Src To Destination Commands"
-msgstr ""
+msgstr "Src Al Celokomandoj"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcBefore)
 #. i18n: ectx: property (text), widget (QLabel, lblDestBefore)
@@ -4628,7 +4632,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:706
 #, kde-format
 msgid "Before walking path:"
-msgstr ""
+msgstr "Antaŭ promenado:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcAfter)
 #. i18n: ectx: property (text), widget (QLabel, lblDestAfter)
@@ -4636,13 +4640,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:719
 #, kde-format
 msgid "After walking path:"
-msgstr ""
+msgstr "Post promenado:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraDestSrcCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:694
 #, kde-format
 msgid "Destination To Source Commands"
-msgstr ""
+msgstr "Celo Al Fontaj Komandoj"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdOk)
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
@@ -4665,19 +4669,19 @@ msgstr "Nuligi"
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
-msgstr ""
+msgstr "Ŝanĝitaj Ĉambraj Propraĵoj"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
 #, kde-format
 msgid "Room Properties"
-msgstr ""
+msgstr "Ĉambro Propraĵoj"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
 #, kde-format
 msgid "&Description"
-msgstr ""
+msgstr "&Priskribo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLabel)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
@@ -4707,31 +4711,31 @@ msgstr "Koloro"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
 #, kde-format
 msgid "Room Color:"
-msgstr ""
+msgstr "Ĉambra Koloro:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr ""
+msgstr "Defaŭlta ĉambrokoloro"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
 #, kde-format
 msgid "LabelPosition"
-msgstr ""
+msgstr "LabelPosition"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr ""
+msgstr "&Eliras"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
 #, kde-format
 msgid "Room Exits:"
-msgstr ""
+msgstr "Ĉambro-Elirejoj:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
@@ -4743,13 +4747,13 @@ msgstr "Direkto"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
 #, kde-format
 msgid "Before command"
-msgstr ""
+msgstr "Antaŭ komando"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
 #, kde-format
 msgid "After command"
-msgstr ""
+msgstr "Post komando"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
@@ -4767,7 +4771,7 @@ msgstr "&Enhavotabelo"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
 #, kde-format
 msgid "RoomContents:"
-msgstr ""
+msgstr "ĈambroEnhavo:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
@@ -4785,37 +4789,37 @@ msgstr "Forigi eron"
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
 #, kde-format
 msgid "Speedwalk Options"
-msgstr ""
+msgstr "Speedwalk Opcioj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
 #, kde-format
 msgid "Limit Speedwalk Moves"
-msgstr ""
+msgstr "Limigi Speedwalk-Movojn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkLimitSpeedwalk)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:38
 #, kde-format
 msgid "Limit speedwalk moves"
-msgstr ""
+msgstr "Limigi rapidpromenajn movojn"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLimitSpeedwalk)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:53
 #, kde-format
 msgid "Number of moves before aborting:"
-msgstr ""
+msgstr "Nombro da movoj antaŭ ĉesigo:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraDelay)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:106
 #, kde-format
 msgid "Delay Speedwalk Moves"
-msgstr ""
+msgstr "Prokrasti Speedwalk Movojn"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
 #, kde-format
 msgid "Delay before sending next command (centi secconds)"
-msgstr ""
+msgstr "Prokrasto antaŭ sendado de sekva komando (centi sekundoj)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
@@ -4851,13 +4855,13 @@ msgstr "Butono"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
 #, kde-format
 msgid "S&ize"
-msgstr ""
+msgstr "Grand&eco"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
 #, kde-format
 msgid "Actual Size "
-msgstr ""
+msgstr "Reala Grandeco"
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
@@ -4881,13 +4885,13 @@ msgstr "Tiparo Grandeco"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
 #, kde-format
 msgid "Enter font size:"
-msgstr ""
+msgstr "Enigu tipargrandon:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
 #, kde-format
 msgid "Set Size"
-msgstr ""
+msgstr "Agordi Grandecon"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
@@ -4912,7 +4916,7 @@ msgstr "Antaŭrigardo:"
 #: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
 #, kde-format
 msgid "Speedwalk Progress"
-msgstr ""
+msgstr "Speedwalk Progreso"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
 #: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
@@ -4923,7 +4927,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:71
 #, kde-format
 msgid "Show &mapper"
-msgstr ""
+msgstr "Montri &mapilon"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
@@ -4940,12 +4944,12 @@ msgstr "Navigado"
 #: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
 #, kde-format
 msgid "Move Elements"
-msgstr ""
+msgstr "Movi Elementojn"
 
 #: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
 #, kde-format
 msgid "Change element notes"
-msgstr ""
+msgstr "Ŝanĝi elementnotojn"
 
 #: plugins/mapper/plugins/standard/cmappluginstandard.cpp:70
 #, kde-format
@@ -4970,22 +4974,22 @@ msgstr "Elekti"
 #: plugins/scripting/cscript.cpp:68
 #, kde-format
 msgid "Sorry, single-instance script."
-msgstr ""
+msgstr "Pardonu, unuopa skripto."
 
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr ""
+msgstr "Skripto &nomo"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
 msgid "Name of this script."
-msgstr ""
+msgstr "Nomo de ĉi tiu skripto."
 
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
 msgid "&Command to execute"
-msgstr ""
+msgstr "&Komando por plenumi"
 
 #: plugins/scripting/cscripteditor.cpp:73
 #, kde-format
@@ -5005,7 +5009,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
 msgid "Send user commands"
-msgstr ""
+msgstr "Sendi uzantkomandojn"
 
 #: plugins/scripting/cscripteditor.cpp:91
 #, kde-format
@@ -5017,7 +5021,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
 msgid "Enable communication"
-msgstr ""
+msgstr "Ebligi komunikadon"
 
 #: plugins/scripting/cscripteditor.cpp:95
 #, kde-format
@@ -5029,7 +5033,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:98
 #, kde-format
 msgid "Single-instance script"
-msgstr ""
+msgstr "Unuokaza skripto"
 
 #: plugins/scripting/cscripteditor.cpp:99
 #, kde-format
@@ -5041,7 +5045,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
 msgid "Use flow control"
-msgstr ""
+msgstr "Uzi fluoregon"
 
 #: plugins/scripting/cscripteditor.cpp:103
 #, kde-format
@@ -5057,7 +5061,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
 msgid "Communicate variables"
-msgstr ""
+msgstr "Komuniki variablojn"
 
 #: plugins/scripting/cscripteditor.cpp:112
 #, kde-format
@@ -5069,42 +5073,42 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
 msgid "Choose script"
-msgstr ""
+msgstr "Elekti skripton"
 
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
 msgid "Choose working directory"
-msgstr ""
+msgstr "Elekti labordosierujon"
 
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr ""
+msgstr "Tia ekstera skribo ne ekzistas!"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr ""
+msgstr "Kurante skriptoj"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr ""
+msgstr "&Rulado de skriptoj"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
 msgid "&Terminate"
-msgstr ""
+msgstr "&Ferigi"
 
 #: plugins/scripting/dlgrunninglist.cpp:54
 #, kde-format
 msgid "&Kill"
-msgstr ""
+msgstr "&Mortigi"
 
 #: plugins/scripting/scriptingplugin.cpp:63
 #, kde-format
 msgid "/exec: Script list is not available."
-msgstr ""
+msgstr "/exec: Skriptolisto ne disponeblas."
 
 #: plugins/scripting/scriptingplugin.cpp:123
 #, kde-format
@@ -5114,17 +5118,17 @@ msgstr "Skriptoj"
 #: plugins/vartrigs/cvartriggereditor.cpp:61
 #, kde-format
 msgid "Variable name that this trigger will be reacting on."
-msgstr ""
+msgstr "Variebla nomo, per kiu ĉi tiu ellasilo reagos."
 
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
 msgid "&Commands"
-msgstr ""
+msgstr "&Komandoj"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
 msgid "Commands that will be executed when this trigger matches."
-msgstr ""
+msgstr "Komandoj kiuj estos plenumitaj kiam ĉi tiu ellasilo kongruas."
 
 #: plugins/vartrigs/vartrigplugin.cpp:40
 #, kde-format
