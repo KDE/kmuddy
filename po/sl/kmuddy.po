@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 01:59+0000\n"
-"PO-Revision-Date: 2024-01-15 07:04+0100\n"
+"PO-Revision-Date: 2024-03-27 06:48+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -44,7 +44,7 @@ msgstr "Napis na tem gumbu."
 #: kmuddy/cbuttoneditor.cpp:71
 #, kde-format
 msgid "Co&mmand"
-msgstr "&Ukaz"
+msgstr "Ukaz"
 
 #: kmuddy/cbuttoneditor.cpp:74
 #, kde-format
@@ -2055,11 +2055,10 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr "Tukaj vnesite svoje geslo za MUD.<p><i>Ta nastavitev je neobvezna.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr "Povezovalno zaporedje"
+msgstr "Poveži zaporedje"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
