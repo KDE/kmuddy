@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:36+0000\n"
+"POT-Creation-Date: 2024-03-27 01:59+0000\n"
 "PO-Revision-Date: 2020-01-22 21:46+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -2047,7 +2047,9 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr "Sinu MUD-i parool.<p><i>See valik pole kohustuslik.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Connect sequence"
+msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Ü&hendamisjada"
 

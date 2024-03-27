@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:36+0000\n"
+"POT-Creation-Date: 2024-03-27 01:59+0000\n"
 "PO-Revision-Date: 2024-01-15 10:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -2084,7 +2084,9 @@ msgstr ""
 "Introduïu aquí la contrasenya del MUD.<p><i>Aquesta opció és opcional.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Connect sequence"
+msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Seqüència de &connexió"
 

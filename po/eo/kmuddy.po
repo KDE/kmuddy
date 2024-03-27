@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:36+0000\n"
+"POT-Creation-Date: 2024-03-27 01:59+0000\n"
 "PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
@@ -1908,7 +1908,9 @@ msgstr ""
 "Enigu vian pasvorton sur la MUD ĉi tie.<p><i>Ĉi tiu agordo estas laŭvola.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Connect sequence"
+msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "&Konekti sekvencon"
 

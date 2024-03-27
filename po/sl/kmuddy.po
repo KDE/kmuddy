@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:36+0000\n"
+"POT-Creation-Date: 2024-03-27 01:59+0000\n"
 "PO-Revision-Date: 2024-01-15 07:04+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -2055,7 +2055,9 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr "Tukaj vnesite svoje geslo za MUD.<p><i>Ta nastavitev je neobvezna.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Connect sequence"
+msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Povezovalno zaporedje"
 
