@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 01:59+0000\n"
-"PO-Revision-Date: 2024-01-15 03:33+0100\n"
+"PO-Revision-Date: 2024-03-27 16:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -2084,8 +2084,7 @@ msgstr ""
 "Introduzca aquí su contraseña de MUD.<p><i>Este parámetro es opcional.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Secuencia de &conexión"

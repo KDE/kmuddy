@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 01:59+0000\n"
-"PO-Revision-Date: 2024-03-24 10:34+0100\n"
+"PO-Revision-Date: 2024-03-27 12:41+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "okellogg@users.sourceforge.net"
 
 #: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
 #: kmuddy/cstatusvareditor.cpp:70
@@ -51,6 +51,9 @@ msgid ""
 "enter multiple commands here (separated by semi-colons, or another character "
 "defined in <b>global settings</b>)."
 msgstr ""
+"Komando kiu estos efektivigita se vi alklakas la butonon. Rimarku, ke vi "
+"povas enigi plurajn komandojn ĉi tie (apartigite per punktokomoj, aŭ alia "
+"signo difinita en <b>ĉieaj agordoj</b>)."
 
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
@@ -68,6 +71,8 @@ msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
 msgstr ""
+"Komando kiu estos plenumita se vi alklakas la preman butonon dum ĝi estas "
+"puŝita malsupren."
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:132
@@ -365,6 +370,8 @@ msgid ""
 "Command that will be executed when you press the defined key combination.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Komando kiu estos efektivigita kiam vi premas la difinitan klavkombinon.\n"
+"Komando povas inkluzivi kaŝnomojn, skriptovokojn kaj similajn aferojn."
 
 #: kmuddy/cshortcuteditor.cpp:76
 #, kde-format
@@ -387,6 +394,8 @@ msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
 msgstr ""
+"Se markite, la komando estos sendita al la KLOTO. Alie, ĝi estos metita en "
+"la eniglinion."
 
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
@@ -397,7 +406,7 @@ msgstr "&Anstataŭigi ekzistantan tekston"
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr ""
+msgstr "Se jam estas iom da teksto en la eniglinio, ĉu ĝi estu anstataŭita?"
 
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
@@ -415,6 +424,8 @@ msgid ""
 "When enabled, this variable will be shown as percentage. (of max.value, or "
 "of 100 if no max.value given)"
 msgstr ""
+"Kiam ĝi estas ebligita, ĉi tiu variablo estos montrita kiel procento. (de "
+"maksimuma valoro, aŭ de 100 se neniu maksimuma valoro donita)"
 
 #: kmuddy/ctelnet.cpp:239 kmuddy/ctelnet.cpp:315
 #, kde-format
@@ -447,6 +458,8 @@ msgid ""
 "Command that will be executed on each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Komando kiu estos efektivigita je ĉiu tiktako.\n"
+"Komando povas inkluzivi kaŝnomojn, skriptovokojn kaj similajn aferojn."
 
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
@@ -501,6 +514,8 @@ msgid ""
 "Command that will be executed the specified time before each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Komando kiu estos efektivigita la specifita tempo antaŭ ĉiu tiktako.\n"
+"Komando povas inkluzivi kaŝnomojn, skriptovokojn kaj similajn aferojn."
 
 #: kmuddy/ctranscript.cpp:173
 #, kde-format
@@ -728,6 +743,8 @@ msgid ""
 "Type of matching. Trigger will only be activated if this passes this type of "
 "test. Note that triggers are always matched as whole words."
 msgstr ""
+"Tipo de kongruo. Trigger nur estos aktivigita se ĉi tio trapasas ĉi tiun "
+"tipon de testo. Rimarku, ke ekigiloj ĉiam kongruas kiel tutaj vortoj."
 
 #: kmuddy/ctriggereditor.cpp:191 libs/caliaseditor.cpp:114
 #, kde-format
@@ -735,6 +752,8 @@ msgid ""
 "Conditional triggering. If this is set, the actions will only fire if the "
 "condition is true (that means, if it evaluates as non-zero)."
 msgstr ""
+"Kondiĉa ekigado. Se ĉi tio estas agordita, la agoj pafos nur se la kondiĉo "
+"estas vera (tio signifas, se ĝi taksas ne-nula)."
 
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
@@ -775,6 +794,9 @@ msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"Ĉi tio estas prova areo. Vi povas testi vian ekigilon ĉi tie por vidi ĉu ĝi "
+"faras tion, kion vi volas, ke ĝi faru. Simple tajpu iom da teksto kaj vidu, "
+"kio okazas."
 
 #: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
 #: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
@@ -794,6 +816,8 @@ msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"Kiam ĝi estas ebligita, ĉi tiu ekigilo kongruos kun la teksto nur se estas "
+"spacoj aŭ nenio antaŭ/post la kongrua ĉeno."
 
 #: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
 #, kde-format
@@ -806,6 +830,8 @@ msgid ""
 "When this option is on, upper case and lower case letters are treated as "
 "different characters, otherwise they're considered to be the same."
 msgstr ""
+"Kiam ĉi tiu elekteblo estas ŝaltita, majusklaj kaj minusklaj literoj estas "
+"traktataj kiel malsamaj signoj, alie ili estas konsiderataj samaj."
 
 #: kmuddy/ctriggereditor.cpp:260
 #, kde-format
@@ -818,6 +844,8 @@ msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
 "displayed on the screen."
 msgstr ""
+"Kiam ĝi estas ebligita, la teksto ne estos sendita al la MUD, ĝi nur estos "
+"montrata sur la ekrano."
 
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
@@ -836,6 +864,14 @@ msgid ""
 "names from a list (using the condition to check if a match is in the list), "
 "or something like that."
 msgstr ""
+"<p>Kun ĉiea kongruo, unu ekigilo povas kongrui plurfoje, se ĝi enhavas la "
+"ŝablonon pli ol unufoje. Ekzemple, se ŝablono estas abc, ĝi kongruas nur "
+"unufoje sur abcdabcd de ĉiea kongruo estas malŝaltita, sed dufoje se ĝi "
+"estas ŝaltita. Por ĉiu kongruo, la petitaj agoj estas faritaj - do la "
+"komandoj povas esti senditaj plurfoje, unufoje po kongruo.</p><p>Rimarku, ke "
+"malsukceso de la kondiĉo ne ĉesigas skanadon, do vi povas uzi ĉi tion por "
+"reliefigi nomojn de listo (uzante la kondiĉon por kontroli ĉu kongruo estas "
+"en la listo), aŭ io simila."
 
 #: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
 #, kde-format
@@ -937,7 +973,7 @@ msgstr "Ne montri (&gag) la linion"
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
-msgstr ""
+msgstr "Ĉi tio malhelpos la kongruan linion montriĝi en la eligfenestro."
 
 #: kmuddy/ctriggereditor.cpp:429
 #, kde-format
@@ -953,6 +989,11 @@ msgid ""
 "session is not active at the moment.\n"
 "Useful if you only want to be notified of some events (tells, combat, ...)."
 msgstr ""
+"Ĉi tiu agordo efektiviĝas nur se vi malŝaltis la elekteblon \"Ĉiam sciigi\" "
+"en Ĉieaj agordoj kaj almenaŭ unu el ĉiea/loka sciigo estas ebligita. Ĝi "
+"aktivigos sciigon se la fenestro de KMuddy kaj/aŭ ĉi tiu seanco ne estas "
+"aktivaj momente.\n"
+"Utila se vi volas nur esti sciigita pri kelkaj eventoj (diroj, batalo, ...)."
 
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
@@ -968,6 +1009,12 @@ msgid ""
 "other options will NOT be taken into effect - prompt-detect trigger cannot "
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
+"Ebligi ĉi tion transformos ĉi tiun ekigilon en promptan detektilon, tio "
+"estas, teksto estos transdonita al ĉi tiuj ekigiloj eĉ se neniu nova linio "
+"estis ricevita, la teksto estos montrata kiel promptilo se la ekigilo "
+"kongruas, kaj la plej multaj aliaj elektebloj NE estos. prenita en efiko - "
+"prompt-detekti ekigilon ne povas sendi tekston, gagliniojn, fari sciigon. "
+"Kolorigo ankoraŭ eblas."
 
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
@@ -980,6 +1027,8 @@ msgid ""
 "This trigger will play a sound. Useful as a notification of important "
 "events, or to assign sounds to some events."
 msgstr ""
+"Ĉi tiu ekigilo ludos sonon. Utila kiel sciigo pri gravaj eventoj, aŭ por "
+"atribui sonojn al iuj eventoj."
 
 #: kmuddy/ctriggereditor.cpp:464
 #, kde-format
@@ -1007,6 +1056,8 @@ msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
 "KMuddy session window"
 msgstr ""
+"Ĉi tio kaŭzos ke eligo sendita al aparta fenestro ne aperos en ĉefa "
+"seancofenestro de KMuddy"
 
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
@@ -1148,6 +1199,8 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
+"Se ĉi tio estas markita, la langeto-breto ĉiam estos montrata. Alie, ĝi "
+"estos kaŝita se ĝi enhavas nur unu langeton."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
@@ -1172,6 +1225,10 @@ msgid ""
 "trigger is activated. Note that this option only takes effect if global or "
 "local notification is enabled."
 msgstr ""
+"Se ĉi tio estas markita, eligo sciigo estos uzata kiam ajn teksto venas de "
+"la servilo. Alie, ĝi estos uzata nur kiam sciiga ekigilo estas aktivigita. "
+"Rimarku, ke ĉi tiu elekteblo efektiviĝas nur se ĉiea aŭ loka sciigo estas "
+"ebligita."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
@@ -1185,6 +1242,9 @@ msgid ""
 "window caption and the taskbar will try to attract your attention (some "
 "characters will blink there)."
 msgstr ""
+"Kiam iu teksto venas de la servilo kaj KMuddy ne estas nuntempe aktiva, "
+"fenestra bildoteksto kaj la taskobreto provos altiri vian atenton (kelkaj "
+"signoj palpebrumos tie)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
@@ -1198,6 +1258,9 @@ msgid ""
 "active, its tab will try to attract your attention (some characters will "
 "blink there)."
 msgstr ""
+"Kiam iu teksto venas de la servilo kaj ĉi tiu seanco ne estas nuntempe "
+"aktiva, ĝia langeto provos altiri vian atenton (kelkaj signoj palpebrumos "
+"tie)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:135
 #, kde-format
@@ -1213,6 +1276,11 @@ msgid ""
 "it. Your connection will remain active even if the window is hidden and you "
 "will still receive notification messages. "
 msgstr ""
+"Ĉi tiu elekteblo ŝanĝas la ĉeeston de la sistemplet-piktogramo. La "
+"piktogramo povas esti uzata por kaŝi la aplikaĵfenestron sen okupi spacon en "
+"la taskobreto. Vi povas alklaki la piktogramon por kaŝi la fenestron kaj "
+"poste alklaki denove por restarigi ĝin. Via konekto restos aktiva eĉ se la "
+"fenestro estas kaŝita kaj vi ankoraŭ ricevos sciigajn mesaĝojn."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
@@ -1226,6 +1294,10 @@ msgid ""
 "the system tray icon when you are in another window and alert you to the "
 "presence of activity in one of your connections. "
 msgstr ""
+"Ĉi tiu elekteblo ŝanĝas la uzon de pasivaj ŝprucfenestroj. Pasivaj "
+"ŝprucfenestroj aperas proksime de la sistemplet-piktogramo kiam vi estas en "
+"alia fenestro kaj atentigas vin pri la ĉeesto de agado en unu el viaj "
+"konektoj."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:151
 #, kde-format
@@ -1239,6 +1311,8 @@ msgid ""
 "initiated immediately after starting KMuddy. Handy when you connect using "
 "one profile most of the time."
 msgstr ""
+"Kun ĉi tiu elekteblo agordita, la elektita konekto aŭtomate komenciĝos tuj "
+"post lanĉo de KMuddy. Utila kiam vi konektas uzante unu profilon plejofte."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:155
 #, kde-format
@@ -1303,6 +1377,8 @@ msgid ""
 "Indentation says how many spaces will be put to the beginning of the "
 "continued line."
 msgstr ""
+"Kiam linio estas tro longa, parto de ĝi estos movita al la sekva linio. "
+"Indentaĵo diras kiom da spacoj estos metitaj al la komenco de la daŭra linio."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
@@ -1315,6 +1391,8 @@ msgid ""
 "Size of output scroll-back buffer. Please note that this setting will only "
 "affect new connections, existing ones will keep their history setting."
 msgstr ""
+"Grandeco de eligo rul-malantaŭen bufro. Bonvolu noti, ke ĉi tiu agordo nur "
+"influos novajn konektojn, la ekzistantaj konservos sian historian agordon."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:244
 #, kde-format
@@ -1332,6 +1410,8 @@ msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
 "will also disable command echo in session transcript."
 msgstr ""
+"Ebligas montradon de komandoj en la konzolo.<p><b>Bonvolu noti:</b> Ĉi tio "
+"ankaŭ malŝaltos komandon-eĥon en seanca transskribo."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:251
 #, kde-format
@@ -1389,6 +1469,8 @@ msgstr "&Multlinia enigo"
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
+"Ĉi tie vi povas elekti tiparon, kiu estos uzata por la plurlinia eniga "
+"fenestro."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
@@ -1401,6 +1483,8 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
+"Se vi ebligas ĉi tiun elekteblon, komandoj restos en la eniga linio post "
+"kiam vi sendos ilin (per premado ENTER); alie ĝi estos purigita."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
@@ -1414,6 +1498,9 @@ msgid ""
 "to immediately type another command without deleting the old one and still "
 "be able to reuse previous command easily."
 msgstr ""
+"Se vi ebligas ĉi tiun elekteblon, enigita komando estos elektita. Ĉi tio "
+"ebligas al vi tuj tajpi alian komandon sen forigi la malnovan kaj ankoraŭ "
+"povi facile reuzi antaŭan komandon."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
@@ -1426,6 +1513,8 @@ msgid ""
 "If you enable this option, you will be able to choose previously entered "
 "commands with Up and Down keys."
 msgstr ""
+"Se vi ebligas ĉi tiun elekteblon, vi povos elekti antaŭe enigitajn komandojn "
+"per Supren kaj Malsupren klavoj."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:330
 #, kde-format
@@ -1438,6 +1527,8 @@ msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
 "but the last are sent as commands immediately."
 msgstr ""
+"Ebligas telnet-stilan algluadon, t.e. se plurlinia teksto estas algluita, "
+"ĉiuj linioj krom la lastaj estas senditaj kiel komandoj tuj."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
@@ -1452,6 +1543,10 @@ msgid ""
 "one line, or you will encounter problems with special sequences not being "
 "detected properly."
 msgstr ""
+"Ebligas tondado de spacoj de komandoj. Rimarku, ke kun ĉi tiu elekteblo "
+"malŝaltita, vi devus eviti inkluzivi spacojn dum tajpado de pluraj komandoj "
+"sur unu linio, aŭ vi renkontos problemojn kun specialaj sekvencoj ne "
+"detektitaj ĝuste."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:340
 #, kde-format
@@ -1464,6 +1559,8 @@ msgid ""
 "Auto-completion is a feature that offers you possible completions for "
 "commands, as you type them. It can also finish the command for you."
 msgstr ""
+"Aŭtomata kompletigo estas funkcio, kiu ofertas al vi eblajn kompletigojn por "
+"komandoj, dum vi tajpas ilin. Ĝi ankaŭ povas fini la komandon por vi."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:349
 #, kde-format
@@ -1517,6 +1614,9 @@ msgid ""
 "line, and ENTER will send commands to the server. If turned on, then the "
 "behaviour of these keys gets swapped."
 msgstr ""
+"Kiam estas malŝaltita, CTRL+ENTER enigos alian linion en la plurlinian "
+"eniglinion, kaj ENTER sendos komandojn al la servilo. Se ŝaltite, tiam la "
+"konduto de ĉi tiuj klavoj estas interŝanĝita."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
@@ -1539,6 +1639,9 @@ msgid ""
 "You can enter multiple commands at once, they will get executed together. "
 "Here you can enter string that can be used to separate individual commands."
 msgstr ""
+"Vi povas enigi plurajn komandojn samtempe, ili estos plenumitaj kune. Ĉi tie "
+"vi povas enigi ĉenon, kiu povas esti uzata por apartigi individuajn "
+"komandojn."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
@@ -1554,6 +1657,11 @@ msgid ""
 "direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
 "connections only)."
 msgstr ""
+"Se vi komencas komandon per ĉi tiu ĉeno, la komando estos interpretita kiel "
+"rapidega marŝado. Ĉiu signo estas traktata kiel unu ordono: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d (atentu ke temas pri ĉieldirektaj "
+"mallongigoj).<p>Komandoj kiuj estos sendataj por ĉiu direkto povas esti "
+"agorditaj en <i>MUD-preferoj</i> (nur <b>profilbazitaj</b> konektoj)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
@@ -1569,6 +1677,11 @@ msgid ""
 "(news, for example) will be treated as speed-walking. To avoid this, you'll "
 "have to type at least one character in upper-case."
 msgstr ""
+"Ebligi ĉi tion kaŭzos KMuddy vastigi ĉenojn de rapid-marŝo eĉ se neniu rapid-"
+"promenĉeno estis donita. Ĉi tio ebligas pli rapidan rapide-marŝadon, sed "
+"memoru, ke ĈIU komando kiu konsistas nur el validaj rapid-promenaj signoj "
+"(novaĵoj, ekzemple) estos traktata kiel rapide-marŝado. Por eviti ĉi tion, "
+"vi devos tajpi almenaŭ unu signon majuskle."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
@@ -1582,6 +1695,9 @@ msgid ""
 "a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
 "(/exec calls external scripts)"
 msgstr ""
+"Se vi komencas komandon per ĉi tiu ĉeno, la komando estos interpretita kiel "
+"makrovoko.<br>Sintakso estas <ĉi tiu ĉeno> <komando> [parametroj] (/exec "
+"vokas eksterajn skriptojn)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
@@ -1595,6 +1711,10 @@ msgid ""
 "sends that command 10 times. <br>Note that this also works with aliases and "
 "macro execution.<br>Repeater and number may be separated by a space (spaces)."
 msgstr ""
+"Permesas al vi ripeti iun komandon. Ekzemple, tajpi <i>#10 diri saluton</i> "
+"sendas tiun komandon 10 fojojn. <br>Rimarku, ke ĉi tio ankaŭ funkcias kun "
+"kaŝnomoj kaj makro-efektivigo.<br>Ripetilo kaj numero povas esti apartigitaj "
+"per spaco (spacoj)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
@@ -1609,6 +1729,10 @@ msgid ""
 "connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
 "this string&gt; &lt;command&gt;"
 msgstr ""
+"Se komando estas komencita per ĉi tiu ĉeno, la komando estos interpretita "
+"kiel komando-fokusa alvoko. Ĉi tio permesos al vi sendi komandojn al aliaj "
+"ligitaj signoj.<br>Sintakso estas <ĉi tiu ĉeno> <fokusa langeto> <ĉi tiu "
+"ĉeno> <komando>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
@@ -1621,6 +1745,8 @@ msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
 "parsing. This string will be removed first."
 msgstr ""
+"Se komando estas komencita per ĉi tiu ĉeno, ĝi estos sendita tia, sen ajna "
+"analizo. Ĉi tiu ĉeno unue estos forigita."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
@@ -1633,6 +1759,8 @@ msgid ""
 "This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
 "TAB, \\\\ is \\, \\<anything else> means <anything else>."
 msgstr ""
+"Ĉi tio ebligos ekspansion de malantaŭa oblikvo, tio estas: \\n estas fino de "
+"linio, \\t estas TAB, \\\\ estas \\, \\<io ajn alia> signifas <io ajn alia>."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
@@ -1647,6 +1775,10 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol).</qt>"
 msgstr ""
+"<qt>Ebligi ludi sonojn por ĉiuj konektoj.\n"
+"Rimarku, ke vi povas anstataŭi ĉi tiun agordon en dialogo de MUD-Preferoj.\n"
+"Ankaŭ rimarku, ke tio funkcios nur se via MUD subtenas <b>MSP</b> (MUD-"
+"Sonprotokolo).</qt>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
@@ -1661,6 +1793,10 @@ msgid ""
 "be downloaded once. The downloaded files are stored in your homedir in "
 "directory\n"
 msgstr ""
+"MSP-versio 0.3 subtenas elŝutadon de sondosieroj rekte de la reto aŭ FTP. Vi "
+"povas ebligi ĉi tiun funkcion ĉi tie. Rimarku, ke ĉiu sono nur estos "
+"elŝutita unufoje. La elŝutitaj dosieroj estas konservitaj en via hejmdir en "
+"dosierujo\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBold)
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
@@ -1692,6 +1828,9 @@ msgid ""
 "speed up connecting to your MUD, as well as to use more advanced features "
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
+"Ĉi tiu listo montras nuntempe difinitajn profilojn.<p><b>Profiloj</b> "
+"ebligas al vi akceli konekton al via MUD, kaj ankaŭ uzi pli altnivelajn "
+"funkciojn kiel <i>kaŝnomo</i> aŭ <i>ekigiloj. </i>."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -1724,6 +1863,8 @@ msgid ""
 "Login sequence won't be sent for this connect. Useful when you're creating a "
 "new character and you want to use QuickConnect for some reason."
 msgstr ""
+"Ensaluta sekvenco ne estos sendita por ĉi tiu konekto. Utila kiam vi kreas "
+"novan karakteron kaj vi volas uzi QuickConnect ial."
 
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
@@ -1761,6 +1902,8 @@ msgid ""
 "This profile cannot be deleted, because you have a connection open using "
 "this profile."
 msgstr ""
+"Ĉi tiu profilo ne povas esti forigita, ĉar vi havas konekton malfermita "
+"uzante ĉi tiun profilon."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -1793,6 +1936,8 @@ msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
 "have write access to the profile directory."
 msgstr ""
+"Okazis eraro provante duobligi la profilon. Bonvolu certigi, ke vi havas "
+"skriban aliron al la profila dosierujo."
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1816,6 +1961,9 @@ msgid ""
 "displayed part up to the end of buffer will be dumped. Otherwise entire "
 "buffer will be dumped (default)."
 msgstr ""
+"Kiam ĉi tio estas ebligita, nur la parto de historia bufro de nuntempe "
+"montrata parto ĝis la fino de bufro estos forĵetita. Alie tuta bufro estos "
+"forĵetita (defaŭlte)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
 #, kde-format
@@ -1864,6 +2012,8 @@ msgid ""
 "Enter profile name here. You can enter any name, but it must be <b>unique</"
 "b>."
 msgstr ""
+"Enigu profilonomon ĉi tie. Vi povas enigi ajnan nomon, sed ĝi devas esti "
+"<b>unika</b>."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:47
 #, kde-format
@@ -1895,6 +2045,8 @@ msgstr "Ensa&lutnomo:"
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
+"Enigu vian ensalutnomon sur la MUD ĉi tie.<p><i>Ĉi tiu agordo estas laŭvola."
+"</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:58
 #, kde-format
@@ -1908,11 +2060,10 @@ msgstr ""
 "Enigu vian pasvorton sur la MUD ĉi tie.<p><i>Ĉi tiu agordo estas laŭvola.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr "&Konekti sekvencon"
+msgstr "&Konekta sekvenco"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -1923,6 +2074,12 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
+"Komandoj sendotaj al la MUD post ensaluto.<br><b>$name</b> vastiĝas al "
+"uzantnomo.<br><b>$password</b> vastiĝas al via pasvorto.<p><b> Grave:</b> ĉi "
+"tiuj ordonoj estas senditaj ĝuste kiel vi tajpas ilin, kun antaŭaj/"
+"malantaŭaj spacoj forigitaj. Neniuj kaŝnomoj, neniuj makrooj, neniu "
+"rapidpromenado. Rimarku ankaŭ, ke malplenaj linioj ankaŭ estos senditaj, "
+"inkluzive de la lasta linio."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:180
 #, kde-format
@@ -1985,6 +2142,8 @@ msgid ""
 "I am sorry, but import and export is currently disabled. The functionality "
 "should be re-enabled before the final release."
 msgstr ""
+"Mi bedaŭras, sed importo kaj eksporto estas nuntempe malŝaltita. La funkcio "
+"devus esti reŝaltita antaŭ la fina eldono."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
@@ -2007,6 +2166,8 @@ msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
 "command."
 msgstr ""
+"Enigu ordonojn, kiuj estas sendotaj al la MUD. Ĉiu linio reprezentas unu "
+"komandon."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
@@ -2024,6 +2185,8 @@ msgid ""
 "Prefix and suffix may contain text, that will be added to the beginning "
 "(prefix) or ending (suffix) of every line written to the multi-line editor."
 msgstr ""
+"Prefikso kaj sufikso povas enhavi tekston, kiu estos aldonita al la komenco "
+"(prefikso) aŭ fino (finaĵo) de ĉiu linio skribita al la plurlinia redaktilo."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:79
 #, kde-format
@@ -2042,6 +2205,9 @@ msgid ""
 "prefix and/or suffix, they will be added to the beginning and ending of each "
 "command."
 msgstr ""
+"Ĉi tio sendos ĉiujn komandojn, kiujn vi enigis al la MUD. Se vi enigis "
+"prefikson kaj/aŭ sufikson, ili estos aldonitaj al la komenco kaj fino de ĉiu "
+"komando."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:84
 #, kde-format
@@ -2157,6 +2323,8 @@ msgid ""
 "Enables telnet negotiation for some option. Disabling it may resolve "
 "problems with some servers that do not understand these."
 msgstr ""
+"Ebligas telnet-intertraktadon por iu elekteblo. Malŝalti ĝin povas solvi "
+"problemojn kun iuj serviloj, kiuj ne komprenas ĉi tiujn."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:80
 #, kde-format
@@ -2169,6 +2337,8 @@ msgid ""
 "Lets you pick the output character encoding used by the server. This usually "
 "only needs to be set for non-English servers."
 msgstr ""
+"Ebligas al vi elekti la eligan signokodigon uzatan de la servilo. Ĉi tio "
+"kutime nur bezonas esti agordita por ne-anglaj serviloj."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:89
 #, kde-format
@@ -2181,6 +2351,8 @@ msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
 "aligned output."
 msgstr ""
+"Ebligas aldoni liniofluojn post GA-finitaj promptiloj por havi taŭge "
+"vicigitan eliron."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:93
 #, kde-format
@@ -2258,6 +2430,8 @@ msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
 "used by the auto-mapper."
 msgstr ""
+"Ĉi tio estas movada komando. Ĝi estas uzata de rapid-marŝado kaj ankaŭ estos "
+"uzata de la aŭtomapisto."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:150
 #, kde-format
@@ -2281,6 +2455,8 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
+"Defaŭlta labordosierujo por viaj skriptoj. Fari ĉi tion same kiel supre "
+"kutime estas bona elekto."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:164
 #, kde-format
@@ -2305,6 +2481,10 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol)."
 msgstr ""
+"Ebligu ludadon de sonoj kun ĉi tiu profilo.\n"
+"Rimarku, ke tio funkcios nur se vi ebligas sonojn en ĉieaj preferoj.\n"
+"Ankaŭ rimarku, ke tio funkcios nur se via MUD subtenas <b>MSP</b> (MUD-"
+"Sonprotokolon)."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:195
 #, kde-format
@@ -2326,6 +2506,12 @@ msgid ""
 "other players from sending malicious MSP sequences, if you allow downloading "
 "of sounds."
 msgstr ""
+"Kiam ĉi tiu elekteblo estas ebligita, KMuddy interpretos MSP-sekvencojn la "
+"tutan tempon, eĉ se neniu intertraktado okazis. Utila por MUD-oj kiuj ne "
+"subtenas telnet-intertraktadon de MSP.\n"
+"Sed atentu - nur ŝaltu ĉi tion se via MUD vere subtenas MSP por malhelpi "
+"aliajn ludantojn sendi malicajn MSP-sekvencojn, se vi permesas elŝuton de "
+"sonoj."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:203
 #, kde-format
@@ -2341,6 +2527,11 @@ msgid ""
 "downloading support; otherwise players could instruct your client to "
 "download any file on the net..."
 msgstr ""
+"Mezliniaj MSP-sekvencoj estas la etendaĵo de zMUD al la MSP-speco kiun "
+"kelkaj MUD-oj ŝajnas uzi. Vi povas ebligi subtenon por ĉi tiu funkcio ĉi "
+"tie, sed certigu, ke aliaj ludantoj ne povas diri/rakonti/kio ajn ĉi tiujn "
+"sekvencojn, aŭ malŝalti elŝutan subtenon; alie ludantoj povus instrukcii "
+"vian klienton elŝuti ajnan dosieron en la reto..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:220
 #, kde-format
@@ -2376,6 +2567,11 @@ msgid ""
 "support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
 "look for MXP sequences.</li></ul></qt>"
 msgstr ""
+"<qt><p>Ĉi tie vi povas elekti kiam MXP estos uzata.</p><ul><li><b>Neniam</b> "
+"MXP-etikedoj neniam estos analizitaj</li><li><b> Se intertraktata</b> MXP-"
+"subteno dependos de sukcesa telnet-intertraktado.</li><li><b>Aŭtomate "
+"detekti</b> MXP-subteno estos aŭtomate detektita.</li><li><b> Ĉiam ŝaltita</"
+"b> KMuddy ĉiam serĉos MXP-sekvencojn.</li></ul></qt>"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:233
 #, kde-format
@@ -2388,6 +2584,8 @@ msgid ""
 "Prefix prepended to each MXP variable from the server. Note that changing "
 "the prefix won't affect existing variables with old prefix."
 msgstr ""
+"Prefikso antaŭmetita al ĉiu MXP-variablo de la servilo. Rimarku, ke ŝanĝi la "
+"prefikson ne influos ekzistantajn variablojn kun malnova prefikso."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:396
 #, kde-format
@@ -2522,6 +2720,8 @@ msgid ""
 "Enables or disabled the session transcript. Note that session transcript is "
 "automatically disabled when you disconnect."
 msgstr ""
+"Ebligas aŭ malŝaltis la sean transskribon. Rimarku, ke seanco-transskribo "
+"estas aŭtomate malŝaltita kiam vi malkonektas."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
@@ -2545,6 +2745,9 @@ msgid ""
 "Otherwise, new transcript will be appended to the end of an existing file "
 "(if it exists :))."
 msgstr ""
+"Se vi ebligas ĉi tiun elekteblon, la ekzistanta transskriba dosiero estos "
+"anstataŭita. Alie, nova transskribo estos almetita al la fino de ekzistanta "
+"dosiero (se ĝi ekzistas :))."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
@@ -2557,6 +2760,8 @@ msgid ""
 "This will cause KMuddy to add complete buffer dump to the beginning of the "
 "transcript file."
 msgstr ""
+"Ĉi tio kaŭzos ke KMuddy aldonos kompletan bufro-dump al la komenco de la "
+"transskriba dosiero."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
@@ -2570,6 +2775,10 @@ msgid ""
 "running all the time, rotates it at midnight and so. Note that normal and "
 "advanced transcripts can both be running at the same time, if you want."
 msgstr ""
+"Ĉi tio ebligos altnivelan transskribon, kiu ebligas al vi ke transskribo "
+"funkcias la tutan tempon, turnas ĝin je noktomezo kaj tiel. Rimarku, ke "
+"normalaj kaj altnivelaj transskribaĵoj povas ambaŭ funkcii samtempe, se vi "
+"volas."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
@@ -2585,7 +2794,7 @@ msgstr "&Rotaci protokolon je noktomezo ĉiutage"
 #, kde-format
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
-msgstr ""
+msgstr "Ĉi tio igos KMuddy turni seanca transskribo ĉiutage je noktomezo"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
@@ -2598,6 +2807,8 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
+"Ĉi tiu elekteblo igos KMuddy enmeti lokan tempostampilon antaŭ ĉiu linio de "
+"protokolo"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
@@ -2611,6 +2822,9 @@ msgid ""
 "world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
 "combination of alpha-numeric characters."
 msgstr ""
+"Ĉi tie vi povas specifi protokolformaton. Vi povas uzi la jenajn eblojn: $W "
+"- mondnomo, $h - horo, $m - minuto, $D - tago, $M - monato, $Y - jaro, kaj "
+"ajna kombinaĵo de alfanombraj signoj."
 
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
@@ -2858,6 +3072,8 @@ msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
 "disconnecting, and also every five minutes."
 msgstr ""
+"Profilo estas konservita. Rimarku, ke profiloj estas aŭtomate konservitaj "
+"post malkonekto, kaj ankaŭ ĉiujn kvin minutojn."
 
 #: kmuddy/macros.cpp:67
 #, kde-format
@@ -2888,8 +3104,8 @@ msgstr "/tick: ĉi tiu tempigilo estas nuntempe malŝaltita."
 #, kde-format
 msgid "Timer ticks in 1 second."
 msgid_plural "Timer ticks in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Skaleroj de tempumilo ene de 1 sekundo."
+msgstr[1] "Skaleroj de tempumilo ene de %1 sekundo."
 
 #: kmuddy/macros.cpp:211
 #, kde-format
@@ -3097,6 +3313,7 @@ msgid ""
 "KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
 "features."
 msgstr ""
+"KMuddy estas MUD (Multi-User Dungeon) kliento de KDE kun diversaj funkcioj."
 
 #: kmuddy/main.cpp:36 kmuddy/main.cpp:38
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:85
@@ -3131,6 +3348,8 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
+"Multaj plibonigoj en ekstera skriptado, interna skript-analizilo, "
+"produktaĵvido kaj kaŝnomoj/ekigiloj, korektoj."
 
 #: kmuddy/main.cpp:45
 #, kde-format
@@ -3303,6 +3522,8 @@ msgid ""
 "Type of matching. Alias will only be activated if this passes this type of "
 "test. Note that aliases are always matched as whole words."
 msgstr ""
+"Tipo de kongruo. Kaŝnomo nur estos aktivigita se ĉi tio trapasas ĉi tiun "
+"tipon de testo. Rimarku, ke kaŝnomoj ĉiam kongruas kiel tutaj vortoj."
 
 #: libs/caliaseditor.cpp:118
 #, kde-format
@@ -3320,6 +3541,9 @@ msgid ""
 "This is testing area. You can test your alias here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"Ĉi tio estas prova areo. Vi povas testi vian kaŝnomon ĉi tie por vidi ĉu ĝi "
+"faras tion, kion vi volas, ke ĝi faru. Simple tajpu iom da teksto kaj vidu, "
+"kio okazas."
 
 #: libs/caliaseditor.cpp:174
 #, kde-format
@@ -3333,6 +3557,9 @@ msgid ""
 "you enable this option, both original and replacement commands are sent "
 "(original command is sent first)."
 msgstr ""
+"Se ĉi tiu kaŝnomo kongruas kun via komando, anstataŭa komando estos sendita. "
+"Se vi ebligas ĉi tiun opcion, ambaŭ originaj kaj anstataŭaj komandoj estas "
+"sendataj (origina komando estas sendata unue)."
 
 #: libs/caliaseditor.cpp:181
 #, kde-format
@@ -3340,6 +3567,8 @@ msgid ""
 "When enabled, this alias will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"Kiam ĝi estas ebligita, ĉi tiu kaŝnomo kongruos kun la teksto nur se estas "
+"spacoj aŭ nenio antaŭ/post la kongrua ĉeno."
 
 #: libs/caliaseditor.cpp:189
 #, kde-format
@@ -3352,6 +3581,8 @@ msgid ""
 "Prefix/suffix of matched text will be automatically appended to the expanded "
 "text."
 msgstr ""
+"Prefikso/sufikso de kongrua teksto estos aŭtomate almetita al la vastigita "
+"teksto."
 
 #: libs/caliaseditor.cpp:194
 #, kde-format
@@ -3365,6 +3596,14 @@ msgid ""
 "from a list (using the condition to check if a match is in the list), or "
 "something like that."
 msgstr ""
+"<p>Kun ĉiea kongruo, unu kaŝnomo/ekigilo povas kongrui plurfoje, se ĝi "
+"enhavas la ŝablonon pli ol unufoje. Ekzemple, se ŝablono estas abc, ĝi "
+"kongruas nur unufoje sur abcdabcd de ĉiea kongruo estas malŝaltita, sed "
+"dufoje se ĝi estas ŝaltita. Por ĉiu kongruo, la petitaj agoj estas faritaj - "
+"do la komandoj povas esti senditaj plurfoje, unufoje por kongruo.</"
+"p><p>Rimarku ke malsukceso de la kondiĉo ne ĉesigas skanadon, do vi povas "
+"uzi ĉi tion por reliefigi nomojn el listo (uzante la kondiĉon por kontroli "
+"ĉu kongruo estas en la listo), aŭ io simila."
 
 #: libs/caliaseditor.cpp:260
 #, kde-format
@@ -3451,6 +3690,7 @@ msgstr "Funkcio %1 ne ekzistas - supozante malplenan revenan valoron."
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
 msgstr ""
+"Ĉi tiu dosiero ne enhavas la radikan grupon, kaj tial ne povas esti ŝargita."
 
 #: libs/clist.cpp:471 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
@@ -3459,6 +3699,8 @@ msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
 "unable to open it."
 msgstr ""
+"Ĉi tiu dosiero estis kreita de pli nova versio de KMuddy, kaj ĉi tiu versio "
+"ne povas malfermi ĝin."
 
 #: libs/clist.cpp:473
 #, kde-format
@@ -3766,6 +4008,10 @@ msgid ""
 "Existing profiles will not be overwritten, even if they have the same name. "
 "The old profiles will be kept intact."
 msgstr ""
+"Elektu profilojn kiujn vi ŝatus konverti kaj premu Ok. Ĉi tiu ilo kreos "
+"novan profilon enhavantan la informojn de la elektitaj profiloj. Ekzistantaj "
+"profiloj ne estos anstataŭitaj, eĉ se ili havas la saman nomon. La malnovaj "
+"profiloj estos konservitaj sendifektaj."
 
 #: plugins/converter/converterdialog.cpp:54
 #, kde-format
@@ -4188,6 +4434,8 @@ msgstr "Bonvolu enigi la nomon de la nova zono:"
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
 msgstr ""
+"Ĉu vi certas, ke vi volas forigi la nunan zonon? Ĉi tio ne povas esti "
+"malfarita."
 
 #: plugins/mapper/cmapview.cpp:759
 #, kde-format
@@ -5000,6 +5248,9 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
+"Ordono plenumenda, inkluzive de parametroj. Rimarku, ke vi povas specifi pli "
+"da parametroj kiam vi plenumas la komandon de la eniga linio, se vi ebligas "
+"la markobutonon Permesi parametrojn."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
@@ -5007,6 +5258,8 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
+"Labora dosierujo por la skripto. Skripto kondutos ĝuste kvazaŭ ĝi estus "
+"rulita de ĉi tiu dosierujo en konzolo."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
@@ -5019,6 +5272,8 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
+"Se skripto-enigo estas ebligita, tio ebligas sendi ĉiujn senditajn komandojn "
+"al la skripto."
 
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
@@ -5031,6 +5286,8 @@ msgid ""
 "Enables identification of lines of server output. Refer to the manual for "
 "more information."
 msgstr ""
+"Ebligas identigon de linioj de servila eligo. Vidu al la manlibro por pliaj "
+"informoj."
 
 #: plugins/scripting/cscripteditor.cpp:98
 #, kde-format
@@ -5042,7 +5299,7 @@ msgstr "Unuokaza skripto"
 msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
-msgstr ""
+msgstr "Se okazo de ĉi tiu skripto jam funkcias, alia ne povas esti komencita."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
@@ -5059,6 +5316,12 @@ msgid ""
 "better not to use this feature.</p><p>If you don't need to disable flow "
 "control for some reason, leave this on.</p>"
 msgstr ""
+"<p>Se ĝi estas ebligita, fluoregado estos uzata por ĉi tiu skripto. "
+"Fluokontrolo certigas, ke skriptoj estas sinkronigitaj, tio signifas, ke se "
+"du linioj alvenas de la servilo, la dua ne estas sendita al la skriptoj ĝis "
+"ĉiuj kurantaj skriptoj ricevis la unuan. Tamen, en iuj situacioj, estas pli "
+"bone ne uzi ĉi tiun funkcion.</p><p>Se vi ial ne bezonas malŝalti "
+"fluokontrolon, lasu ĉi tion aktiva.</p>"
 
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
@@ -5071,6 +5334,8 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
+"Se ebligita, UNIX-domajna ingo estos kreita, permesante al vi akiri kaj "
+"modifi realajn variajn valorojn. Pliaj informoj en la dokumentado."
 
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
