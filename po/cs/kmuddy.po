@@ -1906,11 +1906,10 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connection"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr "&Spojení"
+msgstr ""
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
