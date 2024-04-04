@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-27 01:59+0000\n"
-"PO-Revision-Date: 2024-01-15 19:24+0100\n"
+"PO-Revision-Date: 2024-03-27 20:56+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -2087,8 +2087,7 @@ msgstr ""
 "facoltativa.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Sequenza di &connessione"
