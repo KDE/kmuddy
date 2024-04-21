@@ -5,9 +5,6 @@ project(kmuddy)
 find_package(ECM REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})
 
-# temporary, cleaning the errors
-set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
-
 include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
