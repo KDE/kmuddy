@@ -17,3 +17,6 @@ Dependencies:
     'frameworks/kiconthemes': '@stable'
     'frameworks/karchive': '@stable'
     'frameworks/knotifications': '@stable'
+
+Options:
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
