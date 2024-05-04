@@ -23,7 +23,7 @@
 #include "cmaproom.h"
 #include "cmappath.h"
 
-#include <qregexp.h>
+#include <QRegularExpression>
 
 CMapFilter::CMapFilter(CMapManager *manager)
 {  

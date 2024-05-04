@@ -37,7 +37,7 @@ cOutput::cOutput (int sess, QWidget *parent) : QWidget(parent), cActionBase ("ou
 {
   con = new cConsole (this);
   QVBoxLayout *layout = new QVBoxLayout (this);
-  layout->setMargin (0);
+  layout->setContentsMargins (0, 0, 0, 0);
   layout->addWidget (con);
 
   con->setSession (sess);

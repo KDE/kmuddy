@@ -387,12 +387,12 @@ void cProfileManager::load ()
   reader->readNext ();  // read the document start
   reader->readNext ();
   if (reader->isStartElement ())
-    if (reader->name() == "profiles")
-      if (reader->attributes().value ("version") == "1.0") {
+    if (reader->name() == QString("profiles"))
+      if (reader->attributes().value ("version") == QString("1.0")) {
         // okay, read the list
         while (!reader->atEnd()) {
           reader->readNext ();
-          if (reader->isStartElement () && (reader->name() == "profile")) {
+          if (reader->isStartElement () && (reader->name() == QString("profile"))) {
             // found another profile
             QString id = reader->attributes().value ("id").toString();
             QString name = reader->attributes().value ("name").toString();

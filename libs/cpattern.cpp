@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "cpattern.h"
 
-#include <qregexp.h>
+#include <QRegularExpression>
 
 struct cPattern::Private {
   /** pattern */

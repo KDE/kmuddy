@@ -32,7 +32,6 @@ CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *ico
 	m_element = element;
 	notesLayout = new QVBoxLayout( this );
     notesLayout->setSpacing( 6 );
-    notesLayout->setMargin( 11 );
 
 	lblNotes = new QLabel( this);
     lblNotes->setText( i18n( "Notes:" ) );

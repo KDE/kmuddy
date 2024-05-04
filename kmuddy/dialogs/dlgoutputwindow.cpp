@@ -43,7 +43,7 @@ dlgOutputWindow::dlgOutputWindow (QWidget *parent) : QDialog(parent, Qt::Tool)
   sess = 0;
   owindow->setSession (0);
 
-  layout->setMargin (0);
+  layout->setContentsMargins (0, 0, 0, 0);
   layout->addWidget(owindow);
 }
 

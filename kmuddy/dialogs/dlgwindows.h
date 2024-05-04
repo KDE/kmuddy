@@ -28,7 +28,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class QListWidget;
 class QPushButton;
-class QStringList;
 
 class cWindowList;
 

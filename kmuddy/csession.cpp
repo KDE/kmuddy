@@ -101,7 +101,7 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
 
   QHBoxLayout *playout = new QHBoxLayout (promptinput);
   playout->setSpacing (1);
-  playout->setMargin (1);
+  playout->setContentsMargins (1, 1, 1, 1);
   playout->addWidget (_prompt);
   playout->addWidget (_inputline);
   playout->addWidget (_multiinputline);
@@ -109,7 +109,7 @@ cSession::cSession (int sess, QWidget *parent) : QWidget (parent), cActionBase (
 
   QVBoxLayout *layout = new QVBoxLayout (this);
   layout->setSpacing (1);
-  layout->setMargin (1);
+  layout->setContentsMargins (1, 1, 1, 1);
   layout->addWidget (_output);
   layout->addWidget (promptinput);
   layout->addWidget (_auxinputline);

@@ -284,7 +284,7 @@ QString cValue::load (QXmlStreamReader *reader)
 {
   reader->readNext ();
   if (!reader->isStartElement ()) return QString();  // something is wrong
-  if (reader->name() != "variable") return QString();  // likewise
+  if (reader->name() != QString("variable")) return QString();  // likewise
 
   int type = reader->attributes().value ("type").toString().toInt();
   if (type < 0) type = 0;
@@ -305,10 +305,10 @@ QString cValue::load (QXmlStreamReader *reader)
       while (!reader->atEnd()) {
         reader->readNext ();
         // are we at the end of this section ?
-        if (reader->isEndElement() && (reader->name() == "value")) break;
+        if (reader->isEndElement() && (reader->name() == QString("value"))) break;
 
         if (!reader->isStartElement()) continue;
-        if (reader->name() != "element") continue;
+        if (reader->name() != QString("element")) continue;
         int index = reader->attributes().value ("index").toString().toInt();
         QString v = reader->attributes().value ("value").toString();
         setItem (index, v);
@@ -319,10 +319,10 @@ QString cValue::load (QXmlStreamReader *reader)
       while (!reader->atEnd()) {
         reader->readNext ();
         // are we at the end of this section ?
-        if (reader->isEndElement() && (reader->name() == "value")) break;
+        if (reader->isEndElement() && (reader->name() == QString("value"))) break;
 
         if (!reader->isStartElement()) continue;
-        if (reader->name() != "element") continue;
+        if (reader->name() != QString("element")) continue;
 
         QString v = reader->attributes().value ("value").toString();
         addToList (v);

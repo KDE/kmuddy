@@ -25,10 +25,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cansiparser.h"
 #include "cconsole.h"
 
-#include <qcolor.h>
-#include <qfont.h>
-#include <qpainter.h>
-#include <qregexp.h>
+#include <QColor>
+#include <QFont>
+#include <QPainter>
+#include <QRegularExpression>
 
 #include <stdlib.h>
 

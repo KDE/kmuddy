@@ -234,20 +234,20 @@ void cProfileSettings::load ()
     qWarning() << "No settings file - nothing to do.";
     return;  // no profiles - nothing to do
   }
-  QXmlStreamReader *reader = new QXmlStreamReader (&f);
+  QXmlStreamReader reader (&f);
   
-  reader->readNext ();  // read the document start
-  reader->readNext ();
-  if (reader->isStartElement ())
-    if (reader->name() == "profile")
-      if (reader->attributes().value ("version") == "1.0") {
+  reader.readNext ();  // read the document start
+  reader.readNext ();
+  if (reader.isStartElement ())
+    if (reader.name() == QString("profile"))
+      if (reader.attributes().value ("version") == QString("1.0")) {
         // okay, read the list
-        while (!reader->atEnd()) {
-          reader->readNext ();
-          if (reader->isStartElement () && (reader->name() == "setting")) {
-            QString type = reader->attributes().value ("type").toString();
-            QString name = reader->attributes().value ("name").toString();
-            QString value = reader->attributes().value ("value").toString();
+        while (!reader.atEnd()) {
+          reader.readNext ();
+          if (reader.isStartElement () && (reader.name() == QString("setting"))) {
+            QString type = reader.attributes().value ("type").toString();
+            QString name = reader.attributes().value ("name").toString();
+            QString value = reader.attributes().value ("value").toString();
             if (type == "integer")
               setInt (name, value.toInt());
             else if (type == "bool")
@@ -258,17 +258,16 @@ void cProfileSettings::load ()
               qDebug() << "Unrecognized setting type " << type;
           }
         }
-      } else reader->raiseError ("Unknown profile file version.");
-    else reader->raiseError ("This is not a valid profile list file.");
-  else reader->raiseError ("This file is corrupted.");
+      } else reader.raiseError ("Unknown profile file version.");
+    else reader.raiseError ("This is not a valid profile list file.");
+  else reader.raiseError ("This file is corrupted.");
 
-  if (reader->hasError()) {
-    qWarning() << ("Error in settings.xml at line " + QString::number (reader->lineNumber()) + ", column " + QString::number (reader->columnNumber()) + QString (": ") + reader->errorString());
+  if (reader.hasError()) {
+    qWarning() << ("Error in settings.xml at line " + QString::number (reader.lineNumber()) + ", column " + QString::number (reader.columnNumber()) + QString (": ") + reader.errorString());
   }
 
   // close the file
   f.close ();
-  delete reader;
 }
 
 

@@ -27,6 +27,7 @@
 #include <QIcon>
 #include <QLabel>
 #include <QLineEdit>
+#include <QMenu>
 #include <QPushButton>
 #include <QGridLayout>
 #include <QVBoxLayout>

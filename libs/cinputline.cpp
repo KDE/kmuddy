@@ -307,7 +307,7 @@ void cInputLine::focusOutEvent (QFocusEvent *e)
 
 void cInputLine::mouseReleaseEvent (QMouseEvent *e)
 {
-  if (e->button() == Qt::MidButton)
+  if (e->button() == Qt::MiddleButton)
   {
     deselect ();
     paste (QApplication::clipboard()->text (QClipboard::Selection));

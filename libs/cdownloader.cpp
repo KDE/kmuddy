@@ -21,7 +21,7 @@
 #include <QDir>
 #include <QUrl>
 
-#include <kio/job.h>
+#include <kio/filecopyjob.h>
 
 cDownloader::cDownloader (cMSP *mspObject)
 {

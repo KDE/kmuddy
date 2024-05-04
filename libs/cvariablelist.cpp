@@ -359,8 +359,8 @@ void cVariableList::load ()
   reader->readNext ();  // read the document start
   reader->readNext ();
   if (reader->isStartElement ())
-    if (reader->name() == "variables")
-      if (reader->attributes().value ("version") == "1.0") {
+    if (reader->name() == QString("variables"))
+      if (reader->attributes().value ("version") == QString("1.0")) {
         // we're inside the root element, now we load the list
         while (!reader->atEnd()) {
           cValue val;

@@ -203,7 +203,7 @@ void CMapWidget::mouseReleaseEvent(QMouseEvent *e)
 			mapManager->getCurrentTool()->mouseReleaseEvent(e->pos(),e,viewWidget->getCurrentlyViewedLevel());
 			break;
 
-          case Qt::MidButton:
+          case Qt::MiddleButton:
 			bMouseDrag = false;
 			oldCursor= new QCursor(cursor());
 			setCursor(*mouseDragCursor);
@@ -353,7 +353,7 @@ void CMapWidget::mousePressEvent(QMouseEvent *e)
 			showContexMenu(e);
 			break;
 
-          case Qt::MidButton:
+          case Qt::MiddleButton:
 			bMouseDrag = true;
 			nMouseDragPosX = e->globalX();
 			nMouseDragPosY = e->globalY();
