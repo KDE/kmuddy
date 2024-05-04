@@ -16,9 +16,11 @@
  ***************************************************************************/
 
 #include "csoundplayer.h"
+#include <QAudioOutput>
 
 struct cSoundPlayer::Private {
   QMediaPlayer player;
+  QAudioOutput *audioOutput;
 
   bool isWave;
   bool nosound;
@@ -33,6 +35,8 @@ cSoundPlayer::cSoundPlayer (bool isWAVE)
     : cActionBase (isWAVE ? "soundplayer" : "musicplayer", 0)
 {
   d = new Private;
+  d->audioOutput = new QAudioOutput;
+  d->player.setAudioOutput(d->audioOutput);
 
   d->isWave = isWAVE;
   d->nosound = false;
@@ -46,12 +50,12 @@ cSoundPlayer::~cSoundPlayer()
 
 void cSoundPlayer::init ()
 {
-  connect (&d->player, &QMediaPlayer::stateChanged, this, &cSoundPlayer::stateChanged);
+  connect (&d->player, &QMediaPlayer::playbackStateChanged, this, &cSoundPlayer::stateChanged);
 }
 
 bool cSoundPlayer::isPlaying ()
 {
-  return (d->player.state() == QMediaPlayer::PlayingState);
+  return (d->player.playbackState() == QMediaPlayer::PlayingState);
 }
 
 int cSoundPlayer::curPriority ()
@@ -110,8 +114,8 @@ void cSoundPlayer::play ()
   // Intialise the play object, if needed
   init ();
 
-  d->player.setMedia (QUrl::fromLocalFile (d->fName));
-  d->player.setVolume (d->volume);
+  d->player.setSource (QUrl::fromLocalFile (d->fName));
+  d->audioOutput->setVolume (d->volume);
   d->player.play ();
 }
 
@@ -133,7 +137,7 @@ void cSoundPlayer::disableSound ()
   d->nosound = true;
 }
 
-void cSoundPlayer::stateChanged (QMediaPlayer::State newState)
+void cSoundPlayer::stateChanged (QMediaPlayer::PlaybackState newState)
 {
   if ((newState == QMediaPlayer::StoppedState) && (d->player.mediaStatus() == QMediaPlayer::EndOfMedia))
     finished();
@@ -147,8 +151,8 @@ void cSoundPlayer::finished ()
     d->repeatCount--;  //decrease repeat count
   if (d->repeatCount != 0) {
     // we need to play again - so play again
-    d->player.setMedia (QUrl::fromLocalFile (d->fName));
-    d->player.setVolume (d->volume);
+    d->player.setSource (QUrl::fromLocalFile (d->fName));
+    d->audioOutput->setVolume (d->volume);
     d->player.play ();
   }
 }

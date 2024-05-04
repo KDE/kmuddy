@@ -295,7 +295,7 @@ void cListObject::load (QXmlStreamReader *reader)
   setPriority (DEFAULT_OBJECT_PRIORITY);  // revert priority to default
 
   QString en = reader->attributes().value ("enabled").toString();
-  if ((!en.isEmpty()) && (en.toLower() == "false"))
+  if ((!en.isEmpty()) && (en.toLower() == QString("false")))
     setEnabled (false);
   QString pri = reader->attributes().value ("priority").toString();
   if (!pri.isEmpty()) {
@@ -309,9 +309,9 @@ void cListObject::load (QXmlStreamReader *reader)
     // Error ? Break out.
     if (reader->hasError()) break;
     // we're done with the tag
-    if (reader->isEndElement() && (reader->name() == "object")) break;
+    if (reader->isEndElement() && (reader->name() == QString("object"))) break;
     if (!reader->isStartElement()) continue;  // anything else than start of element - ignore it and continue with the next
-    if (reader->name() == "attrib") {
+    if (reader->name() == QString("attrib")) {
       QStringRef type = reader->attributes().value ("type");
       QString name = reader->attributes().value ("name").toString();
       QString value;

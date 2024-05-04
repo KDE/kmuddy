@@ -206,7 +206,7 @@ void cListGroup::load (QXmlStreamReader *reader)
   setPriority (DEFAULT_OBJECT_PRIORITY);  // revert priority to default
 
   QString en = reader->attributes().value ("enabled").toString();
-  if ((!en.isEmpty()) && (en.toLower() == "false"))
+  if ((!en.isEmpty()) && (en.toLower() == QString("false")))
     setEnabled (false);
   QString pri = reader->attributes().value ("priority").toString();
   if (!pri.isEmpty()) {
@@ -220,9 +220,9 @@ void cListGroup::load (QXmlStreamReader *reader)
     // Error ? Break out.
     if (reader->hasError()) break;
     // we're done with the tag
-    if (reader->isEndElement() && (reader->name() == "group")) break;
+    if (reader->isEndElement() && (reader->name() == QString("group"))) break;
     if (!reader->isStartElement()) continue;  // anything else than start of element - ignore it and continue with the next
-    if (reader->name() == "group") {
+    if (reader->name() == QString("group")) {
       // a new group
       QString name = reader->attributes().value ("name").toString();
       if (name.isEmpty()) {
@@ -235,7 +235,7 @@ void cListGroup::load (QXmlStreamReader *reader)
       }
       cListGroup *g = list()->addGroup (this, name);
       g->load (reader);
-    } else if (reader->name() == "object") {
+    } else if (reader->name() == QString("object")) {
       // a new object
       cListObject *obj = list()->newObject();
       list()->addToGroup (this, obj);

@@ -455,14 +455,14 @@ void cList::load (QXmlStreamReader *reader)
   reader->readNext ();  // read the document start
   reader->readNext ();
   if (reader->isStartElement ())
-    if (reader->name() == "list")
-      if (reader->attributes().value ("version") == "1.0") {
+    if (reader->name() == QString("list"))
+      if (reader->attributes().value ("version") == QString("1.0")) {
         // all is well, we can start loading the list
         // so read the root group
         do {
           reader->readNext ();
         } while (!(reader->isStartElement () || reader->atEnd()));
-        if (reader->isStartElement () && (reader->name() == "group"))
+        if (reader->isStartElement () && (reader->name() == QString("group")))
           d->rootGroup->load (reader);
         else
           reader->raiseError (i18n ("This file does not contain the root group, and therefore cannot be loaded."));

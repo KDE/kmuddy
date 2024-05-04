@@ -25,7 +25,7 @@
 #include <QMediaPlayer>
 
 /**
-Plays sound via Phonon.
+Plays sound.
   *@author Tomas Mecir
   */
 
@@ -62,7 +62,7 @@ public:
   void forceUpdateParams ();
   void disableSound ();
 protected slots:
-  void stateChanged (QMediaPlayer::State newState);
+  void stateChanged (QMediaPlayer::PlaybackState newState);
 protected:
   void init ();
   void finished ();
