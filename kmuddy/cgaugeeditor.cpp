@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGridLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QRegExpValidator>
+#include <QRegularExpressionValidator>
 
 #include <kcolorbutton.h>
 #include <KLocalizedString>
@@ -57,14 +57,14 @@ void cGaugeEditor::createGUI(QWidget *parent)
   //variable
   QLabel *lbl1 = new QLabel (i18n ("&Variable name"), parent);
   d->var = new QLineEdit (parent);
-  d->var->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
+  d->var->setValidator (new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_ ]+$"), this));
   lbl1->setBuddy (d->var);
   d->var->setWhatsThis( i18n ("Variable displayed by this gauge."));
   
   //max variable
   QLabel *lbl2 = new QLabel (i18n ("&Max. variable (optional)"), parent);
   d->maxvar = new QLineEdit (parent);
-  d->maxvar->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
+  d->maxvar->setValidator (new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_ ]+$"), this));
   lbl2->setBuddy (d->maxvar);
   d->maxvar->setWhatsThis( i18n ("Variable holding the maximum value (default=100)"));
   

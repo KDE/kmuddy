@@ -112,9 +112,9 @@ void CMapFilter::processServerOutput(const QString &s)
         QString str = *it;
         if (!str.isEmpty())
         {
-          QRegExp r(str);
-          
-          if ( r.indexIn(s) != -1)
+          QRegularExpression r(str);
+          auto res = r.match(s);
+          if (res.hasMatch())
           {
             movePlayer = false;
             break;

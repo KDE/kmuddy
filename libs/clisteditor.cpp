@@ -218,7 +218,7 @@ QWidget *cListEditor::createCommonAttribEditor (QWidget *parent)
   d->edpriority = new QSpinBox (widget);
   d->edpriority->setRange (1, 1000);
   d->edname = new KLineEdit (widget);
-  d->edname->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
+  d->edname->setValidator (new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_ ]+$"), this));
   QLabel *plabel = new QLabel (i18n("&Priority"), widget);
   plabel->setBuddy (d->edpriority);
   QLabel *label = new QLabel (i18n("&Name"), widget);

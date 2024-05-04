@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QGridLayout>
 #include <QLabel>
-#include <QRegExpValidator>
+#include <QRegularExpressionValidator>
 
 #include <klineedit.h>
 #include <KLocalizedString>
@@ -56,7 +56,7 @@ void cVarTriggerEditor::createGUI(QWidget *parent)
   //variable
   QLabel *lbl1 = new QLabel (i18n ("&Variable name"), parent);
   d->var = new KLineEdit (parent);
-  d->var->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this));
+  d->var->setValidator (new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_ ]+$"), this));
   lbl1->setBuddy (d->var);
   d->var->setWhatsThis( i18n ("Variable name that this trigger will be reacting on."));
   

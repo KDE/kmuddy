@@ -71,7 +71,7 @@ public:
   if the variable is not locked or if this script has the lock) */
   bool canModify (cRunningScript *script, const QString &varname);
 private:
-  QColor * getColor(QString s);
+  QColor getColor(QString s);
   QColor m_currentFgColor;
   QColor m_currentBkColor;
 

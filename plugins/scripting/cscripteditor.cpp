@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGroupBox>
 #include <QLabel>
 #include <QPushButton>
-#include <QRegExpValidator>
+#include <QRegularExpressionValidator>
 #include "kfiledialog.h"
 #include <klineedit.h>
 #include <KLocalizedString>
@@ -60,7 +60,7 @@ void cScriptEditor::createGUI(QWidget *parent)
   //name
   QLabel *label1 = new QLabel (i18n ("Script &name"), parent);
   d->sname = new KLineEdit (parent);
-  d->sname->setValidator (new QRegExpValidator (QRegExp("^[0-9A-Za-z_]+$"), this));
+  d->sname->setValidator (new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_]+$"), this));
   label1->setBuddy (d->sname);
   d->sname->setWhatsThis (i18n ("Name of this script."));
   d->sname->setFocus();

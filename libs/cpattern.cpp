@@ -46,7 +46,7 @@ struct cPattern::Private {
   int *backrefpos;
 
   /** creating regexp objects on each trigger matching is SLOW - pre-parse them */
-  QRegExp regexp;
+  QRegularExpression regexp;
 };
 
 cPattern::cPattern (const QString &pattern, PatternType pt)

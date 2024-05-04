@@ -5,7 +5,9 @@ project(kmuddy)
 find_package(ECM REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR} ${ECM_MODULE_PATH})
 
-include(KDEInstallDirs)
+set(QT_MAJOR_VERSION "6")
+
+include(KDEInstallDirs6)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(FeatureSummary)
@@ -24,6 +26,7 @@ endif (MXP_FOUND)
 
 configure_file(config-mxp.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-mxp.h )
 
+#set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_definitions(${QT_DEFINITIONS})

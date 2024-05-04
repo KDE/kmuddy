@@ -28,6 +28,7 @@
 #include <QGraphicsItemGroup>
 #include <QGraphicsSceneHelpEvent>
 #include <QGraphicsTextItem>
+#include <QRegularExpression>
 #include <QScrollBar>
 #include <QTextBlock>
 #include <QTextBlockFormat>
@@ -432,7 +433,7 @@ QStringList cConsole::words (QString prefix, int minLength) {
     lines += block.lineCount();
     QString text = block.text();
     // split the text into words
-    QStringList words = text.split (QRegExp ("[\\s\\.\\,\\(\\)\\[\\]\\?\\!\\:\\;\"\']"));
+    QStringList words = text.split (QRegularExpression ("[\\s\\.\\,\\(\\)\\[\\]\\?\\!\\:\\;\"\']"));
     //store words that meet the requirements
     for (QString word : words) {
       if (word.length() < minLength) continue;

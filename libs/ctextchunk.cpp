@@ -566,7 +566,7 @@ QStringList cTextChunk::words (int minLength)
   QString t = plainText();
   //create the list of words
   // Regexp splitting of words to remove special characters. Added by Magnus Lundborg 051005
-  QStringList res = t.split (QRegExp("[\\s\\.\\,\\(\\)\\[\\]\\?\\!\\:\\;\"\']"));
+  QStringList res = t.split (QRegularExpression("[\\s\\.\\,\\(\\)\\[\\]\\?\\!\\:\\;\"\']"));
   //remove words that are too short
   QStringList::iterator it = res.begin ();
   while (it != res.end())

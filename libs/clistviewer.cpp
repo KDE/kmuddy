@@ -36,14 +36,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QInputDialog>
 #include <QMenu>
 #include <QStandardItemModel>
-#include <QRegExpValidator>
+#include <QRegularExpressionValidator>
 
 struct cListViewer::Private {
   cList *list;
   cListObject *currentItem;
   QStandardItemModel *emptyModel;
   QMenu *objectMenu, *groupMenu, *outsideMenu;
-  QRegExpValidator *validator;
+  QRegularExpressionValidator *validator;
   KActionCollection *col;
 };
 
@@ -55,7 +55,7 @@ cListViewer::cListViewer (QWidget *parent)
   d->emptyModel = new QStandardItemModel;
   setList (nullptr);
   header()->hide();  // no header
-  d->validator = new QRegExpValidator (QRegExp("^[0-9A-Za-z_ ]+$"), this);
+  d->validator = new QRegularExpressionValidator (QRegularExpression("^[0-9A-Za-z_ ]+$"), this);
   d->col = new KActionCollection (this);
 
   // create the actions and popup menus

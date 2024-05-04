@@ -23,7 +23,7 @@
 #include "ctextchunk.h"
 
 #include <QAbstractTableModel>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <KLocalizedString>
 
 #include <stdlib.h>
@@ -366,30 +366,24 @@ void cRunningList::sendText (const QString &text)
   invokeEvent ("command", sess(), text);
 }
 
-QColor * cRunningList::getColor(QString s)
+QColor cRunningList::getColor(QString s)
 {
-    QRegExp r = QRegExp("(\\d+),(\\d+),(\\d+)");
-    r.indexIn(s);
-    QStringList rgbList = r.capturedTexts();
+    QRegularExpression r = QRegularExpression("(\\d+),(\\d+),(\\d+)");
+    auto match = r.match(s);
     int red, green, blue;
-    if(rgbList.size()==4) 
-    {
+    if (match.hasMatch()) {
         // parse RGB color
-        rgbList.pop_front(); //drop complete match
-        red = rgbList.first().toInt();
-        rgbList.pop_front();
-        green = rgbList.first().toInt();
-        rgbList.pop_front();
-        blue = rgbList.first().toInt();
+        red = match.captured(1).toInt();
+        green = match.captured(2).toInt();
+        blue = match.captured(3).toInt();
         if((red>=0)&&(red<256))
             if((green>=0)&&(green<256))
                 if((blue>=0)&&(blue<256))
                 {
-                    QColor * pC = new QColor(red,green,blue);
-                    return pC;
+                    return QColor(red,green,blue);
                 }
     }
-    return NULL;
+    return QColor();
 }
 
 void cRunningList::displayText (const QString &text)
@@ -423,10 +417,10 @@ getColor also belongs to this
                   int tagEnd = text.indexOf('>',i+4);
                   if((tagEnd>-1)&&(tagEnd<i+15))
                   {
-                      QColor * pC = getColor(text.mid(i+3,tagEnd-(i+3)));
-                      if(pC!=NULL)
+                      QColor pC = getColor(text.mid(i+3,tagEnd-(i+3)));
+                      if(pC.isValid())
                       {
-                          nextFgColor = *pC;
+                          nextFgColor = pC;
                           i=tagEnd; //+1 from the for loop
                           colorChange = true;
                       }
@@ -437,10 +431,10 @@ getColor also belongs to this
                   int tagEnd = text.indexOf('>',i+4);
                   if((tagEnd>-1)&&(tagEnd<i+15))
                   {
-                      QColor * pC = getColor(text.mid(i+3,tagEnd-(i+3)));
-                      if(pC!=NULL)
+                      QColor pC = getColor(text.mid(i+3,tagEnd-(i+3)));
+                      if(pC.isValid())
                       {
-                          nextBkColor = *pC;
+                          nextBkColor = pC;
                           i=tagEnd; //+1 from the for loop
                           colorChange = true;
                       }
