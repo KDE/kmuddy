@@ -312,7 +312,7 @@ void cListObject::load (QXmlStreamReader *reader)
     if (reader->isEndElement() && (reader->name() == QString("object"))) break;
     if (!reader->isStartElement()) continue;  // anything else than start of element - ignore it and continue with the next
     if (reader->name() == QString("attrib")) {
-      QStringRef type = reader->attributes().value ("type");
+      QStringView type = reader->attributes().value ("type");
       QString name = reader->attributes().value ("name").toString();
       QString value;
       while (!reader->isEndElement()) {
@@ -321,9 +321,9 @@ void cListObject::load (QXmlStreamReader *reader)
         reader->readNext ();
         if (reader->isCharacters()) value += reader->text().toString();
       }
-      if (type == "bool")
+      if (type == QString("bool"))
         setBool (name, (value.toLower() == "true"));
-      else if (type == "int")
+      else if (type == QString("int"))
         setInt (name, value.toInt());
       else
         setStr (name, value);

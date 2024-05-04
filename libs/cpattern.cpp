@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cpattern.h"
 
 #include <QRegularExpression>
+#include <vector>
 
 struct cPattern::Private {
   /** pattern */
@@ -30,7 +31,7 @@ struct cPattern::Private {
   /** matching type */
   cPattern::PatternType type;
   /** case-sensitive comparison */
-  Qt::CaseSensitivity cs;
+  bool cs;
   /** whole words only */
   bool wholewords;
 
@@ -43,7 +44,7 @@ struct cPattern::Private {
   /** list of back-references (if doing regexp compare) */
   QStringList backreflist;
   /** positions of backreferences */
-  int *backrefpos;
+  std::vector<int> backrefpos;
 
   /** creating regexp objects on each trigger matching is SLOW - pre-parse them */
   QRegularExpression regexp;
@@ -53,10 +54,9 @@ cPattern::cPattern (const QString &pattern, PatternType pt)
 {
   d = new Private;
 
-  d->cs = Qt::CaseSensitive;
+  d->cs = true;
   d->wholewords = true;
-  d->regexp.setCaseSensitivity (d->cs);
-  d->backrefpos = nullptr;
+  // if (!d->cs) d->regexp.setPatternOptions (QRegularExpression::CaseInsensitiveOption);
   d->lastlen = d->lastpos = 0;
 
   d->pattern = pattern;
@@ -67,8 +67,6 @@ cPattern::cPattern (const QString &pattern, PatternType pt)
 
 cPattern::~cPattern ()
 {
-  if (d->backrefpos != nullptr)
-    delete[] d->backrefpos;
   delete d;
 }
 
@@ -97,8 +95,8 @@ cPattern::PatternType cPattern::matching () const
 
 void cPattern::setCaseSensitive (bool cs)
 {
-  d->cs = cs ? Qt::CaseSensitive : Qt::CaseInsensitive;
-  d->regexp.setCaseSensitivity (d->cs);
+  d->cs = cs;
+  d->regexp.setPatternOptions (d->cs ? QRegularExpression::NoPatternOption : QRegularExpression::CaseInsensitiveOption);
 }
 
 bool cPattern::caseSensitive () const
@@ -122,12 +120,9 @@ bool cPattern::match (const QString &text, int matchingPos)
   if (d->pattern.length() == 0)
     return false;
 
-  if (d->backrefpos != nullptr)
-    delete[] d->backrefpos;
-  d->backrefpos = nullptr;
+  d->backrefpos.clear();
 
   bool matched = false;
-  int n;
   
   switch (d->type) {
     case exact:
@@ -144,8 +139,8 @@ bool cPattern::match (const QString &text, int matchingPos)
         d->lastlen = d->pattern.length ();
       }
       break;
-    case substring:
-      n = text.indexOf (d->pattern, matchingPos, d->cs);
+    case substring: {
+      int n = text.indexOf (d->pattern, matchingPos, d->cs ? Qt::CaseSensitive : Qt::CaseInsensitive);
       matched = (n != -1);
       if (matched)
       {
@@ -154,7 +149,7 @@ bool cPattern::match (const QString &text, int matchingPos)
         d->lastpos = n;
         d->lastlen = d->pattern.length ();
       }
-      break;
+    } break;
     case begin:
       if (matchingPos != 0)
         matched = false;
@@ -185,26 +180,25 @@ bool cPattern::match (const QString &text, int matchingPos)
         d->lastlen = d->pattern.length ();
       }
       break;
-    case regexp:
+    case regexp: {
       //regexp's case-sensitivity is set in constructor and in function
       // setCaseSensitive
-      n = d->regexp.indexIn (text, matchingPos);
-      if (n != -1)    //MATCH!
+      auto m = d->regexp.match(text, matchingPos);
+      if (m.hasMatch())
       {
         matched = true;
-        d->lastpos = n;
-        d->lastlen = d->regexp.matchedLength();
-        d->prefix = text.left (n);
-        d->suffix = text.right (text.length() - (n + d->lastlen));
-        d->backreflist.clear ();
-        d->backreflist = d->regexp.capturedTexts ();
+        d->lastpos = m.capturedStart();
+        d->lastlen = m.capturedLength();
+        d->prefix = text.left (d->lastpos);
+        d->suffix = text.right (text.length() - (d->lastpos + d->lastlen));
+        d->backreflist = m.capturedTexts();
         //positions of back-references
-        int npos = d->backreflist.count();
-        d->backrefpos = new int[npos];
-        for (int i = 0; i < npos; i++)
-          d->backrefpos[i] = d->regexp.pos (i);
+        int npos = m.lastCapturedIndex();
+        d->backrefpos.resize(npos + 1);
+        for (int i = 0; i <= npos; i++)
+          d->backrefpos[i] = m.capturedStart(i);
       }
-      break;
+    } break;
   };
 
   // whole words only ?
@@ -278,6 +272,7 @@ void cPattern::variablePosition (const QString &varname, int *start, int *len)
     // must be a valid backref
     if (d->type != regexp) return;
     if (number >= (int) d->backreflist.count()) return;
+    if (number < 0) return;
     *start = getBackRefPos (number);
     *len = d->backreflist[number].length();
     return;
