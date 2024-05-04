@@ -49,7 +49,7 @@ set(kmuddy_SRCS
 
 add_executable(kmuddy ${kmuddy_SRCS})
 
-set (KMUDDY_LIBRARIES kmuddycore dialogs KF5::I18n KF5::TextWidgets KF5::XmlGui KF5::IconThemes KF5::Notifications z )
+set (KMUDDY_LIBRARIES kmuddycore dialogs KF6::I18n KF6::TextWidgets KF6::XmlGui KF6::IconThemes KF6::Notifications z )
 if (MXP_FOUND)
   set (KMUDDY_LIBRARIES ${KMUDDY_LIBRARIES} ${MXP_LIBRARIES})
 endif (MXP_FOUND)

@@ -11,8 +11,8 @@ include(KDECMakeSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
 
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Script Multimedia)
-find_package(KF5 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive Notifications)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Qml Multimedia)
+find_package(KF6 REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive Notifications)
 
 find_package(MXP)
 if (MXP_FOUND)
@@ -27,8 +27,6 @@ configure_file(config-mxp.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-mxp.h )
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_definitions(${QT_DEFINITIONS})
-
-#include(ConvenienceLibs.cmake)
 
 # for config-*.h files
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )

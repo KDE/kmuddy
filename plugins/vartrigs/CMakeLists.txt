@@ -18,5 +18,5 @@ INSTALL_NAMESPACE
     "kmuddy"
 )
 
-target_link_libraries(kmuddyvartrigplugin KF5::CoreAddons kmuddycore )
+target_link_libraries(kmuddyvartrigplugin KF6::CoreAddons kmuddycore )
 

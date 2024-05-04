@@ -76,7 +76,7 @@ INSTALL_NAMESPACE
     "kmuddy"
 )
 
-target_link_libraries(kmuddymapperplugin KF5::CoreAddons KF5::WidgetsAddons KF5::Service KF5::Archive kmuddycore )
+target_link_libraries(kmuddymapperplugin KF6::CoreAddons KF6::WidgetsAddons KF6::Service KF6::Archive kmuddycore )
 
 
 ########### install files ###############
