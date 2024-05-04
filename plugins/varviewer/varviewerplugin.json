@@ -11,6 +11,7 @@
         "Description[ka]": "მოგაწოდებთ ინტერფეისს ცვლადის მნიშვნელობების სანახავად",
         "Description[nl]": "Levert een interface voor het bekijken van waarden van variabelen",
         "Description[sl]": "Zagotavlja vmesnik za ogled vrednosti spremenljivk",
+        "Description[sv]": "Tillhandahåller ett gränssnitt för att visa variabelvärden",
         "Description[tr]": "Değişken değerlerini görüntülemek için bir arayüz sağlar",
         "Description[uk]": "Забезпечує роботу інтерфейсу для перегляду значень змінних",
         "Description[x-test]": "xxProvides an interface for viewing variable valuesxx",

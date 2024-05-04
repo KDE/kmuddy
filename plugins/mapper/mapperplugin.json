@@ -11,6 +11,7 @@
         "Description[ka]": "ამსახავის განხორციელება",
         "Description[nl]": "Implementeert een mapper",
         "Description[sl]": "Implementira preslikovalnik",
+        "Description[sv]": "Implementerar karthantering",
         "Description[tr]": "Bir eşlemlendirici gerçekler",
         "Description[uk]": "Реалізує роботу з картами",
         "Description[x-test]": "xxImplements a mapperxx",
@@ -27,6 +28,7 @@
         "Name[ka]": "ამსახავი",
         "Name[nl]": "Mapper",
         "Name[sl]": "Preslikovalnik",
+        "Name[sv]": "Karthantering",
         "Name[tr]": "Eşlemleyici",
         "Name[uk]": "Робота з картами",
         "Name[x-test]": "xxMapperxx"
