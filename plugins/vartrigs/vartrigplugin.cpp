@@ -28,7 +28,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cvartriggerlist.h"
 
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
 #include <KLocalizedString>
 
 K_PLUGIN_CLASS_WITH_JSON(cVarTrigPlugin, "vartrigplugin.json")

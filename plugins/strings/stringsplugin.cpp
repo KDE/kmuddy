@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cmacromanager.h"
 
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
 
 K_PLUGIN_CLASS_WITH_JSON(cStringsPlugin, "stringsplugin.json")
 

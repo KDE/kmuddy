@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/libs ${CMAKE_CURRENT_BINARY_DIR}    )
+include_directories( ${CMAKE_SOURCE_DIR}/libs )
 
 
 ########### next target ###############

@@ -51,7 +51,6 @@ public:
   static QString validate (QString script);
 
 private:
-  bool event(QEvent *e) override;
   class Private;
   Private *d;
 };

@@ -23,7 +23,6 @@
 #include <kactioncollection.h>
 #include <KLocalizedString>
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
 #include <QDockWidget>
 #include <map>
 

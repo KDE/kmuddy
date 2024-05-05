@@ -57,7 +57,7 @@ add_library(kmuddycore SHARED ${kmuddycore_LIB_SRCS})
 
 target_link_libraries(kmuddycore KF6::KCMUtils KF6::CoreAddons KF6::I18n KF6::TextWidgets KF6::XmlGui KF6::KIOCore KF6::Completion Qt6::Qml Qt6::Multimedia)
 
-set_target_properties(kmuddycore PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+set_target_properties(kmuddycore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS kmuddycore DESTINATION ${KDE_INSTALL_LIBDIR} )
 
 
