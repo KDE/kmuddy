@@ -29,5 +29,5 @@ set(dialogs_LIB_SRCS
 
 add_library(dialogs STATIC ${dialogs_LIB_SRCS})
 
-target_link_libraries(dialogs KF6::I18n KF6::XmlGui Qt6::Widgets KF6::TextWidgets KF6::WidgetsAddons)
+target_link_libraries(dialogs KF6::I18n KF6::XmlGui Qt6::Widgets KF6::TextWidgets KF6::Codecs KF6::WidgetsAddons)
 

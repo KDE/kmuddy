@@ -154,7 +154,7 @@ class cFunctionStrpos: public cFunction {
       QString haystack = (*it).asString();
       ++it;
       QString needle = (*it).asString();
-      return cValue (haystack.indexOf (needle));
+      return cValue ((int) haystack.indexOf (needle));
     }
 };
 

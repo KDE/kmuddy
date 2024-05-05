@@ -145,7 +145,7 @@ public:
 
   /** Returns index of this object within the model. */
   QModelIndex itemIndex ();
-signals:
+Q_SIGNALS:
   /** Emitted whenever this object is changed. */
   void changed (cListObject *);
 protected:

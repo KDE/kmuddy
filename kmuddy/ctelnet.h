@@ -21,11 +21,11 @@
 
 
 #include <list>
-#include <string>
 
 #include <config-mxp.h>
 #include "cactionbase.h"
 #include <QObject>
+#include <QByteArray>
 
 struct cTelnetPrivate;
 
@@ -232,7 +232,7 @@ protected:
 
   /** Send out the data. Does not double IACs, this must be done by caller
   if needed. This function is suitable for sending telnet sequences. */
-  bool doSendData (const std::string &data);
+  bool doSendData (const QByteArray &data);
   
   /** processes a telnet command (IAC ...) */
   void processTelnetCommand (const std::string &command);

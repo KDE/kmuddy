@@ -36,7 +36,6 @@
 #include <KLocalizedString>
 #include <kmessagebox.h>
 
-#include <QTextCodec>
 #include <QTcpSocket>
 
 #include <stdio.h>
@@ -51,9 +50,8 @@ struct cTelnetPrivate {
 
   QString encoding;
 
-  QTextCodec *codec;
-  QTextDecoder *inCoder;
-  QTextEncoder *outCoder;
+  QStringDecoder *inCoder;
+  QStringEncoder *outCoder;
 
   /** object that handles MCCP */
   cMCCP *MCCP;
@@ -114,7 +112,6 @@ cTelnet::cTelnet (int sess) : cActionBase ("telnet", sess)
   d->socket = nullptr;
   d->termType = "KMuddy";
   
-  d->codec = nullptr;
   d->inCoder = nullptr;
   d->outCoder = nullptr;
 
@@ -271,12 +268,18 @@ void cTelnet::setupEncoding ()
   delete d->inCoder;
   delete d->outCoder;
 
-  d->codec = QTextCodec::codecForName (d->encoding.toLatin1().data());
-  if (!d->codec) {  // unable to create codec - use latin1
-    d->codec = QTextCodec::codecForName (DEFAULT_ENCODING);
+  const char *enc = d->encoding.toLatin1().data();
+  d->inCoder = new QStringDecoder(enc);
+  d->outCoder = new QStringEncoder(enc);
+  if (!d->inCoder->isValid()) {
+    delete d->inCoder;
+    d->inCoder = new QStringDecoder("ISO-8859-1");
   }
-  d->inCoder = d->codec->makeDecoder ();
-  d->outCoder = d->codec->makeEncoder ();
+  if (!d->outCoder->isValid()) {
+    delete d->outCoder;
+    d->outCoder = new QStringEncoder("ISO-8859-1");
+  }
+
 }
 
 void cTelnet::reset ()
@@ -459,7 +462,7 @@ bool cTelnet::sendData (const QString &data)
   if (d->t_cmdEcho == true && d->t_lpmudstyle)
     d->prependGANewLine = false;
 
-  string outdata = (d->outCoder->fromUnicode(data)).data();
+  QByteArray outdata = d->outCoder->encode(data);
 
   // IAC byte must be doubled
   int len = outdata.length();
@@ -470,7 +473,7 @@ bool cTelnet::sendData (const QString &data)
       break;
     }
   if (gotIAC) {
-    string d;
+    QByteArray d;
     // double IACs
     for (int i = 0; i < len; i++)
     {
@@ -493,7 +496,7 @@ bool cTelnet::newData () {
   return d->newdata;
 }
 
-bool cTelnet::doSendData (const string &data)
+bool cTelnet::doSendData (const QByteArray &data)
 {
   if (!(isConnected()))
     return false;
@@ -502,7 +505,7 @@ bool cTelnet::doSendData (const string &data)
   //write data to socket - it's so complicated because sometimes only a part of data
   //is accepted at a time
   int dataLength = data.length ();
-  const char *dd = data.c_str();
+  const char *dd = data.data();
   int written = 0;
   do {
     int w = d->socket->write (dd + written, dataLength - written);
@@ -527,8 +530,8 @@ void cTelnet::windowSizeChanged (int x, int y)
   if (!d->myOptionState[OPT_NAWS]) return;   //only if we have negotiated this option
   if ((x == d->curX) && (y == d->curY)) return;   // don't spam sizes if we have sent the current one already
 
-  string s;
-  s = TN_IAC;
+  QByteArray s;
+  s += TN_IAC;
   s += TN_SB;
   s += OPT_NAWS;
   unsigned char x1, x2, y1, y2;
@@ -557,8 +560,8 @@ void cTelnet::windowSizeChanged (int x, int y)
 
 void cTelnet::sendTelnetOption (unsigned char type, unsigned char option)
 {
-  string s;
-  s = TN_IAC;
+  QByteArray s;
+  s += TN_IAC;
   s += (unsigned char) type;
   s += (unsigned char) option;
   doSendData (s);
@@ -797,8 +800,8 @@ void cTelnet::processTelnetCommand (const string &command)
             //send anything, as we do not request anything, but there are
             //so many servers out there, that you can never be sure...)
             {
-              string s;
-              s = TN_IAC;
+              QByteArray s;
+              s += TN_IAC;
               s += TN_SB;
               s += OPT_STATUS;
               s += TNSB_IS;
@@ -828,8 +831,8 @@ void cTelnet::processTelnetCommand (const string &command)
               //server wants us to send terminal type; he can send his own type
               //too, but we just ignore it, as we have no use for it...
             {
-              string s;
-              s = TN_IAC;
+              QByteArray s;
+              s += TN_IAC;
               s += TN_SB;
               s += OPT_TERMINAL_TYPE;
               s += TNSB_IS;
@@ -1019,7 +1022,7 @@ printf ("\n");
           cleandata = "\n" + cleandata;
         d->prependGANewLine = false;
         //forward data for further processing
-        QString unicodeData = d->inCoder->toUnicode (cleandata.data(), cleandata.length());
+        QString unicodeData = d->inCoder->decode (QByteArray(cleandata.data(), cleandata.length()));
         invokeEvent ("data-received", sess(), unicodeData);
 
         if (sett && sett->getBool ("prompt-console"))
@@ -1049,7 +1052,7 @@ printf ("\n");
         cleandata = "\n" + cleandata;
       d->prependGANewLine = false;
       //forward data for further processing
-      QString unicodeData = d->inCoder->toUnicode (cleandata.data(), cleandata.length());
+      QString unicodeData = d->inCoder->decode (QByteArray(cleandata.data(), cleandata.length()));
       invokeEvent ("data-received", sess(), unicodeData);
     }
   }

@@ -32,6 +32,7 @@ This class represents one alias.
   */
 
 class KMUDDY_EXPORT cAlias : public cListObject {
+Q_OBJECT
 public:
   ~cAlias () override;
 
