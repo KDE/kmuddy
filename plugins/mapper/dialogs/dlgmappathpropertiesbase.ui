@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>435</width>
-    <height>486</height>
+    <height>537</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="spacing">
     <number>6</number>
    </property>
-   <property name="margin">
+   <property name="margin" stdset="0">
     <number>11</number>
    </property>
    <item>
@@ -30,7 +30,7 @@
        <string>Exits</string>
       </attribute>
       <layout class="QGridLayout">
-       <property name="margin">
+       <property name="margin" stdset="0">
         <number>11</number>
        </property>
        <property name="spacing">
@@ -45,7 +45,7 @@
           <property name="spacing">
            <number>6</number>
           </property>
-          <property name="margin">
+          <property name="margin" stdset="0">
            <number>11</number>
           </property>
           <item>
@@ -58,7 +58,7 @@
           <item>
            <widget class="QRadioButton" name="chkNormal">
             <property name="text">
-             <string>Normal exit</string>
+             <string>Nor&amp;mal exit</string>
             </property>
            </widget>
           </item>
@@ -67,7 +67,7 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="margin" stdset="0">
              <number>0</number>
             </property>
             <item>
@@ -75,7 +75,7 @@
               <property name="spacing">
                <number>6</number>
               </property>
-              <property name="margin">
+              <property name="margin" stdset="0">
                <number>0</number>
               </property>
               <item>
@@ -90,7 +90,7 @@
               </item>
               <item>
                <layout class="QGridLayout">
-                <property name="margin">
+                <property name="margin" stdset="0">
                  <number>0</number>
                 </property>
                 <property name="spacing">
@@ -311,10 +311,10 @@
             <item>
              <spacer name="Spacer6">
               <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+               <enum>Qt::Orientation::Horizontal</enum>
               </property>
               <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
+               <enum>QSizePolicy::Policy::Expanding</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
@@ -329,7 +329,7 @@
               <property name="spacing">
                <number>6</number>
               </property>
-              <property name="margin">
+              <property name="margin" stdset="0">
                <number>0</number>
               </property>
               <item>
@@ -344,7 +344,7 @@
               </item>
               <item>
                <layout class="QGridLayout">
-                <property name="margin">
+                <property name="margin" stdset="0">
                  <number>0</number>
                 </property>
                 <property name="spacing">
@@ -553,10 +553,10 @@
             <item>
              <spacer name="Spacer5">
               <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+               <enum>Qt::Orientation::Horizontal</enum>
               </property>
               <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
+               <enum>QSizePolicy::Policy::Expanding</enum>
               </property>
               <property name="sizeHint" stdset="0">
                <size>
@@ -571,7 +571,7 @@
           <item>
            <widget class="QRadioButton" name="chkSpecial">
             <property name="text">
-             <string>Special Exit</string>
+             <string>Spec&amp;ial Exit</string>
             </property>
            </widget>
           </item>
@@ -590,7 +590,7 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="margin" stdset="0">
              <number>0</number>
             </property>
             <item>
@@ -613,7 +613,7 @@
             <property name="spacing">
              <number>6</number>
             </property>
-            <property name="margin">
+            <property name="margin" stdset="0">
              <number>0</number>
             </property>
             <item>
@@ -644,7 +644,7 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="margin" stdset="0">
         <number>11</number>
        </property>
        <item>
@@ -656,7 +656,7 @@
           <property name="spacing">
            <number>6</number>
           </property>
-          <property name="margin">
+          <property name="margin" stdset="0">
            <number>11</number>
           </property>
           <item>
@@ -697,7 +697,7 @@
           <property name="spacing">
            <number>6</number>
           </property>
-          <property name="margin">
+          <property name="margin" stdset="0">
            <number>11</number>
           </property>
           <item>
@@ -732,10 +732,10 @@
        <item>
         <spacer name="Spacer12">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
+          <enum>QSizePolicy::Policy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -754,16 +754,16 @@
      <property name="spacing">
       <number>6</number>
      </property>
-     <property name="margin">
+     <property name="margin" stdset="0">
       <number>0</number>
      </property>
      <item>
       <spacer name="Spacer1">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
+        <enum>QSizePolicy::Policy::Expanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -791,8 +791,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
- </customwidgets>
  <resources/>
  <connections>
   <connection>
@@ -1196,4 +1194,28 @@
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>slotSrcUp()</slot>
+  <slot>slotDestSW()</slot>
+  <slot>slotDestDown()</slot>
+  <slot>slotDestW()</slot>
+  <slot>slotDestE()</slot>
+  <slot>slotDestNE()</slot>
+  <slot>slotSrcW()</slot>
+  <slot>slotDestN()</slot>
+  <slot>slotSrcNE()</slot>
+  <slot>slotSrcS()</slot>
+  <slot>slotSrcSE()</slot>
+  <slot>slotSrcDown()</slot>
+  <slot>slotSrcSW()</slot>
+  <slot>slotSrcNW()</slot>
+  <slot>slotSrcN()</slot>
+  <slot>slotSrcE()</slot>
+  <slot>slotExitTypeChange()</slot>
+  <slot>slotDestS()</slot>
+  <slot>slotDestSE()</slot>
+  <slot>slotDestNW()</slot>
+  <slot>slotDestUp()</slot>
+  <slot>slotDirectionChange()</slot>
+ </slots>
 </ui>
