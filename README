@@ -16,14 +16,12 @@ and MSP (MUD Sound Protocol) protocols.
 
 KMuddy homepage is located at http://www.kmuddy.com/, KMuddy can be downloaded
 from there. Alternately, KMuddy can be obtained from the KDE git repository using
-git clone git://anongit.kde.org/kmuddy
+git clone git@invent.kde.org:games/kmuddy
 
 3. Contact
 ----------
 
-You can contact me either by e-mail at kmuddy@kmuddy.com, or you can register
-at the KMuddy forums (http://www.kmuddy.com/mercuryboard) and post your questions, ideas or
-anything similar there.
+You can contact me by e-mail at kmuddy@kmuddy.com
 
 / Tomas Mecir
   KMuddy developer and maintainer
