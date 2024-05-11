@@ -61,7 +61,7 @@ DlgMapRoomProperties::DlgMapRoomProperties(CMapManager *manager,CMapRoom *roomEl
 
 	// Get the extension panels from the plugins
 	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(ROOM,(CMapElement*)roomElement,(QWidget *)RoomsTab);
-	foreach (CMapPropertiesPaneBase *pane, paneList)
+	for (CMapPropertiesPaneBase *pane : paneList)
 	{
 		RoomsTab->addTab(pane,pane->getTitle());
 		connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));
@@ -77,7 +77,7 @@ void DlgMapRoomProperties::regenerateExits(void)
 {
   lstPaths->clear();
   QTreeWidgetItem *item = nullptr;
-  foreach (CMapPath *path, *room->getPathList())
+  for (CMapPath *path : *room->getPathList())
   {
     QString direction = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
     qDebug() << "Path : " << path->getSrcDir() << "," << path->getSpecialCmd() << "," << direction;	
@@ -112,7 +112,7 @@ void DlgMapRoomProperties::slotAccept()
   command->compare("Contents",*room->getContentsList(),newContents);
 
   QList<CMapPath*> wipe;
-  foreach (CMapPath *path, *room->getPathList())
+  for (CMapPath *path : *room->getPathList())
   {
     QString name = mapManager->directionToText(path->getSrcDir(),path->getSpecialCmd());
 
@@ -124,7 +124,7 @@ void DlgMapRoomProperties::slotAccept()
     if (!found)
       wipe.push_back(path);
   }
-  foreach (CMapPath *path, wipe)
+  for (CMapPath *path : wipe)
     mapManager->deleteElement(path);
 
   mapManager->addCommand(command);
@@ -279,7 +279,7 @@ void DlgMapRoomProperties::slotEditItemName(const QString & name)
 void DlgMapRoomProperties::slotPathDelete()
 {
   QList<QTreeWidgetItem *> sel = lstPaths->selectedItems();
-  foreach (QTreeWidgetItem *item, sel)
+  for (QTreeWidgetItem *item : sel)
     delete item;
 }
 

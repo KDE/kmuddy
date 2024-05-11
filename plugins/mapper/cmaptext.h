@@ -25,7 +25,6 @@
   */
 
 class QString;
-class QStringList;
 class QColor;
 class QFont;
 class QPoint;

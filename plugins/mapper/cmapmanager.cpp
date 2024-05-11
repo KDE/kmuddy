@@ -252,7 +252,7 @@ void CMapManager::initPlugins()
   for (CMapPluginBase *plugin : pluginList)
   {
     qDebug() << "Tools in plugin : " << plugin->getToolList()->count();
-    foreach (CMapToolBase *tool, *plugin->getToolList())
+    for (CMapToolBase *tool : *plugin->getToolList())
     {
       toolList.push_back(tool);
     }
@@ -358,7 +358,7 @@ void CMapManager::setPropertiesAllViews(QCursor *cursor,bool mouseTracking)
 void CMapManager::unselectElements(CMapLevel *level)
 {
   QList<CMapElement *> lst = level->getAllElements();
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
   {
     element->setSelected(false);
     element->setEditMode(false);
@@ -501,7 +501,7 @@ CMapElement *CMapManager::findElement(KConfigGroup properties)
   int x = properties.readEntry("X",-5);
   int y = properties.readEntry("Y",-5);
 
-  foreach (CMapText *text, *level->getTextList())
+  for (CMapText *text : *level->getTextList())
     if ((text->getX()==x) && (text->getY()==y))
       return text;
 
@@ -538,10 +538,10 @@ void CMapManager::eraseZone(CMapZone *zone)
   QList<CMapLevel *> levels;
   for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
     levels.append(zone->getLevel(idx));
-  foreach (CMapLevel *level, levels)
+  for (CMapLevel *level : levels)
   {
     // TODO: this seems to not delete things correctly
-    foreach (CMapRoom *room, *level->getRoomList())
+    for (CMapRoom *room : *level->getRoomList())
     {        
       room->getPathList()->clear();
       room->getConnectingPathList()->clear();
@@ -711,7 +711,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
   if (!srcLevel || !destLevel)
     return nullptr;
 
-  foreach (room, *srcLevel->getRoomList())
+  for (room : *srcLevel->getRoomList())
   {
     if (room->getLowPos() == srcPos)
     {
@@ -720,7 +720,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
     }
   }
 
-  foreach (room, *destLevel->getRoomList())
+  for (room : *destLevel->getRoomList())
   {
     if (room->getLowPos()  == destPos)
     {
@@ -780,7 +780,7 @@ CMapPath *CMapManager::createPath(CMapRoom *srcRoom,CMapRoom *destRoom)
 
   QList<CMapElement *> *elements=command->getElements();
 
-  foreach (CMapElement *el, *elements)
+  for (CMapElement *el : *elements)
     if (el->getElementType()==PATH)
       result = (CMapPath *)el;
 
@@ -823,7 +823,7 @@ CMapPath *CMapManager::createPath (CMapRoom *srcRoom,directionTyp srcDir,CMapRoo
   }
 
   QList<CMapElement *> *elements=command->getElements();
-  foreach (CMapElement *el, *elements)
+  for (CMapElement *el : *elements)
     if (el->getElementType()==PATH)
       result = (CMapPath *)el;
 
@@ -838,7 +838,7 @@ CMapRoom *CMapManager::findFirstRoom(CMapRoom *existingRoom)
   for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
   {
     CMapLevel *level = zone->getLevel(idx);
-    foreach (CMapRoom *room, *level->getRoomList())
+    for (CMapRoom *room : *level->getRoomList())
       if (room!=existingRoom)
         return room;
   }
@@ -871,7 +871,7 @@ bool CMapManager::validMoveCmd(QString dirCmd)
       return true;
   
   if (currentRoom)
-    foreach (CMapPath *path, *currentRoom->getPathList())
+    for (CMapPath *path : *currentRoom->getPathList())
       if (path->getSpecialExit() && (path->getSpecialCmd()==dirCmd))
         return true;
 
@@ -909,14 +909,14 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
 
     QList<CMapPath *> wipePaths;
     // Delete the paths for the room
-    foreach (CMapPath *path, *room->getPathList())
+    for (CMapPath *path : *room->getPathList())
       if (!wipePaths.contains(path))
         wipePaths.push_back(path);
     // Delete any paths connecting with this room
-    foreach (CMapPath *path, *room->getConnectingPathList())
+    for (CMapPath *path : *room->getConnectingPathList())
       if (!wipePaths.contains(path))
         wipePaths.push_back(path);
-    foreach (CMapPath *path, wipePaths)
+    for (CMapPath *path : wipePaths)
       deleteElementWithoutGroup(path,false);
   }
 
@@ -927,7 +927,7 @@ void CMapManager::deleteElement(CMapElement *element,bool delOpsite)
     QList<CMapLevel *> levels;
     for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
       levels.append(zone->getLevel(idx));
-    foreach (CMapLevel *level, levels)
+    for (CMapLevel *level : levels)
       deleteLevel(level);
   }
 
@@ -1262,7 +1262,7 @@ void CMapManager::getCounts(int *levels,int *rooms,int *paths,int *labels)
   {
     CMapLevel *level = zone->getLevel(idx);
 
-    foreach (CMapRoom *room, *level->getRoomList())
+    for (CMapRoom *room : *level->getRoomList())
       *paths += room->getPathList()->count();
 
     *rooms += level->getRoomList()->count();
@@ -1456,7 +1456,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   for (unsigned int idx = 0; idx < getZone()->levelCount(); ++idx)
   {
     CMapLevel *level = getZone()->getLevel(idx);
-    foreach (CMapRoom *room, *level->getRoomList())
+    for (CMapRoom *room : *level->getRoomList())
       room->setMoveTime(-1);
   }
 
@@ -1475,7 +1475,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
     foundRoom = roomsToVisit.dequeue();
 
     // for all neighbours of foundRoom
-    foreach (path, *foundRoom->getPathList())
+    for (path : *foundRoom->getPathList())
     {
       room = path->getDestRoom();
 
@@ -1512,7 +1512,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 
     // Find the room with the shortest time as this is the room we
     // should be moving to.
-    foreach (path, *destRoom->getConnectingPathList())
+    for (path : *destRoom->getConnectingPathList())
     {
       if (time == -1 || (path->getSrcRoom()->getMoveTime()<=time && path->getSrcRoom()->getMoveTime()!=-1))
       {

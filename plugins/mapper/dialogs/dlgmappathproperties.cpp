@@ -73,7 +73,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,KConfigGroup pat
 
 	// Get the extension panels from the plugins
 	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,nullptr,(QWidget *)tabPaths);
-	foreach (CMapPropertiesPaneBase *pane, paneList)
+	for (CMapPropertiesPaneBase *pane : paneList)
 	{
 		tabPaths->addTab(pane,pane->getTitle());
 		connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));
@@ -121,7 +121,7 @@ DlgMapPathProperties::DlgMapPathProperties(CMapManager *manager,CMapPath *pathEl
 
 	// Get the extension panels from the plugins
 	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(PATH,(CMapElement*)pathElement,(QWidget *)tabPaths);
-	foreach (CMapPropertiesPaneBase *pane, paneList)
+	for (CMapPropertiesPaneBase *pane : paneList)
 	{
 		tabPaths->addTab(pane,pane->getTitle());
 		connect(cmdOK,SIGNAL(clicked()),pane,SLOT(slotOk()));

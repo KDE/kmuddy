@@ -47,7 +47,7 @@ CMapPath::CMapPath(CMapManager *manager,CMapRoom *srcRoom,directionTyp srcDir,CM
 
   // Check to see if there is a a path in the opsite directon, if so make this a two way path
   bool found = false;
-  foreach (CMapPath *path, *destRoom->getPathList())
+  for (CMapPath *path : *destRoom->getPathList())
   {
     // FIXME_jp : Fix this for multiple special paths between the same rooms with different cmd's
     if (path->getDestRoom()==srcRoom &&

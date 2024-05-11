@@ -74,7 +74,7 @@ void CMapCmdMovePlayer::redo()
 
   int x = 0, y = 0;
   // Check to see if there is a path in the opposite direction that we should be using
-  foreach (CMapPath *path2, *srcRoom->getConnectingPathList())
+  for (CMapPath *path2 : *srcRoom->getConnectingPathList())
   {
     if (path2->getDestDir() == m_direction)
     {

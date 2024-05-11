@@ -161,7 +161,7 @@ void cPluginManager::eventChunkHandler (QString event, int session, cTextChunk *
 void cPluginManager::findPlugins ()
 {
   pluginInfo.clear ();
-  QVector< KPluginMetaData > pi = KPluginMetaData::findPlugins ("kmuddy");
+  QVector< KPluginMetaData > pi = KPluginMetaData::findPlugins ("kmuddy-plugins");
   for (auto pinfo : pi) {
     QString name = pinfo.name();
     qDebug() << "Found plugin: " << name;

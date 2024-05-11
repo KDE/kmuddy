@@ -50,12 +50,12 @@ void CMapCmdMoveMap::moveMap(QPoint inc)
   {
     CMapLevel *level = m_manager->getZone()->getLevel(idx);
 
-    foreach (CMapElement *el, level->getAllElements())
+    for (CMapElement *el : level->getAllElements())
     {
       el->moveBy(inc);
       CMapRoom *room = dynamic_cast<CMapRoom *>(el);
       if (room) {
-        foreach (CMapPath *path, *room->getPathList())
+        for (CMapPath *path : *room->getPathList())
           path->moveBy(inc);
       }
     }

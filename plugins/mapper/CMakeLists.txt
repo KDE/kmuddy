@@ -73,7 +73,7 @@ kcoreaddons_add_plugin(kmuddymapperplugin
 SOURCES
 ${kmuddymapper_SRCS}
 INSTALL_NAMESPACE
-    "kmuddy"
+    "kmuddy-plugins"
 )
 
 target_link_libraries(kmuddymapperplugin KF6::CoreAddons KF6::WidgetsAddons KF6::Service KF6::Archive kmuddycore )

@@ -70,14 +70,14 @@ CMapRoom::~CMapRoom()
   // Delete the paths for the room
   // First make a copy, as deleting rooms alters this list
   QList<CMapPath *> paths = pathList;
-  foreach (CMapPath *path, paths) {
+  for (CMapPath *path : paths) {
     path->setOpsitePath(nullptr);  // prevents a crash
     delete path;
   }
 
   // Same for paths connecting with this room
   paths = connectingPaths;
-  foreach (CMapPath *path, paths) {
+  for (CMapPath *path : paths) {
     path->setOpsitePath(nullptr);  // prevents a crash
     delete path;
   }
@@ -103,11 +103,11 @@ void CMapRoom::resize(QPoint offset,int resizeId)
 {
   CMapElement::resize(offset,resizeId);
 
-  foreach (CMapPath *path, pathList)
+  for (CMapPath *path : pathList)
 //    if (!path->getSelected())
       path->setCords();
 
-  foreach (CMapPath *path, connectingPaths)
+  for (CMapPath *path : connectingPaths)
 //    if (!path->getSelected())
       path->setCords();
 }
@@ -184,7 +184,7 @@ void CMapRoom::paint(QPainter *p,CMapZone *currentZone)
   }
 
   // Draw exits
-  foreach (CMapPath *path, pathList)
+  for (CMapPath *path : pathList)
   {
     path->paint(p, currentZone);
     if (path->getSrcDir() == UP)
@@ -239,7 +239,7 @@ void CMapRoom::lowerPaint(QPainter *p,CMapZone *z)
 	p->setBrush(brush);
 	p->drawRect(x1,y1,getWidth()-2,getHeight()-2);
 
-        foreach (CMapPath *path, *getPathList())
+        for (CMapPath *path : *getPathList())
           path->lowerPaint(p, z);
 }
 
@@ -256,7 +256,7 @@ void CMapRoom::higherPaint(QPainter *p,CMapZone *z)
 	p->setBrush(brush);
 	p->drawRect(x1,y1,getWidth()-2,getHeight()-2);
 
-        foreach (CMapPath *path, *getPathList())
+        for (CMapPath *path : *getPathList())
           path->higherPaint(p, z);
 }
 
@@ -298,32 +298,12 @@ void CMapRoom::addPath (CMapPath *path)
 
 CMapPath *CMapRoom::getPathDirection (directionTyp dir,QString specialCmd)
 {
-	CMapPath *path;
-	if (dir!=SPECIAL)
-	{
-		foreach (path, pathList)
-		{
-			if (path->getSrcDir()==dir)
-			{
-				return path;
-			}
-		}
-	}
-	else
-	{
-		foreach (path, pathList)
-		{
-			if (path->getSrcDir()==dir)
-			{
-				if (path->getSpecialCmd()==specialCmd)
-				{
-					return path;
-				}
-			}
-		}
-	}
-
-	return nullptr;
+  for (CMapPath *path : pathList) {
+    if (path->getSrcDir() != dir) continue;
+    if (dir != SPECIAL) return path;
+    if (path->getSpecialCmd() == specialCmd) return path;
+  }
+  return nullptr;
 }
 
 CMapRoom *CMapRoom::getPathTarget(directionTyp dir,QString specialCmd)
@@ -598,10 +578,10 @@ void CMapRoom::moveBy(QPoint offset)
 {
 	CMapElement::moveBy(offset);
 
-	foreach (CMapPath *path, pathList)
+	for (CMapPath *path : pathList)
 		path->setCords();
 
-	foreach (CMapPath *path, connectingPaths)
+	for (CMapPath *path : connectingPaths)
 		path->setCords();
 }
 

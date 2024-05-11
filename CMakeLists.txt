@@ -19,7 +19,7 @@ include(FeatureSummary)
 include(ECMInstallIcons)
 
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Gui Widgets Qml Multimedia)
-find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive Codecs Notifications)
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Config CoreAddons WidgetsAddons I18n KIO KCMUtils TextWidgets XmlGui Service IconThemes Archive Codecs Notifications StatusNotifierItem)
 
 find_package(MXP)
 if (MXP_FOUND)

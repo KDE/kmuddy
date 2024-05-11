@@ -422,7 +422,7 @@ void CMapView::changed()
 
   // Calc the size the widget should be
   QList<CMapElement *> lst = level->getAllElements();
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
   {
     if (element->getHighX()>size.x()) size.setX(element->getHighX());
     if (element->getHighY()>size.y()) size.setY(element->getHighY());
@@ -431,7 +431,7 @@ void CMapView::changed()
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
     lst = upperLevel->getAllElements();
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
     {
       if (element->getHighX()>size.x()) size.setX(element->getHighX());
       if (element->getHighY()>size.y()) size.setY(element->getHighY());
@@ -441,7 +441,7 @@ void CMapView::changed()
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
   {
     lst = lowerLevel->getAllElements();
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
     {
       if (element->getHighX()>size.x()) size.setX(element->getHighX());
       if (element->getHighY()>size.y()) size.setY(element->getHighY());

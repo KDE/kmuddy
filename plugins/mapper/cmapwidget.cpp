@@ -154,38 +154,38 @@ void CMapWidget::drawElements(QPainter *p)
   CMapLevel *upperLevel = level->getNextLevel();
 
   // Mark all paths as undrawn
-  foreach (CMapRoom *room, *level->getRoomList())
-    foreach (CMapPath *path, *room->getPathList())
+  for (CMapRoom *room : *level->getRoomList())
+    for (CMapPath *path : *room->getPathList())
       path->setDone(false);
 
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
   {
-    foreach (CMapRoom *room, *lowerLevel->getRoomList())
-      foreach (CMapPath *path, *room->getPathList())
+    for (CMapRoom *room : *lowerLevel->getRoomList())
+      for (CMapPath *path : *room->getPathList())
         path->setDone(false);
   }
 
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
-    foreach (CMapRoom *room, *upperLevel->getRoomList())
-      foreach (CMapPath *path, *room->getPathList())
+    for (CMapRoom *room : *upperLevel->getRoomList())
+      for (CMapPath *path : *room->getPathList())
         path->setDone(false);
   }
 
   // Draw the upper map elements
   if (lowerLevel && mapManager->getMapData()->showLowerLevel)
-    foreach (CMapElement *element, lowerLevel->getAllElements())
+    for (CMapElement *element : lowerLevel->getAllElements())
       element->lowerPaint(p, viewWidget->getCurrentlyViewedZone());
 
   // Paint the map elements of the current map
-  foreach (CMapElement *element, level->getAllElements())
+  for (CMapElement *element : level->getAllElements())
     if (element->getDoPaint())
       element->paint(p, viewWidget->getCurrentlyViewedZone());
 
   // Draw the upper map elements
   if (upperLevel && mapManager->getMapData()->showUpperLevel)
   {
-    foreach (CMapElement *element, upperLevel->getAllElements())
+    for (CMapElement *element : upperLevel->getAllElements())
       element->higherPaint(p, viewWidget->getCurrentlyViewedZone());
   }
 }
@@ -336,7 +336,7 @@ void CMapWidget::leaveEvent(QEvent *)
 }
 
 /** This is called when the mouse enters the widget */
-void CMapWidget::enterEvent(QEvent *)
+void CMapWidget::enterEvent(QEnterEvent *)
 {
 	// Send the mouse event to the current tool
 	mapManager->getCurrentTool()->mouseEnterEvent();

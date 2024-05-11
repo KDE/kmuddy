@@ -116,7 +116,7 @@ void CMapClipboard::slotCopy()
     // Copy all the elements except for paths that are selected
     CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
     QList<CMapElement *> lst = level->getAllElements();
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
     {
       if (!element->getSelected()) continue;
       group++;
@@ -149,9 +149,9 @@ void CMapClipboard::slotCopy()
     {
       CMapLevel *level = m_mapManager->getZone()->getLevel(idx);
 
-      foreach (CMapRoom *room, *level->getRoomList())
+      for (CMapRoom *room : *level->getRoomList())
       {
-        foreach (CMapPath *path, *room->getPathList())
+        for (CMapPath *path : *room->getPathList())
         {
           if ((path->getSrcRoom()->getSelected() || path->getSrcRoom()->getZone()->getSelected()) &&
               (path->getDestRoom()->getSelected() || path->getDestRoom()->getZone()->getSelected()))
@@ -165,7 +165,7 @@ void CMapClipboard::slotCopy()
     // Copy all the linked text elements
     int linkGroup =0;
 
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
     {
       if (element->getSelected() && element->getElementType()==TEXT)
       {
@@ -305,7 +305,7 @@ void CMapClipboard::pasteElements()
 			// Check the created elements to see if a zone was created
 			QList<CMapElement *> *elements = command->getElements();
 
-			foreach (CMapElement *el, *elements)
+			for (CMapElement *el : *elements)
 			{
 				// Update the elements properties
 				CMapCmdElementProperties *cmd = new CMapCmdElementProperties(m_mapManager,i18n("Update Properties"),el);
@@ -447,7 +447,7 @@ void CMapClipboard::pasteLinks()
 				// Check the created elements to see if a zone was created
 				QList<CMapElement *> *elements=command->getElements();
 
-				foreach (CMapElement *el, *elements)
+				for (CMapElement *el : *elements)
 				{
 					// Update the elements properties
 					CMapCmdElementProperties *cmd = new CMapCmdElementProperties(m_mapManager,i18n("Update Properties"),el);
@@ -472,7 +472,7 @@ void CMapClipboard::slotDelete(void)
     if (level)
     {
       QList<CMapElement *> lst = level->getAllElements();
-      foreach (CMapElement *el, lst)
+      for (CMapElement *el : lst)
         if (el->getSelected())
           m_mapManager->deleteElement(el);
     }
@@ -488,7 +488,7 @@ void CMapClipboard::slotSelectAll(void)
   {
     CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
     QList<CMapElement *> lst = level->getAllElements();
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
       element->setSelected(true);
 
     m_mapManager->levelChanged(level);
@@ -513,7 +513,7 @@ void CMapClipboard::slotInvertSelection(void)
   CMapLevel *level = m_mapManager->getActiveView()->getCurrentlyViewedLevel();
 
   QList<CMapElement *> lst = level->getAllElements();
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
     element->setSelected(!element->getSelected());
 
   m_mapManager->levelChanged(m_mapManager->getActiveView()->getCurrentlyViewedLevel());

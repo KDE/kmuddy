@@ -9,7 +9,7 @@ kcoreaddons_add_plugin(kmuddytestplugin
 SOURCES
 ${kmuddytestplugin_SRCS}
 INSTALL_NAMESPACE
-    "kmuddy"
+    "kmuddy-plugins"
 )
 
 target_link_libraries(kmuddytestplugin KF6::CoreAddons kmuddycore )

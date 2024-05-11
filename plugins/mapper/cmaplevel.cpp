@@ -48,14 +48,14 @@ CMapLevel::~CMapLevel()
   getZone()->removeLevel(this);
 
   QList<CMapElement *> lst = getAllElements();
-  foreach (CMapElement *el, lst)
+  for (CMapElement *el : lst)
     delete el;
 }
 
 /** Used to find a room with the ID */
 CMapRoom *CMapLevel::findRoom(unsigned int id)
 {
-  foreach (CMapRoom *room, m_roomList)
+  for (CMapRoom *room : m_roomList)
     if (room->getRoomID() == id)
       return room;
   return nullptr;
@@ -64,7 +64,7 @@ CMapRoom *CMapLevel::findRoom(unsigned int id)
 /** Used to find a room with the ID */
 CMapText *CMapLevel::findText(unsigned int id)
 {
-  foreach (CMapText *text, m_textList)
+  for (CMapText *text : m_textList)
     if (text->getTextID() == id)
       return text;
   return nullptr;
@@ -105,9 +105,9 @@ QList<CMapElement *> CMapLevel::getAllElements()
 {
   QList<CMapElement *> lst;
 
-  foreach (CMapRoom *room, m_roomList)
+  for (CMapRoom *room : m_roomList)
     lst.push_back(room);
-  foreach (CMapText *text, m_textList)
+  for (CMapText *text : m_textList)
     lst.push_back(text);
 
   return lst;
@@ -139,7 +139,7 @@ QList<CMapElement *> CMapLevel::elementsUnderMouse(QPoint mousePos)
 {
   QList<CMapElement *> opts = getAllElements();
   QList<CMapElement *> res;
-  foreach (CMapElement *el, opts)
+  for (CMapElement *el : opts)
     if (el->mouseInElement(mousePos))
       res.push_back(el);
 
@@ -150,7 +150,7 @@ CMapElement *CMapLevel::findElementAt(QPoint pos, int type)
 {
   QList<CMapElement *> lst = elementsUnderMouse(pos);
   if (lst.empty()) return nullptr;
-  foreach (CMapElement *el, lst)
+  for (CMapElement *el : lst)
   {
     if ((type >= 0) && (el->getElementType() != type)) continue;
     return el;
@@ -160,7 +160,7 @@ CMapElement *CMapLevel::findElementAt(QPoint pos, int type)
 
 CMapRoom *CMapLevel::findRoomAt(QPoint pos)
 {
-  foreach (CMapRoom *room, m_roomList)
+  for (CMapRoom *room : m_roomList)
     if (room->mouseInElement(pos))
       return room;
 

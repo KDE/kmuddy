@@ -30,7 +30,7 @@ kcoreaddons_add_plugin(kmuddyconverterplugin
 SOURCES
 ${kmuddyconverterplugin_SRCS}
 INSTALL_NAMESPACE
-    "kmuddy"
+    "kmuddy-plugins"
 )
 
 target_link_libraries(kmuddyconverterplugin KF6::CoreAddons kmuddycore )

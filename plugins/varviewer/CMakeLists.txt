@@ -13,7 +13,7 @@ kcoreaddons_add_plugin(kmuddyvarviewerplugin
 SOURCES
 ${kmuddyvarviewerplugin_SRCS}
 INSTALL_NAMESPACE
-    "kmuddy"
+    "kmuddy-plugins"
 )
 
 target_link_libraries(kmuddyvarviewerplugin KF6::CoreAddons kmuddycore )

@@ -61,7 +61,6 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QIcon>
 #include <QKeyEvent>
 #include <QMenu>
@@ -241,30 +240,30 @@ void KMuddy::prepareObjects ()
   QAction *stdconnect = new QAction (this);
   stdconnect->setText (i18n ("&Connect..."));
   stdconnect->setIcon (QIcon::fromTheme ("network-connect"));
-  stdconnect->setShortcut (KEY_CTRL+Qt::Key_N);
+  stdconnect->setShortcut (KEY_CTRL | Qt::Key_N);
   connect (stdconnect, &QAction::triggered, this, &KMuddy::showAndHandleConnectDialog);
   acol->addAction ("Connect", stdconnect);
 
   QAction *qconnect = new QAction (this);
   qconnect->setText (i18n ("&QuickConnect..."));
   qconnect->setIcon (QIcon::fromTheme ("network-connect"));
-  qconnect->setShortcut (KEY_CTRL+Qt::Key_O);
+  qconnect->setShortcut (KEY_CTRL | Qt::Key_O);
   connect (qconnect, &QAction::triggered, this, &KMuddy::showAndHandleQuickConnectDialog);
   acol->addAction ("QuickConnect", qconnect);
   QAction *dodisconnect = new QAction (this);
   dodisconnect->setText (i18n ("&Disconnect"));
   dodisconnect->setIcon (QIcon::fromTheme ("network-disconnect"));
-  dodisconnect->setShortcut (KEY_CTRL+Qt::Key_D);
+  dodisconnect->setShortcut (KEY_CTRL | Qt::Key_D);
   connect (dodisconnect, &QAction::triggered, this, &KMuddy::doDisconnect);
   acol->addAction ("Disconnect", dodisconnect);
   QAction *reconnect = new QAction (this);
   reconnect->setText (i18n ("&Reconnect"));
-  reconnect->setShortcut (KEY_CTRL+Qt::Key_R);
+  reconnect->setShortcut (KEY_CTRL | Qt::Key_R);
   connect (reconnect, &QAction::triggered, this, &KMuddy::doReconnect);
   acol->addAction ("Reconnect", reconnect);
   QAction *closetab = new QAction (this);
   closetab->setText (i18n ("Close &tab"));
-  closetab->setShortcut (KEY_CTRL+Qt::Key_W);
+  closetab->setShortcut (KEY_CTRL | Qt::Key_W);
   connect (closetab, &QAction::triggered, this, &KMuddy::closeTab);
   acol->addAction ("CloseTab", closetab);
   closetab->setEnabled (false);
@@ -290,13 +289,13 @@ void KMuddy::prepareObjects ()
   QAction *clipcopy = new QAction (this);
   clipcopy->setText (i18n ("Copy &Selection"));
   clipcopy->setIcon (QIcon::fromTheme ("edit-copy"));
-  clipcopy->setShortcut (KEY_CTRL+Qt::Key_C);
+  clipcopy->setShortcut (KEY_CTRL | Qt::Key_C);
   connect (clipcopy, &QAction::triggered, this, &KMuddy::addSelectionToClipboard);
   acol->addAction ("ClipboardCopy", clipcopy);
   KToggleAction *parsing = new KToggleAction (this);
   parsing->setText (i18n ("Enable command &parsing"));
   parsing->setIcon (QIcon::fromTheme ("go-jump"));
-  parsing->setShortcut (KEY_CTRL+KEY_SHIFT+Qt::Key_P);
+  parsing->setShortcut (KEY_CTRL | KEY_SHIFT | Qt::Key_P);
   connect (parsing, &QAction::triggered, this, &KMuddy::setParsing);
   parsing->setChecked (true);  //enabled by default
   acol->addAction ("EnableParsing", parsing);
@@ -309,7 +308,7 @@ void KMuddy::prepareObjects ()
   //View
   QAction *showmultiline = cMultiLineInput::self()->dialog()->toggleViewAction ();
   showmultiline->setIcon (QIcon::fromTheme ("format-justify-left"));
-  showmultiline->setShortcut (KEY_CTRL+KEY_SHIFT+Qt::Key_M);
+  showmultiline->setShortcut (KEY_CTRL | KEY_SHIFT | Qt::Key_M);
   acol->addAction ("ShowMultiLine", showmultiline);
   KToggleAction *showgaugebar = new KToggleAction (this);
   showgaugebar->setText (i18n ("Show &gaugebar"));
@@ -326,7 +325,7 @@ void KMuddy::prepareObjects ()
   //Profile
   QAction *objects = new QAction (this);
   objects->setText (i18n ("&Object Editor..."));
-  objects->setShortcut (KEY_CTRL+KEY_ALT+Qt::Key_O);
+  objects->setShortcut (KEY_CTRL | KEY_ALT | Qt::Key_O);
   connect (objects, &QAction::triggered, this, &KMuddy::showObjectsDialog);
   acol->addAction ("Objects", objects);
   QAction *windows = new QAction (this);
@@ -335,13 +334,13 @@ void KMuddy::prepareObjects ()
   acol->addAction ("OutputWindows", windows);
   KToggleAction *switchaliases = new KToggleAction (this);
   switchaliases->setText (i18n ("A&liases enabled"));
-  switchaliases->setShortcut (KEY_CTRL+KEY_SHIFT+Qt::Key_A);
+  switchaliases->setShortcut (KEY_CTRL | KEY_SHIFT | Qt::Key_A);
   connect (switchaliases, &QAction::triggered, this, &KMuddy::switchAliases);
   switchaliases->setChecked (true);
   acol->addAction ("EnableAliases", switchaliases);
   KToggleAction *switchtriggers = new KToggleAction (this);
   switchtriggers->setText (i18n ("Tri&ggers enabled"));
-  switchtriggers->setShortcut (KEY_CTRL+KEY_SHIFT+Qt::Key_T);
+  switchtriggers->setShortcut (KEY_CTRL | KEY_SHIFT | Qt::Key_T);
   connect (switchtriggers, &QAction::triggered, this, &KMuddy::switchTriggers);
   switchtriggers->setChecked (true);
   acol->addAction ("EnableTriggers", switchtriggers);
@@ -362,7 +361,7 @@ void KMuddy::prepareObjects ()
   acol->addAction ("ConnPrefs", connprefs);
   QAction *save = new QAction (this);
   save->setText (i18n ("&Save Profile"));
-  save->setShortcut (KEY_CTRL+Qt::Key_S);
+  save->setShortcut (KEY_CTRL | Qt::Key_S);
   connect (save, &QAction::triggered, this, &KMuddy::saveProfile);
   acol->addAction ("SaveProfile", save);
 
@@ -403,7 +402,7 @@ void KMuddy::prepareObjects ()
   KToggleAction *fullscreenmode = new KToggleAction (this);
   fullscreenmode->setText (i18n ("F&ull screen mode"));
   fullscreenmode->setIcon (QIcon::fromTheme ("view-fullscreen"));
-  fullscreenmode->setShortcut (KEY_CTRL+KEY_SHIFT+Qt::Key_F);
+  fullscreenmode->setShortcut (KEY_CTRL | KEY_SHIFT | Qt::Key_F);
   connect (fullscreenmode, &KToggleAction::toggled, this, &KMuddy::setFullScreen);
   acol->addAction ("SetFullScreen", fullscreenmode);
 
@@ -412,93 +411,93 @@ void KMuddy::prepareObjects ()
   //other actions
   QAction *lineup = new QAction (this);
   lineup->setText (i18n ("Shift line up"));
-  lineup->setShortcut (KEY_SHIFT+Qt::Key_Up);
+  lineup->setShortcut (KEY_SHIFT | Qt::Key_Up);
   connect (lineup, &QAction::triggered, this, &KMuddy::lineUp);
   acol->addAction ("LineUp", lineup);
   QAction *linedown = new QAction (this);
   linedown->setText (i18n ("Shift line down"));
-  linedown->setShortcut (KEY_SHIFT+Qt::Key_Down);
+  linedown->setShortcut (KEY_SHIFT | Qt::Key_Down);
   connect (linedown, &QAction::triggered, this, &KMuddy::lineDown);
   acol->addAction ("LineDown", linedown);
   QAction *pageup = new QAction (this);
   pageup->setText (i18n ("Shift page up"));
-  pageup->setShortcut (KEY_SHIFT+Qt::Key_PageUp);
+  pageup->setShortcut (KEY_SHIFT | Qt::Key_PageUp);
   connect (pageup, &QAction::triggered, this, &KMuddy::pageUp);
   acol->addAction ("PageUp", pageup);
   QAction *pagedown = new QAction (this);
   pagedown->setText (i18n ("Shift page down"));
-  pagedown->setShortcut (KEY_SHIFT+Qt::Key_PageDown);
+  pagedown->setShortcut (KEY_SHIFT | Qt::Key_PageDown);
   connect (pagedown, &QAction::triggered, this, &KMuddy::pageDown);
   acol->addAction ("PageDown", pagedown);
   QAction *aconup = new QAction (this);
   aconup->setText (i18n ("Split-screen up"));
-  aconup->setShortcut (KEY_CTRL+KEY_ALT+Qt::Key_Up);
+  aconup->setShortcut (KEY_CTRL | KEY_ALT | Qt::Key_Up);
   connect (aconup, &QAction::triggered, this, &KMuddy::aconUp);
   acol->addAction ("AconUp", aconup);
   QAction *acondown = new QAction (this);
   acondown->setText (i18n ("Split-screen down"));
-  acondown->setShortcut (KEY_CTRL+KEY_ALT+Qt::Key_Down);
+  acondown->setShortcut (KEY_CTRL | KEY_ALT | Qt::Key_Down);
   connect (acondown, &QAction::triggered, this, &KMuddy::aconDown);
   acol->addAction ("AconDown", acondown);
   QAction *prevtab = new QAction (this);
   prevtab->setText (i18n ("Previous tab"));
-  prevtab->setShortcut (KEY_ALT+Qt::Key_PageUp);
+  prevtab->setShortcut (KEY_ALT | Qt::Key_PageUp);
   connect (prevtab, &QAction::triggered, this, &KMuddy::prevTab);
   acol->addAction ("PreviousTab", prevtab);
   QAction *nexttab = new QAction (this);
   nexttab->setText (i18n ("Next tab"));
-  nexttab->setShortcut (KEY_ALT+Qt::Key_PageDown);
+  nexttab->setShortcut (KEY_ALT | Qt::Key_PageDown);
   connect (nexttab, &QAction::triggered, this, &KMuddy::nextTab);
   acol->addAction ("NextTab", nexttab);
   QAction *tabnum[10];
   tabnum[0] = new QAction (this);
   tabnum[0]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "1"));
-  tabnum[0]->setShortcut (KEY_ALT+Qt::Key_1);
+  tabnum[0]->setShortcut (KEY_ALT | Qt::Key_1);
   connect (tabnum[0], &QAction::triggered, this, &KMuddy::switchTab1);
   acol->addAction ("SwitchTab1", tabnum[0]);
   tabnum[1] = new QAction (this);
   tabnum[1]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "2"));
-  tabnum[1]->setShortcut (KEY_ALT+Qt::Key_2);
+  tabnum[1]->setShortcut (KEY_ALT | Qt::Key_2);
   connect (tabnum[1], &QAction::triggered, this, &KMuddy::switchTab2);
   acol->addAction ("SwitchTab2", tabnum[1]);
   tabnum[2] = new QAction (this);
   tabnum[2]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "3"));
-  tabnum[2]->setShortcut (KEY_ALT+Qt::Key_3);
+  tabnum[2]->setShortcut (KEY_ALT | Qt::Key_3);
   connect (tabnum[2], &QAction::triggered, this, &KMuddy::switchTab3);
   acol->addAction ("SwitchTab3", tabnum[2]);
   tabnum[3] = new QAction (this);
   tabnum[3]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "4"));
-  tabnum[3]->setShortcut (KEY_ALT+Qt::Key_4);
+  tabnum[3]->setShortcut (KEY_ALT | Qt::Key_4);
   connect (tabnum[3], &QAction::triggered, this, &KMuddy::switchTab4);
   acol->addAction ("SwitchTab4", tabnum[3]);
   tabnum[4] = new QAction (this);
   tabnum[4]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "5"));
-  tabnum[4]->setShortcut (KEY_ALT+Qt::Key_5);
+  tabnum[4]->setShortcut (KEY_ALT | Qt::Key_5);
   connect (tabnum[4], &QAction::triggered, this, &KMuddy::switchTab5);
   acol->addAction ("SwitchTab5", tabnum[4]);
   tabnum[5] = new QAction (this);
   tabnum[5]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "6"));
-  tabnum[5]->setShortcut (KEY_ALT+Qt::Key_6);
+  tabnum[5]->setShortcut (KEY_ALT | Qt::Key_6);
   connect (tabnum[5], &QAction::triggered, this, &KMuddy::switchTab6);
   acol->addAction ("SwitchTab6", tabnum[5]);
   tabnum[6] = new QAction (this);
   tabnum[6]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "7"));
-  tabnum[6]->setShortcut (KEY_ALT+Qt::Key_7);
+  tabnum[6]->setShortcut (KEY_ALT | Qt::Key_7);
   connect (tabnum[6], &QAction::triggered, this, &KMuddy::switchTab7);
   acol->addAction ("SwitchTab7", tabnum[6]);
   tabnum[7] = new QAction (this);
   tabnum[7]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "8"));
-  tabnum[7]->setShortcut (KEY_ALT+Qt::Key_8);
+  tabnum[7]->setShortcut (KEY_ALT | Qt::Key_8);
   connect (tabnum[7], &QAction::triggered, this, &KMuddy::switchTab8);
   acol->addAction ("SwitchTab8", tabnum[7]);
   tabnum[8] = new QAction (this);
   tabnum[8]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "9"));
-  tabnum[8]->setShortcut (KEY_ALT+Qt::Key_9);
+  tabnum[8]->setShortcut (KEY_ALT | Qt::Key_9);
   connect (tabnum[8], &QAction::triggered, this, &KMuddy::switchTab9);
   acol->addAction ("SwitchTab9", tabnum[8]);
   tabnum[9] = new QAction (this);
   tabnum[9]->setText (i18nc ("%1 - tab number", "Switch to tab %1", "10"));
-  tabnum[9]->setShortcut (KEY_ALT+Qt::Key_0);
+  tabnum[9]->setShortcut (KEY_ALT | Qt::Key_0);
   connect (tabnum[9], &QAction::triggered, this, &KMuddy::switchTab10);
   acol->addAction ("SwitchTab10", tabnum[9]);
 
@@ -992,7 +991,7 @@ void KMuddy::requestNotify (int sess)
       QPixmap px;
       px.load("kmuddy.png");
       notification->setPixmap(px);
-      connect(notification, QOverload<unsigned int>::of(&KNotification::activated), this, [sess]() { cSessionManager::self()->changeSession (sess); });
+      connect(notification->defaultAction(), &KNotificationAction::activated, this, [sess]() { cSessionManager::self()->changeSession (sess); });
       notification->sendEvent();
     }
   }

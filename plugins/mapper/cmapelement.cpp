@@ -96,7 +96,7 @@ void CMapElement::paintResizeHandles(QPainter *p, QList<QRect> &resizePos)
   p->setPen(getManager()->getMapData()->selectedColor);
   p->setBrush(getManager()->getMapData()->selectedColor);
 
-  foreach (QRect rect, resizePos)
+  for (QRect rect : resizePos)
     p->drawRect(rect);
 }
 
@@ -159,7 +159,7 @@ int CMapElement::mouseInResize(QPoint mousePos,CMapZone *)
 {
 	int num = 1;
 
-	foreach (QRect rect, resizePos)
+	for (QRect rect : resizePos)
 	{
 		QRegion region(rect,QRegion::Rectangle);
 		if (region.contains(mousePos))

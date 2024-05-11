@@ -63,7 +63,7 @@ void CMapToolSelect::paint(QPainter *p)
     offset.setX((((int)(lastDrag.x() / gridWidth)) * gridWidth) - (((int)(mouseDrag.x()/gridWidth))*gridWidth));
     offset.setY((((int)(lastDrag.y() / gridHeight)) * gridHeight) - (((int)(mouseDrag.y()/gridHeight))*gridHeight));
 
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
       if (element->getSelected())
         element->dragPaint(offset,p,currentLevel->getZone());
   }
@@ -74,13 +74,13 @@ void CMapToolSelect::paint(QPainter *p)
     offset.setX(((((int)(lastDrag.x() / gridWidth)) * gridWidth) - (((int)((mouseDrag.x()-6)/gridWidth))*gridWidth))-gridWidth);
     offset.setY(((((int)(lastDrag.y() / gridHeight)) * gridHeight) - (((int)((mouseDrag.y()-6)/gridHeight))*gridHeight))-gridHeight);			
 
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
       if (element->getSelected())
         element->resizePaint(offset,p,currentLevel->getZone(),resizeDrag);
   }
   else if (m_editDrag > 0)
   {
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
       if (element->getElementType()==PATH && element->getEditMode())
         ((CMapPath *)element)->editPaint(lastDrag,p,currentLevel->getZone(),m_editDrag);
   }
@@ -103,7 +103,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *
   QList<CMapElement *> lst = currentLevel->getAllElements();
 
   // Check to see if the mouse was pressed in an element
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
   {
     // Is a edit drag in operation
     if (element->getElementType()==PATH && element->getEditMode())
@@ -136,7 +136,7 @@ void CMapToolSelect::mousePressEvent(QPoint mousePos, QMouseEvent *, CMapLevel *
   if (resizeDrag > 0 || m_editDrag > 0)
   {
     // Repaint the map without the elements being resized
-    foreach (CMapElement *element, lst)
+    for (CMapElement *element : lst)
     {
       if (element->getSelected())
       {
@@ -203,7 +203,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
     }
     else if (m_editDrag > 0)
     {
-      foreach (CMapElement *element, lst)
+      for (CMapElement *element : lst)
       {
         if (element->getElementType()==PATH && element->getEditMode())
         {
@@ -240,7 +240,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
       QRect area = QRect(QPoint(x1,y1),QPoint(x2,y2));
 
       // Select the elements in the rectangle              	
-      foreach (CMapElement *element, lst)
+      for (CMapElement *element : lst)
       {
         if (element->elementIn(area,currentLevel->getZone()))
         {
@@ -264,7 +264,7 @@ void CMapToolSelect::mouseReleaseEvent(QPoint mousePos, QMouseEvent *e, CMapLeve
   if (!shift)
     mapManager->unselectElements(currentLevel);
 
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
   {
     if (!element->mouseInElement(mousePos)) continue;
     bool sel = shift ? (!element->getSelected()) : true;
@@ -280,7 +280,7 @@ void CMapToolSelect::mouseDoubleClickEvent(QPoint mousePos, QMouseEvent *, CMapL
   // If we double-click on something that is not a room, do nothing
   QList<CMapElement *> elements = currentLevel->elementsUnderMouse(mousePos);
   CMapRoom *room = nullptr;
-  foreach (CMapElement *el, elements) {
+  for (CMapElement *el : elements) {
     room = dynamic_cast<CMapRoom *>(el);
     if (room) break;
   }
@@ -358,7 +358,7 @@ void CMapToolSelect::moveElement(QPoint offset, CMapLevel *currentLevel)
 
   bool found = false;
   QList<CMapElement *> lst = currentLevel->getAllElements();
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
     if (element->getSelected()) {
       cmd->addElement(element);
       found = true;
@@ -381,7 +381,7 @@ void CMapToolSelect::resizeElements(QPoint mousePos,CMapLevel *currentLevel)
   offset.setY(((((int)(mousePos.y() / gridHeight)) * gridHeight) - (((int)((mouseDrag.y()-6)/gridHeight))*gridHeight))-gridHeight);
 
   QList<CMapElement *> lst = currentLevel->getAllElements();
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
     if (element->getSelected())
     {
       element->resize(offset,resizeDrag);
@@ -406,7 +406,7 @@ void CMapToolSelect::slotStartDraging(void)
   if (!currentLevel) return;
 
   QList<CMapElement *> lst = currentLevel->elementsUnderMouse(mouseDrag);
-  foreach (CMapElement *element, lst)
+  for (CMapElement *element : lst)
     element->setSelected(true);
 }
 

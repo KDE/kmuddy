@@ -47,7 +47,7 @@ protected:
 	/** This is called when the mouse leaves the widget */
 	void leaveEvent(QEvent *e) override;
 	/** This is called when the mouse enters the widget */
-	void enterEvent(QEvent *e) override;
+	void enterEvent(QEnterEvent *e) override;
 	/** draw the map widget */
 	void paintEvent(QPaintEvent *) override;
 	/** The mouse release event */

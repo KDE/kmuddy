@@ -121,7 +121,7 @@ DlgMapTextProperties::DlgMapTextProperties(CMapManager *manager,CMapText *textEl
 
 	// Get the extension panels from the plugins
 	QList<CMapPropertiesPaneBase *> paneList = mapManager->createPropertyPanes(TEXT,(CMapElement*)textElement,(QWidget *)TextTabs);
-	foreach (CMapPropertiesPaneBase *pane, paneList)
+	for (CMapPropertiesPaneBase *pane : paneList)
 	{
 		TextTabs->addTab(pane,pane->getTitle());
 		connect(cmdOk,SIGNAL(clicked()),pane,SLOT(slotOk()));

@@ -170,7 +170,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		levelProperties.setAttribute("NumTexts",level->getTextList()->count());
 		
 		// Save Rooms
-		foreach (CMapRoom* room, *level->getRoomList())
+		for (CMapRoom* room : *level->getRoomList())
 		{
 			QDomElement roomProperties = doc->createElement("Room");
 			room->saveQDomElement(doc,&roomProperties);
@@ -179,7 +179,7 @@ void CMapFileFilterXML::saveZone(QDomDocument *doc,QDomNode *rootNode,CMapZone *
 		}
 		
 		// Save Texts
-		foreach (CMapText* text, *level->getTextList())
+		for (CMapText* text : *level->getTextList())
 		{
 			QDomElement textProperties = doc->createElement("Text");
 			text->saveQDomElement(doc,&textProperties);
@@ -208,9 +208,9 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
   for (unsigned int idx = 0; idx < zone->levelCount(); ++idx)
   {
     CMapLevel *level = zone->getLevel(idx);
-    foreach (CMapRoom *room, *level->getRoomList())
+    for (CMapRoom *room : *level->getRoomList())
     {
-      foreach (CMapPath *path, *room->getPathList())
+      for (CMapPath *path : *room->getPathList())
       {
         if (saved.count(path)) continue;
         QDomElement pathElement = doc->createElement("Path");
@@ -221,7 +221,7 @@ void CMapFileFilterXML::saveZoneLinks(QDomDocument *doc,QDomElement *pathsNode,Q
       }
     }
 
-    foreach (CMapText *text, *level->getTextList())
+    for (CMapText *text : *level->getTextList())
     {
       CMapElement *element = text->getLinkElement();
       if (element)

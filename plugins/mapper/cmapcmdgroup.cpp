@@ -26,13 +26,13 @@ m_mapManager = mapManager;
 
 CMapCmdGroup::~CMapCmdGroup()
 {
-  foreach (CMapCommand *cmd, commands)
+  for (CMapCommand *cmd : commands)
     delete cmd;
 }
 
 void CMapCmdGroup::redo()
 {
-  foreach (CMapCommand *c, commands)
+  for (CMapCommand *c : commands)
     c->redo();
 }
 
