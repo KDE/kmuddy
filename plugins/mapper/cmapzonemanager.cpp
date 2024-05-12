@@ -211,15 +211,15 @@ void CMapZoneManager::loadMapList()
   reader->readNext ();  // read the document start
   reader->readNext ();
   if (reader->isStartElement ())
-    if (reader->name() == "maps")
-      if (reader->attributes().value ("version") == "1.0") {
+    if (reader->name() == QString("maps"))
+      if (reader->attributes().value ("version") == QString("1.0")) {
         // all is well, we can start loading the list
         while (!reader->atEnd()) {
           reader->readNext ();
     
-          if (reader->isEndElement() && (reader->name() == "maps")) break;
+          if (reader->isEndElement() && (reader->name() == QString("maps"))) break;
 
-          if (reader->isStartElement () && (reader->name() == "map")) {
+          if (reader->isStartElement () && (reader->name() == QString("map"))) {
             QString name = reader->attributes().value ("name").toString();
             QString file = reader->attributes().value ("file").toString();
             createZoneEntry(name, file);

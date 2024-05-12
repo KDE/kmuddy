@@ -19,7 +19,6 @@
 #include "cmapmanager.h"
 
 #include <KLocalizedString>
-#include <kservicetypetrader.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 #include <kpagedialog.h>
@@ -704,14 +703,13 @@ void CMapManager::createText(QPoint pos,CMapLevel *level,QString str,QFont font,
 CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp srcDir,
                                   QPoint destPos,CMapLevel *destLevel,directionTyp destDir)
 {
-  CMapRoom *room=nullptr;
   CMapRoom *srcRoom=nullptr;
   CMapRoom *destRoom=nullptr;
 
   if (!srcLevel || !destLevel)
     return nullptr;
 
-  for (room : *srcLevel->getRoomList())
+  for (CMapRoom *room : *srcLevel->getRoomList())
   {
     if (room->getLowPos() == srcPos)
     {
@@ -720,7 +718,7 @@ CMapPath *CMapManager::createPath(QPoint srcPos,CMapLevel *srcLevel,directionTyp
     }
   }
 
-  for (room : *destLevel->getRoomList())
+  for (CMapRoom *room : *destLevel->getRoomList())
   {
     if (room->getLowPos()  == destPos)
     {
@@ -1432,7 +1430,6 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
   QQueue<CMapRoom *> roomsToVisit;
   CMapRoom *destRoom;
   CMapRoom *srcRoom;
-  CMapPath *path;
   CMapRoom *foundRoom;
   signed int time = 0;
   bool bFound = false;
@@ -1475,7 +1472,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
     foundRoom = roomsToVisit.dequeue();
 
     // for all neighbours of foundRoom
-    for (path : *foundRoom->getPathList())
+    for (CMapPath *path : *foundRoom->getPathList())
     {
       room = path->getDestRoom();
 
@@ -1512,7 +1509,7 @@ void CMapManager::walkPlayerTo(CMapRoom *toRoom)
 
     // Find the room with the shortest time as this is the room we
     // should be moving to.
-    for (path : *destRoom->getConnectingPathList())
+    for (CMapPath *path : *destRoom->getConnectingPathList())
     {
       if (time == -1 || (path->getSrcRoom()->getMoveTime()<=time && path->getSrcRoom()->getMoveTime()!=-1))
       {
