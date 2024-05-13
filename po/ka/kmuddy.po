@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:54+0000\n"
+"POT-Creation-Date: 2024-05-13 01:47+0000\n"
 "PO-Revision-Date: 2024-01-21 11:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1663,7 +1663,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
 #: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
 #: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
 #, kde-format
 msgid "Bold"
 msgstr "გასქელება"
@@ -1672,7 +1672,7 @@ msgstr "გასქელება"
 #: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
 #: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
 #: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
 #, kde-format
 msgid "Italic"
 msgstr "დახრა"
@@ -3843,167 +3843,167 @@ msgstr "ელემენტის ზომის შეცვლა"
 msgid "Level %1"
 msgstr "დონე %1"
 
-#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
 msgstr "რუკა #1"
 
-#: plugins/mapper/cmapmanager.cpp:195
+#: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:198
+#: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:201
+#: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:204
+#: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:409
+#: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
 msgid "Change Login Room"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:412
+#: plugins/mapper/cmapmanager.cpp:411
 #, kde-format
 msgid "Remove Login Room Status"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:419
+#: plugins/mapper/cmapmanager.cpp:418
 #, kde-format
 msgid "Set Login Room Status"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:451
+#: plugins/mapper/cmapmanager.cpp:450
 #, kde-format
 msgid "Change Current Room"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:453
+#: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Remove Current Room Status"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:458
+#: plugins/mapper/cmapmanager.cpp:457
 #, kde-format
 msgid "Set Current Room Status"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:566
+#: plugins/mapper/cmapmanager.cpp:565
 #, kde-format
 msgid "Create Level"
 msgstr "დონის შექმნა"
 
-#: plugins/mapper/cmapmanager.cpp:635
+#: plugins/mapper/cmapmanager.cpp:634
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
 msgstr "ოთახის შექმნა"
 
-#: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
 msgstr "ტექსტის შექმნა"
 
-#: plugins/mapper/cmapmanager.cpp:763
+#: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
 msgstr "ამ ადგილას ბილიკი უკვე არსებობს"
 
-#: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
-#: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
 #: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
 msgstr "ბილიკის შექმნა"
 
-#: plugins/mapper/cmapmanager.cpp:856
+#: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
 msgid "Delete Level"
 msgstr "დონის წაშლა"
 
-#: plugins/mapper/cmapmanager.cpp:890 plugins/mapper/cmapmanager.cpp:899
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
 #, kde-format
 msgid "Delete Element"
 msgstr "ელემენტის წაშლა"
 
-#: plugins/mapper/cmapmanager.cpp:1447
+#: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1501
+#: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:1532
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1634
+#: plugins/mapper/cmapmanager.cpp:1631
 #, kde-format
 msgid "Move Elements in map"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1643
+#: plugins/mapper/cmapmanager.cpp:1640
 #, kde-format
 msgid "Make Path Two-Way"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1653
+#: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
 msgstr ""
 
-#: plugins/mapper/cmapmanager.cpp:1771
+#: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
 msgid "Root Zone"
 msgstr "ძირითადი ზონა"
 
-#: plugins/mapper/cmapmanager.cpp:1787
+#: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
 msgstr "სატესტო ოთახი 1"
 
-#: plugins/mapper/cmapmanager.cpp:1790
+#: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
 msgstr "სატესტო ოთახი 2"
 
-#: plugins/mapper/cmapmanager.cpp:1793
+#: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
 msgstr "სატესტო ოთახი 3"
 
-#: plugins/mapper/cmapmanager.cpp:1796
+#: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
 msgstr "სატესტო ოთახი 4"
 
-#: plugins/mapper/cmapmanager.cpp:1812
+#: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
 msgid "Set Special Exit"
 msgstr "სპეციალური გასასვლელის დაყენება"
@@ -4652,7 +4652,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
 #, kde-format
 msgid "OK"
 msgstr "დიახ"
@@ -4660,7 +4660,7 @@ msgstr "დიახ"
 #. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
 #, kde-format
 msgid "Cancel"
 msgstr "შეწყვეტა"
@@ -4822,104 +4822,104 @@ msgid "Delay before sending next command (centi secconds)"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
 #, kde-format
 msgid "Text Properties"
 msgstr "ტექსტის თვისებები"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
 msgstr "&ფონტი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:58
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
 #, kde-format
 msgid "Family:"
 msgstr "ოჯახი:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblColor_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
 #, kde-format
 msgid "Color:"
 msgstr "ფერი:"
 
 #. i18n: ectx: property (text), widget (KColorButton, cmdColor)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
 #, kde-format
 msgid "Button"
 msgstr "ღილაკი"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
 #, kde-format
 msgid "S&ize"
 msgstr "&ზომა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
 #, kde-format
 msgid "Actual Size "
 msgstr "მიმდინარე ზომა "
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
 #, kde-format
 msgid "Width (pixels):"
 msgstr "სიგანე (პიქსელებში):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
 #, kde-format
 msgid "Height (pixels):"
 msgstr "სიმაღლე (პიქსელებში):"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
 msgstr "ფონტის ზომა"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
 msgstr "შეიყვანეთ ფონტის ზომა:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
 #, kde-format
 msgid "Set Size"
 msgstr "ზომის დაყენება"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
 msgstr "ტექსტი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
 #, kde-format
 msgid "Text:"
 msgstr "ტექსტი:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPreview)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
 #, kde-format
 msgid "Preview:"
 msgstr "მინიატურა:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
 #, kde-format
 msgid "Speedwalk Progress"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
 #, kde-format
 msgid "x"
 msgstr ""

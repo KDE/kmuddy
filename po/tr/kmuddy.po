@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:54+0000\n"
-"PO-Revision-Date: 2024-03-27 13:55+0300\n"
+"POT-Creation-Date: 2024-05-13 01:47+0000\n"
+"PO-Revision-Date: 2024-05-12 15:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1803,7 +1803,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
 #: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
 #: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
 #, kde-format
 msgid "Bold"
 msgstr "Kalın"
@@ -1812,7 +1812,7 @@ msgstr "Kalın"
 #: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
 #: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
 #: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
 #, kde-format
 msgid "Italic"
 msgstr "Yatık"
@@ -4105,167 +4105,167 @@ msgstr "Ögeyi Yeniden Boyutlandır"
 msgid "Level %1"
 msgstr "Düzey %1"
 
-#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
 msgstr "Harita #1"
 
-#: plugins/mapper/cmapmanager.cpp:195
+#: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
 msgstr "Haritalayıcı: Yönler"
 
-#: plugins/mapper/cmapmanager.cpp:198
+#: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
 msgstr "Haritalayıcı: Hareket"
 
-#: plugins/mapper/cmapmanager.cpp:201
+#: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
 msgstr "Haritalayıcı: Renkler"
 
-#: plugins/mapper/cmapmanager.cpp:204
+#: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
 msgstr "Haritalayıcı: Hızlı Yürüme"
 
-#: plugins/mapper/cmapmanager.cpp:409
+#: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
 msgid "Change Login Room"
 msgstr "Oturum Açma Odasını Değiştir"
 
-#: plugins/mapper/cmapmanager.cpp:412
+#: plugins/mapper/cmapmanager.cpp:411
 #, kde-format
 msgid "Remove Login Room Status"
 msgstr "Oturum Açma Odası Durumunu Kaldır"
 
-#: plugins/mapper/cmapmanager.cpp:419
+#: plugins/mapper/cmapmanager.cpp:418
 #, kde-format
 msgid "Set Login Room Status"
 msgstr "Oturum Açma Odası Durumunu Ayarla"
 
-#: plugins/mapper/cmapmanager.cpp:451
+#: plugins/mapper/cmapmanager.cpp:450
 #, kde-format
 msgid "Change Current Room"
 msgstr "Geçerli Odayı Değiştir"
 
-#: plugins/mapper/cmapmanager.cpp:453
+#: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Remove Current Room Status"
 msgstr "Geçerli Oda Durumunu Kaldır"
 
-#: plugins/mapper/cmapmanager.cpp:458
+#: plugins/mapper/cmapmanager.cpp:457
 #, kde-format
 msgid "Set Current Room Status"
 msgstr "Geçerli Oda Durumunu Ayarla"
 
-#: plugins/mapper/cmapmanager.cpp:566
+#: plugins/mapper/cmapmanager.cpp:565
 #, kde-format
 msgid "Create Level"
 msgstr "Düzey Oluştur"
 
-#: plugins/mapper/cmapmanager.cpp:635
+#: plugins/mapper/cmapmanager.cpp:634
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
 msgstr "Oda Oluştur"
 
-#: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
 msgstr "Metin Oluştur"
 
-#: plugins/mapper/cmapmanager.cpp:763
+#: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
 msgstr "Bu konumda bir yol halihazırda var"
 
-#: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
-#: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
 #: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr "KMuddy Haritalayıcı"
 
-#: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
 msgstr "Yol Oluştur"
 
-#: plugins/mapper/cmapmanager.cpp:856
+#: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
 msgid "Delete Level"
 msgstr "Düzeyi Sil"
 
-#: plugins/mapper/cmapmanager.cpp:890 plugins/mapper/cmapmanager.cpp:899
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
 #, kde-format
 msgid "Delete Element"
 msgstr "Ögeyi Sil"
 
-#: plugins/mapper/cmapmanager.cpp:1447
+#: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
 msgstr "Halihazırda hızlı yürünüyor"
 
-#: plugins/mapper/cmapmanager.cpp:1501
+#: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr "Otomatik haritalayıcı, istenen odaya bir yol bulamadı"
 
-#: plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:1532
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
 msgstr "Hızlı yürüme iptal edildi; çünkü hareket sınırına ulaşıldı"
 
-#: plugins/mapper/cmapmanager.cpp:1634
+#: plugins/mapper/cmapmanager.cpp:1631
 #, kde-format
 msgid "Move Elements in map"
 msgstr "Haritada Ögeleri Taşı"
 
-#: plugins/mapper/cmapmanager.cpp:1643
+#: plugins/mapper/cmapmanager.cpp:1640
 #, kde-format
 msgid "Make Path Two-Way"
 msgstr "Yolu İki Yönlü Yap"
 
-#: plugins/mapper/cmapmanager.cpp:1653
+#: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
 msgstr "Yolu Tek Yönlü Yap"
 
-#: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
 msgstr "Öge Özelliğini Değiştir"
 
-#: plugins/mapper/cmapmanager.cpp:1771
+#: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
 msgid "Root Zone"
 msgstr "Kök Bölge"
 
-#: plugins/mapper/cmapmanager.cpp:1787
+#: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
 msgstr "Sınama odası 1"
 
-#: plugins/mapper/cmapmanager.cpp:1790
+#: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
 msgstr "Sınama odası 2"
 
-#: plugins/mapper/cmapmanager.cpp:1793
+#: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
 msgstr "Sınama odası 3"
 
-#: plugins/mapper/cmapmanager.cpp:1796
+#: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
 msgstr "Sınama odası 4"
 
-#: plugins/mapper/cmapmanager.cpp:1812
+#: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
 msgid "Set Special Exit"
 msgstr "Özel Çıkış Ayarla"
@@ -4760,10 +4760,9 @@ msgstr "İki Yönlü Çıkış"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
-msgstr "Normal çıkış"
+msgstr "No&rmal çıkış"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4859,10 +4858,9 @@ msgstr "Hedef Konum Yönü"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Özel Çıkış"
+msgstr "Ö&zel çıkış"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
@@ -4914,7 +4912,7 @@ msgstr "Hedeften Kayğana Komutları"
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
 #, kde-format
 msgid "OK"
 msgstr "Tamam"
@@ -4922,7 +4920,7 @@ msgstr "Tamam"
 #. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
@@ -5084,104 +5082,104 @@ msgid "Delay before sending next command (centi secconds)"
 msgstr "Sonraki komutu göndermeden önceki gecikme (senti saniye)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
 #, kde-format
 msgid "Text Properties"
 msgstr "Metin Özellikleri"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
 msgstr "&Yazıtipi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:58
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
 #, kde-format
 msgid "Family:"
 msgstr "Aile:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblColor_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
 #, kde-format
 msgid "Color:"
 msgstr "Renk:"
 
 #. i18n: ectx: property (text), widget (KColorButton, cmdColor)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
 #, kde-format
 msgid "Button"
 msgstr "Düğme"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
 #, kde-format
 msgid "S&ize"
 msgstr "&Boyut"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
 #, kde-format
 msgid "Actual Size "
 msgstr "Özgün Boyut "
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
 #, kde-format
 msgid "Width (pixels):"
 msgstr "Genişlik (piksel):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
 #, kde-format
 msgid "Height (pixels):"
 msgstr "Yükseklik (piksel):"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
 msgstr "Yazıtipi Boyutu"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
 msgstr "Yazıtipi boyutu gir:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
 #, kde-format
 msgid "Set Size"
 msgstr "Boyutu Ayarla"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
 msgstr "Metin"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
 #, kde-format
 msgid "Text:"
 msgstr "Metin:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPreview)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
 #, kde-format
 msgid "Preview:"
 msgstr "Önizleme:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
 #, kde-format
 msgid "Speedwalk Progress"
 msgstr "Hızlı Yürüme İlerlemesi"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
 #, kde-format
 msgid "x"
 msgstr "x"

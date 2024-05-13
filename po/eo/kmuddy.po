@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:54+0000\n"
-"PO-Revision-Date: 2024-03-27 12:41+0100\n"
+"POT-Creation-Date: 2024-05-13 01:47+0000\n"
+"PO-Revision-Date: 2024-05-12 23:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -155,12 +155,12 @@ msgstr "Temporiziloj nun estas malŝaltitaj."
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
-msgstr "Makroŝlosiloj nun estas ebligitaj."
+msgstr "Makroklavoj nun estas ebligitaj."
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
-msgstr "Makroŝlosiloj nun estas malŝaltitaj."
+msgstr "Makroklavoj nun estas malŝaltitaj."
 
 #: kmuddy/cconnection.cpp:812
 #, kde-format
@@ -803,7 +803,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
-msgstr "&Opcioj"
+msgstr "&Elektebloj"
 
 #: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
 #, kde-format
@@ -1696,13 +1696,13 @@ msgid ""
 "(/exec calls external scripts)"
 msgstr ""
 "Se vi komencas komandon per ĉi tiu ĉeno, la komando estos interpretita kiel "
-"makrovoko.<br>Sintakso estas <ĉi tiu ĉeno> <komando> [parametroj] (/exec "
-"vokas eksterajn skriptojn)"
+"makrovoko.<br>Sintakso estas &lt;ĉi tiu ĉeno&gt; &lt;komando&gt; "
+"[parametroj] (/exec vokas eksterajn skriptojn)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr "&Ripetilo ĉeno"
+msgstr "&Ripetila ĉeno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1731,8 +1731,8 @@ msgid ""
 msgstr ""
 "Se komando estas komencita per ĉi tiu ĉeno, la komando estos interpretita "
 "kiel komando-fokusa alvoko. Ĉi tio permesos al vi sendi komandojn al aliaj "
-"ligitaj signoj.<br>Sintakso estas <ĉi tiu ĉeno> <fokusa langeto> <ĉi tiu "
-"ĉeno> <komando>"
+"ligitaj signoj.<br>Sintakso estas &lt;ĉi tiu ĉeno&gt; &lt;fokusa langeto&gt; "
+"&lt;ĉi tiu ĉeno&gt; &lt;komando&gt;"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
@@ -1802,7 +1802,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
 #: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
 #: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
 #, kde-format
 msgid "Bold"
 msgstr "Grasa"
@@ -1811,7 +1811,7 @@ msgstr "Grasa"
 #: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
 #: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
 #: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
 #, kde-format
 msgid "Italic"
 msgstr "Kursiva"
@@ -2094,7 +2094,7 @@ msgstr "Profila nomo ne povas enhavi signon '/'."
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
 msgid "Keygrabber"
-msgstr "Ŝlosilkaptilo"
+msgstr "Klavkaptilo"
 
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
@@ -3558,8 +3558,8 @@ msgid ""
 "(original command is sent first)."
 msgstr ""
 "Se ĉi tiu kaŝnomo kongruas kun via komando, anstataŭa komando estos sendita. "
-"Se vi ebligas ĉi tiun opcion, ambaŭ originaj kaj anstataŭaj komandoj estas "
-"sendataj (origina komando estas sendata unue)."
+"Se vi ebligas ĉi tiun elekteblon, ambaŭ originaj kaj anstataŭaj komandoj "
+"estas sendataj (origina komando estas sendata unue)."
 
 #: libs/caliaseditor.cpp:181
 #, kde-format
@@ -4093,167 +4093,167 @@ msgstr "Regrandigi Elementon"
 msgid "Level %1"
 msgstr "Nivelo %1"
 
-#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
 msgstr "Mapo #1"
 
-#: plugins/mapper/cmapmanager.cpp:195
+#: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
 msgstr "Mapisto: Direktoj"
 
-#: plugins/mapper/cmapmanager.cpp:198
+#: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
 msgstr "Mapisto: Movado"
 
-#: plugins/mapper/cmapmanager.cpp:201
+#: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
 msgstr "Mapisto: Koloroj"
 
-#: plugins/mapper/cmapmanager.cpp:204
+#: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
 msgstr "Mapisto: Speedwalk"
 
-#: plugins/mapper/cmapmanager.cpp:409
+#: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
 msgid "Change Login Room"
 msgstr "Ŝanĝi Ensaluta Ĉambro"
 
-#: plugins/mapper/cmapmanager.cpp:412
+#: plugins/mapper/cmapmanager.cpp:411
 #, kde-format
 msgid "Remove Login Room Status"
 msgstr "Forigi Ensalutan Ĉambro-Statuson"
 
-#: plugins/mapper/cmapmanager.cpp:419
+#: plugins/mapper/cmapmanager.cpp:418
 #, kde-format
 msgid "Set Login Room Status"
 msgstr "Meti Ensalutan Ĉambro-Statuson"
 
-#: plugins/mapper/cmapmanager.cpp:451
+#: plugins/mapper/cmapmanager.cpp:450
 #, kde-format
 msgid "Change Current Room"
 msgstr "Ŝanĝi Nunan Ĉambron"
 
-#: plugins/mapper/cmapmanager.cpp:453
+#: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Remove Current Room Status"
 msgstr "Forigi Nunan Ĉambron"
 
-#: plugins/mapper/cmapmanager.cpp:458
+#: plugins/mapper/cmapmanager.cpp:457
 #, kde-format
 msgid "Set Current Room Status"
 msgstr "Agordi Nunan Ĉambron"
 
-#: plugins/mapper/cmapmanager.cpp:566
+#: plugins/mapper/cmapmanager.cpp:565
 #, kde-format
 msgid "Create Level"
 msgstr "Krei Nivelon"
 
-#: plugins/mapper/cmapmanager.cpp:635
+#: plugins/mapper/cmapmanager.cpp:634
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
 msgstr "Krei Ĉambron"
 
-#: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
 msgstr "Krei Tekston"
 
-#: plugins/mapper/cmapmanager.cpp:763
+#: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
 msgstr "Pado jam ekzistas ĉe ĉi tiu loko"
 
-#: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
-#: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
 #: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr "KMuddy Mapper"
 
-#: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
 msgstr "Krei Vojon"
 
-#: plugins/mapper/cmapmanager.cpp:856
+#: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
 msgid "Delete Level"
 msgstr "Forigi Nivelon"
 
-#: plugins/mapper/cmapmanager.cpp:890 plugins/mapper/cmapmanager.cpp:899
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
 #, kde-format
 msgid "Delete Element"
 msgstr "Forigi Elementon"
 
-#: plugins/mapper/cmapmanager.cpp:1447
+#: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
 msgstr "Speedwalking jam estas en progreso"
 
-#: plugins/mapper/cmapmanager.cpp:1501
+#: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr "La aŭtomapper ne povis trovi vojon al petita ĉambro"
 
-#: plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:1532
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
 msgstr "Speedwalk ĉesas ĉar movlimo estis atingita"
 
-#: plugins/mapper/cmapmanager.cpp:1634
+#: plugins/mapper/cmapmanager.cpp:1631
 #, kde-format
 msgid "Move Elements in map"
 msgstr "Movi Elementojn en mapo"
 
-#: plugins/mapper/cmapmanager.cpp:1643
+#: plugins/mapper/cmapmanager.cpp:1640
 #, kde-format
 msgid "Make Path Two-Way"
 msgstr "Igi Padon Dudirekta"
 
-#: plugins/mapper/cmapmanager.cpp:1653
+#: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
 msgstr "Igi Padon Unudirekta"
 
-#: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
 msgstr "Ŝanĝi Elementan Proprecon"
 
-#: plugins/mapper/cmapmanager.cpp:1771
+#: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
 msgid "Root Zone"
 msgstr "Radika Zono"
 
-#: plugins/mapper/cmapmanager.cpp:1787
+#: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
 msgstr "Testĉambro 1"
 
-#: plugins/mapper/cmapmanager.cpp:1790
+#: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
 msgstr "Testĉambro 2"
 
-#: plugins/mapper/cmapmanager.cpp:1793
+#: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
 msgstr "Testĉambro 3"
 
-#: plugins/mapper/cmapmanager.cpp:1796
+#: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
 msgstr "Testĉambro 4"
 
-#: plugins/mapper/cmapmanager.cpp:1812
+#: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
 msgid "Set Special Exit"
 msgstr "Agordi Specialan Eliron"
@@ -4476,7 +4476,7 @@ msgstr "Ĉi tio ne estas mapo-listo de KMuddy."
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
 #, kde-format
 msgid "Mapper Colors Options"
-msgstr "Mapper Koloroj Opcioj"
+msgstr "Elektebloj de Mapper-Koloroj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
@@ -4750,10 +4750,9 @@ msgstr "Dudirekta Elirejo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
-msgstr "Normala eliro"
+msgstr "Nor&mala eliro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4849,10 +4848,9 @@ msgstr "Destinita Direkto"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Speciala Eliro"
+msgstr "Spec&iala Eliro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
@@ -4904,7 +4902,7 @@ msgstr "Celo Al Fontaj Komandoj"
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
 #, kde-format
 msgid "OK"
 msgstr "Bone"
@@ -4912,7 +4910,7 @@ msgstr "Bone"
 #. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
 #, kde-format
 msgid "Cancel"
 msgstr "Nuligi"
@@ -5041,7 +5039,7 @@ msgstr "Forigi eron"
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
 #, kde-format
 msgid "Speedwalk Options"
-msgstr "Speedwalk Opcioj"
+msgstr "Speedwalk-Elektebloj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
@@ -5074,104 +5072,104 @@ msgid "Delay before sending next command (centi secconds)"
 msgstr "Prokrasto antaŭ sendado de sekva komando (centi sekundoj)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
 #, kde-format
 msgid "Text Properties"
 msgstr "Tekstaj Propraĵoj"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
 msgstr "&Tiparo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:58
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
 #, kde-format
 msgid "Family:"
 msgstr "Familio:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblColor_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
 #, kde-format
 msgid "Color:"
 msgstr "Koloro:"
 
 #. i18n: ectx: property (text), widget (KColorButton, cmdColor)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
 #, kde-format
 msgid "Button"
 msgstr "Butono"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
 #, kde-format
 msgid "S&ize"
 msgstr "Grand&eco"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
 #, kde-format
 msgid "Actual Size "
 msgstr "Reala Grandeco"
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
 #, kde-format
 msgid "Width (pixels):"
 msgstr "Larĝo (pikseloj):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
 #, kde-format
 msgid "Height (pixels):"
 msgstr "Alteco (pikseloj):"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
 msgstr "Tiparo Grandeco"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
 msgstr "Enigu tipargrandon:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
 #, kde-format
 msgid "Set Size"
 msgstr "Agordi Grandecon"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
 msgstr "Teksto"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
 #, kde-format
 msgid "Text:"
 msgstr "Teksto:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPreview)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
 #, kde-format
 msgid "Preview:"
 msgstr "Antaŭrigardo:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
 #, kde-format
 msgid "Speedwalk Progress"
 msgstr "Speedwalk Progreso"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
 #, kde-format
 msgid "x"
 msgstr "x"
@@ -5319,11 +5317,11 @@ msgid ""
 "control for some reason, leave this on.</p>"
 msgstr ""
 "<p>Se ĝi estas ebligita, fluoregado estos uzata por ĉi tiu skripto. "
-"Fluokontrolo certigas, ke skriptoj estas sinkronigitaj, tio signifas, ke se "
+"Fluomastrumo certigas, ke skriptoj estas sinkronigitaj, tio signifas, ke se "
 "du linioj alvenas de la servilo, la dua ne estas sendita al la skriptoj ĝis "
 "ĉiuj kurantaj skriptoj ricevis la unuan. Tamen, en iuj situacioj, estas pli "
 "bone ne uzi ĉi tiun funkcion.</p><p>Se vi ial ne bezonas malŝalti "
-"fluokontrolon, lasu ĉi tion aktiva.</p>"
+"flumastrumon, lasu ĉi tion aktiva.</p>"
 
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format

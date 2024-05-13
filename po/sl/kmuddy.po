@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 01:54+0000\n"
-"PO-Revision-Date: 2024-03-27 06:48+0100\n"
+"POT-Creation-Date: 2024-05-13 01:47+0000\n"
+"PO-Revision-Date: 2024-05-12 07:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -65,7 +65,7 @@ msgstr "Ikona, prikazana v orodni vrstici gumbov."
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr "Ukaz ob &sprostitvi gumba"
+msgstr "Ukaz ob sprostitvi gumba"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
@@ -87,12 +87,12 @@ msgstr "Splošno"
 #: libs/caliaseditor.cpp:227
 #, kde-format
 msgid "&Script"
-msgstr "S&kript"
+msgstr "&Skript"
 
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr "Skript ob &sprostitvi"
+msgstr "Skript ob sp&rostitvi"
 
 #: kmuddy/cconnection.cpp:262
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "Merilniki"
 #: plugins/vartrigs/cvartriggereditor.cpp:57
 #, kde-format
 msgid "&Variable name"
-msgstr "&Ime spremenljivke"
+msgstr "Ime spremenljivke"
 
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
@@ -213,7 +213,7 @@ msgstr "Spremenljivka, prikazana s tem merilnikom."
 #: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
 #, kde-format
 msgid "&Max. variable (optional)"
-msgstr "&Najv. spremenljivka (neobvezno)"
+msgstr "Najv. spremenljivka (neobvezno)"
 
 #: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Napis, prikazan poleg vrednosti spremenljivke."
 #: kmuddy/cgaugeeditor.cpp:78
 #, kde-format
 msgid "&Color"
-msgstr "&Barva"
+msgstr "Barva"
 
 #: kmuddy/cgaugeeditor.cpp:81
 #, kde-format
@@ -365,7 +365,7 @@ msgstr "Meta"
 #: kmuddy/kmuddy.cpp:279
 #, kde-format
 msgid "&Command"
-msgstr "&Ukaz"
+msgstr "Ukaz"
 
 #: kmuddy/cshortcuteditor.cpp:71
 #, kde-format
@@ -389,7 +389,7 @@ msgstr "Zajemi bližnjico ..."
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
 msgid "&Send command"
-msgstr "&Pošlji ukaz"
+msgstr "Pošlji ukaz"
 
 #: kmuddy/cshortcuteditor.cpp:84
 #, kde-format
@@ -403,7 +403,7 @@ msgstr ""
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
 msgid "&Overwrite existing text"
-msgstr "&Prepiši obstoječe besedilo"
+msgstr "Prepiši obstoječe besedilo"
 
 #: kmuddy/cshortcuteditor.cpp:88
 #, kde-format
@@ -419,7 +419,7 @@ msgstr "Spremenljivka, prikazana s to spremenljivko stanja."
 #: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
 msgid "&Show as percentage"
-msgstr "&Pokaži v odstotkih"
+msgstr "Pokaži v odstotkih"
 
 #: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
@@ -477,7 +477,7 @@ msgstr " s"
 #: kmuddy/ctimereditor.cpp:81
 #, kde-format
 msgid "&Single-shot"
-msgstr "&Enkratno"
+msgstr "Enkratno"
 
 #: kmuddy/ctimereditor.cpp:82
 #, kde-format
@@ -487,7 +487,7 @@ msgstr "Če je omogočeno, se časovnik izvrši samo enkrat in je nato onemogoč
 #: kmuddy/ctimereditor.cpp:84
 #, kde-format
 msgid "&Run a command in advance"
-msgstr "&Zaženi ukaz vnaprej"
+msgstr "Zaženi ukaz vnaprej"
 
 #: kmuddy/ctimereditor.cpp:85
 #, kde-format
@@ -507,7 +507,7 @@ msgstr "&Sekunde pred tiktakom"
 #: kmuddy/ctimereditor.cpp:97
 #, kde-format
 msgid "C&ommand"
-msgstr "U&kaz"
+msgstr "Ukaz"
 
 #: kmuddy/ctimereditor.cpp:100
 #, kde-format
@@ -706,7 +706,7 @@ msgstr "Sklic nazaj"
 #: kmuddy/ctriggereditor.cpp:165
 #, kde-format
 msgid "&Trigger text"
-msgstr "&Sprožilno besedilo"
+msgstr "Sprožilno besedilo"
 
 #: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
@@ -759,7 +759,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr "&Ukazi za pošiljanje:"
+msgstr "Ukazi za pošiljanje:"
 
 #: kmuddy/ctriggereditor.cpp:199
 #, kde-format
@@ -774,7 +774,7 @@ msgstr "Preizkusna površina"
 #: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
-msgstr "&Besedilo: "
+msgstr "Besedilo: "
 
 #: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
 #: plugins/converter/converterdialog.cpp:54
@@ -804,7 +804,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
-msgstr "&Možnosti"
+msgstr "Možnosti"
 
 #: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
 #, kde-format
@@ -890,7 +890,7 @@ msgstr "Zapusti skupino"
 #: kmuddy/ctriggereditor.cpp:315
 #, kde-format
 msgid "&Enable color replacement"
-msgstr "&Omogoči zamenjavo barv"
+msgstr "Omogoči zamenjavo barv"
 
 #: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
 #, kde-format
@@ -900,32 +900,32 @@ msgstr "Zamenjava barv"
 #: kmuddy/ctriggereditor.cpp:339
 #, kde-format
 msgid "&Add"
-msgstr "&Dodaj"
+msgstr "Dod&aj"
 
 #: kmuddy/ctriggereditor.cpp:340
 #, kde-format
 msgid "&Remove"
-msgstr "&Odstrani"
+msgstr "Odst&rani"
 
 #: kmuddy/ctriggereditor.cpp:341
 #, kde-format
 msgid "&Colorize"
-msgstr "&Obarvaj"
+msgstr "Obarvaj"
 
 #: kmuddy/ctriggereditor.cpp:343
 #, kde-format
 msgid "&Foreground"
-msgstr "O&spredje"
+msgstr "Ospredje"
 
 #: kmuddy/ctriggereditor.cpp:345
 #, kde-format
 msgid "&Background"
-msgstr "O&zadje"
+msgstr "Ozadje"
 
 #: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
 #, kde-format
 msgid "&Back-reference"
-msgstr "&Sklic nazaj"
+msgstr "Sklic nazaj"
 
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
@@ -946,7 +946,7 @@ msgstr "Ozadje"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr "Sprožilec prepisa &besedila"
+msgstr "P&rožilnik prepisa besedila"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
@@ -956,7 +956,7 @@ msgstr "Prepiši besedilo"
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
-msgstr "&Spremeni ta del vrstice:"
+msgstr "Spremeni ta del vrstice:"
 
 #: kmuddy/ctriggereditor.cpp:401
 #, kde-format
@@ -966,7 +966,7 @@ msgstr "Na &to vrednost:"
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr "Ne prikazuj (&zaduši) vrstice"
+msgstr "Ne prikazuj (zaduši) vrstice"
 
 #: kmuddy/ctriggereditor.cpp:427
 #, kde-format
@@ -977,7 +977,7 @@ msgstr "To bo preprečilo prikaz ujemajoče vrstice v izhodnem oknu."
 #: kmuddy/ctriggereditor.cpp:429
 #, kde-format
 msgid "&Notify"
-msgstr "&Obvesti"
+msgstr "Obvesti"
 
 #: kmuddy/ctriggereditor.cpp:430
 #, kde-format
@@ -997,7 +997,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr "&Sprožilec zaznavanja pozivov"
+msgstr "&Prožilnik zaznavanja pozivov"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -1018,7 +1018,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
 msgid "Play s&ound file"
-msgstr "Predvajaj &zvočno datoteko"
+msgstr "Predvajaj zvočno datoteko"
 
 #: kmuddy/ctriggereditor.cpp:445
 #, kde-format
@@ -1047,7 +1047,7 @@ msgstr "Izhodna okna"
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
-msgstr "&Zaduši izhod v glavnem oknu"
+msgstr "Zaduši izhod v glavnem oknu"
 
 #: kmuddy/ctriggereditor.cpp:479
 #, kde-format
@@ -1061,17 +1061,17 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
 msgid "&Window name"
-msgstr "&Ime okna"
+msgstr "Ime okna"
 
 #: kmuddy/ctriggereditor.cpp:486
 #, kde-format
 msgid "&Create window"
-msgstr "&Ustvari okno"
+msgstr "Ustvari okno"
 
 #: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
 #, kde-format
 msgid "&Basic"
-msgstr "&Osnovno"
+msgstr "Osnovno"
 
 #: kmuddy/ctriggereditor.cpp:516
 #, kde-format
@@ -1116,7 +1116,7 @@ msgstr "Ime okna je prazno!"
 #: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
 msgid "&Add..."
-msgstr "&Dodaj …"
+msgstr "Dod&aj …"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
 #: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
@@ -1130,7 +1130,7 @@ msgstr "Izbriši"
 #: kmuddy/dialogs/cdirlist.cpp:37
 #, kde-format
 msgid "Move &up"
-msgstr "Premakni navz&gor"
+msgstr "Premakni navzgor"
 
 #: kmuddy/dialogs/cdirlist.cpp:38
 #, kde-format
@@ -1190,7 +1190,7 @@ msgstr "Tipke za bližnjice"
 #: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr "Po&kaži vrstico zavihkov, tudi če ni potrebna"
+msgstr "Pokaži vrstico zavihkov, tudi če ni potrebna"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
@@ -1204,7 +1204,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr "Pokaži &dodatno vnosno vrstico"
+msgstr "Pokaži dodatno vnosno vrstico"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
@@ -1214,7 +1214,7 @@ msgstr "Namesto ene boste imeli dve vnosni vrstici."
 #: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
 msgid "&Always notify"
-msgstr "&Vedno obvesti"
+msgstr "Vedno obvesti"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
@@ -1232,7 +1232,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
 msgid "&Global notification"
-msgstr "&Splošno obvestilo"
+msgstr "Splošno obvestilo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
@@ -1248,7 +1248,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
 msgid "&Local notification"
-msgstr "&Krajevno obvestilo"
+msgstr "Krajevno obvestilo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
@@ -1320,7 +1320,7 @@ msgstr "Samodejna povezava z:"
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr "Privzeta barva &ozadja"
+msgstr "Privzeta barva ozadja"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
@@ -1330,7 +1330,7 @@ msgstr "Ta barva bo uporabljena kot standardna barva ozadja."
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr "Privzeta barva &besedila"
+msgstr "Privzeta barva besedila"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
@@ -1341,7 +1341,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:203
 #, kde-format
 msgid "Command &echo color"
-msgstr "Barva ukazov v &odmevu"
+msgstr "Barva ukazov v odm&evu"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:206
 #, kde-format
@@ -1351,7 +1351,7 @@ msgstr "Ta barva bo uporabljena za prikaz ukazov, ki ste jih vnesli."
 #: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
 msgid "&System message color"
-msgstr "&Barva sistemskih sporočil"
+msgstr "Barva &sistemskih sporočil"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:211
 #, kde-format
@@ -1361,7 +1361,7 @@ msgstr "Ta barva bo uporabljena za različna sistemska sporočila."
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
 msgid "&Indentation"
-msgstr "&Zamik"
+msgstr "Zam&ik"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
@@ -1381,7 +1381,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
 msgid "&History buffer size"
-msgstr "&Velikost medpomnilnika zgodovine"
+msgstr "Velikost medpomnilnika zgodovine"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
@@ -1401,7 +1401,7 @@ msgstr "vrstic"
 #: kmuddy/dialogs/dlgappsettings.cpp:247
 #, kde-format
 msgid "Enable co&mmand echo"
-msgstr "Omogoči &ukazni odmev"
+msgstr "Omogoči ukazni odmev"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:248
 #, kde-format
@@ -1415,7 +1415,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:251
 #, kde-format
 msgid "Enable s&ystem messages"
-msgstr "Omogoči s&istemska sporočila"
+msgstr "Omogoči sistemska sporočila"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
@@ -1425,7 +1425,7 @@ msgstr "Omogoča prikaz sistemskih sporočil v konzoli."
 #: kmuddy/dialogs/dlgappsettings.cpp:255
 #, kde-format
 msgid "Enable b&linking"
-msgstr "Omogoči &utripanje"
+msgstr "Omogoči utripanje"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
@@ -1435,7 +1435,7 @@ msgstr "Omogoči podporo za utripanje. Trenutno ni podprto."
 #: kmuddy/dialogs/dlgappsettings.cpp:272
 #, kde-format
 msgid "&Server output"
-msgstr "&Izhod strežnika"
+msgstr "Izhod strežnika"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:275 kmuddy/dialogs/dlgappsettings.cpp:285
 #: kmuddy/dialogs/dlgappsettings.cpp:295
@@ -1451,7 +1451,7 @@ msgstr "Tukaj lahko izberete pisavo, ki bo uporabljena za glavni zaslon."
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
 msgid "&Input line"
-msgstr "&Vnosna vrstica"
+msgstr "Vnosna vrstica"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:288
 #, kde-format
@@ -1461,7 +1461,7 @@ msgstr "Tukaj lahko izberete pisavo, ki bo uporabljena za vnosno vrstico."
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
 msgid "&Multi-line input"
-msgstr "&Večvrstični vnos"
+msgstr "Večvrstični vnos"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:298
 #, kde-format
@@ -1473,7 +1473,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
 msgid "&Keep sent text"
-msgstr "&Obdrži poslano besedilo"
+msgstr "Obdrži poslano besedilo"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
@@ -1487,7 +1487,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
 msgid "&Select kept text after it's sent"
-msgstr "&Izberi obdržano besedilo po pošiljanju"
+msgstr "Izberi obdržano besedilo po pošiljanju"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1503,7 +1503,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
 msgid "&Cursor keys browse history"
-msgstr "Zgodovina brskanja &smernih tipk"
+msgstr "Zgodovina brskanja smernih tipk"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
@@ -1531,7 +1531,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
 msgid "T&rim spaces"
-msgstr "Odre&ži presledke"
+msgstr "Od&reži presledke"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:335
 #, kde-format
@@ -1549,7 +1549,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:340
 #, kde-format
 msgid "Enable &auto-completion"
-msgstr "Omogoči &samodejno dokončanje"
+msgstr "Omogoči s&amodejno dokončanje"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:341
 #, kde-format
@@ -1563,7 +1563,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:349
 #, kde-format
 msgid "T&ype of auto-completion"
-msgstr "&Vrsta samodejnega dokončanja"
+msgstr "Vrsta samodejnega dokončanja"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:351
 #, kde-format
@@ -1583,7 +1583,7 @@ msgstr "Pojavno polje s seznamom"
 #: kmuddy/dialogs/dlgappsettings.cpp:357
 #, kde-format
 msgid "&Background color"
-msgstr "Barva o&zadja"
+msgstr "Barva ozadja"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:360
 #, kde-format
@@ -1593,7 +1593,7 @@ msgstr "Barva ozadja vnosne vrstice"
 #: kmuddy/dialogs/dlgappsettings.cpp:362
 #, kde-format
 msgid "&Text color"
-msgstr "&Barva besedila"
+msgstr "Barva besedila"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
@@ -1603,7 +1603,7 @@ msgstr "Barva besedila, ki ga vnesete v vnosno vrstico."
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr "&Zamenjaj vnašalko in krmilko+vnašalko pri večvrstičnem vnosu"
+msgstr "Zamenjaj vnašalko in krmilko+vnašalko pri večvrstičnem vnosu"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1629,7 +1629,7 @@ msgstr "Svetle barve"
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr "&Ločilni niz ukaza"
+msgstr "Ločilni niz ukaza"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -1643,7 +1643,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
-msgstr "Niz &hitre hoje"
+msgstr "Niz hitre hoje"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
@@ -1662,7 +1662,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
 msgid "S&peed-walk even if empty"
-msgstr "Ho&di hitro, čeprav je prazno"
+msgstr "Hodi hitro, čeprav je prazno"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:444
 #, kde-format
@@ -1698,7 +1698,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr "&Niz ponavljalnik"
+msgstr "Niz ponavljalnik"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1715,7 +1715,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
-msgstr "Niz pozo&rnosti"
+msgstr "Niz pozornosti"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
@@ -1733,7 +1733,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
 msgid "Send &as-is"
-msgstr "Pošlji &kot-je"
+msgstr "Pošlji kot-je"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:480
 #, kde-format
@@ -1747,7 +1747,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
 msgid "&Expand backslashes"
-msgstr "&Razširi leve poševnice"
+msgstr "Razširi leve poševnice"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:485
 #, kde-format
@@ -1761,7 +1761,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
 msgid "&Enable sounds globally"
-msgstr "Splošno &omogoči zvoke"
+msgstr "Splošno omogoči zvoke"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:510
 #, kde-format
@@ -1780,7 +1780,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
 msgid "Allow &downloading sounds"
-msgstr "Dovoli &prenos zvokov"
+msgstr "Dovoli prenos zvokov"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
@@ -1799,7 +1799,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
 #: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
 #: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:98
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
 #, kde-format
 msgid "Bold"
 msgstr "Krepko"
@@ -1808,7 +1808,7 @@ msgstr "Krepko"
 #: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
 #: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
 #: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:105
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
 #, kde-format
 msgid "Italic"
 msgstr "Ležeče"
@@ -1837,22 +1837,22 @@ msgstr "&Nov profil"
 #: kmuddy/dialogs/dlgconnect.cpp:65
 #, kde-format
 msgid "&Modify profile"
-msgstr "&Spremeni profil"
+msgstr "Spremeni profil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:66
 #, kde-format
 msgid "&Delete profile"
-msgstr "I&zbriši profil"
+msgstr "Izbriši profil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:67
 #, kde-format
 msgid "&Duplicate profile"
-msgstr "&Podvoji profil"
+msgstr "Podvoji profil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr "Ne &pošlji zaporedja prijave"
+msgstr "Ne pošlji zaporedja prijave"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1866,7 +1866,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
 msgid "&Offline editing"
-msgstr "&Urejanje brez povezave"
+msgstr "Urejanje brez povezave"
 
 #: kmuddy/dialogs/dlgconnect.cpp:80
 #, kde-format
@@ -1876,7 +1876,7 @@ msgstr "To omogoča urejanje profilov brez povezave."
 #: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
 #, kde-format
 msgid "&Connect"
-msgstr "&Poveži"
+msgstr "Poveži"
 
 #: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
 #, kde-format
@@ -1886,7 +1886,7 @@ msgstr "Vzpostavlja povezavo z določenimi parametri."
 #: kmuddy/dialogs/dlgconnect.cpp:89
 #, kde-format
 msgid "C&lose"
-msgstr "Za&pri"
+msgstr "Zapri"
 
 #: kmuddy/dialogs/dlgconnect.cpp:90
 #, kde-format
@@ -1948,7 +1948,7 @@ msgstr "Izpiši medpomnilnik izhoda"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
 msgid "&Start at current position"
-msgstr "&Začni na trenutnem položaju"
+msgstr "Začni na trenutnem položaju"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:45
 #, kde-format
@@ -1964,17 +1964,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
 #, kde-format
 msgid "&File:"
-msgstr "&Datoteka:"
+msgstr "Datoteka:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
 #, kde-format
 msgid "&Browse..."
-msgstr "Pre&brskaj ..."
+msgstr "Pre&brskaj..."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
 msgid "&Dump format:"
-msgstr "Oblika i&zpisa pomnilnika:"
+msgstr "Oblika izpisa pomnilnika:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
@@ -2000,7 +2000,7 @@ msgstr "Uredi profil"
 #: kmuddy/dialogs/dlgeditprofile.cpp:44
 #, kde-format
 msgid "Profile &name:"
-msgstr "I&me profila:"
+msgstr "Ime profila:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:46
 #, kde-format
@@ -2304,12 +2304,12 @@ msgstr "&Uporabi barvni izhod (če je na voljo)"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:70
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr "&Ne dovoli več kot 100 ponovitev ukazov"
+msgstr "Ne dovoli več kot 100 ponovitev ukazov"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
-msgstr "Omogoči &pogajanja telnet o zagonu"
+msgstr "Omogoči pogajanja telnet o zagonu"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:77
 #, kde-format
@@ -2323,7 +2323,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:81
 #, kde-format
 msgid "&Encoding:"
-msgstr "&Kodiranje:"
+msgstr "Kodiranje:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:84
 #, kde-format
@@ -2337,7 +2337,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr "&Samodejno priloži nove vrstice po pozivu"
+msgstr "S&amodejno priloži nove vrstice po pozivu"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:91
 #, kde-format
@@ -2351,7 +2351,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr "&Pokaži poziv v ločenem polju"
+msgstr "Pokaži poziv v ločenem polju"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
@@ -2361,7 +2361,7 @@ msgstr "Pokaži poziv v vrstici s&tanja"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr "Pokaži poziv v &konzoli"
+msgstr "Pokaži poziv v konzoli"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
@@ -2371,7 +2371,7 @@ msgstr "Zaženi napredni prepis, ko se začne seja"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "&North"
-msgstr "&Sever"
+msgstr "Sever"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2381,7 +2381,7 @@ msgstr "Seve&rovzhod"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
 msgid "&East"
-msgstr "&Vzhod"
+msgstr "Vzhod"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
@@ -2391,17 +2391,17 @@ msgstr "J&ugovzhod"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "&South"
-msgstr "&Jug"
+msgstr "Jug"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:127
 #, kde-format
 msgid "Sou&thwest"
-msgstr "Ju&gozahod"
+msgstr "Jugozahod"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
 msgid "&West"
-msgstr "&Zahod"
+msgstr "Zahod"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2411,7 +2411,7 @@ msgstr "Severoza&hod"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
 msgid "&Up"
-msgstr "&Gor"
+msgstr "Gor"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:128
 #, kde-format
@@ -2441,7 +2441,7 @@ msgstr "Privzeti imenik, kjer bomo iskali skripte."
 #: plugins/scripting/cscripteditor.cpp:78
 #, kde-format
 msgid "&Working directory"
-msgstr "&Delovna mapa"
+msgstr "Delovna mapa"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:162
 #, kde-format
@@ -2455,7 +2455,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
 msgid "&Transcripts directory"
-msgstr "Mapa &prepisov"
+msgstr "Mapa prepisov"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
@@ -2465,7 +2465,7 @@ msgstr "Imenik, v katerem bodo privzeto shranjeni prepisi sej."
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
 msgid "&Enable sounds for this profile"
-msgstr "&Omogoči zvoke za ta profil"
+msgstr "Omogoči zvoke za ta profil"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:191
 #, kde-format
@@ -2511,7 +2511,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
 msgid "Allow &mid-line MSP sequences"
-msgstr "Dovoli zaporedja MSP &sredi vrstice"
+msgstr "Dovoli zaporedja MSP sredi vrstice"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:205
 #, kde-format
@@ -2571,7 +2571,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:234
 #, kde-format
 msgid "MXP &variable prefix"
-msgstr "Pre&dpona spremenljivke MXP"
+msgstr "Predpona spremenljivke MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:237
 #, kde-format
@@ -2605,7 +2605,7 @@ msgstr "Hitra povezava"
 #: kmuddy/dialogs/dlgquickconnect.cpp:38
 #, kde-format
 msgid "&Host:"
-msgstr "&Gostitelj:"
+msgstr "Gostitelj:"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:41
 #, kde-format
@@ -2707,7 +2707,7 @@ msgstr "Napredno"
 #: kmuddy/dialogs/dlgtranscript.cpp:54
 #, kde-format
 msgid "&Enable basic transcript"
-msgstr "&Omogoči osnovni prepis"
+msgstr "Omogoči osnovni prepis"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:56
 #, kde-format
@@ -2726,12 +2726,12 @@ msgstr "Nastavitve prepisa"
 #: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
 #, kde-format
 msgid "Transcript &format"
-msgstr "&Oblika prepisa"
+msgstr "Oblika prepisa"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
 msgid "&Overwrite existing file"
-msgstr "&Prepiši obstoječo datoteko"
+msgstr "Prepiši obstoječo datoteko"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:76
 #, kde-format
@@ -2747,7 +2747,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
 msgid "Include buffer &dump"
-msgstr "Vključi izpis &medpomnilnika"
+msgstr "Vključi izpis medpomnilnika"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:80
 #, kde-format
@@ -2761,7 +2761,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
 msgid "Enable &advanced transcript"
-msgstr "Omogoči &napredni prepis"
+msgstr "Omogoči napredni prepis"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:110
 #, kde-format
@@ -2782,7 +2782,7 @@ msgstr "Napredne nastavitve prepisa"
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr "&Zamenjaj dnevnik vsak dan opolnoči"
+msgstr "Zamenjaj dnevnik vsak dan opolnoči"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
@@ -2793,7 +2793,7 @@ msgstr "Tako bo KMuddy vsak dan opolnoči zamenjal prepis sej"
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr "Predpni vrstice s &časovnim žigom"
+msgstr "Predpni vrstice s časovnim žigom"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
@@ -2823,102 +2823,102 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
 msgid "&List of output windows"
-msgstr "&Seznam izhodnih oken"
+msgstr "Seznam izhodnih oken"
 
 #: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
 msgid "&Show"
-msgstr "&Pokaži"
+msgstr "Pokaži"
 
 #: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Hide"
-msgstr "&Skrij"
+msgstr "Skrij"
 
 #: kmuddy/dialogs/dlgwindows.cpp:67
 #, kde-format
 msgid "&Delete"
-msgstr "I&zbriši"
+msgstr "Izbriši"
 
 #: kmuddy/kmuddy.cpp:241
 #, kde-format
 msgid "&Connect..."
-msgstr "&Poveži …"
+msgstr "Poveži…"
 
 #: kmuddy/kmuddy.cpp:248
 #, kde-format
 msgid "&QuickConnect..."
-msgstr "&Hitro poveži …"
+msgstr "Hitro poveži…"
 
 #: kmuddy/kmuddy.cpp:254
 #, kde-format
 msgid "&Disconnect"
-msgstr "Pre&kini povezavo"
+msgstr "Prekini povezavo"
 
 #: kmuddy/kmuddy.cpp:260
 #, kde-format
 msgid "&Reconnect"
-msgstr "Po&novno poveži"
+msgstr "Ponovno poveži"
 
 #: kmuddy/kmuddy.cpp:265
 #, kde-format
 msgid "Close &tab"
-msgstr "Zapri zavi&hek"
+msgstr "Zapri zavihek"
 
 #: kmuddy/kmuddy.cpp:274
 #, kde-format
 msgid "Paste &As"
-msgstr "Prilepi &kot"
+msgstr "Prilepi kot"
 
 #: kmuddy/kmuddy.cpp:283
 #, kde-format
 msgid "&Input"
-msgstr "V&hod"
+msgstr "Vhod"
 
 #: kmuddy/kmuddy.cpp:290
 #, kde-format
 msgid "Copy &Selection"
-msgstr "Kopiraj iz&bor"
+msgstr "Kopiraj izbor"
 
 #: kmuddy/kmuddy.cpp:296
 #, kde-format
 msgid "Enable command &parsing"
-msgstr "Omogoči &razčlenjevanje ukazov"
+msgstr "Omogoči razčlenjevanje ukazov"
 
 #: kmuddy/kmuddy.cpp:303
 #, kde-format
 msgid "Ca&ncel pending commands"
-msgstr "Prekliči &ukaze na čakanju"
+msgstr "Prekliči ukaze na čakanju"
 
 #: kmuddy/kmuddy.cpp:314
 #, kde-format
 msgid "Show &gaugebar"
-msgstr "Pokaži vrstico &merilnikov"
+msgstr "Pokaži vrstico merilnikov"
 
 #: kmuddy/kmuddy.cpp:327
 #, kde-format
 msgid "&Object Editor..."
-msgstr "&Urejevalnik predmetov ..."
+msgstr "Urejevalnik predmetov..."
 
 #: kmuddy/kmuddy.cpp:332
 #, kde-format
 msgid "&Output windows..."
-msgstr "&Izhodna okna ..."
+msgstr "Izhodna okna..."
 
 #: kmuddy/kmuddy.cpp:336
 #, kde-format
 msgid "A&liases enabled"
-msgstr "&Vzdevki omogočeni"
+msgstr "Vzdevki omogočeni"
 
 #: kmuddy/kmuddy.cpp:342
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr "&Sprožilci omogočeni"
+msgstr "Prožilniki omogočeni"
 
 #: kmuddy/kmuddy.cpp:348
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr "&Časovniki omogočeni"
+msgstr "Časovniki omogočeni"
 
 #: kmuddy/kmuddy.cpp:353
 #, kde-format
@@ -2928,7 +2928,7 @@ msgstr "Tip&ke za makre omogočene"
 #: kmuddy/kmuddy.cpp:358
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr "Nastavitve &MUD ..."
+msgstr "Nastavitve &MUD..."
 
 #: kmuddy/kmuddy.cpp:363
 #, kde-format
@@ -2938,32 +2938,32 @@ msgstr "&Shrani profil"
 #: kmuddy/kmuddy.cpp:370
 #, kde-format
 msgid "&Session transcript..."
-msgstr "&Prepis seje …"
+msgstr "Prepis seje…"
 
 #: kmuddy/kmuddy.cpp:375
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr "Izpiši &medpomnilnik izhoda ..."
+msgstr "Izpiši medpomnilnik izhoda..."
 
 #: kmuddy/kmuddy.cpp:379
 #, kde-format
 msgid "&Decision assistant"
-msgstr "&Pomočnik za odločanje"
+msgstr "Pomočnik za odločanje"
 
 #: kmuddy/kmuddy.cpp:393
 #, kde-format
 msgid "&Global settings..."
-msgstr "&Splošne nastavitve …"
+msgstr "Splošne nastavitve…"
 
 #: kmuddy/kmuddy.cpp:398
 #, kde-format
 msgid "&Plugins..."
-msgstr "&Vtičniki …"
+msgstr "Vtičniki…"
 
 #: kmuddy/kmuddy.cpp:403
 #, kde-format
 msgid "F&ull screen mode"
-msgstr "&Celozaslonski način"
+msgstr "Celozaslonski način"
 
 #: kmuddy/kmuddy.cpp:413
 #, kde-format
@@ -3017,38 +3017,38 @@ msgstr "Preklopi na zavihek %1"
 #: kmuddy/kmuddy.cpp:522
 #, kde-format
 msgid "&Connection"
-msgstr "&Povezava"
+msgstr "Povezava"
 
 #: kmuddy/kmuddy.cpp:523
 #, kde-format
 msgid "&Edit"
-msgstr "&Uredi"
+msgstr "Ur&edi"
 
 #. i18n: ectx: Menu (View)
 #: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
-msgstr "&Pogled"
+msgstr "Pogled"
 
 #: kmuddy/kmuddy.cpp:525
 #, kde-format
 msgid "&Profile"
-msgstr "Pro&fil"
+msgstr "&Profil"
 
 #: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Tools"
-msgstr "O&rodja"
+msgstr "Orodja"
 
 #: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Settings"
-msgstr "&Nastavitve"
+msgstr "Na&stavitve"
 
 #: kmuddy/kmuddy.cpp:528
 #, kde-format
 msgid "&Help"
-msgstr "Po&moč"
+msgstr "Pomoč"
 
 #: kmuddy/kmuddy.cpp:904
 #, kde-format
@@ -3514,7 +3514,7 @@ msgstr "Podpora za ikono sistemskega pladnja"
 #: libs/caliaseditor.cpp:88
 #, kde-format
 msgid "&Alias text"
-msgstr "Besedilo &vzdevka"
+msgstr "Besedilo vzdevka"
 
 #: libs/caliaseditor.cpp:106
 #, kde-format
@@ -3528,7 +3528,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr "&Nadomestna besedila"
+msgstr "Nadomestna besedila"
 
 #: libs/caliaseditor.cpp:122
 #, kde-format
@@ -3721,17 +3721,17 @@ msgstr "Napaka v vrstici %1, stolpcu %2: %3"
 #: libs/clisteditor.cpp:75
 #, kde-format
 msgid "&Apply changes"
-msgstr "&Uveljavi spremembe"
+msgstr "Uveljavi spremembe"
 
 #: libs/clisteditor.cpp:76
 #, kde-format
 msgid "&Undo changes"
-msgstr "&Razveljavi spremembe"
+msgstr "Razveljavi spremembe"
 
 #: libs/clisteditor.cpp:217
 #, kde-format
 msgid "&Enabled"
-msgstr "&Omogočeno"
+msgstr "Omogočeno"
 
 #: libs/clisteditor.cpp:222
 #, kde-format
@@ -3741,7 +3741,7 @@ msgstr "&Prioriteta"
 #: libs/clisteditor.cpp:224
 #, kde-format
 msgid "&Name"
-msgstr "I&me"
+msgstr "Ime"
 
 #: libs/clisteditor.cpp:286
 #, kde-format
@@ -4020,7 +4020,7 @@ msgstr "Pot"
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr "Pretvorni&k profila ..."
+msgstr "Pretvornik profila..."
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
@@ -4092,167 +4092,167 @@ msgstr "Spremeni velikost elementa"
 msgid "Level %1"
 msgstr "Raven %1"
 
-#: plugins/mapper/cmapmanager.cpp:123 plugins/mapper/cmapzonemanager.cpp:122
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
 msgstr "Zemljevid #1"
 
-#: plugins/mapper/cmapmanager.cpp:195
+#: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
 msgstr "Zemljevidnik: navodila"
 
-#: plugins/mapper/cmapmanager.cpp:198
+#: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
 msgstr "Zemljevidnik: gibanje/premiki"
 
-#: plugins/mapper/cmapmanager.cpp:201
+#: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
 msgstr "Zemljevidnik: barve"
 
-#: plugins/mapper/cmapmanager.cpp:204
+#: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
 msgstr "Zemljevidnik: hitra hoja"
 
-#: plugins/mapper/cmapmanager.cpp:409
+#: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
 msgid "Change Login Room"
 msgstr "Spremeni sobo za prijavo"
 
-#: plugins/mapper/cmapmanager.cpp:412
+#: plugins/mapper/cmapmanager.cpp:411
 #, kde-format
 msgid "Remove Login Room Status"
 msgstr "Odstrani stanje sobe za prijavo"
 
-#: plugins/mapper/cmapmanager.cpp:419
+#: plugins/mapper/cmapmanager.cpp:418
 #, kde-format
 msgid "Set Login Room Status"
 msgstr "Nastavi stanje sobe za prijavo"
 
-#: plugins/mapper/cmapmanager.cpp:451
+#: plugins/mapper/cmapmanager.cpp:450
 #, kde-format
 msgid "Change Current Room"
 msgstr "Spremeni trenutno sobo"
 
-#: plugins/mapper/cmapmanager.cpp:453
+#: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Remove Current Room Status"
 msgstr "Odstrani trenutno stanje sobe"
 
-#: plugins/mapper/cmapmanager.cpp:458
+#: plugins/mapper/cmapmanager.cpp:457
 #, kde-format
 msgid "Set Current Room Status"
 msgstr "Nastavi trenutno stanje sobe"
 
-#: plugins/mapper/cmapmanager.cpp:566
+#: plugins/mapper/cmapmanager.cpp:565
 #, kde-format
 msgid "Create Level"
 msgstr "Ustvari raven"
 
-#: plugins/mapper/cmapmanager.cpp:635
+#: plugins/mapper/cmapmanager.cpp:634
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
 msgstr "Ustvari sobo"
 
-#: plugins/mapper/cmapmanager.cpp:663 plugins/mapper/cmapmanager.cpp:692
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
 msgstr "Ustvari besedilo"
 
-#: plugins/mapper/cmapmanager.cpp:763
+#: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
 msgstr "Pot že obstaja na tem mestu"
 
-#: plugins/mapper/cmapmanager.cpp:763 plugins/mapper/cmapmanager.cpp:1447
-#: plugins/mapper/cmapmanager.cpp:1501 plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
 #: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
 msgstr "Zemljevidnik KMuddy"
 
-#: plugins/mapper/cmapmanager.cpp:776 plugins/mapper/cmapmanager.cpp:810
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
 msgstr "Ustvari pot"
 
-#: plugins/mapper/cmapmanager.cpp:856
+#: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
 msgid "Delete Level"
 msgstr "Izbriši raven"
 
-#: plugins/mapper/cmapmanager.cpp:890 plugins/mapper/cmapmanager.cpp:899
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
 #, kde-format
 msgid "Delete Element"
 msgstr "Izbriši element"
 
-#: plugins/mapper/cmapmanager.cpp:1447
+#: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
 msgstr "Hitra hoja je že v teku"
 
-#: plugins/mapper/cmapmanager.cpp:1501
+#: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr "Samodejni risalnik zemljevidov ni našel poti do zahtevane sobe"
 
-#: plugins/mapper/cmapmanager.cpp:1535
+#: plugins/mapper/cmapmanager.cpp:1532
 #, kde-format
 msgid "Speedwalk abort because move limit was reached"
 msgstr "Prekinitev hitre hoje, ker je bila dosežena omejitev premikanja"
 
-#: plugins/mapper/cmapmanager.cpp:1634
+#: plugins/mapper/cmapmanager.cpp:1631
 #, kde-format
 msgid "Move Elements in map"
 msgstr "Premakni elemente na zemljevidu"
 
-#: plugins/mapper/cmapmanager.cpp:1643
+#: plugins/mapper/cmapmanager.cpp:1640
 #, kde-format
 msgid "Make Path Two-Way"
 msgstr "Naredi pot dvosmerno"
 
-#: plugins/mapper/cmapmanager.cpp:1653
+#: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
 msgstr "Naredi pot enosmerno"
 
-#: plugins/mapper/cmapmanager.cpp:1689 plugins/mapper/cmapmanager.cpp:1698
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
 msgstr "Spremeni lastnost elementa"
 
-#: plugins/mapper/cmapmanager.cpp:1771
+#: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
 msgid "Root Zone"
 msgstr "Izhodiščno območje"
 
-#: plugins/mapper/cmapmanager.cpp:1787
+#: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
 msgstr "Preskusna soba 1"
 
-#: plugins/mapper/cmapmanager.cpp:1790
+#: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
 msgstr "Preskusna soba 2"
 
-#: plugins/mapper/cmapmanager.cpp:1793
+#: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
 msgstr "Preskusna soba 3"
 
-#: plugins/mapper/cmapmanager.cpp:1796
+#: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
 msgstr "Preskusna soba 4"
 
-#: plugins/mapper/cmapmanager.cpp:1812
+#: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
 msgid "Set Special Exit"
 msgstr "Nastavi poseben izhod"
@@ -4291,7 +4291,7 @@ msgstr "Samodejno ustvari"
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
 msgid "&Grid"
-msgstr "&Mreža"
+msgstr "Mreža"
 
 #: plugins/mapper/cmapview.cpp:127
 #, kde-format
@@ -4331,63 +4331,63 @@ msgstr "Kartografiraj spodnjo raven"
 #: plugins/mapper/cmapview.cpp:165
 #, kde-format
 msgid "Set &Current Position"
-msgstr "Nastavi &trenutni položaj"
+msgstr "Nastavi trenutni položaj"
 
 #: plugins/mapper/cmapview.cpp:169
 #, kde-format
 msgid "Set Room to &Login Point"
-msgstr "Nastavi sobo na &točko prijave"
+msgstr "Nastavi sobo na točko prijave"
 
 #: plugins/mapper/cmapview.cpp:173
 #, kde-format
 msgid "&Speed walk to room"
-msgstr "&Hitra hoja v sobo"
+msgstr "Hitra hoja v sobo"
 
 #: plugins/mapper/cmapview.cpp:177
 #, kde-format
 msgid "&Delete room"
-msgstr "I&zbriši sobo"
+msgstr "Izbriši sobo"
 
 #: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
 #: plugins/mapper/cmapview.cpp:226
 #, kde-format
 msgid "&Properties"
-msgstr "&Lastnosti"
+msgstr "Lastnosti"
 
 #: plugins/mapper/cmapview.cpp:189
 #, kde-format
 msgid "&Delete Text"
-msgstr "I&zbriši besedilo"
+msgstr "Izbriši besedilo"
 
 #: plugins/mapper/cmapview.cpp:201
 #, kde-format
 msgid "&One way"
-msgstr "&Enosmerno"
+msgstr "En&osmerno"
 
 #: plugins/mapper/cmapview.cpp:205
 #, kde-format
 msgid "&Two way"
-msgstr "&Dvosmerno"
+msgstr "Dvosmerno"
 
 #: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
-msgstr "&Dodaj ovinek"
+msgstr "Dod&aj ovinek"
 
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
 msgid "&Remove Segment"
-msgstr "&Odstrani odsek"
+msgstr "Odst&rani odsek"
 
 #: plugins/mapper/cmapview.cpp:217
 #, kde-format
 msgid "&Edit Bends"
-msgstr "&Uredi ovinke"
+msgstr "Ur&edi ovinke"
 
 #: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
-msgstr "I&zbriši pot"
+msgstr "Izbriši pot"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:231
@@ -4406,7 +4406,7 @@ msgstr "Po meri"
 #: plugins/mapper/cmapview.cpp:243
 #, kde-format
 msgid "&Label"
-msgstr "&Oznaka"
+msgstr "Oznaka"
 
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
@@ -4749,8 +4749,7 @@ msgstr "Dvosmerni izhod"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
 msgstr "Navaden izhod"
 
@@ -4848,8 +4847,7 @@ msgstr "Navodila za pot na cilj"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
 msgstr "Posebni izhod"
 
@@ -4903,7 +4901,7 @@ msgstr "Ukazi od cilja proti izhodišču"
 #. i18n: ectx: property (text), widget (QPushButton, cmdOK)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:461
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
 #, kde-format
 msgid "OK"
 msgstr "V redu"
@@ -4911,7 +4909,7 @@ msgstr "V redu"
 #. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:471
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
@@ -4932,7 +4930,7 @@ msgstr "Lastnosti sobe"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
 #, kde-format
 msgid "&Description"
-msgstr "&Opis"
+msgstr "Opis"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLabel)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
@@ -4950,7 +4948,7 @@ msgstr "Opis:"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
 #, kde-format
 msgid "&Appearance"
-msgstr "Vi&dez"
+msgstr "Videz"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
@@ -4980,7 +4978,7 @@ msgstr "Položaj oznake"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr "&Izhodi"
+msgstr "Izhodi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
@@ -5016,7 +5014,7 @@ msgstr "Lastnosti"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:533
 #, kde-format
 msgid "&Contents"
-msgstr "Vs&ebina"
+msgstr "Vsebina"
 
 #. i18n: ectx: property (text), widget (QLabel, lblContents)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
@@ -5073,104 +5071,104 @@ msgid "Delay before sending next command (centi secconds)"
 msgstr "Zakasnitev pred pošiljanjem naslednjega ukaza (centisekunde)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:17
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
 #, kde-format
 msgid "Text Properties"
 msgstr "Lastnosti besedila"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:30
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
-msgstr "&Pisava"
+msgstr "Pisava"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:58
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
 #, kde-format
 msgid "Family:"
 msgstr "Družina:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblColor_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:120
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
 #, kde-format
 msgid "Color:"
 msgstr "Barva:"
 
 #. i18n: ectx: property (text), widget (KColorButton, cmdColor)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:142
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
 #, kde-format
 msgid "Button"
 msgstr "Gumb"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:172
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
 #, kde-format
 msgid "S&ize"
-msgstr "V&elikost:"
+msgstr "Velikost"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:192
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
 #, kde-format
 msgid "Actual Size "
-msgstr "Dejanska velikost"
+msgstr "Dejanska velikost "
 
 #. i18n: ectx: property (text), widget (QLabel, Width_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:222
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
 #, kde-format
 msgid "Width (pixels):"
 msgstr "Širina (slik. točke):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:232
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
 #, kde-format
 msgid "Height (pixels):"
 msgstr "Višina (slik. točke):"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:257
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
 msgstr "Velikost pisave"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:303
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
 msgstr "Vnesite velikost pisave:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:349
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
 #, kde-format
 msgid "Set Size"
 msgstr "Nastavi velikost"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:382
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
 msgstr "Besedilo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:394
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
 #, kde-format
 msgid "Text:"
 msgstr "Besedilo:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPreview)
-#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:411
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
 #, kde-format
 msgid "Preview:"
 msgstr "Predogled:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:29
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
 #, kde-format
 msgid "Speedwalk Progress"
 msgstr "Napredek hitre hoje"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
-#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:47
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
 #, kde-format
 msgid "x"
 msgstr "x"
@@ -5178,7 +5176,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:70
 #, kde-format
 msgid "Show &mapper"
-msgstr "Pokaži &zemljevidnika"
+msgstr "Pokaži zemljevidnika"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
@@ -5230,7 +5228,7 @@ msgstr "Oprostite, skript z enojnim primerkom."
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr "I&me skripta"
+msgstr "Ime skripta"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
@@ -5240,7 +5238,7 @@ msgstr "Ime tega skripta."
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
 msgid "&Command to execute"
-msgstr "&Ukaz, ki naj se izvrši"
+msgstr "Ukaz, ki naj se izvede"
 
 #: plugins/scripting/cscripteditor.cpp:73
 #, kde-format
@@ -5362,17 +5360,17 @@ msgstr "Izvajanje skriptov"
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr "&Izvajanje skriptov"
+msgstr "Izvajanje skriptov"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
 msgid "&Terminate"
-msgstr "&Zaključi"
+msgstr "Zaključi"
 
 #: plugins/scripting/dlgrunninglist.cpp:54
 #, kde-format
 msgid "&Kill"
-msgstr "&Ubij"
+msgstr "Ubij"
 
 #: plugins/scripting/scriptingplugin.cpp:62
 #, kde-format
@@ -5392,7 +5390,7 @@ msgstr "Ime spremenljivke, na katero bo reagiral sprožilec."
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
 msgid "&Commands"
-msgstr "&Ukazi"
+msgstr "Ukazi"
 
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
