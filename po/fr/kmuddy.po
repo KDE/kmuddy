@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-13 01:47+0000\n"
-"PO-Revision-Date: 2024-03-28 09:04+0100\n"
+"PO-Revision-Date: 2024-05-13 08:58+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -4846,10 +4846,9 @@ msgstr "Sortie bidirectionnelle"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
-msgstr "Sortie normale"
+msgstr "Sortie nor&male"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4945,10 +4944,9 @@ msgstr "Direction de destination"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Sortie spéciale"
+msgstr "Sortie spéc&iale"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
