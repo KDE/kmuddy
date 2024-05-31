@@ -1,15 +1,15 @@
 # translation of kmuddy.pot to Esperanto
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kmuddy package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-13 01:47+0000\n"
-"PO-Revision-Date: 2024-05-12 23:22+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-30 22:41+0200\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
 #: kmuddy/cstatusvareditor.cpp:70
@@ -1322,7 +1322,7 @@ msgstr "Aŭtomate konekti al:"
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr "Defaŭlta fonkoloro"
+msgstr "Defaŭlta &fonkoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
@@ -1332,7 +1332,7 @@ msgstr "Ĉi tiu koloro estos uzata kiel norma fonkoloro."
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr "Defaŭlta tekstkoloro"
+msgstr "Defaŭlta &tekstkoloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
@@ -1585,7 +1585,7 @@ msgstr "Ŝprucfenestro-listkesto"
 #: kmuddy/dialogs/dlgappsettings.cpp:357
 #, kde-format
 msgid "&Background color"
-msgstr "Fona koloro"
+msgstr "&Fona koloro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:360
 #, kde-format
@@ -2924,7 +2924,7 @@ msgstr "Tri&ggers ebligitaj"
 #: kmuddy/kmuddy.cpp:348
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr "Temporizistoj ebligitaj"
+msgstr "T&empumiloj ebligitaj"
 
 #: kmuddy/kmuddy.cpp:353
 #, kde-format
@@ -5117,7 +5117,7 @@ msgstr "Reala Grandeco"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
 #, kde-format
 msgid "Width (pixels):"
-msgstr "Larĝo (pikseloj):"
+msgstr "Larĝo (rastrumeroj):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
