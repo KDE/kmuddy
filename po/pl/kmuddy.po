@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2011, 2014, 2015, 2019, 2020, 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2014, 2015, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-13 01:47+0000\n"
-"PO-Revision-Date: 2022-04-10 08:58+0200\n"
+"PO-Revision-Date: 2024-07-21 13:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -107,16 +108,14 @@ msgid "Disconnect"
 msgstr "Rozłącz"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Brak połączenia"
+msgstr "Zamknij połączenie"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Połączony"
+msgstr "Pozostań połączonym"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -2051,8 +2050,7 @@ msgid "&Port:"
 msgstr "&Port:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
-#, fuzzy, kde-format
-#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr "Podaj port, na którym działa MUD (zazwyczaj pewien 4 cyfrowy numer)."
 
@@ -2080,8 +2078,7 @@ msgstr ""
 "Tutaj podaj swoje hasło na MUD.<p><i>Ustawienie to jest opcjonalne.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
 msgstr "Sekwencja połą&czenia"
@@ -3086,7 +3083,7 @@ msgstr "Aby połączyć ponownie, naciśnij %1 lub użyj Połącz / Rozłącz."
 #: kmuddy/kmuddy.cpp:990
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Aktywność w oknie KMuddy"
 
 #: kmuddy/kmuddy.cpp:1162
 #, kde-format
@@ -3840,10 +3837,9 @@ msgid "Please enter the group name:"
 msgstr "Proszę podać nazwę grupy:"
 
 #: libs/clistviewer.cpp:196
-#, fuzzy, kde-format
-#| msgid "Cannot create the group, as a group with this name already exists."
+#, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr "Nie można utworzyć grupy, jako że grupa o tej nazwie już istnieje."
+msgstr "Nie można utworzyć grupy, bo wpisana nazwa jest nieprawidłowa."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
@@ -4441,10 +4437,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "Nie ma poziomu w tym kierunku. Czy chcesz utworzyć nowy poziom?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Utwórz poziom"
+msgstr "Utwórz nowy poziom"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -4776,10 +4771,9 @@ msgstr "Dustronne wyjście"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
-msgstr "Normalne wyjście"
+msgstr "Nor&malne wyjście"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4875,10 +4869,9 @@ msgstr "Kierunki docelowe"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Specjalne wyjście"
+msgstr "Szczególne wyjśc&ie"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
