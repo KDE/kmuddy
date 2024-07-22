@@ -10,6 +10,7 @@
         "Description[it]": "Estensione per eseguire test",
         "Description[ka]": "დამატების დატესტვა",
         "Description[nl]": "Plug-in voor testen",
+        "Description[pl]": "Wtyczka próbna",
         "Description[sl]": "Testiranje vtičnika",
         "Description[sv]": "Testinsticksprogram",
         "Description[tr]": "Sınama eklentileri",
@@ -25,6 +26,7 @@
         "Name[fr]": "Tester",
         "Name[gl]": "Proba",
         "Name[ka]": "შემოწმება",
+        "Name[pl]": "Próba",
         "Name[tr]": "Sınama",
         "Name[uk]": "Тест",
         "Name[x-test]": "xxTestxx"
