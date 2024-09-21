@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QLabel>
 #include <QTimer>
 #include <QVBoxLayout>
+#include <KLocalizedString>
 
 struct cScriptEditor::Private {
   KTextEdit *script;
@@ -42,6 +43,8 @@ cScriptEditor::cScriptEditor (QWidget *parent) : QWidget (parent)
   QVBoxLayout *scriptlayout = new QVBoxLayout (this);
 
   d->script = new KTextEdit (this);
+  d->script->setToolTip (i18n ("Enter your script here."));
+  d->script->setWhatsThis (i18n ("Enter a Javascript script that will be executed when the object is triggered.<br /><br />The following routines are available in the script in addition to standard Javascript tools:<br /><br /><b>window.message(text)</b> - display a message<br /><b>window.send(command)</b> - send a command<br /><b>window.sendraw(command)</b> - send a command with no processing<br /><b>window.get(name)</b> - retrieve the value of a variable<br /><b>window.set(name, value)</b> - set the value of a variable<br /><br />You can also use the following variables: <b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"));
   d->scriptError = new QLabel (this);
   d->scriptChecker = new QTimer (this);
   d->scriptChecker->setSingleShot (true);
