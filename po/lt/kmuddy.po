@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-13 01:47+0000\n"
+"POT-Creation-Date: 2024-09-22 01:49+0000\n"
 "PO-Revision-Date: 2011-02-26 03:58+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -3712,6 +3712,25 @@ msgstr ""
 #: libs/cprofilemanager.cpp:74
 #, kde-format
 msgid "Login name"
+msgstr ""
+
+#: libs/cscripteditor.cpp:46
+#, kde-format
+msgid "Enter your script here."
+msgstr ""
+
+#: libs/cscripteditor.cpp:47
+#, kde-format
+msgid ""
+"Enter a Javascript script that will be executed when the object is triggered."
+"<br /><br />The following routines are available in the script in addition "
+"to standard Javascript tools:<br /><br /><b>window.message(text)</b> - "
+"display a message<br /><b>window.send(command)</b> - send a command<br /"
+"><b>window.sendraw(command)</b> - send a command with no processing<br /"
+"><b>window.get(name)</b> - retrieve the value of a variable<br /><b>window."
+"set(name, value)</b> - set the value of a variable<br /><br />You can also "
+"use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
+"matched, line, matches[]</b>"
 msgstr ""
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
