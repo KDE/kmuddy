@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-12 12:18+0200\n"
+"PO-Revision-Date: 2024-09-22 11:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3999,7 +3999,7 @@ msgstr "Nome de persoa usuaria"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Insira o guión aquí."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4014,6 +4014,17 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Insira un guión de Javascript para executar ao dispararse o obxecto.<br /"
+"><br />As seguintes rutinas están dispoñíbeis no guión, ademais das "
+"ferramentas estándar de Javascript:<br /><br /><b>window.message(text)</b>: "
+"amosar unha mensaxe.<br /><b>window.send(command)</b>: enviar unha orde.<br /"
+"><b>window.sendraw(command)</b>: enviar unha orde sen procesamento.<br /"
+"><b>window.get(name)</b>: obter o valor dunha variábel.<br /><b>window."
+"set(name, value)</b>: definir o valor dunha variábel.<br /><br />Tamén pode "
+"usar as seguintes variábeis: <b>prefix</b> (prefixo), <b>prefixfull</b> "
+"(prefixo completo), <b>suffix</b> (sufixo), <b>suffixfull</b> (sufixo "
+"completo), <b>matched</b> (coincidencia), <b>line</b> (liña), <b>matches[]</"
+"b> (coincidencias)."
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format

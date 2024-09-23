@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-12 14:51+0200\n"
+"PO-Revision-Date: 2024-09-22 13:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -4000,7 +4000,7 @@ msgstr "Aanmeldnaam"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Voer hier uw script in."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4015,6 +4015,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Voer een Javascript script in dat uitgevoerd zal worden wanneer het object "
+"wordt gestart.<br /><br />De volgende routines zijn beschikbaar in het "
+"script naast standaard hulpmiddelen van Javascript:<br /><br /><b>window."
+"message(text)</b> - toont een melding<br /><b>window.send(command)</b> - "
+"stuurt een commando<br /><b>window.sendraw(command)</b> - stuurt een "
+"commando zonder verwerking<br /><b>window.get(name)</b> - haalt de waarde op "
+"van een variabele<br /><b>window.set(name, waarde)</b> - stelt de waarde van "
+"een variabele in<br /><br />U kunt ook de volgende variabelen gebruiken: "
+"<b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format

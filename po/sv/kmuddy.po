@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-12 06:25+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"PO-Revision-Date: 2024-09-22 09:06+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -3959,7 +3959,7 @@ msgstr "Inloggningsnamn"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Ange ditt skript här."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -3974,6 +3974,14 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Ange ett Javascript-skript körs när objektet utlöses.<br /><br />Följande "
+"rutiner finns tillgängliga i skriptet förutom vanliga Javascript-verktyg:"
+"<br /><br /><b>window.message(text)</b> - visa ett meddelande<br /><b>window."
+"send(kommando)</b> - skicka ett kommando<br /><b>window.sendraw(kommando)</"
+"b> - skicka ett kommando utan bearbetning<br /><b>window.get(namn)</b> - "
+"hämta värdet på en variabel<br /><b>window.set(namn, värde)</b> - tilldela "
+"värde till en variabel<br /><br />Du kan också använda följande variabler: "
+"<b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format

@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-12 08:28+0300\n"
+"PO-Revision-Date: 2024-09-22 09:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4030,7 +4030,7 @@ msgstr "Ім’я користувача"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Тут ви можете ввести свій скрипт."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4045,6 +4045,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Введіть скрипт Javascript, який буде виконано, коли буде задіяно об'єкт.<br /"
+"><br />У скрипті можна скористатися такими підпрограмами на додачу до "
+"стандартних інструментів Javascript:<br /><br /><b>window.message(текст)</b> "
+"— показати повідомлення<br /><b>window.send(команда)</b> — надіслати "
+"команду<br /><b>window.sendraw(команда)</b> — надіслати команду без "
+"обробки<br /><b>window.get(назва)</b> — отримати значення змінної<br /"
+"><b>window.set(назва, значення)</b> — встановити значення змінної<br /><br /"
+">Також можна скористатися такими змінними: <b>prefix, prefixfull, suffix, "
+"suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format

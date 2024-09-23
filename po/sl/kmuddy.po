@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-12 07:04+0200\n"
+"PO-Revision-Date: 2024-09-22 06:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3961,7 +3961,7 @@ msgstr "Prijavno ime"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Tukaj vnesite svoj skript."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -3976,6 +3976,14 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Vnesite skript Javascript, ki se bo izvedel, ko je objekt sprožen.<br /><br /"
+">Poleg standardnih orodij Javascript so v skriptu na voljo naslednje rutine:"
+"<br /><br /><b>window.message(text)</b> - prikaže sporočilo<br /><b>window."
+"send(command)</b> - pošlje ukaz<br /><b>window.sendraw(command)</b> - pošlji "
+"ukaz brez obdelave<br /><b>window.get(name)</b> - pridobi vrednost "
+"spremenljivke<br /><b>window.set(name, value)</b> - nastavite vrednost "
+"spremenljivke<br /><br />Uporabite lahko tudi naslednje spremenljivke: "
+"<b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
