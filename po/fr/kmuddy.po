@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-13 08:58+0200\n"
+"PO-Revision-Date: 2024-09-23 17:49+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Text-Markup: kde4\n"
 
 # Xavier : Convention Room(domaine), Caption (Légende)
@@ -4052,7 +4052,7 @@ msgstr "Nom de connexion"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Saisissez votre script ici."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4067,6 +4067,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Saisissez un script en Javascript qui sera exécuté lorsque l’objet est "
+"déclenchée. <br /><br />Les routines suivantes sont disponibles dans le "
+"script en plus des outils standards pour Javascript :<br /><br /><b>window."
+"message(text)</b> - Afficher un message<br /><b>window.send(command)</b> - "
+"Envoyer une commande<br /><b>window.sendraw(command)</b> - Envoyer une "
+"commande sans traitement<br /><b>window.get(name)</b> - Rechercher la valeur "
+"d'une variable<br /><b>window.set(name, value)</b> - Définir la valeur d'une "
+"variable<br /><br />Vous pouvez aussi utiliser les variables suivantes : "
+"<b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
