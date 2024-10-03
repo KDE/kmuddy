@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-18 21:59+0200\n"
+"PO-Revision-Date: 2024-09-23 14:10+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -4001,7 +4001,7 @@ msgstr "Nome di accesso"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Inserisci il tuo script qui."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4016,6 +4016,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Inserisci uno script Javascript che verrà eseguito quando l'oggetto viene "
+"attivato.<br /><br />Nello script sono disponibili le seguenti routine, in "
+"aggiunta agli strumenti Javascript standard:<br /><br /><b>window."
+"message(testo)</b> - visualizza un messaggio<br /><b>window.send(comando)</"
+"b> - invia un comando<br /><b>window.sendraw(comando)</b> - invia un comando "
+"senza elaborazione<br /><b>window.get(nome)</b> - recupera il valore di una "
+"variabile<br /><b>window.set(nome, valore)</b> - imposta il valore di una "
+"variabile<br /><br />Puoi anche usare le variabili seguenti: <b>prefix, "
+"prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
