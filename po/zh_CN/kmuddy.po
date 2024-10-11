@@ -795,7 +795,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
 #, kde-format
 msgid "Case sensitive"
-msgstr "不区分大小写"
+msgstr "区分大小写"
 
 #: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:185
 #, kde-format
