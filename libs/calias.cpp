@@ -226,3 +226,5 @@ void cAlias::executeAlias ()
 }
 
 
+
+#include "moc_calias.cpp"
