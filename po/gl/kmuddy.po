@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-12-15 23:40+0100\n"
+"PO-Revision-Date: 2024-12-17 22:38+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -2813,7 +2813,7 @@ msgstr "Configuración da transcrición avanzada"
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr "&Rotar o historial a medianoite"
+msgstr "&Rotar o rexistro a medianoite."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
@@ -2839,7 +2839,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
 msgid "Log name format"
-msgstr "Formato do nome do historial"
+msgstr "Formato do nome do rexistro"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:142
 #, kde-format
@@ -2848,7 +2848,7 @@ msgid ""
 "world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
 "combination of alpha-numeric characters."
 msgstr ""
-"Aquí pode indicar o formato do historial. Pode usar as seguintes opcións: $W "
+"Aquí pode indicar o formato do rexistro. Pode usar as seguintes opcións: $W "
 "- nome do mundo, $h - hora, $m - minuto, $D - día, $M - mes, $Y - ano, e "
 "calquera combinación de letras e números."
 
@@ -3228,12 +3228,12 @@ msgstr "/omove: o grupo non existe."
 #: kmuddy/macros.cpp:509
 #, kde-format
 msgid "/omove: target must be a group."
-msgstr "/omove: o elemento de destino debe ser un grupo."
+msgstr "/omove: o destino debe ser un grupo."
 
 #: kmuddy/macros.cpp:513
 #, kde-format
 msgid "/omove: object and target must be in the same list."
-msgstr "/omove: o obxecto e o elemento de destino deben estar na mesma lista."
+msgstr "/omove: o obxecto e o destino deben estar na mesma lista."
 
 #: kmuddy/macros.cpp:525
 #, kde-format
@@ -3850,6 +3850,7 @@ msgstr "Crear un grupo"
 msgid "Please enter the group name:"
 msgstr "Insira o nome do grupo:"
 
+# skip-rule: trasno-provide
 #: libs/clistviewer.cpp:196
 #, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
