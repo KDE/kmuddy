@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-09-22 10:51+0200\n"
+"PO-Revision-Date: 2024-12-26 11:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1171,7 +1171,7 @@ msgstr "Àrea de sortida"
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
 msgid "Font"
-msgstr "Tipus de lletra"
+msgstr "Lletra"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
@@ -1462,7 +1462,7 @@ msgstr "Tria..."
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
 msgstr ""
-"Aquí podeu seleccionar un tipus de lletra que s'usarà per a la visualització "
+"Aquí podeu seleccionar una lletra que s'usarà per a la visualització "
 "principal."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:282
@@ -1474,8 +1474,7 @@ msgstr "Lín&ia d'entrada"
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
 msgstr ""
-"Aquí podeu seleccionar un tipus de lletra que s'usarà per a la línia "
-"d'entrada."
+"Aquí podeu seleccionar una lletra que s'usarà per a la línia d'entrada."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
@@ -1487,8 +1486,8 @@ msgstr "Línia d'entrada &múltiple"
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
-"Aquí podeu seleccionar un tipus de lletra que s'usarà per a la finestra "
-"d'entrada múltiple."
+"Aquí podeu seleccionar una lletra que s'usarà per a la finestra d'entrada "
+"múltiple."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
@@ -5154,7 +5153,7 @@ msgstr "Propietats del text"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
-msgstr "&Tipus de lletra"
+msgstr "&Lletra"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
@@ -5202,13 +5201,13 @@ msgstr "Alçada (píxels):"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
-msgstr "Mida del tipus de lletra"
+msgstr "Mida de la lletra"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
-msgstr "Introduïu la mida del tipus de lletra:"
+msgstr "Introduïu la mida de la lletra:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
