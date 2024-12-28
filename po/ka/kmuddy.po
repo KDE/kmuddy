@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-12-26 17:42+0100\n"
+"PO-Revision-Date: 2024-12-27 05:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -403,12 +403,12 @@ msgstr "&არსებული ტექსტის გადაწერა
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr ""
+msgstr "თუ შეყვანის ხაზში ტექსტი უკვე არსებობს, გადავაწერო მას?"
 
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
 msgid "Variable displayed by this status variable."
-msgstr ""
+msgstr "ამ სტატუსის ცვლადის მიერ ნაჩვენები ცვლადი."
 
 #: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
@@ -425,7 +425,7 @@ msgstr ""
 #: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
 #, kde-format
 msgid "--- A connection has been established ---"
-msgstr ""
+msgstr "--- კავშირი დამყარდა ---"
 
 #: kmuddy/ctelnet.cpp:246
 #, kde-format
@@ -435,7 +435,7 @@ msgstr "დაკავშირება..."
 #: kmuddy/ctelnet.cpp:1070
 #, kde-format
 msgid "The remote server has been found, attempting connection."
-msgstr ""
+msgstr "დაშორებული სერვერი აღმოჩენილია. მიმდინარეობს დაკავშირების მცდელობა."
 
 #: kmuddy/ctimer.cpp:78
 #, kde-format
@@ -472,12 +472,12 @@ msgstr "&ერთჯერადი"
 #: kmuddy/ctimereditor.cpp:82
 #, kde-format
 msgid "When enabled, the timer will only be executed once and then disabled."
-msgstr ""
+msgstr "თუ ჩართულია, ტაიმერი, მხოლოდ, ერთხელ შესრულდება და შემდეგ გაითიშება."
 
 #: kmuddy/ctimereditor.cpp:84
 #, kde-format
 msgid "&Run a command in advance"
-msgstr ""
+msgstr "ბრძანების გაშვება წინასწა&რ"
 
 #: kmuddy/ctimereditor.cpp:85
 #, kde-format
@@ -509,62 +509,62 @@ msgstr ""
 #: kmuddy/ctranscript.cpp:173
 #, kde-format
 msgid "Session transcript has been stopped."
-msgstr ""
+msgstr "სესიის ტრანსკრიფცია გაჩერდა."
 
 #: kmuddy/ctranscript.cpp:207
 #, kde-format
 msgid "Advanced session transcript has been stopped."
-msgstr ""
+msgstr "დამატებითი სესიის ტრანსკრიფცია გაჩერდა."
 
 #: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Transcript file could not be opened."
-msgstr ""
+msgstr "ტრანსკრიფციის ფაილის გახსნა შეუძლებელია."
 
 #: kmuddy/ctranscript.cpp:259
 #, kde-format
 msgid "Session transcript could not be started."
-msgstr ""
+msgstr "სესიის ტრანსკრიფციის გაშვება შეუძლებელია."
 
 #: kmuddy/ctranscript.cpp:278
 #, kde-format
 msgid "Session transcript has just started."
-msgstr ""
+msgstr "სესიის ტრანსკრიფცია გაეშვა."
 
 #: kmuddy/ctranscript.cpp:287
 #, kde-format
 msgid "Session transcript has been started."
-msgstr ""
+msgstr "სესიის ტრანსკრიფცია გაშვებულია."
 
 #: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced transcript file could not be opened."
-msgstr ""
+msgstr "დამატებითი ტრანსკრიფციის ფაილის გახსნა შეუძლებელია."
 
 #: kmuddy/ctranscript.cpp:315
 #, kde-format
 msgid "Advanced session transcript could not be started."
-msgstr ""
+msgstr "დამატებითი სესიის ტრანსკრიფციის გაშვება შეუძლებელია."
 
 #: kmuddy/ctranscript.cpp:331
 #, kde-format
 msgid "Advanced session transcript has just started."
-msgstr ""
+msgstr "დამატებითი სესიის ტრანსკრიფცია გაეშვა."
 
 #: kmuddy/ctranscript.cpp:336
 #, kde-format
 msgid "Advanced session transcript has been started."
-msgstr ""
+msgstr "დამატებითი სესიის ტრანსკრიფცია გაეშვა."
 
 #: kmuddy/ctranscript.cpp:340
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
-msgstr ""
+msgstr "სესიის ტრანსკრიფცია შუაღამისას თავიდან დაიწყება."
 
 #: kmuddy/ctranscript.cpp:426
 #, kde-format
 msgid "Dump file could not be opened."
-msgstr ""
+msgstr "დამპის ფაილის გახსნა შეუძლებელია."
 
 #: kmuddy/ctriggereditor.cpp:114
 #, kde-format
@@ -699,7 +699,7 @@ msgstr "&ტრიგერი ტექსტი"
 #: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
 msgid "Command that will be replaced if you enter it."
-msgstr ""
+msgstr "ბრძანება, რომელიც ჩანაცვლდება, თუ მას შეიყვანთ."
 
 #: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
 #, kde-format
@@ -743,12 +743,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr ""
+msgstr "&გასაგზავნი ბრძანება:"
 
 #: kmuddy/ctriggereditor.cpp:199
 #, kde-format
 msgid "Command(s) that will replace command you've entered."
-msgstr ""
+msgstr "ბრძანებ(ებ)-ი, რომლებიც ჩაანაცვლებენ ბრძანებას, რომელიც შეიყვანეთ."
 
 #: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
 #, kde-format
@@ -826,7 +826,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
 msgid "Global matching"
-msgstr ""
+msgstr "გლობალური დამთხვევა"
 
 #: kmuddy/ctriggereditor.cpp:265
 #, kde-format
@@ -925,7 +925,7 @@ msgstr "ტექსტის გადაწერა"
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
-msgstr ""
+msgstr "ხაზის ამ ნაწილის შე&ცვლა:"
 
 #: kmuddy/ctriggereditor.cpp:401
 #, kde-format
@@ -988,12 +988,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:464
 #, kde-format
 msgid "Send output to a separate window"
-msgstr ""
+msgstr "გამოსავლის გაგზავნა ცალკე ფანჯარაში"
 
 #: kmuddy/ctriggereditor.cpp:465
 #, kde-format
 msgid "This will send the matched text to a separate output window"
-msgstr ""
+msgstr "ეს დამთხვეულ ტექსტს ცალკე გამოტანის ფანჯარაში გააგზავნის"
 
 #: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
 #, kde-format
@@ -1040,12 +1040,12 @@ msgstr "გამოტანის ფანჯრები"
 #: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr ""
+msgstr "ეს ტექსტი არ ემთხვევა თქვენს ტრიგერს."
 
 #: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
-msgstr ""
+msgstr "ეს ტექსტი შეესაბამება თქვენს ტრიგერს."
 
 #: kmuddy/ctriggereditor.cpp:580
 #, kde-format
@@ -1144,7 +1144,7 @@ msgstr "მალსახმობები"
 #: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr ""
+msgstr "ჩანართების &ზოლის ჩვენება მაშინაც კი, როცა ის საჭირო არაა"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
@@ -1156,12 +1156,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr ""
+msgstr "&დამატებითი შეყვანის ხაზის ჩვენება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "You will have two input lines instead of one."
-msgstr ""
+msgstr "გექნებათ ორი შეყვანის ხაზი ერთის ნაცვლად."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
@@ -1257,7 +1257,7 @@ msgstr "&ფონის ნაგულისხმები ფერი"
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
 msgid "This color will be used as a standard background color."
-msgstr ""
+msgstr "ეს ფერი გამოყენებული იქნება როგორც სტანდარტული ფონის ფერი."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
@@ -1268,6 +1268,8 @@ msgstr "&ტექსტის ნაგულისხმები ფერი
 #, kde-format
 msgid "This color will be used to display standard text with no defined color."
 msgstr ""
+"ეს ფერი გამოყენებული იქნება განსაზღვრული ფერის გარეშე არსებული სტანდარტული "
+"ტექსტის საჩვენებლად."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:203
 #, kde-format
@@ -1278,6 +1280,7 @@ msgstr "&ბრძანების ექოს ფერი"
 #, kde-format
 msgid "This color will be used to display commands that you have entered."
 msgstr ""
+"ეს ფერი გამოყენებული იქნება თქვენ მიერ შეყვანილი ბრძანებების საჩვენებლად."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
@@ -1287,7 +1290,7 @@ msgstr "&სისტემური შეტყობინების ფე
 #: kmuddy/dialogs/dlgappsettings.cpp:211
 #, kde-format
 msgid "This color will be used for various system messages."
-msgstr ""
+msgstr "ეს ფერი გამოყენებული იქნება სხვადასხვა სისტემის შეტყობინებებისთვის."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
@@ -1344,7 +1347,7 @@ msgstr "&სისტემური შეტყობინებების 
 #: kmuddy/dialogs/dlgappsettings.cpp:252
 #, kde-format
 msgid "Enables displaying of system messages in the console."
-msgstr ""
+msgstr "ჩართავ სისტემური შეტყობინებების ჩვენებას კონსოლში."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:255
 #, kde-format
@@ -1354,7 +1357,7 @@ msgstr "&ციმციმის ჩართვა"
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enables support for blinking. Currently not supported."
-msgstr ""
+msgstr "ჩართავს ციმციმის მხარდაჭერას. ამჟამად მხარდაჭერილი არაა."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:272
 #, kde-format
@@ -1371,6 +1374,8 @@ msgstr "აირჩიეთ..."
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
 msgstr ""
+"აქ შეგიძლიათ აირჩიოთ ფონტი, რომელიც გამოყენებული იქნება ძირითადად, "
+"ჩვენებისთვის."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
@@ -1381,6 +1386,7 @@ msgstr "&შეყვანის ხაზი"
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
 msgstr ""
+"აქ შეგიძლიათ აირჩიოთ ფონტი, რომელიც შეყვანის ხაზში იქნება გამოყენებული."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
@@ -1392,6 +1398,8 @@ msgstr "&მრავალხაზიანი შეყვანა"
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
+"აქ შეგიძლიათ აირჩიოთ ფონტი, რომელიც გამოყენებული იქნება მრავალხაზიანი "
+"შეყვანის ფანჯრისთვის."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
@@ -1534,7 +1542,7 @@ msgstr "ღია ფერები"
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr ""
+msgstr "&ბრძანების გამყოფი სტრიქონი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -1546,7 +1554,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
-msgstr ""
+msgstr "&სწრაფი გავლის სტრიქონი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
