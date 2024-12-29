@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-05-30 22:41+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -3962,7 +3962,7 @@ msgstr "Ensalutnomo"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Enigu vian skripton ĉi tie."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -3977,6 +3977,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Enigu Javascript-skripton kiu estos efektivigita kiam la objekto estas "
+"ekigita.<br/><br/>La jenaj subprogramoj estas haveblaj en la skripto krom "
+"normaj Javascript-iloj:<br/><br/><b>fenestro.message(teksto)</b> - montri "
+"mesaĝon<br/><b>window.send(command)</b> - sendi komandon<br/><b>window."
+"sendraw(command)</b> - sendi komandon kun neniu prilaborado<br/><b>window."
+"get(nomo)</b> - akiri la valoron de variablo<br/><b>window.set(nomo, "
+"valoro)</b> - meti la valoron de variablo<br/><br/>Vi povas ankaŭ uzi la "
+"sekvajn variablojn: <b>prefix, prefixfull, suffix, suffixfull, matched, "
+"line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format

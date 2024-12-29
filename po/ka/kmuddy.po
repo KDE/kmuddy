@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-12-27 05:08+0100\n"
+"PO-Revision-Date: 2024-12-28 02:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -393,6 +393,8 @@ msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
 msgstr ""
+"თუ ჩართულია, ბრძანება MUD-ს გაეგზავნება. სხვა შემთხვევაში ის შეყვანის ხაზში "
+"განთავსდება."
 
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
@@ -421,6 +423,8 @@ msgid ""
 "When enabled, this variable will be shown as percentage. (of max.value, or "
 "of 100 if no max.value given)"
 msgstr ""
+"თუ ჩართულია, ეს მნიშვნელობა პროცენტულად იქნება ნაჩვენები (მაქს. "
+"მნიშვნელობის, ან 100, თუ მაქს. მნიშვნელობა მითითებული არაა)"
 
 #: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
 #, kde-format
@@ -453,6 +457,8 @@ msgid ""
 "Command that will be executed on each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"ბრძანება, რომელიც შესრულდება, თითოეული ათვლისას.\n"
+"ბრძანება, შეიძლება, შეიცავდეს ფსევდონიმებს, სკრიპტის გამოძახებებს და ა.შ."
 
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
@@ -1050,7 +1056,7 @@ msgstr "ეს ტექსტი შეესაბამება თქვე
 #: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr ""
+msgstr "მიღწეულია გაფერადებების მაქსიმალური რაოდენობა."
 
 #: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1514,7 +1520,7 @@ msgstr "&ტექსტის ფერი"
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
 msgid "Color of text that you type in the input line."
-msgstr ""
+msgstr "იმ ტექსტის ფერი, რომელსაც შეყვანის ხაზში აკრეფთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
@@ -1584,7 +1590,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
 msgid "Macro-ca&ll string"
-msgstr ""
+msgstr "მაკროს &გამოძახების სტრიქონი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:454
 #, kde-format
@@ -1597,7 +1603,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr ""
+msgstr "&გამმეორებლის სტრიქონი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1624,7 +1630,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
 msgid "Send &as-is"
-msgstr ""
+msgstr "&გაგზავნა, როგორც არის"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:480
 #, kde-format
@@ -1648,7 +1654,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
 msgid "&Enable sounds globally"
-msgstr ""
+msgstr "&ხმების ჩართვა გლობალურად"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:510
 #, kde-format
@@ -1662,7 +1668,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
 msgid "Allow &downloading sounds"
-msgstr ""
+msgstr "ხმების &გადმოწერის დაშვება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
@@ -1941,7 +1947,7 @@ msgstr "პროფილის სახელი ცარიელი არ
 #: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
 msgid "Profile name cannot contain '/' character."
-msgstr ""
+msgstr "პროფილის სახელი, არ შეიძლება, შეიცავდეს სიმბოლოს '/'."
 
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
@@ -2042,7 +2048,7 @@ msgstr "&გაგზავნა"
 #: kmuddy/dialogs/dlgmultiline.cpp:80
 #, kde-format
 msgid "Sends current text to the MUD."
-msgstr ""
+msgstr "უგზავნის მიმდინარე ტექსტს MUD-ს."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:81
 #, kde-format
@@ -2148,12 +2154,12 @@ msgstr "MXP"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
 msgid "&Use colorized output (if available)"
-msgstr ""
+msgstr "&გაფერადებული გამოტანა (თუ ხელმისაწვდომია)"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:70
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr ""
+msgstr "&100-ზე მეტი გამეორებული ბრძანების აკრძალვა"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
