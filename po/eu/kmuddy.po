@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-05 22:22+0100\n"
+"PO-Revision-Date: 2025-01-06 20:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -65,7 +65,7 @@ msgstr "Botoi tresna-barran azaldutako ikonoa."
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr ""
+msgstr "Sakatzeari &utzi komandoa"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
@@ -73,6 +73,8 @@ msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
 msgstr ""
+"Behera sakatzeko botoian klik egiten duzunean, behera sakatzen den bitartean "
+"exekutatuko den komandoa"
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:132
@@ -90,7 +92,7 @@ msgstr "&Gidoia"
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr ""
+msgstr "Askat&zen deneko gidoia"
 
 #: kmuddy/cconnection.cpp:262
 #, kde-format
@@ -135,12 +137,12 @@ msgstr "Ezizenak, orain, ezgaituta daude."
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr ""
+msgstr "Kliskagailuak orain gaituta daude."
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr ""
+msgstr "Kliskagailuak orain ezgaituta daude."
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
@@ -170,7 +172,7 @@ msgstr "Ezizenak"
 #: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
-msgstr ""
+msgstr "Kliskagailuak"
 
 #: kmuddy/cconnection.cpp:814
 #, kde-format
@@ -663,7 +665,7 @@ msgstr "Lerro osoa"
 #: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Matching text"
-msgstr ""
+msgstr "Bat datorren testua"
 
 #: kmuddy/ctriggereditor.cpp:138
 #, kde-format
@@ -693,7 +695,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:165
 #, kde-format
 msgid "&Trigger text"
-msgstr ""
+msgstr "Kliska&tzeko testua"
 
 #: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
@@ -926,12 +928,12 @@ msgstr "Berridatzi testua"
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
-msgstr ""
+msgstr "Lerroaren zati hau al&datu:"
 
 #: kmuddy/ctriggereditor.cpp:401
 #, kde-format
 msgid "&To this value:"
-msgstr ""
+msgstr "Balio hone&tara:"
 
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
@@ -962,7 +964,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr ""
+msgstr "&Gonbita antzemate kliskagailua"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -1031,7 +1033,7 @@ msgstr "&Oinarrizkoa"
 #: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Special trigger"
-msgstr ""
+msgstr "Kliskagailua berezia"
 
 #: kmuddy/ctriggereditor.cpp:517
 #, kde-format
@@ -1041,17 +1043,17 @@ msgstr "Irteerako leihoak"
 #: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr ""
+msgstr "Testu hau ez dator zure kliskagailuarekin bat."
 
 #: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
-msgstr ""
+msgstr "Testu hau zure kliskagailuarekin bat dator."
 
 #: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr ""
+msgstr "Gehienezko Koloreztatze kopurura iritsi da."
 
 #: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1110,7 +1112,7 @@ msgstr "Leihoa"
 #: kmuddy/dialogs/dlgappsettings.cpp:87
 #, kde-format
 msgid "Output area"
-msgstr ""
+msgstr "Irteera gunea"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
@@ -1213,9 +1215,9 @@ msgstr ""
 "keinu egingo dute)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:135
-#, fuzzy, kde-format
+#, kde-format
 msgid "Display system tray icon"
-msgstr "Azaldu sistema-erretiluko ikonoa"
+msgstr "Azaldu sistemaren erretiluko ikonoa"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
@@ -1230,7 +1232,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
 msgid "Use passive popups"
-msgstr "Erabili leiho-gainerakor pasiboak"
+msgstr "Erabili gainerakor pasiboak"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
@@ -1282,7 +1284,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:203
 #, kde-format
 msgid "Command &echo color"
-msgstr ""
+msgstr "Komando &oihartzunaren kolorea"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:206
 #, kde-format
@@ -1340,7 +1342,7 @@ msgstr "Lerroak"
 #: kmuddy/dialogs/dlgappsettings.cpp:247
 #, kde-format
 msgid "Enable co&mmand echo"
-msgstr ""
+msgstr "Gaitu ko&mandoaren oihartzuna"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:248
 #, kde-format
@@ -1398,18 +1400,19 @@ msgstr "Hemen, sarrera-lerrorako erabiliko den letra-tipoa hauta dezakezu."
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
 msgid "&Multi-line input"
-msgstr ""
+msgstr "Lerro a&nizkoitzeko sarrera"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:298
 #, kde-format
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
+"lerro anizkoitzeko leihorako erabiliko den letra-tipoa hemen hauta dezakezu."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:317
 #, kde-format
 msgid "&Keep sent text"
-msgstr ""
+msgstr "&Mantendu bidalitako testua"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:318
 #, kde-format
@@ -1417,11 +1420,13 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
+"Aukera hau gaitzen baduzu, komandoek sarrera-lerroan jarraituk dute bidali "
+"ondoren (SARTU sakatuz); bestela garbitu egingo dira."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
 msgid "&Select kept text after it's sent"
-msgstr ""
+msgstr "&Hautatu bidali ondoren mantendutako testua"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1434,7 +1439,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
 msgid "&Cursor keys browse history"
-msgstr ""
+msgstr "&Kurtsore teklek historia arakatzen dute"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:328
 #, kde-format
@@ -1442,6 +1447,8 @@ msgid ""
 "If you enable this option, you will be able to choose previously entered "
 "commands with Up and Down keys."
 msgstr ""
+"Hau gaitzen baduzu, Gora eta Behera teklekin aurretik sartutako komandoak "
+"aukeratu ahal izango dituzu."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:330
 #, kde-format
@@ -1454,6 +1461,9 @@ msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
 "but the last are sent as commands immediately."
 msgstr ""
+"Telnet-estiloko itsastea gaitzen du, adib. lerro anizkoitzeko testua "
+"itsasten bada, lerro guztiak azkena izan ezik berehala komando gisa "
+"bidaltzen dira."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
@@ -1519,12 +1529,12 @@ msgstr "&Testuaren kolorea"
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
 msgid "Color of text that you type in the input line."
-msgstr ""
+msgstr "Sarrera-lerroan tekleatzen duzun testuaren kolorea."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr ""
+msgstr "Trukatu SARTU eta KTRL+SARTU lerro anizkoitzerako"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1537,17 +1547,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
 msgid "Dark colors"
-msgstr ""
+msgstr "Kolore ilunak"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
 msgid "Bright colors"
-msgstr ""
+msgstr "Kolore argiak"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr ""
+msgstr "&Komandoa bereizteko katea"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -1555,6 +1565,9 @@ msgid ""
 "You can enter multiple commands at once, they will get executed together. "
 "Here you can enter string that can be used to separate individual commands."
 msgstr ""
+"Aldi berean komando bat baino gehiago sar dezakezu, aldi berean exekutatuko "
+"dira. Banakako komandoak bereizteko erabil daitekeen katea hemen sar "
+"dezakezu."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
@@ -1667,7 +1680,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
 msgid "Allow &downloading sounds"
-msgstr ""
+msgstr "Baimendu soinuak &zama-jaistea"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:516
 #, kde-format
@@ -1850,7 +1863,7 @@ msgstr "&Arakatu..."
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
 msgid "&Dump format:"
-msgstr ""
+msgstr "Ira&ultzeko formatua:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
@@ -1934,7 +1947,7 @@ msgstr ""
 #, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr ""
+msgstr "&Konektatzeko sekuentzia"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -2011,17 +2024,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
 msgid "Choose file with profile"
-msgstr ""
+msgstr "Hautatu profila duen fitxategia"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:137
 #, kde-format
 msgid "Enter target file"
-msgstr ""
+msgstr "Sartu jomuga-fitxategia"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:33
 #, kde-format
 msgid "Multi-line input"
-msgstr ""
+msgstr "Lerro anizkoitzeko sarrera"
 
 #: kmuddy/dialogs/dlgmultiline.cpp:45
 #, kde-format
@@ -2161,17 +2174,17 @@ msgstr "MXP"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:69
 #, kde-format
 msgid "&Use colorized output (if available)"
-msgstr ""
+msgstr "&Erabili koloreztatutako irteera (erabilgarri badago)"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:70
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr ""
+msgstr "E&z baimendu errepikatutako 100 komando baino gehiago"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
-msgstr ""
+msgstr "Gaitu telnet &negoziazioa abioan"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:77
 #, kde-format
@@ -2284,12 +2297,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
 msgid "External &scripts directory"
-msgstr ""
+msgstr "Kanpoko &gidoien direktorioa"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr ""
+msgstr "Gidoiak bilatuko ditugun direktorio lehenetsia."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
@@ -2336,7 +2349,7 @@ msgstr "Hauek, behar badituzu bakarri gaitu:"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
 msgid "&Use MSP even if not negotiated"
-msgstr ""
+msgstr "&Erabili MSP negoziatu gabe ere"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:198
 #, kde-format
@@ -2367,7 +2380,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
 msgid "&Use MXP"
-msgstr ""
+msgstr "&Erabili MXP"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:224
 #, kde-format
@@ -2377,7 +2390,7 @@ msgstr "Inoiz ez"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:225
 #, kde-format
 msgid "If negotiated"
-msgstr ""
+msgstr "Negoziatuz gero"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
@@ -2414,17 +2427,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
 msgid "Choose default script location"
-msgstr ""
+msgstr "Hautatu gidoien kokaleku lehenetsia"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr ""
+msgstr "Hautatu gidoien laneko kokaleku lehenetsia"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
 msgid "Choose default transcript directory"
-msgstr ""
+msgstr "Hautatu transkripzioen direktorio lehenetsia"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:33
 #, kde-format
@@ -2548,17 +2561,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
 msgid "Transcript settings"
-msgstr ""
+msgstr "Transkripzio-ezarpenak"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
 #, kde-format
 msgid "Transcript &format"
-msgstr ""
+msgstr "Transkripzio &formatua"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Overwrite existing file"
-msgstr "Gainidatzi aurrez dagoen fitxategia?"
+msgstr "&Gainidatzi aurrez dagoen fitxategia"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:76
 #, kde-format
@@ -2583,7 +2596,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
 msgid "Enable &advanced transcript"
-msgstr ""
+msgstr "Gaitu transkripzio &aurreratua"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:110
 #, kde-format
@@ -2596,23 +2609,24 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
 msgid "Advanced transcript settings"
-msgstr ""
+msgstr "Transkripzio aurreratuaren ezarpenak"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr ""
+msgstr "Egunkaria egunero gauerdian bi&ratu"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
 msgstr ""
+"Honek KMuddy-k egunero gauerdian saio-transkripzioa biratzea eragingo du"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr ""
+msgstr "Lerroei &denbora-zigilua aurretik ipini"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
@@ -2637,7 +2651,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
 msgid "&List of output windows"
-msgstr ""
+msgstr "Irteerako leihoen &zerrenda"
 
 #: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
@@ -2695,14 +2709,14 @@ msgid "Copy &Selection"
 msgstr "Kopiatu &hautapena"
 
 #: kmuddy/kmuddy.cpp:296
-#, kde-format
+#, fuzzy, kde-format
 msgid "Enable command &parsing"
-msgstr ""
+msgstr "Gaitu komandoa "
 
 #: kmuddy/kmuddy.cpp:303
 #, kde-format
 msgid "Ca&ncel pending commands"
-msgstr ""
+msgstr "Bertan behera &utzi egiteko dauden komandoak"
 
 #: kmuddy/kmuddy.cpp:314
 #, kde-format
@@ -2722,37 +2736,37 @@ msgstr "&Irteera-leihoak..."
 #: kmuddy/kmuddy.cpp:336
 #, kde-format
 msgid "A&liases enabled"
-msgstr ""
+msgstr "&Goitizenak gaitua"
 
 #: kmuddy/kmuddy.cpp:342
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr ""
+msgstr "Kliska&gailuak gaituta"
 
 #: kmuddy/kmuddy.cpp:348
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr ""
+msgstr "T&enporizadoreak gaituta"
 
 #: kmuddy/kmuddy.cpp:353
 #, kde-format
 msgid "Macro &keys enabled"
-msgstr ""
+msgstr "Makro te&klak gaituta"
 
 #: kmuddy/kmuddy.cpp:358
-#, fuzzy, kde-format
+#, kde-format
 msgid "&MUD Preferences..."
-msgstr "MUD hobespenak"
+msgstr "&MUD hobespenak..."
 
 #: kmuddy/kmuddy.cpp:363
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Save Profile"
-msgstr "Gorde profila"
+msgstr "&Gorde profila"
 
 #: kmuddy/kmuddy.cpp:370
 #, kde-format
 msgid "&Session transcript..."
-msgstr ""
+msgstr "&Saioaren transkripzioa..."
 
 #: kmuddy/kmuddy.cpp:375
 #, fuzzy, kde-format
@@ -2762,60 +2776,60 @@ msgstr "Irauli irteera-«buffer»ra"
 #: kmuddy/kmuddy.cpp:379
 #, kde-format
 msgid "&Decision assistant"
-msgstr ""
+msgstr "Era&baki laguntzailea"
 
 #: kmuddy/kmuddy.cpp:393
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Global settings..."
-msgstr "Ezarpen Orokorrak"
+msgstr "Ezarpen &globalak..."
 
 #: kmuddy/kmuddy.cpp:398
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Plugins..."
-msgstr "Pluginak"
+msgstr "&Pluginak..."
 
 #: kmuddy/kmuddy.cpp:403
-#, fuzzy, kde-format
+#, kde-format
 msgid "F&ull screen mode"
-msgstr "Pantaila osoko modua"
+msgstr "Pantaila &osoko modua"
 
 #: kmuddy/kmuddy.cpp:413
 #, kde-format
 msgid "Shift line up"
-msgstr ""
+msgstr "Mugitu lerroa gora"
 
 #: kmuddy/kmuddy.cpp:418
 #, kde-format
 msgid "Shift line down"
-msgstr ""
+msgstr "Mugitu lerroa behera"
 
 #: kmuddy/kmuddy.cpp:423
 #, kde-format
 msgid "Shift page up"
-msgstr ""
+msgstr "Mugitu orrialdea gora"
 
 #: kmuddy/kmuddy.cpp:428
 #, kde-format
 msgid "Shift page down"
-msgstr ""
+msgstr "Mugitu orrialdea behera"
 
 #: kmuddy/kmuddy.cpp:433
 #, kde-format
 msgid "Split-screen up"
-msgstr ""
+msgstr "Zatitu pantaila gora"
 
 #: kmuddy/kmuddy.cpp:438
 #, kde-format
 msgid "Split-screen down"
-msgstr ""
+msgstr "Zatitu pantaila behera"
 
 #: kmuddy/kmuddy.cpp:443
-#, fuzzy, kde-format
+#, kde-format
 msgid "Previous tab"
 msgstr "Aurreko fitxa"
 
 #: kmuddy/kmuddy.cpp:448
-#, fuzzy, kde-format
+#, kde-format
 msgid "Next tab"
 msgstr "Hurrengo fitxa"
 
@@ -2823,56 +2837,56 @@ msgstr "Hurrengo fitxa"
 #: kmuddy/kmuddy.cpp:469 kmuddy/kmuddy.cpp:474 kmuddy/kmuddy.cpp:479
 #: kmuddy/kmuddy.cpp:484 kmuddy/kmuddy.cpp:489 kmuddy/kmuddy.cpp:494
 #: kmuddy/kmuddy.cpp:499
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Aldatu %1 fitxara"
 
 #: kmuddy/kmuddy.cpp:522
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Connection"
-msgstr "Konexioa"
+msgstr "&Konexioa"
 
 #: kmuddy/kmuddy.cpp:523
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Edit"
 msgstr "&Editatu"
 
 #. i18n: ectx: Menu (View)
 #: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
-#, fuzzy, kde-format
+#, kde-format
 msgid "&View"
 msgstr "&Ikuspegia"
 
 #: kmuddy/kmuddy.cpp:525
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Profile"
-msgstr "Profila"
+msgstr "&Profila"
 
 #: kmuddy/kmuddy.cpp:526
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Tools"
 msgstr "&Tresnak"
 
 #: kmuddy/kmuddy.cpp:527
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Settings"
 msgstr "E&zarpenak"
 
 #: kmuddy/kmuddy.cpp:528
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Help"
 msgstr "&Laguntza"
 
 #: kmuddy/kmuddy.cpp:904
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
-msgstr ""
+msgstr "Berriz konektatzeko sakatu %1 edo erabili konexioa / birkonexioa."
 
 #: kmuddy/kmuddy.cpp:990
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "KMuddy leihoan jarduera"
 
 #: kmuddy/kmuddy.cpp:1162
 #, kde-format
@@ -2880,6 +2894,8 @@ msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
 "disconnecting, and also every five minutes."
 msgstr ""
+"Profila gorde egin da. Jakizu deskonektatzean profilak automatikoki "
+"gordetzen direla, eta bost minutuero ere bai."
 
 #: kmuddy/macros.cpp:67
 #, kde-format
@@ -3125,27 +3141,27 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:96
 #, kde-format
 msgid "KMuddy"
-msgstr ""
+msgstr "KMuddy"
 
 #: kmuddy/main.cpp:39
 #, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr ""
+msgstr "(c) 2002-2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:40
-#, fuzzy, kde-format
+#, kde-format
 msgid "Tomas Mecir"
 msgstr "Tomas Mecir"
 
 #: kmuddy/main.cpp:41
 #, kde-format
 msgid "Main developer and maintainer"
-msgstr ""
+msgstr "Garatzaile nagusia eta mantentzailea"
 
 #: kmuddy/main.cpp:42
 #, kde-format
 msgid "Alex Bache"
-msgstr ""
+msgstr "Alex Bache"
 
 #: kmuddy/main.cpp:43
 #, kde-format
@@ -3157,7 +3173,7 @@ msgstr ""
 #: kmuddy/main.cpp:44
 #, kde-format
 msgid "Alsherok staff"
-msgstr ""
+msgstr "Alsherok staff"
 
 #: kmuddy/main.cpp:45
 #, kde-format
@@ -3167,7 +3183,7 @@ msgstr ""
 #: kmuddy/main.cpp:46
 #, kde-format
 msgid "Andrea Cascio"
-msgstr ""
+msgstr "Andrea Cascio"
 
 #: kmuddy/main.cpp:47
 #, kde-format
@@ -3177,17 +3193,17 @@ msgstr ""
 #: kmuddy/main.cpp:48
 #, kde-format
 msgid "Orion Elder"
-msgstr ""
+msgstr "Orion Elder"
 
 #: kmuddy/main.cpp:49
 #, kde-format
 msgid "KMuddy forum, many ideas"
-msgstr ""
+msgstr "KMuddy foroa, ideia ugari"
 
 #: kmuddy/main.cpp:50
 #, kde-format
 msgid "Scott Monachello"
-msgstr ""
+msgstr "Scott Monachello"
 
 #: kmuddy/main.cpp:51
 #, kde-format
@@ -3197,17 +3213,17 @@ msgstr ""
 #: kmuddy/main.cpp:52
 #, kde-format
 msgid "Tyler Montbriand"
-msgstr ""
+msgstr "Tyler Montbriand"
 
 #: kmuddy/main.cpp:53
 #, kde-format
 msgid "Help with SDL support"
-msgstr ""
+msgstr "SDL euskarriarekin laguntza"
 
 #: kmuddy/main.cpp:54
 #, kde-format
 msgid "Marco Mastroddi"
-msgstr ""
+msgstr "Marco Mastroddi"
 
 #: kmuddy/main.cpp:55
 #, kde-format
@@ -3217,17 +3233,17 @@ msgstr ""
 #: kmuddy/main.cpp:56
 #, kde-format
 msgid "Henrikki Almusa"
-msgstr ""
+msgstr "Henrikki Almusa"
 
 #: kmuddy/main.cpp:57
 #, kde-format
 msgid "Commands to enable/disable groups"
-msgstr ""
+msgstr "Taldeak gaitzeko/ezgaitzeko komandoak"
 
 #: kmuddy/main.cpp:58
 #, kde-format
 msgid "Drossos Stamboulakis"
-msgstr ""
+msgstr "Drossos Stamboulakis"
 
 #: kmuddy/main.cpp:59
 #, kde-format
@@ -3237,17 +3253,17 @@ msgstr ""
 #: kmuddy/main.cpp:60
 #, kde-format
 msgid "Antonio J. Soler Sanchez"
-msgstr ""
+msgstr "Antonio J. Soler Sanchez"
 
 #: kmuddy/main.cpp:61
-#, fuzzy, kde-format
+#, kde-format
 msgid "Spanish translation"
-msgstr "Gaztelania itzulpena"
+msgstr "Gaztelaniazko itzulpena"
 
 #: kmuddy/main.cpp:62
 #, kde-format
 msgid "lontau"
-msgstr ""
+msgstr "lontau"
 
 #: kmuddy/main.cpp:63
 #, kde-format
@@ -3257,7 +3273,7 @@ msgstr ""
 #: kmuddy/main.cpp:64
 #, kde-format
 msgid "Magnus Lundborg"
-msgstr ""
+msgstr "Magnus Lundborg"
 
 #: kmuddy/main.cpp:64
 #, kde-format
@@ -3267,7 +3283,7 @@ msgstr ""
 #: kmuddy/main.cpp:65
 #, kde-format
 msgid "Vladimir Lazarenko"
-msgstr ""
+msgstr "Vladimir Lazarenko"
 
 #: kmuddy/main.cpp:66
 #, kde-format
@@ -3277,42 +3293,42 @@ msgstr ""
 #: kmuddy/main.cpp:67
 #, kde-format
 msgid "Stuart Henshall"
-msgstr ""
+msgstr "Stuart Henshall"
 
 #: kmuddy/main.cpp:68
 #, kde-format
 msgid "Speed improvements."
-msgstr ""
+msgstr "Abiadura hobekuntzak."
 
 #: kmuddy/main.cpp:69
 #, kde-format
 msgid "Vadim Peretokin"
-msgstr ""
+msgstr "Vadim Peretokin"
 
 #: kmuddy/main.cpp:70
 #, kde-format
 msgid "Many improvements, website"
-msgstr ""
+msgstr "Hobekuntza ugari, webgunea"
 
 #: kmuddy/main.cpp:71
 #, kde-format
 msgid "Heiko Koehn"
-msgstr ""
+msgstr "Heiko Koehn"
 
 #: kmuddy/main.cpp:72
 #, kde-format
 msgid "Scripting improvements"
-msgstr ""
+msgstr "Gidoigintzan hobekuntzak"
 
 #: kmuddy/main.cpp:73
 #, kde-format
 msgid "Robert Marmorstein"
-msgstr ""
+msgstr "Robert Marmorstein"
 
 #: kmuddy/main.cpp:74
 #, kde-format
 msgid "Systray icon support"
-msgstr ""
+msgstr "Sistemaren erretiluko ikonoaren euskarria"
 
 #: libs/caliaseditor.cpp:88
 #, kde-format
@@ -3329,12 +3345,12 @@ msgstr ""
 #: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr ""
+msgstr "O&rdezpen testua(k)"
 
 #: libs/caliaseditor.cpp:122
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr ""
+msgstr "Sartu duzun komandoa ordezkatuko du(t)en komandoa(k)."
 
 #: libs/caliaseditor.cpp:137
 #, kde-format
@@ -3346,7 +3362,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
-msgstr ""
+msgstr "Bidali jatorrizko komandoa"
 
 #: libs/caliaseditor.cpp:175
 #, kde-format
@@ -3366,7 +3382,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:189
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr ""
+msgstr "Aurrizkia/atzizkia barne"
 
 #: libs/caliaseditor.cpp:190
 #, kde-format
