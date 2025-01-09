@@ -2119,7 +2119,7 @@ msgstr "Capturar tecla(s)"
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
 msgid "Press the desired shortcut..."
-msgstr "Pulse el acceso rápido deseado..."
+msgstr "Pulse el atajo de teclado deseado..."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
