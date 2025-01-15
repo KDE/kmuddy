@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-06 20:29+0100\n"
+"PO-Revision-Date: 2025-01-14 19:36+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -197,7 +197,7 @@ msgstr "Egoera aldagaiak"
 #: kmuddy/cconnection.cpp:818
 #, kde-format
 msgid "Gauges"
-msgstr ""
+msgstr "Neurgailuak"
 
 #: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:56
 #: plugins/vartrigs/cvartriggereditor.cpp:57
@@ -208,12 +208,12 @@ msgstr "Al&dagaiaren izena"
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
 msgid "Variable displayed by this gauge."
-msgstr ""
+msgstr "Neurgailu honek azaltzen duen aldagaia"
 
 #: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
 #, kde-format
 msgid "&Max. variable (optional)"
-msgstr ""
+msgstr "&Max aldagaia (aukerakoa)"
 
 #: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
 #, kde-format
@@ -233,7 +233,7 @@ msgstr "&Kolorea"
 #: kmuddy/cgaugeeditor.cpp:81
 #, kde-format
 msgid "Color used to paint this gauge."
-msgstr ""
+msgstr "Neurgailu hau margotzeko erabilitako kolorea."
 
 #: kmuddy/cmxpmanager.cpp:299
 #, kde-format
@@ -243,7 +243,7 @@ msgstr "lerro-etiketa"
 #: kmuddy/cmxpmanager.cpp:300
 #, kde-format
 msgid "expire link"
-msgstr ""
+msgstr "esteka iraungi"
 
 #: kmuddy/cmxpmanager.cpp:301
 #, kde-format
@@ -372,6 +372,8 @@ msgid ""
 "Command that will be executed when you press the defined key combination.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Definitutako tekla konbinazioa sakatzen duzunean exekutatuko den komandoa.\n"
+"Komandoak goitizenak, gidoiei deiak eta antzeko gauzak izan ditzake."
 
 #: kmuddy/cshortcuteditor.cpp:76
 #, kde-format
@@ -394,6 +396,8 @@ msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
 msgstr ""
+"Markatuta badago, komandoa MUDera bidaliko da. Bestela, sarrera-lerroan "
+"ipiniko da."
 
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
@@ -405,11 +409,12 @@ msgstr "Dagoen testua gainidat&zi"
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
 msgstr ""
+"Sarrera-lerroan dagoeneko testurik badago, gainidatzi egin beharko luke?"
 
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
 msgid "Variable displayed by this status variable."
-msgstr ""
+msgstr "Egoera-aldagai honek azaldutako aldagaia."
 
 #: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
@@ -422,6 +427,8 @@ msgid ""
 "When enabled, this variable will be shown as percentage. (of max.value, or "
 "of 100 if no max.value given)"
 msgstr ""
+"Gaituta dagoenean, aldagai hau ehuneko gisa erakutsiko da. (gehienezko "
+"baliokoa, edo 100 gehienezko balioa ematen ez bada)"
 
 #: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
 #, kde-format
@@ -446,7 +453,7 @@ msgstr " seg"
 #: kmuddy/ctimer.cpp:80
 #, kde-format
 msgid ", single-shot"
-msgstr ""
+msgstr ", saiakera bakarra"
 
 #: kmuddy/ctimereditor.cpp:70
 #, kde-format
@@ -454,6 +461,8 @@ msgid ""
 "Command that will be executed on each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Tik bakoitzean exekutatuko den komandoa.\n"
+"Komandoak goitizenak, gidoiei deiak eta antzeko gauzak izan ditzake."
 
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
@@ -468,22 +477,26 @@ msgstr " seg"
 #: kmuddy/ctimereditor.cpp:81
 #, kde-format
 msgid "&Single-shot"
-msgstr ""
+msgstr "&Saiakera bakarra"
 
 #: kmuddy/ctimereditor.cpp:82
 #, kde-format
 msgid "When enabled, the timer will only be executed once and then disabled."
 msgstr ""
+"Gaituta dagoenean, tenporizadorea behin bakarrik exekutatuko da eta ondoren "
+"ezgaitu egingo da."
 
 #: kmuddy/ctimereditor.cpp:84
 #, kde-format
 msgid "&Run a command in advance"
-msgstr ""
+msgstr "E&xekutatu komando bat aldez aurretik"
 
 #: kmuddy/ctimereditor.cpp:85
 #, kde-format
 msgid "Run a command a given number of seconds before each timer tick."
 msgstr ""
+"Komando bat exekutatu tenporizadorearen tik bakoitzaren, zehaztutako "
+"segundoak aurretik."
 
 #: kmuddy/ctimereditor.cpp:87
 #, kde-format
@@ -493,7 +506,7 @@ msgstr "Komando aurreratua"
 #: kmuddy/ctimereditor.cpp:90
 #, kde-format
 msgid "&Seconds before tick"
-msgstr ""
+msgstr "&Segundo tik aurretik"
 
 #: kmuddy/ctimereditor.cpp:97
 #, kde-format
@@ -506,6 +519,8 @@ msgid ""
 "Command that will be executed the specified time before each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"Tik bakoitzaren, zehaztutako denbora aurretik, exekutatuko den komandoa.\n"
+"Komandoak goitizenak, gidoiei deiak eta antzeko gauzak izan ditzake."
 
 #: kmuddy/ctranscript.cpp:173
 #, kde-format
@@ -653,7 +668,7 @@ msgid "White"
 msgstr "Zuria"
 
 #: kmuddy/ctriggereditor.cpp:131
-#, fuzzy, kde-format
+#, kde-format
 msgid "Other"
 msgstr "Bestelakoak"
 
@@ -690,7 +705,7 @@ msgstr "Atzizki osoa"
 #: kmuddy/ctriggereditor.cpp:142
 #, kde-format
 msgid "Backreference"
-msgstr ""
+msgstr "Atzerako erreferentzia"
 
 #: kmuddy/ctriggereditor.cpp:165
 #, kde-format
@@ -897,7 +912,7 @@ msgstr "A&tzeko planoa"
 #: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
 #, kde-format
 msgid "&Back-reference"
-msgstr ""
+msgstr "A&tzerako erreferentzia"
 
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
@@ -918,7 +933,7 @@ msgstr "Atzeko planoa"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr ""
+msgstr "Testua be&rridazte kliskagailua"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
@@ -938,7 +953,7 @@ msgstr "Balio hone&tara:"
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr ""
+msgstr "Ez erakutsi (&mozal) lerroa"
 
 #: kmuddy/ctriggereditor.cpp:427
 #, kde-format
@@ -987,6 +1002,8 @@ msgid ""
 "This trigger will play a sound. Useful as a notification of important "
 "events, or to assign sounds to some events."
 msgstr ""
+"Kliskagailu honek soinu bat joko du. Erabilgarria gertaera garrantzitsu "
+"baten jakinarazpen gisa, edo gertaera batzuei soinuak esleitzeko."
 
 #: kmuddy/ctriggereditor.cpp:464
 #, kde-format
@@ -1386,6 +1403,7 @@ msgstr "Hautatu..."
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
 msgstr ""
+"Erakusgarri nagusi gisa erabiliko den letra-tipoa hauta dezakezu hemen."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
@@ -3407,27 +3425,27 @@ msgstr ""
 #: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
-msgstr ""
+msgstr "Testu hau ez dator zure goitizenarekin bat."
 
 #: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
-msgstr ""
+msgstr "Testu hau zure goitizenarekin bat dator."
 
 #: libs/caliaseditor.cpp:279
-#, fuzzy, kde-format
+#, kde-format
 msgid "Command: "
 msgstr "Komandoa: "
 
 #: libs/ccmdparser.cpp:431
 #, kde-format
 msgid "Sorry, count is limited to 100.\n"
-msgstr ""
+msgstr "Barkatu, zenbaketa 100era mugatzen da.\n"
 
 #: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr ""
+msgstr "Muga hau Profila / MUD hobespenak barruan ezgaitu dezakezu."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
@@ -3437,58 +3455,59 @@ msgstr ""
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
 msgid "This macro does not exist."
-msgstr ""
+msgstr "Makro hau ez da existitzen."
 
 #: libs/cconsole.cpp:134
-#, fuzzy, kde-format
+#, kde-format
 msgid "now"
 msgstr "orain"
 
 #: libs/cconsole.cpp:144
-#, fuzzy, kde-format
+#, kde-format
 msgid "hour"
 msgstr "ordu"
 
 #: libs/cconsole.cpp:144
-#, fuzzy, kde-format
+#, kde-format
 msgid "hours"
 msgstr "ordu"
 
 #: libs/cconsole.cpp:149
-#, fuzzy, kde-format
+#, kde-format
 msgid "minute"
 msgstr "minutu"
 
 #: libs/cconsole.cpp:149
-#, fuzzy, kde-format
+#, kde-format
 msgid "minutes"
 msgstr "minutu"
 
 #: libs/cconsole.cpp:155
-#, fuzzy, kde-format
+#, kde-format
 msgid "second"
 msgstr "segundo"
 
 #: libs/cconsole.cpp:155
-#, fuzzy, kde-format
+#, kde-format
 msgid "seconds"
 msgstr "segundo"
 
 #: libs/cconsole.cpp:157
-#, fuzzy, kde-format
+#, kde-format
 msgid "ago"
-msgstr " (duela %1)"
+msgstr "pasa"
 
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr ""
+msgstr "%1 funtzioa ez da existitzen - itzulerakoa balio hutsa dela jotzen da."
 
 #: libs/clist.cpp:468
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
 msgstr ""
+"Fitxategi honek ez dauka erro (root) taldea, hori dela eta ezin da zamatu."
 
 #: libs/clist.cpp:471 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
@@ -3497,128 +3516,130 @@ msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
 "unable to open it."
 msgstr ""
+"Fitxategi hau KMuddy-ren bertsio berriago batekin sortu zen, eta bertsio "
+"honek ezin du ireki."
 
 #: libs/clist.cpp:473
 #, kde-format
 msgid "This is not a KMuddy object file."
-msgstr ""
+msgstr "Hau ez da KMuddy objektu fitxategi bat."
 
 #: libs/clist.cpp:475 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
-msgstr ""
+msgstr "Fitxategi hau hondatuta dago."
 
 #: libs/clist.cpp:479 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
-msgstr ""
+msgstr "Errorea %1 lerroan, %2 zutabean: %3"
 
 #: libs/clisteditor.cpp:75
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Apply changes"
-msgstr "Ezarri aldaketak"
+msgstr "&Ezarri aldaketak"
 
 #: libs/clisteditor.cpp:76
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Undo changes"
-msgstr "Desegin aldaketak"
+msgstr "&Desegin aldaketak"
 
 #: libs/clisteditor.cpp:217
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Enabled"
-msgstr "Gaituta"
+msgstr "&Gaituta"
 
 #: libs/clisteditor.cpp:222
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Priority"
 msgstr "&Lehentasuna"
 
 #: libs/clisteditor.cpp:224
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Name"
-msgstr "Izena"
+msgstr "Ize&na"
 
 #: libs/clisteditor.cpp:286
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
-msgstr ""
+msgstr "Ezin du taldea berrizendatu, izen hori duen talde bat dagoelako."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
-msgstr ""
+msgstr "Ezin du objektua berrizendatu, izen hori duen objektu bat dagoelako."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
 msgid "Error in file - group with no name."
-msgstr ""
+msgstr "Errorea fitxategian - izenik gabeko taldea."
 
 #: libs/clistgroup.cpp:233
 #, kde-format
 msgid "Error in file - duplicate group name."
-msgstr ""
+msgstr "Errorea fitxategian - talde-izena bikoiztuta."
 
 #: libs/clistviewer.cpp:63
 #, kde-format
 msgid "Delete object"
-msgstr ""
+msgstr "Ezabatu objektua"
 
 #: libs/clistviewer.cpp:68 libs/clistviewer.cpp:163
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delete group"
 msgstr "Ezabatu taldea"
 
 #: libs/clistviewer.cpp:72
 #, kde-format
 msgid "Add subgroup"
-msgstr ""
+msgstr "Gehitu azpitaldea"
 
 #: libs/clistviewer.cpp:77
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add group"
 msgstr "Gehitu taldea"
 
 #: libs/clistviewer.cpp:82
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add object"
-msgstr "Gehitu objektua:"
+msgstr "Gehitu objektua"
 
 #: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr ""
+msgstr "Talde hau benetan ezabatu nahi duzu?"
 
 #: libs/clistviewer.cpp:165
 #, kde-format
 msgid "Do you really want to delete this %1?"
-msgstr ""
+msgstr "%1 hau benetan ezabatu nahi duzu?"
 
 #: libs/clistviewer.cpp:166
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delete %1"
 msgstr "Ezabatu %1"
 
 #: libs/clistviewer.cpp:192
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create Group"
 msgstr "Sortu taldea"
 
 #: libs/clistviewer.cpp:192
-#, fuzzy, kde-format
+#, kde-format
 msgid "Please enter the group name:"
-msgstr "Idatzi talde-izena."
+msgstr "Mesedez, sartu taldearen izena:"
 
 #: libs/clistviewer.cpp:196
 #, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr ""
+msgstr "Ezin du taldea sortu, emandako izenak ez duelako balio."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr ""
+msgstr "Ezin du taldea sortu, izen hori duen talde bat dagoelako."
 
 #: libs/cmsp.cpp:284
 #, kde-format
@@ -3628,42 +3649,42 @@ msgstr ""
 #: libs/cmsp.cpp:285
 #, kde-format
 msgid "MSP: Problem was: %1"
-msgstr ""
+msgstr "MSP: Arazoa izan da: %1"
 
 #: libs/cmsp.cpp:315
 #, kde-format
 msgid "Parameter names must be followed by '='."
-msgstr ""
+msgstr "Parametro izenek ondoren '=' izan behar dute."
 
 #: libs/cmsp.cpp:340
 #, kde-format
 msgid "Parameter %1 requires a numeric argument"
-msgstr ""
+msgstr "%1 parametroak zenbakizko argumentu bat behar du"
 
 #: libs/cmsp.cpp:351
 #, kde-format
 msgid "Value of param V is out of 0-100 range."
-msgstr ""
+msgstr "V parametroaren balioa 0-10 barrutitik kanpo dago."
 
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr ""
+msgstr "L parametroaren balioa -1;1-100 barrutitik kanpo dago."
 
 #: libs/cmsp.cpp:373
 #, kde-format
 msgid "Value of param P is out of 0-100 range."
-msgstr ""
+msgstr "P parametroaren balioa 0-100 barrutitik kanpo dago."
 
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr ""
+msgstr "C parametroaren balioa 0 edo 1 izan behar du."
 
 #: libs/cmsp.cpp:393
 #, kde-format
 msgid "Received unfinished sequence."
-msgstr ""
+msgstr "Bukatu gabeko sekuentzia jaso du."
 
 #: libs/cmsp.cpp:449
 #, kde-format
@@ -3678,87 +3699,87 @@ msgstr ""
 #: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
-msgstr ""
+msgstr "Ez, ez, ez!"
 
 #: libs/coutput.cpp:229
 #, kde-format
 msgid "I don't agree with it."
-msgstr ""
+msgstr "Ez nago ados horrekin."
 
 #: libs/coutput.cpp:230
 #, kde-format
 msgid "Better not."
-msgstr ""
+msgstr "Hobe ez."
 
 #: libs/coutput.cpp:231
 #, kde-format
 msgid "I'd probably suggest to reject."
-msgstr ""
+msgstr "Seguru asko, errefusatzea iradokiko nuke."
 
 #: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
-msgstr ""
+msgstr "Ezetz esatea hobexeagoa dirudi."
 
 #: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
-msgstr ""
+msgstr "Baietz esatea hobexeagoa dirudi."
 
 #: libs/coutput.cpp:234
 #, kde-format
 msgid "I'd probably suggest to accept."
-msgstr ""
+msgstr "Seguru asko, onartzea iradokiko nuke."
 
 #: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
-msgstr ""
+msgstr "Itxura ona du."
 
 #: libs/coutput.cpp:236
 #, kde-format
 msgid "I agree with it."
-msgstr ""
+msgstr "Ados nago horrekin."
 
 #: libs/coutput.cpp:237
 #, kde-format
 msgid "Definitely yes!"
-msgstr ""
+msgstr "Bai zalantzarik gabe!"
 
 #: libs/coutput.cpp:239
 #, kde-format
 msgid "My decision: %1"
-msgstr ""
+msgstr "Nire erabakia: %1"
 
 #: libs/cpluginmanager.cpp:268
-#, fuzzy, kde-format
+#, kde-format
 msgid "Plugins"
 msgstr "Pluginak"
 
 #: libs/cprofilemanager.cpp:71
-#, fuzzy, kde-format
+#, kde-format
 msgid "Profile name"
 msgstr "Profilaren izena"
 
 #: libs/cprofilemanager.cpp:72
-#, fuzzy, kde-format
+#, kde-format
 msgid "Server"
 msgstr "Zerbitzaria"
 
 #: libs/cprofilemanager.cpp:73
-#, fuzzy, kde-format
+#, kde-format
 msgid "Port"
 msgstr "Ataka"
 
 #: libs/cprofilemanager.cpp:74
-#, fuzzy, kde-format
+#, kde-format
 msgid "Login name"
-msgstr "&Saio-hasteko izena:"
+msgstr "Saio-hasteko izena"
 
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Sartu zure gidoia hemen."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -3777,7 +3798,7 @@ msgstr ""
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
 msgid "Off-line"
-msgstr ""
+msgstr "Lerroz kanpo"
 
 #: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
 #: libs/cstatus.cpp:219 libs/cstatus.cpp:268
@@ -3786,34 +3807,34 @@ msgid "idle"
 msgstr "ez aktiboa"
 
 #: libs/cstatus.cpp:181
-#, fuzzy, kde-format
+#, kde-format
 msgid "Connected"
 msgstr "Konektatuta"
 
 #: libs/cstatus.cpp:184
-#, fuzzy, kde-format
+#, kde-format
 msgid "Connected."
 msgstr "Konektatuta."
 
 #: libs/cstatus.cpp:190
-#, fuzzy, kde-format
+#, kde-format
 msgid "Disconnected."
 msgstr "Deskonektatuta."
 
 #: libs/cstatus.cpp:192
 #, kde-format
 msgid "Connection has been closed."
-msgstr ""
+msgstr "Konexioa itxi egin da."
 
 #: libs/cvariablelist.cpp:375
 #, kde-format
 msgid "This is not a KMuddy variable list file."
-msgstr ""
+msgstr "Hau ez da KMuddy-ren aldagai-zerrenda fitxategi bat."
 
 #: plugins/converter/converterdialog.cpp:41
 #, kde-format
 msgid "Profile Converter"
-msgstr ""
+msgstr "Profil bihurtzailea"
 
 #: plugins/converter/converterdialog.cpp:49
 #, kde-format
@@ -3825,74 +3846,74 @@ msgid ""
 msgstr ""
 
 #: plugins/converter/converterdialog.cpp:54
-#, fuzzy, kde-format
+#, kde-format
 msgid "Path"
 msgstr "Bide-izena"
 
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr ""
+msgstr "Profil &bihurtzailea..."
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
 msgid "The profiles have been successfully converted."
-msgstr ""
+msgstr "Profil hau behar bezala bihurtu da."
 
 #: plugins/converter/converterplugin.cpp:131
 #, kde-format
 msgid "You did not specify any profiles to convert."
-msgstr ""
+msgstr "Ez duzu bihurtu beharreko profilik zehaztu."
 
 #: plugins/mapper/cmapclipboard.cpp:64
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select All"
 msgstr "Hautatu dena"
 
 #: plugins/mapper/cmapclipboard.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unselect All"
-msgstr "Deshautatu dena"
+msgstr "Desautatu dena"
 
 #: plugins/mapper/cmapclipboard.cpp:72
-#, fuzzy, kde-format
+#, kde-format
 msgid "Invert Selection"
 msgstr "Alderantzikatu hautapena"
 
 #: plugins/mapper/cmapclipboard.cpp:80
-#, fuzzy, kde-format
+#, kde-format
 msgid "Copy"
 msgstr "Kopiatu"
 
 #: plugins/mapper/cmapclipboard.cpp:84
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cut"
 msgstr "Ebaki"
 
 #: plugins/mapper/cmapclipboard.cpp:88
-#, fuzzy, kde-format
+#, kde-format
 msgid "Paste"
 msgstr "Itsatsi"
 
 #: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
 #, kde-format
 msgid "Paste Element"
-msgstr ""
+msgstr "Itsatsi elementua"
 
 #: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
 #, kde-format
 msgid "Update Properties"
-msgstr ""
+msgstr "Eguneratu propietateak"
 
 #: plugins/mapper/cmapclipboard.cpp:375
 #, kde-format
 msgid "Paste Path"
-msgstr ""
+msgstr "Itsatsi bide-izena"
 
 #: plugins/mapper/cmapclipboard.cpp:466
 #, kde-format
 msgid "Delete Elements"
-msgstr ""
+msgstr "Ezabatu elementuak"
 
 #: plugins/mapper/cmapelement.cpp:338
 #, kde-format
@@ -3900,14 +3921,14 @@ msgid "Resize Element"
 msgstr ""
 
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
-#, fuzzy, kde-format
+#, kde-format
 msgid "Level %1"
-msgstr "Maila"
+msgstr "%1 maila"
 
 #: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
-#, fuzzy, kde-format
+#, kde-format
 msgid "Map #1"
-msgstr "Mapa"
+msgstr "zk.1 mapa"
 
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
@@ -4189,17 +4210,17 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
 msgid "&Remove Segment"
-msgstr ""
+msgstr "&Kendu segmentua"
 
 #: plugins/mapper/cmapview.cpp:217
-#, kde-format
+#, fuzzy, kde-format
 msgid "&Edit Bends"
-msgstr ""
+msgstr "&Editatu "
 
 #: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "Eza&batu bide-izena"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:231
@@ -4223,7 +4244,7 @@ msgstr "&Etiketa"
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
-msgstr ""
+msgstr "Norabide horretan ez dago mailarik. Berri bat sortu nahi duzu?"
 
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
@@ -4259,7 +4280,7 @@ msgstr ""
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
 msgid "Current Room : "
-msgstr ""
+msgstr "Uneko gela: "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
@@ -4279,7 +4300,7 @@ msgstr ""
 #: plugins/mapper/cmapzonemanager.cpp:232
 #, kde-format
 msgid "This is not a KMuddy map list."
-msgstr ""
+msgstr "Hau ez da KMuddy-ren mapa-zerrenda bat."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
@@ -4291,19 +4312,19 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
 #, kde-format
 msgid "Current Level"
-msgstr ""
+msgstr "Uneko maila"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr ""
+msgstr "Bide-izenaren kolorea lehenetsia"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr ""
+msgstr "Gelaren kolore lehenetsia"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
@@ -4531,13 +4552,13 @@ msgstr "Kendu"
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
 #, kde-format
 msgid "Changed Path Properties"
-msgstr ""
+msgstr "Bide-izen propietateak aldatu dira"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr ""
+msgstr "Bide-izen propietateak"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
@@ -4665,19 +4686,19 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
 #, kde-format
 msgid "Special Command"
-msgstr ""
+msgstr "Komando berezia"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr ""
+msgstr "Sorburutik jomugara:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr ""
+msgstr "Jomugatik sorburura:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
@@ -4770,13 +4791,13 @@ msgstr "Kolorea"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
 #, kde-format
 msgid "Room Color:"
-msgstr ""
+msgstr "Gelaren kolorea:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr ""
+msgstr "Gelaren kolore lehenetsia"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
@@ -5121,7 +5142,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
 msgid "Communicate variables"
-msgstr ""
+msgstr "Aldagaiak komunikatu"
 
 #: plugins/scripting/cscripteditor.cpp:112
 #, kde-format
@@ -5143,17 +5164,17 @@ msgstr "Hautatu laneko direktorioa"
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr ""
+msgstr "Kanpoko gidoi hori ez da existitzen!"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr ""
+msgstr "Exekutatzen ari diren gidoiak"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr ""
+msgstr "E&xekutatzen ari diren gidoiak"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format

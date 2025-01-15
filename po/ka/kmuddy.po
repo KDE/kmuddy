@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-12-28 02:14+0100\n"
+"PO-Revision-Date: 2025-01-14 14:20+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -489,6 +489,8 @@ msgstr "ბრძანების გაშვება წინასწა&
 #, kde-format
 msgid "Run a command a given number of seconds before each timer tick."
 msgstr ""
+"ბრძანების გაშვება მითითებული რაოდენობის წამებით ადრე ტაიმერის თითოეულ "
+"ათვლამდე."
 
 #: kmuddy/ctimereditor.cpp:87
 #, kde-format
@@ -511,6 +513,8 @@ msgid ""
 "Command that will be executed the specified time before each tick.\n"
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
+"ბრძანება, რომელიც შესრულდება თითოეულ ათვლამდე მითითებული დროით ადრე.\n"
+"ბრძანება, შეიძლება, შეიცავდეს ფსევდონიმებს, სკრიპტის გამოძახებებს და ა.შ."
 
 #: kmuddy/ctranscript.cpp:173
 #, kde-format
@@ -738,6 +742,8 @@ msgid ""
 "Type of matching. Trigger will only be activated if this passes this type of "
 "test. Note that triggers are always matched as whole words."
 msgstr ""
+"დამთხვევის ტიპი. პირობა, მხოლოდ, მაშინ გააქტიურდება, თუ ეი ამ ტიპის ტესტს "
+"გაივლის. დაიმახსოვრეთ, რომ დამთხვევები, ყოველთვის, მთლიან სიტყვასთან დარდება."
 
 #: kmuddy/ctriggereditor.cpp:191 libs/caliaseditor.cpp:114
 #, kde-format
@@ -745,6 +751,8 @@ msgid ""
 "Conditional triggering. If this is set, the actions will only fire if the "
 "condition is true (that means, if it evaluates as non-zero)."
 msgstr ""
+"პირობითი ჩართვა. თუ ეს ჩართულია, პირობა, მხოლოდ, მაშინ გაეშვება, თუ პირობა "
+"ჭეშმარიტია (ნიშნავს, რომ მისი შედეგი ნულოვანი არაა)."
 
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
@@ -785,6 +793,8 @@ msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"ეს შემოწმების ადგილია. შეგიძლიათ, თქვენი პირობა აქ შეამოწმოთ, რომ ნახოთ, რას "
+"იზამს ის. უბრალოდ აკრიფეთ ტექსტი და ნახეთ, რა მოხდება."
 
 #: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
 #: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
@@ -804,6 +814,8 @@ msgid ""
 "When enabled, this trigger will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"როცა ჩართულია, ეს პირობა, მხოლოდ, მაშინ დაემთხვევა ტექსტს, თუ არის ჰარეები, "
+"ან არაფერი შესაბამის სტრიქონამდე ან მის შემდეგ."
 
 #: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
 #, kde-format
@@ -816,6 +828,8 @@ msgid ""
 "When this option is on, upper case and lower case letters are treated as "
 "different characters, otherwise they're considered to be the same."
 msgstr ""
+"თუ ეს ჩართულია, დიდი და პატარა ასოების დამუშავება სხვადასხვანაირად მოხდება. "
+"წინააღმდეგ შემთხვევაში ისინი ერთი და იგივედ ითვლება."
 
 #: kmuddy/ctriggereditor.cpp:260
 #, kde-format
@@ -828,6 +842,8 @@ msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
 "displayed on the screen."
 msgstr ""
+"როცა ჩართულია, MUD-ს ტექსტი არ გაეგზავნება. ის, მხოლოდ, ეკრანზე იქნება "
+"ნაჩვენები."
 
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
@@ -921,7 +937,7 @@ msgstr "ფონი"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr ""
+msgstr "ტექსტის გადაწე&რის პირობა"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
@@ -941,13 +957,13 @@ msgstr "&ამ მნიშვნელობამდე:"
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr ""
+msgstr "არ აჩვენო (&დაადუმე) ეს ხაზი"
 
 #: kmuddy/ctriggereditor.cpp:427
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
-msgstr ""
+msgstr "ეს აკრძალავს შესატყვისი ხაზების ჩვენებას გამოტანის ფანჯარაში."
 
 #: kmuddy/ctriggereditor.cpp:429
 #, kde-format
@@ -967,7 +983,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr ""
+msgstr "&გამოვლენის დადგენის პირობა"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -990,6 +1006,8 @@ msgid ""
 "This trigger will play a sound. Useful as a notification of important "
 "events, or to assign sounds to some events."
 msgstr ""
+"ეს პირობა ხმას დაუკრავს. სასარგებლოა მნიშვნელოვანი მოვლენების შესახებ "
+"გაფრთხილებებისთვის, ან ზოგიერთი მოვლენისთვის ხმის მისანიჭებლად."
 
 #: kmuddy/ctriggereditor.cpp:464
 #, kde-format
@@ -1009,7 +1027,7 @@ msgstr "გამოტანის ფანჯრები"
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
-msgstr ""
+msgstr "მთავარ ფანჯარაში &გამოტანის დადუმება"
 
 #: kmuddy/ctriggereditor.cpp:479
 #, kde-format
@@ -1017,6 +1035,8 @@ msgid ""
 "This will cause output sent to a separate window not to be displayed in main "
 "KMuddy session window"
 msgstr ""
+"ეს გამოტანას სხვა ფანჯარაში გააგზავნის მთავარი KMuddy-ის სესიის ფანჯრის "
+"მაგიერ"
 
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
@@ -1158,6 +1178,8 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
+"თუ ჩართულია, ჩანართების პანელი ყოველთვის ნაჩვენები იქნება. თუ არა, ის "
+"დაიმალება, როცა არსებობს, მხოლოდ, ერთი ჩანართი."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
@@ -1422,7 +1444,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
 msgid "&Select kept text after it's sent"
-msgstr ""
+msgstr "შენარჩუნებული ტექსტი&ს მონიშვნა მისი გაგზავნის შემდეგ"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:322
 #, kde-format
@@ -1495,7 +1517,7 @@ msgstr "ავტომატური შევსება"
 #: kmuddy/dialogs/dlgappsettings.cpp:352
 #, kde-format
 msgid "Shortest-match auto-fill"
-msgstr ""
+msgstr "უმოკლესი დამთხვევით ავტოშევსება"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:353
 #, kde-format
@@ -1525,7 +1547,7 @@ msgstr "იმ ტექსტის ფერი, რომელსაც შ�
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr ""
+msgstr "&ENTER-ის და CTRL+ENTER-ის მიმოცვლა მრავალხაზიანობისთვის"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1575,7 +1597,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
 msgid "S&peed-walk even if empty"
-msgstr ""
+msgstr "სწრა&ფი გავლა მაშინაც, თუ ცარიელია"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:444
 #, kde-format
@@ -1616,7 +1638,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
-msgstr ""
+msgstr "&ფოკუსის სტრიქონი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
@@ -1642,7 +1664,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
 msgid "&Expand backslashes"
-msgstr ""
+msgstr "უკუღმა დახრილი ხაზ&ების დაცვა „\\“"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:485
 #, kde-format
@@ -1733,7 +1755,7 @@ msgstr "&პროფილის დუბლირება"
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr ""
+msgstr "არ გააგზავნო შე&სვლის მიმდევრობა"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1819,7 +1841,7 @@ msgstr "დუბლირების შეცდომა"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:38
 #, kde-format
 msgid "Dump output buffer"
-msgstr ""
+msgstr "გამოტანის ბუფერის ჩაწერა"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:44
 #, kde-format
@@ -1881,6 +1903,8 @@ msgid ""
 "Enter profile name here. You can enter any name, but it must be <b>unique</"
 "b>."
 msgstr ""
+"შეიყვანეთ აქ პროფილის სახელი. შეგიძლიათ, ნებისმიერი სახელი შეიყვანოთ, ოღონდ "
+"ის <b>უნიკალური</b> უნდა იყოს."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:47
 #, kde-format
@@ -1890,7 +1914,7 @@ msgstr "&სერვერი:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:49
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
-msgstr ""
+msgstr "ელფოსტის მისამართი სერვერის, სადაც MUD-ია გაშვებული."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
 #, kde-format
@@ -1901,6 +1925,8 @@ msgstr "&პორტი:"
 #, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
+"შეიყვანეთ პორტი, რომელზედაც თქვენი MUD-ია გაშვებული (ჩვეულებრივ, 4-ციფრიანი "
+"რიცხვი)."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:55
 #, kde-format
@@ -1912,6 +1938,8 @@ msgstr "&მომხმარებლის სახელი:"
 msgid ""
 "Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
+"შეიყვანეთ მომხმარებლის სახელი თქვენს MUD-ზე.<p><i>ეს პარამეტრი "
+"არასავალდებულოა.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:58
 #, kde-format
@@ -1921,7 +1949,7 @@ msgstr "&პაროლი:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:61
 #, kde-format
 msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
-msgstr ""
+msgstr "შეიყვანეთ პაროლი თქვენს MUD-ზე.<p><i>ეს პარამეტრი არასავალდებულოა.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
 #, kde-format
@@ -1952,7 +1980,7 @@ msgstr "პროფილის სახელი, არ შეიძლე�
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
 msgid "Keygrabber"
-msgstr ""
+msgstr "ღილაკების გადაჭერა"
 
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
@@ -2022,6 +2050,8 @@ msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
 "command."
 msgstr ""
+"შეიყვანეთ ბრძანებები, რომლებიც MUD-ს გაეგზავნება. თითოეული ხაზი ერთ "
+"ბრძანებას წარმოადგენს."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
@@ -2164,7 +2194,7 @@ msgstr "&100-ზე მეტი გამეორებული ბრძა�
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
 msgid "Enable telnet &negotiation on startup"
-msgstr ""
+msgstr "გაშვებისას ტელ&ნეტით მოლაპარაკების ჩართვა"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:77
 #, kde-format
@@ -2188,7 +2218,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr ""
+msgstr "&ახალი ხაზების ავტომატური მიწერა ბოლოში"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:91
 #, kde-format
@@ -2200,22 +2230,22 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr ""
+msgstr "შეყვანი&ს ჩვენება ცალკე ველში"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr ""
+msgstr "შეყვანის ჩვენება ს&ტატუსის ზოლში"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr ""
+msgstr "შეყვანის ჩვენება &კონსოლში"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
 msgid "Start advanced transcript when session starts"
-msgstr ""
+msgstr "დამატებითი ტრანსკრიპტის დაწყება სესიის გაშვებისას"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:126
 #, kde-format
@@ -2282,7 +2312,7 @@ msgstr "&გარე სკრიპტების საქაღალდე
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr ""
+msgstr "ნაგულისხმევი საქაღალდე, სადაც სკრიპტების ძებნა მოხდება."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
@@ -2305,12 +2335,12 @@ msgstr "&ტრანსკრიპტების საქაღალდე"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr ""
+msgstr "საქაღალდე, სადაც ტრანსკრიპტების ნაგულისხმევად შენახვა მოხდება."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
 msgid "&Enable sounds for this profile"
-msgstr ""
+msgstr "ხმების ჩართვა ამ პროფილისთვის"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:191
 #, kde-format
@@ -2324,12 +2354,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
 msgid "Only enable these if you need them:"
-msgstr ""
+msgstr "ესენი, მხოლოდ, მაშინ ჩართეთ, თუ გჭირდებათ:"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
 msgid "&Use MSP even if not negotiated"
-msgstr ""
+msgstr "MSP-ის გამო&ყენება მაშინაც კი, თუ მოლაპარაკება არ შემდგარა"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:198
 #, kde-format
@@ -2345,7 +2375,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
 msgid "Allow &mid-line MSP sequences"
-msgstr ""
+msgstr "&შუახაზის MSP მიმდევრობების დაშვება"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:205
 #, kde-format
@@ -2370,7 +2400,7 @@ msgstr "არასდროს"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:225
 #, kde-format
 msgid "If negotiated"
-msgstr ""
+msgstr "თუ მოლაპარაკებულია"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:226
 #, kde-format
@@ -2395,7 +2425,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:234
 #, kde-format
 msgid "MXP &variable prefix"
-msgstr ""
+msgstr "MXP ც&ვლადის პრეფიქსი"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:237
 #, kde-format
@@ -2564,7 +2594,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
 msgid "Include buffer &dump"
-msgstr ""
+msgstr "ბუფერის &დამპის ჩართვა"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:80
 #, kde-format
@@ -2576,7 +2606,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
 msgid "Enable &advanced transcript"
-msgstr ""
+msgstr "&დამატებითი ტრანსკრიპტის ჩართვა"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:110
 #, kde-format
@@ -2589,23 +2619,24 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
 msgid "Advanced transcript settings"
-msgstr ""
+msgstr "დამატებითი ტრანსკრიპტის პარამეტრები"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:130
 #, kde-format
 msgid "&Rotate log at midnight every day"
-msgstr ""
+msgstr "ჟუ&რნალის გადაბრუნება ყოველდღე შუაღმისას"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:131
 #, kde-format
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
 msgstr ""
+"ეს აიძულებს KMuddy-ის, დაატრიალოს სესიის ტრანსკრიპტი ყოველდღე შუაღამისას"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr ""
+msgstr "ხაზების წინ დროის &შტამპის მიწერა"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
@@ -2630,7 +2661,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
 msgid "&List of output windows"
-msgstr ""
+msgstr "გამოტანის ფანჯრები&ს სია"
 
 #: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
@@ -2700,7 +2731,7 @@ msgstr "დარჩენილი ბრძანებების &გაუ
 #: kmuddy/kmuddy.cpp:314
 #, kde-format
 msgid "Show &gaugebar"
-msgstr ""
+msgstr "&გაზომვების პანელის ჩვენება"
 
 #: kmuddy/kmuddy.cpp:327
 #, kde-format
@@ -2750,12 +2781,12 @@ msgstr "&სესიის ტრანსკრიპტი..."
 #: kmuddy/kmuddy.cpp:375
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr ""
+msgstr "გამოტანის &ბუფერის დამპი..."
 
 #: kmuddy/kmuddy.cpp:379
 #, kde-format
 msgid "&Decision assistant"
-msgstr ""
+msgstr "გა&დაწყვეტილების დამხმარე"
 
 #: kmuddy/kmuddy.cpp:393
 #, kde-format
@@ -2861,6 +2892,8 @@ msgstr "&დახმარება"
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
+"თავიდან დასაკავშირებლად დააჭირეთ ღილაკს %1 ან გამოიყენეთ კავშირი / თავიდან "
+"მიერთება."
 
 #: kmuddy/kmuddy.cpp:990
 #, kde-format
@@ -2877,39 +2910,39 @@ msgstr ""
 #: kmuddy/macros.cpp:67
 #, kde-format
 msgid "/setval: Expression parsing failed."
-msgstr ""
+msgstr "/setval: გამოსახულების დამუშავება ჩავარდა."
 
 #: kmuddy/macros.cpp:170
 #, kde-format
 msgid "No free resources of that type."
-msgstr ""
+msgstr "ამ ტიპის თავისუფალი რესურსი არ არსებობს."
 
 #: kmuddy/macros.cpp:192
 #, kde-format
 msgid "/tick: syntax: /tick timer-name"
-msgstr ""
+msgstr "/tick: სინტაქსი: /tick ტაიმერის-სახელი"
 
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr ""
+msgstr "/tick: ტაიმერი ამ სახელით არ არსებობს."
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
 msgid "/tick: this timer is currently disabled."
-msgstr ""
+msgstr "/tick: ეს ტაიმერი ამჟამად გათიშულია."
 
 #: kmuddy/macros.cpp:209
 #, kde-format
 msgid "Timer ticks in 1 second."
 msgid_plural "Timer ticks in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ტაიმერი მივა 1 წამში."
+msgstr[1] "ტაიმერი მივა %1 წამში."
 
 #: kmuddy/macros.cpp:211
 #, kde-format
 msgid "Timer ticks right now."
-msgstr ""
+msgstr "ტაიმერი ახალ დაიწრიპინებს."
 
 #: kmuddy/macros.cpp:221
 #, kde-format
@@ -3133,7 +3166,7 @@ msgstr "Tomas Mecir"
 #: kmuddy/main.cpp:41
 #, kde-format
 msgid "Main developer and maintainer"
-msgstr ""
+msgstr "მთავარი პროგრამისტი და პროექტის ლიდერი"
 
 #: kmuddy/main.cpp:42
 #, kde-format
@@ -3205,7 +3238,7 @@ msgstr "Marco Mastroddi"
 #: kmuddy/main.cpp:55
 #, kde-format
 msgid "Tick timers"
-msgstr ""
+msgstr "ტაიმერები"
 
 #: kmuddy/main.cpp:56
 #, kde-format
@@ -3215,7 +3248,7 @@ msgstr "Henrikki Almusa"
 #: kmuddy/main.cpp:57
 #, kde-format
 msgid "Commands to enable/disable groups"
-msgstr ""
+msgstr "ბრძანებები ჯგუფების ჩასართავად/გამოსართავად"
 
 #: kmuddy/main.cpp:58
 #, kde-format
@@ -3226,6 +3259,7 @@ msgstr "Drossos Stamboulakis"
 #, kde-format
 msgid "Selection improvements, full screen mode, cross-tab commands"
 msgstr ""
+"მონიშვნის გაუმჯობესებები, სრულეკრანიანი რეჟიმი, ჩანართთაშორისი ბრძანებები"
 
 #: kmuddy/main.cpp:60
 #, kde-format
@@ -3327,7 +3361,7 @@ msgstr "&ჩასანაცვლებელი ტექსტ(ებ)-ი"
 #: libs/caliaseditor.cpp:122
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr ""
+msgstr "ბრძანებები, რომლებიც ჩაანაცვლებენ თქვენს მიერ შეყვანილ ბრძანებას."
 
 #: libs/caliaseditor.cpp:137
 #, kde-format
@@ -3359,7 +3393,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:189
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr ""
+msgstr "პრეფიქსის/სუფიქსის ჩასმა"
 
 #: libs/caliaseditor.cpp:190
 #, kde-format
@@ -3404,12 +3438,14 @@ msgstr "უკაცრავად, რაოდენობა შემოი
 #: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr ""
+msgstr "ამ ზღვრის გათიშვა პროფილი / MUD-ის მორგების ფანჯრიდან შეგიძლიათ."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
 msgid "Sorry, but macro calls are only available for profile connections."
 msgstr ""
+"უკაცრავად, მაგრამ მაკროს გამოძახებები, მხოლოდ, პროფილის მიერთებებისთვისაა "
+"ხელმისაწვდომი."
 
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
@@ -3459,13 +3495,13 @@ msgstr "წინ"
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr ""
+msgstr "ფუნქცია %1 არ არსებობს - ნავარაუდევია ცარიელი დაბრუნებული მნიშვნელობა."
 
 #: libs/clist.cpp:468
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
-msgstr ""
+msgstr "ეს ფაილი არ შეიცავს ძირითად ჯგუფს და ამიტომ ვერ ჩაიტვირთება."
 
 #: libs/clist.cpp:471 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
@@ -3474,6 +3510,8 @@ msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
 "unable to open it."
 msgstr ""
+"ეს ფაილი KMuddy-ის უფრო ახალი ვერსიითაა შექმნილი და ამ ვერსიას მისი გახსნა "
+"არ შეუძლია."
 
 #: libs/clist.cpp:473
 #, kde-format
@@ -3521,11 +3559,14 @@ msgstr "&სახელი"
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
 msgstr ""
+"ჯგუფის სახელის გადარქმევა შეუძლებელია, რადგან ჯგუფი ამ სახელით უკვე არბობს."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
 msgstr ""
+"ობიექტის სახელის გადარქმევა შეუძლებელია, რადგან ობიექტი ამ სახელით უკვე "
+"არბობს."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
@@ -3535,7 +3576,7 @@ msgstr "შეცდომა ფაილში- ჯგუფი სახე�
 #: libs/clistgroup.cpp:233
 #, kde-format
 msgid "Error in file - duplicate group name."
-msgstr ""
+msgstr "შეცდომა ფაილში - გამეორებული ჯგუფის სახელი."
 
 #: libs/clistviewer.cpp:63
 #, kde-format
@@ -3565,12 +3606,12 @@ msgstr "ობიექტის დამატება"
 #: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr ""
+msgstr "მართლა გნებავთ ამ ჯგუფის წაშლა?"
 
 #: libs/clistviewer.cpp:165
 #, kde-format
 msgid "Do you really want to delete this %1?"
-msgstr ""
+msgstr "მართლა გნებავთ, წაშალოთ ეს %1?"
 
 #: libs/clistviewer.cpp:166
 #, kde-format
@@ -3590,17 +3631,17 @@ msgstr "შეიყვანეთ ჯგუფის სახელი:"
 #: libs/clistviewer.cpp:196
 #, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr ""
+msgstr "ჯგუფის შექმნა შეუძლებელია, რადგან მოწოდებული სახელი არასწორია."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr ""
+msgstr "ჯგუფის შექმნა შეუძლებელია, რადგან ჯგუფი ამ სახელით უკვე არსებობს."
 
 #: libs/cmsp.cpp:284
 #, kde-format
 msgid "MSP: Received corrupted sound trigger!"
-msgstr ""
+msgstr "MSP: მიღებულია დაზიანებული ხმის პირობა!"
 
 #: libs/cmsp.cpp:285
 #, kde-format
@@ -3610,47 +3651,49 @@ msgstr "MSP: პრობლემა: %1"
 #: libs/cmsp.cpp:315
 #, kde-format
 msgid "Parameter names must be followed by '='."
-msgstr ""
+msgstr "პარამეტრის სახელს უნდა მოსდევდეს სიმბოლო '='."
 
 #: libs/cmsp.cpp:340
 #, kde-format
 msgid "Parameter %1 requires a numeric argument"
-msgstr ""
+msgstr "პარამეტრს %1 რიცხვითი არგუმენტი სჭირდება"
 
 #: libs/cmsp.cpp:351
 #, kde-format
 msgid "Value of param V is out of 0-100 range."
-msgstr ""
+msgstr "პარამეტრის V მნიშვნელობა შუალედის 0-100 გარეთაა."
 
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr ""
+msgstr "პარამეტრის L მნიშვნელობა შუალედის -1;1-100 გარეთაა."
 
 #: libs/cmsp.cpp:373
 #, kde-format
 msgid "Value of param P is out of 0-100 range."
-msgstr ""
+msgstr "პარამეტრის P მნიშვნელობა შუალედის 0-100 გარეთაა."
 
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr ""
+msgstr "პარამეტრის C მნიშვნელობა 0 ან 1 უნდა იყოს."
 
 #: libs/cmsp.cpp:393
 #, kde-format
 msgid "Received unfinished sequence."
-msgstr ""
+msgstr "მიღებულია დაუსრულებელი მიმდევრობა."
 
 #: libs/cmsp.cpp:449
 #, kde-format
 msgid "MSP: Multiple downloads not supported, request ignored."
 msgstr ""
+"MSP: ერთზე მეტი ელემენტის გადმოწერა მხარდაჭერილი არაა. მოთხოვნა "
+"გამოტოვებულია."
 
 #: libs/cmsp.cpp:469
 #, kde-format
 msgid "MSP: downloading of sounds disabled - request ignored."
-msgstr ""
+msgstr "MSP: ხმების გადმოწერა გათიშულია - მოთხოვნა გამოტოვებულია."
 
 #: libs/coutput.cpp:228
 #, kde-format
@@ -3785,7 +3828,7 @@ msgstr "შეერთება დაიხურა."
 #: libs/cvariablelist.cpp:375
 #, kde-format
 msgid "This is not a KMuddy variable list file."
-msgstr ""
+msgstr "ეს არაა KMuddy-ის ცვლადი სიის ფაილი."
 
 #: plugins/converter/converterdialog.cpp:41
 #, kde-format
@@ -4200,7 +4243,7 @@ msgstr "&ჭდე"
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
-msgstr ""
+msgstr "ამ მიმართულებით დონე არ არსებობს. გნებავთ ახლის შექმნა?"
 
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
@@ -4221,7 +4264,7 @@ msgstr "შეიყვანეთ სახელი ახალი ზონ
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
-msgstr ""
+msgstr "მართლა გნებავთ მიმდინარე ზონის წაშლა? ეს ქმედება შეუქცევადია."
 
 #: plugins/mapper/cmapview.cpp:759
 #, kde-format
@@ -5054,6 +5097,8 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
+"თუ სკრიპტის შეყვანა ჩართულია, ეს საშუალებას გაძლევთ, სკრიპტს ბრძანებები "
+"გაუგზავნოთ."
 
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
@@ -5066,6 +5111,8 @@ msgid ""
 "Enables identification of lines of server output. Refer to the manual for "
 "more information."
 msgstr ""
+"ჩართავს სერვერის გამოტანის ხაზების იდენტიფიკაციას. მეტი ინფორმაციისთვის "
+"იხილეთ სახელმძღვანელო."
 
 #: plugins/scripting/cscripteditor.cpp:98
 #, kde-format
@@ -5077,7 +5124,7 @@ msgstr "ერთჯერადი სკრიპტი"
 msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
-msgstr ""
+msgstr "თუ ამ სკრიპტის გაშვებული ასლი უკვე არსებობს, მეორეს ვერ გაუშვებთ."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
@@ -5155,7 +5202,7 @@ msgstr "სკრიპტები"
 #: plugins/vartrigs/cvartriggereditor.cpp:61
 #, kde-format
 msgid "Variable name that this trigger will be reacting on."
-msgstr ""
+msgstr "ცვლადის სახელს, რომელზეც პირობას რეაქცია ექნება."
 
 #: plugins/vartrigs/cvartriggereditor.cpp:63
 #, kde-format
@@ -5165,7 +5212,7 @@ msgstr "&ბრძანებები"
 #: plugins/vartrigs/cvartriggereditor.cpp:66
 #, kde-format
 msgid "Commands that will be executed when this trigger matches."
-msgstr ""
+msgstr "ბრძანება, რომელიც შესრულდება, როცა ეს პირობა შესრულდება."
 
 #: plugins/vartrigs/vartrigplugin.cpp:39
 #, kde-format
