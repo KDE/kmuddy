@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-06 13:02+0100\n"
+"PO-Revision-Date: 2025-01-19 13:40+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -315,6 +315,7 @@ msgstr ""
 "Ctrl+Intro engade unha nova liña, salvo que cambie este comportamento na "
 "configuración."
 
+# skip-rule: trasno-support3_reverse
 #: kmuddy/csession.cpp:86
 #, kde-format
 msgid "Switches between standard and multi-line input line."
@@ -3280,13 +3281,13 @@ msgstr "/opriority: o obxecto non existe."
 msgid "/opriority: priority must be in the 1-1000 range."
 msgstr "/opriority: a prioridade debe ser un valor entre 1 e 1000."
 
-# skip-rule: normalization-ble
+# skip-rule: trasno-gl_bel
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
 msgstr "/oenable: o obxecto non existe."
 
-# skip-rule: normalization-ble
+# skip-rule: trasno-gl_bel
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
