@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-14 14:20+0100\n"
+"PO-Revision-Date: 2025-01-30 05:46+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1217,6 +1217,9 @@ msgid ""
 "window caption and the taskbar will try to attract your attention (some "
 "characters will blink there)."
 msgstr ""
+"როცა სერვერიდან რამე ტექსტს მივიღებთ და KMuddy ამჟამად აქტიური არაა, ფანჯრის "
+"სათაური და ამოცანების პანელი თქვენს ყურადღებას მიიპყრობს (ზოგიერთი სიმბოლო "
+"გაციმციმებდა)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
@@ -1230,6 +1233,8 @@ msgid ""
 "active, its tab will try to attract your attention (some characters will "
 "blink there)."
 msgstr ""
+"როცა სერვერიდან რამე ტექსტს მივიღებთ და ეს სესია, ამჟამად, აქტიური არაა, "
+"მისი ჩანართი თქვენს ყურადღებას მიიპყრობს (ზოგიერთი სიმბოლო გაციმციმებდა)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:135
 #, kde-format
@@ -1245,6 +1250,12 @@ msgid ""
 "it. Your connection will remain active even if the window is hidden and you "
 "will still receive notification messages. "
 msgstr ""
+"ეს პარამეტრი სისტემურ საათთან ხატულის გამოჩენას გადართავს. ეს ხატულა, "
+"შეგიძლიათ, აპლიკაციის ფანჯრის დასამალად გამოიყენოთ, რომ მან ამოცანების "
+"პანელზე ადგილი არ დახარჯოთ. დააწკაპუნეთ ხატულაზე, რომ დამალოთ ფანჯარა და "
+"დააწკაპუნეთ მეორედ, რომ ის გამოჩნდეს. თქვენი კავშირი ღიად დარჩება მაშინაც "
+"კი, როცა ფანჯარა დამალულია და თქვენ ჯერ კიდევ მიიღებთ გაფრთხილების "
+"შეტყობინებებს. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
@@ -1258,6 +1269,9 @@ msgid ""
 "the system tray icon when you are in another window and alert you to the "
 "presence of activity in one of your connections. "
 msgstr ""
+"ეს პარამეტრი პასიური მხტუნარების გამოყენებას გადართავს. პასიური მხტუნარები "
+"სისტემურ საათთან ხატულასთან გამოჩნდება, როცა სხვა ფანჯარაში მუშაობთ და "
+"გაგაფრთხილებთ, რომ ერთ-ერთ თქვენს კავშირში აქტივობა არსებობს. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:151
 #, kde-format
@@ -2644,6 +2658,8 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
+"ეს პარამეტრი KMuddy-ის აიძულებს, ჟურნალში თითოეული ხაზის დასაწყისში დროის "
+"შტამპი ჩასვას"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
@@ -2657,6 +2673,9 @@ msgid ""
 "world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
 "combination of alpha-numeric characters."
 msgstr ""
+"აქ შეგიძლიათ ჟურნალის ფორმატი მიუთითოთ. შეგიძლიათ, გამოიყენოთ შემდეგი "
+"პარამეტრებით: $W - სამყაროს სახელი, $h - საათი, $m - წუთი, $D - დღე, $M - "
+"თვე, $Y - წელი და ალფარიცხვითი სიმბოლოების ნებისმიერი კომბინაცია."
 
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
@@ -2906,6 +2925,8 @@ msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
 "disconnecting, and also every five minutes."
 msgstr ""
+"პროფილი შენახულია. დაიმახსოვრეთ, რომ პროფილების შენახვა ავტომატურად ხდება "
+"გათიშვისას და, ასევე, ყოველ 5 წუთში."
 
 #: kmuddy/macros.cpp:67
 #, kde-format
@@ -3145,6 +3166,7 @@ msgid ""
 "KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
 "features."
 msgstr ""
+"KMuddy MUD-ის (Multi-User Dungeon) კლიენტია KDE-სთან სხვადასხვა ფუნქციებით."
 
 #: kmuddy/main.cpp:35 kmuddy/main.cpp:37
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:85
@@ -3179,6 +3201,8 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
+"ბევრი გაუმჯობესება გარე სკრიპტინგში, შიდა სკრიპტის დამმუშავებელში, გამოტანის "
+"ხედში და ფსევდონიმებში/ტრიგერებში. შეცდომების გასწორება"
 
 #: kmuddy/main.cpp:44
 #, kde-format
@@ -3189,6 +3213,7 @@ msgstr "Alsherok staff"
 #, kde-format
 msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
 msgstr ""
+"AFKMud-ის კოდის გამოცემისთვის, რომელიც MCCP/MSP-ის შესამოწმებლად გამოიყენება"
 
 #: kmuddy/main.cpp:46
 #, kde-format
@@ -3352,6 +3377,9 @@ msgid ""
 "Type of matching. Alias will only be activated if this passes this type of "
 "test. Note that aliases are always matched as whole words."
 msgstr ""
+"დამთხვევის ტიპი. ფსევდონიმი, მხოლოდ, მაშინ გაქტიურდება, თუ ის ამ ტიპის "
+"შემოწმებას გაივლის. დაიმახსოვრეთ, რომ ფსევდონიმები, ყოველთვის, მთლიან "
+"სიტყვებთან დარდება."
 
 #: libs/caliaseditor.cpp:118
 #, kde-format
@@ -3369,6 +3397,8 @@ msgid ""
 "This is testing area. You can test your alias here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"ეს შემოწმების ადგილია. შეგიძლიათ, თქვენი ფსევდონიმი აქ შეამოწმოთ, რომ ნახოთ, "
+"რას აკეთებს ის. უბრალოდ აკრიფეთ რამე ტექსტი და იხილეთ, რა მოხდება."
 
 #: libs/caliaseditor.cpp:174
 #, kde-format
@@ -3382,6 +3412,9 @@ msgid ""
 "you enable this option, both original and replacement commands are sent "
 "(original command is sent first)."
 msgstr ""
+"თუ ეს ფსევდონიმი თქვენს ბრძანებას ემთხვევა, გაგზავნილი იქნება ჩამნაცვლებელი "
+"ბრძანება. თუ ამ პარამეტრს ჩართავთ, გაიგზავნება ორიგინალიც და ჩამნაცვლებელიც "
+"(იგზავნება, ჯერ, ორიგინალი ბრძანება)."
 
 #: libs/caliaseditor.cpp:181
 #, kde-format
@@ -3389,6 +3422,8 @@ msgid ""
 "When enabled, this alias will only match the text if there are spaces or "
 "nothing before/after the matched string."
 msgstr ""
+"როცა ჩართულია, ეს ფსევდონიმი, მხოლოდ, დაემთხვევა ტექსტს, სადაც არსებობს "
+"ჰარეები, ან არაფერი, შესაბამის სტრიქონამდე/სტრიქონის შემდეგ."
 
 #: libs/caliaseditor.cpp:189
 #, kde-format
@@ -3401,6 +3436,7 @@ msgid ""
 "Prefix/suffix of matched text will be automatically appended to the expanded "
 "text."
 msgstr ""
+"დამთხვეული ტექსტის პრეფიქსი/სუფიქსი ავტომატურად მიეწერება გაფართოებულ ტექსტს."
 
 #: libs/caliaseditor.cpp:194
 #, kde-format
@@ -5153,6 +5189,9 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
+"თუ ჩართულია, შეიქმნება UNIX-ის დომენის სოკეტი, რომელიც ცვლადის მიმდინარე "
+"მნიშვნელობებთან წვდომას და მათი შეცვლის საშუალებას გაძლევთ. მეტი ინფორმაცია "
+"დოკუმენტაციაშია."
 
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
