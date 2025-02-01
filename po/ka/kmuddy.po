@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-30 05:46+0100\n"
+"PO-Revision-Date: 2025-01-31 05:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1285,6 +1285,9 @@ msgid ""
 "initiated immediately after starting KMuddy. Handy when you connect using "
 "one profile most of the time."
 msgstr ""
+"როცა ეს პარამეტრი ჩართულია, არჩეული კავშირი ავტომატურად დამყარდება KMuddy-ის "
+"გაშვების შემდეგ. მოსახერხებელია, როცა დროის უმეტეს შემთხვევაში ერთ პროფილს "
+"იყენებთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:155
 #, kde-format
@@ -1351,6 +1354,8 @@ msgid ""
 "Indentation says how many spaces will be put to the beginning of the "
 "continued line."
 msgstr ""
+"როცა ხაზი მეტისმეტად გრძელია, მისი ნაწილი შემდეგ ხაზზე იქნება გადატანილი. "
+"სწორება განსაზღვრავს, რამდენი ჰარე მოთავსდება გადატანილი ხაზის დასაწყისში."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:241
 #, kde-format
@@ -1363,6 +1368,8 @@ msgid ""
 "Size of output scroll-back buffer. Please note that this setting will only "
 "affect new connections, existing ones will keep their history setting."
 msgstr ""
+"მაღლა ახვევის ბუფერის ზომა. დაიმახსოვრეთ, რომ ამ პარამეტრს გავლენა, მხოლოდ, "
+"ახალ კავშირებზე აქვს. უკვე არსებულები შეინარჩუნებენ თავიანთი ისტორიის ზომას."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:244
 #, kde-format
@@ -1380,6 +1387,8 @@ msgid ""
 "Enables displaying of commands in the console.<p><b>Please note:</b> This "
 "will also disable command echo in session transcript."
 msgstr ""
+"კონსოლში ბრძანებების ჩვენების ჩართვა.<p><b>დაიმახსოვრეთ:</b>ეს ასევე "
+"გათიშავს ბრძანებების ექოს სესიის ტრანსკრიპტში."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:251
 #, kde-format
@@ -1454,6 +1463,8 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
+"თუ ამ პარამეტრს ჩართავთ, ბრძანება დარჩება შეყვანის ხაზში მას შემდეგ, რაც "
+"გააგზავნით (Enter-ით). წინააღმდეგ შემთხვევაში ის გასუფთავდება."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
@@ -1467,6 +1478,9 @@ msgid ""
 "to immediately type another command without deleting the old one and still "
 "be able to reuse previous command easily."
 msgstr ""
+"თუ ამ პარამეტრს ჩართავთ, შეყვანილი ბრძანება მოინიშნება. ეს საშუალებსა "
+"გაძლევთ, მორიგი ბრძანება დაუყოვნებლივ, ძველის წაუშლელად აკრიფოთ და წინა "
+"ბრძანების გამოყენება ჯერ კიდევ შეგეძლოთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:327
 #, kde-format
@@ -1479,6 +1493,8 @@ msgid ""
 "If you enable this option, you will be able to choose previously entered "
 "commands with Up and Down keys."
 msgstr ""
+"თუ ამ პარამეტრს ჩართავთ, შეგეძლებათ აირჩიოთ ადრე შეყვანილი ბრძანებები ზემოთ "
+"და ქვემოთ ღილაკებით."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:330
 #, kde-format
@@ -1491,6 +1507,8 @@ msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
 "but the last are sent as commands immediately."
 msgstr ""
+"ტელნეტის სტილის ჩასმის ჩართვა. ანუ, თუ ჩასმულია მრავალხაზიანი ტექსტი, ბოლოს "
+"გარდა, ყველა ხაზი, ბრძანების სახით გაიგზავნება დაუყოვნებლივ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:334
 #, kde-format
@@ -1517,6 +1535,8 @@ msgid ""
 "Auto-completion is a feature that offers you possible completions for "
 "commands, as you type them. It can also finish the command for you."
 msgstr ""
+"ავტოდასრულება ფუნქციაა, რომელიც ბრძანებების შესაძლო დასრულებებს გთავაზობთ "
+"მათი აკრეფის დროს. მას ასევე შეუძლია, ბრძანებაც დაგისრულოთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:349
 #, kde-format
@@ -1592,6 +1612,9 @@ msgid ""
 "You can enter multiple commands at once, they will get executed together. "
 "Here you can enter string that can be used to separate individual commands."
 msgstr ""
+"შეგიძლიათ, ერთდროულად ერთზე მეტი ბრძანება გაუშვათ და ისინი ერთად შესრულდება. "
+"აქ, შეგიძლიათ, შეიყვანოთ სტრიქონი, რომელიც ბრძანებების გამყოფად იქნება "
+"გამოყენებული."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
@@ -1674,6 +1697,8 @@ msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
 "parsing. This string will be removed first."
 msgstr ""
+"თუ ბრძანება იწყება ამ სტრიქონით, ის გაიგზავნება დამუშავების გარეშე, როგორც "
+"არის. ოღონდ, ჯერ ეს სტრიქონი მოსცილდება."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
@@ -5114,6 +5139,9 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
+"შესასრულებელი ბრძანება პარამეტრების ჩათვლით. დაიმახსოვრეთ, რომ შეყვანის "
+"ხაზიდან ბრძანების შესრულებისას ერთზე მეტი პარამეტრის მითითება შეგიძლიათ, თუ "
+"ზემოთ პარამეტრების დაშვების თოლიას დასვამთ."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
@@ -5121,6 +5149,8 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
+"სამუშაო საქაღალდე. სკრიპტი ზუსტად ისე მოიქცევა, თითქოს ის კონსოლში, ამ "
+"საქაღალდიდან გაუშვეს."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
