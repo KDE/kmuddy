@@ -1,47 +1,47 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kmuddy package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-02-19 18:07+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
 #: kmuddy/cstatusvareditor.cpp:70
 #, kde-format
 msgid "&Caption"
-msgstr ""
+msgstr "簡短說明(&C)"
 
 #: kmuddy/cbuttoneditor.cpp:68
 #, kde-format
 msgid "Caption of this button."
-msgstr ""
+msgstr "這個按鈕的簡短說明。"
 
 #: kmuddy/cbuttoneditor.cpp:71
 #, kde-format
 msgid "Co&mmand"
-msgstr ""
+msgstr "指令(&M)"
 
 #: kmuddy/cbuttoneditor.cpp:74
 #, kde-format
@@ -50,141 +50,143 @@ msgid ""
 "enter multiple commands here (separated by semi-colons, or another character "
 "defined in <b>global settings</b>)."
 msgstr ""
+"點擊按鈕時會執行的指令。這裡也可以輸入多個指令：用分號或<b>全域設定</b>裡定義"
+"的別的字元來分隔它們。"
 
 #: kmuddy/cbuttoneditor.cpp:83
 #, kde-format
 msgid "Icon displayed on the button toolbar."
-msgstr ""
+msgstr "按鈕工具列中顯示的圖示。"
 
 #: kmuddy/cbuttoneditor.cpp:91
 #, kde-format
 msgid "&Un-press command"
-msgstr ""
+msgstr "放開指令(&U)"
 
 #: kmuddy/cbuttoneditor.cpp:94
 #, kde-format
 msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
-msgstr ""
+msgstr "您再次點擊已經按下的按鈕的時候會執行的指令。"
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:132
 #, kde-format
 msgid "&General"
-msgstr ""
+msgstr "一般(&G)"
 
 #: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
 #: kmuddy/ctimereditor.cpp:133 kmuddy/ctriggereditor.cpp:512
 #: libs/caliaseditor.cpp:227
 #, kde-format
 msgid "&Script"
-msgstr ""
+msgstr "指令稿(&S)"
 
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr ""
+msgstr "放開時的指令稿(&R)"
 
 #: kmuddy/cconnection.cpp:262
 #, kde-format
 msgid "Network error: %1"
-msgstr ""
+msgstr "網路錯誤：%1"
 
 #: kmuddy/cconnection.cpp:422
 #, kde-format
 msgid "Do you want to close connection to %1?"
-msgstr ""
+msgstr "您要關閉與 %1 的連線嗎？"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "斷線"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Close connection"
-msgstr ""
+msgstr "關閉連線"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Stay connected"
-msgstr ""
+msgstr "維持連線"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
 msgid "(password is hidden)"
-msgstr ""
+msgstr "（密碼已隱藏）"
 
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
-msgstr ""
+msgstr "已啟用別名。"
 
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
-msgstr ""
+msgstr "已停用別名。"
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr ""
+msgstr "已啟用觸發器。"
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr ""
+msgstr "已停用觸發器。"
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
-msgstr ""
+msgstr "已啟用計時器。"
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
-msgstr ""
+msgstr "已停用計時器。"
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now enabled."
-msgstr ""
+msgstr "已啟用巨集鍵。"
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
 msgid "Macro keys are now disabled."
-msgstr ""
+msgstr "已停用巨集鍵。"
 
 #: kmuddy/cconnection.cpp:812
 #, kde-format
 msgid "Aliases"
-msgstr ""
+msgstr "別名"
 
 #: kmuddy/cconnection.cpp:813
 #, kde-format
 msgid "Triggers"
-msgstr ""
+msgstr "觸發器"
 
 #: kmuddy/cconnection.cpp:814
 #, kde-format
 msgid "Buttons"
-msgstr ""
+msgstr "按鈕"
 
 #: kmuddy/cconnection.cpp:815
 #, kde-format
 msgid "Timers"
-msgstr ""
+msgstr "計時器"
 
 #: kmuddy/cconnection.cpp:816
 #, kde-format
 msgid "Macro Keys"
-msgstr ""
+msgstr "巨集鍵"
 
 #: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
-msgstr ""
+msgstr "狀態變數"
 
 #: kmuddy/cconnection.cpp:818
 #, kde-format
@@ -195,7 +197,7 @@ msgstr ""
 #: plugins/vartrigs/cvartriggereditor.cpp:57
 #, kde-format
 msgid "&Variable name"
-msgstr ""
+msgstr "變數名稱(&V)"
 
 #: kmuddy/cgaugeeditor.cpp:62
 #, kde-format
@@ -220,7 +222,7 @@ msgstr ""
 #: kmuddy/cgaugeeditor.cpp:78
 #, kde-format
 msgid "&Color"
-msgstr ""
+msgstr "色彩(&C)"
 
 #: kmuddy/cgaugeeditor.cpp:81
 #, kde-format
@@ -295,7 +297,7 @@ msgstr ""
 #: kmuddy/cmxpmanager.cpp:312
 #, kde-format
 msgid "unknown"
-msgstr ""
+msgstr "未知"
 
 #: kmuddy/cmxpmanager.cpp:314
 #, kde-format
@@ -315,48 +317,48 @@ msgstr ""
 #: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
 #, kde-format
 msgid "No connection"
-msgstr ""
+msgstr "沒有連線"
 
 #: kmuddy/csessionmanager.cpp:211
 #, kde-format
 msgid "Connection closed."
-msgstr ""
+msgstr "連線已關閉。"
 
 #: kmuddy/cshortcut.cpp:126
 #, kde-format
 msgid "(unknown)"
-msgstr ""
+msgstr "（未知）"
 
 #: kmuddy/cshortcut.cpp:128
 #, kde-format
 msgid "(none)"
-msgstr ""
+msgstr "（無）"
 
 #: kmuddy/cshortcut.cpp:132
 #, kde-format
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: kmuddy/cshortcut.cpp:134
 #, kde-format
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: kmuddy/cshortcut.cpp:136
 #, kde-format
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: kmuddy/cshortcut.cpp:138
 #, kde-format
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
 #: kmuddy/kmuddy.cpp:279
 #, kde-format
 msgid "&Command"
-msgstr ""
+msgstr "指令(&C)"
 
 #: kmuddy/cshortcuteditor.cpp:71
 #, kde-format
@@ -368,7 +370,7 @@ msgstr ""
 #: kmuddy/cshortcuteditor.cpp:76
 #, kde-format
 msgid "Shortcut"
-msgstr ""
+msgstr "快捷鍵"
 
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
@@ -567,87 +569,87 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:115 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 #: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "紅色"
 
 #: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:70
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "綠色"
 
 #: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Yellow"
-msgstr ""
+msgstr "黃色"
 
 #: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "藍色"
 
 #: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Magenta"
-msgstr ""
+msgstr "紫紅色"
 
 #: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Cyan"
-msgstr ""
+msgstr "青色"
 
 #: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
 #, kde-format
 msgid "Gray"
-msgstr ""
+msgstr "灰色"
 
 #: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Dark gray"
-msgstr ""
+msgstr "暗灰色"
 
 #: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright red"
-msgstr ""
+msgstr "亮紅色"
 
 #: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
 #, kde-format
 msgid "Bright green"
-msgstr ""
+msgstr "亮綠色"
 
 #: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright yellow"
-msgstr ""
+msgstr "亮黃色"
 
 #: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright blue"
-msgstr ""
+msgstr "亮藍色"
 
 #: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
 #, kde-format
 msgid "Bright magenta"
-msgstr ""
+msgstr "亮紫紅"
 
 #: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "Bright cyan"
-msgstr ""
+msgstr "亮青色"
 
 #: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:74
 #, kde-format
 msgid "White"
-msgstr ""
+msgstr "白色"
 
 #: kmuddy/ctriggereditor.cpp:131
 #, kde-format
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: kmuddy/ctriggereditor.cpp:136
 #, kde-format
@@ -697,7 +699,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
 #, kde-format
 msgid "Exact match"
-msgstr ""
+msgstr "完全符合"
 
 #: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
 #, kde-format
@@ -903,7 +905,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:364 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
 #, kde-format
 msgid "Background"
-msgstr ""
+msgstr "背景"
 
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
@@ -1048,7 +1050,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: kmuddy/ctriggereditor.cpp:684
 #, kde-format
@@ -1072,7 +1074,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: kmuddy/dialogs/cdirlist.cpp:37
 #, kde-format
@@ -1539,7 +1541,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
-msgstr ""
+msgstr "快走字串(&S)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
@@ -1550,11 +1552,14 @@ msgid ""
 "direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
 "connections only)."
 msgstr ""
+"如果您在指令開頭使用這個字串，該指令會被視為快走。每個字串都是一個指令：n、"
+"s、w、e、j(=ne)、k(=se)、l(=sw)、m(=nw)、u、d。<p>會為各個方向傳送的指令可以"
+"在 <i>MUD 偏好設定</i> 當中設定（只適用於<b>基於設定檔</b>的連線）。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
 msgid "S&peed-walk even if empty"
-msgstr ""
+msgstr "即使是空的也快走(&P)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:444
 #, kde-format
@@ -1565,6 +1570,9 @@ msgid ""
 "(news, for example) will be treated as speed-walking. To avoid this, you'll "
 "have to type at least one character in upper-case."
 msgstr ""
+"啟用此選項會讓 KMuddy 在沒有提供快走字串的時候也將字串作為快走模式展開。這讓"
+"進行快走會更快，但請注意**所有**字母全部都是有效快走字元的指令（像是 \"news"
+"\"）都會被當成是在快走。要避免展開快走，至少一個字元要是大寫。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
@@ -1665,7 +1673,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
 #, kde-format
 msgid "Bold"
-msgstr ""
+msgstr "粗體"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkItalic)
 #: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
@@ -1674,7 +1682,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
 #, kde-format
 msgid "Italic"
-msgstr ""
+msgstr "斜體"
 
 #: kmuddy/dialogs/dlgconnect.cpp:40
 #, kde-format
@@ -1917,6 +1925,10 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
+"要在登入後傳送給 MUD 的指令。<br><b>$name</b> 會展開成使用者名稱。<br><b>"
+"$password</b> 會展開成您的密碼。<p><b>重要：</b>這些指令會依您所輸入的原樣送"
+"出，除了前後如果有空格的話會被移除。別名、巨集、快走都不會有作用。也請注意空"
+"行也會被送出，包含最後行。"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:180
 #, kde-format
@@ -2068,7 +2080,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:542
 #, kde-format
 msgid "Up"
-msgstr ""
+msgstr "上"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblDownLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblDownShort)
@@ -2081,7 +2093,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:356
 #, kde-format
 msgid "Down"
-msgstr ""
+msgstr "下"
 
 #: kmuddy/dialogs/dlgobjects.cpp:98
 #, kde-format
@@ -2113,7 +2125,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "指令"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:56
 #, kde-format
@@ -2251,7 +2263,7 @@ msgstr ""
 msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
 "used by the auto-mapper."
-msgstr ""
+msgstr "這是一個移動指令。它由快走所使用，也會被自動製圖器使用。"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
@@ -2871,7 +2883,7 @@ msgstr ""
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr ""
+msgstr "/tick: 該名稱的計時器不存在。"
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
@@ -2883,7 +2895,6 @@ msgstr ""
 msgid "Timer ticks in 1 second."
 msgid_plural "Timer ticks in %1 seconds."
 msgstr[0] ""
-msgstr[1] ""
 
 #: kmuddy/macros.cpp:211
 #, kde-format
@@ -2913,7 +2924,7 @@ msgstr ""
 #: kmuddy/macros.cpp:406
 #, kde-format
 msgid "/oadd: parent group does not exist."
-msgstr ""
+msgstr "/oadd: 上層群組不存在。"
 
 #: kmuddy/macros.cpp:410
 #, kde-format
@@ -2933,7 +2944,7 @@ msgstr ""
 #: kmuddy/macros.cpp:439
 #, kde-format
 msgid "/gadd: parent group does not exist."
-msgstr ""
+msgstr "/gadd: 上層群組不存在。"
 
 #: kmuddy/macros.cpp:443
 #, kde-format
@@ -2948,7 +2959,7 @@ msgstr ""
 #: kmuddy/macros.cpp:465
 #, kde-format
 msgid "/odel: object does not exist."
-msgstr ""
+msgstr "/odel: 物件不存在。"
 
 #: kmuddy/macros.cpp:470
 #, kde-format
@@ -2963,7 +2974,7 @@ msgstr ""
 #: kmuddy/macros.cpp:495
 #, kde-format
 msgid "/omove: object does not exist."
-msgstr ""
+msgstr "/omove: 物件不存在。"
 
 #: kmuddy/macros.cpp:499
 #, kde-format
@@ -2973,7 +2984,7 @@ msgstr ""
 #: kmuddy/macros.cpp:505
 #, kde-format
 msgid "/omove: group does not exist."
-msgstr ""
+msgstr "/omove: 群組不存在。"
 
 #: kmuddy/macros.cpp:509
 #, kde-format
@@ -2998,7 +3009,7 @@ msgstr ""
 #: kmuddy/macros.cpp:547
 #, kde-format
 msgid "/oren: object does not exist."
-msgstr ""
+msgstr "/oren: 物件不存在。"
 
 #: kmuddy/macros.cpp:553
 #, kde-format
@@ -3023,7 +3034,7 @@ msgstr ""
 #: kmuddy/macros.cpp:588
 #, kde-format
 msgid "/opriority: object does not exist."
-msgstr ""
+msgstr "/opriority: 物件不存在。"
 
 #: kmuddy/macros.cpp:594
 #, kde-format
@@ -3033,12 +3044,12 @@ msgstr ""
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
-msgstr ""
+msgstr "/oenable: 物件不存在。"
 
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
-msgstr ""
+msgstr "/odisable: 物件不存在。"
 
 #: kmuddy/macros.cpp:641
 #, kde-format
@@ -3048,7 +3059,7 @@ msgstr ""
 #: kmuddy/macros.cpp:648
 #, kde-format
 msgid "/osetbattr: object does not exist."
-msgstr ""
+msgstr "/osetbattr: 物件不存在。"
 
 #: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
 #, kde-format
@@ -3058,32 +3069,32 @@ msgstr ""
 #: kmuddy/macros.cpp:672
 #, kde-format
 msgid "/osetiattr: object does not exist."
-msgstr ""
+msgstr "/osetiattr: 物件不存在。"
 
 #: kmuddy/macros.cpp:696
 #, kde-format
 msgid "/osetsattr: object does not exist."
-msgstr ""
+msgstr "/osetsattr: 物件不存在。"
 
 #: kmuddy/macros.cpp:713
 #, kde-format
 msgid "/tgroupon: group does not exist."
-msgstr ""
+msgstr "/tgroupon: 群組不存在。"
 
 #: kmuddy/macros.cpp:728
 #, kde-format
 msgid "/tgroupoff: group does not exist."
-msgstr ""
+msgstr "/tgroupoff: 群組不存在。"
 
 #: kmuddy/macros.cpp:744
 #, kde-format
 msgid "/agroupon: group does not exist."
-msgstr ""
+msgstr "/agroupon: 群組不存在。"
 
 #: kmuddy/macros.cpp:760
 #, kde-format
 msgid "/agroupoff: group does not exist."
-msgstr ""
+msgstr "/agroupoff: 群組不存在。"
 
 #: kmuddy/main.cpp:29
 #, kde-format
@@ -3097,27 +3108,27 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:96
 #, kde-format
 msgid "KMuddy"
-msgstr ""
+msgstr "KMuddy"
 
 #: kmuddy/main.cpp:39
 #, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr ""
+msgstr "(c) 2002-2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:40
 #, kde-format
 msgid "Tomas Mecir"
-msgstr ""
+msgstr "Tomas Mecir"
 
 #: kmuddy/main.cpp:41
 #, kde-format
 msgid "Main developer and maintainer"
-msgstr ""
+msgstr "主要開發者與維護者"
 
 #: kmuddy/main.cpp:42
 #, kde-format
 msgid "Alex Bache"
-msgstr ""
+msgstr "Alex Bache"
 
 #: kmuddy/main.cpp:43
 #, kde-format
@@ -3125,36 +3136,37 @@ msgid ""
 "Many improvements in external scripting, internal script parser, output view "
 "and aliases/triggers, bugfixes"
 msgstr ""
+"許多外部指令稿的改善、內部指令稿剖析器、輸出檢視與別名/觸發器、錯誤修正"
 
 #: kmuddy/main.cpp:44
 #, kde-format
 msgid "Alsherok staff"
-msgstr ""
+msgstr "Alsherok 團隊"
 
 #: kmuddy/main.cpp:45
 #, kde-format
 msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
-msgstr ""
+msgstr "釋出 AFKMud 源碼庫，我們用它來測試 MCCP/MSP"
 
 #: kmuddy/main.cpp:46
 #, kde-format
 msgid "Andrea Cascio"
-msgstr ""
+msgstr "Andrea Cascio"
 
 #: kmuddy/main.cpp:47
 #, kde-format
 msgid "SuSE RPMs, speed-walking improvements"
-msgstr ""
+msgstr "SuSE 的 RPM 軟體包、快走的改進"
 
 #: kmuddy/main.cpp:48
 #, kde-format
 msgid "Orion Elder"
-msgstr ""
+msgstr "Orion Elder"
 
 #: kmuddy/main.cpp:49
 #, kde-format
 msgid "KMuddy forum, many ideas"
-msgstr ""
+msgstr "KMuddy 論壇、許多主意"
 
 #: kmuddy/main.cpp:50
 #, kde-format
@@ -3393,7 +3405,7 @@ msgstr ""
 #: libs/ccmdprocessor.cpp:296
 #, kde-format
 msgid "This macro does not exist."
-msgstr ""
+msgstr "這個巨集不存在。"
 
 #: libs/cconsole.cpp:134
 #, kde-format
@@ -3438,7 +3450,7 @@ msgstr ""
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr ""
+msgstr "函式 %1 不存在 - 假設它是空白回傳值。"
 
 #: libs/clist.cpp:468
 #, kde-format
@@ -5098,7 +5110,7 @@ msgstr ""
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr ""
+msgstr "該外部指令稿不存在！"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
