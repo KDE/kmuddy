@@ -20,6 +20,7 @@
         "Description[tr]": "Sınama eklentileri",
         "Description[uk]": "Додаток для тестування",
         "Description[x-test]": "xxTesting Pluginxx",
+        "Description[zh_TW]": "測試用外掛程式",
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Test",
@@ -42,6 +43,7 @@
         "Name[sv]": "Test",
         "Name[tr]": "Sınama",
         "Name[uk]": "Тест",
-        "Name[x-test]": "xxTestxx"
+        "Name[x-test]": "xxTestxx",
+        "Name[zh_TW]": "測試"
     }
 }

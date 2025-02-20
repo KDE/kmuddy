@@ -20,6 +20,7 @@
         "Description[tr]": "Değişken tetikleyicileri için destek ekler",
         "Description[uk]": "Додає підтримку перемикання за змінними",
         "Description[x-test]": "xxAdds support for variable triggersxx",
+        "Description[zh_TW]": "加入對於變數觸發器的支援",
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Variable Triggers",

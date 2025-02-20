@@ -20,6 +20,7 @@
         "Description[tr]": "Değişken değerlerini görüntülemek için bir arayüz sağlar",
         "Description[uk]": "Забезпечує роботу інтерфейсу для перегляду значень змінних",
         "Description[x-test]": "xxProvides an interface for viewing variable valuesxx",
+        "Description[zh_TW]": "提供用來檢視變數的值的介面",
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Variable Viewer",
