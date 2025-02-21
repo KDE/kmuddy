@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-02-19 18:07+0900\n"
+"PO-Revision-Date: 2025-02-20 15:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -267,32 +267,32 @@ msgstr ""
 #: kmuddy/cmxpmanager.cpp:306
 #, kde-format
 msgid "move cursor"
-msgstr ""
+msgstr "移動游標"
 
 #: kmuddy/cmxpmanager.cpp:307
 #, kde-format
 msgid "erase text"
-msgstr ""
+msgstr "刪除文字"
 
 #: kmuddy/cmxpmanager.cpp:308
 #, kde-format
 msgid "relocate"
-msgstr ""
+msgstr "遷移"
 
 #: kmuddy/cmxpmanager.cpp:309
 #, kde-format
 msgid "send username/password"
-msgstr ""
+msgstr "傳送使用者名稱/密碼"
 
 #: kmuddy/cmxpmanager.cpp:310
 #, kde-format
 msgid "image"
-msgstr ""
+msgstr "影像"
 
 #: kmuddy/cmxpmanager.cpp:311
 #, kde-format
 msgid "image map"
-msgstr ""
+msgstr "影像地圖"
 
 #: kmuddy/cmxpmanager.cpp:312
 #, kde-format
@@ -312,7 +312,7 @@ msgstr ""
 #: kmuddy/csession.cpp:86
 #, kde-format
 msgid "Switches between standard and multi-line input line."
-msgstr ""
+msgstr "切換要使用標準還是多行輸入列。"
 
 #: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
 #, kde-format
@@ -375,30 +375,30 @@ msgstr "快捷鍵"
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
 msgid "Grab shortcut..."
-msgstr ""
+msgstr "抓取快捷鍵…"
 
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
 msgid "&Send command"
-msgstr ""
+msgstr "傳送指令(&S)"
 
 #: kmuddy/cshortcuteditor.cpp:84
 #, kde-format
 msgid ""
 "If checked, the command will be sent to the MUD. Otherwise, it will be put "
 "in the inputline."
-msgstr ""
+msgstr "勾選時，指令會送出給 MUD。否則它會放在輸入列中。"
 
 #: kmuddy/cshortcuteditor.cpp:87
 #, kde-format
 msgid "&Overwrite existing text"
-msgstr ""
+msgstr "覆寫現存文字(&O)"
 
 #: kmuddy/cshortcuteditor.cpp:88
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr ""
+msgstr "如果輸入列當中已經有文字了，它是否要被覆寫掉？"
 
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
@@ -408,7 +408,7 @@ msgstr ""
 #: kmuddy/cstatusvareditor.cpp:76
 #, kde-format
 msgid "&Show as percentage"
-msgstr ""
+msgstr "顯示為百分比(&S)"
 
 #: kmuddy/cstatusvareditor.cpp:77
 #, kde-format
@@ -420,22 +420,22 @@ msgstr ""
 #: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
 #, kde-format
 msgid "--- A connection has been established ---"
-msgstr ""
+msgstr "--- 連線已建立 ---"
 
 #: kmuddy/ctelnet.cpp:246
 #, kde-format
 msgid "Connecting..."
-msgstr ""
+msgstr "連線中..."
 
 #: kmuddy/ctelnet.cpp:1070
 #, kde-format
 msgid "The remote server has been found, attempting connection."
-msgstr ""
+msgstr "遠端伺服器已找到，正在嘗試連線。"
 
 #: kmuddy/ctimer.cpp:78
 #, kde-format
 msgid " sec"
-msgstr ""
+msgstr " 秒"
 
 #: kmuddy/ctimer.cpp:80
 #, kde-format
@@ -452,12 +452,12 @@ msgstr ""
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
 msgid "&Interval"
-msgstr ""
+msgstr "間隔(&I)"
 
 #: kmuddy/ctimereditor.cpp:77 kmuddy/ctimereditor.cpp:94
 #, kde-format
 msgid " secs"
-msgstr ""
+msgstr " 秒"
 
 #: kmuddy/ctimereditor.cpp:81
 #, kde-format
@@ -492,7 +492,7 @@ msgstr ""
 #: kmuddy/ctimereditor.cpp:97
 #, kde-format
 msgid "C&ommand"
-msgstr ""
+msgstr "指令(&O)"
 
 #: kmuddy/ctimereditor.cpp:100
 #, kde-format
@@ -719,7 +719,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:105
 #, kde-format
 msgid "Regular expression"
-msgstr ""
+msgstr "正則表達式"
 
 #: kmuddy/ctriggereditor.cpp:183
 #, kde-format
@@ -748,25 +748,25 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
 #, kde-format
 msgid "Test area"
-msgstr ""
+msgstr "測試區域"
 
 #: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
-msgstr ""
+msgstr "文字(&T)："
 
 #: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
 #: plugins/converter/converterdialog.cpp:54
 #: plugins/scripting/crunninglist.cpp:57
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: kmuddy/ctriggereditor.cpp:210 kmuddy/dialogs/dlgstatistics.cpp:53
 #: libs/caliaseditor.cpp:133 plugins/varviewer/dlgvarviewer.cpp:71
 #, kde-format
 msgid "Value"
-msgstr ""
+msgstr "數值"
 
 #: kmuddy/ctriggereditor.cpp:214
 #, kde-format
@@ -774,18 +774,20 @@ msgid ""
 "This is testing area. You can test your trigger here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"這是測試區域。您可以在此測試您的觸發器來確認它的行為是不是您所希望的。輸入一"
+"些文字來看會發生什麼事。"
 
 #: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
 #: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
 #: plugins/scripting/cscripteditor.cpp:86
 #, kde-format
 msgid "&Options"
-msgstr ""
+msgstr "選項(&O)"
 
 #: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
 #, kde-format
 msgid "Whole words only"
-msgstr ""
+msgstr "必須符合整個單字"
 
 #: kmuddy/ctriggereditor.cpp:252
 #, kde-format
@@ -797,7 +799,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
 #, kde-format
 msgid "Case sensitive"
-msgstr ""
+msgstr "區分大小寫"
 
 #: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:185
 #, kde-format
@@ -805,6 +807,8 @@ msgid ""
 "When this option is on, upper case and lower case letters are treated as "
 "different characters, otherwise they're considered to be the same."
 msgstr ""
+"此選項啟用時，大寫與小寫字母會視為不同的字元；未啟用時則會將大小寫視為同樣字"
+"元。"
 
 #: kmuddy/ctriggereditor.cpp:260
 #, kde-format
@@ -894,12 +898,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "類型"
 
 #: kmuddy/ctriggereditor.cpp:364
 #, kde-format
 msgid "Foreground"
-msgstr ""
+msgstr "前景"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
 #: kmuddy/ctriggereditor.cpp:364 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
@@ -910,38 +914,38 @@ msgstr "背景"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr ""
+msgstr "文字重寫觸發器(&R)"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
 msgid "Rewrite text"
-msgstr ""
+msgstr "重寫文字"
 
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
 msgid "&Change this part of line:"
-msgstr ""
+msgstr "將行內這部分(&C)："
 
 #: kmuddy/ctriggereditor.cpp:401
 #, kde-format
 msgid "&To this value:"
-msgstr ""
+msgstr "改為這個值(&T)："
 
 #: kmuddy/ctriggereditor.cpp:426
 #, kde-format
 msgid "Do not show (&gag) the line"
-msgstr ""
+msgstr "不要顯示該行(&G)"
 
 #: kmuddy/ctriggereditor.cpp:427
 #, kde-format
 msgid ""
 "This will prevent the matched line from being displayed in the output window."
-msgstr ""
+msgstr "這會防止符合的行顯示在輸出視窗中。"
 
 #: kmuddy/ctriggereditor.cpp:429
 #, kde-format
 msgid "&Notify"
-msgstr ""
+msgstr "通知(&N)"
 
 #: kmuddy/ctriggereditor.cpp:430
 #, kde-format
@@ -971,7 +975,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
 msgid "Play s&ound file"
-msgstr ""
+msgstr "播放聲音檔(&O)"
 
 #: kmuddy/ctriggereditor.cpp:445
 #, kde-format
@@ -993,12 +997,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
 #, kde-format
 msgid "Output Windows"
-msgstr ""
+msgstr "輸出視窗"
 
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
-msgstr ""
+msgstr "在主視窗內隱藏輸出(&G)"
 
 #: kmuddy/ctriggereditor.cpp:479
 #, kde-format
@@ -1010,42 +1014,42 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
 msgid "&Window name"
-msgstr ""
+msgstr "視窗名稱(&W)"
 
 #: kmuddy/ctriggereditor.cpp:486
 #, kde-format
 msgid "&Create window"
-msgstr ""
+msgstr "建立視窗(&C)"
 
 #: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
 #, kde-format
 msgid "&Basic"
-msgstr ""
+msgstr "基本(&B)"
 
 #: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Special trigger"
-msgstr ""
+msgstr "特殊觸發器"
 
 #: kmuddy/ctriggereditor.cpp:517
 #, kde-format
 msgid "Output windows"
-msgstr ""
+msgstr "輸出視窗"
 
 #: kmuddy/ctriggereditor.cpp:547
 #, kde-format
 msgid "This text did not match your trigger."
-msgstr ""
+msgstr "這個文字不符合您的觸發器。"
 
 #: kmuddy/ctriggereditor.cpp:552
 #, kde-format
 msgid "This text matches your trigger."
-msgstr ""
+msgstr "這個文字符合您的觸發器。"
 
 #: kmuddy/ctriggereditor.cpp:580
 #, kde-format
 msgid "Maximum number of colorizations reached."
-msgstr ""
+msgstr "已達最大著色數。"
 
 #: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
 #, kde-format
@@ -1060,12 +1064,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:703
 #, kde-format
 msgid "Window name is empty!"
-msgstr ""
+msgstr "視窗名稱是空的！"
 
 #: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
 msgid "&Add..."
-msgstr ""
+msgstr "新增(&A)..."
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
 #: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
@@ -1079,67 +1083,67 @@ msgstr "刪除"
 #: kmuddy/dialogs/cdirlist.cpp:37
 #, kde-format
 msgid "Move &up"
-msgstr ""
+msgstr "上移(&U)"
 
 #: kmuddy/dialogs/cdirlist.cpp:38
 #, kde-format
 msgid "Move &down"
-msgstr ""
+msgstr "下移(&D)"
 
 #: kmuddy/dialogs/cdirlist.cpp:72
 #, kde-format
 msgid "Choose sound directory"
-msgstr ""
+msgstr "選擇聲音目錄"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:77
 #, kde-format
 msgid "Application settings"
-msgstr ""
+msgstr "應用程式設定"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:84
 #, kde-format
 msgid "Window"
-msgstr ""
+msgstr "視窗"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:87
 #, kde-format
 msgid "Output area"
-msgstr ""
+msgstr "輸出區域"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
 msgid "Font"
-msgstr ""
+msgstr "字型"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
 msgid "Input line"
-msgstr ""
+msgstr "輸入列"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:96
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "顏色"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:99
 #, kde-format
 msgid "Strings"
-msgstr ""
+msgstr "字串"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:102
 #, kde-format
 msgid "Sounds"
-msgstr ""
+msgstr "聲音"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:105
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷鍵"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr ""
+msgstr "即使不需要的時候也顯示分頁列(&H)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
@@ -1147,21 +1151,22 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
+"勾選此項目時，分頁列會一直顯示。未勾選時，只有一個分頁的時候分頁列會被隱藏。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
 msgid "Show au&xiliary input line"
-msgstr ""
+msgstr "顯示輔助輸入列(&X)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "You will have two input lines instead of one."
-msgstr ""
+msgstr "提供兩個輸入列。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
 msgid "&Always notify"
-msgstr ""
+msgstr "總是通知(&A)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:119
 #, kde-format
@@ -1175,7 +1180,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
 msgid "&Global notification"
-msgstr ""
+msgstr "全域通知(&G)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:125
 #, kde-format
@@ -1188,7 +1193,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:129
 #, kde-format
 msgid "&Local notification"
-msgstr ""
+msgstr "本地通知(&L)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:130
 #, kde-format
@@ -1201,7 +1206,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:135
 #, kde-format
 msgid "Display system tray icon"
-msgstr ""
+msgstr "顯示系統匣圖示"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
@@ -1216,7 +1221,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
 msgid "Use passive popups"
-msgstr ""
+msgstr "使用被動彈出視窗"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:145
 #, kde-format
@@ -1225,11 +1230,13 @@ msgid ""
 "the system tray icon when you are in another window and alert you to the "
 "presence of activity in one of your connections. "
 msgstr ""
+"這個選項切換是否使用被動彈出視窗。被動彈出視窗會在系統匣圖示附近出現，在您在"
+"另一個視窗的時候向您告知某個連線中的活動。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:151
 #, kde-format
 msgid "Auto-connect on startup"
-msgstr ""
+msgstr "啟動時自動連線"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:152
 #, kde-format
@@ -1242,12 +1249,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:155
 #, kde-format
 msgid "Auto-connect to:"
-msgstr ""
+msgstr "自動連線到："
 
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr ""
+msgstr "預設背景顏色(&B)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
@@ -1257,7 +1264,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr ""
+msgstr "預設文字顏色(&T)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
@@ -1277,7 +1284,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:208
 #, kde-format
 msgid "&System message color"
-msgstr ""
+msgstr "系統訊息顏色(&S)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:211
 #, kde-format
@@ -1287,7 +1294,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
 msgid "&Indentation"
-msgstr ""
+msgstr "縮排(&I)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:236
 #, kde-format
@@ -1370,12 +1377,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
 msgid "&Input line"
-msgstr ""
+msgstr "輸入列(&I)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:288
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
-msgstr ""
+msgstr "您可以在此選擇輸入列要使用的字型。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
@@ -1399,6 +1406,8 @@ msgid ""
 "If you enable this option, commands will remain in the input line after you "
 "send them (by pressing ENTER); otherwise it will be cleared."
 msgstr ""
+"如果您啟用這個選項，指令在（用 Enter 鍵）送出之後會繼續留在輸入列當中。停用時"
+"則會在送出之後清空輸入列。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:321
 #, kde-format
@@ -1491,7 +1500,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:360
 #, kde-format
 msgid "Background color of the input line"
-msgstr ""
+msgstr "輸入列的背景顏色"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:362
 #, kde-format
@@ -1501,7 +1510,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
 msgid "Color of text that you type in the input line."
-msgstr ""
+msgstr "輸入列中的文字的顏色。"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
@@ -3326,11 +3335,13 @@ msgid ""
 "This is testing area. You can test your alias here to see if it does what "
 "you want it to do. Simply type in some text and see what happens."
 msgstr ""
+"這是測試區域。您可以在此測試您的別名來確認它的行為是不是您所希望的。輸入一些"
+"文字來看會發生什麼事。"
 
 #: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
-msgstr ""
+msgstr "傳送原本的指令"
 
 #: libs/caliaseditor.cpp:175
 #, kde-format
@@ -3339,6 +3350,8 @@ msgid ""
 "you enable this option, both original and replacement commands are sent "
 "(original command is sent first)."
 msgstr ""
+"這個別名與您的指令相符時會送出替代的指令。這個選項啟用時則會也一併送出原本的"
+"指令（原本的指令會先送，然後再送出替代的指令）。"
 
 #: libs/caliaseditor.cpp:181
 #, kde-format
@@ -3350,7 +3363,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:189
 #, kde-format
 msgid "Include prefix/suffix"
-msgstr ""
+msgstr "包含前綴/後綴"
 
 #: libs/caliaseditor.cpp:190
 #, kde-format
@@ -3375,17 +3388,17 @@ msgstr ""
 #: libs/caliaseditor.cpp:260
 #, kde-format
 msgid "This text did not match your alias."
-msgstr ""
+msgstr "這個文字不符合您的別名。"
 
 #: libs/caliaseditor.cpp:265
 #, kde-format
 msgid "This text matches your alias."
-msgstr ""
+msgstr "這個文字符合您的別名。"
 
 #: libs/caliaseditor.cpp:279
 #, kde-format
 msgid "Command: "
-msgstr ""
+msgstr "指令："
 
 #: libs/ccmdparser.cpp:431
 #, kde-format
@@ -4040,13 +4053,13 @@ msgstr ""
 #: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
-msgstr ""
+msgstr "新增曲線"
 
 #: plugins/mapper/cmappath.cpp:615
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
-msgstr ""
+msgstr "移動曲線"
 
 #: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
 #, kde-format
@@ -4152,7 +4165,7 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
-msgstr ""
+msgstr "新增曲線(&A)"
 
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
@@ -4162,26 +4175,26 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:217
 #, kde-format
 msgid "&Edit Bends"
-msgstr ""
+msgstr "編輯曲線(&E)"
 
 #: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "刪除路徑(&D)"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:231
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
 #, kde-format
 msgid "Hide"
-msgstr ""
+msgstr "隱藏"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
 #: plugins/mapper/cmapview.cpp:240
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
 #, kde-format
 msgid "Custom"
-msgstr ""
+msgstr "自訂"
 
 #: plugins/mapper/cmapview.cpp:243
 #, kde-format
@@ -5025,6 +5038,8 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
+"要執行的指令（包含參數）。註：如果啟用「允許參數」勾選方塊的話，從輸入列執行"
+"指令的時候也可以指定更多參數。"
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
