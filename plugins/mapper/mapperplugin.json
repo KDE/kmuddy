@@ -20,6 +20,7 @@
         "Description[tr]": "Bir eşlemlendirici gerçekler",
         "Description[uk]": "Реалізує роботу з картами",
         "Description[x-test]": "xxImplements a mapperxx",
+        "Description[zh_TW]": "實作一個製圖器",
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Mapper",
@@ -41,6 +42,7 @@
         "Name[sv]": "Karthantering",
         "Name[tr]": "Eşlemleyici",
         "Name[uk]": "Робота з картами",
-        "Name[x-test]": "xxMapperxx"
+        "Name[x-test]": "xxMapperxx",
+        "Name[zh_TW]": "製圖器"
     }
 }
