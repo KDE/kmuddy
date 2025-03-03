@@ -1200,7 +1200,7 @@ msgstr "Atallos"
 #: kmuddy/dialogs/dlgappsettings.cpp:111
 #, kde-format
 msgid "S&how the tab bar even if not needed"
-msgstr "&Amosar a barra de lapelas aínda que non sexa necesaria."
+msgstr "&Amosar a barra de separadores aínda que non sexa necesaria."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:112
 #, kde-format
@@ -1208,8 +1208,8 @@ msgid ""
 "If this is checked, the tab bar will always be shown. Otherwise, it will be "
 "hidden if it contains only one tab."
 msgstr ""
-"Marque esta opción para que a barra de lapelas se amose sempre. Se non marca "
-"esta opción, agocharase cando só conteña unha lapela."
+"Marque esta opción para que a barra de separadores se amose sempre. Se non "
+"marca esta opción, agocharase cando só conteña unha lapela."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:115
 #, kde-format
