@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-02-05 11:30+0300\n"
+"PO-Revision-Date: 2025-03-06 22:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -379,7 +379,7 @@ msgstr "Kısayol"
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
 msgid "Grab shortcut..."
-msgstr "Kısayol yakala..."
+msgstr "Kısayol yakala…"
 
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
@@ -433,7 +433,7 @@ msgstr "--- Bir bağlantı kuruldu ---"
 #: kmuddy/ctelnet.cpp:246
 #, kde-format
 msgid "Connecting..."
-msgstr "Bağlanıyor..."
+msgstr "Bağlanıyor…"
 
 #: kmuddy/ctelnet.cpp:1070
 #, kde-format
@@ -991,7 +991,7 @@ msgstr ""
 "olur. KMuddy penceresi ve/veya bu oturum şu anda etkin değilse bildirimleri "
 "etkinleştirir.\n"
 "Yalnızca bazı etkinliklerden haberiniz olmasını istiyorsanız (anlatılar, "
-"savaş, ...) yararlıdır."
+"savaş, …) yararlıdır."
 
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
@@ -1114,7 +1114,7 @@ msgstr "Pencere adı boş!"
 #: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
 msgid "&Add..."
-msgstr "&Ekle..."
+msgstr "&Ekle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
 #: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
@@ -1439,7 +1439,7 @@ msgstr "&Sunucu çıktısı"
 #: kmuddy/dialogs/dlgappsettings.cpp:295
 #, kde-format
 msgid "Choose..."
-msgstr "Seç..."
+msgstr "Seç…"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:278
 #, kde-format
@@ -1974,7 +1974,7 @@ msgstr "&Dosya:"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
 #, kde-format
 msgid "&Browse..."
-msgstr "&Göz At..."
+msgstr "&Göz At…"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
@@ -2101,7 +2101,7 @@ msgstr "Düğme yakalayıcı"
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
 msgid "Press the desired shortcut..."
-msgstr "İstenen kısayola basın..."
+msgstr "İstenen kısayola basın…"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
@@ -2136,7 +2136,7 @@ msgstr "Şuraya &dışa aktar"
 #: plugins/scripting/cscripteditor.cpp:81
 #, kde-format
 msgid "Browse..."
-msgstr "Göz At..."
+msgstr "Göz At…"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:91
 #, kde-format
@@ -2533,7 +2533,7 @@ msgstr ""
 "etkinleştirebilirsiniz; ancak diğer oyuncuların bu sıralamaların ne olduğunu "
 "söyleyememesini veya indirme desteğini devre dışı bırakmasını sağlayın; aksi "
 "halde oyuncular istemcinize ağdaki herhangi bir dosyayı indirmesi talimatını "
-"verebilir..."
+"verebilir…"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -2608,7 +2608,7 @@ msgstr "Öntanımlı yazıdöküm dizinini seç"
 #: kmuddy/dialogs/dlgquickconnect.cpp:33
 #, kde-format
 msgid "Quick Connect"
-msgstr "Hızlı Bağlan"
+msgstr "Tez Bağlan"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:38
 #, kde-format
@@ -2685,7 +2685,7 @@ msgstr "Alınan baytlar"
 #: kmuddy/dialogs/dlgstatistics.cpp:134
 #, kde-format
 msgid "... after decompression"
-msgstr "... sıkıştırma açma sonrası"
+msgstr "… sıkıştırma açma sonrası"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
@@ -2853,12 +2853,12 @@ msgstr "&Sil"
 #: kmuddy/kmuddy.cpp:241
 #, kde-format
 msgid "&Connect..."
-msgstr "&Bağlan..."
+msgstr "&Bağlan…"
 
 #: kmuddy/kmuddy.cpp:248
 #, kde-format
 msgid "&QuickConnect..."
-msgstr "&Hızlı Bağlan..."
+msgstr "&Tez Bağlan…"
 
 #: kmuddy/kmuddy.cpp:254
 #, kde-format
@@ -2908,12 +2908,12 @@ msgstr "Ö&lçeri göster"
 #: kmuddy/kmuddy.cpp:327
 #, kde-format
 msgid "&Object Editor..."
-msgstr "&Nesne Düzenleyici..."
+msgstr "&Nesne Düzenleyici…"
 
 #: kmuddy/kmuddy.cpp:332
 #, kde-format
 msgid "&Output windows..."
-msgstr "Çı&ktı pencereleri..."
+msgstr "Çı&ktı pencereleri…"
 
 #: kmuddy/kmuddy.cpp:336
 #, kde-format
@@ -2938,7 +2938,7 @@ msgstr "Ma&kro düğmeleri etkin"
 #: kmuddy/kmuddy.cpp:358
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr "&MUD Tercihleri..."
+msgstr "&MUD Tercihleri…"
 
 #: kmuddy/kmuddy.cpp:363
 #, kde-format
@@ -2953,7 +2953,7 @@ msgstr "&Oturum yazıdökümü"
 #: kmuddy/kmuddy.cpp:375
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr "Çıktı arabelleğini dö&k..."
+msgstr "Çıktı arabelleğini dö&k…"
 
 #: kmuddy/kmuddy.cpp:379
 #, kde-format
@@ -2963,12 +2963,12 @@ msgstr "&Karar yardımcısı"
 #: kmuddy/kmuddy.cpp:393
 #, kde-format
 msgid "&Global settings..."
-msgstr "&Global ayarlar..."
+msgstr "&Global ayarlar…"
 
 #: kmuddy/kmuddy.cpp:398
 #, kde-format
 msgid "&Plugins..."
-msgstr "&Eklentiler..."
+msgstr "&Eklentiler…"
 
 #: kmuddy/kmuddy.cpp:403
 #, kde-format
@@ -4060,7 +4060,7 @@ msgstr "Yol"
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr "Profil &Dönüştürücüsü..."
+msgstr "Profil &Dönüştürücüsü…"
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
