@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-31 05:50+0100\n"
+"PO-Revision-Date: 2025-03-09 05:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -2365,6 +2365,8 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
+"ნაგულისხმევი სამუშაო საქაღალდე თქვენი სკრიპტებისთვის. კარგი აზრია, რომ ეს "
+"იგივე იყოს, რაც ზემოთ აყენია."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
 #, kde-format
@@ -2606,6 +2608,8 @@ msgid ""
 "Enables or disabled the session transcript. Note that session transcript is "
 "automatically disabled when you disconnect."
 msgstr ""
+"სესიის ტრანსკრიფციის ჩართვა ან გამორთვა. დაიმახსოვრეთ, რომ გათიშვისას სესიის "
+"ტრანსკრიფცია ავტომატურად წაიშლება."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
@@ -2629,6 +2633,9 @@ msgid ""
 "Otherwise, new transcript will be appended to the end of an existing file "
 "(if it exists :))."
 msgstr ""
+"თუ ამ პარამეტრს ჩართავთ, არსებულ ტრანსკრიფციებს თავზე გადაეწერება. "
+"წინააღმდეგ შემთხვევაში ახალი ტრანსკრიფცია, თუ არსებობს, არსებული ფაილის "
+"ბოლოში იქნება მიწერილი."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:79
 #, kde-format
@@ -2641,6 +2648,8 @@ msgid ""
 "This will cause KMuddy to add complete buffer dump to the beginning of the "
 "transcript file."
 msgstr ""
+"ეს გამოიწვევს იმას, რომ KMuddy ტრანსკრიფციის ფაილის დასაწყისში ბუფერის დამპს "
+"ჩაწერს."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:109
 #, kde-format
@@ -2654,6 +2663,9 @@ msgid ""
 "running all the time, rotates it at midnight and so. Note that normal and "
 "advanced transcripts can both be running at the same time, if you want."
 msgstr ""
+"ეს დამატებით ტრანსკრიფციას ჩართავს, რაც საშუალებას მოგცემთ, ტრანსკრიფცია სულ "
+"გქონდეთ ჩართული. როცატია შუაღამისას მოხდება. დაიმახსოვრეთ, რომ ნორმალური და "
+"დამატებითი ტრანსკრიფცია ერთადაც შეგიძლიათ, გაშვებული გქონდეთ."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:115
 #, kde-format
