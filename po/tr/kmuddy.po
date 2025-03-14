@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-03-06 22:32+0300\n"
+"PO-Revision-Date: 2025-03-13 22:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -842,7 +842,7 @@ msgid ""
 "When enabled, the text will not be sent to the MUD, it will only be "
 "displayed on the screen."
 msgstr ""
-"Etkinleştirildiğinde, metin MUD'a gönderilmez, yalnızca ekranda görüntülenir."
+"Etkinleştirildiğinde, metin MUD’a gönderilmez, yalnızca ekranda görüntülenir."
 
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
@@ -864,7 +864,7 @@ msgstr ""
 "<p>Global eşleşme ile, bir tetik, bir dizgiyi birden çok kez içeriyorsa "
 "birden çok kez eşleşebilir. Örneğin, eğer dizgi abc ise abcdabcd üzerinde "
 "yalnızca bir kez eşleşir; global eşleşme açıksa iki kez eşleşir. Her eşleşme "
-"için, istenen eylemler gerçekleştirilir; böylece komutlar eşleşme başına "
+"için istenen eylemler gerçekleştirilir; böylece komutlar eşleşme başına "
 "birden çok kez gönderilebilir.</p><p>Koşulu yerine getirmemenin taramayı "
 "sonlandırmadığını not edin; böylece bunu bir listeden adları vurgulamak için "
 "kullanabilirsiniz (bir eşleşmenin listede olup olmadığını denetlemek için "
@@ -986,9 +986,9 @@ msgid ""
 "session is not active at the moment.\n"
 "Useful if you only want to be notified of some events (tells, combat, ...)."
 msgstr ""
-"Bu seçenek, yalnızca global ayarlardaki \"Her zaman bildir\" seçeneğini "
-"devre dışı bıraktıysanız ve en az bir global/yerel bildirim etkinse etkili "
-"olur. KMuddy penceresi ve/veya bu oturum şu anda etkin değilse bildirimleri "
+"Bu seçenek, yalnızca global ayarlardaki “Her zaman bildir” seçeneğini devre "
+"dışı bıraktıysanız ve en az bir global/yerel bildirim etkinse etkili olur. "
+"KMuddy penceresi ve/veya bu oturum şu anda etkin değilse bildirimleri "
 "etkinleştirir.\n"
 "Yalnızca bazı etkinliklerden haberiniz olmasını istiyorsanız (anlatılar, "
 "savaş, …) yararlıdır."
@@ -1010,7 +1010,7 @@ msgstr ""
 "Bunun etkinleştirilmesi, bu tetiği bir bilgi istemi algılama tetiğine "
 "dönüştürür; yani, yenisatır alınmasa bile bu tetiklere metin iletilir, tetik "
 "eşleşirse metin bir istem olarak görüntülenir ve diğer birçok seçenek "
-"yürürlüğe ALINMAZ - istem algılama tetiği metin gönderemez, satırları "
+"yürürlüğe ALINMAZ — istem algılama tetiği metin gönderemez, satırları "
 "tıkamaz, bildirim yapamaz. Renklendirme hâlâ olanaklıdır."
 
 #: kmuddy/ctriggereditor.cpp:444
@@ -1605,7 +1605,7 @@ msgstr "Girdi satırına girdiğiniz metnin rengi."
 #: kmuddy/dialogs/dlgappsettings.cpp:381
 #, kde-format
 msgid "S&wap ENTER and CTRL+ENTER for multi-line"
-msgstr "Çoklu satırlar için Giriş ve Kontrol+Giriş'i değiş tokuş et"
+msgstr "Çoklu satırlar için Giriş ve Kontrol+Giriş’i değiş tokuş et"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:382
 #, kde-format
@@ -1616,7 +1616,7 @@ msgid ""
 msgstr ""
 "Kapatıldığında, Kontrol+Giriş çok satırlı girdi satırında başka bir satır "
 "daha ekler ve Giriş düğmesi komutları sunucuya gönderir. Açılırsa bu "
-"düğmelerin davranışı değiş-tokuş yapılır."
+"düğmelerin davranışı değiş–tokuş yapılır."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
@@ -1677,7 +1677,7 @@ msgid ""
 "have to type at least one character in upper-case."
 msgstr ""
 "Bunun etkinleştirilmesi, herhangi bir hızlı yürüyüş dizisi verilmemiş olsa "
-"bile KMuddy'nin hızlı yürüyüş dizilerini genişletmesine neden olacaktır. Bu, "
+"bile KMuddy’nin hızlı yürüyüş dizilerini genişletmesine neden olacaktır. Bu, "
 "daha hızlı hızlı yürüyüşe izin verir; ancak yalnızca geçerli hızlı yürüyüş "
 "karakterlerinden (örneğin haberler) oluşan HER komutun hızlı yürüyüş olarak "
 "ele alınacağını unutmayın. Bunu önlemek için en az bir karakteri büyük "
@@ -1759,7 +1759,7 @@ msgid ""
 "TAB, \\\\ is \\, \\<anything else> means <anything else>."
 msgstr ""
 "Bu, ters eğik çizgi genişletmeyi etkinleştirir; örneğin: \\n satırsonudur, "
-"\\t SEKME'dir, \\\\ - \\, \\<herhangi bir şey> - <herhangi bir şey> anlamına "
+"\\t SEKME’dir, \\\\ — \\, \\<herhangi bir şey> — <herhangi bir şey> anlamına "
 "gelir."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:509
@@ -1778,7 +1778,7 @@ msgstr ""
 "<qt>Tüm bağlantılar için ses çalmayı etkinleştir.\n"
 "Bu ayarı MUD Tercihleri penceresinden geçersiz kılabileceğinizi aklınızda "
 "tutun.\n"
-"Bu ayar yalnızca MUD <b>MSP'yi</b> (MUD Ses Protokolü) destekliyorsa çalışır."
+"Bu ayar yalnızca MUD <b>MSP’yi</b> (MUD Ses Protokolü) destekliyorsa çalışır."
 "</qt>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:514
@@ -1794,7 +1794,7 @@ msgid ""
 "be downloaded once. The downloaded files are stored in your homedir in "
 "directory\n"
 msgstr ""
-"MSP sürüm 0.3, seslerin doğrudan web'den veya FTP'den indirilmesini "
+"MSP sürüm 0.3, seslerin doğrudan web’den veya FTP’den indirilmesini "
 "destekler. Bu işlevselliği buradan etkinleştirebilirsiniz. Her bir sesin "
 "yalnızca bir kez indirilebileceğini aklınızda tutun. İndirilen sesler, ana "
 "dizininizde tutulur.\n"
@@ -1830,7 +1830,7 @@ msgid ""
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
 "Bu liste, şu an geçerli tanımlanmış profilleri gösterir.<p><b>Profiller</b>, "
-"MUD'unuza bağlanmayı hızlandırmanıza ve <i>armalar</i> veya <i>tetikler</i> "
+"MUD’unuza bağlanmayı hızlandırmanıza ve <i>armalar</i> veya <i>tetikler</i> "
 "gibi daha gelişmiş özelliklere erişebilmenize izin verir."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
@@ -2024,7 +2024,7 @@ msgstr "&Sunucu:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:49
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
-msgstr "MUD'unuzun üzerinde çalıştığı sunucunun adresini girin."
+msgstr "MUD’unuzun üzerinde çalıştığı sunucunun adresini girin."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
 #, kde-format
@@ -2035,7 +2035,7 @@ msgstr "&Kapı:"
 #, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
-"MUD'unuzun üzerinde çalıştığı kapıyı girin (genelde 4 rakamlı bir sayıdır)."
+"MUD’unuzun üzerinde çalıştığı kapıyı girin (genelde 4 rakamlı bir sayıdır)."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:55
 #, kde-format
@@ -2076,7 +2076,7 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
-"Oturum açtıktan sonra MUD'a gönderilecek komutlar.<br><b>$name</b>, "
+"Oturum açtıktan sonra MUD’a gönderilecek komutlar.<br><b>$name</b>, "
 "kullanıcı adına genişletilir.<br><b>$password</b>, parolanıza genişletilir "
 "<p><b>Önemli :</b> Bu komutlar tam olarak yazdığınız gibi, baştaki/sondaki "
 "boşluklar kaldırılarak gönderilir. Takma ad yok, makro yok, hızlı yürüyüş "
@@ -2091,7 +2091,7 @@ msgstr "Profil adı boş olamaz."
 #: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
 msgid "Profile name cannot contain '/' character."
-msgstr "Profil adı '/' karakterini içeremez."
+msgstr "Profil adı “/” karakterini içeremez."
 
 #: kmuddy/dialogs/dlggrabkey.cpp:34
 #, kde-format
@@ -2167,7 +2167,7 @@ msgstr "Çok satırlı girdi"
 msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
 "command."
-msgstr "MUD'a gönderilecek komutları girin. Her satır bir komutu temsil eder."
+msgstr "MUD’a gönderilecek komutları girin. Her satır bir komutu temsil eder."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
@@ -2196,7 +2196,7 @@ msgstr "&Gönder"
 #: kmuddy/dialogs/dlgmultiline.cpp:80
 #, kde-format
 msgid "Sends current text to the MUD."
-msgstr "Geçerli metni MUD'a gönderir."
+msgstr "Geçerli metni MUD’a gönderir."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:81
 #, kde-format
@@ -2205,7 +2205,7 @@ msgid ""
 "prefix and/or suffix, they will be added to the beginning and ending of each "
 "command."
 msgstr ""
-"Bu, girdiğiniz tüm komutları MUD'a gönderir. Önek ve/veya sonek girdiyseniz "
+"Bu, girdiğiniz tüm komutları MUD’a gönderir. Önek ve/veya sonek girdiyseniz "
 "bunlar her komutun başına ve sonuna eklenecektir."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:84
@@ -2309,7 +2309,7 @@ msgstr "&Renklendirilmiş çıktı kullan (kullanılabilirse)"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:70
 #, kde-format
 msgid "&Do not allow more than 100 repeated commands"
-msgstr "100'den &fazla yinelenmiş komuta izin verme"
+msgstr "100’den &fazla yinelenmiş komuta izin verme"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:76
 #, kde-format
@@ -2484,7 +2484,7 @@ msgstr ""
 "Bu profil için sesleri etkinleştir.\n"
 "Bunun yalnızca global tercihlerde sesleri etkinleştirmişseniz çalışacağını "
 "unutmayın.\n"
-"Ek olarak, bu yalnızca MUD'unuz <b>MSP</b>'yi (MUD Ses Protokolü) "
+"Ek olarak, bu yalnızca MUD’unuz <b>MSP</b>’yi (MUD Ses Protokolü) "
 "destekliyorsa çalışır."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
@@ -2508,10 +2508,10 @@ msgid ""
 "of sounds."
 msgstr ""
 "Bu seçenek etkinleştirildiğinde, KMuddy, MSP sıralamalarını bir pazarlık "
-"olmamışsa bile her zaman yorumlar. MSP'nin Telnet pazarlığını desteklemeyen "
-"MUD'lar için yararlıdır.\n"
+"olmamışsa bile her zaman yorumlar. MSP’nin Telnet pazarlığını desteklemeyen "
+"MUD’lar için yararlıdır.\n"
 "Dikkat, seslerin indirilmesine izin veriyorsanız başka oyuncuların kötü "
-"amaçlı MSP sıralamaları göndermesini engellemek için bunu yalnızca MUD'unuz "
+"amaçlı MSP sıralamaları göndermesini engellemek için bunu yalnızca MUD’unuz "
 "MSP destekliyorsa açın."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
@@ -2528,7 +2528,7 @@ msgid ""
 "downloading support; otherwise players could instruct your client to "
 "download any file on the net..."
 msgstr ""
-"Orta hat MSP sıralamaları, bazı MUD'ların kullanıyor gibi göründüğü MSP "
+"Orta hat MSP sıralamaları, bazı MUD’ların kullanıyor gibi göründüğü MSP "
 "belirtiminin bir zMUD uzantısıdır. Bu özellik için desteği buradan "
 "etkinleştirebilirsiniz; ancak diğer oyuncuların bu sıralamaların ne olduğunu "
 "söyleyememesini veya indirme desteğini devre dışı bırakmasını sağlayın; aksi "
@@ -2569,7 +2569,7 @@ msgid ""
 "support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
 "look for MXP sequences.</li></ul></qt>"
 msgstr ""
-"<qt><p>Buradan MXP'nin ne zaman kullanılacağını seçebilirsiniz.</"
+"<qt><p>Buradan MXP’nin ne zaman kullanılacağını seçebilirsiniz.</"
 "p><ul><li><b>Asla</b> MXP etiketleri asla ayrıştırılmayacaktır</li><li><b> "
 "Pazarlık edilirse</b> MXP desteği, başarılı telnet anlaşmasına bağlı "
 "olacaktır.</li><li><b>Otomatik algıla</b> MXP desteği otomatik olarak "
@@ -2763,7 +2763,7 @@ msgid ""
 "This will cause KMuddy to add complete buffer dump to the beginning of the "
 "transcript file."
 msgstr ""
-"Bu, KMuddy'nin yazıdöküm dosyasının başına tam arabellek dökümü eklemesine "
+"Bu, KMuddy’nin yazıdöküm dosyasının başına tam arabellek dökümü eklemesine "
 "neden olacaktır."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:109
@@ -2797,7 +2797,7 @@ msgstr "Günlüğü her gece yarısında &döndür"
 msgid ""
 "This will cause KMuddy to rotate session transcript every day at midnight"
 msgstr ""
-"Bu, KMuddy'nin her gün gece yarısı oturum yazıdökümünü döndürmesine neden "
+"Bu, KMuddy’nin her gün gece yarısı oturum yazıdökümünü döndürmesine neden "
 "olur"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:134
@@ -2811,7 +2811,7 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
-"Bu seçenek, KMuddy'nin her günlük kaydı satırının önüne yerel zaman "
+"Bu seçenek, KMuddy’nin her günlük kaydı satırının önüne yerel zaman "
 "damgasını eklemesine neden olur."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
@@ -2827,8 +2827,8 @@ msgid ""
 "combination of alpha-numeric characters."
 msgstr ""
 "Burada günlük biçimini belirleyebilirsiniz. Aşağıdaki seçenekleri "
-"kullanabilirsiniz: $W - dünya adı, $h - saat, $m - dakika, $D - gün, $M - "
-"ay, $Y - yıl ve herhangi bir alfanümerik karakter kombinasyonu."
+"kullanabilirsiniz: $W — dünya adı, $h — saat, $m — dakika, $D — gün, $M — "
+"ay, $Y — yıl ve herhangi bir alfanümerik karakter kombinasyonu."
 
 #: kmuddy/dialogs/dlgwindows.cpp:58
 #, kde-format
@@ -3064,7 +3064,7 @@ msgstr "&Yardım"
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
-"Yeniden bağlanmak için %1 düğmesine basın veya Bağlantı / Yeniden Bağlan'ı "
+"Yeniden bağlanmak için %1 düğmesine basın veya Bağlantı / Yeniden Bağlan’ı "
 "kullanın."
 
 #: kmuddy/kmuddy.cpp:990
@@ -3256,7 +3256,7 @@ msgstr "/opriority: Nesne yok."
 #: kmuddy/macros.cpp:594
 #, kde-format
 msgid "/opriority: priority must be in the 1-1000 range."
-msgstr "/opriority: Öncelik, 1-1000 eriminde olmalı."
+msgstr "/opriority: Öncelik, 1–1000 eriminde olmalı."
 
 #: kmuddy/macros.cpp:610
 #, kde-format
@@ -3378,7 +3378,7 @@ msgstr "Andrea Cascio"
 #: kmuddy/main.cpp:47
 #, kde-format
 msgid "SuSE RPMs, speed-walking improvements"
-msgstr "SUSE RPM'leri, hızlı yürüme iyileştirmeleri"
+msgstr "SUSE RPM’leri, hızlı yürüme iyileştirmeleri"
 
 #: kmuddy/main.cpp:48
 #, kde-format
@@ -3458,7 +3458,7 @@ msgstr "lontau"
 #: kmuddy/main.cpp:63
 #, kde-format
 msgid "Code to access KMuddy variables in Ruby"
-msgstr "KMuddy değişkenlerine Ruby'de erişmek için kod"
+msgstr "KMuddy değişkenlerine Ruby’de erişmek için kod"
 
 #: kmuddy/main.cpp:64
 #, kde-format
@@ -3478,7 +3478,7 @@ msgstr "Vladimir Lazarenko"
 #: kmuddy/main.cpp:66
 #, kde-format
 msgid "Many improvements. Hosting KMuddy CVS."
-msgstr "Birçok iyileştirme, KMuddy CVS'sini barındırma"
+msgstr "Birçok iyileştirme, KMuddy CVS’sini barındırma"
 
 #: kmuddy/main.cpp:67
 #, kde-format
@@ -3607,7 +3607,7 @@ msgstr ""
 "<p>Global eşleşme ile, bir arma/tetikleyici, dizgiyi birden çok kez "
 "içeriyorsa birden çok kez eşleşebilir. Örneğin, dizgi abc ise abcdabcd "
 "verildiğinde global eşleşme kapalıyken yalnızca bir kez, açıksa iki kez "
-"eşleşir. Her eşleşme için istenen işlemler gerçekleştirilir - böylece "
+"eşleşir. Her eşleşme için istenen işlemler gerçekleştirilir — böylece "
 "komutlar, eşleşme başına bir kez olmak üzere birden çok kez gönderilebilir.</"
 "p><p>Koşulun sağlanamaması taramayı sonlandırmaz, dolayısıyla bunu, bir "
 "listeden adları vurgulamak (eşleşmenin listede olup olmadığını denetlemek "
@@ -3636,7 +3636,7 @@ msgstr "Üzgünüz, sayı 100 ile sınırlıdır.\n"
 #: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr "Bu sınırı, Profil / MUD Tercihleri'nde değiştirebilirsiniz."
+msgstr "Bu sınırı, Profil / MUD Tercihleri’nde değiştirebilirsiniz."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
@@ -3692,7 +3692,7 @@ msgstr "önce"
 #: libs/cexpresolver.cpp:54
 #, kde-format
 msgid "Function %1 does not exist - assuming empty return value."
-msgstr "%1 işlevi yok - boş dönüş değeri varsayılıyor."
+msgstr "%1 işlevi yok — boş dönüş değeri varsayılıyor."
 
 #: libs/clist.cpp:468
 #, kde-format
@@ -3707,7 +3707,7 @@ msgid ""
 "This file was created by a newer version of KMuddy, and this version is "
 "unable to open it."
 msgstr ""
-"Bu dosya KMuddy'nin daha yeni bir sürümüyle oluşturulmuş. Sizdeki sürüm bu "
+"Bu dosya KMuddy’nin daha yeni bir sürümüyle oluşturulmuş. Sizdeki sürüm bu "
 "dosyayı açamıyor."
 
 #: libs/clist.cpp:473
@@ -3769,12 +3769,12 @@ msgstr ""
 #: libs/clistgroup.cpp:229
 #, kde-format
 msgid "Error in file - group with no name."
-msgstr "Dosyada hata - adsız grup"
+msgstr "Dosyada hata — adsız grup"
 
 #: libs/clistgroup.cpp:233
 #, kde-format
 msgid "Error in file - duplicate group name."
-msgstr "Dosyada hata - yinelenmiş grup adı"
+msgstr "Dosyada hata — yinelenmiş grup adı"
 
 #: libs/clistviewer.cpp:63
 #, kde-format
@@ -3849,7 +3849,7 @@ msgstr "MSP: Sorun şuydu: %1"
 #: libs/cmsp.cpp:315
 #, kde-format
 msgid "Parameter names must be followed by '='."
-msgstr "Parametre adlarından sonra '=' gelmelidir."
+msgstr "Parametre adlarından sonra “=” gelmelidir."
 
 #: libs/cmsp.cpp:340
 #, kde-format
@@ -3859,17 +3859,17 @@ msgstr "%1 parametresi bir sayısal argüman gerektiriyor"
 #: libs/cmsp.cpp:351
 #, kde-format
 msgid "Value of param V is out of 0-100 range."
-msgstr "V parametresinin değeri 0-100 eriminin dışında."
+msgstr "V parametresinin değeri 0–100 eriminin dışında."
 
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr "L parametresinin değeri -1;1-100 eriminin dışında."
+msgstr "L parametresinin değeri −1;1–100 eriminin dışında."
 
 #: libs/cmsp.cpp:373
 #, kde-format
 msgid "Value of param P is out of 0-100 range."
-msgstr "P parametresinin değeri 0-100 eriminin dışında."
+msgstr "P parametresinin değeri 0–100 eriminin dışında."
 
 #: libs/cmsp.cpp:382
 #, kde-format
@@ -3884,12 +3884,12 @@ msgstr "Bitmemiş sıralama alındı."
 #: libs/cmsp.cpp:449
 #, kde-format
 msgid "MSP: Multiple downloads not supported, request ignored."
-msgstr "MSP: Çoklu indirmeler desteklenmiyor - istek yok sayıldı."
+msgstr "MSP: Çoklu indirmeler desteklenmiyor — istek yok sayıldı."
 
 #: libs/cmsp.cpp:469
 #, kde-format
 msgid "MSP: downloading of sounds disabled - request ignored."
-msgstr "MSP: Seslerin indirilmesi devre dışı - istek yok sayıldı."
+msgstr "MSP: Seslerin indirilmesi devre dışı — istek yok sayıldı."
 
 #: libs/coutput.cpp:228
 #, kde-format
@@ -3991,10 +3991,10 @@ msgid ""
 msgstr ""
 "Nesne tetiklendiğinde yürütülecek bir JavaScript betiği girin.<br /><br /"
 ">Standart JavaScript araçlarına ek olarak aşağıdaki rutinler desteklenir:"
-"<br /><br /><b>window.message(metin)</b> - bir ileti görüntüle<br /"
-"><b>window.send(komut)</b> - bir komut gönder<br /><b>window.sendraw(komut)</"
-"b> - işlenmeden bir komut gönder<br /><b>window.get(ad)</b> - bir değişkenin "
-"değerini al<br /><b>window.set(ad, değer)</b> - bir değişkenin değerini "
+"<br /><br /><b>window.message(metin)</b> — bir ileti görüntüle<br /"
+"><b>window.send(komut)</b> — bir komut gönder<br /><b>window.sendraw(komut)</"
+"b> — işlenmeden bir komut gönder<br /><b>window.get(ad)</b> — bir değişkenin "
+"değerini al<br /><b>window.set(ad, değer)</b> — bir değişkenin değerini "
 "ayarla<br /><br />Ayrıca aşağıdaki değişkenleri kullanabilirsiniz: "
 "<b>prefix, prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
@@ -4047,7 +4047,7 @@ msgid ""
 "Existing profiles will not be overwritten, even if they have the same name. "
 "The old profiles will be kept intact."
 msgstr ""
-"Dönüştürmek istediğiniz profilleri seçin ve Tamam'a basın. Bu araç, seçili "
+"Dönüştürmek istediğiniz profilleri seçin ve Tamam’a basın. Bu araç, seçili "
 "profillerden gelen bilgileri içeren yeni bir profil oluşturacaktır. Aynı ada "
 "sahip olsalar bile var olan profillerin üzerine yazılmaz. Eski profiller "
 "korunur."
