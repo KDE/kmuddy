@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-03-09 05:12+0100\n"
+"PO-Revision-Date: 2025-04-12 02:41+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1204,6 +1204,11 @@ msgid ""
 "trigger is activated. Note that this option only takes effect if global or "
 "local notification is enabled."
 msgstr ""
+"თუ ეს ჩართულია, გამოტანის გაფრთხილება გამოყენებული იქნება ყოველთვის, როცა "
+"სერვერიდან ახალი შეტყობინებას მივიღებთ. სხვა შემთხვევაში ის, მხოლოდ, მაშინ "
+"იქნება გამოყენებული, როცა გააქტიურდება გაფრთხილების ტრიგერი. დაიმახსოვრეთ, "
+"რომ ეს პარამეტრი ძალაში, მხოლოდ, მაშინ შედის, როცა ჩართულია გლობალური, ან "
+"ლოკალური გაფრთხილებები."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:124
 #, kde-format
@@ -1523,6 +1528,10 @@ msgid ""
 "one line, or you will encounter problems with special sequences not being "
 "detected properly."
 msgstr ""
+"ჩართავს ჰარეების მოჭრას თქვენი ბრძანებებიდან. დაიმახსოვრეთ, რომ თუ ეს "
+"პარამეტრი გამორთულია, სცადეთ, თავიდან აიცილოთ ჰარეები, როცა ერთზე მეტ "
+"ბრძანებას კრეფთ ერთ ხაზზე, ან როცა სპეციალური მიმდევრობების დამუშავება "
+"არასწორად ხდება."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:340
 #, kde-format
@@ -1590,6 +1599,9 @@ msgid ""
 "line, and ENTER will send commands to the server. If turned on, then the "
 "behaviour of these keys gets swapped."
 msgstr ""
+"როცა გამორთულია, Ctrl+Enter ჩასვამს კიდევ ერთ ხაზს მრავალხაზიან შეყვანის "
+"ზოლში და Enter გააგზავნის ბრძანებებს სერვერზე. თუ გამორთულია, მაშინ ეს "
+"ღილაკები პირიქითაა."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:400
 #, kde-format
@@ -1711,6 +1723,9 @@ msgid ""
 "This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
 "TAB, \\\\ is \\, \\<anything else> means <anything else>."
 msgstr ""
+"ეს ჩართავს უკუდახრილი ხაზის გაფართოებას, რაც ნიშნავს: \\n ხაზის დასასრულია, "
+"\\t ტაბულაციაა, \\\\ არის \\, \\<ნებისმიერი სხვა რამ> რაც ნიშნავს <ნებისმიერ "
+"სხვა რამეს>."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
@@ -1770,6 +1785,9 @@ msgid ""
 "speed up connecting to your MUD, as well as to use more advanced features "
 "like <i>aliases</i> or <i>triggers</i>."
 msgstr ""
+"ეს სია ამჟამად აღწერილ პროფილებს გაჩვენებთ.<p><b>პროფილები</b> საშუალებსა "
+"გაძლევთ, თქვენს MUD-თან მიერთება გააადვილოთ და გამოიყენოთ ისეთი დამატებითი "
+"ფუნქციები, როგორიცაა <i>მეტსახელები</i>, ან <i>ტრიგერები</i>."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -1802,6 +1820,8 @@ msgid ""
 "Login sequence won't be sent for this connect. Useful when you're creating a "
 "new character and you want to use QuickConnect for some reason."
 msgstr ""
+"ამ მიერთებისთვის შესვლის მიმდევრობა გაგზავნილი არ იქნება. სასარგებლოა, როცა "
+"ქმნით ახალ გმირს და რამე მიზეზის გამო სწრაფი მიერთება გჭირდებათ."
 
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
@@ -1871,6 +1891,8 @@ msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
 "have write access to the profile directory."
 msgstr ""
+"შეცდომა პროფილის დუბლირებისას. დარწმუნდით, რომ პროფილის საქაღალდეში ჩაწერა "
+"შეგიძლიათ."
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1894,6 +1916,8 @@ msgid ""
 "displayed part up to the end of buffer will be dumped. Otherwise entire "
 "buffer will be dumped (default)."
 msgstr ""
+"თუ ჩართულია, ისტორიის ბუფერის დამპი მოხდება ამჟამად ნაჩვენები ნაწილიდან "
+"ბუფერის ბოლომდე. წინააღმდეგ შემთხვევაში - მთელი ბუფერის (ნაგულისხმევი)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
 #, kde-format
@@ -2067,6 +2091,8 @@ msgid ""
 "I am sorry, but import and export is currently disabled. The functionality "
 "should be re-enabled before the final release."
 msgstr ""
+"უკაცრავად, მაგრამ გატანა და შემოტანა ამჟამად გამორთულია. ეს ფუნქციონალი, "
+"წესით, ჩაირთვება სტაბილური ვერსიის გამოსვლამდე."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
@@ -2108,6 +2134,9 @@ msgid ""
 "Prefix and suffix may contain text, that will be added to the beginning "
 "(prefix) or ending (suffix) of every line written to the multi-line editor."
 msgstr ""
+"პრეფიქსი და სუფიქსი, შეიძლება, შეიცავდეს ტექსტს, რომელიც დაემატება "
+"მრავალხაზიან რედაქტორში ჩაწერილი თითოეული ხაზის დასაწყისში(პრეფიქსი) ან "
+"ბოლოში (სუფიქსი)."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:79
 #, kde-format
@@ -2126,6 +2155,8 @@ msgid ""
 "prefix and/or suffix, they will be added to the beginning and ending of each "
 "command."
 msgstr ""
+"ეს თქვენს შეყვანილ ბრძანებებს MUD-თან გააგზავნით. თუ ჩართეთ პრეფიქსი ან/და "
+"სუფიქსი, ისინი ყოველი გაგზავნილი ბრძანების თავში, ან ბოლოში დაემატება."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:84
 #, kde-format
@@ -2241,6 +2272,8 @@ msgid ""
 "Enables telnet negotiation for some option. Disabling it may resolve "
 "problems with some servers that do not understand these."
 msgstr ""
+"ჩართავს telnet-ით ურთიერთობას ზოგიერთი პარამეტრებისთვის. ამის გამორთვა "
+"გადაჭრის პრობლემებს სერვერებთან, რომლებსაც ამის მხარდაჭერა არ აქვთ."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:81
 #, kde-format
@@ -2253,6 +2286,8 @@ msgid ""
 "Lets you pick the output character encoding used by the server. This usually "
 "only needs to be set for non-English servers."
 msgstr ""
+"საშუალებას გაძლევთ, აირჩიოთ სერვერის მიერ გამოყენებული სიმბოლოების კოდირება. "
+"ეს, როგორც წესი, მხოლოდ, არაინგლისურ სერვერებზეა საჭირო."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
@@ -2265,6 +2300,8 @@ msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
 "aligned output."
 msgstr ""
+"ჩართავს ხაზის ლენტების დამატებას GA-ით დასრულებული მოთხოვნების შემდეგ, რომ "
+"სწორად გასწორებული გამოტანა მიიღოთ."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
@@ -2342,6 +2379,8 @@ msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
 "used by the auto-mapper."
 msgstr ""
+"ეს გადაადგილების ბრძანებაა. ის გამოიყენება სწრაფი სიარულისთვის და "
+"ავტორუკისთვის."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
@@ -2391,6 +2430,11 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol)."
 msgstr ""
+"ამ პროფილისთვის ხმის დაკვრის ჩართვა.\n"
+"დაიმახსოვრეთ, რომ ეს, მხოლოდ, მაშინ იმუშავებს, თუ ხმას გლობალური მორგების "
+"ფანჯარაში ჩართავთ.\n"
+"ასევე დაიმახსოვრეთ, რომ ეს, მხოლოდ, მაშინ იმუშავებს, თუ მისი თქვენს MUD-ს "
+"აქვს <b>MSP</b>-ის (MUD Sound Protocol) მხარდაჭერა."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
