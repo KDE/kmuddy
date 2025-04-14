@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-04-12 02:41+0200\n"
+"PO-Revision-Date: 2025-04-13 03:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -862,6 +862,14 @@ msgid ""
 "names from a list (using the condition to check if a match is in the list), "
 "or something like that."
 msgstr ""
+"<p>გლობალური დამთხვევისთვის ერთი ტრიგერი, შეიძლება, ერთზე მეტჯერ დაემთხვეს, "
+"თუ ის ნიმუშს ერთზე მეტჯერ შეიცავს. მაგალითად, თუ ნიმუშია abc, ის ემთხვევა, "
+"მხოლოდ ერთხელ abcdabcd-ს, თუ გლობალური დამთხვევა ჩართულია, მაგრამ ორჯერ, თუ "
+"ის ჩართულია. თითოეული დამთხვევისთვის შესრულდება მოთხოვნილი ქმედებები - ასე "
+"რომ, ბრძანება, შეიძლება, ბევრჯერ გაიგზავნოს. ერთხელ თითოეული დამთხვევისთვის."
+"</p><p>დაიმახსოვრეთ, რომ ამ პირობის არშესრულება არ ასრულებს სკანირებას, ასე "
+"რომ, შეგიძლიათ, ეს გამოიყენოთ, რომ გამოკვეთით სახელები სიიდან (პირობით, რომ "
+"შეამოწმოთ, თუ დამთხვევა სიაშია), ან რამე ამნაირი."
 
 #: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
 #, kde-format
@@ -979,6 +987,12 @@ msgid ""
 "session is not active at the moment.\n"
 "Useful if you only want to be notified of some events (tells, combat, ...)."
 msgstr ""
+"ეს პარამეტრი ძალაში, მხოლოდ მაშინაა, თუ თქვენ გამორთავთ \"ყოველთვის "
+"გაფრთხილების\" პარამეტრს გლობალური მორგების ფანჯარაში და, სულ ცოტა, ერთი "
+"გლობალური/ლოკალური გაფრთხილება ჩართულია. ის გაააქტიურებს გაფრთხილებას, თუ "
+"KMuddy-ის ფანჯარა, ან/და ეს სესია ამჟამად აქტიური არაა.\n"
+"გამოსადეგია, თუ თქვენ, მხოლოდ, რომელიმე კონკრეტული მოვლენის (ჩატი, "
+"ბრძოლა....) შესახებ მიიღოთ გაფრთხილება."
 
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
@@ -994,6 +1008,11 @@ msgid ""
 "other options will NOT be taken into effect - prompt-detect trigger cannot "
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
+"ამის ჩართვა ამ ტრიგერს კითხვის დასმის ტრიგერად გადააკეთებს, რაც ნიშნავს, რომ "
+"ამ ტრიგერებს ტექსტი გადაეცემათ მაშინაც კი, როცა ხაზის გადატანა არ მიგვიღია. "
+"ტექსტი ნაჩვენები იქნება შეყვანის სახით, თუ ტრიგერი დაემთხვევა და სხვა "
+"პარამეტრების უმრავლესობა გათვალისწინებული *არ* იქნება - ტრიგერს prompt-"
+"detect არ შეუძლია, ტექსტის და ა.შ. გაგზავნა. გაფერადება შეიძლება."
 
 #: kmuddy/ctriggereditor.cpp:444
 #, kde-format
@@ -1642,6 +1661,11 @@ msgid ""
 "direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
 "connections only)."
 msgstr ""
+"თუ ბრძანებას ამ სტრიქონით დაიწყებთ, ბრძანება აღქმული იქნება სწრაფ სიარულად. "
+"თითოეული გმირი ერთ ბრძანებად განიხილება: n, s, w, e, j(=ne), k(=se), l(=sw), "
+"m(=nw), u, d.<p>ბრძანებები, რომლებიც თითოეული მიმართულებით იგზავნება, "
+"შეგიძლიათ მოირგოთ <i>MUD-ის პარამეტრებში</i> (<b>მხოლოდ</b> პროფილებზე "
+"დაფუძნებული კავშირებისთვის)."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:443
 #, kde-format
@@ -1657,6 +1681,12 @@ msgid ""
 "(news, for example) will be treated as speed-walking. To avoid this, you'll "
 "have to type at least one character in upper-case."
 msgstr ""
+"ამის ჩართვა გამოიწვევს იმას, რომ KMuddy გაშლის სწრაფი სიარულის სტრიქონებს "
+"მაშინაც კი, თუ ამისი სტრიქონები გადაცემული არ ექნება. ეს საშუალებას გაძლევთ, "
+"უფრო სწრაფად იაროთ, მაგრამ დაიმახსოვრეთ, რომ ყველა ბრძანება, რომელიც "
+"შედგება, მხოლოდ, სწორი სიარულის სიმბოლოებისგან (მაგალითად, ახალი ამბები). "
+"აღქმული იქნება სიარულად. იმისათვის, რომ ეს თავიდან აიცილოთ, ერთი სიმბოლო "
+"მაინც დიდი ასოთი უნდა დაწეროთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
@@ -1670,6 +1700,9 @@ msgid ""
 "a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
 "(/exec calls external scripts)"
 msgstr ""
+"თუ ბრძანებას ამ სტრიქონით დაიწყებთ, ბრძანება აღქმული იქნება მაკროს "
+"გამოძახებად.<br>სინტაქსია: &lt;ეს სტრიქონი&gt; &lt;ბრძანება&gt; "
+"[პარამეტრები]  (/exec იძახებს გარე სკრიპტებს)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
@@ -1683,6 +1716,10 @@ msgid ""
 "sends that command 10 times. <br>Note that this also works with aliases and "
 "macro execution.<br>Repeater and number may be separated by a space (spaces)."
 msgstr ""
+"საშუალებას გაძლევთ, გაიმეოროთ ზოგიერთი ბრძანება. მაგალითად, თუ აკრეფთ <i>#10 "
+"say ყველი</i> ამ ბრძანებას 10-ჯერ გაიმეორებს.<br>დაიმახსოვრეთ, რომ ეს "
+"ფსევდონიმებზე და მაკროებზეც მუშაობს.<br>გამმეორებელი და რიცხვი, შეიძლება, "
+"ჰარეთი (ჰარეებით) განაცალკევოთ."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
@@ -1697,6 +1734,10 @@ msgid ""
 "connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
 "this string&gt; &lt;command&gt;"
 msgstr ""
+"თუ ბრძანება ამ სტრიქონით დაიწყება, ბრძანება აღქმნული იქნება, როგორც "
+"ბრძანების ფოკუსის გამოძახება. ეს საშუალებას მოგცემთ, ბრძანებები სხვა "
+"დაკავშირებულ გმირებსაც გაუგზავნოთ.<br>სინტაქსია &lt;ეს სტრიქონი&gt; &lt;"
+"ჩანართის ფოკუსი&gt; &lt;ეს სტრიქონი&gt; &lt;ბრძანება&gt;"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:477
 #, kde-format
@@ -1740,6 +1781,11 @@ msgid ""
 "Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
 "Sound Protocol).</qt>"
 msgstr ""
+"<qt>ხმის დაკვრის ჩართვა ყველა კავშირისთვის.\n"
+"დაიმახსოვრეთ, რომ ამას MUD-ის მორგების ფანჯარაში დაყენებული პარამეტრების "
+"გადაფარვა შეუძლია.\n"
+"ასევე დაიმახსოვრეთ, რომ ეს, მხოლოდ, მაშინ იმუშავებს, თუ თქვენს MUD-ს აქვს "
+"<b>MSP</b>-ის (MUD-ის ხმის პროტოკოლი) მხარდაჭერა.</qt>"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:514
 #, kde-format
@@ -1754,6 +1800,9 @@ msgid ""
 "be downloaded once. The downloaded files are stored in your homedir in "
 "directory\n"
 msgstr ""
+"MSP-ის ვერსიას 0.3 აქვს მხარდაჭერა, ფაილები პირდაპირ ვებიდან, ან FTP-დან "
+"გადმოწეროს. ამის ჩართვა აქ შეგიძლიათ. დაიმახსოვრეთ, რომ ყველა ხმა, მხოლოდ, "
+"ერთხელ იქნება გადმოწერილი. გადმოწერილი ფაილები შენახული იქნება საქაღალდეში\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBold)
 #: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
@@ -2029,6 +2078,12 @@ msgid ""
 "spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
 "lines will also be sent, including the very last line."
 msgstr ""
+"ბრძანებები MUD-ს, მხოლოდ, შესვლის შემდეგ გადაეცემა.<br><b>$name</b> "
+"მომხმარებლის სახელი გახდება.<br><b>$password</b> თქვენი პაროლი."
+"<p><b>მნიშვნელოვანია</b>ეს ბრძანებები ზუსტად ისე გადაეცემა, როგორც თქვენ "
+"აკრეფთ, თავში და ბოლოში ჰარეების მოცილების შემდეგ. მაკროების, ფსევდონიმების "
+"და სწრაფი გავლის გარეშე. ასევე დაიმახსოვრეთ, რომ გაგზავნილი იქნება ცარიელი "
+"ხაზებიც, ბოლოს ჩათვლით."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:180
 #, kde-format
@@ -2456,6 +2511,13 @@ msgid ""
 "other players from sending malicious MSP sequences, if you allow downloading "
 "of sounds."
 msgstr ""
+"როცა ეს ჩართულია, KMuddy MSP-ის მიმდევრობებს ყოველთვის გაუკეთებს "
+"ინტერპრეტაციას. მაშინაც კი, თუ კავშირი არ დამყარებულა. სასარგებლოა MUD-"
+"ებისთვის, რომლებსაც MSP-ის telnet-ით კავშირის მხარდაჭერა არ გააჩნია.\n"
+"მაგრამ გახსოვდეთ. ეს, მხოლოდ, მაშინ ჩართეთ, თუ თქვენს MUD-ს MSP-ის "
+"მხარდაჭერა მართლა გააჩნია, რომ თავიდან აიცილოთ სიტუაცია, როცა სხვა "
+"მოთამაშეები მავნე MSP მიმდევრობებს გამოგიგზავნიან, თუ ხმების გადმოწერას "
+"ჩართავთ."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:204
 #, kde-format
@@ -2471,6 +2533,12 @@ msgid ""
 "downloading support; otherwise players could instruct your client to "
 "download any file on the net..."
 msgstr ""
+"საშუალო ხაზის MSP თანმიმდევრობა არის zMUD– ის გაფართოება MSP სპეციფიკაზე, "
+"რომელსაც ზოგიერთი MUD იყენებს. თქვენ შეგიძლიათ ჩართოთ ამ ფუნქციის მხარდაჭერა "
+"აქ, მაგრამ უზრუნველყოთ, რომ სხვა მოთამაშეებს არ შეუძლიათ თქვან / თქვან / რაც "
+"არ უნდა იყოს ეს თანმიმდევრობა, ან გამორთოთ ჩამოტვირთვის მხარდაჭერა; "
+"წინააღმდეგ შემთხვევაში მოთამაშეებს შეუძლიათ დაავალონ თქვენს კლიენტს "
+"ჩამოტვირთოთ ნებისმიერი ფაილი ქსელში..."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -2506,6 +2574,12 @@ msgid ""
 "support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
 "look for MXP sequences.</li></ul></qt>"
 msgstr ""
+"<qt><p>აქ შეგიძლიათ აირჩიოთ როდის იქნება გამოყენებული MXP.</"
+"p><ul><li><b>არასდროს</b> MXP ტეგები არასოდეს იქნება გაანალიზებული</"
+"li><li><b>თუ მოლაპარაკება</b> MXP მხარდაჭერა დამოკიდებული იქნება ტელნეტის "
+"წარმატებულ მოლაპარაკებებზე.</li><li><b>ავტომატური გამოვლენა</b> MXP "
+"მხარდაჭერა ავტომატურად გამოვლინდება.</li><li><b>ყოველთვის ჩართულია</b> "
+"KMuddy ყოველთვის ეძებს MXP თანმიმდევრობას.</li></ul></qt>"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:234
 #, kde-format
@@ -2518,6 +2592,9 @@ msgid ""
 "Prefix prepended to each MXP variable from the server. Note that changing "
 "the prefix won't affect existing variables with old prefix."
 msgstr ""
+"პრეფიქსი წინასწარ არის წინასწარ გათვალისწინებული სერვერიდან თითოეულ MXP "
+"ცვლადზე. გაითვალისწინეთ, რომ პრეფიქსის შეცვლა გავლენას არ მოახდენს არსებულ "
+"ცვლადებზე ძველი პრეფიქსით."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
@@ -3531,6 +3608,15 @@ msgid ""
 "from a list (using the condition to check if a match is in the list), or "
 "something like that."
 msgstr ""
+"<p>გლობალური შესატყვისი, ერთი მეტსახელი / ტრიგერი შეიძლება რამდენჯერმე "
+"ემთხვეოდეს, თუ ის შეიცავს ნიმუშს ერთზე მეტჯერ. მაგალითად, თუ ნიმუში არის "
+"abc, ის ემთხვევა მხოლოდ ერთხელ გლობალური შესატყვისი abcdabcd გამორთულია, "
+"მაგრამ ორჯერ თუ ეს არის. თითოეული მატჩისთვის ხორციელდება მოთხოვნილი "
+"მოქმედებები - ასე რომ ბრძანებების გაგზავნა შესაძლებელია რამდენჯერმე, თითო "
+"მატჩის ერთხელ.</p><p>გაითვალისწინეთ, რომ მდგომარეობის შეუსრულებლობა არ "
+"წყვეტს სკანირებას, ასე რომ თქვენ შეგიძლიათ გამოიყენოთ ეს სიიდან სახელების "
+"ხაზგასასმელად (მდგომარეობის გამოყენებით, რათა შეამოწმოთ არის თუ არა მატჩი "
+"სიაში), ან მსგავსი რამ."
 
 #: libs/caliaseditor.cpp:260
 #, kde-format
@@ -3910,6 +3996,16 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"შეიყვანეთ Javascript სკრიპტი, რომელიც შესრულდება ობიექტის ამოქმედებისას.<br /"
+"><br />შემდეგი რუტინები ხელმისაწვდომია სკრიპტში, სტანდარტული Javascript "
+"ინსტრუმენტების გარდა:<br /><br /><b>window.message(ტექსტი)</b> - "
+"შეტყობინების ჩვენება<br /><b>window.send(ბრძანება)</b> - ბრძანების "
+"გაგზავნა<br /><b>window.sendraw(ბრძანება)</b> - გაგზავნეთ ბრძანება "
+"დამუშავების გარეშე<br /><b>window.get(სახელი)</b> - ცვლადის მნიშვნელობის "
+"აღდგენა<br /><b>window.set(სახელი, მნიშვნელობა)</b> - ცვლადის მნიშვნელობის "
+"დაყენება<br /><br />ასევე შეგიძლიათ გამოიყენოთ შემდეგი ცვლადები: "
+"<b>პრეფიქსი, პრეფიქსი, სუფიქსი, სუფიქსი, სუფიქსი, შესატყვისი, ხაზი, "
+"მატჩები[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
@@ -3960,6 +4056,10 @@ msgid ""
 "Existing profiles will not be overwritten, even if they have the same name. "
 "The old profiles will be kept intact."
 msgstr ""
+"შეარჩიეთ პროფილები, რომელთა გარდაქმნა გსურთ და დააჭირეთ Ok. ეს ინსტრუმენტი "
+"შექმნის ახალ პროფილს, რომელიც შეიცავს ინფორმაციას არჩეული პროფილებიდან. "
+"არსებული პროფილები არ იქნება გადაწერილი, მაშინაც კი, თუ მათ აქვთ იგივე "
+"სახელი. ძველი პროფილები ინახება ხელუხლებელი."
 
 #: plugins/converter/converterdialog.cpp:54
 #, kde-format
@@ -5263,6 +5363,12 @@ msgid ""
 "better not to use this feature.</p><p>If you don't need to disable flow "
 "control for some reason, leave this on.</p>"
 msgstr ""
+"<p>თუ ჩართულია, ნაკადის კონტროლი გამოყენებული იქნება ამ სკრიპტისთვის. "
+"ნაკადის კონტროლი უზრუნველყოფს სკრიპტების სინქრონიზაციას, ეს ნიშნავს, რომ თუ "
+"სერვერიდან ორი ხაზი ჩამოვა, მეორე არ იგზავნება სკრიპტებზე, სანამ ყველა "
+"გაშვებული სკრიპტი არ მიიღებს პირველს. თუმცა, ზოგიერთ სიტუაციაში, უმჯობესია "
+"არ გამოიყენოთ ეს ფუნქცია.</p><p>თუ რაიმე მიზეზით არ გჭირდებათ ნაკადის "
+"კონტროლის გამორთვა, დატოვეთ ეს.</p>"
 
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
