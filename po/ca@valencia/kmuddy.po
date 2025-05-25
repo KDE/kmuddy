@@ -54,8 +54,8 @@ msgid ""
 "enter multiple commands here (separated by semi-colons, or another character "
 "defined in <b>global settings</b>)."
 msgstr ""
-"Ordre que s'executarà si feu clic en el botó. Cal tindre en compte que hi "
-"podeu introduir múltiples ordres (separades per punt i coma o un altre "
+"Ordre que s'executarà si cliqueu damunt del botó. Cal tindre en compte que "
+"hi podeu introduir múltiples ordres (separades per punt i coma o un altre "
 "caràcter definit en la <b>configuració global</b>)."
 
 #: kmuddy/cbuttoneditor.cpp:83
@@ -73,7 +73,7 @@ msgstr "Ordre se&nse prémer"
 msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
-msgstr "Ordre que s'executarà si feu clic repetidament en el botó premut."
+msgstr "Ordre que s'executarà si cliqueu repetidament en el botó premut."
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:132
@@ -1116,7 +1116,7 @@ msgstr "Desconegut"
 #: kmuddy/ctriggereditor.cpp:684
 #, kde-format
 msgid "Choose sound file"
-msgstr "Escolliu un fitxer de so"
+msgstr "Trieu un fitxer de so"
 
 #: kmuddy/ctriggereditor.cpp:703
 #, kde-format
@@ -1287,10 +1287,10 @@ msgid ""
 msgstr ""
 "Esta opció canvia la presència de la icona de la safata del sistema. La "
 "icona es pot utilitzar per a ocultar la finestra de l'aplicació sense ocupar "
-"espai en la barra de tasques. Podeu fer clic damunt de la icona per a "
-"ocultar la finestra i, després torneu a fer clic per a restaurar-la. La "
-"vostra connexió es mantindrà activa fins i tot si la finestra està oculta i "
-"encara rebreu els missatges de notificació. "
+"espai en la barra de tasques. Podeu clicar damunt de la icona per a ocultar "
+"la finestra i, després torneu a clicar per a restaurar-la. La vostra "
+"connexió es mantindrà activa fins i tot si la finestra està oculta i encara "
+"rebreu els missatges de notificació. "
 
 #: kmuddy/dialogs/dlgappsettings.cpp:144
 #, kde-format
@@ -4075,7 +4075,7 @@ msgid ""
 "Existing profiles will not be overwritten, even if they have the same name. "
 "The old profiles will be kept intact."
 msgstr ""
-"Seleccioneu els perfils als quals voleu convertir i premeu D'acord. Esta "
+"Seleccioneu els perfils als quals voleu convertir i premeu «D»'acord. Esta "
 "eina crearà un perfil nou que contindrà la informació dels perfils "
 "seleccionats. Els perfils existents no se sobreescriuran, fins i tot si "
 "tenen el mateix nom. Els perfils antics es mantindran intactes."
