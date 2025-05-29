@@ -91,7 +91,7 @@ msgstr "&Script"
 #: kmuddy/cbuttoneditor.cpp:125
 #, kde-format
 msgid "Script when &released"
-msgstr "Script quan s'a&lliberi"
+msgstr "Script quan s'a&llibere"
 
 #: kmuddy/cconnection.cpp:262
 #, kde-format
