@@ -1321,7 +1321,7 @@ msgstr "ავტომატურად მივუერთდები:"
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr "&ფონის ნაგულისხმები ფერი"
+msgstr "&ფონის ნაგულისხმევი ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
@@ -1331,7 +1331,7 @@ msgstr "ეს ფერი გამოყენებული იქნებ
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr "&ტექსტის ნაგულისხმები ფერი"
+msgstr "&ტექსტის ნაგულისხმევი ფერი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
@@ -4534,13 +4534,13 @@ msgstr "მიმდინარე დონე"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr "ნაგულისხმები ბილიკის ფერი"
+msgstr "ნაგულისხმევი ბილიკის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr "ნაგულისხმები ოთახის ფერი"
+msgstr "ნაგულისხმევი ოთახის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
@@ -4570,13 +4570,13 @@ msgstr "ჩასწორების რეჟიმის ფერი"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr "ნაგულისხმები ტექსტის ფერი"
+msgstr "ნაგულისხმევი ტექსტის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr "ნაგულისხმები ზონის ფერი"
+msgstr "ნაგულისხმევი ზონის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -5014,7 +5014,7 @@ msgstr "ოთახის ფერი:"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr "ნაგულისხმები ოთახის ფერი"
+msgstr "ნაგულისხმევი ოთახის ფერი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
