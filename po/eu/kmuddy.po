@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-01-14 19:36+0100\n"
+"PO-Revision-Date: 2025-07-29 12:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1684,7 +1684,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:509
 #, kde-format
 msgid "&Enable sounds globally"
-msgstr ""
+msgstr "&Gaitu soinuak globalki"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:510
 #, kde-format
@@ -2656,7 +2656,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
 msgid "Log name format"
-msgstr ""
+msgstr "Egunkari izenaren formatua"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:142
 #, kde-format
@@ -2918,234 +2918,234 @@ msgstr ""
 #: kmuddy/macros.cpp:67
 #, kde-format
 msgid "/setval: Expression parsing failed."
-msgstr ""
+msgstr "/setval: Adierazpenaren azterketa sintaktikoak huts egin du."
 
 #: kmuddy/macros.cpp:170
 #, kde-format
 msgid "No free resources of that type."
-msgstr ""
+msgstr "Ez dago mota horretako baliabide librerik."
 
 #: kmuddy/macros.cpp:192
 #, kde-format
 msgid "/tick: syntax: /tick timer-name"
-msgstr ""
+msgstr "/tick: sintaxia: /tick tenporizadore-izena"
 
 #: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
 #, kde-format
 msgid "/tick: a timer with that name does not exist."
-msgstr ""
+msgstr "/tick: ez da existitzen izen hori duen tenporizadorerik."
 
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
 msgid "/tick: this timer is currently disabled."
-msgstr ""
+msgstr "/tick: tenporizadore hau une honetan ezgaituta dago."
 
 #: kmuddy/macros.cpp:209
 #, kde-format
 msgid "Timer ticks in 1 second."
 msgid_plural "Timer ticks in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tenporizadoreak segundo 1 barru egiten du tik."
+msgstr[1] "Tenporizadoreak %1 segundo barru egiten du tik."
 
 #: kmuddy/macros.cpp:211
 #, kde-format
 msgid "Timer ticks right now."
-msgstr ""
+msgstr "Tenporizadoreak oraintxe bertan egiten du tik."
 
 #: kmuddy/macros.cpp:221
 #, kde-format
 msgid "/ticknow: syntax: /ticknow timer-name"
-msgstr ""
+msgstr "/ticknow: sintaxia: /ticknow tenporizadore-izena"
 
 #: kmuddy/macros.cpp:363
 #, kde-format
 msgid "/else: called without the matching /if."
-msgstr ""
+msgstr "/else: /if parekiderik gabe deitu da."
 
 #: kmuddy/macros.cpp:380
 #, kde-format
 msgid "/endif: called without the matching /if."
-msgstr ""
+msgstr "/endif: /if parekiderik gabe deitu da."
 
 #: kmuddy/macros.cpp:398
 #, kde-format
 msgid "/oadd: syntax: /oadd parent name"
-msgstr ""
+msgstr "/oadd: sintaxia: /oadd gurasoaren izena"
 
 #: kmuddy/macros.cpp:406
 #, kde-format
 msgid "/oadd: parent group does not exist."
-msgstr ""
+msgstr "/oadd: guraso-taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:410
 #, kde-format
 msgid "/oadd: parent must be a group."
-msgstr ""
+msgstr "/oadd: gurasoa talde bat izan behar da."
 
 #: kmuddy/macros.cpp:415
 #, kde-format
 msgid "/oadd: object with this name already exists."
-msgstr ""
+msgstr "/oadd: izen hori duen objektua jada existitzen da."
 
 #: kmuddy/macros.cpp:432
 #, kde-format
 msgid "/gadd: syntax: /gadd parent name"
-msgstr ""
+msgstr "/gadd: sintaxia: /gadd gurasoaren izena"
 
 #: kmuddy/macros.cpp:439
 #, kde-format
 msgid "/gadd: parent group does not exist."
-msgstr ""
+msgstr "/gadd: guraso-taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:443
 #, kde-format
 msgid "/gadd: the parent must be a group"
-msgstr ""
+msgstr "/gadd: gurasoa talde bat izan behar da"
 
 #: kmuddy/macros.cpp:449
 #, kde-format
 msgid "/gadd: such group already exists in that list"
-msgstr ""
+msgstr "/gadd: halako taldea jada existitzen da zerrenda horretan"
 
 #: kmuddy/macros.cpp:465
 #, kde-format
 msgid "/odel: object does not exist."
-msgstr ""
+msgstr "/odel: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:470
 #, kde-format
 msgid "/odel: root group may not be deleted."
-msgstr ""
+msgstr "/odel: erro-taldea ezin da ezabatu."
 
 #: kmuddy/macros.cpp:488
 #, kde-format
 msgid "/omove: syntax: /omove object group [position]"
-msgstr ""
+msgstr "/omove: sintaxia: /omove objektu-taldea [posizioa]"
 
 #: kmuddy/macros.cpp:495
 #, kde-format
 msgid "/omove: object does not exist."
-msgstr ""
+msgstr "/omove: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:499
 #, kde-format
 msgid "/omove: root group may not be moved."
-msgstr ""
+msgstr "/omove: erro-taldea ezin da ezabatu."
 
 #: kmuddy/macros.cpp:505
 #, kde-format
 msgid "/omove: group does not exist."
-msgstr ""
+msgstr "/omove: taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:509
 #, kde-format
 msgid "/omove: target must be a group."
-msgstr ""
+msgstr "/omove: helburua talde bat izan behar da."
 
 #: kmuddy/macros.cpp:513
 #, kde-format
 msgid "/omove: object and target must be in the same list."
-msgstr ""
+msgstr "/omove: objektua eta helburua zerrenda berean egon behar dute."
 
 #: kmuddy/macros.cpp:525
 #, kde-format
 msgid "/omove: position out of range"
-msgstr ""
+msgstr "/omove: posizioa barrutitik kanpo"
 
 #: kmuddy/macros.cpp:540
 #, kde-format
 msgid "/oren: syntax: /oren object new-name"
-msgstr ""
+msgstr "/oren: sintaxia: /oren objektuaren izen berria"
 
 #: kmuddy/macros.cpp:547
 #, kde-format
 msgid "/oren: object does not exist."
-msgstr ""
+msgstr "/oren: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:553
 #, kde-format
 msgid "/oren: root group cannot be renamed."
-msgstr ""
+msgstr "/oren: erro-taldea ezin da berrizendatu."
 
 #: kmuddy/macros.cpp:559
 #, kde-format
 msgid "/oren: a group with this name already exists."
-msgstr ""
+msgstr "/oren: izen hori duen talde bat jada existitzen da."
 
 #: kmuddy/macros.cpp:566
 #, kde-format
 msgid "/oren: an object with this name already exists."
-msgstr ""
+msgstr "/oren: izen hori duen objektu bat jada existitzen da."
 
 #: kmuddy/macros.cpp:581
 #, kde-format
 msgid "/opriority: syntax: /opriority object priority"
-msgstr ""
+msgstr "/opriority: sintaxia: /opriority objektuaren lehentasuna"
 
 #: kmuddy/macros.cpp:588
 #, kde-format
 msgid "/opriority: object does not exist."
-msgstr ""
+msgstr "/opriority: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:594
 #, kde-format
 msgid "/opriority: priority must be in the 1-1000 range."
-msgstr ""
+msgstr "/opriority: lehentasuna 1-1000 tartean egon behar da."
 
 #: kmuddy/macros.cpp:610
 #, kde-format
 msgid "/oenable: object does not exist."
-msgstr ""
+msgstr "/oenable: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:626
 #, kde-format
 msgid "/odisable: object does not exist."
-msgstr ""
+msgstr "/odisable: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:641
 #, kde-format
 msgid "/osetbattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetbattr: sintaxia: /osetbattr objektuaren parametroaren balioa"
 
 #: kmuddy/macros.cpp:648
 #, kde-format
 msgid "/osetbattr: object does not exist."
-msgstr ""
+msgstr "/osetbattr: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
 #, kde-format
 msgid "/osetiattr: syntax: /osetbattr object parameter value"
-msgstr ""
+msgstr "/osetiattr: sintaxia: /osetbattr objektuaren parametroaren balioa"
 
 #: kmuddy/macros.cpp:672
 #, kde-format
 msgid "/osetiattr: object does not exist."
-msgstr ""
+msgstr "/osetiattr: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:696
 #, kde-format
 msgid "/osetsattr: object does not exist."
-msgstr ""
+msgstr "/osetsattr: objektua ez da existitzen."
 
 #: kmuddy/macros.cpp:713
 #, kde-format
 msgid "/tgroupon: group does not exist."
-msgstr ""
+msgstr "/tgroupon: taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:728
 #, kde-format
 msgid "/tgroupoff: group does not exist."
-msgstr ""
+msgstr "/tgroupoff: taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:744
 #, kde-format
 msgid "/agroupon: group does not exist."
-msgstr ""
+msgstr "/agroupon: taldea ez da existitzen."
 
 #: kmuddy/macros.cpp:760
 #, kde-format
 msgid "/agroupoff: group does not exist."
-msgstr ""
+msgstr "/agroupoff: taldea ez da existitzen."
 
 #: kmuddy/main.cpp:29
 #, kde-format
@@ -3246,7 +3246,7 @@ msgstr "Marco Mastroddi"
 #: kmuddy/main.cpp:55
 #, kde-format
 msgid "Tick timers"
-msgstr ""
+msgstr "Tik tenporizadoreak"
 
 #: kmuddy/main.cpp:56
 #, kde-format
@@ -3286,7 +3286,7 @@ msgstr "lontau"
 #: kmuddy/main.cpp:63
 #, kde-format
 msgid "Code to access KMuddy variables in Ruby"
-msgstr ""
+msgstr "Ruby-rekin KMuddy-ren aldagaiak atzitzeko kodea"
 
 #: kmuddy/main.cpp:64
 #, kde-format
@@ -3306,7 +3306,7 @@ msgstr "Vladimir Lazarenko"
 #: kmuddy/main.cpp:66
 #, kde-format
 msgid "Many improvements. Hosting KMuddy CVS."
-msgstr ""
+msgstr "Hobekuntza ugari. KMuddy CVS ostatatzea."
 
 #: kmuddy/main.cpp:67
 #, kde-format
@@ -3968,33 +3968,33 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:450
 #, kde-format
 msgid "Change Current Room"
-msgstr ""
+msgstr "Aldatu uneko gela"
 
 #: plugins/mapper/cmapmanager.cpp:452
 #, kde-format
 msgid "Remove Current Room Status"
-msgstr ""
+msgstr "Kendu uneko gelaren egoera"
 
 #: plugins/mapper/cmapmanager.cpp:457
 #, kde-format
 msgid "Set Current Room Status"
-msgstr ""
+msgstr "Ezarri uneko gelaren egoera"
 
 #: plugins/mapper/cmapmanager.cpp:565
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create Level"
 msgstr "Sortu maila"
 
 #: plugins/mapper/cmapmanager.cpp:634
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create Room"
 msgstr "Sortu gela"
 
 #: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
-msgstr ""
+msgstr "Sortu testua"
 
 #: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
@@ -4013,17 +4013,17 @@ msgstr ""
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
-msgstr ""
+msgstr "Sortu bide bat"
 
 #: plugins/mapper/cmapmanager.cpp:854
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delete Level"
 msgstr "Ezabatu maila"
 
 #: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
 #, kde-format
 msgid "Delete Element"
-msgstr ""
+msgstr "Ezabatu elementua"
 
 #: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
@@ -4058,7 +4058,7 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
-msgstr ""
+msgstr "Aldatu elementuaren propietatea"
 
 #: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
@@ -4068,22 +4068,22 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
-msgstr ""
+msgstr "1. proba-gela"
 
 #: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
-msgstr ""
+msgstr "2. proba-gela"
 
 #: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
-msgstr ""
+msgstr "3. proba-gela"
 
 #: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
-msgstr ""
+msgstr "4. proba-gela"
 
 #: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
@@ -4139,17 +4139,17 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:137
 #, kde-format
 msgid "Delete Current Level"
-msgstr ""
+msgstr "Ezabatu uneko maila"
 
 #: plugins/mapper/cmapview.cpp:142
 #, kde-format
 msgid "Create New Zone"
-msgstr ""
+msgstr "Sortu gune berria"
 
 #: plugins/mapper/cmapview.cpp:147
 #, kde-format
 msgid "Delete Current Zone"
-msgstr ""
+msgstr "Ezabatu uneko gunea"
 
 #: plugins/mapper/cmapview.cpp:154
 #, kde-format
@@ -4259,7 +4259,7 @@ msgstr "Uneko maila ezabatu nahi duzula ziur zaude?"
 #: plugins/mapper/cmapview.cpp:613
 #, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr ""
+msgstr "Mesedez, sartu gune berriaren izena:"
 
 #: plugins/mapper/cmapview.cpp:622
 #, kde-format
@@ -4288,14 +4288,14 @@ msgid "Level : "
 msgstr "Maila: "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:57
-#, fuzzy, kde-format
+#, kde-format
 msgid "Zone : "
-msgstr "Eskualdea"
+msgstr "Gunea : "
 
 #: plugins/mapper/cmapzone.cpp:34
 #, kde-format
 msgid "Unnamed Zone"
-msgstr ""
+msgstr "Gune izengabea"
 
 #: plugins/mapper/cmapzonemanager.cpp:232
 #, kde-format
@@ -4348,13 +4348,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
 #, kde-format
 msgid "Edit Mode Color"
-msgstr ""
+msgstr "Edizio moduaren kolorea"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
-#, fuzzy, kde-format
+#, kde-format
 msgid "Default Text Color"
-msgstr "&Testu-kolore lehenetsia"
+msgstr "Testu-kolore lehenetsia"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
@@ -4364,7 +4364,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
-#, fuzzy, kde-format
+#, kde-format
 msgid "Selected Color"
 msgstr "Hautatutako kolorea"
 
