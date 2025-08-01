@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2015.
+# SPDX-FileCopyrightText: 2015, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
 #
 msgid ""
@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2016-02-09 20:51+0200\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"PO-Revision-Date: 2025-07-20 19:12+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -105,16 +106,14 @@ msgid "Disconnect"
 msgstr "Katkaise yhteys"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Ei yhteyttä"
+msgstr "Sulje yhteys"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Yhdistetty"
+msgstr "Pysy yhteydessä"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -3161,10 +3160,9 @@ msgid "KMuddy"
 msgstr "KMuddy"
 
 #: kmuddy/main.cpp:39
-#, fuzzy, kde-format
-#| msgid "(c) 2002-2009, Tomas Mecir"
+#, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr "© 2002–2009, Tomas Mecir"
+msgstr "© 2002–2018, Tomas Mecir"
 
 #: kmuddy/main.cpp:40
 #, kde-format
@@ -3363,12 +3361,12 @@ msgstr ""
 #: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr ""
+msgstr "Ko&rvausteksti(t)"
 
 #: libs/caliaseditor.cpp:122
 #, kde-format
 msgid "Command(s) that will replace command you have entered."
-msgstr ""
+msgstr "Komennot, jotka korvaavat syöttämäsi komennon."
 
 #: libs/caliaseditor.cpp:137
 #, kde-format
@@ -3380,7 +3378,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
-msgstr ""
+msgstr "Lähetä alkuperäinen komento"
 
 #: libs/caliaseditor.cpp:175
 #, kde-format
@@ -3780,7 +3778,7 @@ msgstr "Käyttäjätunnus"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Syötä skripti tähän."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -3835,7 +3833,7 @@ msgstr "Tämä ei ole KMuddyn muuttujaluettelotiedosto."
 #: plugins/converter/converterdialog.cpp:41
 #, kde-format
 msgid "Profile Converter"
-msgstr ""
+msgstr "Profiilimuunnin"
 
 #: plugins/converter/converterdialog.cpp:49
 #, kde-format
@@ -3929,7 +3927,7 @@ msgstr "Taso %1"
 #: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
 #, kde-format
 msgid "Map #1"
-msgstr ""
+msgstr "Kartta 1"
 
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
@@ -3990,7 +3988,7 @@ msgstr "Luo taso"
 #: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
 #, kde-format
 msgid "Create Room"
-msgstr ""
+msgstr "Luo huone"
 
 #: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
@@ -4014,7 +4012,7 @@ msgstr ""
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
-msgstr ""
+msgstr "Luo polku"
 
 #: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
@@ -4044,22 +4042,22 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:1631
 #, kde-format
 msgid "Move Elements in map"
-msgstr ""
+msgstr "Siirrä alkioita kartalla"
 
 #: plugins/mapper/cmapmanager.cpp:1640
 #, kde-format
 msgid "Make Path Two-Way"
-msgstr ""
+msgstr "Tee polusta kaksisuuntainen"
 
 #: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
-msgstr ""
+msgstr "Tee polusta yksisuuntainen"
 
 #: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
 msgid "Change Element Property"
-msgstr ""
+msgstr "Muuta alkion ominaisuutta"
 
 #: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
@@ -4094,18 +4092,18 @@ msgstr ""
 #: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
-msgstr ""
+msgstr "Lisää kaarre"
 
 #: plugins/mapper/cmappath.cpp:615
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
-msgstr ""
+msgstr "Siirrä kaarretta"
 
 #: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
-msgstr ""
+msgstr "Poista polun osa"
 
 #: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:59
 #, kde-format
@@ -4115,13 +4113,12 @@ msgstr ""
 #: plugins/mapper/cmapview.cpp:79
 #, kde-format
 msgid "Follow Moves"
-msgstr ""
+msgstr "Seuraa siirtoja"
 
 #: plugins/mapper/cmapview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Auto-detect"
+#, kde-format
 msgid "Auto Create"
-msgstr "Automaattinen tunnistaminen"
+msgstr "Luo automaattisesti"
 
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
@@ -4144,16 +4141,14 @@ msgid "Delete Current Level"
 msgstr "Poista nykyinen taso"
 
 #: plugins/mapper/cmapview.cpp:142
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Zone"
-msgstr "Luo taso"
+msgstr "Luo uusi vyöhyke"
 
 #: plugins/mapper/cmapview.cpp:147
-#, fuzzy, kde-format
-#| msgid "Delete Current Level"
+#, kde-format
 msgid "Delete Current Zone"
-msgstr "Poista nykyinen taso"
+msgstr "Poista nykyinen vyöhyke"
 
 #: plugins/mapper/cmapview.cpp:154
 #, kde-format
@@ -4199,32 +4194,32 @@ msgstr "&Poista tekstiä"
 #: plugins/mapper/cmapview.cpp:201
 #, kde-format
 msgid "&One way"
-msgstr ""
+msgstr "&Yksisuuntainen"
 
 #: plugins/mapper/cmapview.cpp:205
 #, kde-format
 msgid "&Two way"
-msgstr ""
+msgstr "&Kaksisuuntainen"
 
 #: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
-msgstr ""
+msgstr "L&isää kaarre"
 
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
 msgid "&Remove Segment"
-msgstr ""
+msgstr "&Poista osa"
 
 #: plugins/mapper/cmapview.cpp:217
 #, kde-format
 msgid "&Edit Bends"
-msgstr ""
+msgstr "&Muokkaa kaarteita"
 
 #: plugins/mapper/cmapview.cpp:221
 #, kde-format
 msgid "&Delete Path"
-msgstr ""
+msgstr "P&oista polku"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdHide)
 #: plugins/mapper/cmapview.cpp:231
@@ -4248,42 +4243,38 @@ msgstr "&Paikkamerkki"
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "There is no level in that direction. Do you want to create a new one?"
-msgstr ""
+msgstr "Siinä suunnassa ei ole tasoa. Haluatko luoda uuden?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Luo taso"
+msgstr "Luo uusi taso"
 
 #: plugins/mapper/cmapview.cpp:606
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this group?"
+#, kde-format
 msgid "Are you sure that you want to delete the current level?"
-msgstr "Haluatko varmasti poistaa tämän ryhmän?"
+msgstr "Haluatko varmasti poistaa nykyisen tason?"
 
 #: plugins/mapper/cmapview.cpp:613
-#, fuzzy, kde-format
-#| msgid "Please enter name for the duplicated profile"
+#, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr "Anna monistetulle profiilille nimi."
+msgstr "Anna uudelle vyöhykkeelle nimi:"
 
 #: plugins/mapper/cmapview.cpp:622
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this group?"
+#, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
-msgstr "Haluatko varmasti poistaa tämän ryhmän?"
+msgstr "Haluatko varmasti poistaa nykyisen vyöhykkeen? Tätä ei voi kumota."
 
 #: plugins/mapper/cmapview.cpp:759
 #, kde-format
 msgid "Change room label position"
-msgstr ""
+msgstr "Muuta huoneen selitteen sijaintia"
 
 #: plugins/mapper/cmapview.cpp:785
 #, kde-format
 msgid "Change zone label position"
-msgstr ""
+msgstr "Muuta vyöhykkeen selitteen sijaintia"
 
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
@@ -4306,10 +4297,9 @@ msgid "Unnamed Zone"
 msgstr "Nimetön vyöhyke"
 
 #: plugins/mapper/cmapzonemanager.cpp:232
-#, fuzzy, kde-format
-#| msgid "This is not a KMuddy variable list file."
+#, kde-format
 msgid "This is not a KMuddy map list."
-msgstr "Tämä ei ole KMuddyn muuttujaluettelotiedosto."
+msgstr "Tämä ei ole KMuddyn karttaluettelo."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
@@ -4363,13 +4353,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr ""
+msgstr "Oletustekstiväri"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr ""
+msgstr "Oletusvyöhykeväri"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -4381,7 +4371,7 @@ msgstr "Valittu väri"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
 #, kde-format
 msgid "Lower Level"
-msgstr ""
+msgstr "Alempi taso"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
@@ -4389,7 +4379,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
 #, kde-format
 msgid "Room Color"
-msgstr ""
+msgstr "Huoneen väri"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
@@ -4397,7 +4387,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
 #, kde-format
 msgid "Path Color"
-msgstr ""
+msgstr "Polun väri"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4567,31 +4557,31 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr ""
+msgstr "Polun ominaisuudet"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
 #, kde-format
 msgid "Exits"
-msgstr ""
+msgstr "Uloskäynnit"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grdExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
 #, kde-format
 msgid "Exit Details"
-msgstr ""
+msgstr "Uloskäynnin tiedot"
 
 #. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
 #, kde-format
 msgid "Two Way Exit"
-msgstr ""
+msgstr "Kaksisuuntainen uloskäynti"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
 #, kde-format
 msgid "Nor&mal exit"
-msgstr ""
+msgstr "Ta&vallinen uloskäynti"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4607,7 +4597,7 @@ msgstr "Lähdesuunnat"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:322
 #, kde-format
 msgid "E"
-msgstr ""
+msgstr "I"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdS)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcS)
@@ -4617,7 +4607,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:190
 #, kde-format
 msgid "S"
-msgstr ""
+msgstr "E"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcW)
@@ -4627,7 +4617,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:256
 #, kde-format
 msgid "W"
-msgstr ""
+msgstr "L"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdNE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcNE)
@@ -4637,7 +4627,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:344
 #, kde-format
 msgid "NE"
-msgstr ""
+msgstr "Ko"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdNW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcNW)
@@ -4647,7 +4637,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:278
 #, kde-format
 msgid "NW"
-msgstr ""
+msgstr "Lu"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcSE)
@@ -4657,7 +4647,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:212
 #, kde-format
 msgid "SE"
-msgstr ""
+msgstr "Ka"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdN)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcN)
@@ -4667,7 +4657,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
 #, kde-format
 msgid "N"
-msgstr ""
+msgstr "P"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSW)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
@@ -4677,7 +4667,7 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:234
 #, kde-format
 msgid "SW"
-msgstr ""
+msgstr "Lo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
@@ -4696,19 +4686,19 @@ msgstr "Erikoisliipaisin"
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
 #, kde-format
 msgid "Special Command"
-msgstr ""
+msgstr "Erikoiskomento"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr ""
+msgstr "Lähteestä kohteeseen:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr ""
+msgstr "Kohteesta lähteeseen:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
@@ -4819,13 +4809,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr ""
+msgstr "&Uloskäynnit"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
 #, kde-format
 msgid "Room Exits:"
-msgstr ""
+msgstr "Huoneen uloskäynnit:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
@@ -4867,13 +4857,13 @@ msgstr ""
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
 #, kde-format
 msgid "New Item"
-msgstr ""
+msgstr "Uusi kohde"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdRemoveItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
 #, kde-format
 msgid "Remove Item"
-msgstr ""
+msgstr "Poista kohde"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
 #: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
@@ -5039,17 +5029,17 @@ msgstr "Siirrä alkioita"
 #: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
 #, kde-format
 msgid "Change element notes"
-msgstr ""
+msgstr "Muuta alkion muistiinpanoja"
 
 #: plugins/mapper/plugins/standard/cmappluginstandard.cpp:70
 #, kde-format
 msgid "Notes"
-msgstr ""
+msgstr "Muistiinpanot"
 
 #: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:37
 #, kde-format
 msgid "Notes:"
-msgstr ""
+msgstr "Muistiinpanot:"
 
 #: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:57
 #, kde-format
@@ -5069,12 +5059,12 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:61
 #, kde-format
 msgid "Script &name"
-msgstr ""
+msgstr "&Skriptin nimi"
 
 #: plugins/scripting/cscripteditor.cpp:65
 #, kde-format
 msgid "Name of this script."
-msgstr ""
+msgstr "Tämän skriptin nimi."
 
 #: plugins/scripting/cscripteditor.cpp:69
 #, kde-format
@@ -5088,6 +5078,9 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
+"Suoritettava komento parametreineen. Huomaa, että jos valitset ”Salli "
+"parametrit” -ruudun, syöterivin komennon suorittamiseen voi antaa useampia "
+"parametreja."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
@@ -5095,11 +5088,13 @@ msgid ""
 "Working directory for the script. Script will behave exactly as if it was "
 "run from this directory in console."
 msgstr ""
+"Skriptin työkansio. Skripti toimii kuin ajettaisiin konsolissa tästä "
+"kansiosta."
 
 #: plugins/scripting/cscripteditor.cpp:90
 #, kde-format
 msgid "Send user commands"
-msgstr ""
+msgstr "Lähetä käyttäjän komentoja"
 
 #: plugins/scripting/cscripteditor.cpp:91
 #, kde-format
@@ -5111,7 +5106,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:94
 #, kde-format
 msgid "Enable communication"
-msgstr ""
+msgstr "Käytä viestintää"
 
 #: plugins/scripting/cscripteditor.cpp:95
 #, kde-format
@@ -5135,7 +5130,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
 msgid "Use flow control"
-msgstr ""
+msgstr "Käytä vuonhallintaa"
 
 #: plugins/scripting/cscripteditor.cpp:103
 #, kde-format
@@ -5159,31 +5154,33 @@ msgid ""
 "If enabled, a UNIX domain socket will be created, allowing you to obtain and "
 "modify actual variable values. More information in the documentation."
 msgstr ""
+"Jos käytössä, luodaan Unix-pistoke, jolla saada tai muuttaa muuttujien "
+"todellisia arvoja. Lisätietoa löytyy ohjeista."
 
 #: plugins/scripting/cscripteditor.cpp:145
 #, kde-format
 msgid "Choose script"
-msgstr ""
+msgstr "Valitse skripti"
 
 #: plugins/scripting/cscripteditor.cpp:153
 #, kde-format
 msgid "Choose working directory"
-msgstr ""
+msgstr "Valitse työkansio"
 
 #: plugins/scripting/cscriptlist.cpp:87
 #, kde-format
 msgid "Such external script does not exist!"
-msgstr ""
+msgstr "Tällaista ulkoista skriptiä ei löydy!"
 
 #: plugins/scripting/dlgrunninglist.cpp:31
 #, kde-format
 msgid "Running scripts"
-msgstr ""
+msgstr "Käynnissä olevat skriptit"
 
 #: plugins/scripting/dlgrunninglist.cpp:39
 #, kde-format
 msgid "&Running scripts"
-msgstr ""
+msgstr "K&äynnissä olevat skriptit"
 
 #: plugins/scripting/dlgrunninglist.cpp:50
 #, kde-format
@@ -5198,7 +5195,7 @@ msgstr "&Tapa"
 #: plugins/scripting/scriptingplugin.cpp:62
 #, kde-format
 msgid "/exec: Script list is not available."
-msgstr ""
+msgstr "/exec: skriptiluettelo ei ole käytettävissä."
 
 #: plugins/scripting/scriptingplugin.cpp:122
 #, kde-format
