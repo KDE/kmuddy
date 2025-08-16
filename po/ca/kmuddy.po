@@ -1,16 +1,16 @@
 # Translation of kmuddy.po to Catalan
-# Copyright (C) 2018-2024 This_file_is_part_of_KDE
+# Copyright (C) 2018-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-12-26 11:31+0100\n"
+"PO-Revision-Date: 2025-08-15 11:03+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1007,7 +1007,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr "Desencadenant de detecció d'a&vís d'ordres"
+msgstr "Desencadenant de detecció d'&indicador"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -1019,11 +1019,11 @@ msgid ""
 "send out text, gag lines, do notification. Colorization is still possible."
 msgstr ""
 "Si ho habiliteu, aquest desencadenant es convertirà en un desencadenant de "
-"detecció de l'indicatiu, és a dir, el text serà passat per aquests "
+"detecció d'indicador, és a dir, el text serà passat per aquests "
 "desencadenants encara que no s'hagi rebut cap línia nova, el text es "
 "mostrarà com un indicador si el desencadenant obté alguna coincidència, i la "
-"majoria de les opcions NO tindran efecte -el desencadenant detector de "
-"l'indicatiu no pot enviar text, línies de mordassa, fer notificacions-. "
+"majoria de les opcions NO tindran efecte -el desencadenant detector "
+"d'indicador no pot enviar text, línies de mordassa, fer notificacions-. "
 "Acolorar encara serà possible."
 
 #: kmuddy/ctriggereditor.cpp:444
@@ -2366,7 +2366,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr "&Afegeix automàticament les línies noves després de l'indicatiu"
+msgstr "&Afegeix automàticament les línies noves després de l'indicador"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:91
 #, kde-format
@@ -2374,23 +2374,23 @@ msgid ""
 "Enables adding linefeeds after GA-terminated prompts to have properly "
 "aligned output."
 msgstr ""
-"Permet afegir retorn de línia al darrere dels indicatius acabats amb senyals "
+"Permet afegir retorn de línia al darrere dels indicadors acabats amb senyals "
 "GA per a tenir alineada correctament la sortida."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:94
 #, kde-format
 msgid "&Show prompt in a separate field"
-msgstr "Mo&stra l'indicatiu en un camp separat"
+msgstr "Mo&stra l'indicador en un camp separat"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr "Mostra l'indicatiu a la barra d'es&tat"
+msgstr "Mostra l'indicador a la barra d'es&tat"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr "Mostra l'indicatiu a la &consola"
+msgstr "Mostra l'indicador a la &consola"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
