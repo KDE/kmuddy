@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012, 2013, 2015, 2018.
-# Marcus Gama <marcus.gama@gmail.com>, 2011, 2012.
+# SPDX-FileCopyrightText: 2011, 2012, 2025 Marcus Gama <marcus.gama@gmail.com>
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2020-03-10 11:20-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-08-29 08:43-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -110,16 +110,14 @@ msgid "Disconnect"
 msgstr "Desconectar"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "No connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Sem conexão"
+msgstr "Fechar conexão"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Conectado"
+msgstr "Se manter conectado"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -2057,8 +2055,7 @@ msgid "&Port:"
 msgstr "&Porta:"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:54
-#, fuzzy, kde-format
-#| msgid "Enter port on which your MUD running (usually some 4-digit number)."
+#, kde-format
 msgid "Enter port on which your MUD is running (usually some 4-digit number)."
 msgstr ""
 "Digite a porta onde o seu MUD está sendo executado (normalmente um número de "
@@ -2087,11 +2084,10 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr "Digite aqui a sua senha no MUD.<p><i>Esta definição é opcional.</i>"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connect sequence"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr "Sequên&cia de conexão"
+msgstr "Sequên&cia da conexão"
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -3099,7 +3095,7 @@ msgstr "Parar reconectar, pressione %1 ou use a Conexão/Reconexão."
 #: kmuddy/kmuddy.cpp:990
 #, kde-format
 msgid "Activity in the KMuddy Window"
-msgstr ""
+msgstr "Atividade na janela do KMuddy"
 
 #: kmuddy/kmuddy.cpp:1162
 #, kde-format
@@ -3857,11 +3853,9 @@ msgid "Please enter the group name:"
 msgstr "Digite o nome do grupo:"
 
 #: libs/clistviewer.cpp:196
-#, fuzzy, kde-format
-#| msgid "Cannot create the group, as a group with this name already exists."
+#, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr ""
-"Não foi possível criar o grupo porque já existe outro com o mesmo nome."
+msgstr "Não foi possível criar o grupo, pois o nome fornecido não é válido."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
@@ -4007,7 +4001,7 @@ msgstr "Nome da conta"
 #: libs/cscripteditor.cpp:46
 #, kde-format
 msgid "Enter your script here."
-msgstr ""
+msgstr "Digite seu script aqui."
 
 #: libs/cscripteditor.cpp:47
 #, kde-format
@@ -4022,6 +4016,15 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
+"Digite um script Javascript que será executado quando o objeto for acionado. "
+"<br /><br />As seguintes rotinas estão disponíveis no script, além das "
+"ferramentas Javascript padrão:<br /><br /><b>window.message(text)</b> - "
+"exibe uma mensagem<br /><b>window.send(command)</b> - envia um comando<br /"
+"><b>window.sendraw(command)</b> - envia um comando sem processamento<br /"
+"><b>window.get(name)</b> - recupera o valor de uma variável<br /><b>window."
+"set(name, value)</b> - define o valor de uma variável<br /><br />Você também "
+"pode usar as seguintes variáveis: <b>prefix, prefixfull, suffix, suffixfull, "
+"matched, line, matches[]</b>"
 
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
@@ -4481,10 +4484,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr "Não há nenhum nível nessa direção. Deseja criar um novo?"
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Criar nível"
+msgstr "Criar novo nível"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -4815,10 +4817,9 @@ msgstr "Saída de dois sentidos"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
-#, fuzzy, kde-format
-#| msgid "Normal exit"
+#, kde-format
 msgid "Nor&mal exit"
-msgstr "Saída normal"
+msgstr "Saída nor&mal"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
@@ -4914,10 +4915,9 @@ msgstr "Direção de destino"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Special Exit"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Saída especial"
+msgstr "Saída espec&ial"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
