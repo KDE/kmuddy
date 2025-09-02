@@ -4102,7 +4102,7 @@ msgstr "No heu especificat cap perfil que s'haja de convertir."
 #: plugins/mapper/cmapclipboard.cpp:64
 #, kde-format
 msgid "Select All"
-msgstr "Tria-ho tot"
+msgstr "Selecciona-ho tot"
 
 #: plugins/mapper/cmapclipboard.cpp:68
 #, kde-format
