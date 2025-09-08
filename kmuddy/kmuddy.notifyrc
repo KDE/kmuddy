@@ -23,7 +23,6 @@ Comment[sl]=KMuddy
 Comment[sv]=Kmuddy
 Comment[tr]=KMuddy
 Comment[uk]=KMuddy
-Comment[x-test]=xxKMuddyxx
 Comment[zh_TW]=KMuddy
 
 [Event/Activity]
@@ -48,7 +47,6 @@ Name[sl]=Prejeto novo besedilo
 Name[sv]=Ny text mottagen
 Name[tr]=Yeni Metin Alındı
 Name[uk]=Отримано новий текст
-Name[x-test]=xxNew Text Receivedxx
 Name[zh_TW]=收到新訊息
 Comment=A new text has been received in an active session.
 Comment[ca]=S'ha rebut un text nou en una sessió activa.
@@ -71,7 +69,6 @@ Comment[sl]=V aktivni seji je bilo prejeto novo besedilo.
 Comment[sv]=En ny text har tagits emot i en aktiv session.
 Comment[tr]=Etkin bir oturumda yeni bir metin alındı.
 Comment[uk]=В активному сеансі отримано новий текст.
-Comment[x-test]=xxA new text has been received in an active session.xx
 Comment[zh_TW]=在活躍工作階段收到了新訊息。
 Action=None
 Urgency=Low
