@@ -21,7 +21,6 @@
         "Description[sv]": "Implementerar stöd för externa skript",
         "Description[tr]": "Dış betikler yazımı için destek gerçekler",
         "Description[uk]": "Реалізує підтримку зовнішніх скриптів",
-        "Description[x-test]": "xxImplements support for external scriptingxx",
         "Description[zh_TW]": "實現對於外部指令稿的支援",
         "EnabledByDefault": true,
         "License": "GPL",
@@ -54,7 +53,6 @@
         "Name[sv]": "Externa skript",
         "Name[tr]": "Dış Betik Yazımı",
         "Name[uk]": "Зовнішні скрипти",
-        "Name[x-test]": "xxExternal Scriptingxx",
         "Name[zh_CN]": "外部脚本支持",
         "Name[zh_TW]": "外部指令稿"
     }

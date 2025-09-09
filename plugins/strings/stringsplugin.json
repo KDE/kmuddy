@@ -21,7 +21,6 @@
         "Description[sv]": "Definierar diverse stränghanteringsfunktioner",
         "Description[tr]": "Çeşitli dizi manipülasyon işlevleri tanımlar",
         "Description[uk]": "Визначає різні функції для роботи з рядками",
-        "Description[x-test]": "xxDefines various string manipulation functionsxx",
         "Description[zh_TW]": "定義多種字串處理函式",
         "EnabledByDefault": true,
         "License": "GPL",
@@ -57,7 +56,6 @@
         "Name[tr]": "Diziler",
         "Name[ug]": "تېكىستلەر",
         "Name[uk]": "Рядки",
-        "Name[x-test]": "xxStringsxx",
         "Name[zh_CN]": "字符串",
         "Name[zh_TW]": "字串"
     }

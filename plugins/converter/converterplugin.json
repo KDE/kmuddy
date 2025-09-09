@@ -21,7 +21,6 @@
         "Description[sv]": "Konverterar profiler från äldre versioner av Kmuddy.",
         "Description[tr]": "Profilleri eski KMuddy sürümlerinden dönüştürür",
         "Description[uk]": "Перетворює дані профілів старих версій KMuddy",
-        "Description[x-test]": "xxConverts profiles from older KMuddy versionsxx",
         "Description[zh_TW]": "轉換來自舊版 KMuddy 的設定檔。",
         "EnabledByDefault": true,
         "License": "GPL",
@@ -54,7 +53,6 @@
         "Name[sv]": "Profilkonvertering",
         "Name[tr]": "Profil Dönüştürücüsü",
         "Name[uk]": "Засіб перетворення профілів",
-        "Name[x-test]": "xxProfile Converterxx",
         "Name[zh_CN]": "档案转换器",
         "Name[zh_TW]": "設定檔轉換工具"
     }

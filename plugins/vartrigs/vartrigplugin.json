@@ -20,7 +20,6 @@
         "Description[sv]": "Lägger till stöd för variabelutlösare",
         "Description[tr]": "Değişken tetikleyicileri için destek ekler",
         "Description[uk]": "Додає підтримку перемикання за змінними",
-        "Description[x-test]": "xxAdds support for variable triggersxx",
         "Description[zh_TW]": "加入對於變數觸發器的支援",
         "EnabledByDefault": true,
         "License": "GPL",
@@ -52,7 +51,6 @@
         "Name[sv]": "Variabelutlösare",
         "Name[tr]": "Değişken Tetikleyicileri",
         "Name[uk]": "Умовні зміни",
-        "Name[x-test]": "xxVariable Triggersxx",
         "Name[zh_CN]": "变量触发器",
         "Name[zh_TW]": "變數觸發器"
     }
