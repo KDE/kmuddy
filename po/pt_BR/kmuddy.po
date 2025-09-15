@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2025-08-29 08:43-0300\n"
+"PO-Revision-Date: 2025-09-14 08:42-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3000,7 +3000,7 @@ msgstr "&Plugins..."
 #: kmuddy/kmuddy.cpp:403
 #, kde-format
 msgid "F&ull screen mode"
-msgstr "&Modo de tela inteira"
+msgstr "&Modo de tela cheia"
 
 #: kmuddy/kmuddy.cpp:413
 #, kde-format
@@ -3462,7 +3462,7 @@ msgstr "Drossos Stamboulakis"
 #: kmuddy/main.cpp:59
 #, kde-format
 msgid "Selection improvements, full screen mode, cross-tab commands"
-msgstr "Melhorias na seleção, modo de tela inteira, comandos entre páginas"
+msgstr "Melhorias na seleção, modo de tela cheia, comandos entre páginas"
 
 #: kmuddy/main.cpp:60
 #, kde-format
