@@ -21,8 +21,6 @@
 #include "cscript.h"
 #include "cunixsocket.h"
 
-#include <QProcess>
-
 #include <stdlib.h>
 
 cRunningScript::cRunningScript (cScript *s)

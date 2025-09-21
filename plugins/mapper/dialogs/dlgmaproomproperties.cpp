@@ -17,7 +17,6 @@
 
 #include "dlgmaproomproperties.h"
 
-#include "../cmaproom.h"
 #include "../cmappath.h"
 #include "../cmapmanager.h"
 #include "../cmapcmdelementcreate.h"

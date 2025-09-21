@@ -30,7 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDebug>
 #include <QWidget>
 
-#include <list>
 #include <map>
 
 struct AMprivAction {

@@ -21,7 +21,6 @@
 #include <KLocalizedString>
 #include <kzip.h>
 
-#include <qfile.h>
 #include <qdom.h>
 #include <qfileinfo.h>
 #include <QDebug>

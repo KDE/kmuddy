@@ -20,7 +20,6 @@
 
 #include "kmuddy.h"
 
-#include "cactionmanager.h"
 #include "cbuttonlist.h"
 #include "ccmdparser.h"
 #include "cconnection.h"
