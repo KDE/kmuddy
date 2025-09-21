@@ -17,10 +17,9 @@
 
 #include "cmappluginbase.h"
 
+#include "cmapmanager.h"
 #include "cmappropertiespanebase.h"
 #include "cmaptoolbase.h"
-#include "cmapmanager.h"
-#include "cmapview.h"
 
 CMapPluginBase::CMapPluginBase(QObject *parent)
 {

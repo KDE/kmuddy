@@ -31,11 +31,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KPluginWidget>
 #include <KPluginFactory>
 
-#include <list>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <list>
 
 using namespace std;
 

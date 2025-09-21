@@ -26,8 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "caliaseditor.h"
 #include "cpattern.h"
 
-#include <QStringList>
-
 struct cAliasList::Private {
   QString stringToMatch;
   bool sendOriginal, matched;

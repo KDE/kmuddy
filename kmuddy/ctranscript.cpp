@@ -29,14 +29,13 @@
 #include "dialogs/dlgtranscript.h"
 #include "dialogs/dlgdumpbuffer.h"
 
+#include <KLocalizedString>
 #include <QDir>
-#include <QFile>
 #include <QPushButton>
 #include <QTimer>
-#include <KLocalizedString>
-#include <kmessagebox.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
+#include <kmessagebox.h>
 
 cTranscript::cTranscript (int sess) : cActionBase ("transcript", sess)
 {

@@ -17,7 +17,6 @@
 
 #include "cmapcmdmoveplayer.h"
 
-#include "cmapelement.h"
 #include "cmapelementutil.h"
 #include "cmaplevel.h"
 #include "cmappath.h"

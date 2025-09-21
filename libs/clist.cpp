@@ -34,8 +34,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 
-#include <map>
-
 using namespace std;
 
 /** cListModel - the model providing access to a single list. */

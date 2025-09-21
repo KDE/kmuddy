@@ -27,7 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
-#include <QLabel>
 #include <QGridLayout>
 #include <QListWidget>
 #include <QPushButton>

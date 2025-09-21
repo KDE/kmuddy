@@ -20,7 +20,6 @@
 #include <QDebug>
 
 #include <KLocalizedString>
-#include <kconfiggroup.h>
 
 #include "cmaplevel.h"
 #include "cmapmanager.h"

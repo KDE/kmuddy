@@ -17,8 +17,6 @@
 #include "colorlist.h"
 #include "rgbops.h"
 
-#include <string>
-
 #include <ctype.h>
 
 cMXPColors *cMXPColors::_self = 0;

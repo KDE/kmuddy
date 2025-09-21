@@ -20,7 +20,6 @@
 #include "cmapmanager.h"
 
 #include <KLocalizedString>
-#include <kconfiggroup.h>
 
 #include <qregion.h>
 #include <QPolygon>
