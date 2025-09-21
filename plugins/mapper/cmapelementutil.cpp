@@ -18,14 +18,13 @@
 
 #include "cmapelementutil.h"
 
-#include "cmapmanager.h"
 #include "cmaplevel.h"
+#include "cmapmanager.h"
+#include "cmappath.h"
 #include "cmaproom.h"
 #include "cmaptext.h"
-#include "cmapzone.h"
-#include "cmappath.h"
-#include "cmapelement.h"
 #include "cmapview.h"
+#include "cmapzone.h"
 
 #include "dialogs/dlgmappathproperties.h"
 

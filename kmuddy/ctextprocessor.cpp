@@ -28,7 +28,6 @@
 #include "cconsole.h"
 #include "clistmanager.h"
 #include "coutput.h"
-#include "ctextchunk.h"
 #include "ctriggerlist.h"
 #include "cvariablelist.h"
 #include "cwindowlist.h"

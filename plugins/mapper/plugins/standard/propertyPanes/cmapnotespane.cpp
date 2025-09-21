@@ -23,7 +23,6 @@
 
 #include <KLocalizedString>
 #include <QVBoxLayout>
-#include <QLabel>
 
 CMapNotesPane::CMapNotesPane(CMapPluginStandard *plugin,QString title,QIcon *icon,elementTyp panelType,CMapElement *element,QWidget *parent)
 	: CMapPropertiesPaneBase(title,icon,panelType,element,parent)

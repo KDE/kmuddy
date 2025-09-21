@@ -25,8 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "cansiparser.h"
 #include "cconsole.h"
 
-#include <QColor>
-#include <QFont>
 #include <QPainter>
 #include <QRegularExpression>
 
