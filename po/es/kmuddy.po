@@ -3,13 +3,13 @@
 #
 # SPDX-FileCopyrightText: 2004 Antonio J. Soler Sánchez <redtony@telefonica.net>
 # SPDX-FileCopyrightText: 2011 Kira J. Fernandez <kirajfdez@gmail.com>
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 01:49+0000\n"
-"PO-Revision-Date: 2024-09-22 18:50+0200\n"
+"PO-Revision-Date: 2025-09-23 15:13+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -383,7 +383,7 @@ msgstr "Combinación"
 #: kmuddy/cshortcuteditor.cpp:80
 #, kde-format
 msgid "Grab shortcut..."
-msgstr "Capturar combinación..."
+msgstr "Capturar combinación…"
 
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
@@ -438,7 +438,7 @@ msgstr "--- Se ha establecido una conexión ---"
 #: kmuddy/ctelnet.cpp:246
 #, kde-format
 msgid "Connecting..."
-msgstr "Conectando ..."
+msgstr "Conectando …"
 
 #: kmuddy/ctelnet.cpp:1070
 #, kde-format
@@ -1127,7 +1127,7 @@ msgstr "¡La ventana no tiene nombre!"
 #: kmuddy/dialogs/cdirlist.cpp:35
 #, kde-format
 msgid "&Add..."
-msgstr "&Añadir..."
+msgstr "&Añadir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
 #: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
@@ -1453,7 +1453,7 @@ msgstr "&Salida del servidor"
 #: kmuddy/dialogs/dlgappsettings.cpp:295
 #, kde-format
 msgid "Choose..."
-msgstr "Seleccionar..."
+msgstr "Seleccionar…"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:278
 #, kde-format
@@ -1991,7 +1991,7 @@ msgstr "&Archivo:"
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
 #, kde-format
 msgid "&Browse..."
-msgstr "&Explorar..."
+msgstr "&Explorar…"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
@@ -2119,7 +2119,7 @@ msgstr "Capturar tecla(s)"
 #: kmuddy/dialogs/dlggrabkey.cpp:37
 #, kde-format
 msgid "Press the desired shortcut..."
-msgstr "Pulse el atajo de teclado deseado..."
+msgstr "Pulse el atajo de teclado deseado…"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
@@ -2154,7 +2154,7 @@ msgstr "&Exportar a"
 #: plugins/scripting/cscripteditor.cpp:81
 #, kde-format
 msgid "Browse..."
-msgstr "Explorar..."
+msgstr "Explorar…"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:91
 #, kde-format
@@ -2554,7 +2554,7 @@ msgstr ""
 "esta función aquí, pero asegúrese de que otros jugadores no pueden averiguar "
 "estas secuencias, o desactive la ayuda para descargas; de otra forma, los "
 "jugadores podrían mandar instrucciones a su cliente para que descargue "
-"cualquier archivo de la red..."
+"cualquier archivo de la red…"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:221
 #, kde-format
@@ -2707,7 +2707,7 @@ msgstr "Bytes recibidos"
 #: kmuddy/dialogs/dlgstatistics.cpp:134
 #, kde-format
 msgid "... after decompression"
-msgstr "... después de descomprimir"
+msgstr "… después de descomprimir"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:136
 #, kde-format
@@ -2876,12 +2876,12 @@ msgstr "&Eliminar"
 #: kmuddy/kmuddy.cpp:241
 #, kde-format
 msgid "&Connect..."
-msgstr "&Conectar..."
+msgstr "&Conectar…"
 
 #: kmuddy/kmuddy.cpp:248
 #, kde-format
 msgid "&QuickConnect..."
-msgstr "Conexión &rápida..."
+msgstr "Conexión &rápida…"
 
 #: kmuddy/kmuddy.cpp:254
 #, kde-format
@@ -2931,12 +2931,12 @@ msgstr "Mostrar barra de &indicadores"
 #: kmuddy/kmuddy.cpp:327
 #, kde-format
 msgid "&Object Editor..."
-msgstr "Editor de &objetos..."
+msgstr "Editor de &objetos…"
 
 #: kmuddy/kmuddy.cpp:332
 #, kde-format
 msgid "&Output windows..."
-msgstr "&Ventanas de salida..."
+msgstr "&Ventanas de salida…"
 
 #: kmuddy/kmuddy.cpp:336
 #, kde-format
@@ -2961,7 +2961,7 @@ msgstr "Te&clas de macro habilitadas"
 #: kmuddy/kmuddy.cpp:358
 #, kde-format
 msgid "&MUD Preferences..."
-msgstr "Preferencias de &MUD..."
+msgstr "Preferencias de &MUD…"
 
 #: kmuddy/kmuddy.cpp:363
 #, kde-format
@@ -2971,12 +2971,12 @@ msgstr "&Guardar perfil"
 #: kmuddy/kmuddy.cpp:370
 #, kde-format
 msgid "&Session transcript..."
-msgstr "Grabación de la &sesión..."
+msgstr "Grabación de la &sesión…"
 
 #: kmuddy/kmuddy.cpp:375
 #, kde-format
 msgid "Dump output &buffer..."
-msgstr "Volcar el &buffer de salida..."
+msgstr "Volcar el &buffer de salida…"
 
 #: kmuddy/kmuddy.cpp:379
 #, kde-format
@@ -2986,12 +2986,12 @@ msgstr "Asistente para &decisiones"
 #: kmuddy/kmuddy.cpp:393
 #, kde-format
 msgid "&Global settings..."
-msgstr "Configuración &global..."
+msgstr "Configuración &global…"
 
 #: kmuddy/kmuddy.cpp:398
 #, kde-format
 msgid "&Plugins..."
-msgstr "Com&plementos..."
+msgstr "Com&plementos…"
 
 #: kmuddy/kmuddy.cpp:403
 #, kde-format
@@ -3896,7 +3896,7 @@ msgstr "El valor del parámetro P se sale del rango 0-100."
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr "El valor del parámetro C debe ser 0 ó 1"
+msgstr "El valor del parámetro C debe ser 0 o 1"
 
 #: libs/cmsp.cpp:393
 #, kde-format
@@ -4083,7 +4083,7 @@ msgstr "Ruta"
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr "&Conversor de perfiles..."
+msgstr "&Conversor de perfiles…"
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
@@ -5476,369 +5476,3 @@ msgstr "&Variable"
 #, kde-format
 msgid "Variables"
 msgstr "Variables"
-
-#~ msgid "Kmud"
-#~ msgstr "KMud"
-
-#~ msgid "WWW"
-#~ msgstr "WWW"
-
-#~ msgid "IP"
-#~ msgstr "IP"
-
-#~ msgid "Codebase"
-#~ msgstr "Código fuente"
-
-#~ msgid "MUD Listing"
-#~ msgstr "Listado de MUD"
-
-#~ msgid "&Filter:"
-#~ msgstr "&Filtro:"
-
-#~ msgid "&Edit..."
-#~ msgstr "&Editar..."
-
-#~ msgid "&Dont"
-#~ msgstr "&No"
-
-#~ msgid "W&rap at position"
-#~ msgstr "&Ajuste de línea en la posición actual"
-
-#~ msgid "As needed"
-#~ msgstr "Cuando sea necesario"
-
-#~ msgid ""
-#~ "Wrap at a fixed position, or at the rightmost position, if no value is "
-#~ "given."
-#~ msgstr ""
-#~ "Ajustar en una posición fija, o en la posición más a la derecha, si no se "
-#~ "proporciona ningún valor."
-
-#~ msgid "&Forced redraw after"
-#~ msgstr "&Forzado del redibujado posterior"
-
-#~ msgid ""
-#~ "Forced redraw after adding a given amount of lines. Setting this to a low "
-#~ "number may prevent some displaying problems, at a cost of higher CPU "
-#~ "usage. Setting it to Never will disable the feature, redraw will only "
-#~ "occur when needed."
-#~ msgstr ""
-#~ "Redibujado forzado tras añadir un determinado número de líneas. "
-#~ "Establecer este valor a un número bajo puede evitar algunos problemas de "
-#~ "visualización, a costa de un uso más elevado de la CPU. Establecerlo en "
-#~ "Nunca deshabilitará la característica, y solo se redibujará cuando sea "
-#~ "necesario."
-
-#~ msgid "&Select from MUD list"
-#~ msgstr "&Seleccionar de la lista de MUD"
-
-#~ msgid ""
-#~ "Enables support for blinking. This is disabled by default, because most "
-#~ "players don't like it."
-#~ msgstr ""
-#~ "Activa el soporte para parpadeo de texto. Esta opción se encuentra "
-#~ "inactiva por defecto, ya que no es del agrado de muchos jugadores."
-
-#~ msgid "Enable &word wrapping"
-#~ msgstr "Activar a&juste de línea"
-
-#~ msgid ""
-#~ "If a line that is longer than current console width is to be displayed, "
-#~ "it wraps to the next line. With this option enabled, whole words will "
-#~ "move to the next line, instead of cutting words in the middle."
-#~ msgstr ""
-#~ "Si se recibe una línea más larga que la anchura actual de la consola, es "
-#~ "ajustada en la siguiente línea. Si esta opción se encuentra activa, solo "
-#~ "se moverán palabras completas, en lugar de cortar palabras por la mitad."
-
-#~ msgid "Done"
-#~ msgstr "Hecho"
-
-#~ msgid "&Window"
-#~ msgstr "&Ventana"
-
-#~ msgid "Add Room to speedwalk list"
-#~ msgstr "Añadir sala a la lista de atajos"
-
-#~ msgid "Remove Room(s) from speedwalk list"
-#~ msgstr "Eliminar sala(s) de la lista de atajos"
-
-#~ msgid "Show Speedwalk List"
-#~ msgstr "Mostrar lista de atajos"
-
-#~ msgid "&Add to speed walk list"
-#~ msgstr "&Añadir a la lista de direcciones"
-
-#~ msgid "Speedwalk List"
-#~ msgstr "Lista de atajos"
-
-#~ msgid "&Show in active view"
-#~ msgstr "Mo&strar en la vista activa"
-
-#~ msgid "Show in &new view"
-#~ msgstr "Mostrar en la vista &nueva"
-
-#~ msgid "&Walk to room"
-#~ msgstr "&Ir a sala"
-
-#~ msgid "&Remove from list"
-#~ msgstr "Elimina&r de la lista"
-
-#~ msgid "&Open in active view"
-#~ msgstr "&Abrir en la vista activa"
-
-#~ msgid "Open in &new view"
-#~ msgstr "Abrir en la vista &nueva"
-
-#~ msgid "Room"
-#~ msgstr "Sala"
-
-#~ msgid "&Level"
-#~ msgstr "Nive&l"
-
-#~ msgid "&Zone"
-#~ msgstr "&Zona"
-
-#~ msgid "Unnamed room"
-#~ msgstr "Sala sin nombre"
-
-#~ msgid "Categorize:"
-#~ msgstr "Categorizar:"
-
-#~ msgid "Zone/Room"
-#~ msgstr "Zona/Sala"
-
-#~ msgid "Zone/Level/Room"
-#~ msgstr "Zona/Nivel/Sala"
-
-#~ msgid "Locations"
-#~ msgstr "Ubicaciones"
-
-#~ msgid "Path Directions"
-#~ msgstr "Direcciones de la ruta"
-
-#~ msgid "One Way"
-#~ msgstr "Un sentido"
-
-#~ msgid ""
-#~ "KMuddy is a MUD (Multi-User Dungeon) client for KDE.\n"
-#~ "\n"
-#~ "It already contains various interesting features, more advanced features "
-#~ "are being added constantly. \n"
-#~ "\n"
-#~ "Maybe one day KMuddy will be the best client out there (for KDE at "
-#~ "least...)."
-#~ msgstr ""
-#~ "KMuddy es un cliente MUD (Multi-User Dungeon) para KDE.\n"
-#~ "\n"
-#~ "Contiene varias herramientas interesantes, y se le añaden utilidades "
-#~ "nuevas constantemente. \n"
-#~ "\n"
-#~ "Puede que un día KMuddy se convierta en el mejor cliente MUD (al menos "
-#~ "para KDE...)."
-
-#~ msgid "Items"
-#~ msgstr "Elementos"
-
-#~ msgid "Do you want to save the changes to the current map?"
-#~ msgstr "¿Desea guardar los cambios en el mapa actual?"
-
-#~ msgid "&Create Mode"
-#~ msgstr "&Crear modo"
-
-#~ msgid "New Map"
-#~ msgstr "Nuevo mapa"
-
-#~ msgid "Load"
-#~ msgstr "Cargar"
-
-#~ msgid "Save As"
-#~ msgstr "Guardar como"
-
-#~ msgid "Information"
-#~ msgstr "Información"
-
-#~ msgid ""
-#~ "Are you sure you want to create a new map?\n"
-#~ "This action can not be undone"
-#~ msgstr ""
-#~ "¿Seguro que desea crear un nuevo mapa?\n"
-#~ "Esta acción no se puede deshacer"
-
-#~ msgid "Load Map File"
-#~ msgstr "Cargar archivo de mapa"
-
-#~ msgid "Save Map File"
-#~ msgstr "Guardar archivo de mapa"
-
-#~ msgid "Unnamed"
-#~ msgstr "Sin nombre"
-
-#~ msgid "Map Information"
-#~ msgstr "Información del mapa"
-
-#~ msgid "General Information"
-#~ msgstr "Información general"
-
-#~ msgid "Mud Name:"
-#~ msgstr "Nombre de Mud:"
-
-#~ msgid "Character Name:"
-#~ msgstr "Nombre del personaje:"
-
-#~ msgid "Number of Map Elements"
-#~ msgstr "Número de elementos del mapa"
-
-#~ msgid "No. of Zones:"
-#~ msgstr "Nº de zonas:"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "No. of Levels:"
-#~ msgstr "Nº de niveles:"
-
-#~ msgid "No. of Rooms:"
-#~ msgstr "Nº de salas:"
-
-#~ msgid "No. of Text Labels:"
-#~ msgstr "Nº de etiquetas de texto:"
-
-#~ msgid "No. of Paths:"
-#~ msgstr "Nº de rutas:"
-
-#~ msgid "Starting Position"
-#~ msgstr "Posición inicial"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "Level:"
-#~ msgstr "Nivel:"
-
-#~ msgid "Close"
-#~ msgstr "Cerrar"
-
-#~ msgid "&File"
-#~ msgstr "&Archivo"
-
-#~ msgid "Active"
-#~ msgstr "Activar"
-
-#~ msgid "Used default room color"
-#~ msgstr "Utilizado el color de la sala por defecto"
-
-#~ msgid "Changed Zone Properties"
-#~ msgstr "Propiedades de la zona cambiadas"
-
-#~ msgid "Zone Properties"
-#~ msgstr "Propiedades de la zona"
-
-#~ msgid "Appearance"
-#~ msgstr "Apariencia"
-
-#~ msgid "Zone Color:"
-#~ msgstr "Color de la zona:"
-
-#~ msgid "Use default background color"
-#~ msgstr "Usar color del fondo por defecto"
-
-#~ msgid "Use custom background"
-#~ msgstr "Usar fondo personalizado"
-
-#~ msgid "Background color"
-#~ msgstr "Color de fondo"
-
-#~ msgid "Background image:"
-#~ msgstr "Imagen de fondo:"
-
-#~ msgid "Select Image"
-#~ msgstr "Seleccionar imagen"
-
-#~ msgid "&OK"
-#~ msgstr "&Aceptar"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Cancelar"
-
-#~ msgid "Tools Toolbar"
-#~ msgstr "Barra de herramientas"
-
-#~ msgid "Navigation Toolbar"
-#~ msgstr "Barra de navegación"
-
-#~ msgid "&Level tools"
-#~ msgstr "Herramientas del nive&l"
-
-#~ msgid "Set Element Properties"
-#~ msgstr "Establecer las propiedades del elemento"
-
-#~ msgid "Set Path properties"
-#~ msgstr "Establecer las propiedades de la ruta"
-
-#~ msgid "Make Path Oneway"
-#~ msgstr "Hacer la ruta de un solo sentido"
-
-#~ msgid "Make Path Twoway"
-#~ msgstr "Hacer la ruta de dos sentidos"
-
-#~ msgid "Display Parent Zone"
-#~ msgstr "Mostrar zona madre"
-
-#~ msgid "Edit Zone Properties"
-#~ msgstr "Editar las propiedades de la zona"
-
-#~ msgid "Select Zone"
-#~ msgstr "Seleccionar zona"
-
-#~ msgid "&Open Zone"
-#~ msgstr "&Abrir zona"
-
-#~ msgid "&Open Zone in New View"
-#~ msgstr "&Abrir zona en una vista nueva"
-
-#~ msgid "&Delete Zone"
-#~ msgstr "&Eliminar zona"
-
-#~ msgid "Kmud Mapper"
-#~ msgstr "Mapeador de Kmud"
-
-#~ msgid "Move Player"
-#~ msgstr "Mover jugador"
-
-#~ msgid "Test Zone 2"
-#~ msgstr "Zona de prueba 2"
-
-#~ msgid "Test room 5"
-#~ msgstr "Sala de prueba 5"
-
-#~ msgid "Test Mud"
-#~ msgstr "Probar Mud"
-
-#~ msgid "Slayer"
-#~ msgstr "Asesino"
-
-#~ msgid "Zone:"
-#~ msgstr "Zona:"
-
-#~ msgid "&Zone Tools"
-#~ msgstr "&Herramientas de la zona"
-
-#~ msgid "Delete Level Actual Command"
-#~ msgstr "Eliminar orden real del nivel"
-
-#~ msgid "Open New Map View"
-#~ msgstr "Abrir nueva vista de mapa"
-
-#~ msgid "This version of the file format is no longer supported by kmud"
-#~ msgstr "Esta versión del formato de archivo ya no es admitida por Kmud"
-
-#~ msgid ""
-#~ "The file is the incorrect version,\n"
-#~ "or not a valid map file."
-#~ msgstr ""
-#~ "El archivo es de una versión incorrecta \n"
-#~ "o no es un archivo de mapas válido."
