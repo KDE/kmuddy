@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Comment=A Mapper for KMuddy
+Comment[ar]=صانع خرائط كمدي
 Comment[bs]=Mapper za KMuddy
 Comment[ca]=Un mapador per al KMuddy
 Comment[ca@valencia]=Un mapador per a KMuddy
@@ -30,6 +31,7 @@ Comment[uk]=Робота з картами у KMuddy
 Comment[zh_CN]=KMuddy 地图编辑器
 Comment[zh_TW]=KMuddy 用的一個製圖器
 Name=Kmuddy Mapper
+Name[ar]=صانع خرائط كمدي
 Name[bs]=Kmuddy Mapper
 Name[ca]=Mapador del KMuddy
 Name[ca@valencia]=Mapador de KMuddy

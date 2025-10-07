@@ -2,6 +2,7 @@
 IconName=kmuddy
 DesktopEntry=org.kde.kmuddy
 Comment=KMuddy
+Comment[ar]=كمدي
 Comment[ca]=KMuddy
 Comment[ca@valencia]=KMuddy
 Comment[cs]=KMuddy
@@ -27,6 +28,7 @@ Comment[zh_TW]=KMuddy
 
 [Event/Activity]
 Name=New Text Received
+Name[ar]=استُلمت نص جديد
 Name[ca]=S'ha rebut text nou
 Name[ca@valencia]=S'ha rebut text nou
 Name[en_GB]=New Text Received
@@ -49,6 +51,7 @@ Name[tr]=Yeni Metin Alındı
 Name[uk]=Отримано новий текст
 Name[zh_TW]=收到新訊息
 Comment=A new text has been received in an active session.
+Comment[ar]=استُلم نص جديد في جلسة نشطة.
 Comment[ca]=S'ha rebut un text nou en una sessió activa.
 Comment[ca@valencia]=S'ha rebut un text nou en una sessió activa.
 Comment[en_GB]=A new text has been received in an active session.
