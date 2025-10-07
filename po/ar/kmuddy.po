@@ -1,0 +1,5375 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the kmuddy package.
+# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kmuddy\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-22 01:49+0000\n"
+"PO-Revision-Date: 2025-10-06 11:11+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "زايد السعيدي"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zayed.alsaidi@gmail.com"
+
+#: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
+#: kmuddy/cstatusvareditor.cpp:70
+#, kde-format
+msgid "&Caption"
+msgstr "ال&وصف"
+
+#: kmuddy/cbuttoneditor.cpp:68
+#, kde-format
+msgid "Caption of this button."
+msgstr "لصيقة هذا الزر."
+
+#: kmuddy/cbuttoneditor.cpp:71
+#, kde-format
+msgid "Co&mmand"
+msgstr "الأ&مر"
+
+#: kmuddy/cbuttoneditor.cpp:74
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the button. Note that you can "
+"enter multiple commands here (separated by semi-colons, or another character "
+"defined in <b>global settings</b>)."
+msgstr ""
+"الأمر الذي يُنفَّذ عند النقر على الزر. لاحظ أنه يُمكِنك إدخال أوامر متعددة هنا "
+"(تُفصَل بفواصل منقوطة، أو بغيرها من الأحرف المضبوطة في <b>الإعدادات العامة</"
+"b>)."
+
+#: kmuddy/cbuttoneditor.cpp:83
+#, kde-format
+msgid "Icon displayed on the button toolbar."
+msgstr "الأيقونة المعروضة على شريط أدوات الزر."
+
+#: kmuddy/cbuttoneditor.cpp:91
+#, kde-format
+msgid "&Un-press command"
+msgstr "أمر &إلغاء الضغط"
+
+#: kmuddy/cbuttoneditor.cpp:94
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the push-down button while "
+"it's pushed down."
+msgstr "الأمر الذي يُنفَّذ عند النقر على الزر الضاغط بينما يكون مضغوطاً."
+
+#: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
+#: kmuddy/ctimereditor.cpp:132
+#, kde-format
+msgid "&General"
+msgstr "&عام"
+
+#: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
+#: kmuddy/ctimereditor.cpp:133 kmuddy/ctriggereditor.cpp:512
+#: libs/caliaseditor.cpp:227
+#, kde-format
+msgid "&Script"
+msgstr "&سكربت"
+
+#: kmuddy/cbuttoneditor.cpp:125
+#, kde-format
+msgid "Script when &released"
+msgstr "السكربت عند &التحرير"
+
+#: kmuddy/cconnection.cpp:262
+#, kde-format
+msgid "Network error: %1"
+msgstr "خطأ شبكيّ: %1"
+
+#: kmuddy/cconnection.cpp:422
+#, kde-format
+msgid "Do you want to close connection to %1?"
+msgstr "أتُريد إغلاق الاتصال بـ %1؟"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Disconnect"
+msgstr "اقطع الاتصال"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Close connection"
+msgstr "أغلِق الاتصال"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Stay connected"
+msgstr "ابْقَ متصلاً"
+
+#: kmuddy/cconnection.cpp:507
+#, kde-format
+msgid "(password is hidden)"
+msgstr "(كلمة السر مخفية)"
+
+#: kmuddy/cconnection.cpp:726
+#, kde-format
+msgid "Aliases are now enabled."
+msgstr "الألقاب الآن مُمَكَّنة."
+
+#: kmuddy/cconnection.cpp:726
+#, kde-format
+msgid "Aliases are now disabled."
+msgstr "الألقاب الآن مُعَطَّلة."
+
+#: kmuddy/cconnection.cpp:737
+#, kde-format
+msgid "Triggers are now enabled."
+msgstr "المُحفِّزات الآن مُمَكَّنة."
+
+#: kmuddy/cconnection.cpp:737
+#, kde-format
+msgid "Triggers are now disabled."
+msgstr "المُحفِّزات الآن مُعَطَّلة."
+
+#: kmuddy/cconnection.cpp:748
+#, kde-format
+msgid "Timers are now enabled."
+msgstr "المؤقتات الآن مُمَكَّنة."
+
+#: kmuddy/cconnection.cpp:748
+#, kde-format
+msgid "Timers are now disabled."
+msgstr "المؤقتات الآن مُعَطَّلة."
+
+#: kmuddy/cconnection.cpp:759
+#, kde-format
+msgid "Macro keys are now enabled."
+msgstr "مفاتيح الماكرو الآن مُمَكَّنة."
+
+#: kmuddy/cconnection.cpp:759
+#, kde-format
+msgid "Macro keys are now disabled."
+msgstr "مفاتيح الماكرو الآن مُعَطَّلة."
+
+#: kmuddy/cconnection.cpp:812
+#, kde-format
+msgid "Aliases"
+msgstr "الأسماء البديلة"
+
+#: kmuddy/cconnection.cpp:813
+#, kde-format
+msgid "Triggers"
+msgstr "المُحفِّزات"
+
+#: kmuddy/cconnection.cpp:814
+#, kde-format
+msgid "Buttons"
+msgstr "الأزرار"
+
+#: kmuddy/cconnection.cpp:815
+#, kde-format
+msgid "Timers"
+msgstr "المؤقّتات"
+
+#: kmuddy/cconnection.cpp:816
+#, kde-format
+msgid "Macro Keys"
+msgstr "مفاتيح الماكرو"
+
+#: kmuddy/cconnection.cpp:817
+#, kde-format
+msgid "Status variables"
+msgstr "مُتغيرات الحالة"
+
+#: kmuddy/cconnection.cpp:818
+#, kde-format
+msgid "Gauges"
+msgstr "المقاييس"
+
+#: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:56
+#: plugins/vartrigs/cvartriggereditor.cpp:57
+#, kde-format
+msgid "&Variable name"
+msgstr "ا&سم المتغير"
+
+#: kmuddy/cgaugeeditor.cpp:62
+#, kde-format
+msgid "Variable displayed by this gauge."
+msgstr "المتغير الذي يعرضه هذا المقياس."
+
+#: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
+#, kde-format
+msgid "&Max. variable (optional)"
+msgstr "المتغير &الأقصى (اختياري)"
+
+#: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
+#, kde-format
+msgid "Variable holding the maximum value (default=100)"
+msgstr "المتغير الذي يحمل القيمة القصوى (مبدئي = 100)"
+
+#: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:73
+#, kde-format
+msgid "Caption shown next to variable value."
+msgstr "اللصيقة المعروضة بجانب قيمة المتغير."
+
+#: kmuddy/cgaugeeditor.cpp:78
+#, kde-format
+msgid "&Color"
+msgstr "ا&للون"
+
+#: kmuddy/cgaugeeditor.cpp:81
+#, kde-format
+msgid "Color used to paint this gauge."
+msgstr "اللون المُستخدَم لطلاء هذا المقياس."
+
+#: kmuddy/cmxpmanager.cpp:299
+#, kde-format
+msgid "line tag"
+msgstr "وسم السطر"
+
+#: kmuddy/cmxpmanager.cpp:300
+#, kde-format
+msgid "expire link"
+msgstr "رابط منتهٍ"
+
+#: kmuddy/cmxpmanager.cpp:301
+#, kde-format
+msgid "horizontal line"
+msgstr "سطر أفقي"
+
+#: kmuddy/cmxpmanager.cpp:302
+#, kde-format
+msgid "create window"
+msgstr "أنشئ نافذة"
+
+#: kmuddy/cmxpmanager.cpp:303
+#, kde-format
+msgid "create internal window"
+msgstr "أنشئ نافذة داخلية"
+
+#: kmuddy/cmxpmanager.cpp:304
+#, kde-format
+msgid "close window"
+msgstr "أغلق النّافذة"
+
+#: kmuddy/cmxpmanager.cpp:305
+#, kde-format
+msgid "set active window"
+msgstr "اضبط النافذة النشطة"
+
+#: kmuddy/cmxpmanager.cpp:306
+#, kde-format
+msgid "move cursor"
+msgstr "حرِّك المؤشر"
+
+#: kmuddy/cmxpmanager.cpp:307
+#, kde-format
+msgid "erase text"
+msgstr "امسح النص"
+
+#: kmuddy/cmxpmanager.cpp:308
+#, kde-format
+msgid "relocate"
+msgstr "نقْل"
+
+#: kmuddy/cmxpmanager.cpp:309
+#, kde-format
+msgid "send username/password"
+msgstr "أرسِل اسم المستخدم/كلمة السر"
+
+#: kmuddy/cmxpmanager.cpp:310
+#, kde-format
+msgid "image"
+msgstr "صورة"
+
+#: kmuddy/cmxpmanager.cpp:311
+#, kde-format
+msgid "image map"
+msgstr "مخطط صورة"
+
+#: kmuddy/cmxpmanager.cpp:312
+#, kde-format
+msgid "unknown"
+msgstr "مجهول"
+
+#: kmuddy/cmxpmanager.cpp:314
+#, kde-format
+msgid "Ignoring unsupported MXP request (%1)"
+msgstr "أتجاهَل طلب MXP غير المدعوم (%1)"
+
+#: kmuddy/csession.cpp:82
+#, kde-format
+msgid "Ctrl+Enter adds new line, unless changed in settings"
+msgstr "Ctrl+Enter يُضيف سطرًا جديدًا، ما لم يُغيَّر في الإعدادات"
+
+#: kmuddy/csession.cpp:86
+#, kde-format
+msgid "Switches between standard and multi-line input line."
+msgstr "يُبدِّل بين سطر الإدخال القياسي ومتعدد الأسطر."
+
+#: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
+#, kde-format
+msgid "No connection"
+msgstr "لا يوجد اتصال"
+
+#: kmuddy/csessionmanager.cpp:211
+#, kde-format
+msgid "Connection closed."
+msgstr "أُغلق الاتصال."
+
+#: kmuddy/cshortcut.cpp:126
+#, kde-format
+msgid "(unknown)"
+msgstr "(مجهول)"
+
+#: kmuddy/cshortcut.cpp:128
+#, kde-format
+msgid "(none)"
+msgstr "(لا شيء)"
+
+#: kmuddy/cshortcut.cpp:132
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#: kmuddy/cshortcut.cpp:134
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: kmuddy/cshortcut.cpp:136
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: kmuddy/cshortcut.cpp:138
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
+#: kmuddy/kmuddy.cpp:279
+#, kde-format
+msgid "&Command"
+msgstr "الأ&مر"
+
+#: kmuddy/cshortcuteditor.cpp:71
+#, kde-format
+msgid ""
+"Command that will be executed when you press the defined key combination.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"الأمر الذي يُنفَّذ عند الضغط على تركيبة المفاتيح المضبوطة.\n"
+"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+
+#: kmuddy/cshortcuteditor.cpp:76
+#, kde-format
+msgid "Shortcut"
+msgstr "الاختصار"
+
+#: kmuddy/cshortcuteditor.cpp:80
+#, kde-format
+msgid "Grab shortcut..."
+msgstr "اقبِض على الاختصار..."
+
+#: kmuddy/cshortcuteditor.cpp:83
+#, kde-format
+msgid "&Send command"
+msgstr "&أرسِل الأمر"
+
+#: kmuddy/cshortcuteditor.cpp:84
+#, kde-format
+msgid ""
+"If checked, the command will be sent to the MUD. Otherwise, it will be put "
+"in the inputline."
+msgstr "إذا حُدِّد، يُرسَل الأمر إلى MUD. وإلا، يُوضَع في سطر الإدخال."
+
+#: kmuddy/cshortcuteditor.cpp:87
+#, kde-format
+msgid "&Overwrite existing text"
+msgstr "&اكتُب فوق النص الحالي"
+
+#: kmuddy/cshortcuteditor.cpp:88
+#, kde-format
+msgid ""
+"If there already is some text in the input line, should it be overwritten?"
+msgstr "إذا كان هناك نص بالفعل في سطر الإدخال، فهل ينبغي الكتابة فوقه؟"
+
+#: kmuddy/cstatusvareditor.cpp:60
+#, kde-format
+msgid "Variable displayed by this status variable."
+msgstr "المتغير الذي يعرضه متغير الحالة هذا."
+
+#: kmuddy/cstatusvareditor.cpp:76
+#, kde-format
+msgid "&Show as percentage"
+msgstr "&اعرض كنسبة مئوية"
+
+#: kmuddy/cstatusvareditor.cpp:77
+#, kde-format
+msgid ""
+"When enabled, this variable will be shown as percentage. (of max.value, or "
+"of 100 if no max.value given)"
+msgstr ""
+"عند التمكين، يُعرض هذا المتغير كنسبة مئوية. (من القيمة القصوى، أو من 100 إن "
+"لَم تُعطَ قيمة قصوى)"
+
+#: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
+#, kde-format
+msgid "--- A connection has been established ---"
+msgstr "--- إقامة اتصال ---"
+
+#: kmuddy/ctelnet.cpp:246
+#, kde-format
+msgid "Connecting..."
+msgstr "يتصل..."
+
+#: kmuddy/ctelnet.cpp:1070
+#, kde-format
+msgid "The remote server has been found, attempting connection."
+msgstr "العثور على الخادم البعيد، ومحاولة الاتصال."
+
+#: kmuddy/ctimer.cpp:78
+#, kde-format
+msgid " sec"
+msgstr " ث"
+
+#: kmuddy/ctimer.cpp:80
+#, kde-format
+msgid ", single-shot"
+msgstr "، لمرة واحدة"
+
+#: kmuddy/ctimereditor.cpp:70
+#, kde-format
+msgid ""
+"Command that will be executed on each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"الأمر الذي يُنفَّذ عند كل نَبضة.\n"
+"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+
+#: kmuddy/ctimereditor.cpp:74
+#, kde-format
+msgid "&Interval"
+msgstr "ال&فترة"
+
+#: kmuddy/ctimereditor.cpp:77 kmuddy/ctimereditor.cpp:94
+#, kde-format
+msgid " secs"
+msgstr " ث"
+
+#: kmuddy/ctimereditor.cpp:81
+#, kde-format
+msgid "&Single-shot"
+msgstr "لمرة &واحدة"
+
+#: kmuddy/ctimereditor.cpp:82
+#, kde-format
+msgid "When enabled, the timer will only be executed once and then disabled."
+msgstr "عند التمكين، يُنفَّذ المؤقت مرة واحدة فقط، ويُعطَّل بعدها."
+
+#: kmuddy/ctimereditor.cpp:84
+#, kde-format
+msgid "&Run a command in advance"
+msgstr "&شغِّل أمرًا مُقدَّمًا"
+
+#: kmuddy/ctimereditor.cpp:85
+#, kde-format
+msgid "Run a command a given number of seconds before each timer tick."
+msgstr "شغِّل أمرًا بعدد محدد من الثواني قبل كل نَبضة مؤقت."
+
+#: kmuddy/ctimereditor.cpp:87
+#, kde-format
+msgid "Advance command"
+msgstr "أمر متقدم"
+
+#: kmuddy/ctimereditor.cpp:90
+#, kde-format
+msgid "&Seconds before tick"
+msgstr "&ثوانٍ قبل النبضة"
+
+#: kmuddy/ctimereditor.cpp:97
+#, kde-format
+msgid "C&ommand"
+msgstr "الأ&مر"
+
+#: kmuddy/ctimereditor.cpp:100
+#, kde-format
+msgid ""
+"Command that will be executed the specified time before each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"الأمر الذي يُنفَّذ في الوقت المحدد قبل كل نَبضة.\n"
+"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+
+#: kmuddy/ctranscript.cpp:173
+#, kde-format
+msgid "Session transcript has been stopped."
+msgstr "إيقاف نص الجلسة."
+
+#: kmuddy/ctranscript.cpp:207
+#, kde-format
+msgid "Advanced session transcript has been stopped."
+msgstr "إيقاف نص الجلسة المتقدم."
+
+#: kmuddy/ctranscript.cpp:258
+#, kde-format
+msgid "Transcript file could not be opened."
+msgstr "فشل فتح ملف النص."
+
+#: kmuddy/ctranscript.cpp:259
+#, kde-format
+msgid "Session transcript could not be started."
+msgstr "فشل بدء نص الجلسة."
+
+#: kmuddy/ctranscript.cpp:278
+#, kde-format
+msgid "Session transcript has just started."
+msgstr "بدء نص الجلسة للتو."
+
+#: kmuddy/ctranscript.cpp:287
+#, kde-format
+msgid "Session transcript has been started."
+msgstr "بدء نص الجلسة."
+
+#: kmuddy/ctranscript.cpp:314
+#, kde-format
+msgid "Advanced transcript file could not be opened."
+msgstr "فشل فتح ملف النص المتقدم."
+
+#: kmuddy/ctranscript.cpp:315
+#, kde-format
+msgid "Advanced session transcript could not be started."
+msgstr "فشل بدء نص الجلسة المتقدم."
+
+#: kmuddy/ctranscript.cpp:331
+#, kde-format
+msgid "Advanced session transcript has just started."
+msgstr "بدء نص الجلسة المتقدم للتو."
+
+#: kmuddy/ctranscript.cpp:336
+#, kde-format
+msgid "Advanced session transcript has been started."
+msgstr "بدء نص الجلسة المتقدم."
+
+#: kmuddy/ctranscript.cpp:340
+#, kde-format
+msgid "Session transcript will be rotated at midnight."
+msgstr "نص الجلسة يُدَوَّر في منتصف الليل."
+
+#: kmuddy/ctranscript.cpp:426
+#, kde-format
+msgid "Dump file could not be opened."
+msgstr "فشل فتح ملف التخزين."
+
+#: kmuddy/ctriggereditor.cpp:114
+#, kde-format
+msgid "Keep"
+msgstr "أبقِ"
+
+#: kmuddy/ctriggereditor.cpp:115 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Black"
+msgstr "أسود"
+
+#: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Red"
+msgstr "أحمر"
+
+#: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Green"
+msgstr "أخضر"
+
+#: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Yellow"
+msgstr "أصفر"
+
+#: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Blue"
+msgstr "أزرق"
+
+#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Magenta"
+msgstr "أرجواني"
+
+#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Cyan"
+msgstr "سماوي"
+
+#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Gray"
+msgstr "رصاصيّ"
+
+#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Dark gray"
+msgstr "رمادي داكن"
+
+#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Bright red"
+msgstr "أحمر ناصع"
+
+#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Bright green"
+msgstr "أخضر فاتح"
+
+#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright yellow"
+msgstr "أصفر ساطع"
+
+#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright blue"
+msgstr "أزرق فاتح"
+
+#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright magenta"
+msgstr "أرجواني ساطع"
+
+#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "Bright cyan"
+msgstr "سماوي ساطع"
+
+#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "White"
+msgstr "أبيض"
+
+#: kmuddy/ctriggereditor.cpp:131
+#, kde-format
+msgid "Other"
+msgstr "أخرى"
+
+#: kmuddy/ctriggereditor.cpp:136
+#, kde-format
+msgid "Whole line"
+msgstr "كامل السطر الحالي"
+
+#: kmuddy/ctriggereditor.cpp:137
+#, kde-format
+msgid "Matching text"
+msgstr "النص المطابق"
+
+#: kmuddy/ctriggereditor.cpp:138
+#, kde-format
+msgid "Prefix"
+msgstr "البادئة"
+
+#: kmuddy/ctriggereditor.cpp:139
+#, kde-format
+msgid "Suffix"
+msgstr "اللاحقة"
+
+#: kmuddy/ctriggereditor.cpp:140
+#, kde-format
+msgid "Full prefix"
+msgstr "بادئة كاملة"
+
+#: kmuddy/ctriggereditor.cpp:141
+#, kde-format
+msgid "Full suffix"
+msgstr "لاحقة كاملة"
+
+#: kmuddy/ctriggereditor.cpp:142
+#, kde-format
+msgid "Backreference"
+msgstr "مرجع خلفي"
+
+#: kmuddy/ctriggereditor.cpp:165
+#, kde-format
+msgid "&Trigger text"
+msgstr "نص ال&مُحفِّز"
+
+#: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
+#, kde-format
+msgid "Command that will be replaced if you enter it."
+msgstr "الأمر الذي يُستبدَل إذا أدخلته."
+
+#: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
+#, kde-format
+msgid "Exact match"
+msgstr "تطابق تام"
+
+#: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
+#, kde-format
+msgid "Sub-string"
+msgstr "سلسلة فرعية"
+
+#: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
+#, kde-format
+msgid "Begins with"
+msgstr "تبدأ بـ"
+
+#: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:104
+#, kde-format
+msgid "Ends with"
+msgstr "ينتهي بـ"
+
+#: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:105
+#, kde-format
+msgid "Regular expression"
+msgstr "تعبير نمطي"
+
+#: kmuddy/ctriggereditor.cpp:183
+#, kde-format
+msgid ""
+"Type of matching. Trigger will only be activated if this passes this type of "
+"test. Note that triggers are always matched as whole words."
+msgstr ""
+"نوع المطابقة. المُحفِّز يُنشَّط فقط إذا اجتاز هذا النوع من الاختبار. لاحظ أن "
+"المُحفِّزات تُطابَق دائمًا ككلمات كاملة."
+
+#: kmuddy/ctriggereditor.cpp:191 libs/caliaseditor.cpp:114
+#, kde-format
+msgid ""
+"Conditional triggering. If this is set, the actions will only fire if the "
+"condition is true (that means, if it evaluates as non-zero)."
+msgstr ""
+"تحفيز شرطي. إذا ضُبِط هذا، تُنفَّذ الإجراءات فقط إذا كان الشرط صحيحًا (وهذا يعني، "
+"إذا قُوِّم على أنه غير صفري)."
+
+#: kmuddy/ctriggereditor.cpp:195
+#, kde-format
+msgid "&Command(s) to send:"
+msgstr "&الأمر/الأوامر للإرسال:"
+
+#: kmuddy/ctriggereditor.cpp:199
+#, kde-format
+msgid "Command(s) that will replace command you've entered."
+msgstr "الأمر/الأوامر التي تستبدل الأمر الذي أدخلته."
+
+#: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
+#, kde-format
+msgid "Test area"
+msgstr "منطقة اختبار"
+
+#: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
+#, kde-format
+msgid "&Text: "
+msgstr "ال&نص: "
+
+#: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
+#: plugins/converter/converterdialog.cpp:54
+#: plugins/scripting/crunninglist.cpp:57
+#, kde-format
+msgid "Name"
+msgstr "الاسم"
+
+#: kmuddy/ctriggereditor.cpp:210 kmuddy/dialogs/dlgstatistics.cpp:53
+#: libs/caliaseditor.cpp:133 plugins/varviewer/dlgvarviewer.cpp:71
+#, kde-format
+msgid "Value"
+msgstr "القيمة"
+
+#: kmuddy/ctriggereditor.cpp:214
+#, kde-format
+msgid ""
+"This is testing area. You can test your trigger here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"هذه مساحة اختبار. يُمكِنك اختبار مُحفِّزك هنا لترى إن كان يفعل ما تريده. ما عليك "
+"سوى إدخال بعض النص وانظر ماذا يحدث."
+
+#: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
+#: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
+#: plugins/scripting/cscripteditor.cpp:86
+#, kde-format
+msgid "&Options"
+msgstr "&خيارات"
+
+#: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
+#, kde-format
+msgid "Whole words only"
+msgstr "كلمات كاملة فقط"
+
+#: kmuddy/ctriggereditor.cpp:252
+#, kde-format
+msgid ""
+"When enabled, this trigger will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"عند التمكين، يُطابِق هذا المُحفِّز النص فقط إذا كانت هناك مسافات أو لا شيء قبل/"
+"بعد السلسلة المطابقة."
+
+#: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
+#, kde-format
+msgid "Case sensitive"
+msgstr "حسّاس لحالة الأحرف"
+
+#: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:185
+#, kde-format
+msgid ""
+"When this option is on, upper case and lower case letters are treated as "
+"different characters, otherwise they're considered to be the same."
+msgstr ""
+"عند تشغيل هذا الخيار، تُعامَل الأحرف الكبيرة والصغيرة كأحرف مختلفة، وإلا فإنها "
+"تُعتَبَر متماثلة."
+
+#: kmuddy/ctriggereditor.cpp:260
+#, kde-format
+msgid "Show but do not send"
+msgstr "اعرض ولكن لا تُرسِل"
+
+#: kmuddy/ctriggereditor.cpp:261
+#, kde-format
+msgid ""
+"When enabled, the text will not be sent to the MUD, it will only be "
+"displayed on the screen."
+msgstr "عند التمكين، لا يُرسَل النص إلى MUD، بل يُعرَض على الشاشة فقط."
+
+#: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
+#, kde-format
+msgid "Global matching"
+msgstr "مطابقة عامة"
+
+#: kmuddy/ctriggereditor.cpp:265
+#, kde-format
+msgid ""
+"<p>With global matching, one trigger/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it's "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition does not terminate scanning, so you can use this to highlight "
+"names from a list (using the condition to check if a match is in the list), "
+"or something like that."
+msgstr ""
+"<p>مع المطابقة العامة، يُمكِن لمُحفِّز/مُحفِّز واحد أن يُطابِق عدة مرات، إذا احتوى على "
+"النمط أكثر من مرة. على سبيل المثال، إذا كان النمط 'abc'، فإنه يُطابِق مرة "
+"واحدة فقط على 'abcdabcd' إذا كانت المطابقة العامة مُعطَّلة، ولكن مرتين إذا كانت "
+"مُفَعَّلة. لكل مطابقة، تُنفَّذ الإجراءات المطلوبة - لذا يُمكِن إرسال الأوامر عدة "
+"مرات، مرة لكل مطابقة.</p><p>لاحظ أن فشل الشرط لا يُنهِي المسح، لذا يُمكِنك "
+"استخدام هذا لتظليل الأسماء من قائمة (باستخدام الشرط للتحقق مما إذا كانت "
+"المطابقة في القائمة)، أو ما شابه."
+
+#: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
+#, kde-format
+msgid "Continue matching"
+msgstr "واصِل المطابقة"
+
+#: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
+#, kde-format
+msgid "Stop matching"
+msgstr "أوقِف المطابقة"
+
+#: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
+#, kde-format
+msgid "Leave group"
+msgstr "غادِر المجموعة"
+
+#: kmuddy/ctriggereditor.cpp:315
+#, kde-format
+msgid "&Enable color replacement"
+msgstr "&مكِّن استبدال اللون"
+
+#: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
+#, kde-format
+msgid "Color replacement"
+msgstr "استبدال اللون"
+
+#: kmuddy/ctriggereditor.cpp:339
+#, kde-format
+msgid "&Add"
+msgstr "أ&ضف"
+
+#: kmuddy/ctriggereditor.cpp:340
+#, kde-format
+msgid "&Remove"
+msgstr "أ&زل"
+
+#: kmuddy/ctriggereditor.cpp:341
+#, kde-format
+msgid "&Colorize"
+msgstr "لوّ&ن"
+
+#: kmuddy/ctriggereditor.cpp:343
+#, kde-format
+msgid "&Foreground"
+msgstr "الأ&ماميّة"
+
+#: kmuddy/ctriggereditor.cpp:345
+#, kde-format
+msgid "&Background"
+msgstr "الخ&لفيّة"
+
+#: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
+#, kde-format
+msgid "&Back-reference"
+msgstr "&مرجع خلفي"
+
+#: kmuddy/ctriggereditor.cpp:364
+#, kde-format
+msgid "Type"
+msgstr "النوع"
+
+#: kmuddy/ctriggereditor.cpp:364
+#, kde-format
+msgid "Foreground"
+msgstr "واجهة"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
+#: kmuddy/ctriggereditor.cpp:364 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
+#, kde-format
+msgid "Background"
+msgstr "الخلفيّة"
+
+#: kmuddy/ctriggereditor.cpp:386
+#, kde-format
+msgid "Text &rewrite trigger"
+msgstr "مُحفِّز إعادة &كتابة النص"
+
+#: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
+#, kde-format
+msgid "Rewrite text"
+msgstr "أعِد كتابة النص"
+
+#: kmuddy/ctriggereditor.cpp:393
+#, kde-format
+msgid "&Change this part of line:"
+msgstr "&غيِّر هذا الجزء من السطر:"
+
+#: kmuddy/ctriggereditor.cpp:401
+#, kde-format
+msgid "&To this value:"
+msgstr "&إلى هذه القيمة:"
+
+#: kmuddy/ctriggereditor.cpp:426
+#, kde-format
+msgid "Do not show (&gag) the line"
+msgstr "لا تعرض (&أخفِ) السطر"
+
+#: kmuddy/ctriggereditor.cpp:427
+#, kde-format
+msgid ""
+"This will prevent the matched line from being displayed in the output window."
+msgstr "يمنع هذا عرض السطر المطابق في نافذة الإخراج."
+
+#: kmuddy/ctriggereditor.cpp:429
+#, kde-format
+msgid "&Notify"
+msgstr "أ&خطر"
+
+#: kmuddy/ctriggereditor.cpp:430
+#, kde-format
+msgid ""
+"This setting only takes effect if you have disabled the \"Always notify\" "
+"option in Global settings and at least one of global/local notification is "
+"enabled. It will activate notification if the KMuddy window and/or this "
+"session is not active at the moment.\n"
+"Useful if you only want to be notified of some events (tells, combat, ...)."
+msgstr ""
+"يصبح هذا الإعداد ساري المفعول فقط إذا عطّلت خيار \"أبلِغ دائمًا\" في الإعدادات "
+"العامة ومكّنت إحدى إشعارات الإبلاغ العامة أو المحلية على الأقل. يُنشِّط الإبلاغ "
+"إذا لم تكن نافذة كمدي و/أو هذه الجلسة نشطة في الوقت الحالي.\n"
+"مفيد إذا أردت الإبلاغ ببعض الأحداث فقط (رسائل خاصة، قتال، ...)."
+
+#: kmuddy/ctriggereditor.cpp:437
+#, kde-format
+msgid "&Prompt-detection trigger"
+msgstr "مُحفِّز &كشف الموجه"
+
+#: kmuddy/ctriggereditor.cpp:438
+#, kde-format
+msgid ""
+"Enabling this will turn this trigger into a prompt detection trigger, that "
+"is, text will be passed to these triggers even if no newline was received, "
+"the text will be displayed as a prompt if the trigger gets matched, and most "
+"other options will NOT be taken into effect - prompt-detect trigger cannot "
+"send out text, gag lines, do notification. Colorization is still possible."
+msgstr ""
+"يُحوِّل التمكين هذا المُحفِّز إلى مُحفِّز كشف الموجه، أي أن النص يُمرَّر إلى هذه "
+"المُحفِّزات حتى لو لَم يُستَلَم سطر جديد، ويُعرَض النص كموجه إذا طُوبِق المُحفِّز، ومعظم "
+"الخيارات الأخرى لا تُطبَّق - لا يُمكِن لمُحفِّز كشف الموجه إرسال نص، أو إخفاء أسطر، "
+"أو الإبلاغ. يظل التلوين ممكنًا."
+
+#: kmuddy/ctriggereditor.cpp:444
+#, kde-format
+msgid "Play s&ound file"
+msgstr "&شغّل ملفًّا صوتيًّا"
+
+#: kmuddy/ctriggereditor.cpp:445
+#, kde-format
+msgid ""
+"This trigger will play a sound. Useful as a notification of important "
+"events, or to assign sounds to some events."
+msgstr ""
+"يُشغِّل هذا المُحفِّز صوتًا. مفيد للإبلاغ بالأحداث الهامة، أو لتعيين أصوات لبعض "
+"الأحداث."
+
+#: kmuddy/ctriggereditor.cpp:464
+#, kde-format
+msgid "Send output to a separate window"
+msgstr "أرسِل الإخراج إلى نافذة منفصلة"
+
+#: kmuddy/ctriggereditor.cpp:465
+#, kde-format
+msgid "This will send the matched text to a separate output window"
+msgstr "يُرسِل هذا النص المطابق إلى نافذة إخراج منفصلة"
+
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
+#, kde-format
+msgid "Output Windows"
+msgstr "نوافذ الإخراج"
+
+#: kmuddy/ctriggereditor.cpp:478
+#, kde-format
+msgid "&Gag output in main window"
+msgstr "&أخفِ الإخراج في النافذة الرئيسية"
+
+#: kmuddy/ctriggereditor.cpp:479
+#, kde-format
+msgid ""
+"This will cause output sent to a separate window not to be displayed in main "
+"KMuddy session window"
+msgstr ""
+"يَتسبَّب هذا في عدم عرض الإخراج المُرسَل إلى نافذة منفصلة في نافذة جلسة كمدي "
+"الرئيسية"
+
+#: kmuddy/ctriggereditor.cpp:482
+#, kde-format
+msgid "&Window name"
+msgstr "&اسم النافذة"
+
+#: kmuddy/ctriggereditor.cpp:486
+#, kde-format
+msgid "&Create window"
+msgstr "&أنشئ نافذة"
+
+#: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
+#, kde-format
+msgid "&Basic"
+msgstr "أ&ساسي"
+
+#: kmuddy/ctriggereditor.cpp:516
+#, kde-format
+msgid "Special trigger"
+msgstr "مُحفِّز خاص"
+
+#: kmuddy/ctriggereditor.cpp:517
+#, kde-format
+msgid "Output windows"
+msgstr "نوافذ الإخراج"
+
+#: kmuddy/ctriggereditor.cpp:547
+#, kde-format
+msgid "This text did not match your trigger."
+msgstr "لم يُطابِق هذا النص مُحفِّزك."
+
+#: kmuddy/ctriggereditor.cpp:552
+#, kde-format
+msgid "This text matches your trigger."
+msgstr "يُطابِق هذا النص مُحفِّزك."
+
+#: kmuddy/ctriggereditor.cpp:580
+#, kde-format
+msgid "Maximum number of colorizations reached."
+msgstr "الوصول إلى الحد الأقصى لعدد التلوينات."
+
+#: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
+#, kde-format
+msgid "Unknown"
+msgstr "مجهول"
+
+#: kmuddy/ctriggereditor.cpp:684
+#, kde-format
+msgid "Choose sound file"
+msgstr "اختر ملف صوت"
+
+#: kmuddy/ctriggereditor.cpp:703
+#, kde-format
+msgid "Window name is empty!"
+msgstr "اسم النافذة فارغ!"
+
+#: kmuddy/dialogs/cdirlist.cpp:35
+#, kde-format
+msgid "&Add..."
+msgstr "أ&ضف..."
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
+#: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
+#: libs/clistviewer.cpp:168 plugins/mapper/cmapclipboard.cpp:76
+#: plugins/mapper/cmapview.cpp:606 plugins/mapper/cmapview.cpp:622
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
+#, kde-format
+msgid "Delete"
+msgstr "احذف"
+
+#: kmuddy/dialogs/cdirlist.cpp:37
+#, kde-format
+msgid "Move &up"
+msgstr "ا&نقل لأعلى"
+
+#: kmuddy/dialogs/cdirlist.cpp:38
+#, kde-format
+msgid "Move &down"
+msgstr "انقل لأ&سفل"
+
+#: kmuddy/dialogs/cdirlist.cpp:72
+#, kde-format
+msgid "Choose sound directory"
+msgstr "اختر دليل الصوت"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:77
+#, kde-format
+msgid "Application settings"
+msgstr "إعدادات التطبيق"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:84
+#, kde-format
+msgid "Window"
+msgstr "النافذة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:87
+#, kde-format
+msgid "Output area"
+msgstr "منطقة الإخراج"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:90
+#, kde-format
+msgid "Font"
+msgstr "الخط"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:93
+#, kde-format
+msgid "Input line"
+msgstr "سطر الإدخال"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:96
+#, kde-format
+msgid "Colors"
+msgstr "الألوان"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:99
+#, kde-format
+msgid "Strings"
+msgstr "السّلاسل"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:102
+#, kde-format
+msgid "Sounds"
+msgstr "أصوات"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:105
+#, kde-format
+msgid "Shortcuts"
+msgstr "الاختصارات"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:111
+#, kde-format
+msgid "S&how the tab bar even if not needed"
+msgstr "&اعرض شريط الألسنة حتى لو لم يكن ضروريًا"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:112
+#, kde-format
+msgid ""
+"If this is checked, the tab bar will always be shown. Otherwise, it will be "
+"hidden if it contains only one tab."
+msgstr ""
+"إذا حُدِّد هذا، يُعرَض شريط الألسنة دائمًا. وإلا، يُخفَى إذا كان يحتوي على لسان واحد "
+"فقط."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:115
+#, kde-format
+msgid "Show au&xiliary input line"
+msgstr "اعرض سطر الإدخال &المساعد"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:116
+#, kde-format
+msgid "You will have two input lines instead of one."
+msgstr "يَحصُل لديك سطرا إدخال بدلاً من واحد."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:118
+#, kde-format
+msgid "&Always notify"
+msgstr "&أبلِغ دائمًا"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:119
+#, kde-format
+msgid ""
+"If this is checked, output notification will be used whenever some text "
+"comes from the server. Otherwise, it will only be used when a notification "
+"trigger is activated. Note that this option only takes effect if global or "
+"local notification is enabled."
+msgstr ""
+"إذا حُدِّد هذا، يُستخدَم إبلاغ الإخراج كلما ورد نص من الخادم. وإلا، يُستخدَم فقط "
+"عند تنشيط مُحفِّز إبلاغ. لاحظ أن هذا الخيار يصبح ساري المفعول فقط إذا مُكِّن "
+"الإبلاغ العام أو المحلي."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:124
+#, kde-format
+msgid "&Global notification"
+msgstr "الإبلاغ ال&عام"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:125
+#, kde-format
+msgid ""
+"When some text comes from the server and KMuddy is not currently active, "
+"window caption and the taskbar will try to attract your attention (some "
+"characters will blink there)."
+msgstr ""
+"عندما يأتي نص من الخادم وكمدي ليس نشطًا حاليًا، تُحاول لصيقة النافذة وشريط "
+"المهام لفت انتباهك (بعض الأحرف تومض هناك)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:129
+#, kde-format
+msgid "&Local notification"
+msgstr "الإبلاغ &المحلي"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:130
+#, kde-format
+msgid ""
+"When some text comes from the server and this session is not currently "
+"active, its tab will try to attract your attention (some characters will "
+"blink there)."
+msgstr ""
+"عندما يأتي نص من الخادم وهذه الجلسة ليست نشطة حاليًا، يُحاول لسانها لفت "
+"انتباهك (بعض الأحرف تومض هناك)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:135
+#, kde-format
+msgid "Display system tray icon"
+msgstr "عطّل أيقونة صينية النظام"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:136
+#, kde-format
+msgid ""
+"This option toggles the presence of the system tray icon. The icon can be "
+"used to hide the application window without taking up space in the taskbar. "
+"You can click on the icon to hide the window and then click again to restore "
+"it. Your connection will remain active even if the window is hidden and you "
+"will still receive notification messages. "
+msgstr ""
+"يُبدِّل هذا الخيار وجود أيقونة صينية النظام. يُمكِن استخدام الأيقونة لإخفاء نافذة "
+"التطبيق دون شغل مساحة في شريط المهام. يُمكِنك النقر على الأيقونة لإخفاء "
+"النافذة ثم النقر مرة أخرى لاستعادتها. يظل اتصالك نشطًا حتى لو أُخفِيَت النافذة "
+"وتستمر في استلام رسائل الإبلاغ. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:144
+#, kde-format
+msgid "Use passive popups"
+msgstr "استخدِم النوافذ المنبثقة السلبية"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:145
+#, kde-format
+msgid ""
+"This option toggles the use of passive popups. Passive popups appear near "
+"the system tray icon when you are in another window and alert you to the "
+"presence of activity in one of your connections. "
+msgstr ""
+"يُبدِّل هذا الخيار استخدام النوافذ المنبثقة السلبية. تظهر النوافذ المنبثقة "
+"السلبية بالقرب من أيقونة صينية النظام عندما تكون في نافذة أخرى وتُنبهك إلى "
+"وجود نشاط في أحد اتصالاتك. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:151
+#, kde-format
+msgid "Auto-connect on startup"
+msgstr "اتصال آلي عند البدء"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:152
+#, kde-format
+msgid ""
+"With this option set, the selected connection will be automatically "
+"initiated immediately after starting KMuddy. Handy when you connect using "
+"one profile most of the time."
+msgstr ""
+"مع ضبط هذا الخيار، يُبدأ الاتصال المختار آليًا مباشرة بعد بدء كمدي. مفيد عندما "
+"تتصل باستخدام تشكيلة واحدة معظم الوقت."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:155
+#, kde-format
+msgid "Auto-connect to:"
+msgstr "اتصال آلي بـ:"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:193
+#, kde-format
+msgid "Default &background color"
+msgstr "لون الخلفية المبدئي"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:196
+#, kde-format
+msgid "This color will be used as a standard background color."
+msgstr "يُستخدَم هذا اللون كلون خلفية قياسي."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:198
+#, kde-format
+msgid "Default &text color"
+msgstr "لون النص &المبدئي"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:201
+#, kde-format
+msgid "This color will be used to display standard text with no defined color."
+msgstr "يُستخدَم هذا اللون لعرض النص القياسي بدون لون محدد."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:203
+#, kde-format
+msgid "Command &echo color"
+msgstr "لون صدى ال&أمر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:206
+#, kde-format
+msgid "This color will be used to display commands that you have entered."
+msgstr "يُستخدَم هذا اللون لعرض الأوامر التي أدخلتها."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:208
+#, kde-format
+msgid "&System message color"
+msgstr "لون رسالة ال&نظام"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:211
+#, kde-format
+msgid "This color will be used for various system messages."
+msgstr "يُستخدَم هذا اللون لرسائل النظام المتنوعة."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:236
+#, kde-format
+msgid "&Indentation"
+msgstr "ال&إزاحة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:236
+#, kde-format
+msgid "None"
+msgstr "لا شيء"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:237
+#, kde-format
+msgid ""
+"When a line is too long, part of it will be moved to the next line. "
+"Indentation says how many spaces will be put to the beginning of the "
+"continued line."
+msgstr ""
+"عندما يكون السطر طويلاً جدًا، يُنقَل جزء منه إلى السطر التالي. تشير المسافة "
+"البادئة إلى عدد المسافات التي تُوضَع في بداية السطر المستمر."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:241
+#, kde-format
+msgid "&History buffer size"
+msgstr "حجم خبيئة ال&سجل"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:241
+#, kde-format
+msgid ""
+"Size of output scroll-back buffer. Please note that this setting will only "
+"affect new connections, existing ones will keep their history setting."
+msgstr ""
+"حجم خبيئة التمرير الخلفي للإخراج. يُرجَى ملاحظة أن هذا الإعداد يؤثر فقط على "
+"الاتصالات الجديدة، وتبقى الاتصالات الحالية على إعداد سجلها."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:244
+#, kde-format
+msgid "lines"
+msgstr "أسطر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:247
+#, kde-format
+msgid "Enable co&mmand echo"
+msgstr "مكِّن صدى ال&أمر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:248
+#, kde-format
+msgid ""
+"Enables displaying of commands in the console.<p><b>Please note:</b> This "
+"will also disable command echo in session transcript."
+msgstr ""
+"يُمكِّن عرض الأوامر في الطرفية.<p><b>يُرجَى ملاحظة:</b> يُعطِّل هذا أيضًا صدى الأمر "
+"في نص الجلسة."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:251
+#, kde-format
+msgid "Enable s&ystem messages"
+msgstr "مكِّن رسائل ال&نظام"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:252
+#, kde-format
+msgid "Enables displaying of system messages in the console."
+msgstr "يُمكِّن عرض رسائل النظام في الطرفية."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:255
+#, kde-format
+msgid "Enable b&linking"
+msgstr "مكِّن ال&وميض"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:256
+#, kde-format
+msgid "Enables support for blinking. Currently not supported."
+msgstr "يُمكِّن دعم الوميض. غير مدعوم حاليًا."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:272
+#, kde-format
+msgid "&Server output"
+msgstr "إخراج ال&خادم"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:275 kmuddy/dialogs/dlgappsettings.cpp:285
+#: kmuddy/dialogs/dlgappsettings.cpp:295
+#, kde-format
+msgid "Choose..."
+msgstr "اختر..."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:278
+#, kde-format
+msgid "Here you can select a font that will be used for main display."
+msgstr "هنا يُمكِنك اختيار خط يُستخدَم للعرض الرئيسي."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:282
+#, kde-format
+msgid "&Input line"
+msgstr "&سطر الإدخال"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:288
+#, kde-format
+msgid "Here you can select a font that will be used for the input line."
+msgstr "هنا يُمكِنك اختيار خط يُستخدَم لسطر الإدخال."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:292
+#, kde-format
+msgid "&Multi-line input"
+msgstr "إدخال متعدد ال&أسطر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:298
+#, kde-format
+msgid ""
+"Here you can select a font that will be used for the multi-line input window."
+msgstr "هنا يُمكِنك اختيار خط يُستخدَم لنافذة الإدخال متعدد الأسطر."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:317
+#, kde-format
+msgid "&Keep sent text"
+msgstr "&ابْقِ النص المُرسَل"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:318
+#, kde-format
+msgid ""
+"If you enable this option, commands will remain in the input line after you "
+"send them (by pressing ENTER); otherwise it will be cleared."
+msgstr ""
+"إذا مكّنت هذا الخيار، تبقى الأوامر في سطر الإدخال بعد إرسالها (بالضغط على "
+"ENTER)؛ وإلا يُمسَح."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:321
+#, kde-format
+msgid "&Select kept text after it's sent"
+msgstr "&اختر النص المُبقى بعد إرساله"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:322
+#, kde-format
+msgid ""
+"If you enable this option, entered command will be selected. This allows you "
+"to immediately type another command without deleting the old one and still "
+"be able to reuse previous command easily."
+msgstr ""
+"إذا مكّنت هذا الخيار، يُختار الأمر المُدخَل. يُمكِنك هذا من كتابة أمر آخر فورًا دون "
+"حذف القديم، وتظل قادرًا على إعادة استخدام الأمر السابق بسهولة."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:327
+#, kde-format
+msgid "&Cursor keys browse history"
+msgstr "مفاتيح ال&مؤشر تستعرض السجل"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:328
+#, kde-format
+msgid ""
+"If you enable this option, you will be able to choose previously entered "
+"commands with Up and Down keys."
+msgstr ""
+"إذا مكّنت هذا الخيار، تستطيع اختيار الأوامر المُدخَلة سابقًا بمفتاحي أعلى وأسفل."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:330
+#, kde-format
+msgid "Telnet-style &paste"
+msgstr "&لصق بنمط تلنت"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:331
+#, kde-format
+msgid ""
+"Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
+"but the last are sent as commands immediately."
+msgstr ""
+"يُمكِّن اللصق بنمط تلنت، أي إذا لُصِق نص متعدد الأسطر، تُرسَل كل الأسطر ما عدا "
+"الأخير كأوامر فورًا."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:334
+#, kde-format
+msgid "T&rim spaces"
+msgstr "&اقطُع المسافات"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:335
+#, kde-format
+msgid ""
+"Enables trimming of spaces from commands. Note that with this option "
+"disabled, you should avoid including spaces when typing multiple commands on "
+"one line, or you will encounter problems with special sequences not being "
+"detected properly."
+msgstr ""
+"يُمكِّن قطع المسافات من الأوامر. لاحظ أنه مع تعطيل هذا الخيار، ينبغي لك تجنُّب "
+"تضمين المسافات عند كتابة أوامر متعددة على سطر واحد، وإلا ستواجه مشاكل في عدم "
+"اكتشاف التسلسلات الخاصة بشكل صحيح."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:340
+#, kde-format
+msgid "Enable &auto-completion"
+msgstr "فعّل الإكمال الآ&ليّ"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:341
+#, kde-format
+msgid ""
+"Auto-completion is a feature that offers you possible completions for "
+"commands, as you type them. It can also finish the command for you."
+msgstr ""
+"الإكمال الآلي ميزة تُقدِّم لك إكمالات ممكنة للأوامر أثناء كتابتها. يُمكِنها أيضًا "
+"إنهاء الأمر لك."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:349
+#, kde-format
+msgid "T&ype of auto-completion"
+msgstr "ن&وع الإكمال الآلي"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:351
+#, kde-format
+msgid "Auto-fill"
+msgstr "تعبئة آ&لية"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:352
+#, kde-format
+msgid "Shortest-match auto-fill"
+msgstr "تعبئة آ&لية بأقصر مطابقة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:353
+#, kde-format
+msgid "Popup list-box"
+msgstr "قائمة مُنبثقة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:357
+#, kde-format
+msgid "&Background color"
+msgstr "&لون الخلفيّة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:360
+#, kde-format
+msgid "Background color of the input line"
+msgstr "لون خلفية سطر الإدخال"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:362
+#, kde-format
+msgid "&Text color"
+msgstr "لون ال&نصّ"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:365
+#, kde-format
+msgid "Color of text that you type in the input line."
+msgstr "لون النص الذي تكتبه في سطر الإدخال."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:381
+#, kde-format
+msgid "S&wap ENTER and CTRL+ENTER for multi-line"
+msgstr "&ابْدِل ENTER و CTRL+ENTER للإدخال متعدد الأسطر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:382
+#, kde-format
+msgid ""
+"When turned off, CTRL+ENTER will insert another line in the multi-line input "
+"line, and ENTER will send commands to the server. If turned on, then the "
+"behaviour of these keys gets swapped."
+msgstr ""
+"عند الإيقاف، تُدرِج CTRL+ENTER سطرًا آخر في سطر الإدخال متعدد الأسطر، وENTER "
+"تُرسِل الأوامر إلى الخادم. إذا شُغِّل، يُبدَّل سلوك هذه المفاتيح."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:400
+#, kde-format
+msgid "Dark colors"
+msgstr "ألوان داكنة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:401
+#, kde-format
+msgid "Bright colors"
+msgstr "ألوان ساطعة"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:427
+#, kde-format
+msgid "&Command separator string"
+msgstr "سلسلة فاصل ال&أوامر"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:430
+#, kde-format
+msgid ""
+"You can enter multiple commands at once, they will get executed together. "
+"Here you can enter string that can be used to separate individual commands."
+msgstr ""
+"يُمكِنك إدخال أوامر متعددة في وقت واحد، تُنفَّذ معًا. هنا يُمكِنك إدخال سلسلة تُستخدَم "
+"لفصل الأوامر الفردية."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:434
+#, kde-format
+msgid "&Speed-walk string"
+msgstr "سلسلة &المشي السريع"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:437
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"speed-walking. Every character is treated as one command: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Commands that will be sent for each "
+"direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
+"connections only)."
+msgstr ""
+"إذا بدأت أمرًا بهذه السلسلة، يُفسَّر الأمر على أنه مشي سريع. يُعامَل كل حرف كأمر "
+"واحد: n، s، w، e، j(=ne)، k(=se)، l(=sw)، m(=nw)، u، d.<p>يُمكِن ضبط الأوامر "
+"التي تُرسَل لكل اتجاه في <i>تفضيلات MUD</i> (للاتصالات <b>القائمة على "
+"التشكيلة</b> فقط)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:443
+#, kde-format
+msgid "S&peed-walk even if empty"
+msgstr "م&شي سريع حتى لو كان فارغًا"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:444
+#, kde-format
+msgid ""
+"Enabling this will cause KMuddy to expand speed-walk strings even if no "
+"speed-walk string has been given. This allows faster speed-walking, but keep "
+"in mind that EVERY command that consists only of valid speed-walk characters "
+"(news, for example) will be treated as speed-walking. To avoid this, you'll "
+"have to type at least one character in upper-case."
+msgstr ""
+"يَتسبَّب تمكين هذا في توسيع كمدي لسلاسل المشي السريع حتى لو لَم تُعطَ سلسلة مشي "
+"سريع. يتيح هذا مشيًا سريعًا أسرع، ولكن تذكر أن كُل أمر يتكون فقط من أحرف مشي "
+"سريع صالحة (مثل news) يُعامَل كمشي سريع. لتجنُّب هذا، اكتب حرفًا واحدًا على الأقل "
+"بحرف كبير."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:451
+#, kde-format
+msgid "Macro-ca&ll string"
+msgstr "سلسلة استدعاء ال&ماكرو"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:454
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
+"(/exec calls external scripts)"
+msgstr ""
+"إذا بدأت أمرًا بهذه السلسلة، يُفسَّر الأمر على أنه استدعاء ماكرو.<br>الصيغة هي "
+"&lt;هذه السلسلة&gt; &lt;الأمر&gt; [المعاملات]  (/exec يستدعي سكربتات خارجية)"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:459
+#, kde-format
+msgid "&Repeater string"
+msgstr "سلسلة ال&تكرار"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:462
+#, kde-format
+msgid ""
+"Allows you to repeat some command. For example, typing <i>#10 say hello</i> "
+"sends that command 10 times. <br>Note that this also works with aliases and "
+"macro execution.<br>Repeater and number may be separated by a space (spaces)."
+msgstr ""
+"يَسمَح لك بتكرار أمر ما. على سبيل المثال، كتابة <i>#10 say hello</i> تُرسِل هذا "
+"الأمر 10 مرات. <br>لاحظ أن هذا يعمل أيضًا مع الألقاب وتنفيذ الماكرو. <br>يُمكِن "
+"فصل المكرِّر والرقم بمسافة (مسافات)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:468
+#, kde-format
+msgid "&Focus string"
+msgstr "سلسلة ال&تركيز"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:471
+#, kde-format
+msgid ""
+"If a command is started with this string, the command will be interpreted as "
+"a command-focus-call. This will allow you to send commands to other "
+"connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
+"this string&gt; &lt;command&gt;"
+msgstr ""
+"إذا بُدِئ أمر بهذه السلسلة، يُفسَّر الأمر على أنه استدعاء تركيز أمر. يُمكِنك هذا من "
+"إرسال أوامر إلى الأحرف المتصلة الأخرى.<br>الصيغة هي &lt;هذه السلسلة&gt; &lt;"
+"لسان التركيز&gt; &lt;هذه السلسلة&gt; &lt;الأمر&gt;"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:477
+#, kde-format
+msgid "Send &as-is"
+msgstr "أ&رسلها هكذا"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:480
+#, kde-format
+msgid ""
+"If a command is started with this string, it will be sent as-is, without any "
+"parsing. This string will be removed first."
+msgstr ""
+"إذا بُدِئ أمر بهذه السلسلة، يُرسَل كما هو، دون أي تحليل. تُزال هذه السلسلة أولاً."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:484
+#, kde-format
+msgid "&Expand backslashes"
+msgstr "&وسِّع الشرطات المائلة العكسية"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:485
+#, kde-format
+msgid ""
+"This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
+"TAB, \\\\ is \\, \\<anything else> means <anything else>."
+msgstr ""
+"يُمكِّن هذا توسيع الشرطة المائلة العكسية، أي: \\n نهاية سطر، \\t علامة جدولة، \\"
+"\\ شرطة مائلة عكسية، \\<أي شيء آخر> يعني <أي شيء آخر>."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:509
+#, kde-format
+msgid "&Enable sounds globally"
+msgstr "&مكِّن الأصوات عالميًا"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:510
+#, kde-format
+msgid ""
+"<qt>Enable playing sounds for all connections.\n"
+"Note that you can override this setting in MUD Preferences dialog.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol).</qt>"
+msgstr ""
+"<qt>مكِّن تشغيل الأصوات لجميع الاتصالات.\n"
+"لاحظ أنه يُمكِنك تجاوز هذا الإعداد في حوار تفضيلات MUD.\n"
+"لاحظ أيضًا أن هذا يعمل فقط إذا كان MUD الخاص بك يدعم <b>MSP</b> (بروتوكول صوت "
+"MUD).</qt>"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:514
+#, kde-format
+msgid "Allow &downloading sounds"
+msgstr "اسْمح ب&تنزيل الأصوات"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:516
+#, kde-format
+msgid ""
+"MSP version 0.3 supports downloading of sound files directly from the web or "
+"FTP. You can enable this functionality here. Note that every sound will only "
+"be downloaded once. The downloaded files are stored in your homedir in "
+"directory\n"
+msgstr ""
+"يدعم الإصدار 0.3 من MSP تنزيل ملفات الصوت مباشرة من الويب أو FTP. يُمكِنك "
+"تمكين هذه الوظيفة هنا. لاحظ أن كل صوت يُنزَّل مرة واحدة فقط. الملفات المنزلة "
+"تُخزَّن في دليلك الرئيسي في الدليل\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkBold)
+#: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
+#: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
+#: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
+#, kde-format
+msgid "Bold"
+msgstr "ثخين"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalic)
+#: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
+#: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
+#: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
+#, kde-format
+msgid "Italic"
+msgstr "مائل"
+
+#: kmuddy/dialogs/dlgconnect.cpp:40
+#, kde-format
+msgid "Connect"
+msgstr "اتّصل"
+
+#: kmuddy/dialogs/dlgconnect.cpp:57
+#, kde-format
+msgid ""
+"This list shows currently defined profiles.<p><b>Profiles</b> allow you to "
+"speed up connecting to your MUD, as well as to use more advanced features "
+"like <i>aliases</i> or <i>triggers</i>."
+msgstr ""
+"تَعرض هذه القائمة التشكيلات المضبوطة حاليًا.<p>تَسمَح لك &lt;b&gt;التشكيلات&lt;/"
+"b&gt; بتسريع الاتصال بـ MUD الخاص بك، وكذلك استخدام ميزات أكثر تقدمًا مثل "
+"<i>الألقاب</i> أو <i>المُحفِّزات</i>."
+
+#: kmuddy/dialogs/dlgconnect.cpp:64
+#, kde-format
+msgid "&New profile"
+msgstr "&حساب جديد"
+
+#: kmuddy/dialogs/dlgconnect.cpp:65
+#, kde-format
+msgid "&Modify profile"
+msgstr "&عدّل التشكيلة"
+
+#: kmuddy/dialogs/dlgconnect.cpp:66
+#, kde-format
+msgid "&Delete profile"
+msgstr "ا&حذف التشكيلة"
+
+#: kmuddy/dialogs/dlgconnect.cpp:67
+#, kde-format
+msgid "&Duplicate profile"
+msgstr "ا&نسخ التشكيلة"
+
+#: kmuddy/dialogs/dlgconnect.cpp:73
+#, kde-format
+msgid "Do not &send login sequence"
+msgstr "لا &تُرسِل تسلسل تسجيل الدخول"
+
+#: kmuddy/dialogs/dlgconnect.cpp:74
+#, kde-format
+msgid ""
+"Login sequence won't be sent for this connect. Useful when you're creating a "
+"new character and you want to use QuickConnect for some reason."
+msgstr ""
+"لا يُرسَل تسلسل تسجيل الدخول لهذا الاتصال. مفيد عندما تُنشِئ حرفًا جديدًا وتريد "
+"استخدام الاتصال السريع لسبب ما."
+
+#: kmuddy/dialogs/dlgconnect.cpp:79
+#, kde-format
+msgid "&Offline editing"
+msgstr "&تحرير بلا إنترنت"
+
+#: kmuddy/dialogs/dlgconnect.cpp:80
+#, kde-format
+msgid "This allows offline editing of profiles."
+msgstr "يَسمَح هذا بتحرير التشكيلات دون اتصال."
+
+#: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
+#, kde-format
+msgid "&Connect"
+msgstr "ا&تّصل"
+
+#: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
+#, kde-format
+msgid "Establishes connection with specified parameters."
+msgstr "يُنشِئ اتصالاً بالمعاملات المحددة."
+
+#: kmuddy/dialogs/dlgconnect.cpp:89
+#, kde-format
+msgid "C&lose"
+msgstr "أ&غلق"
+
+#: kmuddy/dialogs/dlgconnect.cpp:90
+#, kde-format
+msgid "Closes this dialog box without connecting."
+msgstr "يُغلِق صندوق الحوار هذا دون اتصال."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid ""
+"This profile cannot be deleted, because you have a connection open using "
+"this profile."
+msgstr "لا تستطع حذف هذه التشكيلة، لأن عندك اتصالاً مفتوحاً يستعمل هذه التشكيلة."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid "Unable to delete"
+msgstr "لا يُمْكِن حَذْف"
+
+#: kmuddy/dialogs/dlgconnect.cpp:239
+#, kde-format
+msgid "Do you really want to delete profile %1?"
+msgstr "هل تريد حقًّا حذف التشكيلة '%1'؟"
+
+#: kmuddy/dialogs/dlgconnect.cpp:239
+#, kde-format
+msgid "Delete profile"
+msgstr "احذف التشكيلة"
+
+#: kmuddy/dialogs/dlgconnect.cpp:255
+#, kde-format
+msgid "Duplicate Profile"
+msgstr "تشكيلة مكررة"
+
+#: kmuddy/dialogs/dlgconnect.cpp:255
+#, kde-format
+msgid "Please enter name for the duplicated profile"
+msgstr "أدخل اسماً للتشكيلة المكررة من فضلك"
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid ""
+"There was an error trying to duplicate the profile. Please ensure that you "
+"have write access to the profile directory."
+msgstr ""
+"حدث خطأ أثناء محاولة استنساخ التشكيلة. يرجى التأكد من أن لديك حق الوصول "
+"للكتابة إلى دليل التشكيلة."
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid "Unable to duplicate"
+msgstr "العجز عن التكرار"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:38
+#, kde-format
+msgid "Dump output buffer"
+msgstr "تفريغ خبيئة المخرجات"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:44
+#, kde-format
+msgid "&Start at current position"
+msgstr "ابدأ من الموضع &الحالي"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:45
+#, kde-format
+msgid ""
+"When this is enabled, only the part of history buffer from currently "
+"displayed part up to the end of buffer will be dumped. Otherwise entire "
+"buffer will be dumped (default)."
+msgstr ""
+"عند تفعيل هذا، فقط جزء خبيئة الخط الزمني من الجزء المعروض حالياً حتى نهاية "
+"الخبيئة يُفرَّغ. وإلا تُفرَّغ الخبيئة بأكملها (مبدئي)."
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
+#, kde-format
+msgid "&File:"
+msgstr "&ملف:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
+#, kde-format
+msgid "&Browse..."
+msgstr "ت&صفّح..."
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:65
+#, kde-format
+msgid "&Dump format:"
+msgstr "صيغة &التفريغ:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:67
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:68
+#, kde-format
+msgid "Plain text"
+msgstr "نصّ صرف"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:69
+#, kde-format
+msgid "Text with ANSI colors"
+msgstr "نص بألوان أنسي"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:38 kmuddy/dialogs/dlgeditprofile.cpp:180
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
+#, kde-format
+msgid "Edit profile"
+msgstr "حرر التشكيلة"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:44
+#, kde-format
+msgid "Profile &name:"
+msgstr "ا&سم التّشكيلة:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:46
+#, kde-format
+msgid ""
+"Enter profile name here. You can enter any name, but it must be <b>unique</"
+"b>."
+msgstr ""
+"أدخل اسم التشكيلة هنا. تستطع إدخال أي اسم، ولكن يجب أن يكون <b>فريداً</b>."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:47
+#, kde-format
+msgid "&Server:"
+msgstr "ال&خادم: "
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:49
+#, kde-format
+msgid "Enter address of the server where your MUD is running."
+msgstr "أدخل عنوان الخادوم حيث يعمل مد الخاص بك."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
+#, kde-format
+msgid "&Port:"
+msgstr "ال&منفذ:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:54
+#, kde-format
+msgid "Enter port on which your MUD is running (usually some 4-digit number)."
+msgstr "أدخل المنفذ الذي يعمل عليه المد (عادة رقم من أربعة خانات)."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:55
+#, kde-format
+msgid "&Login name:"
+msgstr "ا&سم الولوج:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:57
+#, kde-format
+msgid ""
+"Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
+msgstr "أدخل اسم دخولك على المد هنا.<p><i>هذا الإعداد اختياري.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:58
+#, kde-format
+msgid "Pass&word:"
+msgstr "&كلمة السر:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:61
+#, kde-format
+msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
+msgstr "أدخل كلمة سرك على المد هنا.<p><i>هذا الإعداد اختياري.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:62
+#, kde-format
+msgctxt "Commands sent after connection is established"
+msgid "&Connect sequence"
+msgstr "تسلسل &الاتصال"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:66
+#, kde-format
+msgid ""
+"Commands to be sent to the MUD after logging in.<br><b>$name</b> expands to "
+"username.<br><b>$password</b> expands to your password.<p><b>Important:</b> "
+"these commands are sent exactly as you type them, with leading/trailing "
+"spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
+"lines will also be sent, including the very last line."
+msgstr ""
+"الأوامر التي تُرسَل إلى المد بعد الدخول.<br>تتوسع <b>$name</b> إلى اسم "
+"المستخدم.<br>تتوسع <b>$password</b> إلى كلمة سرك.<p><b>مهم:</b> تُرسَل هذه "
+"الأوامر تماماً كما كتبتها، مع حذف المسافات البادئة/الزائدة. لا توجد بدائل "
+"(أسماء مستعارة)، لا ماكروهات، لا مشي سريع. ولاحظ أيضاً أن الأسطر الفارغة أيضاً "
+"تُرسَل، بما في ذلك السطر الأخير جداً."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:180
+#, kde-format
+msgid "Profile name cannot be empty."
+msgstr "لا يمكن أن يكون اسم التشكيلة فارغاً."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
+#, kde-format
+msgid "Profile name cannot contain '/' character."
+msgstr "لا تستطع احتواء اسم التشكيلة على علامة '/'."
+
+#: kmuddy/dialogs/dlggrabkey.cpp:34
+#, kde-format
+msgid "Keygrabber"
+msgstr "التقاط المفاتيح"
+
+#: kmuddy/dialogs/dlggrabkey.cpp:37
+#, kde-format
+msgid "Press the desired shortcut..."
+msgstr "اضغط على الاختصار المطلوب..."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Import profile"
+msgstr "استورد تشكيلة"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Export profile"
+msgstr "تصدير التشكيلة"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:41
+#, kde-format
+msgid "&Profile name"
+msgstr "ا&سم التّشكيلة:"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:54
+#, kde-format
+msgid "&Import from"
+msgstr "استورد &من"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:55
+#, kde-format
+msgid "&Export to"
+msgstr "&صدّر إلى:"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:58
+#: kmuddy/dialogs/dlgprofilesettings.cpp:154
+#: kmuddy/dialogs/dlgprofilesettings.cpp:161
+#: kmuddy/dialogs/dlgprofilesettings.cpp:168
+#: plugins/scripting/cscripteditor.cpp:72
+#: plugins/scripting/cscripteditor.cpp:81
+#, kde-format
+msgid "Browse..."
+msgstr "تصفّح..."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:91
+#, kde-format
+msgid ""
+"I am sorry, but import and export is currently disabled. The functionality "
+"should be re-enabled before the final release."
+msgstr ""
+"أعتذر، ولكن الاستيراد والتصدير معطلان حالياً. يجب إعادة تفعيل هذه الوظيفة قبل "
+"الإصدار النهائي."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:131
+#, kde-format
+msgid "Choose file with profile"
+msgstr "اختر ملفاً مع التشكيلة"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:137
+#, kde-format
+msgid "Enter target file"
+msgstr "أدخل ملف الهدف"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:33
+#, kde-format
+msgid "Multi-line input"
+msgstr "إدخال متعدد الأسطر"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:45
+#, kde-format
+msgid ""
+"Enter commands that are to be sent to the MUD. Each line represents one "
+"command."
+msgstr "أدخل الأوامر التي تُرسَل إلى المد. يمثل كل سطر أمراً واحداً."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:56
+#, kde-format
+msgid "&Prefix:"
+msgstr "ال&سّابقة:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:59
+#, kde-format
+msgid "&Suffix:"
+msgstr "اللاح&قة:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:69
+#, kde-format
+msgid ""
+"Prefix and suffix may contain text, that will be added to the beginning "
+"(prefix) or ending (suffix) of every line written to the multi-line editor."
+msgstr ""
+"يجوز أن يحتوي البادئة واللاحقة على نص، يُضاف إلى بداية (بادئة) أو نهاية "
+"(لاحقة) كل سطر كُتب في محرر متعدد الأسطر."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:79
+#, kde-format
+msgid "&Send"
+msgstr "أ&رسل"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:80
+#, kde-format
+msgid "Sends current text to the MUD."
+msgstr "يرسل النص الحالي إلى المد."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:81
+#, kde-format
+msgid ""
+"This will send all the commands you've entered to the MUD. If you've entered "
+"prefix and/or suffix, they will be added to the beginning and ending of each "
+"command."
+msgstr ""
+"هذا يرسل كل الأوامر التي أدخلتها إلى المد. إذا أدخلت بادئة و/أو لاحقة، تُضاف "
+"إلى بداية ونهاية كل أمر."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:84
+#, kde-format
+msgid "&Clear"
+msgstr "ام&حُ"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:85
+#, kde-format
+msgid "Clears window contents."
+msgstr "يمحو محتويات النافذة."
+
+#: kmuddy/dialogs/dlgmxpconsole.cpp:48
+#, kde-format
+msgid "MXP Console"
+msgstr "مشغل إم إكس بي"
+
+#: kmuddy/dialogs/dlgobjects.cpp:64
+#, kde-format
+msgid "Object Manager"
+msgstr "مدير الكائنات"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcUp)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestUp)
+#: kmuddy/dialogs/dlgobjects.cpp:90
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:111
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:168
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:542
+#, kde-format
+msgid "Up"
+msgstr "أعلى"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcDown)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestDown)
+#: kmuddy/dialogs/dlgobjects.cpp:94
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:121
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:266
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:102
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:356
+#, kde-format
+msgid "Down"
+msgstr "أسفل"
+
+#: kmuddy/dialogs/dlgobjects.cpp:98
+#, kde-format
+msgid "Left"
+msgstr "يسار"
+
+#: kmuddy/dialogs/dlgobjects.cpp:102
+#, kde-format
+msgid "Right"
+msgstr "يمين"
+
+#: kmuddy/dialogs/dlgoutputwindow.cpp:33
+#, kde-format
+msgid "Output window"
+msgstr "نافذة الناتج"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:43
+#, kde-format
+msgid "MUD preferences"
+msgstr "تفضيلات المد"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:50
+#, kde-format
+msgid "Connection"
+msgstr "الاتّصال"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabCommands)
+#: kmuddy/dialogs/dlgprofilesettings.cpp:53
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
+#, kde-format
+msgid "Commands"
+msgstr "الأوامر"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:56
+#, kde-format
+msgid "Folders"
+msgstr "المجلّدات"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:59
+#, kde-format
+msgid "Sound"
+msgstr "الصوت"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:63
+#, kde-format
+msgid "MXP"
+msgstr "إم إكس بي"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:69
+#, kde-format
+msgid "&Use colorized output (if available)"
+msgstr "&استعمل المخرجات الملونة (إن توفرت)"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:70
+#, kde-format
+msgid "&Do not allow more than 100 repeated commands"
+msgstr "&لا تسمح بأكثر من 100 أمر مكرر"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:76
+#, kde-format
+msgid "Enable telnet &negotiation on startup"
+msgstr "فعِّل تفاوض &تلنت عند البدء"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:77
+#, kde-format
+msgid ""
+"Enables telnet negotiation for some option. Disabling it may resolve "
+"problems with some servers that do not understand these."
+msgstr ""
+"يفعِّل تفاوض تلنت لبعض الخيارات. تعطيله يجوز أن يحل مشاكل مع بعض الخواديم التي "
+"لا تفهم هذه الخيارات."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:81
+#, kde-format
+msgid "&Encoding:"
+msgstr "التّر&ميز:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:84
+#, kde-format
+msgid ""
+"Lets you pick the output character encoding used by the server. This usually "
+"only needs to be set for non-English servers."
+msgstr ""
+"يسمح لك باختيار ترميز محارف الإخراج الذي يستعمله الخادوم. هذا عادة يحتاج فقط "
+"للضبط للخواديم غير الإنجليزية."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:90
+#, kde-format
+msgid "&Auto-append newlines after prompt"
+msgstr "إلحاق آلي لأسطر جديدة بعد الموجه &آلياً"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:91
+#, kde-format
+msgid ""
+"Enables adding linefeeds after GA-terminated prompts to have properly "
+"aligned output."
+msgstr ""
+"يفعّل إضافة فواصل أسطر بعد الموجهات المنهاة بـ GA للحصول على إخراج متوائم "
+"بشكل صحيح."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:94
+#, kde-format
+msgid "&Show prompt in a separate field"
+msgstr "&أظهر الموجه في حقل منفصل"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:98
+#, kde-format
+msgid "Show prompt in the s&tatus bar"
+msgstr "أظهر الموجه في شريط الحا&لة"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:101
+#, kde-format
+msgid "Show prompt in the &console"
+msgstr "أظهر الموجه في &المشغل"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:104
+#, kde-format
+msgid "Start advanced transcript when session starts"
+msgstr "ابدأ النص المتقدم عندما تبدأ الجلسة"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&North"
+msgstr "ال&شمال"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "No&rtheast"
+msgstr "الشّ&مال الشّرقيّ"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&East"
+msgstr "الش&رق"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "So&utheast"
+msgstr "ال&جنوب الشّرقيّ"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "&South"
+msgstr "الجن&وب"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "Sou&thwest"
+msgstr "الجنوب ال&غربيّ"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&West"
+msgstr "الغر&ب"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "Nort&hwest"
+msgstr "الشّ&مال الغربيّ"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Up"
+msgstr "لأ&على"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Down"
+msgstr "أ&سفل"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:129
+#, kde-format
+msgid ""
+"This is a movement command. It is used by speed-walking and will also be "
+"used by the auto-mapper."
+msgstr ""
+"هذا أمر حركة. يُستعمَل بواسطة المشي السريع و سيُستعمَل أيضاً بواسطة الرسام الآلي "
+"للخرائط."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:151
+#, kde-format
+msgid "External &scripts directory"
+msgstr "دليل (مجلد) &النصوص الخارجية"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:155
+#, kde-format
+msgid "Default directory where we will look for scripts."
+msgstr "الدليل (المجلد) مبدئي حيث نبحث عن النصوص."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:158
+#: plugins/scripting/cscripteditor.cpp:78
+#, kde-format
+msgid "&Working directory"
+msgstr "&دليل العمل"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:162
+#, kde-format
+msgid ""
+"Default working directory for your scripts. Making this the same as above is "
+"usually a good choice."
+msgstr ""
+"الدليل (المجلد) العمل مبدئي لنصوصك. جعل هذا الدليل (المجلد) مماثلاً لما سبق "
+"اختيار جيد عادة."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:165
+#, kde-format
+msgid "&Transcripts directory"
+msgstr "دليل (مجلد) &النصوص"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:169
+#, kde-format
+msgid "Directory where session transcripts will be saved by default."
+msgstr "الدليل (المجلد) حيث تُحفَظ نصوص الجلسة مبدئياً."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:190
+#, kde-format
+msgid "&Enable sounds for this profile"
+msgstr "&فعِّل الأصوات لهذه التشكيلة"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:191
+#, kde-format
+msgid ""
+"Enable playing sounds with this profile.\n"
+"Note that this will only work if you enable sounds in global preferences.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol)."
+msgstr ""
+"فعِّل تشغيل الأصوات مع هذه التشكيلة.\n"
+"لاحظ أن هذا يعمل فقط إذا فعّلت الأصوات في التفضيلات العامة.\n"
+"لاحظ أيضاً أن هذا يعمل فقط إذا كان مدك يدعم <b>MSP</b> (بروتوكول صوت المد)."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:196
+#, kde-format
+msgid "Only enable these if you need them:"
+msgstr "فعّل هذه فقط إذا احتجتها:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:197
+#, kde-format
+msgid "&Use MSP even if not negotiated"
+msgstr "&استعمل MSP حتى إذا لم يُتفاوَض عليه"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:198
+#, kde-format
+msgid ""
+"When this option is enabled, KMuddy will interpret MSP sequences all the "
+"time, even if no negotiation took place. Useful for MUDs that don't support "
+"telnet negotiation of MSP.\n"
+"But beware - only turn this on if your MUD really supports MSP to prevent "
+"other players from sending malicious MSP sequences, if you allow downloading "
+"of sounds."
+msgstr ""
+"عند تفعيل هذا الخيار، يُفسر كمدي تسلسلات MSP كل الوقت، حتى إذا لم يحدث تفاوض. "
+"هذا مفيد للمد الذي لا يدعم تفاوض تلنت لـ MSP.\n"
+"لكن احذر - فعّل هذا فقط إذا كان مدك يدعم MSP بالفعل لمنع اللاعبين الآخرين من "
+"إرسال تسلسلات MSP خبيثة، إذا سمحت بتنزيل الأصوات."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:204
+#, kde-format
+msgid "Allow &mid-line MSP sequences"
+msgstr "اسمح بتسلسلات MSP &وسط السطر"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:205
+#, kde-format
+msgid ""
+"Mid-line MSP sequences are a zMUD's extension to the MSP spec that some MUDs "
+"seem to be using. You can enable support for this feature here, but ensure "
+"that other players cannot say/tell/whatever these sequences, or disable "
+"downloading support; otherwise players could instruct your client to "
+"download any file on the net..."
+msgstr ""
+"تسلسلات MSP وسط السطر هي امتداد لـ zMUD لمواصفات MSP تستعمله بعض المد على ما "
+"يبدو. تستطع تفعيل دعم هذه الميزة هنا، لكن تأكد من أن اللاعبين الآخرين لا "
+"يستطيعون قول/إخبار/ماذا كان هذه التسلسلات، أو تعطيل دعم التنزيل؛ وإلا يستطيع "
+"اللاعبون توجيه عميلك لتنزيل أي ملف على الشبكة..."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:221
+#, kde-format
+msgid "&Use MXP"
+msgstr "&استعمل MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:224
+#, kde-format
+msgid "Never"
+msgstr "البتة"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:225
+#, kde-format
+msgid "If negotiated"
+msgstr "إذا نُوفِض عليه"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:226
+#, kde-format
+msgid "Auto-detect"
+msgstr "اكتشف آليًّا"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:227
+#, kde-format
+msgid "Always on"
+msgstr "ظاهرة دائمًا"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:228
+#, kde-format
+msgid ""
+"<qt><p>Here you can choose when will MXP be used.</p><ul><li><b>Never</b> "
+"MXP tags will never be parsed</li><li><b>If negotiated</b> MXP support will "
+"depend on successful telnet negotiation.</li><li><b>Auto-detect</b> MXP "
+"support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
+"look for MXP sequences.</li></ul></qt>"
+msgstr ""
+"<qt><p>هنا تستطع اختيار متى يُستعمَل MXP.</p><ul><li><b>أبداً</b> وسم MXP لا "
+"يُحلل أبداً</li><li><b>إذا نُوفِض عليه</b> يعتمد دعم MXP على تفاوض تلنت الناجح.</"
+"li><li><b>كشف آلي</b> يُكشَف عن دعم MXP آلياً.</li><li><b>دائماً قيد التشغيل</b> "
+"يبحث كمدي دائماً عن تسلسلات MXP.</li></ul></qt>"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:234
+#, kde-format
+msgid "MXP &variable prefix"
+msgstr "بادئة متغير &MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:237
+#, kde-format
+msgid ""
+"Prefix prepended to each MXP variable from the server. Note that changing "
+"the prefix won't affect existing variables with old prefix."
+msgstr ""
+"بادئة تُضاف قبل كل متغير MXP من الخادوم. لاحظ أن تغيير البادئة لا يؤثر على "
+"المتغيرات الحالية ذات البادئة القديمة."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:397
+#, kde-format
+msgid "Choose default script location"
+msgstr "اختر موقع النص مبدئي"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:402
+#, kde-format
+msgid "Choose default script working directory"
+msgstr "اختر دليل (مجلد) عمل النص مبدئي"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:407
+#, kde-format
+msgid "Choose default transcript directory"
+msgstr "اختر دليل (مجلد) النص مبدئي"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:33
+#, kde-format
+msgid "Quick Connect"
+msgstr "اتصال سريع"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:38
+#, kde-format
+msgid "&Host:"
+msgstr "ال&مضيف"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:41
+#, kde-format
+msgid "Connection statistics"
+msgstr "إحصائيات الاتصال"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:50
+#, kde-format
+msgid "&Statistics, updated every second:"
+msgstr "&إحصائيات، تُحدَّث كل ثانية:"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:53
+#, kde-format
+msgid "Counter"
+msgstr "العدّاد"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:118
+#, kde-format
+msgid "Using MCCP"
+msgstr "استعمال MCCP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "Yes"
+msgstr "نعم"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "No"
+msgstr "لا"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:120
+#, kde-format
+msgid "MCCP version"
+msgstr "نسخة MCCP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:121
+#, kde-format
+msgid "N/A"
+msgstr "غ/م"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:122
+#, kde-format
+msgid "Using MSP"
+msgstr "استعمال MSP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:125
+#, kde-format
+msgid "Using MXP"
+msgstr "استعمال MXP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:128
+#, kde-format
+msgid "Sent bytes"
+msgstr "البايتات المرسلة"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:130
+#, kde-format
+msgid "Sent commands"
+msgstr "الأوامر المرسلة"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:132
+#, kde-format
+msgid "Received bytes"
+msgstr "البايتات المستقبَلة"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:134
+#, kde-format
+msgid "... after decompression"
+msgstr "... بعد فك الضغط"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:136
+#, kde-format
+msgid "Received lines"
+msgstr "الأسطر المستقبَلة"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:138
+#, kde-format
+msgid "Connection time"
+msgstr "وقت الاتصال"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:38
+#, kde-format
+msgid "Session Transcript"
+msgstr "نص الجلسة"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:45
+#, kde-format
+msgid "Basic"
+msgstr "أساسي"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:46
+#, kde-format
+msgid "Advanced"
+msgstr "متقدّم"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:54
+#, kde-format
+msgid "&Enable basic transcript"
+msgstr "&فعّل النص مبدئي"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:56
+#, kde-format
+msgid ""
+"Enables or disabled the session transcript. Note that session transcript is "
+"automatically disabled when you disconnect."
+msgstr "يفعّل أو يعطّل نص الجلسة. لاحظ أن نص الجلسة يُعطّل آلياً عند قطع اتصالك."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:60
+#, kde-format
+msgid "Transcript settings"
+msgstr "إعدادات النص"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
+#, kde-format
+msgid "Transcript &format"
+msgstr "صيغة &النص"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:75
+#, kde-format
+msgid "&Overwrite existing file"
+msgstr "أأكتب &فوق الملف الموجود؟"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:76
+#, kde-format
+msgid ""
+"If you enable this option, existing transcript file will be overwritten. "
+"Otherwise, new transcript will be appended to the end of an existing file "
+"(if it exists :))."
+msgstr ""
+"إذا فعّلت هذا الخيار، يُستبدَل ملف النص الحالي. وإلا يُلحَق نص جديد بنهاية ملف "
+"حالي (إذا وُجد :))."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:79
+#, kde-format
+msgid "Include buffer &dump"
+msgstr "ضم &تفريغ الخبيئة"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:80
+#, kde-format
+msgid ""
+"This will cause KMuddy to add complete buffer dump to the beginning of the "
+"transcript file."
+msgstr "هذا يتسبب في إضافة كمدي لتفريغ الخبيئة الكامل إلى بداية ملف النص."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:109
+#, kde-format
+msgid "Enable &advanced transcript"
+msgstr "فعّل النص &المتقدم"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:110
+#, kde-format
+msgid ""
+"This will enable advanced transcript, which allows you to have transcript "
+"running all the time, rotates it at midnight and so. Note that normal and "
+"advanced transcripts can both be running at the same time, if you want."
+msgstr ""
+"هذا يفعّل النص المتقدم، الذي يسمح لك بتشغيل النص كل الوقت، ويدوّره عند منتصف "
+"الليل وما إلى ذلك. لاحظ أن النص العادي والمتقدم تستطيع تشغيلهما في الوقت "
+"نفسه، إذا أردت."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:115
+#, kde-format
+msgid "Advanced transcript settings"
+msgstr "إعدادات النص المتقدم"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:130
+#, kde-format
+msgid "&Rotate log at midnight every day"
+msgstr "&دوّر السجل عند منتصف الليل كل يوم"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:131
+#, kde-format
+msgid ""
+"This will cause KMuddy to rotate session transcript every day at midnight"
+msgstr "هذا يتسبب في تدوير كمدي لنص الجلسة كل يوم عند منتصف الليل"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:134
+#, kde-format
+msgid "Prepend lines with &timestamp"
+msgstr "أضف &طابعاً زمنياً في بداية الأسطر"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:135
+#, kde-format
+msgid ""
+"This option will cause KMuddy to insert local timestamp in front of every "
+"line of logging"
+msgstr ""
+"هذا الخيار يتسبب في إدراج كمدي طابعاً زمنياً محلياً أمام كل سطر من التسجيل"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:141
+#, kde-format
+msgid "Log name format"
+msgstr "صيغة اسم السجل"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:142
+#, kde-format
+msgid ""
+"Here you can specify log format. You can use the following options: $W - "
+"world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
+"combination of alpha-numeric characters."
+msgstr ""
+"هنا تستطع تحديد صيغة السجل. تستطع استعمال الخيارات التالية: $W - اسم العالم، "
+"$h - الساعة، $m - الدقيقة، $D - اليوم، $M - الشهر، $Y - السنة، وأي توليفة من "
+"المحارف الأبجدية الرقمية."
+
+#: kmuddy/dialogs/dlgwindows.cpp:58
+#, kde-format
+msgid "&List of output windows"
+msgstr "&قائمة نوافذ المخرجات"
+
+#: kmuddy/dialogs/dlgwindows.cpp:65
+#, kde-format
+msgid "&Show"
+msgstr "ا&عرض"
+
+#: kmuddy/dialogs/dlgwindows.cpp:66
+#, kde-format
+msgid "&Hide"
+msgstr "أ&خفِ"
+
+#: kmuddy/dialogs/dlgwindows.cpp:67
+#, kde-format
+msgid "&Delete"
+msgstr "ا&حذف"
+
+#: kmuddy/kmuddy.cpp:241
+#, kde-format
+msgid "&Connect..."
+msgstr "ا&تّصل…"
+
+#: kmuddy/kmuddy.cpp:248
+#, kde-format
+msgid "&QuickConnect..."
+msgstr "&اتصال سريع..."
+
+#: kmuddy/kmuddy.cpp:254
+#, kde-format
+msgid "&Disconnect"
+msgstr "ا&قطع الاتصال"
+
+#: kmuddy/kmuddy.cpp:260
+#, kde-format
+msgid "&Reconnect"
+msgstr "أ&عد الاتصال"
+
+#: kmuddy/kmuddy.cpp:265
+#, kde-format
+msgid "Close &tab"
+msgstr "أ&غلق اللسان"
+
+#: kmuddy/kmuddy.cpp:274
+#, kde-format
+msgid "Paste &As"
+msgstr "&لصق كـ"
+
+#: kmuddy/kmuddy.cpp:283
+#, kde-format
+msgid "&Input"
+msgstr "ال&دّخل"
+
+#: kmuddy/kmuddy.cpp:290
+#, kde-format
+msgid "Copy &Selection"
+msgstr "ا&نسخ التحديد"
+
+#: kmuddy/kmuddy.cpp:296
+#, kde-format
+msgid "Enable command &parsing"
+msgstr "فعّل &تحليل الأوامر"
+
+#: kmuddy/kmuddy.cpp:303
+#, kde-format
+msgid "Ca&ncel pending commands"
+msgstr "إلغاء الأوامر &المعلَّقة"
+
+#: kmuddy/kmuddy.cpp:314
+#, kde-format
+msgid "Show &gaugebar"
+msgstr "أظهر شريط &المقياس"
+
+#: kmuddy/kmuddy.cpp:327
+#, kde-format
+msgid "&Object Editor..."
+msgstr "محرر &الكائنات..."
+
+#: kmuddy/kmuddy.cpp:332
+#, kde-format
+msgid "&Output windows..."
+msgstr "نوافذ &المخرجات..."
+
+#: kmuddy/kmuddy.cpp:336
+#, kde-format
+msgid "A&liases enabled"
+msgstr "البدائل (الأسماء المستعارة) &مفعلة"
+
+#: kmuddy/kmuddy.cpp:342
+#, kde-format
+msgid "Tri&ggers enabled"
+msgstr "المشغلات &مفعلة"
+
+#: kmuddy/kmuddy.cpp:348
+#, kde-format
+msgid "Tim&ers enabled"
+msgstr "الموقّتات &مفعلة"
+
+#: kmuddy/kmuddy.cpp:353
+#, kde-format
+msgid "Macro &keys enabled"
+msgstr "مفاتيح &الماكرو مفعلة"
+
+#: kmuddy/kmuddy.cpp:358
+#, kde-format
+msgid "&MUD Preferences..."
+msgstr "تفضيلات &المد..."
+
+#: kmuddy/kmuddy.cpp:363
+#, kde-format
+msgid "&Save Profile"
+msgstr "ا&حفظ التشكيلة"
+
+#: kmuddy/kmuddy.cpp:370
+#, kde-format
+msgid "&Session transcript..."
+msgstr "نص &الجلسة..."
+
+#: kmuddy/kmuddy.cpp:375
+#, kde-format
+msgid "Dump output &buffer..."
+msgstr "تفريغ &خبيئة المخرجات..."
+
+#: kmuddy/kmuddy.cpp:379
+#, kde-format
+msgid "&Decision assistant"
+msgstr "مساعد &القرار"
+
+#: kmuddy/kmuddy.cpp:393
+#, kde-format
+msgid "&Global settings..."
+msgstr "الإ&عدادات العامّة..."
+
+#: kmuddy/kmuddy.cpp:398
+#, kde-format
+msgid "&Plugins..."
+msgstr "ال&ملحقات..."
+
+#: kmuddy/kmuddy.cpp:403
+#, kde-format
+msgid "F&ull screen mode"
+msgstr "&وضع ملء الشاشة"
+
+#: kmuddy/kmuddy.cpp:413
+#, kde-format
+msgid "Shift line up"
+msgstr "أزح السطر للأعلى"
+
+#: kmuddy/kmuddy.cpp:418
+#, kde-format
+msgid "Shift line down"
+msgstr "أزح السطر للأسفل"
+
+#: kmuddy/kmuddy.cpp:423
+#, kde-format
+msgid "Shift page up"
+msgstr "أزح الصفحة للأعلى"
+
+#: kmuddy/kmuddy.cpp:428
+#, kde-format
+msgid "Shift page down"
+msgstr "أزح الصفحة للأسفل"
+
+#: kmuddy/kmuddy.cpp:433
+#, kde-format
+msgid "Split-screen up"
+msgstr "اقسم الشاشة للأعلى"
+
+#: kmuddy/kmuddy.cpp:438
+#, kde-format
+msgid "Split-screen down"
+msgstr "اقسم الشاشة للأسفل"
+
+#: kmuddy/kmuddy.cpp:443
+#, kde-format
+msgid "Previous tab"
+msgstr "اللسان السّابق"
+
+#: kmuddy/kmuddy.cpp:448
+#, kde-format
+msgid "Next tab"
+msgstr "اللسان التّالي"
+
+#: kmuddy/kmuddy.cpp:454 kmuddy/kmuddy.cpp:459 kmuddy/kmuddy.cpp:464
+#: kmuddy/kmuddy.cpp:469 kmuddy/kmuddy.cpp:474 kmuddy/kmuddy.cpp:479
+#: kmuddy/kmuddy.cpp:484 kmuddy/kmuddy.cpp:489 kmuddy/kmuddy.cpp:494
+#: kmuddy/kmuddy.cpp:499
+#, kde-format
+msgctxt "%1 - tab number"
+msgid "Switch to tab %1"
+msgstr "انتقل إلى اللسان %1"
+
+#: kmuddy/kmuddy.cpp:522
+#, kde-format
+msgid "&Connection"
+msgstr "الاتّ&صال"
+
+#: kmuddy/kmuddy.cpp:523
+#, kde-format
+msgid "&Edit"
+msgstr "&حرّر"
+
+#. i18n: ectx: Menu (View)
+#: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
+#, kde-format
+msgid "&View"
+msgstr "&عرض"
+
+#: kmuddy/kmuddy.cpp:525
+#, kde-format
+msgid "&Profile"
+msgstr "ال&تشكيلة"
+
+#: kmuddy/kmuddy.cpp:526
+#, kde-format
+msgid "&Tools"
+msgstr "أ&دوات"
+
+#: kmuddy/kmuddy.cpp:527
+#, kde-format
+msgid "&Settings"
+msgstr "إ&عدادات"
+
+#: kmuddy/kmuddy.cpp:528
+#, kde-format
+msgid "&Help"
+msgstr "م&ساعدة"
+
+#: kmuddy/kmuddy.cpp:904
+#, kde-format
+msgid "To reconnect, press %1 or use Connection / Reconnect."
+msgstr "لإعادة الاتصال، اضغط %1 أو استعمل اتصال / أعد الاتصال."
+
+#: kmuddy/kmuddy.cpp:990
+#, kde-format
+msgid "Activity in the KMuddy Window"
+msgstr "نشاط في نافذة كمدي"
+
+#: kmuddy/kmuddy.cpp:1162
+#, kde-format
+msgid ""
+"Profile has been saved. Note that profiles are automatically saved upon "
+"disconnecting, and also every five minutes."
+msgstr ""
+"حفظت التشكيلة. لاحظ أن التشكيلات تُحفَظ آلياً عند قطع الاتصال، وكذلك كل خمس "
+"دقائق."
+
+#: kmuddy/macros.cpp:67
+#, kde-format
+msgid "/setval: Expression parsing failed."
+msgstr "/setval: فشل تحليل التعبير."
+
+#: kmuddy/macros.cpp:170
+#, kde-format
+msgid "No free resources of that type."
+msgstr "لا توجد موارد حرة من ذلك النوع."
+
+#: kmuddy/macros.cpp:192
+#, kde-format
+msgid "/tick: syntax: /tick timer-name"
+msgstr "/tick: الصيغة: /tick timer-name"
+
+#: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
+#, kde-format
+msgid "/tick: a timer with that name does not exist."
+msgstr "/tick: لا يوجد موقّت بهذا الاسم."
+
+#: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
+#, kde-format
+msgid "/tick: this timer is currently disabled."
+msgstr "/tick: هذا الموقّت معطّل حالياً."
+
+#: kmuddy/macros.cpp:209
+#, kde-format
+msgid "Timer ticks in 1 second."
+msgid_plural "Timer ticks in %1 seconds."
+msgstr[0] "الموقّت يدق بعد ثانية."
+msgstr[1] "الموقّت يدق بعد ثانيتين."
+msgstr[2] "الموقّت يدق بعد %1 ثوانٍ."
+msgstr[3] "الموقّت يدق بعد %1 ثانيةً."
+msgstr[4] "الموقّت يدق بعد %1 ثانيةً."
+msgstr[5] "الموقّت يدق بعد %1 ثانيةً."
+
+#: kmuddy/macros.cpp:211
+#, kde-format
+msgid "Timer ticks right now."
+msgstr "الموقّت يدق الآن."
+
+#: kmuddy/macros.cpp:221
+#, kde-format
+msgid "/ticknow: syntax: /ticknow timer-name"
+msgstr "/ticknow: الصيغة: /ticknow timer-name"
+
+#: kmuddy/macros.cpp:363
+#, kde-format
+msgid "/else: called without the matching /if."
+msgstr "/else: استُدعِيَ بدون /if المطابق."
+
+#: kmuddy/macros.cpp:380
+#, kde-format
+msgid "/endif: called without the matching /if."
+msgstr "/endif: استُدعِيَ بدون /if المطابق."
+
+#: kmuddy/macros.cpp:398
+#, kde-format
+msgid "/oadd: syntax: /oadd parent name"
+msgstr "/oadd: الصيغة: /oadd parent name"
+
+#: kmuddy/macros.cpp:406
+#, kde-format
+msgid "/oadd: parent group does not exist."
+msgstr "/oadd: لا توجد مجموعة الأم."
+
+#: kmuddy/macros.cpp:410
+#, kde-format
+msgid "/oadd: parent must be a group."
+msgstr "/oadd: يجب أن تكون الأم مجموعة."
+
+#: kmuddy/macros.cpp:415
+#, kde-format
+msgid "/oadd: object with this name already exists."
+msgstr "/oadd: يوجد كائن بهذا الاسم بالفعل."
+
+#: kmuddy/macros.cpp:432
+#, kde-format
+msgid "/gadd: syntax: /gadd parent name"
+msgstr "/gadd: الصيغة: /gadd parent name"
+
+#: kmuddy/macros.cpp:439
+#, kde-format
+msgid "/gadd: parent group does not exist."
+msgstr "/gadd: لا توجد مجموعة الأم."
+
+#: kmuddy/macros.cpp:443
+#, kde-format
+msgid "/gadd: the parent must be a group"
+msgstr "/gadd: يجب أن تكون الأم مجموعة"
+
+#: kmuddy/macros.cpp:449
+#, kde-format
+msgid "/gadd: such group already exists in that list"
+msgstr "/gadd: توجد مثل هذه المجموعة بالفعل في تلك القائمة"
+
+#: kmuddy/macros.cpp:465
+#, kde-format
+msgid "/odel: object does not exist."
+msgstr "/odel: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:470
+#, kde-format
+msgid "/odel: root group may not be deleted."
+msgstr "/odel: لا تستطع حذف المجموعة الجذر."
+
+#: kmuddy/macros.cpp:488
+#, kde-format
+msgid "/omove: syntax: /omove object group [position]"
+msgstr "/omove: الصيغة: /omove object group [position]"
+
+#: kmuddy/macros.cpp:495
+#, kde-format
+msgid "/omove: object does not exist."
+msgstr "/omove: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:499
+#, kde-format
+msgid "/omove: root group may not be moved."
+msgstr "/omove: لا تستطع نقل المجموعة الجذر."
+
+#: kmuddy/macros.cpp:505
+#, kde-format
+msgid "/omove: group does not exist."
+msgstr "/omove: لا توجد المجموعة."
+
+#: kmuddy/macros.cpp:509
+#, kde-format
+msgid "/omove: target must be a group."
+msgstr "/omove: يجب أن يكون الهدف مجموعة."
+
+#: kmuddy/macros.cpp:513
+#, kde-format
+msgid "/omove: object and target must be in the same list."
+msgstr "/omove: يجب أن يكون الكائن والهدف في القائمة نفسها."
+
+#: kmuddy/macros.cpp:525
+#, kde-format
+msgid "/omove: position out of range"
+msgstr "/omove: الموضع خارج النطاق"
+
+#: kmuddy/macros.cpp:540
+#, kde-format
+msgid "/oren: syntax: /oren object new-name"
+msgstr "/oren: الصيغة: /oren object new-name"
+
+#: kmuddy/macros.cpp:547
+#, kde-format
+msgid "/oren: object does not exist."
+msgstr "/oren: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:553
+#, kde-format
+msgid "/oren: root group cannot be renamed."
+msgstr "/oren: لا تستطع إعادة تسمية المجموعة الجذر."
+
+#: kmuddy/macros.cpp:559
+#, kde-format
+msgid "/oren: a group with this name already exists."
+msgstr "/oren: توجد مجموعة بهذا الاسم بالفعل."
+
+#: kmuddy/macros.cpp:566
+#, kde-format
+msgid "/oren: an object with this name already exists."
+msgstr "/oren: يوجد كائن بهذا الاسم بالفعل."
+
+#: kmuddy/macros.cpp:581
+#, kde-format
+msgid "/opriority: syntax: /opriority object priority"
+msgstr "/opriority: الصيغة: /opriority object priority"
+
+#: kmuddy/macros.cpp:588
+#, kde-format
+msgid "/opriority: object does not exist."
+msgstr "/opriority: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:594
+#, kde-format
+msgid "/opriority: priority must be in the 1-1000 range."
+msgstr "/opriority: يجب أن تكون الأولوية في نطاق 1-1000."
+
+#: kmuddy/macros.cpp:610
+#, kde-format
+msgid "/oenable: object does not exist."
+msgstr "/oenable: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:626
+#, kde-format
+msgid "/odisable: object does not exist."
+msgstr "/odisable: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:641
+#, kde-format
+msgid "/osetbattr: syntax: /osetbattr object parameter value"
+msgstr "/osetbattr: الصيغة: /osetbattr object parameter value"
+
+#: kmuddy/macros.cpp:648
+#, kde-format
+msgid "/osetbattr: object does not exist."
+msgstr "/osetbattr: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
+#, kde-format
+msgid "/osetiattr: syntax: /osetbattr object parameter value"
+msgstr "/osetiattr: الصيغة: /osetbattr object parameter value"
+
+#: kmuddy/macros.cpp:672
+#, kde-format
+msgid "/osetiattr: object does not exist."
+msgstr "/osetiattr: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:696
+#, kde-format
+msgid "/osetsattr: object does not exist."
+msgstr "/osetsattr: لا يوجد الكائن."
+
+#: kmuddy/macros.cpp:713
+#, kde-format
+msgid "/tgroupon: group does not exist."
+msgstr "/tgroupon: لا توجد المجموعة."
+
+#: kmuddy/macros.cpp:728
+#, kde-format
+msgid "/tgroupoff: group does not exist."
+msgstr "/tgroupoff: لا توجد المجموعة."
+
+#: kmuddy/macros.cpp:744
+#, kde-format
+msgid "/agroupon: group does not exist."
+msgstr "/agroupon: لا توجد المجموعة."
+
+#: kmuddy/macros.cpp:760
+#, kde-format
+msgid "/agroupoff: group does not exist."
+msgstr "/agroupoff: لا توجد المجموعة."
+
+#: kmuddy/main.cpp:29
+#, kde-format
+msgid ""
+"KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
+"features."
+msgstr ""
+"كمدي هو عميل مد (متاهة متعددة المستخدمين) من كيدي مع تشكيلة من الميزات."
+
+#: kmuddy/main.cpp:35 kmuddy/main.cpp:37
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
+#, kde-format
+msgid "KMuddy"
+msgstr "كمدي"
+
+#: kmuddy/main.cpp:39
+#, kde-format
+msgid "(c) 2002-2018, Tomas Mecir"
+msgstr "(c) 2002-2018، توماس مسير"
+
+#: kmuddy/main.cpp:40
+#, kde-format
+msgid "Tomas Mecir"
+msgstr "Tomas Mecir"
+
+#: kmuddy/main.cpp:41
+#, kde-format
+msgid "Main developer and maintainer"
+msgstr "المطور والمحافظ الرئيسي"
+
+#: kmuddy/main.cpp:42
+#, kde-format
+msgid "Alex Bache"
+msgstr "أليكس باشي"
+
+#: kmuddy/main.cpp:43
+#, kde-format
+msgid ""
+"Many improvements in external scripting, internal script parser, output view "
+"and aliases/triggers, bugfixes"
+msgstr ""
+"الكثير من التحسينات في البرمجة النصية الخارجية، محلل النص الداخلي، عرض "
+"المخرجات والبدائل (الأسماء المستعارة)/المشغلات، إصلاحات الأخطاء"
+
+#: kmuddy/main.cpp:44
+#, kde-format
+msgid "Alsherok staff"
+msgstr "طاقم ألشيروك"
+
+#: kmuddy/main.cpp:45
+#, kde-format
+msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
+msgstr "لإصدار قاعدة كود AFKMud، المستعملة لاختبار MCCP/MSP"
+
+#: kmuddy/main.cpp:46
+#, kde-format
+msgid "Andrea Cascio"
+msgstr "أندريا كاسكيو"
+
+#: kmuddy/main.cpp:47
+#, kde-format
+msgid "SuSE RPMs, speed-walking improvements"
+msgstr "SuSE RPMs، تحسينات المشي السريع"
+
+#: kmuddy/main.cpp:48
+#, kde-format
+msgid "Orion Elder"
+msgstr "أوريون إلدر"
+
+#: kmuddy/main.cpp:49
+#, kde-format
+msgid "KMuddy forum, many ideas"
+msgstr "منتدى كمدي، الكثير من الأفكار"
+
+#: kmuddy/main.cpp:50
+#, kde-format
+msgid "Scott Monachello"
+msgstr "سكوت موناشيلو"
+
+#: kmuddy/main.cpp:51
+#, kde-format
+msgid "Improvements in scripting, bugfixes"
+msgstr "تحسينات في البرمجة النصية، إصلاحات الأخطاء"
+
+#: kmuddy/main.cpp:52
+#, kde-format
+msgid "Tyler Montbriand"
+msgstr "تايلر مونتبرياند"
+
+#: kmuddy/main.cpp:53
+#, kde-format
+msgid "Help with SDL support"
+msgstr "مساعدة في دعم SDL"
+
+#: kmuddy/main.cpp:54
+#, kde-format
+msgid "Marco Mastroddi"
+msgstr "ماركو ماسترودي"
+
+#: kmuddy/main.cpp:55
+#, kde-format
+msgid "Tick timers"
+msgstr "موقّتات الدقة"
+
+#: kmuddy/main.cpp:56
+#, kde-format
+msgid "Henrikki Almusa"
+msgstr "هنريكي ألموزا"
+
+#: kmuddy/main.cpp:57
+#, kde-format
+msgid "Commands to enable/disable groups"
+msgstr "أوامر لتفعيل/تعطيل المجموعات"
+
+#: kmuddy/main.cpp:58
+#, kde-format
+msgid "Drossos Stamboulakis"
+msgstr "دروسوس ستامبولاكيس"
+
+#: kmuddy/main.cpp:59
+#, kde-format
+msgid "Selection improvements, full screen mode, cross-tab commands"
+msgstr "تحسينات التحديد، وضع ملء الشاشة، أوامر عبر ألسنة (tabs)"
+
+#: kmuddy/main.cpp:60
+#, kde-format
+msgid "Antonio J. Soler Sanchez"
+msgstr "أنطونيو خ. سولر سانشيز"
+
+#: kmuddy/main.cpp:61
+#, kde-format
+msgid "Spanish translation"
+msgstr "الترجمة الإسبانية"
+
+#: kmuddy/main.cpp:62
+#, kde-format
+msgid "lontau"
+msgstr "لونتاو"
+
+#: kmuddy/main.cpp:63
+#, kde-format
+msgid "Code to access KMuddy variables in Ruby"
+msgstr "كود للوصول إلى متغيرات كمدي في روبي"
+
+#: kmuddy/main.cpp:64
+#, kde-format
+msgid "Magnus Lundborg"
+msgstr "ماغنوس لوندبورغ"
+
+#: kmuddy/main.cpp:64
+#, kde-format
+msgid "Tab-expansion improvements"
+msgstr "تحسينات توسيع الألسنة (tabs)"
+
+#: kmuddy/main.cpp:65
+#, kde-format
+msgid "Vladimir Lazarenko"
+msgstr "فلاديمير لازارينكو"
+
+#: kmuddy/main.cpp:66
+#, kde-format
+msgid "Many improvements. Hosting KMuddy CVS."
+msgstr "الكثير من التحسينات. استضافة CVS كمدي."
+
+#: kmuddy/main.cpp:67
+#, kde-format
+msgid "Stuart Henshall"
+msgstr "ستيوارت هينشال"
+
+#: kmuddy/main.cpp:68
+#, kde-format
+msgid "Speed improvements."
+msgstr "تحسينات السرعة."
+
+#: kmuddy/main.cpp:69
+#, kde-format
+msgid "Vadim Peretokin"
+msgstr "فاديم بيريتوكين"
+
+#: kmuddy/main.cpp:70
+#, kde-format
+msgid "Many improvements, website"
+msgstr "الكثير من التحسينات، موقع ويب"
+
+#: kmuddy/main.cpp:71
+#, kde-format
+msgid "Heiko Koehn"
+msgstr "هايكو كوين"
+
+#: kmuddy/main.cpp:72
+#, kde-format
+msgid "Scripting improvements"
+msgstr "تحسينات البرمجة النصية"
+
+#: kmuddy/main.cpp:73
+#, kde-format
+msgid "Robert Marmorstein"
+msgstr "روبرت مارمورستين"
+
+#: kmuddy/main.cpp:74
+#, kde-format
+msgid "Systray icon support"
+msgstr "دعم أيقونة علبة النظام"
+
+#: libs/caliaseditor.cpp:88
+#, kde-format
+msgid "&Alias text"
+msgstr "نص &البديل (الاسم المستعار)"
+
+#: libs/caliaseditor.cpp:106
+#, kde-format
+msgid ""
+"Type of matching. Alias will only be activated if this passes this type of "
+"test. Note that aliases are always matched as whole words."
+msgstr ""
+"نوع المطابقة. يُفعَّل البديل (الاسم المستعار) فقط إذا اجتاز هذا النوع من "
+"الاختبار. لاحظ أن البدائل (الأسماء المستعارة) تُطابَق دائماً ككلمات كاملة."
+
+#: libs/caliaseditor.cpp:118
+#, kde-format
+msgid "&Replacement text(s)"
+msgstr "نص(نصوص) &الاستبدال"
+
+#: libs/caliaseditor.cpp:122
+#, kde-format
+msgid "Command(s) that will replace command you have entered."
+msgstr "الأمر (الأوامر) الذي يحل محل الأمر الذي أدخلته."
+
+#: libs/caliaseditor.cpp:137
+#, kde-format
+msgid ""
+"This is testing area. You can test your alias here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"هذه مساحة اختبار. تستطع اختبار البديل (الاسم المستعار) الخاص بك هنا لترى ما "
+"إذا كان يفعل ما تريده. اكتب بعض النص ببساطة وانظر ماذا يحدث."
+
+#: libs/caliaseditor.cpp:174
+#, kde-format
+msgid "Send original command"
+msgstr "أرسل الأمر الأصلي"
+
+#: libs/caliaseditor.cpp:175
+#, kde-format
+msgid ""
+"If this alias matches your command, a replacement command will be sent. If "
+"you enable this option, both original and replacement commands are sent "
+"(original command is sent first)."
+msgstr ""
+"إذا طابق هذا البديل (الاسم المستعار) أمرك، يُرسَل أمر بديل. إذا فعلت هذا "
+"الخيار، يُرسَل الأمران الأصلي والبديل معاً (يُرسَل الأمر الأصلي أولاً)."
+
+#: libs/caliaseditor.cpp:181
+#, kde-format
+msgid ""
+"When enabled, this alias will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"عند التفعيل، يطابق هذا البديل (الاسم المستعار) النص فقط إذا وجدت مسافات أو "
+"لا شيء قبل/بعد السلسلة المطابقة."
+
+#: libs/caliaseditor.cpp:189
+#, kde-format
+msgid "Include prefix/suffix"
+msgstr "أدخل سابقة/لاحقة"
+
+#: libs/caliaseditor.cpp:190
+#, kde-format
+msgid ""
+"Prefix/suffix of matched text will be automatically appended to the expanded "
+"text."
+msgstr "ستُلحق سابقة/لاحقة النص المطابَق آلياً بالنص الموسَّع."
+
+#: libs/caliaseditor.cpp:194
+#, kde-format
+msgid ""
+"<p>With global matching, one alias/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it is "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition doesn't terminate scanning, so you can use this to highlight names "
+"from a list (using the condition to check if a match is in the list), or "
+"something like that."
+msgstr ""
+"<p>مع المطابقة الشاملة، يمكن لاسم مستعار/زناد واحد أن يطابق عدة مرات، إذا "
+"كان يحتوي على النمط أكثر من مرة. على سبيل المثال، إذا كان النمط هو abc، فإنه "
+"يطابق مرة واحدة فقط على abcdabcd إذا كانت المطابقة الشاملة مغلقة، ولكن مرتين "
+"إذا كانت مفتوحة. لكل مطابقة، تُنفَّذ الإجراءات المطلوبة - لذلك يمكن إرسال "
+"الأوامر عدة مرات، مرة لكل مطابقة.</p><p>لاحظ أن فشل الشرط لا ينهي الفحص، "
+"لذلك يمكنك استخدام هذا لإبراز أسماء من قائمة (باستخدام الشرط للتحقق مما إذا "
+"كانت المطابقة موجودة في القائمة)، أو شيء من هذا القبيل."
+
+#: libs/caliaseditor.cpp:260
+#, kde-format
+msgid "This text did not match your alias."
+msgstr "لم يطابق هذا النص اسمك المستعار."
+
+#: libs/caliaseditor.cpp:265
+#, kde-format
+msgid "This text matches your alias."
+msgstr "يطابق هذا النص اسمك المستعار."
+
+#: libs/caliaseditor.cpp:279
+#, kde-format
+msgid "Command: "
+msgstr "الأمر: "
+
+#: libs/ccmdparser.cpp:431
+#, kde-format
+msgid "Sorry, count is limited to 100.\n"
+msgstr "نأسف، العدد مقصور على 100.\n"
+
+#: libs/ccmdparser.cpp:434
+#, kde-format
+msgid "You can disable this limit in Profile / MUD Preferences."
+msgstr "يمكنك تعطيل هذا القصر في تفضيلات تشكيلة / MUD."
+
+#: libs/ccmdprocessor.cpp:285
+#, kde-format
+msgid "Sorry, but macro calls are only available for profile connections."
+msgstr "نأسف، مكالمات الماكرو متاحة فقط لوصلات التشكيلة."
+
+#: libs/ccmdprocessor.cpp:296
+#, kde-format
+msgid "This macro does not exist."
+msgstr "هذا الماكرو غير موجود."
+
+#: libs/cconsole.cpp:134
+#, kde-format
+msgid "now"
+msgstr "الآن"
+
+#: libs/cconsole.cpp:144
+#, kde-format
+msgid "hour"
+msgstr "ساعة"
+
+#: libs/cconsole.cpp:144
+#, kde-format
+msgid "hours"
+msgstr "ساعة"
+
+#: libs/cconsole.cpp:149
+#, kde-format
+msgid "minute"
+msgstr "دقيقة"
+
+#: libs/cconsole.cpp:149
+#, kde-format
+msgid "minutes"
+msgstr "دقيقة"
+
+#: libs/cconsole.cpp:155
+#, kde-format
+msgid "second"
+msgstr "ثانية"
+
+#: libs/cconsole.cpp:155
+#, kde-format
+msgid "seconds"
+msgstr "ثانية"
+
+#: libs/cconsole.cpp:157
+#, kde-format
+msgid "ago"
+msgstr "منذ"
+
+#: libs/cexpresolver.cpp:54
+#, kde-format
+msgid "Function %1 does not exist - assuming empty return value."
+msgstr "الدالة %1 غير موجودة - افتراض قيمة إرجاع فارغة."
+
+#: libs/clist.cpp:468
+#, kde-format
+msgid ""
+"This file does not contain the root group, and therefore cannot be loaded."
+msgstr "لا يحتوي هذا الملف على المجموعة الجذرية، ولهذا لا يمكن تحميله."
+
+#: libs/clist.cpp:471 libs/cvariablelist.cpp:373
+#: plugins/mapper/cmapzonemanager.cpp:230
+#, kde-format
+msgid ""
+"This file was created by a newer version of KMuddy, and this version is "
+"unable to open it."
+msgstr ""
+"أُنشئ هذا الملف بواسطة إصدار أحدث من كمدي، وهذا الإصدار غير قادر على فتحه."
+
+#: libs/clist.cpp:473
+#, kde-format
+msgid "This is not a KMuddy object file."
+msgstr "هذا ليس ملف كائن كمدي."
+
+#: libs/clist.cpp:475 libs/cvariablelist.cpp:377
+#: plugins/mapper/cmapzonemanager.cpp:234
+#, kde-format
+msgid "This file is corrupted."
+msgstr "هذا الملف تالف."
+
+#: libs/clist.cpp:479 libs/cvariablelist.cpp:381
+#: plugins/mapper/cmapzonemanager.cpp:237
+#, kde-format
+msgid "Error at line %1, column %2: %3"
+msgstr "خطأ في السطر %1، العمود %2: %3"
+
+#: libs/clisteditor.cpp:75
+#, kde-format
+msgid "&Apply changes"
+msgstr "&طبّق التغييرات"
+
+#: libs/clisteditor.cpp:76
+#, kde-format
+msgid "&Undo changes"
+msgstr "أ&رجع التغييرات"
+
+#: libs/clisteditor.cpp:217
+#, kde-format
+msgid "&Enabled"
+msgstr "&ممكّن"
+
+#: libs/clisteditor.cpp:222
+#, kde-format
+msgid "&Priority"
+msgstr "الأولويّ&ة"
+
+#: libs/clisteditor.cpp:224
+#, kde-format
+msgid "&Name"
+msgstr "الا&سم"
+
+#: libs/clisteditor.cpp:286
+#, kde-format
+msgid "Cannot rename the group, as a group with this name already exists."
+msgstr "لا يمكن إعادة تسمية المجموعة، لوجود مجموعة بهذا الاسم مسبقاً."
+
+#: libs/clisteditor.cpp:293
+#, kde-format
+msgid "Cannot rename the object, as an object with this name already exists."
+msgstr "لا يمكن إعادة تسمية الكائن، لوجود كائن بهذا الاسم مسبقاً."
+
+#: libs/clistgroup.cpp:229
+#, kde-format
+msgid "Error in file - group with no name."
+msgstr "خطأ في الملف - مجموعة بلا اسم."
+
+#: libs/clistgroup.cpp:233
+#, kde-format
+msgid "Error in file - duplicate group name."
+msgstr "خطأ في الملف - اسم مجموعة مكرر."
+
+#: libs/clistviewer.cpp:63
+#, kde-format
+msgid "Delete object"
+msgstr "احذف الكائن"
+
+#: libs/clistviewer.cpp:68 libs/clistviewer.cpp:163
+#, kde-format
+msgid "Delete group"
+msgstr "احذف المجموعة"
+
+#: libs/clistviewer.cpp:72
+#, kde-format
+msgid "Add subgroup"
+msgstr "أضف مجموعة فرعية"
+
+#: libs/clistviewer.cpp:77
+#, kde-format
+msgid "Add group"
+msgstr "أضف مجموعة"
+
+#: libs/clistviewer.cpp:82
+#, kde-format
+msgid "Add object"
+msgstr "أضف كائن"
+
+#: libs/clistviewer.cpp:162
+#, kde-format
+msgid "Do you really want to delete this group?"
+msgstr "هل تريد حقاً حذف هذه المجموعة؟"
+
+#: libs/clistviewer.cpp:165
+#, kde-format
+msgid "Do you really want to delete this %1?"
+msgstr "هل تريد حقاً حذف هذا %1؟"
+
+#: libs/clistviewer.cpp:166
+#, kde-format
+msgid "Delete %1"
+msgstr "احذف %1"
+
+#: libs/clistviewer.cpp:192
+#, kde-format
+msgid "Create Group"
+msgstr "أنشئ مجموعة"
+
+#: libs/clistviewer.cpp:192
+#, kde-format
+msgid "Please enter the group name:"
+msgstr "فضلًا أدخِل اسم المجموعة:"
+
+#: libs/clistviewer.cpp:196
+#, kde-format
+msgid "Cannot create the group, as the provided name is not valid."
+msgstr "لا يمكن إنشاء المجموعة، لأن الاسم المقدَّم غير صالح."
+
+#: libs/clistviewer.cpp:203
+#, kde-format
+msgid "Cannot create the group, as a group with this name already exists."
+msgstr "لا يمكن إنشاء المجموعة، لوجود مجموعة بهذا الاسم مسبقاً."
+
+#: libs/cmsp.cpp:284
+#, kde-format
+msgid "MSP: Received corrupted sound trigger!"
+msgstr "MSP: استُقبل زناد صوتي تالف!"
+
+#: libs/cmsp.cpp:285
+#, kde-format
+msgid "MSP: Problem was: %1"
+msgstr "MSP: كانت المشكلة: %1"
+
+#: libs/cmsp.cpp:315
+#, kde-format
+msgid "Parameter names must be followed by '='."
+msgstr "يجب أن تتبع أسماء المعلمات بعلامة '='."
+
+#: libs/cmsp.cpp:340
+#, kde-format
+msgid "Parameter %1 requires a numeric argument"
+msgstr "المعلمة %1 تتطلب وسيطاً رقمياً"
+
+#: libs/cmsp.cpp:351
+#, kde-format
+msgid "Value of param V is out of 0-100 range."
+msgstr "قيمة المعلمة V خارج نطاق 0-100."
+
+#: libs/cmsp.cpp:360
+#, kde-format
+msgid "Value of param L is out of -1;1-100 range."
+msgstr "قيمة المعلمة L خارج نطاق -1؛ 1-100."
+
+#: libs/cmsp.cpp:373
+#, kde-format
+msgid "Value of param P is out of 0-100 range."
+msgstr "قيمة المعلمة P خارج نطاق 0-100."
+
+#: libs/cmsp.cpp:382
+#, kde-format
+msgid "Value of param C must be 0 or 1."
+msgstr "يجب أن تكون قيمة المعلمة C إما 0 أو 1."
+
+#: libs/cmsp.cpp:393
+#, kde-format
+msgid "Received unfinished sequence."
+msgstr "استُقبل تسلسل غير مكتمل."
+
+#: libs/cmsp.cpp:449
+#, kde-format
+msgid "MSP: Multiple downloads not supported, request ignored."
+msgstr "MSP: لا نؤيد التنزيلات المتعددة، طُلِب التجاهل."
+
+#: libs/cmsp.cpp:469
+#, kde-format
+msgid "MSP: downloading of sounds disabled - request ignored."
+msgstr "MSP: عُطّل تنزيل الأصوات - طُلِب التجاهل."
+
+#: libs/coutput.cpp:228
+#, kde-format
+msgid "No, no, no!"
+msgstr "لا، لا، لا!"
+
+#: libs/coutput.cpp:229
+#, kde-format
+msgid "I don't agree with it."
+msgstr "لا أتفق معه."
+
+#: libs/coutput.cpp:230
+#, kde-format
+msgid "Better not."
+msgstr "من الأفضل عدم القيام بذلك."
+
+#: libs/coutput.cpp:231
+#, kde-format
+msgid "I'd probably suggest to reject."
+msgstr "ربما أقترح الرفض."
+
+#: libs/coutput.cpp:232
+#, kde-format
+msgid "Saying no seems a bit better."
+msgstr "قول لا يبدو أفضل قليلاً."
+
+#: libs/coutput.cpp:233
+#, kde-format
+msgid "Saying yes seems a bit better."
+msgstr "قول نعم يبدو أفضل قليلاً."
+
+#: libs/coutput.cpp:234
+#, kde-format
+msgid "I'd probably suggest to accept."
+msgstr "ربما أقترح القبول."
+
+#: libs/coutput.cpp:235
+#, kde-format
+msgid "Sounds good."
+msgstr "يبدو جيداً."
+
+#: libs/coutput.cpp:236
+#, kde-format
+msgid "I agree with it."
+msgstr "أتفق معه."
+
+#: libs/coutput.cpp:237
+#, kde-format
+msgid "Definitely yes!"
+msgstr "بالتأكيد نعم!"
+
+#: libs/coutput.cpp:239
+#, kde-format
+msgid "My decision: %1"
+msgstr "قراري: %1"
+
+#: libs/cpluginmanager.cpp:268
+#, kde-format
+msgid "Plugins"
+msgstr "الملحقات"
+
+#: libs/cprofilemanager.cpp:71
+#, kde-format
+msgid "Profile name"
+msgstr "اسم التشكيلة"
+
+#: libs/cprofilemanager.cpp:72
+#, kde-format
+msgid "Server"
+msgstr "الخادم"
+
+#: libs/cprofilemanager.cpp:73
+#, kde-format
+msgid "Port"
+msgstr "المنفذ"
+
+#: libs/cprofilemanager.cpp:74
+#, kde-format
+msgid "Login name"
+msgstr "اسم الولوج"
+
+#: libs/cscripteditor.cpp:46
+#, kde-format
+msgid "Enter your script here."
+msgstr "أدخل نصك البرمجي هنا."
+
+#: libs/cscripteditor.cpp:47
+#, kde-format
+msgid ""
+"Enter a Javascript script that will be executed when the object is triggered."
+"<br /><br />The following routines are available in the script in addition "
+"to standard Javascript tools:<br /><br /><b>window.message(text)</b> - "
+"display a message<br /><b>window.send(command)</b> - send a command<br /"
+"><b>window.sendraw(command)</b> - send a command with no processing<br /"
+"><b>window.get(name)</b> - retrieve the value of a variable<br /><b>window."
+"set(name, value)</b> - set the value of a variable<br /><br />You can also "
+"use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
+"matched, line, matches[]</b>"
+msgstr ""
+"أدخل نصاً برمجياً بلغة جافاسكريبت سينفَّذ عند تفعيل الكائن.<br /><br />الروتينات "
+"التالية متاحة في النص البرمجي بالإضافة إلى أدوات جافاسكريبت القياسية:<br /"
+"><br /><b>window.message(text)</b> - اعرض رسالة<br /><b>window."
+"send(command)</b> - أرسل أمراً<br /><b>window.sendraw(command)</b> - أرسل "
+"أمراً دون معالجة<br /><b>window.get(name)</b> - استرجع قيمة متغير<br /"
+"><b>window.set(name, value)</b> - اضبط قيمة متغير<br /><br />يمكنك أيضاً "
+"استخدام المتغيرات التالية: <b>prefix, prefixfull, suffix, suffixfull, "
+"matched, line, matches[]</b>"
+
+#: libs/cstatus.cpp:42 libs/cstatus.cpp:189
+#, kde-format
+msgid "Off-line"
+msgstr "غير متصل"
+
+#: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
+#: libs/cstatus.cpp:219 libs/cstatus.cpp:268
+#, kde-format
+msgid "idle"
+msgstr "ساكن"
+
+#: libs/cstatus.cpp:181
+#, kde-format
+msgid "Connected"
+msgstr "متّصل"
+
+#: libs/cstatus.cpp:184
+#, kde-format
+msgid "Connected."
+msgstr "متّصل."
+
+#: libs/cstatus.cpp:190
+#, kde-format
+msgid "Disconnected."
+msgstr "غير متصل."
+
+#: libs/cstatus.cpp:192
+#, kde-format
+msgid "Connection has been closed."
+msgstr "أُغلقت الوصلة."
+
+#: libs/cvariablelist.cpp:375
+#, kde-format
+msgid "This is not a KMuddy variable list file."
+msgstr "هذا ليس ملف قائمة متغيرات كمدي."
+
+#: plugins/converter/converterdialog.cpp:41
+#, kde-format
+msgid "Profile Converter"
+msgstr "محوِّل التشكيلة"
+
+#: plugins/converter/converterdialog.cpp:49
+#, kde-format
+msgid ""
+"Pick profiles that you would like to convert and press Ok. This tool will "
+"create a new profile containing the information from the chosen profiles. "
+"Existing profiles will not be overwritten, even if they have the same name. "
+"The old profiles will be kept intact."
+msgstr ""
+"اختر التشكيلات التي تريد تحويلها واضغط موافق. ستنشئ هذه الأداة تشكيلة جديدة "
+"تحتوي على معلومات من التشكيلات المختارة. لن تُستبدل التشكيلات الموجودة، حتى "
+"لو كان لها الاسم ذاته. ستبقى التشكيلات القديمة سليمة."
+
+#: plugins/converter/converterdialog.cpp:54
+#, kde-format
+msgid "Path"
+msgstr "المسار"
+
+#: plugins/converter/converterplugin.cpp:73
+#, kde-format
+msgid "Profile &Converter..."
+msgstr "محوِّل التشكيلة &..."
+
+#: plugins/converter/converterplugin.cpp:129
+#, kde-format
+msgid "The profiles have been successfully converted."
+msgstr "حُوّلت التشكيلات بنجاح."
+
+#: plugins/converter/converterplugin.cpp:131
+#, kde-format
+msgid "You did not specify any profiles to convert."
+msgstr "لم تحدد أي تشكيلات للتحويل."
+
+#: plugins/mapper/cmapclipboard.cpp:64
+#, kde-format
+msgid "Select All"
+msgstr "حدّد الكلّ"
+
+#: plugins/mapper/cmapclipboard.cpp:68
+#, kde-format
+msgid "Unselect All"
+msgstr "أزِل تحديد الكلّ"
+
+#: plugins/mapper/cmapclipboard.cpp:72
+#, kde-format
+msgid "Invert Selection"
+msgstr "اعكس التّحديد"
+
+#: plugins/mapper/cmapclipboard.cpp:80
+#, kde-format
+msgid "Copy"
+msgstr "انسخ"
+
+#: plugins/mapper/cmapclipboard.cpp:84
+#, kde-format
+msgid "Cut"
+msgstr "قصّ"
+
+#: plugins/mapper/cmapclipboard.cpp:88
+#, kde-format
+msgid "Paste"
+msgstr "ألصق"
+
+#: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
+#, kde-format
+msgid "Paste Element"
+msgstr "الصق العنصر"
+
+#: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
+#, kde-format
+msgid "Update Properties"
+msgstr "حدّث الخصائص"
+
+#: plugins/mapper/cmapclipboard.cpp:375
+#, kde-format
+msgid "Paste Path"
+msgstr "لصق المسار"
+
+#: plugins/mapper/cmapclipboard.cpp:466
+#, kde-format
+msgid "Delete Elements"
+msgstr "احذف العناصر"
+
+#: plugins/mapper/cmapelement.cpp:338
+#, kde-format
+msgid "Resize Element"
+msgstr "غيّر حجم العنصر"
+
+#: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
+#, kde-format
+msgid "Level %1"
+msgstr "المستوى %1"
+
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
+#, kde-format
+msgid "Map #1"
+msgstr "الخريطة #1"
+
+#: plugins/mapper/cmapmanager.cpp:194
+#, kde-format
+msgid "Mapper: Directions"
+msgstr "الخارطة: الاتجاهات"
+
+#: plugins/mapper/cmapmanager.cpp:197
+#, kde-format
+msgid "Mapper: Movement"
+msgstr "الخارطة: الحركة"
+
+#: plugins/mapper/cmapmanager.cpp:200
+#, kde-format
+msgid "Mapper: Colors"
+msgstr "الخارطة: الألوان"
+
+#: plugins/mapper/cmapmanager.cpp:203
+#, kde-format
+msgid "Mapper: Speedwalk"
+msgstr "الخارطة: المشي السريع"
+
+#: plugins/mapper/cmapmanager.cpp:408
+#, kde-format
+msgid "Change Login Room"
+msgstr "غيّر غرفة تسجيل الدخول"
+
+#: plugins/mapper/cmapmanager.cpp:411
+#, kde-format
+msgid "Remove Login Room Status"
+msgstr "أزل حالة غرفة تسجيل الدخول"
+
+#: plugins/mapper/cmapmanager.cpp:418
+#, kde-format
+msgid "Set Login Room Status"
+msgstr "اضبط حالة غرفة تسجيل الدخول"
+
+#: plugins/mapper/cmapmanager.cpp:450
+#, kde-format
+msgid "Change Current Room"
+msgstr "غيّر الغرفة الحالية"
+
+#: plugins/mapper/cmapmanager.cpp:452
+#, kde-format
+msgid "Remove Current Room Status"
+msgstr "أزل حالة الغرفة الحالية"
+
+#: plugins/mapper/cmapmanager.cpp:457
+#, kde-format
+msgid "Set Current Room Status"
+msgstr "اضبط حالة الغرفة الحالية"
+
+#: plugins/mapper/cmapmanager.cpp:565
+#, kde-format
+msgid "Create Level"
+msgstr "أنشئ مستوى"
+
+#: plugins/mapper/cmapmanager.cpp:634
+#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
+#, kde-format
+msgid "Create Room"
+msgstr "أنشئ غرفة"
+
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
+#, kde-format
+msgid "Create Text"
+msgstr "أنشئ نصاً"
+
+#: plugins/mapper/cmapmanager.cpp:761
+#, kde-format
+msgid "A path already exists at this location"
+msgstr "يوجد مسار مسبقاً في هذا الموقع"
+
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
+#: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
+#: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
+#, kde-format
+msgid "KMuddy Mapper"
+msgstr "خارطة كمدي"
+
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
+#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
+#, kde-format
+msgid "Create Path"
+msgstr "أنشئ مساراً"
+
+#: plugins/mapper/cmapmanager.cpp:854
+#, kde-format
+msgid "Delete Level"
+msgstr "احذف مستوى"
+
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
+#, kde-format
+msgid "Delete Element"
+msgstr "احذف العنصر"
+
+#: plugins/mapper/cmapmanager.cpp:1444
+#, kde-format
+msgid "Speedwalking is already in progress"
+msgstr "المشي السريع قيد التنفيذ مسبقاً"
+
+#: plugins/mapper/cmapmanager.cpp:1498
+#, kde-format
+msgid "The automapper was unable to find a path to requested room"
+msgstr "لم يتمكن راسم الخرائط الآلي من إيجاد مسار إلى الغرفة المطلوبة"
+
+#: plugins/mapper/cmapmanager.cpp:1532
+#, kde-format
+msgid "Speedwalk abort because move limit was reached"
+msgstr "إلغاء المشي السريع لأن حد الحركة وُصِل"
+
+#: plugins/mapper/cmapmanager.cpp:1631
+#, kde-format
+msgid "Move Elements in map"
+msgstr "حرّك العناصر في الخارطة"
+
+#: plugins/mapper/cmapmanager.cpp:1640
+#, kde-format
+msgid "Make Path Two-Way"
+msgstr "اجعل المسار ثنائي الاتجاه"
+
+#: plugins/mapper/cmapmanager.cpp:1650
+#, kde-format
+msgid "Make Path One-Way"
+msgstr "اجعل المسار أحادي الاتجاه"
+
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
+#, kde-format
+msgid "Change Element Property"
+msgstr "غيّر خاصية العنصر"
+
+#: plugins/mapper/cmapmanager.cpp:1768
+#, kde-format
+msgid "Root Zone"
+msgstr "منطقة الجذر"
+
+#: plugins/mapper/cmapmanager.cpp:1784
+#, kde-format
+msgid "Test room 1"
+msgstr "غرفة اختبار 1"
+
+#: plugins/mapper/cmapmanager.cpp:1787
+#, kde-format
+msgid "Test room 2"
+msgstr "غرفة اختبار 2"
+
+#: plugins/mapper/cmapmanager.cpp:1790
+#, kde-format
+msgid "Test room 3"
+msgstr "غرفة اختبار 3"
+
+#: plugins/mapper/cmapmanager.cpp:1793
+#, kde-format
+msgid "Test room 4"
+msgstr "غرفة اختبار 4"
+
+#: plugins/mapper/cmapmanager.cpp:1809
+#, kde-format
+msgid "Set Special Exit"
+msgstr "اضبط مخرجاً خاصاً"
+
+#: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
+#, kde-format
+msgid "Add Bend"
+msgstr "أضف انحناءة"
+
+#: plugins/mapper/cmappath.cpp:615
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
+#, kde-format
+msgid "Move Bend"
+msgstr "حرّك الانحناءة"
+
+#: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
+#, kde-format
+msgid "Delete Path Segment"
+msgstr "احذف مقطع المسار"
+
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:59
+#, kde-format
+msgid "Mapper"
+msgstr "راسم الخرائط"
+
+#: plugins/mapper/cmapview.cpp:79
+#, kde-format
+msgid "Follow Moves"
+msgstr "اتبع الحركات"
+
+#: plugins/mapper/cmapview.cpp:85
+#, kde-format
+msgid "Auto Create"
+msgstr "إنشاء آليًا"
+
+#: plugins/mapper/cmapview.cpp:122
+#, kde-format
+msgid "&Grid"
+msgstr "&شبكة"
+
+#: plugins/mapper/cmapview.cpp:127
+#, kde-format
+msgid "Display Upper Level"
+msgstr "اعرض المستوى العلوي"
+
+#: plugins/mapper/cmapview.cpp:132
+#, kde-format
+msgid "Display Lower Level"
+msgstr "اعرض المستوى السفلي"
+
+#: plugins/mapper/cmapview.cpp:137
+#, kde-format
+msgid "Delete Current Level"
+msgstr "احذف المستوى الحالي"
+
+#: plugins/mapper/cmapview.cpp:142
+#, kde-format
+msgid "Create New Zone"
+msgstr "أنشئ منطقة جديدة"
+
+#: plugins/mapper/cmapview.cpp:147
+#, kde-format
+msgid "Delete Current Zone"
+msgstr "احذف المنطقة الحالية"
+
+#: plugins/mapper/cmapview.cpp:154
+#, kde-format
+msgid "Map Upper Level"
+msgstr "ارسم خريطة المستوى العلوي"
+
+#: plugins/mapper/cmapview.cpp:158
+#, kde-format
+msgid "Map Lower Level"
+msgstr "ارسم خريطة المستوى السفلي"
+
+#: plugins/mapper/cmapview.cpp:165
+#, kde-format
+msgid "Set &Current Position"
+msgstr "اضبط &الموضع الحالي"
+
+#: plugins/mapper/cmapview.cpp:169
+#, kde-format
+msgid "Set Room to &Login Point"
+msgstr "اضبط الغرفة كنقطة &تسجيل الدخول"
+
+#: plugins/mapper/cmapview.cpp:173
+#, kde-format
+msgid "&Speed walk to room"
+msgstr "&المشي السريع إلى الغرفة"
+
+#: plugins/mapper/cmapview.cpp:177
+#, kde-format
+msgid "&Delete room"
+msgstr "ا&حذف الغرفة"
+
+#: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
+#: plugins/mapper/cmapview.cpp:226
+#, kde-format
+msgid "&Properties"
+msgstr "&خصائص"
+
+#: plugins/mapper/cmapview.cpp:189
+#, kde-format
+msgid "&Delete Text"
+msgstr "&احذف النص"
+
+#: plugins/mapper/cmapview.cpp:201
+#, kde-format
+msgid "&One way"
+msgstr "&أحادي الاتجاه"
+
+#: plugins/mapper/cmapview.cpp:205
+#, kde-format
+msgid "&Two way"
+msgstr "&ثنائي الاتجاه"
+
+#: plugins/mapper/cmapview.cpp:209
+#, kde-format
+msgid "&Add Bend"
+msgstr "&أضف انحناءة"
+
+#: plugins/mapper/cmapview.cpp:213
+#, kde-format
+msgid "&Remove Segment"
+msgstr "&أزل المقطع"
+
+#: plugins/mapper/cmapview.cpp:217
+#, kde-format
+msgid "&Edit Bends"
+msgstr "&عدّل الانحناءات"
+
+#: plugins/mapper/cmapview.cpp:221
+#, kde-format
+msgid "&Delete Path"
+msgstr "ا&حذف المسار"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdHide)
+#: plugins/mapper/cmapview.cpp:231
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
+#, kde-format
+msgid "Hide"
+msgstr "أخفِ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
+#: plugins/mapper/cmapview.cpp:240
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
+#, kde-format
+msgid "Custom"
+msgstr "مخصّص"
+
+#: plugins/mapper/cmapview.cpp:243
+#, kde-format
+msgid "&Label"
+msgstr "اللصي&قة"
+
+#: plugins/mapper/cmapview.cpp:584
+#, kde-format
+msgid "There is no level in that direction. Do you want to create a new one?"
+msgstr "لا يوجد مستوى في ذلك الاتجاه. هل تريد إنشاء مستوى جديد؟"
+
+#: plugins/mapper/cmapview.cpp:584
+#, kde-format
+msgid "Create New Level"
+msgstr "أنشئ مستوى جديداً"
+
+#: plugins/mapper/cmapview.cpp:606
+#, kde-format
+msgid "Are you sure that you want to delete the current level?"
+msgstr "هل أنت متأكد من أنك تريد حذف المستوى الحالي؟"
+
+#: plugins/mapper/cmapview.cpp:613
+#, kde-format
+msgid "Please enter the name of the new zone:"
+msgstr "الرجاء أدخل اسم المنطقة الجديدة:"
+
+#: plugins/mapper/cmapview.cpp:622
+#, kde-format
+msgid ""
+"Are you sure that you want to delete the current zone? This cannot be undone."
+msgstr "هل أنت متأكد من أنك تريد حذف المنطقة الحالية؟ لا يمكن التراجع عن هذا."
+
+#: plugins/mapper/cmapview.cpp:759
+#, kde-format
+msgid "Change room label position"
+msgstr "غيّر موضع لصيقة الغرفة"
+
+#: plugins/mapper/cmapview.cpp:785
+#, kde-format
+msgid "Change zone label position"
+msgstr "غيّر موضع لصيقة المنطقة"
+
+#: plugins/mapper/cmapviewstatusbar.cpp:55
+#, kde-format
+msgid "Current Room : "
+msgstr "الغرفة الحالية : "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:56
+#, kde-format
+msgid "Level : "
+msgstr "المستوى: "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:57
+#, kde-format
+msgid "Zone : "
+msgstr "المنطقة : "
+
+#: plugins/mapper/cmapzone.cpp:34
+#, kde-format
+msgid "Unnamed Zone"
+msgstr "منطقة بلا اسم"
+
+#: plugins/mapper/cmapzonemanager.cpp:232
+#, kde-format
+msgid "This is not a KMuddy map list."
+msgstr "هذه ليست قائمة خرائط كمدي."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
+#, kde-format
+msgid "Mapper Colors Options"
+msgstr "خيارات ألوان راسم الخرائط"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
+#, kde-format
+msgid "Current Level"
+msgstr "المستوى الحالي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
+#, kde-format
+msgid "Default Path Color"
+msgstr "لون المسار المبدئي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
+#, kde-format
+msgid "Default Room Color"
+msgstr "لون الغرفة المبدئي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
+#, kde-format
+msgid "Current Position Color"
+msgstr "لون الموضع الحالي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
+#, kde-format
+msgid "Special Exit Color"
+msgstr "لون المخرج الخاص"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
+#, kde-format
+msgid "Login Room Color"
+msgstr "لون غرفة تسجيل الدخول"
+
+#. i18n: ectx: property (text), widget (QLabel, lblEdit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
+#, kde-format
+msgid "Edit Mode Color"
+msgstr "لون وضع التحرير"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
+#, kde-format
+msgid "Default Text Color"
+msgstr "لون النص المبدئي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
+#, kde-format
+msgid "Default Zone Color"
+msgstr "لون المنطقة المبدئي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSelected)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
+#, kde-format
+msgid "Selected Color"
+msgstr "لون التّحديد"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
+#, kde-format
+msgid "Lower Level"
+msgstr "المستوى السفلي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:322
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
+#, kde-format
+msgid "Room Color"
+msgstr "لون الغرفة"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:351
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
+#, kde-format
+msgid "Path Color"
+msgstr "لون المسار"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerText)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:361
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:502
+#, kde-format
+msgid "Text Color"
+msgstr "لون النّصّ"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerZone)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:371
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
+#, kde-format
+msgid "Zone Color"
+msgstr "لون المنطقة"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
+#, kde-format
+msgid "Upper Level"
+msgstr "المستوى العلوي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblBackground)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
+#, kde-format
+msgid "Background Color"
+msgstr "لون الخلفيّة"
+
+#. i18n: ectx: property (text), widget (QLabel, lblGrid)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
+#, kde-format
+msgid "Grid Color"
+msgstr "لون الشبكة"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
+#, kde-format
+msgid "Directions"
+msgstr "الاتجاهات"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsLong)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
+#, kde-format
+msgid "Long Directions Commands"
+msgstr "أوامر الاتجاهات الطويلة"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:71
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:216
+#, kde-format
+msgid "North"
+msgstr "الشمال"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:81
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:226
+#, kde-format
+msgid "East"
+msgstr "الشرق"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:91
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:236
+#, kde-format
+msgid "South"
+msgstr "الجنوب"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:101
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:246
+#, kde-format
+msgid "West"
+msgstr "الغرب"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:131
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
+#, kde-format
+msgid "North East"
+msgstr "شمال شرق"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:141
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
+#, kde-format
+msgid "South East"
+msgstr "جنوب شرقي"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:151
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
+#, kde-format
+msgid "South West"
+msgstr "جنوب غربي"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:161
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:306
+#, kde-format
+msgid "North West"
+msgstr "الشمال الغربي"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
+#, kde-format
+msgid "Short Directions Commands"
+msgstr "أوامر الاتجاهات القصيرة"
+
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
+#, kde-format
+msgid "Enter invalid movement string as a regular expression"
+msgstr "أدخل سلسلة حركة غير صالحة كتعبير منتظم"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
+#, kde-format
+msgid "Valid Room Checking"
+msgstr "التحقق من صحة الغرفة"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
+#, kde-format
+msgid "Enable valid room checking"
+msgstr "فعّل التحقق من صحة الغرفة"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
+#, kde-format
+msgid "Invalid Move Strings"
+msgstr "سلاسل الحركة غير الصالحة"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
+#, kde-format
+msgid "Add"
+msgstr "أضف"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdEdit)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:68
+#, kde-format
+msgid "Edit"
+msgstr "حرّر"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdRemove)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:75
+#, kde-format
+msgid "Remove"
+msgstr "أزل"
+
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:298
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
+#, kde-format
+msgid "Changed Path Properties"
+msgstr "غُيّرت خصائص المسار"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
+#, kde-format
+msgid "Path Properties"
+msgstr "خصائص المسار"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
+#, kde-format
+msgid "Exits"
+msgstr "المخارج"
+
+#. i18n: ectx: property (title), widget (QGroupBox, grdExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
+#, kde-format
+msgid "Exit Details"
+msgstr "تفاصيل المخرج"
+
+#. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
+#, kde-format
+msgid "Two Way Exit"
+msgstr "مخرج ثنائي الاتجاه"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
+#, kde-format
+msgid "Nor&mal exit"
+msgstr "مخرج عا&دي"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
+#, kde-format
+msgid "Source Directions"
+msgstr "اتجاهات المصدر"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:124
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:488
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:322
+#, kde-format
+msgid "E"
+msgstr "شر"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestS)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:146
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:510
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:190
+#, kde-format
+msgid "S"
+msgstr "ج"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:190
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:466
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:256
+#, kde-format
+msgid "W"
+msgstr "غ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:212
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:378
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:344
+#, kde-format
+msgid "NE"
+msgstr "ش.شرق"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:234
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:444
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:278
+#, kde-format
+msgid "NW"
+msgstr "ش.غرب"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:400
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:212
+#, kde-format
+msgid "SE"
+msgstr "ج.شرق"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestN)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:278
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:422
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
+#, kde-format
+msgid "N"
+msgstr "ش"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:300
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:532
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:234
+#, kde-format
+msgid "SW"
+msgstr "ج.غرب"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
+#, kde-format
+msgid "Destination Direction"
+msgstr "اتجاه الوجهة"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
+#, kde-format
+msgid "Spec&ial Exit"
+msgstr "مخرج خا&ص"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
+#, kde-format
+msgid "Special Command"
+msgstr "أمر خاص"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
+#, kde-format
+msgid "Source To Destination:"
+msgstr "من المصدر إلى الوجهة:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
+#, kde-format
+msgid "Destination To Source:"
+msgstr "من الوجهة إلى المصدر:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
+#, kde-format
+msgid "Src To Destination Commands"
+msgstr "أوامر من المصدر إلى الوجهة"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcBefore)
+#. i18n: ectx: property (text), widget (QLabel, lblDestBefore)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:665
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:706
+#, kde-format
+msgid "Before walking path:"
+msgstr "قبل المشي في المسار:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcAfter)
+#. i18n: ectx: property (text), widget (QLabel, lblDestAfter)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:678
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:719
+#, kde-format
+msgid "After walking path:"
+msgstr "بعد المشي في المسار:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDestSrcCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:694
+#, kde-format
+msgid "Destination To Source Commands"
+msgstr "أوامر من الوجهة إلى المصدر"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdOk)
+#. i18n: ectx: property (text), widget (QPushButton, cmdOK)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
+#, kde-format
+msgid "OK"
+msgstr "حسنًا"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
+#, kde-format
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
+#: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
+#, kde-format
+msgid "Changed Room Properties"
+msgstr "غُيّرت خصائص الغرفة"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
+#, kde-format
+msgid "Room Properties"
+msgstr "خصائص الغرفة"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
+#, kde-format
+msgid "&Description"
+msgstr "ال&وصف"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLabel)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
+#, kde-format
+msgid "Label:"
+msgstr "اللصيقة:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:55
+#, kde-format
+msgid "Description:"
+msgstr "الوصف:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAppearance)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
+#, kde-format
+msgid "&Appearance"
+msgstr "الم&ظهر"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
+#, kde-format
+msgid "Color"
+msgstr "اللون"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRoomColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
+#, kde-format
+msgid "Room Color:"
+msgstr "لون الغرفة:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
+#, kde-format
+msgid "Default room color"
+msgstr "لون الغرفة المبدئي"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
+#, kde-format
+msgid "LabelPosition"
+msgstr "موضع اللصيقة"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
+#, kde-format
+msgid "&Exits"
+msgstr "&المخارج"
+
+#. i18n: ectx: property (text), widget (QLabel, lblExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
+#, kde-format
+msgid "Room Exits:"
+msgstr "مخارج الغرفة:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
+#, kde-format
+msgid "Direction"
+msgstr "الاتجاه"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
+#, kde-format
+msgid "Before command"
+msgstr "قبل الأمر"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
+#, kde-format
+msgid "After command"
+msgstr "بعد الأمر"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
+#, kde-format
+msgid "Properties"
+msgstr "الخصائص"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:533
+#, kde-format
+msgid "&Contents"
+msgstr "ال&محتويات"
+
+#. i18n: ectx: property (text), widget (QLabel, lblContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
+#, kde-format
+msgid "RoomContents:"
+msgstr "محتويات الغرفة:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
+#, kde-format
+msgid "New Item"
+msgstr "عنصر جديد"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdRemoveItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
+#, kde-format
+msgid "Remove Item"
+msgstr "أزل العنصر"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
+#, kde-format
+msgid "Speedwalk Options"
+msgstr "خيارات المشي السريع"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
+#, kde-format
+msgid "Limit Speedwalk Moves"
+msgstr "اقصر حركات المشي السريع"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:38
+#, kde-format
+msgid "Limit speedwalk moves"
+msgstr "اقصر حركات المشي السريع"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:53
+#, kde-format
+msgid "Number of moves before aborting:"
+msgstr "عدد الحركات قبل الإلغاء:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:106
+#, kde-format
+msgid "Delay Speedwalk Moves"
+msgstr "أخّر حركات المشي السريع"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
+#, kde-format
+msgid "Delay before sending next command (centi secconds)"
+msgstr "تأخير قبل إرسال الأمر التالي (جزء من مائة من الثانية)"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
+#, kde-format
+msgid "Text Properties"
+msgstr "خصائص النص"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
+#, kde-format
+msgid "&Font"
+msgstr "ال&خط"
+
+#. i18n: ectx: property (text), widget (QLabel, lblFamily)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
+#, kde-format
+msgid "Family:"
+msgstr "العائلة:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblColor_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
+#, kde-format
+msgid "Color:"
+msgstr "اللون:"
+
+#. i18n: ectx: property (text), widget (KColorButton, cmdColor)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
+#, kde-format
+msgid "Button"
+msgstr "الزر"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
+#, kde-format
+msgid "S&ize"
+msgstr "ال&حجم"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
+#, kde-format
+msgid "Actual Size "
+msgstr "الحجم ال&فعلي "
+
+#. i18n: ectx: property (text), widget (QLabel, Width_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
+#, kde-format
+msgid "Width (pixels):"
+msgstr "العرض (بالبكسل):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
+#, kde-format
+msgid "Height (pixels):"
+msgstr "الارتفاع (بالبكسل):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
+#, kde-format
+msgid "Font Size"
+msgstr "حجم الخط"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSize_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
+#, kde-format
+msgid "Enter font size:"
+msgstr "أدخل حجم الخط:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
+#, kde-format
+msgid "Set Size"
+msgstr "اضبط الحجم"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab3)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
+#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
+#, kde-format
+msgid "Text"
+msgstr "النص"
+
+#. i18n: ectx: property (text), widget (QLabel, lblText)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
+#, kde-format
+msgid "Text:"
+msgstr "النص:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblPreview)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
+#, kde-format
+msgid "Preview:"
+msgstr "معاينة:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
+#, kde-format
+msgid "Speedwalk Progress"
+msgstr "تقدم المشي السريع"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
+#, kde-format
+msgid "x"
+msgstr "×"
+
+#: plugins/mapper/kmuddy_mapper.cpp:70
+#, kde-format
+msgid "Show &mapper"
+msgstr "اعرض &راسم الخرائط"
+
+#. i18n: ectx: ToolBar (tools)
+#: plugins/mapper/kmuddymapperpart.rc:10
+#, kde-format
+msgid "Tools"
+msgstr "أدوات"
+
+#. i18n: ectx: ToolBar (navigation)
+#: plugins/mapper/kmuddymapperpart.rc:21
+#, kde-format
+msgid "Navigation"
+msgstr "التّنقّل"
+
+#: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
+#, kde-format
+msgid "Move Elements"
+msgstr "حرّك العناصر"
+
+#: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
+#, kde-format
+msgid "Change element notes"
+msgstr "غيّر ملاحظات العنصر"
+
+#: plugins/mapper/plugins/standard/cmappluginstandard.cpp:70
+#, kde-format
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:37
+#, kde-format
+msgid "Notes:"
+msgstr "ملاحظات:"
+
+#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:57
+#, kde-format
+msgid "Eraser"
+msgstr "ممحاة"
+
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:34
+#, kde-format
+msgid "Select"
+msgstr "اختر"
+
+#: plugins/scripting/cscript.cpp:68
+#, kde-format
+msgid "Sorry, single-instance script."
+msgstr "نأسف، نص برمجي أحادي النسخة."
+
+#: plugins/scripting/cscripteditor.cpp:61
+#, kde-format
+msgid "Script &name"
+msgstr "ا&سم السّكربت"
+
+#: plugins/scripting/cscripteditor.cpp:65
+#, kde-format
+msgid "Name of this script."
+msgstr "اسم هذا النص البرمجي."
+
+#: plugins/scripting/cscripteditor.cpp:69
+#, kde-format
+msgid "&Command to execute"
+msgstr "الأ&مر لتنفيذه"
+
+#: plugins/scripting/cscripteditor.cpp:73
+#, kde-format
+msgid ""
+"Command to execute, including parameters. Note that you can specify more "
+"parameters when executing the command from the input line, if you enable the "
+"Allow parameters checkbox."
+msgstr ""
+"الأمر الذي سينفَّذ، شاملاً المعلمات. لاحظ أنه يمكنك تحديد مزيد من المعلمات عند "
+"تنفيذ الأمر من سطر الإدخال، إذا فعّلت مربع تحديد \"السماح بالمعلمات\"."
+
+#: plugins/scripting/cscripteditor.cpp:82
+#, kde-format
+msgid ""
+"Working directory for the script. Script will behave exactly as if it was "
+"run from this directory in console."
+msgstr ""
+"دليل العمل للنص البرمجي. سيتصرف النص البرمجي كما لو كان شُغّل من هذا الدليل في "
+"سطر الأوامر."
+
+#: plugins/scripting/cscripteditor.cpp:90
+#, kde-format
+msgid "Send user commands"
+msgstr "أرسل أوامر المستخدم"
+
+#: plugins/scripting/cscripteditor.cpp:91
+#, kde-format
+msgid ""
+"If script input is enabled, this enables sending of all sent commands to the "
+"script."
+msgstr ""
+"إذا كان إدخال النص البرمجي مفعّلاً، يفعّل هذا إرسال جميع الأوامر المرسلة إلى "
+"النص البرمجي."
+
+#: plugins/scripting/cscripteditor.cpp:94
+#, kde-format
+msgid "Enable communication"
+msgstr "فعّل الاتصال"
+
+#: plugins/scripting/cscripteditor.cpp:95
+#, kde-format
+msgid ""
+"Enables identification of lines of server output. Refer to the manual for "
+"more information."
+msgstr "يفعّل تحديد سطور إخراج الخادم. ارجع إلى الدليل للمزيد من المعلومات."
+
+#: plugins/scripting/cscripteditor.cpp:98
+#, kde-format
+msgid "Single-instance script"
+msgstr "نص برمجي أحادي النسخة"
+
+#: plugins/scripting/cscripteditor.cpp:99
+#, kde-format
+msgid ""
+"If an instance of this script is already running, another one can not be "
+"started."
+msgstr "إذا كانت نسخة من هذا النص البرمجي شغّلت مسبقاً، فلا يمكن تشغيل أخرى."
+
+#: plugins/scripting/cscripteditor.cpp:102
+#, kde-format
+msgid "Use flow control"
+msgstr "استخدم التحكم في التدفق"
+
+#: plugins/scripting/cscripteditor.cpp:103
+#, kde-format
+msgid ""
+"<p>If enabled, flow control will be used for this script. Flow control "
+"ensures that scripts are kept in sync, that means, that if two lines arrive "
+"from the server, the second one is not sent to the scripts until all running "
+"scripts have received the first one. However, in some situations, it's "
+"better not to use this feature.</p><p>If you don't need to disable flow "
+"control for some reason, leave this on.</p>"
+msgstr ""
+"<p>إذا كان مفعّلاً، سيُستخدم التحكم في التدفق لهذا النص البرمجي. يضمن التحكم في "
+"التدفق أن تُحفظ النصوص البرمجية متزامنة، وهذا يعني أنه إذا وصل سطران من "
+"الخادم، فلن يُرسل السطر الثاني إلى النصوص البرمجية حتى تستقبل جميع النصوص "
+"البرمجية قيد التشغيل السطر الأول. ومع ذلك، في بعض الحالات، من الأفضل عدم "
+"استخدام هذه الميزة.</p><p>إذا لم تحتاج إلى تعطيل التحكم في التدفق لسبب ما، "
+"اترك هذا مفعلاً.</p>"
+
+#: plugins/scripting/cscripteditor.cpp:111
+#, kde-format
+msgid "Communicate variables"
+msgstr "تواصل بشأن المتغيرات"
+
+#: plugins/scripting/cscripteditor.cpp:112
+#, kde-format
+msgid ""
+"If enabled, a UNIX domain socket will be created, allowing you to obtain and "
+"modify actual variable values. More information in the documentation."
+msgstr ""
+"إذا فُعّل، سيُنشأ مقبس نطاق UNIX، مما يسمح لك بالحصول على قيم المتغيرات الفعلية "
+"وتعديلها. المزيد من المعلومات في التوثيق."
+
+#: plugins/scripting/cscripteditor.cpp:145
+#, kde-format
+msgid "Choose script"
+msgstr "اختر النص البرمجي"
+
+#: plugins/scripting/cscripteditor.cpp:153
+#, kde-format
+msgid "Choose working directory"
+msgstr "اختر دليل العمل"
+
+#: plugins/scripting/cscriptlist.cpp:87
+#, kde-format
+msgid "Such external script does not exist!"
+msgstr "هذا النص البرمجي الخارجي غير موجود!"
+
+#: plugins/scripting/dlgrunninglist.cpp:31
+#, kde-format
+msgid "Running scripts"
+msgstr "النصوص البرمجية قيد التشغيل"
+
+#: plugins/scripting/dlgrunninglist.cpp:39
+#, kde-format
+msgid "&Running scripts"
+msgstr "النصوص البرمجية قيد ال&تشغيل"
+
+#: plugins/scripting/dlgrunninglist.cpp:50
+#, kde-format
+msgid "&Terminate"
+msgstr "أ&نهِ"
+
+#: plugins/scripting/dlgrunninglist.cpp:54
+#, kde-format
+msgid "&Kill"
+msgstr "ا&قتل"
+
+#: plugins/scripting/scriptingplugin.cpp:62
+#, kde-format
+msgid "/exec: Script list is not available."
+msgstr "/exec: قائمة النص البرمجي غير متاحة."
+
+#: plugins/scripting/scriptingplugin.cpp:122
+#, kde-format
+msgid "Scripts"
+msgstr "السّكربتات"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:61
+#, kde-format
+msgid "Variable name that this trigger will be reacting on."
+msgstr "اسم المتغير الذي سيتفاعل معه هذا الزناد."
+
+#: plugins/vartrigs/cvartriggereditor.cpp:63
+#, kde-format
+msgid "&Commands"
+msgstr "الأ&وامر"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:66
+#, kde-format
+msgid "Commands that will be executed when this trigger matches."
+msgstr "الأوامر التي ستنفَّذ عندما يطابق هذا الزناد."
+
+#: plugins/vartrigs/vartrigplugin.cpp:39
+#, kde-format
+msgid "Variable Triggers"
+msgstr "زنادات المتغيرات"
+
+#: plugins/varviewer/dlgvarviewer.cpp:70
+#, kde-format
+msgid "Variable"
+msgstr "المتغير"
+
+#: plugins/varviewer/dlgvarviewer.cpp:141
+#, kde-format
+msgid "Variables"
+msgstr "المتغيّرات"
