@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Implements a mapper",
+        "Description[ar]": "نفّذ صانع خرائط",
         "Description[ca@valencia]": "Implementa un mapador",
         "Description[ca]": "Implementa un mapador",
         "Description[en_GB]": "Implements a mapper",
@@ -24,6 +25,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Mapper",
+        "Name[ar]": "صانع خرائط",
         "Name[ca@valencia]": "Mapador",
         "Name[ca]": "Mapador",
         "Name[en_GB]": "Mapper",

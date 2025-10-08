@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Provides an interface for viewing variable values",
+        "Description[ar]": "وفّر واجهة لعرض قيم المتغيّرات",
         "Description[ca@valencia]": "Proporciona una interfície per a visualitzar valors de variables",
         "Description[ca]": "Proporciona una interfície per a visualitzar valors de variables",
         "Description[en_GB]": "Provides an interface for viewing variable values",
@@ -25,6 +26,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Variable Viewer",
+        "Name[ar]": "عارض المتغيّر",
         "Name[bs]": "Preglednik Varijabli",
         "Name[ca@valencia]": "Visor de variables",
         "Name[ca]": "Visualitzador de variables",

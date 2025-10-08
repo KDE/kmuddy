@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Testing Plugin",
+        "Description[ar]": "ملحق اختبار",
         "Description[ca@valencia]": "Connector de proves",
         "Description[ca]": "Connector de proves",
         "Description[en_GB]": "Testing Plugin",
@@ -25,6 +26,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Test",
+        "Name[ar]": "اختبر",
         "Name[ca@valencia]": "Prova",
         "Name[ca]": "Prova",
         "Name[cs]": "Test",

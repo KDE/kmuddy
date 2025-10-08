@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Adds support for variable triggers",
+        "Description[ar]": "أضف دعم قدّاحات المتغيّر",
         "Description[ca@valencia]": "Afig la implementació per a desencadenants variables",
         "Description[ca]": "Afegeix la implementació per a desencadenants variables",
         "Description[en_GB]": "Adds support for variable triggers",
@@ -24,6 +25,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Variable Triggers",
+        "Name[ar]": "قدّاحات المتغيّر",
         "Name[bs]": "Promjenjivi okidači",
         "Name[ca@valencia]": "Desencadenants variables",
         "Name[ca]": "Desencadenants variables",

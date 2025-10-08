@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Implements support for external scripting",
+        "Description[ar]": "نفّذ دعم البرمجة النصيّة الخارجيّة",
         "Description[ca@valencia]": "Implementa el suport per a la creació de scripts externs",
         "Description[ca]": "Implementa el suport per a la creació de scripts externs",
         "Description[en_GB]": "Implements support for external scripting",
@@ -25,6 +26,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "External Scripting",
+        "Name[ar]": "برمجة نصيّة خارجيّة",
         "Name[bs]": "Vanjsko skriptiranje",
         "Name[ca@valencia]": "Creació de scripts externs",
         "Name[ca]": "Creació de scripts externs",

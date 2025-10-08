@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Defines various string manipulation functions",
+        "Description[ar]": "عرِّف دوال متعدّدة لمعالجة السّلاسل",
         "Description[ca@valencia]": "Definix diverses funcions de manipulació de cadenes",
         "Description[ca]": "Defineix diverses funcions de manipulació de cadenes",
         "Description[en_GB]": "Defines various string manipulation functions",
@@ -25,6 +26,7 @@
         "EnabledByDefault": true,
         "License": "GPL",
         "Name": "Strings",
+        "Name[ar]": "السّلاسل",
         "Name[bs]": "Stringovi",
         "Name[ca@valencia]": "Cadenes",
         "Name[ca]": "Cadenes",
