@@ -732,7 +732,7 @@ msgstr "Correspondance exacte"
 #: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
 #, kde-format
 msgid "Sub-string"
-msgstr "Sous-chaîne"
+msgstr "Sous-chaine"
 
 #: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
 #, kde-format
@@ -831,7 +831,7 @@ msgid ""
 "nothing before/after the matched string."
 msgstr ""
 "Quand cette option est sélectionnée, le déclencheur ne correspondra qu'avec "
-"le texte s'il il y a des espaces ou rien avant / ou après la chaîne qui "
+"le texte s'il il y a des espaces ou rien avant / ou après la chaine qui "
 "correspond."
 
 #: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
@@ -881,9 +881,9 @@ msgid ""
 "or something like that."
 msgstr ""
 "<p>Avec une correspondance globale, un alias / déclencheur peut correspondre "
-"à plusieurs occurrences, s'il contient la chaîne recherchée plus d'une fois. "
-"Par exemple, si la chaîne recherchée est « abc », elle peut correspondre à "
-"la seule chaîne « abcdabcd » si la correspondance globale est désactivée "
+"à plusieurs occurrences, s'il contient la chaine recherchée plus d'une fois. "
+"Par exemple, si la chaine recherchée est « abc », elle peut correspondre à "
+"la seule chaine « abcdabcd » si la correspondance globale est désactivée "
 "mais deux fois si cette dernière est activée. A chaque correspondance, les "
 "actions demandées sont réalisées - ainsi, les commandes peuvent être "
 "envoyées plusieurs fois, une fois par correspondance.</p> <p>Veuillez noter "
@@ -1289,7 +1289,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:135
 #, kde-format
 msgid "Display system tray icon"
-msgstr "Afficher l'icône de la boîte à miniatures"
+msgstr "Afficher l'icône de la boite à miniatures"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:136
 #, kde-format
@@ -1300,7 +1300,7 @@ msgid ""
 "it. Your connection will remain active even if the window is hidden and you "
 "will still receive notification messages. "
 msgstr ""
-"Cette option définit la présence ou non de l'icône de la boîte à miniatures. "
+"Cette option définit la présence ou non de l'icône de la boite à miniatures. "
 "L'icône peut être utilisée pour masquer la fenêtre de l'application sans "
 "prendre de la place dans la barre de tâches. Vous pouvez cliquer sur l'icône "
 "pour masquer la fenêtre et ensuite cliquez une nouvelle fois pour la "
@@ -1320,7 +1320,7 @@ msgid ""
 "presence of activity in one of your connections. "
 msgstr ""
 "Cette option permet l'utilisation ou non des menus contextuels passifs. Ceux-"
-"ci apparaissent à coté de l'icône de la boîte à miniatures quand vous êtes "
+"ci apparaissent à coté de l'icône de la boite à miniatures quand vous êtes "
 "dans une autre fenêtre et vous alertent sur la présence d'activités sur "
 "l'une de vos connexions."
 
@@ -1683,7 +1683,7 @@ msgid ""
 "Here you can enter string that can be used to separate individual commands."
 msgstr ""
 "Vous pouvez saisir de multiples commandes en une fois. Elles seront "
-"exécutées ensemble. Vous pouvez saisir une chaîne pouvant séparer des "
+"exécutées ensemble. Vous pouvez saisir une chaine pouvant séparer des "
 "commandes uniques."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:434
@@ -1700,7 +1700,7 @@ msgid ""
 "direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
 "connections only)."
 msgstr ""
-"Si vous débutez une commande avec cette chaîne, elle sera interprétée comme "
+"Si vous débutez une commande avec cette chaine, elle sera interprétée comme "
 "un tapis roulant. Chaque caractère sera traité comme une commande : n, s, o, "
 "e, j(=ne), k(=se), l(=so), m(=no), h, b. <p>Les commandes qui seront "
 "employées pour chaque direction peuvent être définies dans les <i> "
@@ -1721,8 +1721,8 @@ msgid ""
 "(news, for example) will be treated as speed-walking. To avoid this, you'll "
 "have to type at least one character in upper-case."
 msgstr ""
-"L'activation de ceci demandera à KMuddy de développer les chaînes de tapis "
-"roulant même si aucune chaîne de tapis roulant n'est fournie. Ceci permet "
+"L'activation de ceci demandera à KMuddy de développer les chaines de tapis "
+"roulant même si aucune chaine de tapis roulant n'est fournie. Ceci permet "
 "d'avoir un tapis roulant plus rapide mais veuillez avoir à l'esprit que "
 "chaque commande qui se compose de caractères valables de tapis roulant "
 "(news, par exemple) sera traité comme un tapis roulant. Pour éviter cela, "
@@ -1740,8 +1740,8 @@ msgid ""
 "a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
 "(/exec calls external scripts)"
 msgstr ""
-"Si vous débutez une commande avec cette chaîne, la commande sera interprétée "
-"comme un appel de macro. <br> La syntaxe est &lt;cette chaîne&gt; &lt;"
+"Si vous débutez une commande avec cette chaine, la commande sera interprétée "
+"comme un appel de macro. <br> La syntaxe est &lt;cette chaine&gt; &lt;"
 "commande&gt; [paramètres](/exec appel aux scripts externes)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:459
@@ -1774,10 +1774,10 @@ msgid ""
 "connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
 "this string&gt; &lt;command&gt;"
 msgstr ""
-"Si une commande est lancée avec cette chaîne, celle-ci sera interprétée "
+"Si une commande est lancée avec cette chaine, celle-ci sera interprétée "
 "comme un appel de prise en compte de commandes. Ceci vous permettra "
 "d'envoyer des commandes vers d'autres personnes connectées.<br> La syntaxe "
-"est &lt;cette chaîne&gt; &lt;onglet de focus&gt; &lt;cette chaîne&gt; &lt;"
+"est &lt;cette chaine&gt; &lt;onglet de focus&gt; &lt;cette chaine&gt; &lt;"
 "commande&gt;"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:477
@@ -1791,7 +1791,7 @@ msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
 "parsing. This string will be removed first."
 msgstr ""
-"Si une commande est lancée avec cette chaîne, celle-ci sera envoyée tel "
+"Si une commande est lancée avec cette chaine, celle-ci sera envoyée tel "
 "quel, sans aucune analyse et sera supprimée tout d'abord."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:484
@@ -1823,7 +1823,7 @@ msgid ""
 "Sound Protocol).</qt>"
 msgstr ""
 "<qt>Active la lecture des sons pour toutes les connexions.\n"
-"Veuillez noter que vous pouvez ignorer ce paramètre dans la boîte de "
+"Veuillez noter que vous pouvez ignorer ce paramètre dans la boite de "
 "dialogue de MUD.\n"
 "Veuillez noter aussi que cela ne fonctionnera que si votre application MUD "
 "prend en charge <b>MSP</b> (MUD Sound Protocol).</qt>"
@@ -1945,7 +1945,7 @@ msgstr "Fe&rmer"
 #: kmuddy/dialogs/dlgconnect.cpp:90
 #, kde-format
 msgid "Closes this dialog box without connecting."
-msgstr "Ferme cette boîte de dialogue sans connexion."
+msgstr "Ferme cette boite de dialogue sans connexion."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -3588,7 +3588,7 @@ msgstr "Robert Marmorstein"
 #: kmuddy/main.cpp:74
 #, kde-format
 msgid "Systray icon support"
-msgstr "Prise en charge de l'icône de la boîte à miniatures"
+msgstr "Prise en charge de l'icône de la boite à miniatures"
 
 #: libs/caliaseditor.cpp:88
 #, kde-format
@@ -3647,7 +3647,7 @@ msgid ""
 "nothing before/after the matched string."
 msgstr ""
 "Quand cette option est sélectionnée, cet alias ne correspondra au texte que "
-"s'il y a des espaces ou rien avant / après la chaîne correspondant. "
+"s'il y a des espaces ou rien avant / après la chaine correspondant. "
 
 #: libs/caliaseditor.cpp:189
 #, kde-format
@@ -3676,9 +3676,9 @@ msgid ""
 "something like that."
 msgstr ""
 "<p>Avec une correspondance globale, un alias / déclencheur peut correspondre "
-"à plusieurs occurrences, s'il contient la chaîne recherchée plus d'une fois. "
-"Par exemple, si la chaîne recherchée est « abc », elle peut correspondre à "
-"la seule chaîne « abcd-abcd » si la correspondance globale est désactivée "
+"à plusieurs occurrences, s'il contient la chaine recherchée plus d'une fois. "
+"Par exemple, si la chaine recherchée est « abc », elle peut correspondre à "
+"la seule chaine « abcd-abcd » si la correspondance globale est désactivée "
 "mais deux fois si cette dernière est activée. A chaque correspondance, les "
 "actions demandées sont réalisées - ainsi, les commandes peuvent être "
 "envoyées plusieurs fois, une fois par correspondance.</p> <p>Veuillez noter "
@@ -4804,7 +4804,7 @@ msgstr "Commandes courtes de direction"
 #, kde-format
 msgid "Enter invalid movement string as a regular expression"
 msgstr ""
-"Saisissez une chaîne non valable de déplacement comme expression rationnelle "
+"Saisissez une chaine non valable de déplacement comme expression rationnelle "
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
@@ -5375,7 +5375,7 @@ msgid ""
 msgstr ""
 "Commande à exécuter, incluant les paramètres. Veuillez noter que vous pouvez "
 "spécifier plus de paramètres en exécutant la commande à partir de la ligne "
-"de saisie si vous activer la boîte de dialogue « Autoriser des paramètres »."
+"de saisie si vous activer la boite de dialogue « Autoriser des paramètres »."
 
 #: plugins/scripting/cscripteditor.cpp:82
 #, kde-format
