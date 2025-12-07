@@ -1956,8 +1956,8 @@ msgid ""
 "There was an error trying to duplicate the profile. Please ensure that you "
 "have write access to the profile directory."
 msgstr ""
-"S'ha produït un error en intentar duplicar el perfil. Assegureu-vos que "
-"teniu accés d'escriptura al directori de perfils."
+"S'ha produït un error mentre s'intentava duplicar el perfil. Assegureu-vos "
+"que teniu accés d'escriptura al directori de perfils."
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -2043,7 +2043,7 @@ msgstr "&Servidor:"
 #: kmuddy/dialogs/dlgeditprofile.cpp:49
 #, kde-format
 msgid "Enter address of the server where your MUD is running."
-msgstr "Introduïu l'adreça de l'amfitrió on s'està executant MUD."
+msgstr "Introduïu l'adreça del servidor on s'està executant MUD."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
 #, kde-format
@@ -2635,7 +2635,7 @@ msgstr "Connecta ràpidament"
 #: kmuddy/dialogs/dlgquickconnect.cpp:38
 #, kde-format
 msgid "&Host:"
-msgstr "&Màquina:"
+msgstr "A&mfitrió:"
 
 #: kmuddy/dialogs/dlgstatistics.cpp:41
 #, kde-format
@@ -4361,7 +4361,7 @@ msgstr "Crea automàticament"
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
 msgid "&Grid"
-msgstr "&Graella"
+msgstr "Quad&rícula"
 
 #: plugins/mapper/cmapview.cpp:127
 #, kde-format
