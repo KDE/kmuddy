@@ -128,7 +128,7 @@ void cTranscript::addLineToAdvTranscript (cTextChunk *chunk)
   if (includetimestamp)
   {
     QTime time = QTime::currentTime ();
-    timestamp = QString("[%1:%2:%3.%4] ").arg(time.hour(), 2, QChar('0')).arg(time.minute(), 2, QChar('0')).arg(time.second(), 2, QChar('0')).arg(time.msec() / 10, 2, QChar('0'));
+    timestamp = QString("[%1:%2:%3.%4] ").arg(QString::number(time.hour()), 2, QChar('0')).arg(QString::number(time.minute()), 2, QChar('0')).arg(QString::number(time.second()), 2, QChar('0')).arg(QString::number(time.msec() / 10), 2, QChar('0'));
     advfile.write (timestamp.toLatin1());
   }
  
@@ -461,11 +461,11 @@ void cTranscript::setAFName(const QString &what)
   
   fileformat = what;
 
-  QString day   = QString("%1").arg(date.day(), 2, QChar('0'));
-  QString month = QString("%1").arg(date.month(),  2, QChar('0'));
-  QString year  = QString("%1").arg(date.year(),   2, QChar('0'));
-  QString hour  = QString("%1").arg(time.hour(),   2, QChar('0'));
-  QString min   = QString("%1").arg(time.minute(), 2, QChar('0'));
+  QString day   = QString("%1").arg(QString::number(date.day()), 2, QChar('0'));
+  QString month = QString("%1").arg(QString::number(date.month()),  2, QChar('0'));
+  QString year  = QString("%1").arg(QString::number(date.year()),   2, QChar('0'));
+  QString hour  = QString("%1").arg(QString::number(time.hour()),   2, QChar('0'));
+  QString min   = QString("%1").arg(QString::number(time.minute()), 2, QChar('0'));
 
   if (settings()) {
     cProfileManager *pm = cProfileManager::self();
