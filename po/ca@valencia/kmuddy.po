@@ -2383,12 +2383,12 @@ msgstr "Mo&stra l'indicador en un camp separat"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:98
 #, kde-format
 msgid "Show prompt in the s&tatus bar"
-msgstr "Mostra l'indicador a la barra d'es&tat"
+msgstr "Mostra l'indicador en la barra d'es&tat"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:101
 #, kde-format
 msgid "Show prompt in the &console"
-msgstr "Mostra l'indicador a la &consola"
+msgstr "Mostra l'indicador en la &consola"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:104
 #, kde-format
