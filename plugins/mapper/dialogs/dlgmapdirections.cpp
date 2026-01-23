@@ -26,7 +26,7 @@
 DlgMapDirections::DlgMapDirections(const CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
-  connect(this, SIGNAL(accepted()), this, SLOT(slotOkPressed()));
+  connect(this, &DlgMapDirections::accepted, this, &DlgMapDirections::slotOkPressed);
 
 	m_mapManager = mapManager;
 

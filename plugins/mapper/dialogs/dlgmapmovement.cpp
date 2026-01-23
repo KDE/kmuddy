@@ -30,7 +30,7 @@
 DlgMapMovement::DlgMapMovement(CMapManager *mapManager, QWidget *parent) : QDialog(parent)
 {
   setupUi (this);
-  connect(this, SIGNAL(accepted()), this, SLOT(slotOkPressed()));
+  connect(this, &QDialog::accepted, this, &DlgMapMovement::slotOkPressed);
 
 	m_mapManager = mapManager;
 
