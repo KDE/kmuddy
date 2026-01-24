@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-01-24 00:40+0000\n"
 "PO-Revision-Date: 2024-09-22 09:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -360,7 +360,7 @@ msgid "Meta"
 msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
-#: kmuddy/kmuddy.cpp:279
+#: kmuddy/kmuddy.cpp:278
 #, kde-format
 msgid "&Command"
 msgstr "&Команда"
@@ -525,62 +525,62 @@ msgstr ""
 "У команді можна використовувати замінники, виклики скриптів та подібні "
 "елементи."
 
-#: kmuddy/ctranscript.cpp:173
+#: kmuddy/ctranscript.cpp:172
 #, kde-format
 msgid "Session transcript has been stopped."
 msgstr "Розшифрування сеансу було зупинено."
 
-#: kmuddy/ctranscript.cpp:207
+#: kmuddy/ctranscript.cpp:206
 #, kde-format
 msgid "Advanced session transcript has been stopped."
 msgstr "Розширене розшифрування сеансу було зупинено."
 
-#: kmuddy/ctranscript.cpp:258
+#: kmuddy/ctranscript.cpp:257
 #, kde-format
 msgid "Transcript file could not be opened."
 msgstr "Не вдалося відкрити файл розшифрування."
 
-#: kmuddy/ctranscript.cpp:259
+#: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Session transcript could not be started."
 msgstr "Не вдалося розпочати розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:278
+#: kmuddy/ctranscript.cpp:277
 #, kde-format
 msgid "Session transcript has just started."
 msgstr "Щойно було розпочато розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:287
+#: kmuddy/ctranscript.cpp:286
 #, kde-format
 msgid "Session transcript has been started."
 msgstr "Було розпочато розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:314
+#: kmuddy/ctranscript.cpp:313
 #, kde-format
 msgid "Advanced transcript file could not be opened."
 msgstr "Не вдалося відкрити файл розширеного розшифрування."
 
-#: kmuddy/ctranscript.cpp:315
+#: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced session transcript could not be started."
 msgstr "Не вдалося розпочати розширене розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:331
+#: kmuddy/ctranscript.cpp:330
 #, kde-format
 msgid "Advanced session transcript has just started."
 msgstr "Щойно було розпочато розширене розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:336
+#: kmuddy/ctranscript.cpp:335
 #, kde-format
 msgid "Advanced session transcript has been started."
 msgstr "Було розпочато розширене розшифрування сеансу."
 
-#: kmuddy/ctranscript.cpp:340
+#: kmuddy/ctranscript.cpp:339
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
 msgstr "Дані розшифрування сеансів оновлюватимуться опівночі."
 
-#: kmuddy/ctranscript.cpp:426
+#: kmuddy/ctranscript.cpp:425
 #, kde-format
 msgid "Dump file could not be opened."
 msgstr "Не вдалося відкрити файл дампа."
@@ -1061,7 +1061,7 @@ msgstr ""
 "За допомогою цього пункту можна надіслати відповідний текст до окремого "
 "вікна виведення даних"
 
-#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:51
 #, kde-format
 msgid "Output Windows"
 msgstr "Вікна виведення даних"
@@ -2879,249 +2879,249 @@ msgstr ""
 "світовий час, $h — години, $m — хвилини, $D — день, $M — місяць, $Y — рік та "
 "будь-які комбінації літер та цифр."
 
-#: kmuddy/dialogs/dlgwindows.cpp:58
+#: kmuddy/dialogs/dlgwindows.cpp:57
 #, kde-format
 msgid "&List of output windows"
 msgstr "&Список вікон виведення даних"
 
-#: kmuddy/dialogs/dlgwindows.cpp:65
+#: kmuddy/dialogs/dlgwindows.cpp:64
 #, kde-format
 msgid "&Show"
 msgstr "По&казати"
 
-#: kmuddy/dialogs/dlgwindows.cpp:66
+#: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
 msgid "&Hide"
 msgstr "При&ховати"
 
-#: kmuddy/dialogs/dlgwindows.cpp:67
+#: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Delete"
 msgstr "Ви&лучити"
 
-#: kmuddy/kmuddy.cpp:241
+#: kmuddy/kmuddy.cpp:240
 #, kde-format
 msgid "&Connect..."
 msgstr "&З’єднатись…"
 
-#: kmuddy/kmuddy.cpp:248
+#: kmuddy/kmuddy.cpp:247
 #, kde-format
 msgid "&QuickConnect..."
 msgstr "&Швидко з’єднатись…"
 
-#: kmuddy/kmuddy.cpp:254
+#: kmuddy/kmuddy.cpp:253
 #, kde-format
 msgid "&Disconnect"
 msgstr "&Роз'єднатись"
 
-#: kmuddy/kmuddy.cpp:260
+#: kmuddy/kmuddy.cpp:259
 #, kde-format
 msgid "&Reconnect"
 msgstr "З'&єднатись знову"
 
-#: kmuddy/kmuddy.cpp:265
+#: kmuddy/kmuddy.cpp:264
 #, kde-format
 msgid "Close &tab"
 msgstr "Закрити вк&ладку"
 
-#: kmuddy/kmuddy.cpp:274
+#: kmuddy/kmuddy.cpp:273
 #, kde-format
 msgid "Paste &As"
 msgstr "Вставити &як"
 
-#: kmuddy/kmuddy.cpp:283
+#: kmuddy/kmuddy.cpp:282
 #, kde-format
 msgid "&Input"
 msgstr "&Введення"
 
-#: kmuddy/kmuddy.cpp:290
+#: kmuddy/kmuddy.cpp:289
 #, kde-format
 msgid "Copy &Selection"
 msgstr "Копіювати позна&чене"
 
-#: kmuddy/kmuddy.cpp:296
+#: kmuddy/kmuddy.cpp:295
 #, kde-format
 msgid "Enable command &parsing"
 msgstr "Увімкнути о&бробку команд"
 
-#: kmuddy/kmuddy.cpp:303
+#: kmuddy/kmuddy.cpp:302
 #, kde-format
 msgid "Ca&ncel pending commands"
 msgstr "С&касувати команди у черзі"
 
-#: kmuddy/kmuddy.cpp:314
+#: kmuddy/kmuddy.cpp:313
 #, kde-format
 msgid "Show &gaugebar"
 msgstr "Показувати панель ви&мірювачів"
 
-#: kmuddy/kmuddy.cpp:327
+#: kmuddy/kmuddy.cpp:326
 #, kde-format
 msgid "&Object Editor..."
 msgstr "Р&едагувати об’єкт…"
 
-#: kmuddy/kmuddy.cpp:332
+#: kmuddy/kmuddy.cpp:331
 #, kde-format
 msgid "&Output windows..."
 msgstr "&Вікна виведення даних…"
 
-#: kmuddy/kmuddy.cpp:336
+#: kmuddy/kmuddy.cpp:335
 #, kde-format
 msgid "A&liases enabled"
 msgstr "Увімкнути за&мінники"
 
-#: kmuddy/kmuddy.cpp:342
+#: kmuddy/kmuddy.cpp:341
 #, kde-format
 msgid "Tri&ggers enabled"
 msgstr "Увімкнути ум&овні зміни"
 
-#: kmuddy/kmuddy.cpp:348
+#: kmuddy/kmuddy.cpp:347
 #, kde-format
 msgid "Tim&ers enabled"
 msgstr "Увімкнути &таймери"
 
-#: kmuddy/kmuddy.cpp:353
+#: kmuddy/kmuddy.cpp:352
 #, kde-format
 msgid "Macro &keys enabled"
 msgstr "Увімкнути мак&роклавіші"
 
-#: kmuddy/kmuddy.cpp:358
+#: kmuddy/kmuddy.cpp:357
 #, kde-format
 msgid "&MUD Preferences..."
 msgstr "П&араметри MUD…"
 
-#: kmuddy/kmuddy.cpp:363
+#: kmuddy/kmuddy.cpp:362
 #, kde-format
 msgid "&Save Profile"
 msgstr "З&берегти профіль"
 
-#: kmuddy/kmuddy.cpp:370
+#: kmuddy/kmuddy.cpp:369
 #, kde-format
 msgid "&Session transcript..."
 msgstr "&Розшифрування сеансу…"
 
-#: kmuddy/kmuddy.cpp:375
+#: kmuddy/kmuddy.cpp:374
 #, kde-format
 msgid "Dump output &buffer..."
 msgstr "Створити дамп &буфера виведення…"
 
-#: kmuddy/kmuddy.cpp:379
+#: kmuddy/kmuddy.cpp:378
 #, kde-format
 msgid "&Decision assistant"
 msgstr "По&мічник у рішеннях"
 
-#: kmuddy/kmuddy.cpp:393
+#: kmuddy/kmuddy.cpp:392
 #, kde-format
 msgid "&Global settings..."
 msgstr "За&гальні параметри…"
 
-#: kmuddy/kmuddy.cpp:398
+#: kmuddy/kmuddy.cpp:397
 #, kde-format
 msgid "&Plugins..."
 msgstr "&Додатки…"
 
-#: kmuddy/kmuddy.cpp:403
+#: kmuddy/kmuddy.cpp:402
 #, kde-format
 msgid "F&ull screen mode"
 msgstr "Повное&кранний режим"
 
-#: kmuddy/kmuddy.cpp:413
+#: kmuddy/kmuddy.cpp:412
 #, kde-format
 msgid "Shift line up"
 msgstr "Зсунути текст на рядок вгору"
 
-#: kmuddy/kmuddy.cpp:418
+#: kmuddy/kmuddy.cpp:417
 #, kde-format
 msgid "Shift line down"
 msgstr "Зсунути текст на рядок вниз"
 
-#: kmuddy/kmuddy.cpp:423
+#: kmuddy/kmuddy.cpp:422
 #, kde-format
 msgid "Shift page up"
 msgstr "Зсунути текст на сторінку вгору"
 
-#: kmuddy/kmuddy.cpp:428
+#: kmuddy/kmuddy.cpp:427
 #, kde-format
 msgid "Shift page down"
 msgstr "Зсунути текст на сторінку вниз"
 
-#: kmuddy/kmuddy.cpp:433
+#: kmuddy/kmuddy.cpp:432
 #, kde-format
 msgid "Split-screen up"
 msgstr "Верхня панель розділеного вікна"
 
-#: kmuddy/kmuddy.cpp:438
+#: kmuddy/kmuddy.cpp:437
 #, kde-format
 msgid "Split-screen down"
 msgstr "Нижня панель розділеного вікна"
 
-#: kmuddy/kmuddy.cpp:443
+#: kmuddy/kmuddy.cpp:442
 #, kde-format
 msgid "Previous tab"
 msgstr "Попередня вкладка"
 
-#: kmuddy/kmuddy.cpp:448
+#: kmuddy/kmuddy.cpp:447
 #, kde-format
 msgid "Next tab"
 msgstr "Наступна вкладка"
 
-#: kmuddy/kmuddy.cpp:454 kmuddy/kmuddy.cpp:459 kmuddy/kmuddy.cpp:464
-#: kmuddy/kmuddy.cpp:469 kmuddy/kmuddy.cpp:474 kmuddy/kmuddy.cpp:479
-#: kmuddy/kmuddy.cpp:484 kmuddy/kmuddy.cpp:489 kmuddy/kmuddy.cpp:494
-#: kmuddy/kmuddy.cpp:499
+#: kmuddy/kmuddy.cpp:453 kmuddy/kmuddy.cpp:458 kmuddy/kmuddy.cpp:463
+#: kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473 kmuddy/kmuddy.cpp:478
+#: kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488 kmuddy/kmuddy.cpp:493
+#: kmuddy/kmuddy.cpp:498
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Перемкнутися на вкладку %1"
 
-#: kmuddy/kmuddy.cpp:522
+#: kmuddy/kmuddy.cpp:521
 #, kde-format
 msgid "&Connection"
 msgstr "З'є&днання"
 
-#: kmuddy/kmuddy.cpp:523
+#: kmuddy/kmuddy.cpp:522
 #, kde-format
 msgid "&Edit"
 msgstr "З&міни"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:523 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "П&ерегляд"
 
-#: kmuddy/kmuddy.cpp:525
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Profile"
 msgstr "Про&філь"
 
-#: kmuddy/kmuddy.cpp:526
+#: kmuddy/kmuddy.cpp:525
 #, kde-format
 msgid "&Tools"
 msgstr "&Інструменти"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Settings"
 msgstr "П&араметри"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Help"
 msgstr "&Довідка"
 
-#: kmuddy/kmuddy.cpp:904
+#: kmuddy/kmuddy.cpp:903
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
 "Щоб повторно встановити з’єднання, натисніть %1 або скористайтеся пунктом "
 "з’єднання або повторного з’єднання."
 
-#: kmuddy/kmuddy.cpp:990
+#: kmuddy/kmuddy.cpp:989
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr "Дії у вікні KMuddy"
 
-#: kmuddy/kmuddy.cpp:1162
+#: kmuddy/kmuddy.cpp:1161
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
@@ -3748,7 +3748,7 @@ msgstr "тому"
 msgid "Function %1 does not exist - assuming empty return value."
 msgstr "Функції %1 не існує: вважаємо, що повернуто порожнє значення."
 
-#: libs/clist.cpp:468
+#: libs/clist.cpp:466
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
@@ -3756,7 +3756,7 @@ msgstr ""
 "У цьому файлі не міститься кореневої групи (root), тому його не можна "
 "завантажити."
 
-#: libs/clist.cpp:471 libs/cvariablelist.cpp:373
+#: libs/clist.cpp:469 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
 #, kde-format
 msgid ""
@@ -3766,18 +3766,18 @@ msgstr ""
 "Цей файл було створено за допомогою новішої версії KMuddy, отже його не "
 "вдасться відкрити за допомогою вашої версії програми."
 
-#: libs/clist.cpp:473
+#: libs/clist.cpp:471
 #, kde-format
 msgid "This is not a KMuddy object file."
 msgstr "Цей файл не є файлом об’єктів KMuddy."
 
-#: libs/clist.cpp:475 libs/cvariablelist.cpp:377
+#: libs/clist.cpp:473 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
 msgstr "Цей файл пошкоджено."
 
-#: libs/clist.cpp:479 libs/cvariablelist.cpp:381
+#: libs/clist.cpp:477 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
@@ -4002,7 +4002,7 @@ msgstr "Звичайно ж, так!"
 msgid "My decision: %1"
 msgstr "Моє рішення: %1"
 
-#: libs/cpluginmanager.cpp:268
+#: libs/cpluginmanager.cpp:267
 #, kde-format
 msgid "Plugins"
 msgstr "Додатки"
@@ -4179,7 +4179,7 @@ msgstr "Вставити шлях"
 msgid "Delete Elements"
 msgstr "Вилучити елементи"
 
-#: plugins/mapper/cmapelement.cpp:338
+#: plugins/mapper/cmapelement.cpp:337
 #, kde-format
 msgid "Resize Element"
 msgstr "Змінити розмір елемента"
@@ -4357,18 +4357,18 @@ msgstr "Тестова кімната 4"
 msgid "Set Special Exit"
 msgstr "Встановити спеціальних вихід"
 
-#: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
+#: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
 msgstr "Додати вигин"
 
-#: plugins/mapper/cmappath.cpp:615
+#: plugins/mapper/cmappath.cpp:614
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
 msgstr "Пересунути вигин"
 
-#: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
+#: plugins/mapper/cmappath.cpp:629 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
 msgstr "Вилучити відрізок шляху"
@@ -5013,7 +5013,7 @@ msgstr "Гаразд"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:96
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
@@ -5304,7 +5304,7 @@ msgstr "Змінити нотатки елементів"
 msgid "Notes"
 msgstr "Нотатки"
 
-#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:37
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:36
 #, kde-format
 msgid "Notes:"
 msgstr "Примітки:"

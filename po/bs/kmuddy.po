@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-01-24 00:40+0000\n"
 "PO-Revision-Date: 2015-02-22 22:21+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -363,7 +363,7 @@ msgid "Meta"
 msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
-#: kmuddy/kmuddy.cpp:279
+#: kmuddy/kmuddy.cpp:278
 #, kde-format
 msgid "&Command"
 msgstr "&Naredba"
@@ -523,62 +523,62 @@ msgstr ""
 "Komanda koja će biti izvršena dato vrijeme prije svakog otkucaja.\n"
 "Komanda može uključivati pseudonime, kodne pozive i slične stvari."
 
-#: kmuddy/ctranscript.cpp:173
+#: kmuddy/ctranscript.cpp:172
 #, kde-format
 msgid "Session transcript has been stopped."
 msgstr "Prepis sesije je zaustavljen."
 
-#: kmuddy/ctranscript.cpp:207
+#: kmuddy/ctranscript.cpp:206
 #, kde-format
 msgid "Advanced session transcript has been stopped."
 msgstr "Napredni prepis sesije je zaustavljen."
 
-#: kmuddy/ctranscript.cpp:258
+#: kmuddy/ctranscript.cpp:257
 #, kde-format
 msgid "Transcript file could not be opened."
 msgstr "Fajl prepisa nije bilo moguće otvoriti."
 
-#: kmuddy/ctranscript.cpp:259
+#: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Session transcript could not be started."
 msgstr "Prepis sesije nije mogao biti pokrenut."
 
-#: kmuddy/ctranscript.cpp:278
+#: kmuddy/ctranscript.cpp:277
 #, kde-format
 msgid "Session transcript has just started."
 msgstr "Transkripcija sesije je upravo pocela."
 
-#: kmuddy/ctranscript.cpp:287
+#: kmuddy/ctranscript.cpp:286
 #, kde-format
 msgid "Session transcript has been started."
 msgstr "Transkripcija sesije je zapoceta."
 
-#: kmuddy/ctranscript.cpp:314
+#: kmuddy/ctranscript.cpp:313
 #, kde-format
 msgid "Advanced transcript file could not be opened."
 msgstr "Napredni transkript fajl nije bilo moguce otvoriti."
 
-#: kmuddy/ctranscript.cpp:315
+#: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced session transcript could not be started."
 msgstr "Naprednu transkripcija sesije nije bilo moguce poceti."
 
-#: kmuddy/ctranscript.cpp:331
+#: kmuddy/ctranscript.cpp:330
 #, kde-format
 msgid "Advanced session transcript has just started."
 msgstr "Napredna transkricpija sesije je upravo pocela."
 
-#: kmuddy/ctranscript.cpp:336
+#: kmuddy/ctranscript.cpp:335
 #, kde-format
 msgid "Advanced session transcript has been started."
 msgstr "Napredna transkripcija sesije je zapoceta."
 
-#: kmuddy/ctranscript.cpp:340
+#: kmuddy/ctranscript.cpp:339
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
 msgstr "Transkripcija sesije će biti rotirana u ponoć."
 
-#: kmuddy/ctranscript.cpp:426
+#: kmuddy/ctranscript.cpp:425
 #, kde-format
 msgid "Dump file could not be opened."
 msgstr "Fajl sa izvjestajem o prekidu programa nije bil moguce otvoriti."
@@ -1046,7 +1046,7 @@ msgstr "Pošaljji izlazne podatke u poseban prozor"
 msgid "This will send the matched text to a separate output window"
 msgstr "Ovo će poslati označeni tekst u poseban izlazni prozor"
 
-#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:51
 #, kde-format
 msgid "Output Windows"
 msgstr "Izlazni Prozori"
@@ -2840,249 +2840,249 @@ msgstr ""
 "sljedeće opcije: $W - ime svijeta, $h - sat, $m - minut, $D - dan, $M - "
 "mjesec, $Y - godina, i bilo koju kombinaciju alfanumeričkih karaktera."
 
-#: kmuddy/dialogs/dlgwindows.cpp:58
+#: kmuddy/dialogs/dlgwindows.cpp:57
 #, kde-format
 msgid "&List of output windows"
 msgstr "&Lista izlaznih prozora"
 
-#: kmuddy/dialogs/dlgwindows.cpp:65
+#: kmuddy/dialogs/dlgwindows.cpp:64
 #, kde-format
 msgid "&Show"
 msgstr "&Prikaži"
 
-#: kmuddy/dialogs/dlgwindows.cpp:66
+#: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
 msgid "&Hide"
 msgstr "&Sakrij"
 
-#: kmuddy/dialogs/dlgwindows.cpp:67
+#: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: kmuddy/kmuddy.cpp:241
+#: kmuddy/kmuddy.cpp:240
 #, kde-format
 msgid "&Connect..."
 msgstr "&Povezivanje..."
 
-#: kmuddy/kmuddy.cpp:248
+#: kmuddy/kmuddy.cpp:247
 #, kde-format
 msgid "&QuickConnect..."
 msgstr "&BrzoPovezivanje..."
 
-#: kmuddy/kmuddy.cpp:254
+#: kmuddy/kmuddy.cpp:253
 #, kde-format
 msgid "&Disconnect"
 msgstr "&Otkači"
 
-#: kmuddy/kmuddy.cpp:260
+#: kmuddy/kmuddy.cpp:259
 #, kde-format
 msgid "&Reconnect"
 msgstr "&Poveži se ponovo"
 
-#: kmuddy/kmuddy.cpp:265
+#: kmuddy/kmuddy.cpp:264
 #, kde-format
 msgid "Close &tab"
 msgstr "Zatvori &karticu"
 
-#: kmuddy/kmuddy.cpp:274
+#: kmuddy/kmuddy.cpp:273
 #, kde-format
 msgid "Paste &As"
 msgstr "Zalijepi &kao"
 
-#: kmuddy/kmuddy.cpp:283
+#: kmuddy/kmuddy.cpp:282
 #, kde-format
 msgid "&Input"
 msgstr "&Unos"
 
-#: kmuddy/kmuddy.cpp:290
+#: kmuddy/kmuddy.cpp:289
 #, kde-format
 msgid "Copy &Selection"
 msgstr "Kopiraj &Selekciju"
 
-#: kmuddy/kmuddy.cpp:296
+#: kmuddy/kmuddy.cpp:295
 #, kde-format
 msgid "Enable command &parsing"
 msgstr "Omogući &parsiranje komandi"
 
-#: kmuddy/kmuddy.cpp:303
+#: kmuddy/kmuddy.cpp:302
 #, kde-format
 msgid "Ca&ncel pending commands"
 msgstr "Ot&kaži komande na čekanju"
 
-#: kmuddy/kmuddy.cpp:314
+#: kmuddy/kmuddy.cpp:313
 #, kde-format
 msgid "Show &gaugebar"
 msgstr "Pokaži &traku mjerača"
 
-#: kmuddy/kmuddy.cpp:327
+#: kmuddy/kmuddy.cpp:326
 #, kde-format
 msgid "&Object Editor..."
 msgstr "Uređivač &objekata..."
 
-#: kmuddy/kmuddy.cpp:332
+#: kmuddy/kmuddy.cpp:331
 #, kde-format
 msgid "&Output windows..."
 msgstr "&Izlazni prozori..."
 
-#: kmuddy/kmuddy.cpp:336
+#: kmuddy/kmuddy.cpp:335
 #, kde-format
 msgid "A&liases enabled"
 msgstr "A&lijasi dozvoljeni"
 
-#: kmuddy/kmuddy.cpp:342
+#: kmuddy/kmuddy.cpp:341
 #, kde-format
 msgid "Tri&ggers enabled"
 msgstr "Oki&dači dozvoljeni"
 
-#: kmuddy/kmuddy.cpp:348
+#: kmuddy/kmuddy.cpp:347
 #, kde-format
 msgid "Tim&ers enabled"
 msgstr "Taj&meri dozvoljeni"
 
-#: kmuddy/kmuddy.cpp:353
+#: kmuddy/kmuddy.cpp:352
 #, kde-format
 msgid "Macro &keys enabled"
 msgstr "Makro &ključevi dozvoljeni"
 
-#: kmuddy/kmuddy.cpp:358
+#: kmuddy/kmuddy.cpp:357
 #, kde-format
 msgid "&MUD Preferences..."
 msgstr "&MUD Preference..."
 
-#: kmuddy/kmuddy.cpp:363
+#: kmuddy/kmuddy.cpp:362
 #, kde-format
 msgid "&Save Profile"
 msgstr "&Snimi profil"
 
-#: kmuddy/kmuddy.cpp:370
+#: kmuddy/kmuddy.cpp:369
 #, kde-format
 msgid "&Session transcript..."
 msgstr "Transkript sesije..."
 
-#: kmuddy/kmuddy.cpp:375
+#: kmuddy/kmuddy.cpp:374
 #, kde-format
 msgid "Dump output &buffer..."
 msgstr "Izlazni &bafer otpada..."
 
-#: kmuddy/kmuddy.cpp:379
+#: kmuddy/kmuddy.cpp:378
 #, kde-format
 msgid "&Decision assistant"
 msgstr "Asistent &odlučivanja"
 
-#: kmuddy/kmuddy.cpp:393
+#: kmuddy/kmuddy.cpp:392
 #, kde-format
 msgid "&Global settings..."
 msgstr "&Opšta podešavanja..."
 
-#: kmuddy/kmuddy.cpp:398
+#: kmuddy/kmuddy.cpp:397
 #, kde-format
 msgid "&Plugins..."
 msgstr "&Dodane mogućnosti..."
 
-#: kmuddy/kmuddy.cpp:403
+#: kmuddy/kmuddy.cpp:402
 #, kde-format
 msgid "F&ull screen mode"
 msgstr "Mod p&unog ekrana..."
 
-#: kmuddy/kmuddy.cpp:413
+#: kmuddy/kmuddy.cpp:412
 #, kde-format
 msgid "Shift line up"
 msgstr "Pomjeri liniju gore"
 
-#: kmuddy/kmuddy.cpp:418
+#: kmuddy/kmuddy.cpp:417
 #, kde-format
 msgid "Shift line down"
 msgstr "Pomjeri liniju dolje"
 
-#: kmuddy/kmuddy.cpp:423
+#: kmuddy/kmuddy.cpp:422
 #, kde-format
 msgid "Shift page up"
 msgstr "Pomjeri stranicu gore"
 
-#: kmuddy/kmuddy.cpp:428
+#: kmuddy/kmuddy.cpp:427
 #, kde-format
 msgid "Shift page down"
 msgstr "Pomjeri stranicu dolje"
 
-#: kmuddy/kmuddy.cpp:433
+#: kmuddy/kmuddy.cpp:432
 #, kde-format
 msgid "Split-screen up"
 msgstr "Podjela ekrana gore"
 
-#: kmuddy/kmuddy.cpp:438
+#: kmuddy/kmuddy.cpp:437
 #, kde-format
 msgid "Split-screen down"
 msgstr "Podjela ekrana dolje"
 
-#: kmuddy/kmuddy.cpp:443
+#: kmuddy/kmuddy.cpp:442
 #, kde-format
 msgid "Previous tab"
 msgstr "Prethodna kartica"
 
-#: kmuddy/kmuddy.cpp:448
+#: kmuddy/kmuddy.cpp:447
 #, kde-format
 msgid "Next tab"
 msgstr "Sljedeća kartica"
 
-#: kmuddy/kmuddy.cpp:454 kmuddy/kmuddy.cpp:459 kmuddy/kmuddy.cpp:464
-#: kmuddy/kmuddy.cpp:469 kmuddy/kmuddy.cpp:474 kmuddy/kmuddy.cpp:479
-#: kmuddy/kmuddy.cpp:484 kmuddy/kmuddy.cpp:489 kmuddy/kmuddy.cpp:494
-#: kmuddy/kmuddy.cpp:499
+#: kmuddy/kmuddy.cpp:453 kmuddy/kmuddy.cpp:458 kmuddy/kmuddy.cpp:463
+#: kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473 kmuddy/kmuddy.cpp:478
+#: kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488 kmuddy/kmuddy.cpp:493
+#: kmuddy/kmuddy.cpp:498
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr "Prebaci na karticu %1"
 
-#: kmuddy/kmuddy.cpp:522
+#: kmuddy/kmuddy.cpp:521
 #, kde-format
 msgid "&Connection"
 msgstr "&Konekcija"
 
-#: kmuddy/kmuddy.cpp:523
+#: kmuddy/kmuddy.cpp:522
 #, kde-format
 msgid "&Edit"
 msgstr "&Izmijeni"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:523 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "&Pregled"
 
-#: kmuddy/kmuddy.cpp:525
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Profile"
 msgstr "&Profil"
 
-#: kmuddy/kmuddy.cpp:526
+#: kmuddy/kmuddy.cpp:525
 #, kde-format
 msgid "&Tools"
 msgstr "&Alati"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Settings"
 msgstr "&Postavke"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Help"
 msgstr "&Pomoć"
 
-#: kmuddy/kmuddy.cpp:904
+#: kmuddy/kmuddy.cpp:903
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
 "Da bi se ponovo povezali, pritisnite %1 ili koristite Veza / Ponovno "
 "povezivanje."
 
-#: kmuddy/kmuddy.cpp:990
+#: kmuddy/kmuddy.cpp:989
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:1162
+#: kmuddy/kmuddy.cpp:1161
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
@@ -3705,13 +3705,13 @@ msgid "Function %1 does not exist - assuming empty return value."
 msgstr ""
 "Funkcija %1 ne postoji - pretpostavlja se da je prazna povratna vrijednost."
 
-#: libs/clist.cpp:468
+#: libs/clist.cpp:466
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
 msgstr "Ovaj fajl ne sadrži korijensku grupu, i zbog toga ne može biti učitan."
 
-#: libs/clist.cpp:471 libs/cvariablelist.cpp:373
+#: libs/clist.cpp:469 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
 #, kde-format
 msgid ""
@@ -3721,18 +3721,18 @@ msgstr ""
 "Ovaj fajl je kreiran sa novijom verzijom KMuddy-a, i ova verzija nije u "
 "mogućnosti da ga otvori."
 
-#: libs/clist.cpp:473
+#: libs/clist.cpp:471
 #, kde-format
 msgid "This is not a KMuddy object file."
 msgstr "Ovo nije KMuddy objekt fajl."
 
-#: libs/clist.cpp:475 libs/cvariablelist.cpp:377
+#: libs/clist.cpp:473 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
 msgstr "Ovaj fajl ima grešku."
 
-#: libs/clist.cpp:479 libs/cvariablelist.cpp:381
+#: libs/clist.cpp:477 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
@@ -3955,7 +3955,7 @@ msgstr "Definitivno da."
 msgid "My decision: %1"
 msgstr "Moja odluka: %1"
 
-#: libs/cpluginmanager.cpp:268
+#: libs/cpluginmanager.cpp:267
 #, kde-format
 msgid "Plugins"
 msgstr "Dodaci"
@@ -4123,7 +4123,7 @@ msgstr "Zalijepi Putanju"
 msgid "Delete Elements"
 msgstr "Obriši Elemente"
 
-#: plugins/mapper/cmapelement.cpp:338
+#: plugins/mapper/cmapelement.cpp:337
 #, kde-format
 msgid "Resize Element"
 msgstr "Promijeni Veličinu Elementa"
@@ -4299,18 +4299,18 @@ msgstr "Test soba 4"
 msgid "Set Special Exit"
 msgstr "Postavi Specijalni Izlaz"
 
-#: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
+#: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
 msgstr "Dodaj Krivulju"
 
-#: plugins/mapper/cmappath.cpp:615
+#: plugins/mapper/cmappath.cpp:614
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
 msgstr "Pomjeri krivulju"
 
-#: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
+#: plugins/mapper/cmappath.cpp:629 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
 msgstr "Dodaj Segment Putanje"
@@ -4966,7 +4966,7 @@ msgstr "U redu"
 msgid "Cancel"
 msgstr "Odustani"
 
-#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:96
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
@@ -5260,7 +5260,7 @@ msgstr "Promijeni bilješke elemenata"
 msgid "Notes"
 msgstr "Zabilješke"
 
-#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:37
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:36
 #, kde-format
 msgid "Notes:"
 msgstr "Bilješke:"

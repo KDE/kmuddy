@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-01-24 00:40+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -355,7 +355,7 @@ msgid "Meta"
 msgstr "Meta"
 
 #: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
-#: kmuddy/kmuddy.cpp:279
+#: kmuddy/kmuddy.cpp:278
 #, kde-format
 msgid "&Command"
 msgstr "&Ordú"
@@ -501,62 +501,62 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:173
+#: kmuddy/ctranscript.cpp:172
 #, kde-format
 msgid "Session transcript has been stopped."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:207
+#: kmuddy/ctranscript.cpp:206
 #, kde-format
 msgid "Advanced session transcript has been stopped."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:258
+#: kmuddy/ctranscript.cpp:257
 #, kde-format
 msgid "Transcript file could not be opened."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:259
+#: kmuddy/ctranscript.cpp:258
 #, kde-format
 msgid "Session transcript could not be started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:278
+#: kmuddy/ctranscript.cpp:277
 #, kde-format
 msgid "Session transcript has just started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:287
+#: kmuddy/ctranscript.cpp:286
 #, kde-format
 msgid "Session transcript has been started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:314
+#: kmuddy/ctranscript.cpp:313
 #, kde-format
 msgid "Advanced transcript file could not be opened."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:315
+#: kmuddy/ctranscript.cpp:314
 #, kde-format
 msgid "Advanced session transcript could not be started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:331
+#: kmuddy/ctranscript.cpp:330
 #, kde-format
 msgid "Advanced session transcript has just started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:336
+#: kmuddy/ctranscript.cpp:335
 #, kde-format
 msgid "Advanced session transcript has been started."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:340
+#: kmuddy/ctranscript.cpp:339
 #, kde-format
 msgid "Session transcript will be rotated at midnight."
 msgstr ""
 
-#: kmuddy/ctranscript.cpp:426
+#: kmuddy/ctranscript.cpp:425
 #, kde-format
 msgid "Dump file could not be opened."
 msgstr ""
@@ -990,7 +990,7 @@ msgstr ""
 msgid "This will send the matched text to a separate output window"
 msgstr ""
 
-#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:52
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:51
 #, kde-format
 msgid "Output Windows"
 msgstr ""
@@ -2609,247 +2609,247 @@ msgid ""
 "combination of alpha-numeric characters."
 msgstr ""
 
-#: kmuddy/dialogs/dlgwindows.cpp:58
+#: kmuddy/dialogs/dlgwindows.cpp:57
 #, kde-format
 msgid "&List of output windows"
 msgstr ""
 
-#: kmuddy/dialogs/dlgwindows.cpp:65
+#: kmuddy/dialogs/dlgwindows.cpp:64
 #, kde-format
 msgid "&Show"
 msgstr "&Taispeáin"
 
-#: kmuddy/dialogs/dlgwindows.cpp:66
+#: kmuddy/dialogs/dlgwindows.cpp:65
 #, kde-format
 msgid "&Hide"
 msgstr "Folaig&h"
 
-#: kmuddy/dialogs/dlgwindows.cpp:67
+#: kmuddy/dialogs/dlgwindows.cpp:66
 #, kde-format
 msgid "&Delete"
 msgstr "&Scrios"
 
-#: kmuddy/kmuddy.cpp:241
+#: kmuddy/kmuddy.cpp:240
 #, kde-format
 msgid "&Connect..."
 msgstr "&Ceangail..."
 
-#: kmuddy/kmuddy.cpp:248
+#: kmuddy/kmuddy.cpp:247
 #, kde-format
 msgid "&QuickConnect..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:254
+#: kmuddy/kmuddy.cpp:253
 #, kde-format
 msgid "&Disconnect"
 msgstr "&Dínasc"
 
-#: kmuddy/kmuddy.cpp:260
+#: kmuddy/kmuddy.cpp:259
 #, kde-format
 msgid "&Reconnect"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:265
+#: kmuddy/kmuddy.cpp:264
 #, kde-format
 msgid "Close &tab"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:274
+#: kmuddy/kmuddy.cpp:273
 #, kde-format
 msgid "Paste &As"
 msgstr "Greamaigh M&ar"
 
-#: kmuddy/kmuddy.cpp:283
+#: kmuddy/kmuddy.cpp:282
 #, kde-format
 msgid "&Input"
 msgstr "&Ionchur"
 
-#: kmuddy/kmuddy.cpp:290
+#: kmuddy/kmuddy.cpp:289
 #, kde-format
 msgid "Copy &Selection"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:296
+#: kmuddy/kmuddy.cpp:295
 #, kde-format
 msgid "Enable command &parsing"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:303
+#: kmuddy/kmuddy.cpp:302
 #, kde-format
 msgid "Ca&ncel pending commands"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:314
+#: kmuddy/kmuddy.cpp:313
 #, kde-format
 msgid "Show &gaugebar"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:327
+#: kmuddy/kmuddy.cpp:326
 #, kde-format
 msgid "&Object Editor..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:332
+#: kmuddy/kmuddy.cpp:331
 #, kde-format
 msgid "&Output windows..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:336
+#: kmuddy/kmuddy.cpp:335
 #, kde-format
 msgid "A&liases enabled"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:342
+#: kmuddy/kmuddy.cpp:341
 #, kde-format
 msgid "Tri&ggers enabled"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:348
+#: kmuddy/kmuddy.cpp:347
 #, kde-format
 msgid "Tim&ers enabled"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:353
+#: kmuddy/kmuddy.cpp:352
 #, kde-format
 msgid "Macro &keys enabled"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:358
+#: kmuddy/kmuddy.cpp:357
 #, kde-format
 msgid "&MUD Preferences..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:363
+#: kmuddy/kmuddy.cpp:362
 #, kde-format
 msgid "&Save Profile"
 msgstr "&Sábháil Próifíl..."
 
-#: kmuddy/kmuddy.cpp:370
+#: kmuddy/kmuddy.cpp:369
 #, kde-format
 msgid "&Session transcript..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:375
+#: kmuddy/kmuddy.cpp:374
 #, kde-format
 msgid "Dump output &buffer..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:379
+#: kmuddy/kmuddy.cpp:378
 #, kde-format
 msgid "&Decision assistant"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:393
+#: kmuddy/kmuddy.cpp:392
 #, kde-format
 msgid "&Global settings..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:398
+#: kmuddy/kmuddy.cpp:397
 #, kde-format
 msgid "&Plugins..."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:403
+#: kmuddy/kmuddy.cpp:402
 #, kde-format
 msgid "F&ull screen mode"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:413
+#: kmuddy/kmuddy.cpp:412
 #, kde-format
 msgid "Shift line up"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:418
+#: kmuddy/kmuddy.cpp:417
 #, kde-format
 msgid "Shift line down"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:423
+#: kmuddy/kmuddy.cpp:422
 #, kde-format
 msgid "Shift page up"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:428
+#: kmuddy/kmuddy.cpp:427
 #, kde-format
 msgid "Shift page down"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:433
+#: kmuddy/kmuddy.cpp:432
 #, kde-format
 msgid "Split-screen up"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:438
+#: kmuddy/kmuddy.cpp:437
 #, kde-format
 msgid "Split-screen down"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:443
+#: kmuddy/kmuddy.cpp:442
 #, kde-format
 msgid "Previous tab"
 msgstr "An cluaisín roimhe seo"
 
-#: kmuddy/kmuddy.cpp:448
+#: kmuddy/kmuddy.cpp:447
 #, kde-format
 msgid "Next tab"
 msgstr "An chéad chluaisín eile"
 
-#: kmuddy/kmuddy.cpp:454 kmuddy/kmuddy.cpp:459 kmuddy/kmuddy.cpp:464
-#: kmuddy/kmuddy.cpp:469 kmuddy/kmuddy.cpp:474 kmuddy/kmuddy.cpp:479
-#: kmuddy/kmuddy.cpp:484 kmuddy/kmuddy.cpp:489 kmuddy/kmuddy.cpp:494
-#: kmuddy/kmuddy.cpp:499
+#: kmuddy/kmuddy.cpp:453 kmuddy/kmuddy.cpp:458 kmuddy/kmuddy.cpp:463
+#: kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473 kmuddy/kmuddy.cpp:478
+#: kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488 kmuddy/kmuddy.cpp:493
+#: kmuddy/kmuddy.cpp:498
 #, kde-format
 msgctxt "%1 - tab number"
 msgid "Switch to tab %1"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:522
+#: kmuddy/kmuddy.cpp:521
 #, kde-format
 msgid "&Connection"
 msgstr "&Ceangal"
 
-#: kmuddy/kmuddy.cpp:523
+#: kmuddy/kmuddy.cpp:522
 #, kde-format
 msgid "&Edit"
 msgstr "&Eagar"
 
 #. i18n: ectx: Menu (View)
-#: kmuddy/kmuddy.cpp:524 plugins/mapper/kmuddymapperpart.rc:4
+#: kmuddy/kmuddy.cpp:523 plugins/mapper/kmuddymapperpart.rc:4
 #, kde-format
 msgid "&View"
 msgstr "&Amharc"
 
-#: kmuddy/kmuddy.cpp:525
+#: kmuddy/kmuddy.cpp:524
 #, kde-format
 msgid "&Profile"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:526
+#: kmuddy/kmuddy.cpp:525
 #, kde-format
 msgid "&Tools"
 msgstr "&Uirlisí"
 
-#: kmuddy/kmuddy.cpp:527
+#: kmuddy/kmuddy.cpp:526
 #, kde-format
 msgid "&Settings"
 msgstr "&Socruithe"
 
-#: kmuddy/kmuddy.cpp:528
+#: kmuddy/kmuddy.cpp:527
 #, kde-format
 msgid "&Help"
 msgstr "Cab&hair"
 
-#: kmuddy/kmuddy.cpp:904
+#: kmuddy/kmuddy.cpp:903
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:990
+#: kmuddy/kmuddy.cpp:989
 #, kde-format
 msgid "Activity in the KMuddy Window"
 msgstr ""
 
-#: kmuddy/kmuddy.cpp:1162
+#: kmuddy/kmuddy.cpp:1161
 #, kde-format
 msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
@@ -3444,13 +3444,13 @@ msgstr "ó shin"
 msgid "Function %1 does not exist - assuming empty return value."
 msgstr ""
 
-#: libs/clist.cpp:468
+#: libs/clist.cpp:466
 #, kde-format
 msgid ""
 "This file does not contain the root group, and therefore cannot be loaded."
 msgstr ""
 
-#: libs/clist.cpp:471 libs/cvariablelist.cpp:373
+#: libs/clist.cpp:469 libs/cvariablelist.cpp:373
 #: plugins/mapper/cmapzonemanager.cpp:230
 #, kde-format
 msgid ""
@@ -3458,18 +3458,18 @@ msgid ""
 "unable to open it."
 msgstr ""
 
-#: libs/clist.cpp:473
+#: libs/clist.cpp:471
 #, kde-format
 msgid "This is not a KMuddy object file."
 msgstr ""
 
-#: libs/clist.cpp:475 libs/cvariablelist.cpp:377
+#: libs/clist.cpp:473 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
 #, kde-format
 msgid "This file is corrupted."
 msgstr ""
 
-#: libs/clist.cpp:479 libs/cvariablelist.cpp:381
+#: libs/clist.cpp:477 libs/cvariablelist.cpp:381
 #: plugins/mapper/cmapzonemanager.cpp:237
 #, kde-format
 msgid "Error at line %1, column %2: %3"
@@ -3690,7 +3690,7 @@ msgstr ""
 msgid "My decision: %1"
 msgstr ""
 
-#: libs/cpluginmanager.cpp:268
+#: libs/cpluginmanager.cpp:267
 #, kde-format
 msgid "Plugins"
 msgstr "Breiseáin"
@@ -3854,7 +3854,7 @@ msgstr ""
 msgid "Delete Elements"
 msgstr ""
 
-#: plugins/mapper/cmapelement.cpp:338
+#: plugins/mapper/cmapelement.cpp:337
 #, kde-format
 msgid "Resize Element"
 msgstr ""
@@ -4030,18 +4030,18 @@ msgstr ""
 msgid "Set Special Exit"
 msgstr ""
 
-#: plugins/mapper/cmappath.cpp:603 plugins/mapper/cmapview.cpp:684
+#: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
 msgstr ""
 
-#: plugins/mapper/cmappath.cpp:615
+#: plugins/mapper/cmappath.cpp:614
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
 msgstr ""
 
-#: plugins/mapper/cmappath.cpp:630 plugins/mapper/cmapview.cpp:702
+#: plugins/mapper/cmappath.cpp:629 plugins/mapper/cmapview.cpp:702
 #, kde-format
 msgid "Delete Path Segment"
 msgstr ""
@@ -4709,7 +4709,7 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:97
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:96
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
@@ -5008,7 +5008,7 @@ msgstr ""
 msgid "Notes"
 msgstr "Nótaí"
 
-#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:37
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:36
 #, kde-format
 msgid "Notes:"
 msgstr "Nótaí:"
