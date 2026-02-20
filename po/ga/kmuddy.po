@@ -102,16 +102,14 @@ msgid "Disconnect"
 msgstr "Dícheangail"
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connection"
+#, kde-format
 msgid "Close connection"
-msgstr "Ceangal"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:423
-#, fuzzy, kde-format
-#| msgid "Connected"
+#, kde-format
 msgid "Stay connected"
-msgstr "Ceangailte"
+msgstr ""
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -1905,11 +1903,10 @@ msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
 msgstr ""
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:62
-#, fuzzy, kde-format
-#| msgid "&Connection"
+#, kde-format
 msgctxt "Commands sent after connection is established"
 msgid "&Connect sequence"
-msgstr "&Ceangal"
+msgstr ""
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:66
 #, kde-format
@@ -3103,10 +3100,9 @@ msgid "KMuddy"
 msgstr "KMuddy"
 
 #: kmuddy/main.cpp:39
-#, fuzzy, kde-format
-#| msgid "(c) 2002-2009, Tomas Mecir"
+#, kde-format
 msgid "(c) 2002-2018, Tomas Mecir"
-msgstr "© 2002-2009 Tomas Mecir"
+msgstr ""
 
 #: kmuddy/main.cpp:40
 #, kde-format
@@ -3944,10 +3940,9 @@ msgstr ""
 #: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
 #: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
-#, fuzzy, kde-format
-#| msgid "KMuddy"
+#, kde-format
 msgid "KMuddy Mapper"
-msgstr "KMuddy"
+msgstr ""
 
 #: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
@@ -4057,10 +4052,9 @@ msgid "Follow Moves"
 msgstr ""
 
 #: plugins/mapper/cmapview.cpp:85
-#, fuzzy, kde-format
-#| msgid "Auto-detect"
+#, kde-format
 msgid "Auto Create"
-msgstr "Braith go huathoibríoch"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
@@ -4083,16 +4077,14 @@ msgid "Delete Current Level"
 msgstr ""
 
 #: plugins/mapper/cmapview.cpp:142
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Zone"
-msgstr "Cruthaigh Leibhéal"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:147
-#, fuzzy, kde-format
-#| msgid "Delete Element"
+#, kde-format
 msgid "Delete Current Zone"
-msgstr "Scrios Eilimint"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:154
 #, kde-format
@@ -4190,10 +4182,9 @@ msgid "There is no level in that direction. Do you want to create a new one?"
 msgstr ""
 
 #: plugins/mapper/cmapview.cpp:584
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Create New Level"
-msgstr "Cruthaigh Leibhéal"
+msgstr ""
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -4254,10 +4245,9 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Current Level"
-msgstr "Cruthaigh Leibhéal"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
@@ -4279,10 +4269,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
-#, fuzzy, kde-format
-#| msgid "Text Color"
+#, kde-format
 msgid "Special Exit Color"
-msgstr "Dath Téacs"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
@@ -4298,17 +4287,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
-#, fuzzy, kde-format
-#| msgid "Text Color"
+#, kde-format
 msgid "Default Text Color"
-msgstr "Dath Téacs"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
-#, fuzzy, kde-format
-#| msgid "Selected Color"
+#, kde-format
 msgid "Default Zone Color"
-msgstr "Dath Roghnaithe"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -4318,28 +4305,25 @@ msgstr "Dath Roghnaithe"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Lower Level"
-msgstr "Cruthaigh Leibhéal"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:322
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Room Color"
-msgstr "Dath"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:351
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
-#, fuzzy, kde-format
-#| msgid "Text Color"
+#, kde-format
 msgid "Path Color"
-msgstr "Dath Téacs"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4353,17 +4337,15 @@ msgstr "Dath Téacs"
 #. i18n: ectx: property (text), widget (QLabel, lblUpperZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:371
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
-#, fuzzy, kde-format
-#| msgid "Text Color"
+#, kde-format
 msgid "Zone Color"
-msgstr "Dath Téacs"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
-#, fuzzy, kde-format
-#| msgid "Create Level"
+#, kde-format
 msgid "Upper Level"
-msgstr "Cruthaigh Leibhéal"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
@@ -4373,17 +4355,15 @@ msgstr "Dath an Chúlra"
 
 #. i18n: ectx: property (text), widget (QLabel, lblGrid)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Grid Color"
-msgstr "Dath"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
-#, fuzzy, kde-format
-#| msgid "Direction"
+#, kde-format
 msgid "Directions"
-msgstr "Treo"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsLong)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
@@ -4427,37 +4407,33 @@ msgstr "Iarthar"
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:131
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
-#, fuzzy, kde-format
-#| msgid "North"
+#, kde-format
 msgid "North East"
-msgstr "Tuaisceart"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:141
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
-#, fuzzy, kde-format
-#| msgid "South"
+#, kde-format
 msgid "South East"
-msgstr "Deisceart"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:151
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
-#, fuzzy, kde-format
-#| msgid "South"
+#, kde-format
 msgid "South West"
-msgstr "Deisceart"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:161
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:306
-#, fuzzy, kde-format
-#| msgid "North"
+#, kde-format
 msgid "North West"
-msgstr "Tuaisceart"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsShort)
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
@@ -4515,10 +4491,9 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
-#, fuzzy, kde-format
-#| msgid "Update Properties"
+#, kde-format
 msgid "Path Properties"
-msgstr "Nuashonraigh Airíonna"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
@@ -4546,10 +4521,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
-#, fuzzy, kde-format
-#| msgid "Direction"
+#, kde-format
 msgid "Source Directions"
-msgstr "Treo"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
@@ -4633,24 +4607,21 @@ msgstr "ID"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
-#, fuzzy, kde-format
-#| msgid "Direction"
+#, kde-format
 msgid "Destination Direction"
-msgstr "Treo"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
-#, fuzzy, kde-format
-#| msgid "Text Color"
+#, kde-format
 msgid "Spec&ial Exit"
-msgstr "Dath Téacs"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSpecial)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
-#, fuzzy, kde-format
-#| msgid "&Command"
+#, kde-format
 msgid "Special Command"
-msgstr "&Ordú"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
@@ -4717,10 +4688,9 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
-#, fuzzy, kde-format
-#| msgid "Properties"
+#, kde-format
 msgid "Room Properties"
-msgstr "Airíonna"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
@@ -4754,17 +4724,15 @@ msgstr "Dath"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRoomColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
-#, fuzzy, kde-format
-#| msgid "Color:"
+#, kde-format
 msgid "Room Color:"
-msgstr "Dath:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
-#, fuzzy, kde-format
-#| msgid "Selected Color"
+#, kde-format
 msgid "Default room color"
-msgstr "Dath Roghnaithe"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
@@ -4792,17 +4760,15 @@ msgstr "Treo"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
-#, fuzzy, kde-format
-#| msgid "&Command"
+#, kde-format
 msgid "Before command"
-msgstr "&Ordú"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
-#, fuzzy, kde-format
-#| msgid "&Command"
+#, kde-format
 msgid "After command"
-msgstr "&Ordú"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
@@ -4818,10 +4784,9 @@ msgstr "&Clár Ábhair"
 
 #. i18n: ectx: property (text), widget (QLabel, lblContents)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
-#, fuzzy, kde-format
-#| msgid "&Contents"
+#, kde-format
 msgid "RoomContents:"
-msgstr "&Clár Ábhair"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
@@ -4921,10 +4886,9 @@ msgstr "Leithead (picteilíní):"
 
 #. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
-#, fuzzy, kde-format
-#| msgid "Width (pixels):"
+#, kde-format
 msgid "Height (pixels):"
-msgstr "Leithead (picteilíní):"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
@@ -4940,10 +4904,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
-#, fuzzy, kde-format
-#| msgid "Font Size"
+#, kde-format
 msgid "Set Size"
-msgstr "Clómhéid"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab3)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
@@ -5196,135 +5159,3 @@ msgstr "Athróg"
 #, kde-format
 msgid "Variables"
 msgstr "Athróga"
-
-#~ msgid "IP"
-#~ msgstr "IP"
-
-#~ msgid "&Filter:"
-#~ msgstr "&Scagaire:"
-
-#~ msgid "&Edit..."
-#~ msgstr "&Eagar..."
-
-#~ msgid "Enable &word wrapping"
-#~ msgstr "Cumasaigh &timfhilleadh focal"
-
-#~ msgid "Done"
-#~ msgstr "Críochnaithe"
-
-#~ msgid "&Window"
-#~ msgstr "&Fuinneog"
-
-#~ msgid "&Level"
-#~ msgstr "&Leibhéal"
-
-#~ msgid "Locations"
-#~ msgstr "Suímh"
-
-#, fuzzy
-#~| msgid "Direction"
-#~ msgid "Path Directions"
-#~ msgstr "Treo"
-
-#~ msgid "Items"
-#~ msgstr "Míreanna"
-
-#~ msgid "Load"
-#~ msgstr "Luchtaigh"
-
-#~ msgid "Save As"
-#~ msgstr "Sábháil Mar"
-
-#~ msgid "Information"
-#~ msgstr "Eolas"
-
-#~ msgid "Unnamed"
-#~ msgstr "Gan ainm"
-
-#, fuzzy
-#~| msgid "Information"
-#~ msgid "Map Information"
-#~ msgstr "Eolas"
-
-#~ msgid "General Information"
-#~ msgstr "Eolas Ginearálta"
-
-#, fuzzy
-#~| msgid "Name"
-#~ msgid "Mud Name:"
-#~ msgstr "Ainm"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#, fuzzy
-#~| msgid "Level:"
-#~ msgid "No. of Levels:"
-#~ msgstr "Leibhéal:"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "Level:"
-#~ msgstr "Leibhéal:"
-
-#~ msgid "Close"
-#~ msgstr "Dún"
-
-#~ msgid "&File"
-#~ msgstr "&Comhad"
-
-#~ msgid "Active"
-#~ msgstr "Gníomhach"
-
-#, fuzzy
-#~| msgid "Text Properties"
-#~ msgid "Zone Properties"
-#~ msgstr "Airíonna Téacs"
-
-#~ msgid "Appearance"
-#~ msgstr "Cuma"
-
-#, fuzzy
-#~| msgid "Color:"
-#~ msgid "Zone Color:"
-#~ msgstr "Dath:"
-
-#, fuzzy
-#~| msgid "Background color"
-#~ msgid "Use default background color"
-#~ msgstr "Dath an chúlra"
-
-#~ msgid "Background color"
-#~ msgstr "Dath an chúlra"
-
-#~ msgid "Background image:"
-#~ msgstr "Íomhá chúlra:"
-
-#~ msgid "Select Image"
-#~ msgstr "Roghnaigh Íomhá"
-
-#~ msgid "&OK"
-#~ msgstr "&OK"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Cealaigh"
-
-#~ msgid "Tools Toolbar"
-#~ msgstr "Barra Uirlisí na nUirlisí"
-
-#~ msgid "Navigation Toolbar"
-#~ msgstr "Barra Uirlisí Nascleanúna"
-
-#, fuzzy
-#~| msgid "&Level"
-#~ msgid "&Level tools"
-#~ msgstr "&Leibhéal"
-
-#, fuzzy
-#~| msgid "&Tools"
-#~ msgid "&Zone Tools"
-#~ msgstr "&Uirlisí"
