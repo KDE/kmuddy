@@ -270,7 +270,7 @@ msgstr "移动光标"
 #: kmuddy/cmxpmanager.cpp:307
 #, kde-format
 msgid "erase text"
-msgstr "清除文字"
+msgstr "清除文本"
 
 #: kmuddy/cmxpmanager.cpp:308
 #, kde-format
@@ -657,7 +657,7 @@ msgstr "整行"
 #: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Matching text"
-msgstr "匹配文字"
+msgstr "匹配文本"
 
 #: kmuddy/ctriggereditor.cpp:138
 #, kde-format
@@ -751,7 +751,7 @@ msgstr "测试区域"
 #: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
 #, kde-format
 msgid "&Text: "
-msgstr "&文字: "
+msgstr "文本(&T)："
 
 #: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
 #: plugins/converter/converterdialog.cpp:54
@@ -1494,7 +1494,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:362
 #, kde-format
 msgid "&Text color"
-msgstr "&文字颜色"
+msgstr "文本颜色(&T)"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:365
 #, kde-format
@@ -4124,7 +4124,7 @@ msgstr "属性(&P)"
 #: plugins/mapper/cmapview.cpp:189
 #, kde-format
 msgid "&Delete Text"
-msgstr "删除文字(&D)"
+msgstr "删除文本(&D)"
 
 #: plugins/mapper/cmapview.cpp:201
 #, kde-format
@@ -4288,7 +4288,7 @@ msgstr "编辑模式颜色"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr "默认文字颜色"
+msgstr "默认文本颜色"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
@@ -4330,7 +4330,7 @@ msgstr "路径颜色"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:502
 #, kde-format
 msgid "Text Color"
-msgstr "文字颜色"
+msgstr "文本颜色"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerZone)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperZone)
@@ -4912,7 +4912,7 @@ msgstr ""
 #: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
 #, kde-format
 msgid "Text"
-msgstr "文字"
+msgstr "文本"
 
 #. i18n: ectx: property (text), widget (QLabel, lblText)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
