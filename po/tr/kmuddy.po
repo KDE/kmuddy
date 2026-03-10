@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:40+0000\n"
-"PO-Revision-Date: 2026-02-18 18:04+0300\n"
+"PO-Revision-Date: 2026-03-09 22:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1870,12 +1870,12 @@ msgstr ""
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
 msgid "&Offline editing"
-msgstr "&Çevrimdışı düzenleme"
+msgstr "&Çevrim dışı düzenleme"
 
 #: kmuddy/dialogs/dlgconnect.cpp:80
 #, kde-format
 msgid "This allows offline editing of profiles."
-msgstr "Bu, profillerin çevrimdışı olarak düzenlenmesine izin verir."
+msgstr "Bu, profillerin çevrim dışı olarak düzenlenmesine izin verir."
 
 #: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
 #, kde-format
@@ -4001,13 +4001,13 @@ msgstr ""
 #: libs/cstatus.cpp:42 libs/cstatus.cpp:189
 #, kde-format
 msgid "Off-line"
-msgstr "Çevrimdışı"
+msgstr "Çevrim dışı"
 
 #: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
 #: libs/cstatus.cpp:219 libs/cstatus.cpp:268
 #, kde-format
 msgid "idle"
-msgstr "boşta"
+msgstr "Boşta"
 
 #: libs/cstatus.cpp:181
 #, kde-format
