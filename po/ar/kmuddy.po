@@ -1035,7 +1035,7 @@ msgstr "نوافذ الإخراج"
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
 msgid "&Gag output in main window"
-msgstr "&أخفِ الإخراج في النافذة الرئيسية"
+msgstr "&أخفِ الإخراج في النافذة الرئيسة"
 
 #: kmuddy/ctriggereditor.cpp:479
 #, kde-format
@@ -1044,7 +1044,7 @@ msgid ""
 "KMuddy session window"
 msgstr ""
 "يَتسبَّب هذا في عدم عرض الإخراج المُرسَل إلى نافذة منفصلة في نافذة جلسة كمدي "
-"الرئيسية"
+"الرئيسة"
 
 #: kmuddy/ctriggereditor.cpp:482
 #, kde-format
