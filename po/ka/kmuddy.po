@@ -1159,7 +1159,7 @@ msgstr "გამოტანის ადგილი"
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
 msgid "Font"
-msgstr "შრიფტი"
+msgstr "ფონტი"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
