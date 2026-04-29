@@ -3739,13 +3739,13 @@ msgstr "Názov"
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
 msgstr ""
-"Nie je možné rename the group, as a group with this name already exists."
+"Nie je možné premenovať skupinu, pretože skupina s týmto názvom už existuje."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
 msgstr ""
-"Nie je možné rename the object, as an object with this name already exists."
+"Nie je možné premenovať objekt, pretože objekt s týmto názvom už existuje."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
@@ -3810,13 +3810,13 @@ msgstr "Zadajte prosím meno skupiny:"
 #: libs/clistviewer.cpp:196
 #, kde-format
 msgid "Cannot create the group, as the provided name is not valid."
-msgstr "Nie je možné create the group, as the provided name is not valid."
+msgstr "Nie je možné vytvoriť skupinu, pretože zadaný názov nie je platný."
 
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
 msgstr ""
-"Nie je možné create the group, as a group with this name already exists."
+"Nie je možné vytvoriť skupinu, pretože skupina s týmto názvom už existuje."
 
 #: libs/cmsp.cpp:284
 #, kde-format
