@@ -107,12 +107,12 @@ msgstr "Odpojiť"
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Close connection"
-msgstr "Nie je spojenie"
+msgstr "Zatvoriť spojenie"
 
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Stay connected"
-msgstr "Pripojené"
+msgstr "Zostať pripojený"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -122,32 +122,32 @@ msgstr " Legenda je skrytá"
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now enabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Aliasy sú teraz povolené."
 
 #: kmuddy/cconnection.cpp:726
 #, kde-format
 msgid "Aliases are now disabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Aliasy sú teraz zakázané."
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now enabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Spúšťače sú teraz povolené."
 
 #: kmuddy/cconnection.cpp:737
 #, kde-format
 msgid "Triggers are now disabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Spúšťače sú teraz zakázané."
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now enabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Časovače sú teraz povolené."
 
 #: kmuddy/cconnection.cpp:748
 #, kde-format
 msgid "Timers are now disabled."
-msgstr "Teraz ste fanúšik."
+msgstr "Časovače sú teraz zakázané."
 
 #: kmuddy/cconnection.cpp:759
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "&Multimediálne klávesy"
 #: kmuddy/cconnection.cpp:817
 #, kde-format
 msgid "Status variables"
-msgstr "Počet vstupných premenných"
+msgstr "Stavové premenné"
 
 #: kmuddy/cconnection.cpp:818
 #, kde-format
@@ -248,12 +248,12 @@ msgstr "Vodorovná čiara"
 #: kmuddy/cmxpmanager.cpp:302
 #, kde-format
 msgid "create window"
-msgstr "Vytvoriť nové _okno"
+msgstr "Vytvoriť okno"
 
 #: kmuddy/cmxpmanager.cpp:303
 #, kde-format
 msgid "create internal window"
-msgstr "Vytvoriť nové _okno"
+msgstr "Vytvoriť interné okno"
 
 #: kmuddy/cmxpmanager.cpp:304
 #, kde-format
@@ -273,7 +273,7 @@ msgstr "Posunúť kurzor smerom dole"
 #: kmuddy/cmxpmanager.cpp:307
 #, kde-format
 msgid "erase text"
-msgstr "&Povedať text"
+msgstr "Vymazaný text"
 
 #: kmuddy/cmxpmanager.cpp:308
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "Klávesová skratka"
 #: kmuddy/cshortcuteditor.cpp:83
 #, kde-format
 msgid "&Send command"
-msgstr "chanserv: Odošle príkaz na chanserv"
+msgstr "&Odoslať príkaz"
 
 #: kmuddy/cshortcuteditor.cpp:84
 #, kde-format
@@ -428,7 +428,7 @@ msgstr ""
 #: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
 #, kde-format
 msgid "--- A connection has been established ---"
-msgstr "Pripojenie bolo prerušené"
+msgstr "--- Spojenie bolo nadviazané ---"
 
 #: kmuddy/ctelnet.cpp:246
 #, kde-format
@@ -526,7 +526,7 @@ msgstr "Pokročilý prepis relácie bol zastavený."
 #: kmuddy/ctranscript.cpp:257
 #, kde-format
 msgid "Transcript file could not be opened."
-msgstr "Nasledujúce súbory sa nepodarilo otvoriť:"
+msgstr "Súbor prepisu sa nepodarilo otvoriť."
 
 #: kmuddy/ctranscript.cpp:258
 #, kde-format
@@ -571,7 +571,7 @@ msgstr "Prepis relácie bude rotovaný o polnoci."
 #: kmuddy/ctranscript.cpp:425
 #, kde-format
 msgid "Dump file could not be opened."
-msgstr "Nasledujúce súbory sa nepodarilo otvoriť:"
+msgstr "Súbor výpisu sa nepodarilo otvoriť."
 
 #: kmuddy/ctriggereditor.cpp:114
 #, kde-format
@@ -671,7 +671,7 @@ msgstr " Doplňovanie celých riadkov (^L^N^P)"
 #: kmuddy/ctriggereditor.cpp:137
 #, kde-format
 msgid "Matching text"
-msgstr "&Povedať text"
+msgstr "Porovnávaný text"
 
 #: kmuddy/ctriggereditor.cpp:138
 #, kde-format
@@ -701,7 +701,7 @@ msgstr "Backreference"
 #: kmuddy/ctriggereditor.cpp:165
 #, kde-format
 msgid "&Trigger text"
-msgstr "&Povedať text"
+msgstr "&Text spúšťača"
 
 #: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
 #, kde-format
@@ -716,7 +716,7 @@ msgstr "Presná zhoda"
 #: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
 #, kde-format
 msgid "Sub-string"
-msgstr "Reťazec pre &zavesenie:"
+msgstr "Podreťazec"
 
 #: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
 #, kde-format
@@ -754,7 +754,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:195
 #, kde-format
 msgid "&Command(s) to send:"
-msgstr "chanserv: Odošle príkaz na chanserv"
+msgstr "&Príkaz(y) na odoslanie:"
 
 #: kmuddy/ctriggereditor.cpp:199
 #, kde-format
@@ -831,7 +831,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:260
 #, kde-format
 msgid "Show but do not send"
-msgstr "Neposielať Accept-Charset"
+msgstr "Zobraziť, ale neodosielať"
 
 #: kmuddy/ctriggereditor.cpp:261
 #, kde-format
@@ -845,7 +845,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
 #, kde-format
 msgid "Global matching"
-msgstr "Normálne hľadanie"
+msgstr "Globálne porovnávanie"
 
 #: kmuddy/ctriggereditor.cpp:265
 #, kde-format
@@ -871,12 +871,12 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
 #, kde-format
 msgid "Continue matching"
-msgstr "Normálne hľadanie"
+msgstr "Pokračovať v porovnávaní"
 
 #: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
 #, kde-format
 msgid "Stop matching"
-msgstr "Normálne hľadanie"
+msgstr "Zastaviť porovnávanie"
 
 #: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
 #, kde-format
@@ -891,7 +891,7 @@ msgstr "Zapnúť správu farieb"
 #: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
 #, kde-format
 msgid "Color replacement"
-msgstr "Nahradzovanie textu"
+msgstr "Nahradenie farby"
 
 #: kmuddy/ctriggereditor.cpp:339
 #, kde-format
@@ -942,12 +942,12 @@ msgstr "Pozadie"
 #: kmuddy/ctriggereditor.cpp:386
 #, kde-format
 msgid "Text &rewrite trigger"
-msgstr "&Vyžadovať spúšťacie slovo"
+msgstr "Spúšťač prepisu &textu"
 
 #: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
 #, kde-format
 msgid "Rewrite text"
-msgstr "&Povedať text"
+msgstr "Prepísaný text"
 
 #: kmuddy/ctriggereditor.cpp:393
 #, kde-format
@@ -994,7 +994,7 @@ msgstr ""
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
 msgid "&Prompt-detection trigger"
-msgstr "&Vyžadovať spúšťacie slovo"
+msgstr "&Spúšťač detekcie výzvy"
 
 #: kmuddy/ctriggereditor.cpp:438
 #, kde-format
@@ -1038,7 +1038,7 @@ msgstr "This will send the matched text to a separate output window"
 #: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:51
 #, kde-format
 msgid "Output Windows"
-msgstr "Výstup videa Windows GAPI"
+msgstr "Výstupné okná"
 
 #: kmuddy/ctriggereditor.cpp:478
 #, kde-format
@@ -1062,7 +1062,7 @@ msgstr "Názov okna"
 #: kmuddy/ctriggereditor.cpp:486
 #, kde-format
 msgid "&Create window"
-msgstr "Vytvoriť nové _okno"
+msgstr "&Vytvoriť okno"
 
 #: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
 #, kde-format
@@ -1072,12 +1072,12 @@ msgstr "Základné"
 #: kmuddy/ctriggereditor.cpp:516
 #, kde-format
 msgid "Special trigger"
-msgstr "Povoliť spúšťač"
+msgstr "Špeciálny spúšťač"
 
 #: kmuddy/ctriggereditor.cpp:517
 #, kde-format
 msgid "Output windows"
-msgstr "Výstup videa Windows GAPI"
+msgstr "Výstupné okná"
 
 #: kmuddy/ctriggereditor.cpp:547
 #, kde-format
@@ -1422,12 +1422,12 @@ msgstr "Enables displaying of system messages in the console."
 #: kmuddy/dialogs/dlgappsettings.cpp:255
 #, kde-format
 msgid "Enable b&linking"
-msgstr "Povoliť spúšťač"
+msgstr "Povoliť &blikanie"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:256
 #, kde-format
 msgid "Enables support for blinking. Currently not supported."
-msgstr "Povoliť spúšťač"
+msgstr "Povolí podporu blikania. Momentálne nie je podporované."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:272
 #, kde-format
@@ -1621,7 +1621,7 @@ msgstr "Zmeniť tmavé a svetlé farby"
 #: kmuddy/dialogs/dlgappsettings.cpp:401
 #, kde-format
 msgid "Bright colors"
-msgstr "Systémové farby"
+msgstr "Jasné farby"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
@@ -1696,7 +1696,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr "Reťazec pre &zavesenie:"
+msgstr "&Reťazec opakovača:"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1712,7 +1712,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
-msgstr "Reťazec pre &zavesenie:"
+msgstr "&Reťazec pre zameranie:"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
@@ -1843,12 +1843,12 @@ msgstr "Odstrániť profil"
 #: kmuddy/dialogs/dlgconnect.cpp:67
 #, kde-format
 msgid "&Duplicate profile"
-msgstr "_Názov profilu:"
+msgstr "&Duplikovať profil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:73
 #, kde-format
 msgid "Do not &send login sequence"
-msgstr "Neposielať Accept-Charset"
+msgstr "Neodosielať &prihlasovaciu sekvenciu"
 
 #: kmuddy/dialogs/dlgconnect.cpp:74
 #, kde-format
@@ -1916,12 +1916,12 @@ msgstr "Odstrániť profil"
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Duplicate Profile"
-msgstr "_Názov profilu:"
+msgstr "Duplikovať profil"
 
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Please enter name for the duplicated profile"
-msgstr "Zadajte názov nového profilu:"
+msgstr "Zadajte názov duplikovaného profilu:"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1971,7 +1971,7 @@ msgstr "&Prechádzať..."
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:65
 #, kde-format
 msgid "&Dump format:"
-msgstr "Výber formátu"
+msgstr "Formát &výpisu:"
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:67
 #, kde-format
@@ -2100,7 +2100,7 @@ msgstr "Importovať profil"
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:37
 #, kde-format
 msgid "Export profile"
-msgstr "_Názov profilu:"
+msgstr "Exportovať profil"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:41
 #, kde-format
@@ -2688,7 +2688,7 @@ msgstr "Čas pripojenia"
 #: kmuddy/dialogs/dlgtranscript.cpp:38
 #, kde-format
 msgid "Session Transcript"
-msgstr "Uložiť prepis"
+msgstr "Prepis relácie"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:45
 #, kde-format
@@ -2722,7 +2722,7 @@ msgstr "Pokročilé nastavenia"
 #: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
 #, kde-format
 msgid "Transcript &format"
-msgstr "Výber formátu"
+msgstr "Formát &prepisu"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:75
 #, kde-format
@@ -2820,7 +2820,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgwindows.cpp:57
 #, kde-format
 msgid "&List of output windows"
-msgstr "Výstup videa Windows GAPI"
+msgstr "&Zoznam výstupných okien"
 
 #: kmuddy/dialogs/dlgwindows.cpp:64
 #, kde-format
@@ -2900,7 +2900,7 @@ msgstr "Údaje objektu editora vlastností"
 #: kmuddy/kmuddy.cpp:331
 #, kde-format
 msgid "&Output windows..."
-msgstr "Výstup videa Windows GAPI"
+msgstr "&Výstupné okná..."
 
 #: kmuddy/kmuddy.cpp:335
 #, kde-format
@@ -2910,17 +2910,17 @@ msgstr "Povolené moduly"
 #: kmuddy/kmuddy.cpp:341
 #, kde-format
 msgid "Tri&ggers enabled"
-msgstr "Cestovný režim povolený"
+msgstr "Spúšťač&e povolené"
 
 #: kmuddy/kmuddy.cpp:347
 #, kde-format
 msgid "Tim&ers enabled"
-msgstr "Cestovný režim povolený"
+msgstr "&Časovače povolené"
 
 #: kmuddy/kmuddy.cpp:352
 #, kde-format
 msgid "Macro &keys enabled"
-msgstr "Cestovný režim povolený"
+msgstr "Makro&klávesy povolené"
 
 #: kmuddy/kmuddy.cpp:357
 #, kde-format
@@ -2935,7 +2935,7 @@ msgstr "Uložiť profil"
 #: kmuddy/kmuddy.cpp:369
 #, kde-format
 msgid "&Session transcript..."
-msgstr "Uložiť prepis"
+msgstr "&Prepis relácie..."
 
 #: kmuddy/kmuddy.cpp:374
 #, kde-format
@@ -3133,7 +3133,7 @@ msgstr "/oadd: parent group does not exist."
 #: kmuddy/macros.cpp:410
 #, kde-format
 msgid "/oadd: parent must be a group."
-msgstr "Názov skupiny musí byť určený."
+msgstr "Rodič musí byť skupina."
 
 #: kmuddy/macros.cpp:415
 #, kde-format
@@ -3153,7 +3153,7 @@ msgstr "/gadd: parent group does not exist."
 #: kmuddy/macros.cpp:443
 #, kde-format
 msgid "/gadd: the parent must be a group"
-msgstr "Názov skupiny musí byť určený."
+msgstr "Rodič musí byť skupina."
 
 #: kmuddy/macros.cpp:449
 #, kde-format
@@ -3193,7 +3193,7 @@ msgstr "%s: skupina „%s“ neexistuje v %s"
 #: kmuddy/macros.cpp:509
 #, kde-format
 msgid "/omove: target must be a group."
-msgstr "Názov skupiny musí byť určený."
+msgstr "Cieľ musí byť skupina."
 
 #: kmuddy/macros.cpp:513
 #, kde-format
@@ -3471,7 +3471,7 @@ msgstr "Stuart Kemp"
 #: kmuddy/main.cpp:68
 #, kde-format
 msgid "Speed improvements."
-msgstr "Vylepšenia kódu"
+msgstr "Vylepšenia rýchlosti."
 
 #: kmuddy/main.cpp:69
 #, kde-format
@@ -3491,7 +3491,7 @@ msgstr "Heiko Evermann"
 #: kmuddy/main.cpp:72
 #, kde-format
 msgid "Scripting improvements"
-msgstr "Vylepšenia kódu"
+msgstr "Vylepšenia skriptov"
 
 #: kmuddy/main.cpp:73
 #, kde-format
@@ -3506,7 +3506,7 @@ msgstr "Podpora ikon skratiek"
 #: libs/caliaseditor.cpp:88
 #, kde-format
 msgid "&Alias text"
-msgstr "&Povedať text"
+msgstr "&Text aliasu"
 
 #: libs/caliaseditor.cpp:106
 #, kde-format
@@ -3520,7 +3520,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:118
 #, kde-format
 msgid "&Replacement text(s)"
-msgstr "Nahradzovanie textu"
+msgstr "&Náhradný text (texty)"
 
 #: libs/caliaseditor.cpp:122
 #, kde-format
@@ -3539,7 +3539,7 @@ msgstr ""
 #: libs/caliaseditor.cpp:174
 #, kde-format
 msgid "Send original command"
-msgstr "chanserv: Odošle príkaz na chanserv"
+msgstr "Odoslať pôvodný príkaz"
 
 #: libs/caliaseditor.cpp:175
 #, kde-format
@@ -3696,7 +3696,7 @@ msgstr ""
 #: libs/clist.cpp:471
 #, kde-format
 msgid "This is not a KMuddy object file."
-msgstr "%s nie je zdieľaný objektový súbor (Typ: %d)."
+msgstr "Toto nie je objektový súbor KMuddy."
 
 #: libs/clist.cpp:473 libs/cvariablelist.cpp:377
 #: plugins/mapper/cmapzonemanager.cpp:234
@@ -3785,7 +3785,7 @@ msgstr "Pridať objekt"
 #: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr "Naozaj chcete odstrániť túto položku?"
+msgstr "Naozaj chcete odstrániť túto skupinu?"
 
 #: libs/clistviewer.cpp:165
 #, kde-format
@@ -3846,7 +3846,7 @@ msgstr "--- Hodnota prebuffer neplatná. Rozsah je 0-100."
 #: libs/cmsp.cpp:360
 #, kde-format
 msgid "Value of param L is out of -1;1-100 range."
-msgstr "--- Hodnota prebuffer neplatná. Rozsah je 0-100."
+msgstr "--- Hodnota prebuffer neplatná. Rozsah je -1;1-100."
 
 #: libs/cmsp.cpp:373
 #, kde-format
@@ -3876,7 +3876,7 @@ msgstr "MSP: sťahovanie zvukov zakázané - požiadavka ignorovaná."
 #: libs/coutput.cpp:228
 #, kde-format
 msgid "No, no, no!"
-msgstr "Nie"
+msgstr "Nie, nie, nie!"
 
 #: libs/coutput.cpp:229
 #, kde-format
@@ -4010,7 +4010,7 @@ msgstr "Odpojený."
 #: libs/cstatus.cpp:192
 #, kde-format
 msgid "Connection has been closed."
-msgstr "Pripojenie bolo prerušené"
+msgstr "Spojenie bolo ukončené."
 
 #: libs/cvariablelist.cpp:375
 #, kde-format
@@ -4020,7 +4020,7 @@ msgstr "Toto nie je súbor zoznamu premenných KMuddy."
 #: plugins/converter/converterdialog.cpp:41
 #, kde-format
 msgid "Profile Converter"
-msgstr "Prevod jednotiek"
+msgstr "Konvertor profilov"
 
 #: plugins/converter/converterdialog.cpp:49
 #, kde-format
@@ -4043,7 +4043,7 @@ msgstr "Cesta"
 #: plugins/converter/converterplugin.cpp:73
 #, kde-format
 msgid "Profile &Converter..."
-msgstr "Prevod jednotiek"
+msgstr "&Konvertor profilov..."
 
 #: plugins/converter/converterplugin.cpp:129
 #, kde-format
@@ -4088,12 +4088,12 @@ msgstr "Vložiť"
 #: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
 #, kde-format
 msgid "Paste Element"
-msgstr "Prvok mixéra:"
+msgstr "Vložiť prvok"
 
 #: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
 #, kde-format
 msgid "Update Properties"
-msgstr "Vlastnosti účtu '%s'"
+msgstr "Aktualizovať vlastnosti"
 
 #: plugins/mapper/cmapclipboard.cpp:375
 #, kde-format
@@ -4103,12 +4103,12 @@ msgstr "Vložiť cestu"
 #: plugins/mapper/cmapclipboard.cpp:466
 #, kde-format
 msgid "Delete Elements"
-msgstr "Fiktívne prvky"
+msgstr "Odstrániť prvky"
 
 #: plugins/mapper/cmapelement.cpp:337
 #, kde-format
 msgid "Resize Element"
-msgstr "Prvok mixéra:"
+msgstr "Zmeniť veľkosť prvku"
 
 #: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
 #, kde-format
@@ -4123,7 +4123,7 @@ msgstr "Mapa"
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
-msgstr "Trasa - Marble"
+msgstr "Mapovač: Smery"
 
 #: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
@@ -4133,12 +4133,12 @@ msgstr "&Minimálny posun:"
 #: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
-msgstr "Systémové farby"
+msgstr "Mapovač: Farby"
 
 #: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
-msgstr "Mapovač RPC"
+msgstr "Mapovač: Rýchlochôdza"
 
 #: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
@@ -4197,7 +4197,7 @@ msgstr "Na tomto mieste už cesta existuje"
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
-msgstr "Mapovač RPC"
+msgstr "Mapovač KMuddy"
 
 #: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
@@ -4243,7 +4243,7 @@ msgstr "Použiť obojsmerný posun textu"
 #: plugins/mapper/cmapmanager.cpp:1650
 #, kde-format
 msgid "Make Path One-Way"
-msgstr "Dopravná značka jednosmerná premávka"
+msgstr "Nastaviť cestu ako jednosmernú"
 
 #: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
 #, kde-format
@@ -4253,27 +4253,27 @@ msgstr "neexistuje vlastnosť \"%s\" v prvku \"%s\""
 #: plugins/mapper/cmapmanager.cpp:1768
 #, kde-format
 msgid "Root Zone"
-msgstr "Časová zóna"
+msgstr "Koreňová zóna"
 
 #: plugins/mapper/cmapmanager.cpp:1784
 #, kde-format
 msgid "Test room 1"
-msgstr "Veľkosť miestnosti"
+msgstr "Testovacia miestnosť 1"
 
 #: plugins/mapper/cmapmanager.cpp:1787
 #, kde-format
 msgid "Test room 2"
-msgstr "Veľkosť miestnosti"
+msgstr "Testovacia miestnosť 2"
 
 #: plugins/mapper/cmapmanager.cpp:1790
 #, kde-format
 msgid "Test room 3"
-msgstr "Veľkosť miestnosti"
+msgstr "Testovacia miestnosť 3"
 
 #: plugins/mapper/cmapmanager.cpp:1793
 #, kde-format
 msgid "Test room 4"
-msgstr "Veľkosť miestnosti"
+msgstr "Testovacia miestnosť 4"
 
 #: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
@@ -4283,13 +4283,13 @@ msgstr "Nastavenie špeciálnych predvolieb pre ISO9660."
 #: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
 #, kde-format
 msgid "Add Bend"
-msgstr "Ohnúť šrafovanie"
+msgstr "Pridať ohyb"
 
 #: plugins/mapper/cmappath.cpp:614
 #: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
 #, kde-format
 msgid "Move Bend"
-msgstr "Ohnúť šrafovanie"
+msgstr "Presunúť ohyb"
 
 #: plugins/mapper/cmappath.cpp:629 plugins/mapper/cmapview.cpp:702
 #, kde-format
@@ -4299,7 +4299,7 @@ msgstr "Vrátiť posledný segment cesty:"
 #: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:59
 #, kde-format
 msgid "Mapper"
-msgstr "Mapovač RPC"
+msgstr "Mapovač"
 
 #: plugins/mapper/cmapview.cpp:79
 #, kde-format
@@ -4309,7 +4309,7 @@ msgstr "Režim ná&sledovania myši"
 #: plugins/mapper/cmapview.cpp:85
 #, kde-format
 msgid "Auto Create"
-msgstr "Automatická detekcia"
+msgstr "Automatické vytvorenie"
 
 #: plugins/mapper/cmapview.cpp:122
 #, kde-format
@@ -4319,12 +4319,12 @@ msgstr "Mriežka"
 #: plugins/mapper/cmapview.cpp:127
 #, kde-format
 msgid "Display Upper Level"
-msgstr "Maximálna úroveň zoznamu zobrazenia"
+msgstr "Zobraziť vyššiu úroveň"
 
 #: plugins/mapper/cmapview.cpp:132
 #, kde-format
 msgid "Display Lower Level"
-msgstr "Maximálna úroveň zoznamu zobrazenia"
+msgstr "Zobraziť nižšiu úroveň"
 
 #: plugins/mapper/cmapview.cpp:137
 #, kde-format
@@ -4334,7 +4334,7 @@ msgstr "Štatistiky pre aktuálnu úroveň"
 #: plugins/mapper/cmapview.cpp:142
 #, kde-format
 msgid "Create New Zone"
-msgstr "Časová zóna"
+msgstr "Vytvoriť novú zónu"
 
 #: plugins/mapper/cmapview.cpp:147
 #, kde-format
@@ -4344,12 +4344,12 @@ msgstr "Vymazať aktuálne umiestnenie"
 #: plugins/mapper/cmapview.cpp:154
 #, kde-format
 msgid "Map Upper Level"
-msgstr "Vstúpiť do ladiacej úrovne"
+msgstr "Mapovať vyššiu úroveň"
 
 #: plugins/mapper/cmapview.cpp:158
 #, kde-format
 msgid "Map Lower Level"
-msgstr "Vstúpiť do ladiacej úrovne"
+msgstr "Mapovať nižšiu úroveň"
 
 #: plugins/mapper/cmapview.cpp:165
 #, kde-format
@@ -4369,7 +4369,7 @@ msgstr "_Pozvať do diskusnej miestnosti"
 #: plugins/mapper/cmapview.cpp:177
 #, kde-format
 msgid "&Delete room"
-msgstr "Veľkosť miestnosti"
+msgstr "&Odstrániť miestnosť"
 
 #: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
 #: plugins/mapper/cmapview.cpp:226
@@ -4385,17 +4385,17 @@ msgstr "Vymazať text"
 #: plugins/mapper/cmapview.cpp:201
 #, kde-format
 msgid "&One way"
-msgstr "Dopravná značka jednosmerná premávka"
+msgstr "Jednosmern&á cesta"
 
 #: plugins/mapper/cmapview.cpp:205
 #, kde-format
 msgid "&Two way"
-msgstr "Stane sa neprítomný"
+msgstr "&Obojsmerná"
 
 #: plugins/mapper/cmapview.cpp:209
 #, kde-format
 msgid "&Add Bend"
-msgstr "Ohnúť šrafovanie"
+msgstr "&Pridať ohyb"
 
 #: plugins/mapper/cmapview.cpp:213
 #, kde-format
@@ -4439,7 +4439,7 @@ msgstr "V tomto smere nie je žiadna úroveň. Chcete vytvoriť novú?"
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "Create New Level"
-msgstr "Vytvoriť úroveň"
+msgstr "Vytvoriť novú úroveň"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -4449,13 +4449,13 @@ msgstr "Naozaj chcete odstrániť túto položku?"
 #: plugins/mapper/cmapview.cpp:613
 #, kde-format
 msgid "Please enter the name of the new zone:"
-msgstr "Zadajte názov nového profilu:"
+msgstr "Zadajte názov novej zóny:"
 
 #: plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid ""
 "Are you sure that you want to delete the current zone? This cannot be undone."
-msgstr "Naozaj chcete odstrániť túto položku?"
+msgstr "Naozaj chcete odstrániť aktuálnu zónu? Túto akciu nemožno vrátiť späť."
 
 #: plugins/mapper/cmapview.cpp:759
 #, kde-format
@@ -4470,7 +4470,7 @@ msgstr "Zmena časového pásma systému"
 #: plugins/mapper/cmapviewstatusbar.cpp:55
 #, kde-format
 msgid "Current Room : "
-msgstr "Veľkosť miestnosti"
+msgstr "Aktuálna miestnosť : "
 
 #: plugins/mapper/cmapviewstatusbar.cpp:56
 #, kde-format
@@ -4485,12 +4485,12 @@ msgstr "Pásmo"
 #: plugins/mapper/cmapzone.cpp:34
 #, kde-format
 msgid "Unnamed Zone"
-msgstr "Časová zóna"
+msgstr "Nepomenovaná zóna"
 
 #: plugins/mapper/cmapzonemanager.cpp:232
 #, kde-format
 msgid "This is not a KMuddy map list."
-msgstr "%s nie je zdieľaný objektový súbor (Typ: %d)."
+msgstr "Toto nie je zoznam máp KMuddy."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
@@ -4508,13 +4508,13 @@ msgstr "Aktuálna úroveň"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr "Farba obrysu cesty"
+msgstr "Predvolená farba cesty"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr "Predvolená farba pozadia"
+msgstr "Predvolená farba miestnosti"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
@@ -4526,13 +4526,13 @@ msgstr "Aktuálne nastavenie farieb"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
 #, kde-format
 msgid "Special Exit Color"
-msgstr "Nastaviť farbu &pozadia..."
+msgstr "Farba špeciálnych východov"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
 #, kde-format
 msgid "Login Room Color"
-msgstr "Nastaviť farbu &pozadia..."
+msgstr "Farba prihlasovacích miestností"
 
 #. i18n: ectx: property (text), widget (QLabel, lblEdit)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
@@ -4550,7 +4550,7 @@ msgstr "Predvolená farba textu"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr "Predvolená farba pozadia"
+msgstr "Predvolená farba zóny"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -4562,7 +4562,7 @@ msgstr "Vybraná farba"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
 #, kde-format
 msgid "Lower Level"
-msgstr "Úroveň čiernej farby"
+msgstr "Nižšia úroveň"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
@@ -4570,7 +4570,7 @@ msgstr "Úroveň čiernej farby"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
 #, kde-format
 msgid "Room Color"
-msgstr "Prispôsobenie farby"
+msgstr "Farba miestnosti"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
@@ -4578,7 +4578,7 @@ msgstr "Prispôsobenie farby"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
 #, kde-format
 msgid "Path Color"
-msgstr "Farba obrysu cesty"
+msgstr "Farba cesty"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLowerText)
 #. i18n: ectx: property (text), widget (QLabel, lblUpperText)
@@ -4594,13 +4594,13 @@ msgstr "Farba textu"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
 #, kde-format
 msgid "Zone Color"
-msgstr "Prispôsobenie farby"
+msgstr "Farba zóny"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
 #, kde-format
 msgid "Upper Level"
-msgstr "Úroveň čiernej farby"
+msgstr "Vyššia úroveň"
 
 #. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
@@ -4624,7 +4624,7 @@ msgstr "Smery"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
 #, kde-format
 msgid "Long Directions Commands"
-msgstr "Príkaz (viď --commands)"
+msgstr "Príkazy dlhých smerov"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
 #. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
@@ -4694,7 +4694,7 @@ msgstr "Severozápadná provincia"
 #: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
 #, kde-format
 msgid "Short Directions Commands"
-msgstr "Príkaz (viď --commands)"
+msgstr "Príkazy krátkych smerov"
 
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:85
 #: plugins/mapper/dialogs/dlgmapmovement.cpp:96
@@ -4742,19 +4742,19 @@ msgstr "Odstrániť"
 #: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
 #, kde-format
 msgid "Changed Path Properties"
-msgstr "Vlastnosti zmenené naposledy"
+msgstr "Vlastnosti cesty boli zmenené"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
 #, kde-format
 msgid "Path Properties"
-msgstr "Vlastnosti účtu '%s'"
+msgstr "Vlastnosti cesty"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
 #, kde-format
 msgid "Exits"
-msgstr "Ukončí Cervisia"
+msgstr "Východy"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grdExits)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
@@ -4766,7 +4766,7 @@ msgstr "<b>Detaily požiadavky</b>:"
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
 #, kde-format
 msgid "Two Way Exit"
-msgstr "Stane sa neprítomný"
+msgstr "Obojsmerný východ"
 
 #. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
@@ -4778,7 +4778,7 @@ msgstr "Opustí normálny režim."
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
 #, kde-format
 msgid "Source Directions"
-msgstr "Trasa - Marble"
+msgstr "Zdrojové smery"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdE)
 #. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
@@ -4882,13 +4882,13 @@ msgstr "Special Command"
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
 #, kde-format
 msgid "Source To Destination:"
-msgstr "Požadovaný zdroj"
+msgstr "Zdroj do cieľa:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
 #, kde-format
 msgid "Destination To Source:"
-msgstr "Požadovaný zdroj"
+msgstr "Cieľ do zdroja:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
 #: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
@@ -4939,13 +4939,13 @@ msgstr "Zrušiť"
 #: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
 #, kde-format
 msgid "Changed Room Properties"
-msgstr "Vlastnosti zmenené naposledy"
+msgstr "Vlastnosti miestnosti boli zmenené"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
 #, kde-format
 msgid "Room Properties"
-msgstr "Vlastnosti účtu '%s'"
+msgstr "Vlastnosti miestnosti"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
@@ -4981,13 +4981,13 @@ msgstr "Farba"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
 #, kde-format
 msgid "Room Color:"
-msgstr "Prispôsobenie farby"
+msgstr "Farba miestnosti:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr "Predvolená farba pozadia"
+msgstr "Predvolená farba miestnosti"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
@@ -4999,13 +4999,13 @@ msgstr "Štartovacia pozícia"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
 #, kde-format
 msgid "&Exits"
-msgstr "Ukončí Cervisia"
+msgstr "&Východy"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExits)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
 #, kde-format
 msgid "Room Exits:"
-msgstr "Ukončí Cervisia"
+msgstr "Východy miestnosti:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
@@ -5041,7 +5041,7 @@ msgstr "&Obsah"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
 #, kde-format
 msgid "RoomContents:"
-msgstr "&Obsah"
+msgstr "Obsah miestnosti:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
@@ -5197,7 +5197,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:70
 #, kde-format
 msgid "Show &mapper"
-msgstr "Mapovač RPC"
+msgstr "Zobraziť &mapovač"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
@@ -5214,7 +5214,7 @@ msgstr "Navigácia"
 #: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
 #, kde-format
 msgid "Move Elements"
-msgstr "Fiktívne prvky"
+msgstr "Presunúť prvky"
 
 #: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
 #, kde-format
@@ -5348,7 +5348,7 @@ msgstr ""
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
 msgid "Communicate variables"
-msgstr "Počet vstupných premenných"
+msgstr "Komunikačné premenné"
 
 #: plugins/scripting/cscripteditor.cpp:112
 #, kde-format
