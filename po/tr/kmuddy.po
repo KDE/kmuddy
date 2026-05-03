@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:40+0000\n"
-"PO-Revision-Date: 2026-03-09 22:03+0300\n"
+"PO-Revision-Date: 2026-05-02 18:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -404,7 +404,7 @@ msgstr "&Var olan metnin üzerine yaz"
 #, kde-format
 msgid ""
 "If there already is some text in the input line, should it be overwritten?"
-msgstr "Girdi satırında halihazırda metin varsa üzerine yazılsın mı?"
+msgstr "Girdi satırında hâlihazırda metin varsa üzerine yazılsın mı?"
 
 #: kmuddy/cstatusvareditor.cpp:60
 #, kde-format
@@ -3151,7 +3151,7 @@ msgstr "/oadd: Üst öge bir grup olmalıdır."
 #: kmuddy/macros.cpp:415
 #, kde-format
 msgid "/oadd: object with this name already exists."
-msgstr "/oadd: Bu adda bir nesne halihazırda var."
+msgstr "/oadd: Bu adda bir nesne hâlihazırda var."
 
 #: kmuddy/macros.cpp:432
 #, kde-format
@@ -3171,7 +3171,7 @@ msgstr "/gadd: Üst öge bir grup olmalıdır"
 #: kmuddy/macros.cpp:449
 #, kde-format
 msgid "/gadd: such group already exists in that list"
-msgstr "/gadd: Böyle bir grup listede halihazırda var"
+msgstr "/gadd: Böyle bir grup listede hâlihazırda var"
 
 #: kmuddy/macros.cpp:465
 #, kde-format
@@ -3236,12 +3236,12 @@ msgstr "/oren: Kök grup yeniden adlandırılamaz."
 #: kmuddy/macros.cpp:559
 #, kde-format
 msgid "/oren: a group with this name already exists."
-msgstr "/oren:. Bu adda bir grup halihazırda var."
+msgstr "/oren:. Bu adda bir grup hâlihazırda var."
 
 #: kmuddy/macros.cpp:566
 #, kde-format
 msgid "/oren: an object with this name already exists."
-msgstr "/oren: Bu adda bir nesne halihazırda var."
+msgstr "/oren: Bu adda bir nesne hâlihazırda var."
 
 #: kmuddy/macros.cpp:581
 #, kde-format
@@ -3756,14 +3756,14 @@ msgstr "&Ad"
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
 msgstr ""
-"Bu ada sahip bir grup halihazırda var olduğundan grup yeniden "
+"Bu ada sahip bir grup hâlihazırda var olduğundan grup yeniden "
 "adlandırılamıyor."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
 msgstr ""
-"Bu ada sahip bir nesne halihazırda var olduğundan nesne yeniden "
+"Bu ada sahip bir nesne hâlihazırda var olduğundan nesne yeniden "
 "adlandırılamıyor."
 
 #: libs/clistgroup.cpp:229
@@ -3834,7 +3834,7 @@ msgstr "Sağlanan ad geçerli olmadığından grup oluşturulamıyor."
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr "Bu ada sahip bir grup halihazırda var olduğundan grup oluşturulamıyor."
+msgstr "Bu ada sahip bir grup hâlihazırda var olduğundan grup oluşturulamıyor."
 
 #: libs/cmsp.cpp:284
 #, kde-format
@@ -4206,7 +4206,7 @@ msgstr "Metin Oluştur"
 #: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
-msgstr "Bu konumda bir yol halihazırda var"
+msgstr "Bu konumda bir yol hâlihazırda var"
 
 #: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
 #: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
@@ -4235,7 +4235,7 @@ msgstr "Ögeyi Sil"
 #: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
-msgstr "Halihazırda hızlı yürünüyor"
+msgstr "Hâlihazırda hızlı yürünüyor"
 
 #: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
@@ -5337,7 +5337,7 @@ msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
 msgstr ""
-"Bu betiğin bir örneği halihazırda çalışıyorsa başka bir tanesi başlatılamaz."
+"Bu betiğin bir örneği hâlihazırda çalışıyorsa başka bir tanesi başlatılamaz."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
