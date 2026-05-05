@@ -1626,7 +1626,7 @@ msgstr "Jasné farby"
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr "oddeľovač kontextu <EOT> v rámci reťazca"
+msgstr "&Oddeľovací reťazec príkazov"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -3856,7 +3856,7 @@ msgstr "--- Hodnota prebuffer neplatná. Rozsah je 0-100."
 #: libs/cmsp.cpp:382
 #, kde-format
 msgid "Value of param C must be 0 or 1."
-msgstr "hodnota pre <%s> musí byť 1 alebo viac"
+msgstr "Hodnota parametra C musí byť 0 alebo 1."
 
 #: libs/cmsp.cpp:393
 #, kde-format
