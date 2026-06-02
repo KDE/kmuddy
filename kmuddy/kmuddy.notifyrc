@@ -27,6 +27,7 @@ Comment[sk]=KMuddy
 Comment[sl]=KMuddy
 Comment[sv]=Kmuddy
 Comment[tr]=KMuddy
+Comment[ug]=KMuddy
 Comment[uk]=KMuddy
 Comment[zh_TW]=KMuddy
 
@@ -56,6 +57,7 @@ Name[sk]=New Text Received
 Name[sl]=Prejeto novo besedilo
 Name[sv]=Ny text mottagen
 Name[tr]=Yeni Metin Alındı
+Name[ug]=يېڭى تېكىست قوبۇللاندى
 Name[uk]=Отримано новий текст
 Name[zh_TW]=收到新訊息
 Comment=A new text has been received in an active session.
