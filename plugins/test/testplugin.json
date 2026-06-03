@@ -23,6 +23,7 @@
         "Description[sl]": "Testiranje vtičnika",
         "Description[sv]": "Testinsticksprogram",
         "Description[tr]": "Sınama eklentileri",
+        "Description[ug]": "سىناق قىستۇرمىسى",
         "Description[uk]": "Додаток для тестування",
         "Description[zh_TW]": "測試用外掛程式",
         "EnabledByDefault": true,
@@ -51,6 +52,7 @@
         "Name[sl]": "Test",
         "Name[sv]": "Test",
         "Name[tr]": "Sınama",
+        "Name[ug]": "سىنا",
         "Name[uk]": "Тест",
         "Name[zh_TW]": "測試"
     }
