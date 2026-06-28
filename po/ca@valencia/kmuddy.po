@@ -2516,7 +2516,7 @@ msgstr "Habiliteu-los només si els necessiteu:"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:197
 #, kde-format
 msgid "&Use MSP even if not negotiated"
-msgstr "Utilit&za MSP encara que no estiga negociat"
+msgstr "&Utilitza MSP encara que no estiga negociat"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:198
 #, kde-format
@@ -2848,7 +2848,7 @@ msgid ""
 "combination of alpha-numeric characters."
 msgstr ""
 "Ací podeu especificar el format del registre. Podeu utilitzar les opcions "
-"següents: $W - nom del món, $h - hora, $m - minut, $D - dia, $M - mes, $Y - "
+"següents: $W – nom del món, $h – hora, $m – minut, $D – dia, $M – mes, $Y – "
 "any, i qualsevol combinació de caràcters alfanumèrics."
 
 #: kmuddy/dialogs/dlgwindows.cpp:57
@@ -3085,7 +3085,7 @@ msgstr "A&juda"
 #, kde-format
 msgid "To reconnect, press %1 or use Connection / Reconnect."
 msgstr ""
-"Per a tornar a connectar, premeu «%1» o utilitzeu «Connexió -> Torna a "
+"Per a tornar a connectar, premeu «%1» o utilitzeu «Connexió → Torna a "
 "connectar»."
 
 #: kmuddy/kmuddy.cpp:989
@@ -3661,7 +3661,7 @@ msgstr "El recompte es limita a 100.\n"
 #: libs/ccmdparser.cpp:434
 #, kde-format
 msgid "You can disable this limit in Profile / MUD Preferences."
-msgstr "Podeu inhabilitar este límit en «Perfil -> Preferències de MUD»."
+msgstr "Podeu inhabilitar este límit en «Perfil → Preferències de MUD»."
 
 #: libs/ccmdprocessor.cpp:285
 #, kde-format
@@ -4018,10 +4018,10 @@ msgstr ""
 "Introduïu un script en Javascript que s'executarà quan l'objecte es "
 "desencadeni.<br /><br />A l'script hi ha disponibles les rutines següents, a "
 "banda de les eines estàndard de Javascript:<br /><br /><b>window."
-"message(text)</b> - mostra un missatge<br /><b>window.send(ordre)</b> - "
-"envia una ordre<br /><b>window.sendraw(ordre)</b> - envia una ordre sense "
-"processament<br /><b>window.get(nom)</b> - recupera el valor d'una "
-"variable<br /><b>window.set(nom, valor)</b> - establix el valor d'una "
+"message(text)</b> – mostra un missatge<br /><b>window.send(ordre)</b> – "
+"envia una ordre<br /><b>window.sendraw(ordre)</b> – envia una ordre sense "
+"processament<br /><b>window.get(nom)</b> – recupera el valor d'una "
+"variable<br /><b>window.set(nom, valor)</b> – establix el valor d'una "
 "variable<br /><br />També podeu utilitzar les variables següents: <b>prefix, "
 "prefixfull, suffix, suffixfull, matched, line, matches[]</b>"
 
