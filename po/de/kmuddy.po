@@ -876,7 +876,7 @@ msgstr ""
 "ausgeführt - so können Befehle mehrfach gesendet werden, einmal je "
 "Übereinstimmung.</p><p>Triff die Bedingung nicht zu, wird die Verarbeitung "
 "nicht abgebrochen, daher können Sie diese Funktion verwenden, um Namen in "
-"einer Liste hervorzuheben. Benutzen Sie die Bedingung, um die Liste auf "
+"einer Liste hervorzuheben. Verwenden Sie die Bedingung, um die Liste auf "
 "einen übereinstimmenden Eintrag zu überprüfen."
 
 #: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
@@ -1002,7 +1002,7 @@ msgstr ""
 "aktiviert, wenn das KMuddy-Fenster und oder diese Sitzung zurzeit nicht "
 "aktiv ist.\n"
 "Nützlich, wenn Sie über einige Ereignisse (Ansagen, Kämpfe ...) informiert "
-"werden wollen."
+"werden möchten."
 
 #: kmuddy/ctriggereditor.cpp:437
 #, kde-format
@@ -1288,8 +1288,8 @@ msgid ""
 "will still receive notification messages. "
 msgstr ""
 "Diese Einstellung schaltet die Anzeige des Symbols im Systemabschnitt der "
-"Kontrollleiste ein oder aus. Das Symbol kann benutzt werden, das Fenster der "
-"Anwendung auszublenden, ohne zu viel Platz in der Programmleiste "
+"Kontrollleiste ein oder aus. Das Symbol kann verwendet werden, das Fenster "
+"der Anwendung auszublenden, ohne zu viel Platz in der Programmleiste "
 "einzunehmen. Sie können auf das Symbol klicken, um das Fenster anzuzeigen "
 "und auch wieder auszublenden. Ihre Verbindung bleibt bestehen, sogar wenn "
 "das Fenster ausgeblendet ist, es werden immer noch Benachrichtigungen "
@@ -1545,7 +1545,7 @@ msgid ""
 "Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
 "but the last are sent as commands immediately."
 msgstr ""
-"Aktiviert die Eingabe wie bei Telnet, d. h. wenn ein mehrzeiliger Text "
+"Aktiviert die Eingabe wie bei Telnet, d. h. wenn ein mehrzeiliger Text "
 "eingefügt wird, werden all Zeilen bis auf die letzte sofort als Befehle "
 "gesendet."
 
@@ -1661,7 +1661,7 @@ msgid ""
 msgstr ""
 "Sie können mehrere Befehle auf einmal eingeben, sie werden zusammen "
 "ausgeführt. Hier können Sie das Zeichen eintragen, dass zur Trennung der "
-"einzelnen Befehle benutzt wird."
+"einzelnen Befehle verwendet wird."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
@@ -1853,7 +1853,7 @@ msgid ""
 msgstr ""
 "Diese Liste zeigt die aktuell definierten Profile an.<p>Mit <b>Profilen</b> "
 "können Sie die Verbindung zu Ihrem MUD beschleunigen und auch erweiterte "
-"Funktionen wie <i>Aliase</i> oder <i>Auslöser</i> benutzen."
+"Funktionen wie <i>Aliase</i> oder <i>Auslöser</i> verwenden."
 
 #: kmuddy/dialogs/dlgconnect.cpp:64
 #, kde-format
@@ -1888,7 +1888,7 @@ msgid ""
 msgstr ""
 "Die Anmeldungssequenz wird für diese Verbindung nicht gesendet. Hilfreich "
 "wenn Sie einen neue Figur erstellen und Sie aus bestimmten Gründen die "
-"Schnellverbindung benutzen möchten."
+"Schnellverbindung verwenden möchten."
 
 #: kmuddy/dialogs/dlgconnect.cpp:79
 #, kde-format
@@ -1927,7 +1927,7 @@ msgid ""
 "this profile."
 msgstr ""
 "Dies Profil kann nicht gelöscht werden, da es noch in einer geöffneten "
-"Verbindung benutzt wird."
+"Verbindung verwendet wird."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -2561,7 +2561,7 @@ msgstr ""
 "MSP-Zeichenfolgen mitten in der Zeilen sind eine Erweiterung der MUD-"
 "Spezifikation von zMUD, die anscheinen von einigen MUDs verwendet wird. Hier "
 "können Sie eine Unterstützung für diese Funktion aktivieren, aber überprüfen "
-"Sie, dass andere Spieler diese Zeichenfolgen nicht missbräuchlich benutzen, "
+"Sie, dass andere Spieler diese Zeichenfolgen nicht missbräuchlich verwenden, "
 "oder schalten Sie die Unterstützung für das Herunterladen ab, ansonsten "
 "könnten Spieler Ihr Programm anweisen, sämtliche Dateien aus dem Internet "
 "herunterzuladen ..."
@@ -3399,7 +3399,7 @@ msgstr "Alsherok-Mitarbeiter"
 msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
 msgstr ""
 "Für die Veröffentlichung der AFKMud-Quelltextbasis, die zum Testen von MCCP/"
-"MSP benutzt wird"
+"MSP verwendet wird"
 
 #: kmuddy/main.cpp:46
 #, kde-format
@@ -3645,7 +3645,7 @@ msgstr ""
 "ausgeführt - so können Befehle mehrfach gesendet werden, einmal je "
 "Übereinstimmung.</p><p>Triff die Bedingung nicht zu, wird die Verarbeitung "
 "nicht abgebrochen, daher können Sie diese Funktion verwenden, um Namen in "
-"einer Liste hervorzuheben. Benutzen Sie die Bedingung, um die Liste auf "
+"einer Liste hervorzuheben. Verwenden Sie die Bedingung, um die Liste auf "
 "einen übereinstimmenden Eintrag zu überprüfen."
 
 #: libs/caliaseditor.cpp:260
@@ -5403,7 +5403,7 @@ msgstr ""
 "Flusskontrolle stellt sicher, dass Skripte abgeglichen bleiben. Wenn Zwei "
 "Zeilen vom Server ankommen, dann wird die zweite Zeile nicht zu den Skripten "
 "gesendet, bis alle laufenden Skripte die erste Zeile empfangen haben. In "
-"manchen Situationen ist es besser, diese Funktion nicht zu benutzen.</"
+"manchen Situationen ist es besser, diese Funktion nicht zu verwenden.</"
 "p><p>Möchten Sie Flusskontrolle aus bestimmten Gründen deaktivieren, lassen "
 "Sie dies eingeschaltet.</p>"
 
