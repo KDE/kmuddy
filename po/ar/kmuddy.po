@@ -70,7 +70,7 @@ msgstr "أمر &إلغاء الضغط"
 msgid ""
 "Command that will be executed if you click on the push-down button while "
 "it's pushed down."
-msgstr "الأمر الذي يُنفَّذ عند النقر على الزر الضاغط بينما يكون مضغوطاً."
+msgstr "الأمر الذي يُنفَّذ عند النقر على الزر الضاغط بينما يكون مضغوطًا."
 
 #: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
 #: kmuddy/ctimereditor.cpp:132
@@ -113,7 +113,7 @@ msgstr "أغلِق الاتصال"
 #: kmuddy/cconnection.cpp:423
 #, kde-format
 msgid "Stay connected"
-msgstr "ابْقَ متصلاً"
+msgstr "ابْقَ متصلًا"
 
 #: kmuddy/cconnection.cpp:507
 #, kde-format
@@ -369,7 +369,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "الأمر الذي يُنفَّذ عند الضغط على تركيبة المفاتيح المضبوطة.\n"
-"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+"يُمكِن للأمر أن يتضمن ألقابًا، أو استدعاءات سكربتات، وما شابه."
 
 #: kmuddy/cshortcuteditor.cpp:76
 #, kde-format
@@ -455,7 +455,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "الأمر الذي يُنفَّذ عند كل نَبضة.\n"
-"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+"يُمكِن للأمر أن يتضمن ألقابًا، أو استدعاءات سكربتات، وما شابه."
 
 #: kmuddy/ctimereditor.cpp:74
 #, kde-format
@@ -509,7 +509,7 @@ msgid ""
 "Command can include aliases, script calls and similar stuff."
 msgstr ""
 "الأمر الذي يُنفَّذ في الوقت المحدد قبل كل نَبضة.\n"
-"يُمكِن للأمر أن يتضمن ألقاباً، أو استدعاءات سكربتات، وما شابه."
+"يُمكِن للأمر أن يتضمن ألقابًا، أو استدعاءات سكربتات، وما شابه."
 
 #: kmuddy/ctranscript.cpp:172
 #, kde-format
@@ -1197,7 +1197,7 @@ msgstr "اعرض سطر الإدخال &المساعد"
 #: kmuddy/dialogs/dlgappsettings.cpp:116
 #, kde-format
 msgid "You will have two input lines instead of one."
-msgstr "يَحصُل لديك سطرا إدخال بدلاً من واحد."
+msgstr "يَحصُل لديك سطرا إدخال بدلًا من واحد."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:118
 #, kde-format
@@ -1358,7 +1358,7 @@ msgid ""
 "Indentation says how many spaces will be put to the beginning of the "
 "continued line."
 msgstr ""
-"عندما يكون السطر طويلاً جدًا، يُنقَل جزء منه إلى السطر التالي. تشير المسافة "
+"عندما يكون السطر طويلًا جدًا، يُنقَل جزء منه إلى السطر التالي. تشير المسافة "
 "البادئة إلى عدد المسافات التي تُوضَع في بداية السطر المستمر."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:241
@@ -1714,7 +1714,7 @@ msgid ""
 "If a command is started with this string, it will be sent as-is, without any "
 "parsing. This string will be removed first."
 msgstr ""
-"إذا بُدِئ أمر بهذه السلسلة، يُرسَل كما هو، دون أي تحليل. تُزال هذه السلسلة أولاً."
+"إذا بُدِئ أمر بهذه السلسلة، يُرسَل كما هو، دون أي تحليل. تُزال هذه السلسلة أولًا."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:484
 #, kde-format
@@ -1851,7 +1851,7 @@ msgstr "ا&تّصل"
 #: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
 #, kde-format
 msgid "Establishes connection with specified parameters."
-msgstr "يُنشِئ اتصالاً بالمعاملات المحددة."
+msgstr "يُنشِئ اتصالًا بالمعاملات المحددة."
 
 #: kmuddy/dialogs/dlgconnect.cpp:89
 #, kde-format
@@ -1868,7 +1868,7 @@ msgstr "يُغلِق صندوق الحوار هذا دون اتصال."
 msgid ""
 "This profile cannot be deleted, because you have a connection open using "
 "this profile."
-msgstr "لا تستطع حذف هذه التشكيلة، لأن عندك اتصالاً مفتوحاً يستعمل هذه التشكيلة."
+msgstr "لا تستطع حذف هذه التشكيلة، لأن عندك اتصالًا مفتوحًا يستعمل هذه التشكيلة."
 
 #: kmuddy/dialogs/dlgconnect.cpp:235
 #, kde-format
@@ -1893,7 +1893,7 @@ msgstr "تشكيلة مكررة"
 #: kmuddy/dialogs/dlgconnect.cpp:255
 #, kde-format
 msgid "Please enter name for the duplicated profile"
-msgstr "أدخل اسماً للتشكيلة المكررة من فضلك"
+msgstr "أدخل اسمًا للتشكيلة المكررة من فضلك"
 
 #: kmuddy/dialogs/dlgconnect.cpp:257
 #, kde-format
@@ -1926,7 +1926,7 @@ msgid ""
 "displayed part up to the end of buffer will be dumped. Otherwise entire "
 "buffer will be dumped (default)."
 msgstr ""
-"عند تفعيل هذا، فقط جزء خبيئة الخط الزمني من الجزء المعروض حالياً حتى نهاية "
+"عند تفعيل هذا، فقط جزء خبيئة الخط الزمني من الجزء المعروض حاليًا حتى نهاية "
 "الخبيئة يُفرَّغ. وإلا تُفرَّغ الخبيئة بأكملها (مبدئي)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
@@ -1976,7 +1976,7 @@ msgid ""
 "Enter profile name here. You can enter any name, but it must be <b>unique</"
 "b>."
 msgstr ""
-"أدخل اسم التشكيلة هنا. تستطع إدخال أي اسم، ولكن يجب أن يكون <b>فريداً</b>."
+"أدخل اسم التشكيلة هنا. تستطع إدخال أي اسم، ولكن يجب أن يكون <b>فريدًا</b>."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:47
 #, kde-format
@@ -2036,14 +2036,14 @@ msgid ""
 msgstr ""
 "الأوامر التي تُرسَل إلى المد بعد الدخول.<br>تتوسع <b>$name</b> إلى اسم "
 "المستخدم.<br>تتوسع <b>$password</b> إلى كلمة سرك.<p><b>مهم:</b> تُرسَل هذه "
-"الأوامر تماماً كما كتبتها، مع حذف المسافات البادئة/الزائدة. لا توجد بدائل "
-"(أسماء مستعارة)، لا ماكروهات، لا مشي سريع. ولاحظ أيضاً أن الأسطر الفارغة أيضاً "
-"تُرسَل، بما في ذلك السطر الأخير جداً."
+"الأوامر تمامًا كما كتبتها، مع حذف المسافات البادئة/الزائدة. لا توجد بدائل "
+"(أسماء مستعارة)، لا ماكروهات، لا مشي سريع. ولاحظ أيضًا أن الأسطر الفارغة أيضًا "
+"تُرسَل، بما في ذلك السطر الأخير جدًا."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:180
 #, kde-format
 msgid "Profile name cannot be empty."
-msgstr "لا يمكن أن يكون اسم التشكيلة فارغاً."
+msgstr "لا يمكن أن يكون اسم التشكيلة فارغًا."
 
 #: kmuddy/dialogs/dlgeditprofile.cpp:185
 #, kde-format
@@ -2101,13 +2101,13 @@ msgid ""
 "I am sorry, but import and export is currently disabled. The functionality "
 "should be re-enabled before the final release."
 msgstr ""
-"أعتذر، ولكن الاستيراد والتصدير معطلان حالياً. يجب إعادة تفعيل هذه الوظيفة قبل "
+"أعتذر، ولكن الاستيراد والتصدير معطلان حاليًا. يجب إعادة تفعيل هذه الوظيفة قبل "
 "الإصدار النهائي."
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:131
 #, kde-format
 msgid "Choose file with profile"
-msgstr "اختر ملفاً مع التشكيلة"
+msgstr "اختر ملفًا مع التشكيلة"
 
 #: kmuddy/dialogs/dlgimportexportprofile.cpp:137
 #, kde-format
@@ -2124,7 +2124,7 @@ msgstr "إدخال متعدد الأسطر"
 msgid ""
 "Enter commands that are to be sent to the MUD. Each line represents one "
 "command."
-msgstr "أدخل الأوامر التي تُرسَل إلى المد. يمثل كل سطر أمراً واحداً."
+msgstr "أدخل الأوامر التي تُرسَل إلى المد. يمثل كل سطر أمرًا واحدًا."
 
 #: kmuddy/dialogs/dlgmultiline.cpp:56
 #, kde-format
@@ -2299,7 +2299,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:90
 #, kde-format
 msgid "&Auto-append newlines after prompt"
-msgstr "إلحاق آلي لأسطر جديدة بعد الموجه &آلياً"
+msgstr "إلحاق آلي لأسطر جديدة بعد الموجه &آليًا"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:91
 #, kde-format
@@ -2386,7 +2386,7 @@ msgid ""
 "This is a movement command. It is used by speed-walking and will also be "
 "used by the auto-mapper."
 msgstr ""
-"هذا أمر حركة. يُستعمَل بواسطة المشي السريع و سيُستعمَل أيضاً بواسطة الرسام الآلي "
+"هذا أمر حركة. يُستعمَل بواسطة المشي السريع و سيُستعمَل أيضًا بواسطة الرسام الآلي "
 "للخرائط."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
@@ -2411,7 +2411,7 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
-"الدليل (المجلد) العمل مبدئي لنصوصك. جعل هذا الدليل (المجلد) مماثلاً لما سبق "
+"الدليل (المجلد) العمل مبدئي لنصوصك. جعل هذا الدليل (المجلد) مماثلًا لما سبق "
 "اختيار جيد عادة."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
@@ -2422,7 +2422,7 @@ msgstr "دليل (مجلد) &النصوص"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr "الدليل (المجلد) حيث تُحفَظ نصوص الجلسة مبدئياً."
+msgstr "الدليل (المجلد) حيث تُحفَظ نصوص الجلسة مبدئيًا."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
@@ -2439,7 +2439,7 @@ msgid ""
 msgstr ""
 "فعِّل تشغيل الأصوات مع هذه التشكيلة.\n"
 "لاحظ أن هذا يعمل فقط إذا فعّلت الأصوات في التفضيلات العامة.\n"
-"لاحظ أيضاً أن هذا يعمل فقط إذا كان مدك يدعم <b>MSP</b> (بروتوكول صوت المد)."
+"لاحظ أيضًا أن هذا يعمل فقط إذا كان مدك يدعم <b>MSP</b> (بروتوكول صوت المد)."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:196
 #, kde-format
@@ -2519,10 +2519,10 @@ msgid ""
 "support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
 "look for MXP sequences.</li></ul></qt>"
 msgstr ""
-"<qt><p>هنا تستطع اختيار متى يُستعمَل MXP.</p><ul><li><b>أبداً</b> وسم MXP لا "
-"يُحلل أبداً</li><li><b>إذا نُوفِض عليه</b> يعتمد دعم MXP على تفاوض تلنت الناجح.</"
-"li><li><b>كشف آلي</b> يُكشَف عن دعم MXP آلياً.</li><li><b>دائماً قيد التشغيل</b> "
-"يبحث كمدي دائماً عن تسلسلات MXP.</li></ul></qt>"
+"<qt><p>هنا تستطع اختيار متى يُستعمَل MXP.</p><ul><li><b>أبدًا</b> وسم MXP لا "
+"يُحلل أبدًا</li><li><b>إذا نُوفِض عليه</b> يعتمد دعم MXP على تفاوض تلنت الناجح.</"
+"li><li><b>كشف آلي</b> يُكشَف عن دعم MXP آليًا.</li><li><b>دائمًا قيد التشغيل</b> "
+"يبحث كمدي دائمًا عن تسلسلات MXP.</li></ul></qt>"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:234
 #, kde-format
@@ -2670,7 +2670,7 @@ msgstr "&فعّل النص مبدئي"
 msgid ""
 "Enables or disabled the session transcript. Note that session transcript is "
 "automatically disabled when you disconnect."
-msgstr "يفعّل أو يعطّل نص الجلسة. لاحظ أن نص الجلسة يُعطّل آلياً عند قطع اتصالك."
+msgstr "يفعّل أو يعطّل نص الجلسة. لاحظ أن نص الجلسة يُعطّل آليًا عند قطع اتصالك."
 
 #: kmuddy/dialogs/dlgtranscript.cpp:60
 #, kde-format
@@ -2744,7 +2744,7 @@ msgstr "هذا يتسبب في تدوير كمدي لنص الجلسة كل يو
 #: kmuddy/dialogs/dlgtranscript.cpp:134
 #, kde-format
 msgid "Prepend lines with &timestamp"
-msgstr "أضف &طابعاً زمنياً في بداية الأسطر"
+msgstr "أضف &طابعًا زمنيًا في بداية الأسطر"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:135
 #, kde-format
@@ -2752,7 +2752,7 @@ msgid ""
 "This option will cause KMuddy to insert local timestamp in front of every "
 "line of logging"
 msgstr ""
-"هذا الخيار يتسبب في إدراج كمدي طابعاً زمنياً محلياً أمام كل سطر من التسجيل"
+"هذا الخيار يتسبب في إدراج كمدي طابعًا زمنيًا محليًا أمام كل سطر من التسجيل"
 
 #: kmuddy/dialogs/dlgtranscript.cpp:141
 #, kde-format
@@ -3016,7 +3016,7 @@ msgid ""
 "Profile has been saved. Note that profiles are automatically saved upon "
 "disconnecting, and also every five minutes."
 msgstr ""
-"حفظت التشكيلة. لاحظ أن التشكيلات تُحفَظ آلياً عند قطع الاتصال، وكذلك كل خمس "
+"حفظت التشكيلة. لاحظ أن التشكيلات تُحفَظ آليًا عند قطع الاتصال، وكذلك كل خمس "
 "دقائق."
 
 #: kmuddy/macros.cpp:67
@@ -3042,7 +3042,7 @@ msgstr "/tick: لا يوجد موقّت بهذا الاسم."
 #: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
 #, kde-format
 msgid "/tick: this timer is currently disabled."
-msgstr "/tick: هذا الموقّت معطّل حالياً."
+msgstr "/tick: هذا الموقّت معطّل حاليًا."
 
 #: kmuddy/macros.cpp:209
 #, kde-format
@@ -3471,7 +3471,7 @@ msgid ""
 "test. Note that aliases are always matched as whole words."
 msgstr ""
 "نوع المطابقة. يُفعَّل البديل (الاسم المستعار) فقط إذا اجتاز هذا النوع من "
-"الاختبار. لاحظ أن البدائل (الأسماء المستعارة) تُطابَق دائماً ككلمات كاملة."
+"الاختبار. لاحظ أن البدائل (الأسماء المستعارة) تُطابَق دائمًا ككلمات كاملة."
 
 #: libs/caliaseditor.cpp:118
 #, kde-format
@@ -3505,7 +3505,7 @@ msgid ""
 "(original command is sent first)."
 msgstr ""
 "إذا طابق هذا البديل (الاسم المستعار) أمرك، يُرسَل أمر بديل. إذا فعلت هذا "
-"الخيار، يُرسَل الأمران الأصلي والبديل معاً (يُرسَل الأمر الأصلي أولاً)."
+"الخيار، يُرسَل الأمران الأصلي والبديل معًا (يُرسَل الأمر الأصلي أولًا)."
 
 #: libs/caliaseditor.cpp:181
 #, kde-format
@@ -3526,7 +3526,7 @@ msgstr "أدخل سابقة/لاحقة"
 msgid ""
 "Prefix/suffix of matched text will be automatically appended to the expanded "
 "text."
-msgstr "ستُلحق سابقة/لاحقة النص المطابَق آلياً بالنص الموسَّع."
+msgstr "ستُلحق سابقة/لاحقة النص المطابَق آليًا بالنص الموسَّع."
 
 #: libs/caliaseditor.cpp:194
 #, kde-format
@@ -3688,12 +3688,12 @@ msgstr "الا&سم"
 #: libs/clisteditor.cpp:286
 #, kde-format
 msgid "Cannot rename the group, as a group with this name already exists."
-msgstr "لا يمكن إعادة تسمية المجموعة، لوجود مجموعة بهذا الاسم مسبقاً."
+msgstr "لا يمكن إعادة تسمية المجموعة، لوجود مجموعة بهذا الاسم مسبقًا."
 
 #: libs/clisteditor.cpp:293
 #, kde-format
 msgid "Cannot rename the object, as an object with this name already exists."
-msgstr "لا يمكن إعادة تسمية الكائن، لوجود كائن بهذا الاسم مسبقاً."
+msgstr "لا يمكن إعادة تسمية الكائن، لوجود كائن بهذا الاسم مسبقًا."
 
 #: libs/clistgroup.cpp:229
 #, kde-format
@@ -3733,12 +3733,12 @@ msgstr "أضف كائن"
 #: libs/clistviewer.cpp:162
 #, kde-format
 msgid "Do you really want to delete this group?"
-msgstr "هل تريد حقاً حذف هذه المجموعة؟"
+msgstr "هل تريد حقًا حذف هذه المجموعة؟"
 
 #: libs/clistviewer.cpp:165
 #, kde-format
 msgid "Do you really want to delete this %1?"
-msgstr "هل تريد حقاً حذف هذا %1؟"
+msgstr "هل تريد حقًا حذف هذا %1؟"
 
 #: libs/clistviewer.cpp:166
 #, kde-format
@@ -3763,7 +3763,7 @@ msgstr "لا يمكن إنشاء المجموعة، لأن الاسم المقد
 #: libs/clistviewer.cpp:203
 #, kde-format
 msgid "Cannot create the group, as a group with this name already exists."
-msgstr "لا يمكن إنشاء المجموعة، لوجود مجموعة بهذا الاسم مسبقاً."
+msgstr "لا يمكن إنشاء المجموعة، لوجود مجموعة بهذا الاسم مسبقًا."
 
 #: libs/cmsp.cpp:284
 #, kde-format
@@ -3783,7 +3783,7 @@ msgstr "يجب أن تتبع أسماء المعلمات بعلامة '='."
 #: libs/cmsp.cpp:340
 #, kde-format
 msgid "Parameter %1 requires a numeric argument"
-msgstr "المعلمة %1 تتطلب وسيطاً رقمياً"
+msgstr "المعلمة %1 تتطلب وسيطًا رقميًا"
 
 #: libs/cmsp.cpp:351
 #, kde-format
@@ -3843,12 +3843,12 @@ msgstr "ربما أقترح الرفض."
 #: libs/coutput.cpp:232
 #, kde-format
 msgid "Saying no seems a bit better."
-msgstr "قول لا يبدو أفضل قليلاً."
+msgstr "قول لا يبدو أفضل قليلًا."
 
 #: libs/coutput.cpp:233
 #, kde-format
 msgid "Saying yes seems a bit better."
-msgstr "قول نعم يبدو أفضل قليلاً."
+msgstr "قول نعم يبدو أفضل قليلًا."
 
 #: libs/coutput.cpp:234
 #, kde-format
@@ -3858,7 +3858,7 @@ msgstr "ربما أقترح القبول."
 #: libs/coutput.cpp:235
 #, kde-format
 msgid "Sounds good."
-msgstr "يبدو جيداً."
+msgstr "يبدو جيدًا."
 
 #: libs/coutput.cpp:236
 #, kde-format
@@ -3918,12 +3918,12 @@ msgid ""
 "use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 msgstr ""
-"أدخل نصاً برمجياً بلغة جافاسكريبت سينفَّذ عند تفعيل الكائن.<br /><br />الروتينات "
+"أدخل نصًا برمجيًا بلغة جافاسكريبت سينفَّذ عند تفعيل الكائن.<br /><br />الروتينات "
 "التالية متاحة في النص البرمجي بالإضافة إلى أدوات جافاسكريبت القياسية:<br /"
 "><br /><b>window.message(text)</b> - اعرض رسالة<br /><b>window."
-"send(command)</b> - أرسل أمراً<br /><b>window.sendraw(command)</b> - أرسل "
-"أمراً دون معالجة<br /><b>window.get(name)</b> - استرجع قيمة متغير<br /"
-"><b>window.set(name, value)</b> - اضبط قيمة متغير<br /><br />يمكنك أيضاً "
+"send(command)</b> - أرسل أمرًا<br /><b>window.sendraw(command)</b> - أرسل "
+"أمرًا دون معالجة<br /><b>window.get(name)</b> - استرجع قيمة متغير<br /"
+"><b>window.set(name, value)</b> - اضبط قيمة متغير<br /><br />يمكنك أيضًا "
 "استخدام المتغيرات التالية: <b>prefix, prefixfull, suffix, suffixfull, "
 "matched, line, matches[]</b>"
 
@@ -4129,12 +4129,12 @@ msgstr "أنشئ غرفة"
 #: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
 #, kde-format
 msgid "Create Text"
-msgstr "أنشئ نصاً"
+msgstr "أنشئ نصًا"
 
 #: plugins/mapper/cmapmanager.cpp:761
 #, kde-format
 msgid "A path already exists at this location"
-msgstr "يوجد مسار مسبقاً في هذا الموقع"
+msgstr "يوجد مسار مسبقًا في هذا الموقع"
 
 #: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
 #: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
@@ -4148,7 +4148,7 @@ msgstr "خارطة كمدي"
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
 #, kde-format
 msgid "Create Path"
-msgstr "أنشئ مساراً"
+msgstr "أنشئ مسارًا"
 
 #: plugins/mapper/cmapmanager.cpp:854
 #, kde-format
@@ -4163,7 +4163,7 @@ msgstr "احذف العنصر"
 #: plugins/mapper/cmapmanager.cpp:1444
 #, kde-format
 msgid "Speedwalking is already in progress"
-msgstr "المشي السريع قيد التنفيذ مسبقاً"
+msgstr "المشي السريع قيد التنفيذ مسبقًا"
 
 #: plugins/mapper/cmapmanager.cpp:1498
 #, kde-format
@@ -4223,7 +4223,7 @@ msgstr "غرفة اختبار 4"
 #: plugins/mapper/cmapmanager.cpp:1809
 #, kde-format
 msgid "Set Special Exit"
-msgstr "اضبط مخرجاً خاصاً"
+msgstr "اضبط مخرجًا خاصًا"
 
 #: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
 #, kde-format
@@ -4384,7 +4384,7 @@ msgstr "لا يوجد مستوى في ذلك الاتجاه. هل تريد إن�
 #: plugins/mapper/cmapview.cpp:584
 #, kde-format
 msgid "Create New Level"
-msgstr "أنشئ مستوى جديداً"
+msgstr "أنشئ مستوى جديدًا"
 
 #: plugins/mapper/cmapview.cpp:606
 #, kde-format
@@ -5213,7 +5213,7 @@ msgid ""
 "parameters when executing the command from the input line, if you enable the "
 "Allow parameters checkbox."
 msgstr ""
-"الأمر الذي سينفَّذ، شاملاً المعلمات. لاحظ أنه يمكنك تحديد مزيد من المعلمات عند "
+"الأمر الذي سينفَّذ، شاملًا المعلمات. لاحظ أنه يمكنك تحديد مزيد من المعلمات عند "
 "تنفيذ الأمر من سطر الإدخال، إذا فعّلت مربع تحديد \"السماح بالمعلمات\"."
 
 #: plugins/scripting/cscripteditor.cpp:82
@@ -5236,7 +5236,7 @@ msgid ""
 "If script input is enabled, this enables sending of all sent commands to the "
 "script."
 msgstr ""
-"إذا كان إدخال النص البرمجي مفعّلاً، يفعّل هذا إرسال جميع الأوامر المرسلة إلى "
+"إذا كان إدخال النص البرمجي مفعّلًا، يفعّل هذا إرسال جميع الأوامر المرسلة إلى "
 "النص البرمجي."
 
 #: plugins/scripting/cscripteditor.cpp:94
@@ -5261,7 +5261,7 @@ msgstr "نص برمجي أحادي النسخة"
 msgid ""
 "If an instance of this script is already running, another one can not be "
 "started."
-msgstr "إذا كانت نسخة من هذا النص البرمجي شغّلت مسبقاً، فلا يمكن تشغيل أخرى."
+msgstr "إذا كانت نسخة من هذا النص البرمجي شغّلت مسبقًا، فلا يمكن تشغيل أخرى."
 
 #: plugins/scripting/cscripteditor.cpp:102
 #, kde-format
@@ -5278,12 +5278,12 @@ msgid ""
 "better not to use this feature.</p><p>If you don't need to disable flow "
 "control for some reason, leave this on.</p>"
 msgstr ""
-"<p>إذا كان مفعّلاً، سيُستخدم التحكم في التدفق لهذا النص البرمجي. يضمن التحكم في "
+"<p>إذا كان مفعّلًا، سيُستخدم التحكم في التدفق لهذا النص البرمجي. يضمن التحكم في "
 "التدفق أن تُحفظ النصوص البرمجية متزامنة، وهذا يعني أنه إذا وصل سطران من "
 "الخادم، فلن يُرسل السطر الثاني إلى النصوص البرمجية حتى تستقبل جميع النصوص "
 "البرمجية قيد التشغيل السطر الأول. ومع ذلك، في بعض الحالات، من الأفضل عدم "
 "استخدام هذه الميزة.</p><p>إذا لم تحتاج إلى تعطيل التحكم في التدفق لسبب ما، "
-"اترك هذا مفعلاً.</p>"
+"اترك هذا مفعلًا.</p>"
 
 #: plugins/scripting/cscripteditor.cpp:111
 #, kde-format
