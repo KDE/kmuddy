@@ -1200,7 +1200,7 @@ msgstr "Couleurs"
 #: kmuddy/dialogs/dlgappsettings.cpp:99
 #, kde-format
 msgid "Strings"
-msgstr "Chaînes"
+msgstr "Chaines"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:102
 #, kde-format
@@ -1674,7 +1674,7 @@ msgstr "Couleurs claires"
 #: kmuddy/dialogs/dlgappsettings.cpp:427
 #, kde-format
 msgid "&Command separator string"
-msgstr "Chaînes de séparateur de &commandes"
+msgstr "Chaines de séparateur de &commandes"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:430
 #, kde-format
@@ -1689,7 +1689,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:434
 #, kde-format
 msgid "&Speed-walk string"
-msgstr "Chaînes de tapis roulant"
+msgstr "Chaines de tapis roulant"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:437
 #, kde-format
@@ -1731,7 +1731,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:451
 #, kde-format
 msgid "Macro-ca&ll string"
-msgstr "Chaîne d'appe&ls de macro"
+msgstr "Chaine d'appe&ls de macro"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:454
 #, kde-format
@@ -1747,7 +1747,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:459
 #, kde-format
 msgid "&Repeater string"
-msgstr "Chaîne de &répétitions"
+msgstr "Chaine de &répétitions"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:462
 #, kde-format
@@ -1764,7 +1764,7 @@ msgstr ""
 #: kmuddy/dialogs/dlgappsettings.cpp:468
 #, kde-format
 msgid "&Focus string"
-msgstr "Chaîne de &focus"
+msgstr "Chaine de &focus"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:471
 #, kde-format
@@ -4822,7 +4822,7 @@ msgstr "Activer la vérification de validité du domaine"
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
 #, kde-format
 msgid "Invalid Move Strings"
-msgstr "Chaînes de déplacement non valables"
+msgstr "Chaines de déplacement non valables"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
 #: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
