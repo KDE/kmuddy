@@ -1,0 +1,5450 @@
+# Translation of kmuddy into Russian.
+# This file is distributed under the same license as the kmuddy package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kmuddy\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-01-24 00:40+0000\n"
+"PO-Revision-Date: 2026-10-10 13:46+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Александр Яворский"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kekcuha@gmail.com"
+
+#: kmuddy/cbuttoneditor.cpp:65 kmuddy/cgaugeeditor.cpp:72
+#: kmuddy/cstatusvareditor.cpp:70
+#, kde-format
+msgid "&Caption"
+msgstr "&Подпись"
+
+#: kmuddy/cbuttoneditor.cpp:68
+#, kde-format
+msgid "Caption of this button."
+msgstr "Подпись этой кнопки."
+
+#: kmuddy/cbuttoneditor.cpp:71
+#, kde-format
+msgid "Co&mmand"
+msgstr "&Команда"
+
+#: kmuddy/cbuttoneditor.cpp:74
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the button. Note that you can "
+"enter multiple commands here (separated by semi-colons, or another character "
+"defined in <b>global settings</b>)."
+msgstr ""
+"Команда, которая будет выполнена при нажатии кнопки. Здесь можно ввести "
+"несколько команд (разделённых точкой с запятой или другим символом, заданным "
+"в <b>глобальных параметрах</b>)."
+
+#: kmuddy/cbuttoneditor.cpp:83
+#, kde-format
+msgid "Icon displayed on the button toolbar."
+msgstr "Значок, показываемый на панели инструментов."
+
+#: kmuddy/cbuttoneditor.cpp:91
+#, kde-format
+msgid "&Un-press command"
+msgstr "Команда при о&тжатии"
+
+#: kmuddy/cbuttoneditor.cpp:94
+#, kde-format
+msgid ""
+"Command that will be executed if you click on the push-down button while "
+"it's pushed down."
+msgstr ""
+"Команда, которая выполняется при щелчке по фиксируемой кнопке в нажатом "
+"состоянии."
+
+#: kmuddy/cbuttoneditor.cpp:123 kmuddy/cshortcuteditor.cpp:114
+#: kmuddy/ctimereditor.cpp:132
+#, kde-format
+msgid "&General"
+msgstr "&Общие"
+
+#: kmuddy/cbuttoneditor.cpp:124 kmuddy/cshortcuteditor.cpp:115
+#: kmuddy/ctimereditor.cpp:133 kmuddy/ctriggereditor.cpp:512
+#: libs/caliaseditor.cpp:227
+#, kde-format
+msgid "&Script"
+msgstr "&Сценарий"
+
+#: kmuddy/cbuttoneditor.cpp:125
+#, kde-format
+msgid "Script when &released"
+msgstr "Сценарий при &отпускании"
+
+#: kmuddy/cconnection.cpp:262
+#, kde-format
+msgid "Network error: %1"
+msgstr "Ошибка сети: %1"
+
+#: kmuddy/cconnection.cpp:422
+#, kde-format
+msgid "Do you want to close connection to %1?"
+msgstr "Закрыть подключение к %1?"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Disconnect"
+msgstr "Отключиться"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Close connection"
+msgstr "Закрыть подключение"
+
+#: kmuddy/cconnection.cpp:423
+#, kde-format
+msgid "Stay connected"
+msgstr "Поддерживать подключение"
+
+#: kmuddy/cconnection.cpp:507
+#, kde-format
+msgid "(password is hidden)"
+msgstr "(пароль скрыт)"
+
+#: kmuddy/cconnection.cpp:726
+#, kde-format
+msgid "Aliases are now enabled."
+msgstr "Псевдонимы включены."
+
+#: kmuddy/cconnection.cpp:726
+#, kde-format
+msgid "Aliases are now disabled."
+msgstr "Псевдонимы отключены."
+
+#: kmuddy/cconnection.cpp:737
+#, kde-format
+msgid "Triggers are now enabled."
+msgstr "Триггеры включены."
+
+#: kmuddy/cconnection.cpp:737
+#, kde-format
+msgid "Triggers are now disabled."
+msgstr "Триггеры отключены."
+
+#: kmuddy/cconnection.cpp:748
+#, kde-format
+msgid "Timers are now enabled."
+msgstr "Таймеры включены."
+
+#: kmuddy/cconnection.cpp:748
+#, kde-format
+msgid "Timers are now disabled."
+msgstr "Таймеры отключены."
+
+#: kmuddy/cconnection.cpp:759
+#, kde-format
+msgid "Macro keys are now enabled."
+msgstr "Клавиши макросов включены."
+
+#: kmuddy/cconnection.cpp:759
+#, kde-format
+msgid "Macro keys are now disabled."
+msgstr "Клавиши макросов отключены."
+
+#: kmuddy/cconnection.cpp:812
+#, kde-format
+msgid "Aliases"
+msgstr "Псевдонимы"
+
+#: kmuddy/cconnection.cpp:813
+#, kde-format
+msgid "Triggers"
+msgstr "Триггеры"
+
+#: kmuddy/cconnection.cpp:814
+#, kde-format
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: kmuddy/cconnection.cpp:815
+#, kde-format
+msgid "Timers"
+msgstr "Таймеры"
+
+#: kmuddy/cconnection.cpp:816
+#, kde-format
+msgid "Macro Keys"
+msgstr "Клавиши макросов"
+
+#: kmuddy/cconnection.cpp:817
+#, kde-format
+msgid "Status variables"
+msgstr "Переменные состояния"
+
+#: kmuddy/cconnection.cpp:818
+#, kde-format
+msgid "Gauges"
+msgstr "Индикаторы"
+
+#: kmuddy/cgaugeeditor.cpp:58 kmuddy/cstatusvareditor.cpp:56
+#: plugins/vartrigs/cvartriggereditor.cpp:57
+#, kde-format
+msgid "&Variable name"
+msgstr "&Имя переменной"
+
+#: kmuddy/cgaugeeditor.cpp:62
+#, kde-format
+msgid "Variable displayed by this gauge."
+msgstr "Переменная, показываемая этим индикатором."
+
+#: kmuddy/cgaugeeditor.cpp:65 kmuddy/cstatusvareditor.cpp:63
+#, kde-format
+msgid "&Max. variable (optional)"
+msgstr "&Переменная максимума (необязательно)"
+
+#: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
+#, kde-format
+msgid "Variable holding the maximum value (default=100)"
+msgstr "Переменная, хранящая максимальное значение (по умолчанию: 100)"
+
+#: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:73
+#, kde-format
+msgid "Caption shown next to variable value."
+msgstr "Подпись, показываемая рядом со значением переменной."
+
+#: kmuddy/cgaugeeditor.cpp:78
+#, kde-format
+msgid "&Color"
+msgstr "&Цвет"
+
+#: kmuddy/cgaugeeditor.cpp:81
+#, kde-format
+msgid "Color used to paint this gauge."
+msgstr "Цвет, используемый для отрисовки этого индикатора."
+
+#: kmuddy/cmxpmanager.cpp:299
+#, kde-format
+msgid "line tag"
+msgstr "тег строки"
+
+#: kmuddy/cmxpmanager.cpp:300
+#, kde-format
+msgid "expire link"
+msgstr "устаревание ссылки"
+
+#: kmuddy/cmxpmanager.cpp:301
+#, kde-format
+msgid "horizontal line"
+msgstr "горизонтальная линия"
+
+#: kmuddy/cmxpmanager.cpp:302
+#, kde-format
+msgid "create window"
+msgstr "создание окна"
+
+#: kmuddy/cmxpmanager.cpp:303
+#, kde-format
+msgid "create internal window"
+msgstr "создание внутреннего окна"
+
+#: kmuddy/cmxpmanager.cpp:304
+#, kde-format
+msgid "close window"
+msgstr "закрытие окна"
+
+#: kmuddy/cmxpmanager.cpp:305
+#, kde-format
+msgid "set active window"
+msgstr "выбор активного окна"
+
+#: kmuddy/cmxpmanager.cpp:306
+#, kde-format
+msgid "move cursor"
+msgstr "перемещение курсора"
+
+#: kmuddy/cmxpmanager.cpp:307
+#, kde-format
+msgid "erase text"
+msgstr "стирание текста"
+
+#: kmuddy/cmxpmanager.cpp:308
+#, kde-format
+msgid "relocate"
+msgstr "перенаправление"
+
+#: kmuddy/cmxpmanager.cpp:309
+#, kde-format
+msgid "send username/password"
+msgstr "отправка имени пользователя и пароля"
+
+#: kmuddy/cmxpmanager.cpp:310
+#, kde-format
+msgid "image"
+msgstr "изображение"
+
+#: kmuddy/cmxpmanager.cpp:311
+#, kde-format
+msgid "image map"
+msgstr "карта изображения"
+
+#: kmuddy/cmxpmanager.cpp:312
+#, kde-format
+msgid "unknown"
+msgstr "неизвестно"
+
+#: kmuddy/cmxpmanager.cpp:314
+#, kde-format
+msgid "Ignoring unsupported MXP request (%1)"
+msgstr "Неподдерживаемый запрос MXP (%1) игнорируется"
+
+#: kmuddy/csession.cpp:82
+#, kde-format
+msgid "Ctrl+Enter adds new line, unless changed in settings"
+msgstr "Ctrl+Enter добавляет новую строку, если это не изменено в параметрах"
+
+#: kmuddy/csession.cpp:86
+#, kde-format
+msgid "Switches between standard and multi-line input line."
+msgstr "Переключение между обычной и многострочной строкой ввода."
+
+#: kmuddy/csessionmanager.cpp:150 kmuddy/csessionmanager.cpp:182
+#, kde-format
+msgid "No connection"
+msgstr "Нет подключения"
+
+#: kmuddy/csessionmanager.cpp:211
+#, kde-format
+msgid "Connection closed."
+msgstr "Подключение закрыто."
+
+#: kmuddy/cshortcut.cpp:126
+#, kde-format
+msgid "(unknown)"
+msgstr "(неизвестно)"
+
+#: kmuddy/cshortcut.cpp:128
+#, kde-format
+msgid "(none)"
+msgstr "(нет)"
+
+#: kmuddy/cshortcut.cpp:132
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#: kmuddy/cshortcut.cpp:134
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: kmuddy/cshortcut.cpp:136
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: kmuddy/cshortcut.cpp:138
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: kmuddy/cshortcuteditor.cpp:68 kmuddy/ctimereditor.cpp:67
+#: kmuddy/kmuddy.cpp:278
+#, kde-format
+msgid "&Command"
+msgstr "&Команда"
+
+#: kmuddy/cshortcuteditor.cpp:71
+#, kde-format
+msgid ""
+"Command that will be executed when you press the defined key combination.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Команда, которая будет выполнена при нажатии заданной комбинации клавиш.\n"
+"В команду можно включить псевдонимы, вызовы сценариев и тому подобное."
+
+#: kmuddy/cshortcuteditor.cpp:76
+#, kde-format
+msgid "Shortcut"
+msgstr "Комбинация клавиш"
+
+#: kmuddy/cshortcuteditor.cpp:80
+#, kde-format
+msgid "Grab shortcut..."
+msgstr "Захватить комбинацию…"
+
+#: kmuddy/cshortcuteditor.cpp:83
+#, kde-format
+msgid "&Send command"
+msgstr "&Отправить команду"
+
+#: kmuddy/cshortcuteditor.cpp:84
+#, kde-format
+msgid ""
+"If checked, the command will be sent to the MUD. Otherwise, it will be put "
+"in the inputline."
+msgstr ""
+"Если флажок установлен, команда отправляется в MUD. В противном случае она "
+"помещается в строку ввода."
+
+#: kmuddy/cshortcuteditor.cpp:87
+#, kde-format
+msgid "&Overwrite existing text"
+msgstr "&Перезаписывать существующий текст"
+
+#: kmuddy/cshortcuteditor.cpp:88
+#, kde-format
+msgid ""
+"If there already is some text in the input line, should it be overwritten?"
+msgstr "Перезаписывать текст, если в строке ввода он уже есть."
+
+#: kmuddy/cstatusvareditor.cpp:60
+#, kde-format
+msgid "Variable displayed by this status variable."
+msgstr "Переменная, показываемая этой переменной состояния."
+
+#: kmuddy/cstatusvareditor.cpp:76
+#, kde-format
+msgid "&Show as percentage"
+msgstr "&Показывать в процентах"
+
+#: kmuddy/cstatusvareditor.cpp:77
+#, kde-format
+msgid ""
+"When enabled, this variable will be shown as percentage. (of max.value, or "
+"of 100 if no max.value given)"
+msgstr ""
+"Если включено, переменная показывается в процентах (от максимального "
+"значения или от 100, если максимальное значение не задано)."
+
+#: kmuddy/ctelnet.cpp:236 kmuddy/ctelnet.cpp:318
+#, kde-format
+msgid "--- A connection has been established ---"
+msgstr "--- Подключение установлено ---"
+
+#: kmuddy/ctelnet.cpp:246
+#, kde-format
+msgid "Connecting..."
+msgstr "Подключение…"
+
+#: kmuddy/ctelnet.cpp:1070
+#, kde-format
+msgid "The remote server has been found, attempting connection."
+msgstr "Удалённый сервер найден, выполняется подключение."
+
+#: kmuddy/ctimer.cpp:78
+#, kde-format
+msgid " sec"
+msgstr " с"
+
+#: kmuddy/ctimer.cpp:80
+#, kde-format
+msgid ", single-shot"
+msgstr ", однократный"
+
+#: kmuddy/ctimereditor.cpp:70
+#, kde-format
+msgid ""
+"Command that will be executed on each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Команда, которая выполняется при каждом такте.\n"
+"В команду можно включить псевдонимы, вызовы сценариев и тому подобное."
+
+#: kmuddy/ctimereditor.cpp:74
+#, kde-format
+msgid "&Interval"
+msgstr "&Интервал"
+
+#: kmuddy/ctimereditor.cpp:77 kmuddy/ctimereditor.cpp:94
+#, kde-format
+msgid " secs"
+msgstr " с"
+
+#: kmuddy/ctimereditor.cpp:81
+#, kde-format
+msgid "&Single-shot"
+msgstr "&Однократно"
+
+#: kmuddy/ctimereditor.cpp:82
+#, kde-format
+msgid "When enabled, the timer will only be executed once and then disabled."
+msgstr ""
+"Если этот параметр включён, таймер сработает только один раз, после чего "
+"будет отключён."
+
+#: kmuddy/ctimereditor.cpp:84
+#, kde-format
+msgid "&Run a command in advance"
+msgstr "&Выполнить команду заранее"
+
+#: kmuddy/ctimereditor.cpp:85
+#, kde-format
+msgid "Run a command a given number of seconds before each timer tick."
+msgstr "Выполнять команду за заданное число секунд до каждого такта таймера."
+
+#: kmuddy/ctimereditor.cpp:87
+#, kde-format
+msgid "Advance command"
+msgstr "Предварительная команда"
+
+#: kmuddy/ctimereditor.cpp:90
+#, kde-format
+msgid "&Seconds before tick"
+msgstr "&Секунд до такта"
+
+#: kmuddy/ctimereditor.cpp:97
+#, kde-format
+msgid "C&ommand"
+msgstr "К&оманда"
+
+#: kmuddy/ctimereditor.cpp:100
+#, kde-format
+msgid ""
+"Command that will be executed the specified time before each tick.\n"
+"Command can include aliases, script calls and similar stuff."
+msgstr ""
+"Команда, которая будет выполнена за заданное время до каждого такта.\n"
+"В команду можно включить псевдонимы, вызовы сценариев и тому подобное."
+
+#: kmuddy/ctranscript.cpp:172
+#, kde-format
+msgid "Session transcript has been stopped."
+msgstr "Протокол сеанса остановлен."
+
+#: kmuddy/ctranscript.cpp:206
+#, kde-format
+msgid "Advanced session transcript has been stopped."
+msgstr "Расширенный протокол сеанса остановлен."
+
+#: kmuddy/ctranscript.cpp:257
+#, kde-format
+msgid "Transcript file could not be opened."
+msgstr "Не удалось открыть файл протокола."
+
+#: kmuddy/ctranscript.cpp:258
+#, kde-format
+msgid "Session transcript could not be started."
+msgstr "Не удалось начать протокол сеанса."
+
+#: kmuddy/ctranscript.cpp:277
+#, kde-format
+msgid "Session transcript has just started."
+msgstr "Протокол сеанса начат."
+
+#: kmuddy/ctranscript.cpp:286
+#, kde-format
+msgid "Session transcript has been started."
+msgstr "Протокол сеанса начат."
+
+#: kmuddy/ctranscript.cpp:313
+#, kde-format
+msgid "Advanced transcript file could not be opened."
+msgstr "Не удалось открыть файл расширенного протокола."
+
+#: kmuddy/ctranscript.cpp:314
+#, kde-format
+msgid "Advanced session transcript could not be started."
+msgstr "Не удалось начать расширенный протокол сеанса."
+
+#: kmuddy/ctranscript.cpp:330
+#, kde-format
+msgid "Advanced session transcript has just started."
+msgstr "Расширенный протокол сеанса начат."
+
+#: kmuddy/ctranscript.cpp:335
+#, kde-format
+msgid "Advanced session transcript has been started."
+msgstr "Расширенный протокол сеанса начат."
+
+#: kmuddy/ctranscript.cpp:339
+#, kde-format
+msgid "Session transcript will be rotated at midnight."
+msgstr "Файл протокола сеанса будет сменён в полночь."
+
+#: kmuddy/ctranscript.cpp:425
+#, kde-format
+msgid "Dump file could not be opened."
+msgstr "Не удалось открыть файл дампа."
+
+#: kmuddy/ctriggereditor.cpp:114
+#, kde-format
+msgid "Keep"
+msgstr "Не менять"
+
+#: kmuddy/ctriggereditor.cpp:115 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Black"
+msgstr "Чёрный"
+
+#: kmuddy/ctriggereditor.cpp:116 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Red"
+msgstr "Красный"
+
+#: kmuddy/ctriggereditor.cpp:117 kmuddy/dialogs/dlgappsettings.cpp:70
+#, kde-format
+msgid "Green"
+msgstr "Зелёный"
+
+#: kmuddy/ctriggereditor.cpp:118 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Yellow"
+msgstr "Жёлтый"
+
+#: kmuddy/ctriggereditor.cpp:119 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Blue"
+msgstr "Синий"
+
+#: kmuddy/ctriggereditor.cpp:120 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Magenta"
+msgstr "Пурпурный"
+
+#: kmuddy/ctriggereditor.cpp:121 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Cyan"
+msgstr "Голубой"
+
+#: kmuddy/ctriggereditor.cpp:122 kmuddy/dialogs/dlgappsettings.cpp:71
+#, kde-format
+msgid "Gray"
+msgstr "Серый"
+
+#: kmuddy/ctriggereditor.cpp:123 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Dark gray"
+msgstr "Тёмно-серый"
+
+#: kmuddy/ctriggereditor.cpp:124 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Bright red"
+msgstr "Ярко-красный"
+
+#: kmuddy/ctriggereditor.cpp:125 kmuddy/dialogs/dlgappsettings.cpp:72
+#, kde-format
+msgid "Bright green"
+msgstr "Ярко-зелёный"
+
+#: kmuddy/ctriggereditor.cpp:126 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright yellow"
+msgstr "Ярко-жёлтый"
+
+#: kmuddy/ctriggereditor.cpp:127 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright blue"
+msgstr "Ярко-синий"
+
+#: kmuddy/ctriggereditor.cpp:128 kmuddy/dialogs/dlgappsettings.cpp:73
+#, kde-format
+msgid "Bright magenta"
+msgstr "Ярко-пурпурный"
+
+#: kmuddy/ctriggereditor.cpp:129 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "Bright cyan"
+msgstr "Ярко-голубой"
+
+#: kmuddy/ctriggereditor.cpp:130 kmuddy/dialogs/dlgappsettings.cpp:74
+#, kde-format
+msgid "White"
+msgstr "Белый"
+
+#: kmuddy/ctriggereditor.cpp:131
+#, kde-format
+msgid "Other"
+msgstr "Другой"
+
+#: kmuddy/ctriggereditor.cpp:136
+#, kde-format
+msgid "Whole line"
+msgstr "Строка целиком"
+
+#: kmuddy/ctriggereditor.cpp:137
+#, kde-format
+msgid "Matching text"
+msgstr "Совпавший текст"
+
+#: kmuddy/ctriggereditor.cpp:138
+#, kde-format
+msgid "Prefix"
+msgstr "Префикс"
+
+#: kmuddy/ctriggereditor.cpp:139
+#, kde-format
+msgid "Suffix"
+msgstr "Суффикс"
+
+#: kmuddy/ctriggereditor.cpp:140
+#, kde-format
+msgid "Full prefix"
+msgstr "Полный префикс"
+
+#: kmuddy/ctriggereditor.cpp:141
+#, kde-format
+msgid "Full suffix"
+msgstr "Полный суффикс"
+
+#: kmuddy/ctriggereditor.cpp:142
+#, kde-format
+msgid "Backreference"
+msgstr "Обратная ссылка"
+
+#: kmuddy/ctriggereditor.cpp:165
+#, kde-format
+msgid "&Trigger text"
+msgstr "Текст &триггера"
+
+#: kmuddy/ctriggereditor.cpp:168 libs/caliaseditor.cpp:91
+#, kde-format
+msgid "Command that will be replaced if you enter it."
+msgstr "Команда, которая будет заменена при вводе."
+
+#: kmuddy/ctriggereditor.cpp:178 libs/caliaseditor.cpp:101
+#, kde-format
+msgid "Exact match"
+msgstr "Точное совпадение"
+
+#: kmuddy/ctriggereditor.cpp:179 libs/caliaseditor.cpp:102
+#, kde-format
+msgid "Sub-string"
+msgstr "Подстрока"
+
+#: kmuddy/ctriggereditor.cpp:180 libs/caliaseditor.cpp:103
+#, kde-format
+msgid "Begins with"
+msgstr "Начинается с"
+
+#: kmuddy/ctriggereditor.cpp:181 libs/caliaseditor.cpp:104
+#, kde-format
+msgid "Ends with"
+msgstr "Заканчивается на"
+
+#: kmuddy/ctriggereditor.cpp:182 libs/caliaseditor.cpp:105
+#, kde-format
+msgid "Regular expression"
+msgstr "Регулярное выражение"
+
+#: kmuddy/ctriggereditor.cpp:183
+#, kde-format
+msgid ""
+"Type of matching. Trigger will only be activated if this passes this type of "
+"test. Note that triggers are always matched as whole words."
+msgstr ""
+"Тип сопоставления. Триггер активируется, только если проходит эту проверку. "
+"Учтите, что триггеры всегда сопоставляются как целые слова."
+
+#: kmuddy/ctriggereditor.cpp:191 libs/caliaseditor.cpp:114
+#, kde-format
+msgid ""
+"Conditional triggering. If this is set, the actions will only fire if the "
+"condition is true (that means, if it evaluates as non-zero)."
+msgstr ""
+"Условное срабатывание. Если этот параметр включён, действия будут "
+"выполняться, только если условие истинно (то есть если результат его "
+"вычисления не равен нулю)."
+
+#: kmuddy/ctriggereditor.cpp:195
+#, kde-format
+msgid "&Command(s) to send:"
+msgstr "&Команды для отправки:"
+
+#: kmuddy/ctriggereditor.cpp:199
+#, kde-format
+msgid "Command(s) that will replace command you've entered."
+msgstr "Команды, которые заменят введённую команду."
+
+#: kmuddy/ctriggereditor.cpp:202 libs/caliaseditor.cpp:125
+#, kde-format
+msgid "Test area"
+msgstr "Область проверки"
+
+#: kmuddy/ctriggereditor.cpp:204 libs/caliaseditor.cpp:127
+#, kde-format
+msgid "&Text: "
+msgstr "&Текст: "
+
+#: kmuddy/ctriggereditor.cpp:210 libs/caliaseditor.cpp:133
+#: plugins/converter/converterdialog.cpp:54
+#: plugins/scripting/crunninglist.cpp:57
+#, kde-format
+msgid "Name"
+msgstr "Имя"
+
+#: kmuddy/ctriggereditor.cpp:210 kmuddy/dialogs/dlgstatistics.cpp:53
+#: libs/caliaseditor.cpp:133 plugins/varviewer/dlgvarviewer.cpp:71
+#, kde-format
+msgid "Value"
+msgstr "Значение"
+
+#: kmuddy/ctriggereditor.cpp:214
+#, kde-format
+msgid ""
+"This is testing area. You can test your trigger here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"Это область проверки. Здесь можно проверить триггер и убедиться, что он "
+"работает так, как нужно. Просто введите текст и посмотрите, что произойдёт."
+
+#: kmuddy/ctriggereditor.cpp:248 kmuddy/ctriggereditor.cpp:513
+#: libs/caliaseditor.cpp:171 libs/caliaseditor.cpp:228
+#: plugins/scripting/cscripteditor.cpp:86
+#, kde-format
+msgid "&Options"
+msgstr "&Параметры"
+
+#: kmuddy/ctriggereditor.cpp:251 libs/caliaseditor.cpp:180
+#, kde-format
+msgid "Whole words only"
+msgstr "Только целые слова"
+
+#: kmuddy/ctriggereditor.cpp:252
+#, kde-format
+msgid ""
+"When enabled, this trigger will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"Если этот параметр включён, триггер сопоставляет текст, только если перед "
+"сопоставляемой строкой и после неё есть пробелы или ничего."
+
+#: kmuddy/ctriggereditor.cpp:255 libs/caliaseditor.cpp:184
+#, kde-format
+msgid "Case sensitive"
+msgstr "С учётом регистра"
+
+#: kmuddy/ctriggereditor.cpp:256 libs/caliaseditor.cpp:185
+#, kde-format
+msgid ""
+"When this option is on, upper case and lower case letters are treated as "
+"different characters, otherwise they're considered to be the same."
+msgstr ""
+"Если этот параметр включён, прописные и строчные буквы считаются разными "
+"символами, в противном случае — одинаковыми."
+
+#: kmuddy/ctriggereditor.cpp:260
+#, kde-format
+msgid "Show but do not send"
+msgstr "Показывать, но не отправлять"
+
+#: kmuddy/ctriggereditor.cpp:261
+#, kde-format
+msgid ""
+"When enabled, the text will not be sent to the MUD, it will only be "
+"displayed on the screen."
+msgstr ""
+"Если включено, текст не отправляется в MUD, а только показывается на экране."
+
+#: kmuddy/ctriggereditor.cpp:264 libs/caliaseditor.cpp:193
+#, kde-format
+msgid "Global matching"
+msgstr "Глобальное сопоставление"
+
+#: kmuddy/ctriggereditor.cpp:265
+#, kde-format
+msgid ""
+"<p>With global matching, one trigger/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it's "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition does not terminate scanning, so you can use this to highlight "
+"names from a list (using the condition to check if a match is in the list), "
+"or something like that."
+msgstr ""
+"<p>При глобальном сопоставлении один триггер может сработать несколько раз, "
+"если шаблон встречается в тексте больше одного раза. Например, шаблон abc в "
+"тексте abcdabcd при отключённом глобальном сопоставлении совпадёт один раз, "
+"а при включённом — дважды. Для каждого совпадения выполняются заданные "
+"действия, поэтому команды могут отправляться несколько раз, по одному разу "
+"на совпадение.</p><p>Учтите, что невыполненное условие не прекращает поиск, "
+"поэтому так можно, например, подсвечивать имена из списка (проверяя "
+"условием, есть ли совпадение в списке)."
+
+#: kmuddy/ctriggereditor.cpp:287 kmuddy/ctriggereditor.cpp:294
+#, kde-format
+msgid "Continue matching"
+msgstr "Продолжать сопоставление"
+
+#: kmuddy/ctriggereditor.cpp:288 kmuddy/ctriggereditor.cpp:295
+#, kde-format
+msgid "Stop matching"
+msgstr "Остановить сопоставление"
+
+#: kmuddy/ctriggereditor.cpp:289 kmuddy/ctriggereditor.cpp:296
+#, kde-format
+msgid "Leave group"
+msgstr "Выйти из группы"
+
+#: kmuddy/ctriggereditor.cpp:315
+#, kde-format
+msgid "&Enable color replacement"
+msgstr "&Включить замену цвета"
+
+#: kmuddy/ctriggereditor.cpp:316 kmuddy/ctriggereditor.cpp:514
+#, kde-format
+msgid "Color replacement"
+msgstr "Замена цвета"
+
+#: kmuddy/ctriggereditor.cpp:339
+#, kde-format
+msgid "&Add"
+msgstr "&Добавить"
+
+#: kmuddy/ctriggereditor.cpp:340
+#, kde-format
+msgid "&Remove"
+msgstr "&Удалить"
+
+#: kmuddy/ctriggereditor.cpp:341
+#, kde-format
+msgid "&Colorize"
+msgstr "&Раскрасить"
+
+#: kmuddy/ctriggereditor.cpp:343
+#, kde-format
+msgid "&Foreground"
+msgstr "&Текст"
+
+#: kmuddy/ctriggereditor.cpp:345
+#, kde-format
+msgid "&Background"
+msgstr "&Фон"
+
+#: kmuddy/ctriggereditor.cpp:347 kmuddy/ctriggereditor.cpp:397
+#, kde-format
+msgid "&Back-reference"
+msgstr "&Обратная ссылка"
+
+#: kmuddy/ctriggereditor.cpp:364
+#, kde-format
+msgid "Type"
+msgstr "Тип"
+
+#: kmuddy/ctriggereditor.cpp:364
+#, kde-format
+msgid "Foreground"
+msgstr "Цвет текста"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraBackground)
+#: kmuddy/ctriggereditor.cpp:364 plugins/mapper/dialogs/dlgmapcolorbase.ui:572
+#, kde-format
+msgid "Background"
+msgstr "Фон"
+
+#: kmuddy/ctriggereditor.cpp:386
+#, kde-format
+msgid "Text &rewrite trigger"
+msgstr "Триггер &перезаписи текста"
+
+#: kmuddy/ctriggereditor.cpp:389 kmuddy/ctriggereditor.cpp:515
+#, kde-format
+msgid "Rewrite text"
+msgstr "Перезапись текста"
+
+#: kmuddy/ctriggereditor.cpp:393
+#, kde-format
+msgid "&Change this part of line:"
+msgstr "&Изменить эту часть строки:"
+
+#: kmuddy/ctriggereditor.cpp:401
+#, kde-format
+msgid "&To this value:"
+msgstr "&На это значение:"
+
+#: kmuddy/ctriggereditor.cpp:426
+#, kde-format
+msgid "Do not show (&gag) the line"
+msgstr "Не показывать строку (&подавить)"
+
+#: kmuddy/ctriggereditor.cpp:427
+#, kde-format
+msgid ""
+"This will prevent the matched line from being displayed in the output window."
+msgstr "Это предотвратит показ сопоставляемой строки в окне вывода."
+
+#: kmuddy/ctriggereditor.cpp:429
+#, kde-format
+msgid "&Notify"
+msgstr "&Уведомлять"
+
+#: kmuddy/ctriggereditor.cpp:430
+#, kde-format
+msgid ""
+"This setting only takes effect if you have disabled the \"Always notify\" "
+"option in Global settings and at least one of global/local notification is "
+"enabled. It will activate notification if the KMuddy window and/or this "
+"session is not active at the moment.\n"
+"Useful if you only want to be notified of some events (tells, combat, ...)."
+msgstr ""
+"Этот параметр действует, только если в глобальных параметрах отключён "
+"параметр «Всегда уведомлять» и включено хотя бы одно из глобальных или "
+"локальных уведомлений. Уведомление сработает, если окно KMuddy и (или) этот "
+"сеанс в данный момент неактивны.\n"
+"Полезно, если требуется получать уведомления только о некоторых событиях "
+"(личные сообщения, бой, …)."
+
+#: kmuddy/ctriggereditor.cpp:437
+#, kde-format
+msgid "&Prompt-detection trigger"
+msgstr "Триггер обнаружения &приглашения"
+
+#: kmuddy/ctriggereditor.cpp:438
+#, kde-format
+msgid ""
+"Enabling this will turn this trigger into a prompt detection trigger, that "
+"is, text will be passed to these triggers even if no newline was received, "
+"the text will be displayed as a prompt if the trigger gets matched, and most "
+"other options will NOT be taken into effect - prompt-detect trigger cannot "
+"send out text, gag lines, do notification. Colorization is still possible."
+msgstr ""
+"При включении этого параметра триггер станет триггером обнаружения "
+"приглашения: текст будет передаваться таким триггерам, даже если символ "
+"новой строки не получен, текст будет показан как приглашение, если триггер "
+"сработает, а большинство других параметров НЕ будет задействовано — триггер "
+"обнаружения приглашения не может отправлять текст, подавлять строки или "
+"отправлять уведомления. Раскраска по-прежнему возможна."
+
+#: kmuddy/ctriggereditor.cpp:444
+#, kde-format
+msgid "Play s&ound file"
+msgstr "Воспроизвести &звуковой файл"
+
+#: kmuddy/ctriggereditor.cpp:445
+#, kde-format
+msgid ""
+"This trigger will play a sound. Useful as a notification of important "
+"events, or to assign sounds to some events."
+msgstr ""
+"Этот триггер воспроизводит звук. Полезно для уведомления о важных событиях "
+"или для назначения звуков некоторым событиям."
+
+#: kmuddy/ctriggereditor.cpp:464
+#, kde-format
+msgid "Send output to a separate window"
+msgstr "Отправлять вывод в отдельное окно"
+
+#: kmuddy/ctriggereditor.cpp:465
+#, kde-format
+msgid "This will send the matched text to a separate output window"
+msgstr "Совпавший текст будет отправлен в отдельное окно вывода"
+
+#: kmuddy/ctriggereditor.cpp:467 kmuddy/dialogs/dlgwindows.cpp:51
+#, kde-format
+msgid "Output Windows"
+msgstr "Окна вывода"
+
+#: kmuddy/ctriggereditor.cpp:478
+#, kde-format
+msgid "&Gag output in main window"
+msgstr "&Подавлять вывод в главном окне"
+
+#: kmuddy/ctriggereditor.cpp:479
+#, kde-format
+msgid ""
+"This will cause output sent to a separate window not to be displayed in main "
+"KMuddy session window"
+msgstr ""
+"Вывод, отправленный в отдельное окно, не будет показываться в главном окне "
+"сеанса KMuddy"
+
+#: kmuddy/ctriggereditor.cpp:482
+#, kde-format
+msgid "&Window name"
+msgstr "&Имя окна"
+
+#: kmuddy/ctriggereditor.cpp:486
+#, kde-format
+msgid "&Create window"
+msgstr "&Создать окно"
+
+#: kmuddy/ctriggereditor.cpp:511 libs/caliaseditor.cpp:226
+#, kde-format
+msgid "&Basic"
+msgstr "&Основные"
+
+#: kmuddy/ctriggereditor.cpp:516
+#, kde-format
+msgid "Special trigger"
+msgstr "Особый триггер"
+
+#: kmuddy/ctriggereditor.cpp:517
+#, kde-format
+msgid "Output windows"
+msgstr "Окна вывода"
+
+#: kmuddy/ctriggereditor.cpp:547
+#, kde-format
+msgid "This text did not match your trigger."
+msgstr "Этот текст не соответствует триггеру."
+
+#: kmuddy/ctriggereditor.cpp:552
+#, kde-format
+msgid "This text matches your trigger."
+msgstr "Этот текст соответствует триггеру."
+
+#: kmuddy/ctriggereditor.cpp:580
+#, kde-format
+msgid "Maximum number of colorizations reached."
+msgstr "Достигнуто максимальное количество раскрасок."
+
+#: kmuddy/ctriggereditor.cpp:663 plugins/mapper/cmapviewstatusbar.cpp:61
+#, kde-format
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: kmuddy/ctriggereditor.cpp:684
+#, kde-format
+msgid "Choose sound file"
+msgstr "Выбор звукового файла"
+
+#: kmuddy/ctriggereditor.cpp:703
+#, kde-format
+msgid "Window name is empty!"
+msgstr "Не задано имя окна."
+
+#: kmuddy/dialogs/cdirlist.cpp:35
+#, kde-format
+msgid "&Add..."
+msgstr "&Добавить…"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathDelete)
+#: kmuddy/dialogs/cdirlist.cpp:36 kmuddy/dialogs/dlgconnect.cpp:239
+#: libs/clistviewer.cpp:168 plugins/mapper/cmapclipboard.cpp:76
+#: plugins/mapper/cmapview.cpp:606 plugins/mapper/cmapview.cpp:622
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:523
+#, kde-format
+msgid "Delete"
+msgstr "Удалить"
+
+#: kmuddy/dialogs/cdirlist.cpp:37
+#, kde-format
+msgid "Move &up"
+msgstr "Переместить &вверх"
+
+#: kmuddy/dialogs/cdirlist.cpp:38
+#, kde-format
+msgid "Move &down"
+msgstr "Переместить &вниз"
+
+#: kmuddy/dialogs/cdirlist.cpp:72
+#, kde-format
+msgid "Choose sound directory"
+msgstr "Выбор папки звуков"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:77
+#, kde-format
+msgid "Application settings"
+msgstr "Параметры приложения"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:84
+#, kde-format
+msgid "Window"
+msgstr "Окно"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:87
+#, kde-format
+msgid "Output area"
+msgstr "Область вывода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:90
+#, kde-format
+msgid "Font"
+msgstr "Шрифт"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:93
+#, kde-format
+msgid "Input line"
+msgstr "Строка ввода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:96
+#, kde-format
+msgid "Colors"
+msgstr "Цвета"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:99
+#, kde-format
+msgid "Strings"
+msgstr "Строки"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:102
+#, kde-format
+msgid "Sounds"
+msgstr "Звуки"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:105
+#, kde-format
+msgid "Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:111
+#, kde-format
+msgid "S&how the tab bar even if not needed"
+msgstr "&Показывать панель вкладок, даже если она не нужна"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:112
+#, kde-format
+msgid ""
+"If this is checked, the tab bar will always be shown. Otherwise, it will be "
+"hidden if it contains only one tab."
+msgstr ""
+"Если флажок установлен, панель вкладок показывается всегда. В противном "
+"случае она скрывается, если содержит только одну вкладку."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:115
+#, kde-format
+msgid "Show au&xiliary input line"
+msgstr "Показывать в&спомогательную строку ввода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:116
+#, kde-format
+msgid "You will have two input lines instead of one."
+msgstr "Вместо одной строки ввода будет две."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:118
+#, kde-format
+msgid "&Always notify"
+msgstr "&Всегда уведомлять"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:119
+#, kde-format
+msgid ""
+"If this is checked, output notification will be used whenever some text "
+"comes from the server. Otherwise, it will only be used when a notification "
+"trigger is activated. Note that this option only takes effect if global or "
+"local notification is enabled."
+msgstr ""
+"Если этот флажок установлен, уведомление о выводе будет использоваться "
+"всякий раз, когда с сервера поступает текст. В противном случае оно будет "
+"использоваться, только когда сработает триггер уведомления. Учтите, что этот "
+"параметр действует, только если включено глобальное или локальное "
+"уведомление."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:124
+#, kde-format
+msgid "&Global notification"
+msgstr "&Глобальное уведомление"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:125
+#, kde-format
+msgid ""
+"When some text comes from the server and KMuddy is not currently active, "
+"window caption and the taskbar will try to attract your attention (some "
+"characters will blink there)."
+msgstr ""
+"Если от сервера приходит текст, а KMuddy в данный момент неактивен, "
+"заголовок окна и панель задач попытаются привлечь внимание (некоторые "
+"символы в них будут мигать)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:129
+#, kde-format
+msgid "&Local notification"
+msgstr "&Локальное уведомление"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:130
+#, kde-format
+msgid ""
+"When some text comes from the server and this session is not currently "
+"active, its tab will try to attract your attention (some characters will "
+"blink there)."
+msgstr ""
+"Если от сервера поступает текст, а этот сеанс в данный момент неактивен, его "
+"вкладка попытается привлечь внимание (некоторые символы на ней будут мигать)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:135
+#, kde-format
+msgid "Display system tray icon"
+msgstr "Показывать значок в системном лотке"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:136
+#, kde-format
+msgid ""
+"This option toggles the presence of the system tray icon. The icon can be "
+"used to hide the application window without taking up space in the taskbar. "
+"You can click on the icon to hide the window and then click again to restore "
+"it. Your connection will remain active even if the window is hidden and you "
+"will still receive notification messages. "
+msgstr ""
+"Этот параметр включает и отключает показ значка в системном лотке. Значок "
+"позволяет скрыть окно приложения, не занимая места на панели задач. Щелчок "
+"по значку скрывает окно, а повторный щелчок восстанавливает его. Подключение "
+"останется активным, даже если окно скрыто, и уведомления будут по-прежнему "
+"приходить. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:144
+#, kde-format
+msgid "Use passive popups"
+msgstr "Использовать пассивные всплывающие уведомления"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:145
+#, kde-format
+msgid ""
+"This option toggles the use of passive popups. Passive popups appear near "
+"the system tray icon when you are in another window and alert you to the "
+"presence of activity in one of your connections. "
+msgstr ""
+"Этот параметр включает и отключает использование пассивных всплывающих "
+"уведомлений. Пассивные всплывающие уведомления появляются рядом со значком "
+"системного лотка, когда активно другое окно, и сообщают о наличии активности "
+"в одном из подключений. "
+
+#: kmuddy/dialogs/dlgappsettings.cpp:151
+#, kde-format
+msgid "Auto-connect on startup"
+msgstr "Автоматически подключаться при запуске"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:152
+#, kde-format
+msgid ""
+"With this option set, the selected connection will be automatically "
+"initiated immediately after starting KMuddy. Handy when you connect using "
+"one profile most of the time."
+msgstr ""
+"Если этот параметр включён, выбранное подключение автоматически "
+"устанавливается сразу после запуска KMuddy. Удобно, если большую часть "
+"времени используется один профиль."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:155
+#, kde-format
+msgid "Auto-connect to:"
+msgstr "Автоматически подключаться к:"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:193
+#, kde-format
+msgid "Default &background color"
+msgstr "Цвет &фона по умолчанию"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:196
+#, kde-format
+msgid "This color will be used as a standard background color."
+msgstr "Этот цвет будет использоваться как стандартный цвет фона."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:198
+#, kde-format
+msgid "Default &text color"
+msgstr "Цвет &текста по умолчанию"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:201
+#, kde-format
+msgid "This color will be used to display standard text with no defined color."
+msgstr ""
+"Этот цвет будет использоваться для показа обычного текста, для которого не "
+"задан цвет."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:203
+#, kde-format
+msgid "Command &echo color"
+msgstr "Цвет &эха команд"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:206
+#, kde-format
+msgid "This color will be used to display commands that you have entered."
+msgstr "Этот цвет будет использоваться для показа введённых команд."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:208
+#, kde-format
+msgid "&System message color"
+msgstr "&Цвет системных сообщений"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:211
+#, kde-format
+msgid "This color will be used for various system messages."
+msgstr "Этот цвет используется для различных системных сообщений."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:236
+#, kde-format
+msgid "&Indentation"
+msgstr "&Отступы"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:236
+#, kde-format
+msgid "None"
+msgstr "Нет"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:237
+#, kde-format
+msgid ""
+"When a line is too long, part of it will be moved to the next line. "
+"Indentation says how many spaces will be put to the beginning of the "
+"continued line."
+msgstr ""
+"Если строка слишком длинная, часть её переносится на следующую строку. "
+"Отступ задаёт, сколько пробелов будет добавлено в начало продолжения строки."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:241
+#, kde-format
+msgid "&History buffer size"
+msgstr "&Размер буфера истории"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:241
+#, kde-format
+msgid ""
+"Size of output scroll-back buffer. Please note that this setting will only "
+"affect new connections, existing ones will keep their history setting."
+msgstr ""
+"Размер буфера прокрутки вывода. Учтите, что этот параметр влияет только на "
+"новые подключения, а существующие сохранят свои параметры истории."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:244
+#, kde-format
+msgid "lines"
+msgstr "строк"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:247
+#, kde-format
+msgid "Enable co&mmand echo"
+msgstr "Включить &эхо команд"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:248
+#, kde-format
+msgid ""
+"Enables displaying of commands in the console.<p><b>Please note:</b> This "
+"will also disable command echo in session transcript."
+msgstr ""
+"Включает показ команд в консоли.<p><b>Обратите внимание:</b> при этом также "
+"отключается эхо команд в протоколе сеанса."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:251
+#, kde-format
+msgid "Enable s&ystem messages"
+msgstr "Включить &системные сообщения"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:252
+#, kde-format
+msgid "Enables displaying of system messages in the console."
+msgstr "Включает показ системных сообщений в консоли."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:255
+#, kde-format
+msgid "Enable b&linking"
+msgstr "Включить &мигание"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:256
+#, kde-format
+msgid "Enables support for blinking. Currently not supported."
+msgstr "Включает поддержку мигания. Пока не поддерживается."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:272
+#, kde-format
+msgid "&Server output"
+msgstr "&Вывод сервера"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:275 kmuddy/dialogs/dlgappsettings.cpp:285
+#: kmuddy/dialogs/dlgappsettings.cpp:295
+#, kde-format
+msgid "Choose..."
+msgstr "Выбрать…"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:278
+#, kde-format
+msgid "Here you can select a font that will be used for main display."
+msgstr ""
+"Здесь можно выбрать шрифт, который будет использоваться для основного окна "
+"вывода."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:282
+#, kde-format
+msgid "&Input line"
+msgstr "Строка &ввода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:288
+#, kde-format
+msgid "Here you can select a font that will be used for the input line."
+msgstr "Здесь можно выбрать шрифт для строки ввода."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:292
+#, kde-format
+msgid "&Multi-line input"
+msgstr "&Многострочный ввод"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:298
+#, kde-format
+msgid ""
+"Here you can select a font that will be used for the multi-line input window."
+msgstr ""
+"Здесь можно выбрать шрифт, который будет использоваться в окне "
+"многострочного ввода."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:317
+#, kde-format
+msgid "&Keep sent text"
+msgstr "&Сохранять отправленный текст"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:318
+#, kde-format
+msgid ""
+"If you enable this option, commands will remain in the input line after you "
+"send them (by pressing ENTER); otherwise it will be cleared."
+msgstr ""
+"Если этот параметр включён, команды остаются в строке ввода после их "
+"отправки (нажатием клавиши ENTER); в противном случае строка ввода очищается."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:321
+#, kde-format
+msgid "&Select kept text after it's sent"
+msgstr "&Выделять оставшийся текст после отправки"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:322
+#, kde-format
+msgid ""
+"If you enable this option, entered command will be selected. This allows you "
+"to immediately type another command without deleting the old one and still "
+"be able to reuse previous command easily."
+msgstr ""
+"Если этот параметр включён, введённая команда выделяется. Это позволяет "
+"сразу ввести другую команду, не удаляя старую, и при этом легко повторно "
+"использовать предыдущую команду."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:327
+#, kde-format
+msgid "&Cursor keys browse history"
+msgstr "Клавиши &курсора листают историю"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:328
+#, kde-format
+msgid ""
+"If you enable this option, you will be able to choose previously entered "
+"commands with Up and Down keys."
+msgstr ""
+"Если включить этот параметр, можно будет выбирать ранее введённые команды "
+"клавишами «Вверх» и «Вниз»."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:330
+#, kde-format
+msgid "Telnet-style &paste"
+msgstr "&Вставка в стиле Telnet"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:331
+#, kde-format
+msgid ""
+"Enables telnet-style pasting, i.e. if multi-line text is pasted, all lines "
+"but the last are sent as commands immediately."
+msgstr ""
+"Включает вставку в стиле telnet: при вставке многострочного текста все "
+"строки, кроме последней, сразу отправляются как команды."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:334
+#, kde-format
+msgid "T&rim spaces"
+msgstr "Об&резать пробелы"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:335
+#, kde-format
+msgid ""
+"Enables trimming of spaces from commands. Note that with this option "
+"disabled, you should avoid including spaces when typing multiple commands on "
+"one line, or you will encounter problems with special sequences not being "
+"detected properly."
+msgstr ""
+"Включает удаление пробелов в начале и конце команд. Учтите, что если этот "
+"параметр отключён, при вводе нескольких команд в одной строке следует "
+"избегать пробелов, иначе специальные последовательности могут распознаваться "
+"неправильно."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:340
+#, kde-format
+msgid "Enable &auto-completion"
+msgstr "Включить &автодополнение"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:341
+#, kde-format
+msgid ""
+"Auto-completion is a feature that offers you possible completions for "
+"commands, as you type them. It can also finish the command for you."
+msgstr ""
+"Автодополнение — это функция, которая предлагает возможные варианты "
+"завершения команд по мере их ввода. Оно также позволяет дописать команду."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:349
+#, kde-format
+msgid "T&ype of auto-completion"
+msgstr "Т&ип автодополнения"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:351
+#, kde-format
+msgid "Auto-fill"
+msgstr "Автозаполнение"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:352
+#, kde-format
+msgid "Shortest-match auto-fill"
+msgstr "Автозаполнение по кратчайшему совпадению"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:353
+#, kde-format
+msgid "Popup list-box"
+msgstr "Всплывающий список"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:357
+#, kde-format
+msgid "&Background color"
+msgstr "Цвет &фона"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:360
+#, kde-format
+msgid "Background color of the input line"
+msgstr "Цвет фона строки ввода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:362
+#, kde-format
+msgid "&Text color"
+msgstr "Цвет &текста"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:365
+#, kde-format
+msgid "Color of text that you type in the input line."
+msgstr "Цвет текста, вводимого в строке ввода."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:381
+#, kde-format
+msgid "S&wap ENTER and CTRL+ENTER for multi-line"
+msgstr "&Менять местами ENTER и CTRL+ENTER для многострочного ввода"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:382
+#, kde-format
+msgid ""
+"When turned off, CTRL+ENTER will insert another line in the multi-line input "
+"line, and ENTER will send commands to the server. If turned on, then the "
+"behaviour of these keys gets swapped."
+msgstr ""
+"Если этот параметр отключён, CTRL+ENTER добавляет новую строку в "
+"многострочной строке ввода, а ENTER отправляет команды на сервер. Если "
+"включён, действия этих клавиш меняются местами."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:400
+#, kde-format
+msgid "Dark colors"
+msgstr "Тёмные цвета"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:401
+#, kde-format
+msgid "Bright colors"
+msgstr "Яркие цвета"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:427
+#, kde-format
+msgid "&Command separator string"
+msgstr "Строка-разделитель &команд"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:430
+#, kde-format
+msgid ""
+"You can enter multiple commands at once, they will get executed together. "
+"Here you can enter string that can be used to separate individual commands."
+msgstr ""
+"Можно ввести сразу несколько команд — они будут выполнены вместе. Здесь "
+"можно ввести строку, которая будет использоваться для разделения отдельных "
+"команд."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:434
+#, kde-format
+msgid "&Speed-walk string"
+msgstr "Строка &быстрого перемещения"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:437
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"speed-walking. Every character is treated as one command: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Commands that will be sent for each "
+"direction can be set up in <i>MUD preferences</i> (<b>profile-based</b> "
+"connections only)."
+msgstr ""
+"Если команда начинается с этой строки, она интерпретируется как быстрое "
+"перемещение. Каждый символ обрабатывается как отдельная команда: n, s, w, e, "
+"j(=ne), k(=se), l(=sw), m(=nw), u, d.<p>Команды, отправляемые для каждого "
+"направления, можно задать в <i>параметрах MUD</i> (только для подключений "
+"<b>на основе профиля</b>)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:443
+#, kde-format
+msgid "S&peed-walk even if empty"
+msgstr "Быстрое перемещение, даже &если строка пуста"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:444
+#, kde-format
+msgid ""
+"Enabling this will cause KMuddy to expand speed-walk strings even if no "
+"speed-walk string has been given. This allows faster speed-walking, but keep "
+"in mind that EVERY command that consists only of valid speed-walk characters "
+"(news, for example) will be treated as speed-walking. To avoid this, you'll "
+"have to type at least one character in upper-case."
+msgstr ""
+"При включении этого параметра KMuddy будет разворачивать строки быстрого "
+"перемещения, даже если строка быстрого перемещения не задана. Это позволяет "
+"перемещаться быстрее, но учтите, что ЛЮБАЯ команда, состоящая только из "
+"допустимых символов быстрого перемещения (например, news), будет "
+"восприниматься как быстрое перемещение. Чтобы этого избежать, потребуется "
+"ввести хотя бы один символ в верхнем регистре."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:451
+#, kde-format
+msgid "Macro-ca&ll string"
+msgstr "Строка &вызова макроса"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:454
+#, kde-format
+msgid ""
+"If you start a command with this string, the command will be interpreted as "
+"a macro-call.<br>Syntax is &lt;this string&gt; &lt;command&gt; [parameters]  "
+"(/exec calls external scripts)"
+msgstr ""
+"Если команда начинается с этой строки, она воспринимается как вызов макроса."
+"<br>Синтаксис: &lt;эта строка&gt; &lt;команда&gt; [параметры]  (/exec "
+"вызывает внешние сценарии)"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:459
+#, kde-format
+msgid "&Repeater string"
+msgstr "Строка &повтора"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:462
+#, kde-format
+msgid ""
+"Allows you to repeat some command. For example, typing <i>#10 say hello</i> "
+"sends that command 10 times. <br>Note that this also works with aliases and "
+"macro execution.<br>Repeater and number may be separated by a space (spaces)."
+msgstr ""
+"Позволяет повторить команду. Например, ввод <i>#10 say hello</i> отправляет "
+"эту команду 10 раз. <br>Учтите, что это также работает с псевдонимами и "
+"выполнением макросов.<br>Повторитель и число можно разделить пробелом "
+"(пробелами)."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:468
+#, kde-format
+msgid "&Focus string"
+msgstr "&Строка фокуса"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:471
+#, kde-format
+msgid ""
+"If a command is started with this string, the command will be interpreted as "
+"a command-focus-call. This will allow you to send commands to other "
+"connected characters.<br>Syntax is &lt;this string&gt; &lt;focus tab&gt; &lt;"
+"this string&gt; &lt;command&gt;"
+msgstr ""
+"Если команда начинается с этой строки, она интерпретируется как вызов "
+"фокусировки команды. Это позволяет отправлять команды другим подключённым "
+"персонажам.<br>Синтаксис: &lt;эта строка&gt; &lt;вкладка фокусировки&gt; &lt;"
+"эта строка&gt; &lt;команда&gt;"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:477
+#, kde-format
+msgid "Send &as-is"
+msgstr "Отправлять &как есть"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:480
+#, kde-format
+msgid ""
+"If a command is started with this string, it will be sent as-is, without any "
+"parsing. This string will be removed first."
+msgstr ""
+"Если команда начинается с этой строки, она будет отправлена как есть, без "
+"разбора. Перед отправкой эта строка удаляется."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:484
+#, kde-format
+msgid "&Expand backslashes"
+msgstr "Раскрывать обратные &косые черты"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:485
+#, kde-format
+msgid ""
+"This will enable backslash expansion, that is: \\n is end-of-line, \\t is "
+"TAB, \\\\ is \\, \\<anything else> means <anything else>."
+msgstr ""
+"Включает раскрытие обратной косой черты: \\n — конец строки, \\t — "
+"табуляция, \\\\ — \\, а \\<anything else> означает <anything else>."
+
+#: kmuddy/dialogs/dlgappsettings.cpp:509
+#, kde-format
+msgid "&Enable sounds globally"
+msgstr "Включить &звуки для всех подключений"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:510
+#, kde-format
+msgid ""
+"<qt>Enable playing sounds for all connections.\n"
+"Note that you can override this setting in MUD Preferences dialog.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol).</qt>"
+msgstr ""
+"<qt>Воспроизводить звуки для всех подключений.\n"
+"Учтите, что этот параметр можно переопределить в диалоге параметров MUD.\n"
+"Учтите также, что это будет работать, только если MUD поддерживает <b>MSP</"
+"b> (MUD Sound Protocol).</qt>"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:514
+#, kde-format
+msgid "Allow &downloading sounds"
+msgstr "Разрешить &загрузку звуков"
+
+#: kmuddy/dialogs/dlgappsettings.cpp:516
+#, kde-format
+msgid ""
+"MSP version 0.3 supports downloading of sound files directly from the web or "
+"FTP. You can enable this functionality here. Note that every sound will only "
+"be downloaded once. The downloaded files are stored in your homedir in "
+"directory\n"
+msgstr ""
+"MSP версии 0.3 поддерживает загрузку звуковых файлов напрямую из Интернета "
+"или по FTP. Включить эту возможность можно здесь. Учтите, что каждый звук "
+"загружается только один раз. Загруженные файлы сохраняются во вложенной "
+"папке домашней папки:\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkBold)
+#: kmuddy/dialogs/dlgappsettings.cpp:707 kmuddy/dialogs/dlgappsettings.cpp:718
+#: kmuddy/dialogs/dlgappsettings.cpp:729 kmuddy/dialogs/dlgappsettings.cpp:738
+#: kmuddy/dialogs/dlgappsettings.cpp:747 kmuddy/dialogs/dlgappsettings.cpp:756
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:95
+#, kde-format
+msgid "Bold"
+msgstr "Полужирный"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalic)
+#: kmuddy/dialogs/dlgappsettings.cpp:708 kmuddy/dialogs/dlgappsettings.cpp:719
+#: kmuddy/dialogs/dlgappsettings.cpp:730 kmuddy/dialogs/dlgappsettings.cpp:739
+#: kmuddy/dialogs/dlgappsettings.cpp:748 kmuddy/dialogs/dlgappsettings.cpp:757
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:102
+#, kde-format
+msgid "Italic"
+msgstr "Курсив"
+
+#: kmuddy/dialogs/dlgconnect.cpp:40
+#, kde-format
+msgid "Connect"
+msgstr "Подключиться"
+
+#: kmuddy/dialogs/dlgconnect.cpp:57
+#, kde-format
+msgid ""
+"This list shows currently defined profiles.<p><b>Profiles</b> allow you to "
+"speed up connecting to your MUD, as well as to use more advanced features "
+"like <i>aliases</i> or <i>triggers</i>."
+msgstr ""
+"В этом списке показаны текущие профили.<p><b>Профили</b> позволяют ускорить "
+"подключение к MUD, а также использовать более сложные возможности, такие как "
+"<i>псевдонимы</i> и <i>триггеры</i>."
+
+#: kmuddy/dialogs/dlgconnect.cpp:64
+#, kde-format
+msgid "&New profile"
+msgstr "&Новый профиль"
+
+#: kmuddy/dialogs/dlgconnect.cpp:65
+#, kde-format
+msgid "&Modify profile"
+msgstr "&Изменить профиль"
+
+#: kmuddy/dialogs/dlgconnect.cpp:66
+#, kde-format
+msgid "&Delete profile"
+msgstr "&Удалить профиль"
+
+#: kmuddy/dialogs/dlgconnect.cpp:67
+#, kde-format
+msgid "&Duplicate profile"
+msgstr "Создать &копию профиля"
+
+#: kmuddy/dialogs/dlgconnect.cpp:73
+#, kde-format
+msgid "Do not &send login sequence"
+msgstr "Не &отправлять последовательность входа"
+
+#: kmuddy/dialogs/dlgconnect.cpp:74
+#, kde-format
+msgid ""
+"Login sequence won't be sent for this connect. Useful when you're creating a "
+"new character and you want to use QuickConnect for some reason."
+msgstr ""
+"При этом подключении последовательность входа не будет отправлена. Полезно "
+"при создании нового персонажа, если по какой-то причине требуется "
+"воспользоваться QuickConnect."
+
+#: kmuddy/dialogs/dlgconnect.cpp:79
+#, kde-format
+msgid "&Offline editing"
+msgstr "&Автономное редактирование"
+
+#: kmuddy/dialogs/dlgconnect.cpp:80
+#, kde-format
+msgid "This allows offline editing of profiles."
+msgstr "Позволяет редактировать профили в автономном режиме."
+
+#: kmuddy/dialogs/dlgconnect.cpp:86 kmuddy/dialogs/dlgquickconnect.cpp:55
+#, kde-format
+msgid "&Connect"
+msgstr "&Подключиться"
+
+#: kmuddy/dialogs/dlgconnect.cpp:87 kmuddy/dialogs/dlgquickconnect.cpp:56
+#, kde-format
+msgid "Establishes connection with specified parameters."
+msgstr "Устанавливает подключение с указанными параметрами."
+
+#: kmuddy/dialogs/dlgconnect.cpp:89
+#, kde-format
+msgid "C&lose"
+msgstr "&Закрыть"
+
+#: kmuddy/dialogs/dlgconnect.cpp:90
+#, kde-format
+msgid "Closes this dialog box without connecting."
+msgstr "Закрывает это диалоговое окно без подключения."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid ""
+"This profile cannot be deleted, because you have a connection open using "
+"this profile."
+msgstr ""
+"Профиль нельзя удалить, так как с его использованием открыто подключение."
+
+#: kmuddy/dialogs/dlgconnect.cpp:235
+#, kde-format
+msgid "Unable to delete"
+msgstr "Не удалось удалить"
+
+#: kmuddy/dialogs/dlgconnect.cpp:239
+#, kde-format
+msgid "Do you really want to delete profile %1?"
+msgstr "Удалить профиль %1?"
+
+#: kmuddy/dialogs/dlgconnect.cpp:239
+#, kde-format
+msgid "Delete profile"
+msgstr "Удалить профиль"
+
+#: kmuddy/dialogs/dlgconnect.cpp:255
+#, kde-format
+msgid "Duplicate Profile"
+msgstr "Создать копию профиля"
+
+#: kmuddy/dialogs/dlgconnect.cpp:255
+#, kde-format
+msgid "Please enter name for the duplicated profile"
+msgstr "Введите имя для копии профиля"
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid ""
+"There was an error trying to duplicate the profile. Please ensure that you "
+"have write access to the profile directory."
+msgstr ""
+"Не удалось создать копию профиля. Убедитесь, что есть права на запись в "
+"папку профиля."
+
+#: kmuddy/dialogs/dlgconnect.cpp:257
+#, kde-format
+msgid "Unable to duplicate"
+msgstr "Не удалось создать копию"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:38
+#, kde-format
+msgid "Dump output buffer"
+msgstr "Выгрузка буфера вывода"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:44
+#, kde-format
+msgid "&Start at current position"
+msgstr "&Начать с текущей позиции"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:45
+#, kde-format
+msgid ""
+"When this is enabled, only the part of history buffer from currently "
+"displayed part up to the end of buffer will be dumped. Otherwise entire "
+"buffer will be dumped (default)."
+msgstr ""
+"Если включено, выгружается только часть буфера истории — от текущей "
+"показываемой позиции до конца буфера. В противном случае выгружается весь "
+"буфер (по умолчанию)."
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
+#, kde-format
+msgid "&File:"
+msgstr "&Файл:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:55 kmuddy/dialogs/dlgtranscript.cpp:89
+#, kde-format
+msgid "&Browse..."
+msgstr "&Обзор…"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:65
+#, kde-format
+msgid "&Dump format:"
+msgstr "&Формат дампа:"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:67
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:68
+#, kde-format
+msgid "Plain text"
+msgstr "Обычный текст"
+
+#: kmuddy/dialogs/dlgdumpbuffer.cpp:69
+#, kde-format
+msgid "Text with ANSI colors"
+msgstr "Текст с цветами ANSI"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:38 kmuddy/dialogs/dlgeditprofile.cpp:180
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
+#, kde-format
+msgid "Edit profile"
+msgstr "Изменение профиля"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:44
+#, kde-format
+msgid "Profile &name:"
+msgstr "&Имя профиля:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:46
+#, kde-format
+msgid ""
+"Enter profile name here. You can enter any name, but it must be <b>unique</"
+"b>."
+msgstr ""
+"Введите здесь имя профиля. Имя может быть любым, но должно быть "
+"<b>уникальным</b>."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:47
+#, kde-format
+msgid "&Server:"
+msgstr "&Сервер:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:49
+#, kde-format
+msgid "Enter address of the server where your MUD is running."
+msgstr "Введите адрес сервера, на котором запущен MUD."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:50 kmuddy/dialogs/dlgquickconnect.cpp:40
+#, kde-format
+msgid "&Port:"
+msgstr "По&рт:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:54
+#, kde-format
+msgid "Enter port on which your MUD is running (usually some 4-digit number)."
+msgstr "Введите порт, на котором работает MUD (обычно четырёхзначное число)."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:55
+#, kde-format
+msgid "&Login name:"
+msgstr "Имя для &входа:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:57
+#, kde-format
+msgid ""
+"Enter your login name on the MUD here.<p><i>This setting is optional.</i>"
+msgstr ""
+"Введите здесь своё имя для входа в MUD.<p><i>Этот параметр необязателен.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:58
+#, kde-format
+msgid "Pass&word:"
+msgstr "&Пароль:"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:61
+#, kde-format
+msgid "Enter your password on the MUD here.<p><i>This setting is optional.</i>"
+msgstr "Введите здесь пароль для MUD.<p><i>Этот параметр необязателен.</i>"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:62
+#, kde-format
+msgctxt "Commands sent after connection is established"
+msgid "&Connect sequence"
+msgstr "&Последовательность подключения"
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:66
+#, kde-format
+msgid ""
+"Commands to be sent to the MUD after logging in.<br><b>$name</b> expands to "
+"username.<br><b>$password</b> expands to your password.<p><b>Important:</b> "
+"these commands are sent exactly as you type them, with leading/trailing "
+"spaces removed. No aliases, no macros, no speed-walk. Also note that empty "
+"lines will also be sent, including the very last line."
+msgstr ""
+"Команды, отправляемые в MUD после входа.<br><b>$name</b> разворачивается в "
+"имя пользователя.<br><b>$password</b> разворачивается в пароль.<p><b>Важно:</"
+"b> эти команды отправляются точно в том виде, в каком они введены, с "
+"удалением начальных и конечных пробелов. Без псевдонимов, без макросов, без "
+"быстрого перемещения. Учтите также, что пустые строки тоже будут отправлены, "
+"включая самую последнюю строку."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:180
+#, kde-format
+msgid "Profile name cannot be empty."
+msgstr "Имя профиля не должно быть пустым."
+
+#: kmuddy/dialogs/dlgeditprofile.cpp:185
+#, kde-format
+msgid "Profile name cannot contain '/' character."
+msgstr "Имя профиля не может содержать символ «/»."
+
+#: kmuddy/dialogs/dlggrabkey.cpp:34
+#, kde-format
+msgid "Keygrabber"
+msgstr "Захват комбинации клавиш"
+
+#: kmuddy/dialogs/dlggrabkey.cpp:37
+#, kde-format
+msgid "Press the desired shortcut..."
+msgstr "Нажмите нужную комбинацию клавиш…"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Import profile"
+msgstr "Импорт профиля"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:37
+#, kde-format
+msgid "Export profile"
+msgstr "Экспорт профиля"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:41
+#, kde-format
+msgid "&Profile name"
+msgstr "Имя &профиля"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:54
+#, kde-format
+msgid "&Import from"
+msgstr "&Импорт из"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:55
+#, kde-format
+msgid "&Export to"
+msgstr "&Экспорт в"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:58
+#: kmuddy/dialogs/dlgprofilesettings.cpp:154
+#: kmuddy/dialogs/dlgprofilesettings.cpp:161
+#: kmuddy/dialogs/dlgprofilesettings.cpp:168
+#: plugins/scripting/cscripteditor.cpp:72
+#: plugins/scripting/cscripteditor.cpp:81
+#, kde-format
+msgid "Browse..."
+msgstr "Обзор…"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:91
+#, kde-format
+msgid ""
+"I am sorry, but import and export is currently disabled. The functionality "
+"should be re-enabled before the final release."
+msgstr ""
+"К сожалению, импорт и экспорт сейчас отключены. Эту возможность следует "
+"снова включить до окончательного выпуска."
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:131
+#, kde-format
+msgid "Choose file with profile"
+msgstr "Выбор файла с профилем"
+
+#: kmuddy/dialogs/dlgimportexportprofile.cpp:137
+#, kde-format
+msgid "Enter target file"
+msgstr "Укажите целевой файл"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:33
+#, kde-format
+msgid "Multi-line input"
+msgstr "Многострочный ввод"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:45
+#, kde-format
+msgid ""
+"Enter commands that are to be sent to the MUD. Each line represents one "
+"command."
+msgstr ""
+"Введите команды, которые должны отправляться в MUD. Каждая строка — одна "
+"команда."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:56
+#, kde-format
+msgid "&Prefix:"
+msgstr "&Префикс:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:59
+#, kde-format
+msgid "&Suffix:"
+msgstr "&Суффикс:"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:69
+#, kde-format
+msgid ""
+"Prefix and suffix may contain text, that will be added to the beginning "
+"(prefix) or ending (suffix) of every line written to the multi-line editor."
+msgstr ""
+"Префикс и суффикс могут содержать текст, который будет добавлен в начало "
+"(префикс) или в конец (суффикс) каждой строки, вводимой в многострочный "
+"редактор."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:79
+#, kde-format
+msgid "&Send"
+msgstr "&Отправить"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:80
+#, kde-format
+msgid "Sends current text to the MUD."
+msgstr "Отправляет текущий текст в MUD."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:81
+#, kde-format
+msgid ""
+"This will send all the commands you've entered to the MUD. If you've entered "
+"prefix and/or suffix, they will be added to the beginning and ending of each "
+"command."
+msgstr ""
+"Будут отправлены в MUD все введённые команды. Если заданы префикс и/или "
+"суффикс, они будут добавлены в начало и конец каждой команды."
+
+#: kmuddy/dialogs/dlgmultiline.cpp:84
+#, kde-format
+msgid "&Clear"
+msgstr "&Очистить"
+
+#: kmuddy/dialogs/dlgmultiline.cpp:85
+#, kde-format
+msgid "Clears window contents."
+msgstr "Очищает содержимое окна."
+
+#: kmuddy/dialogs/dlgmxpconsole.cpp:48
+#, kde-format
+msgid "MXP Console"
+msgstr "Консоль MXP"
+
+#: kmuddy/dialogs/dlgobjects.cpp:64
+#, kde-format
+msgid "Object Manager"
+msgstr "Диспетчер объектов"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcUp)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestUp)
+#: kmuddy/dialogs/dlgobjects.cpp:90
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:111
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:168
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:542
+#, kde-format
+msgid "Up"
+msgstr "Вверх"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblDownShort)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcDown)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestDown)
+#: kmuddy/dialogs/dlgobjects.cpp:94
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:121
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:266
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:102
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:356
+#, kde-format
+msgid "Down"
+msgstr "Вниз"
+
+#: kmuddy/dialogs/dlgobjects.cpp:98
+#, kde-format
+msgid "Left"
+msgstr "Влево"
+
+#: kmuddy/dialogs/dlgobjects.cpp:102
+#, kde-format
+msgid "Right"
+msgstr "Вправо"
+
+#: kmuddy/dialogs/dlgoutputwindow.cpp:33
+#, kde-format
+msgid "Output window"
+msgstr "Окно вывода"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:43
+#, kde-format
+msgid "MUD preferences"
+msgstr "Параметры MUD"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:50
+#, kde-format
+msgid "Connection"
+msgstr "Подключение"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabCommands)
+#: kmuddy/dialogs/dlgprofilesettings.cpp:53
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:641
+#, kde-format
+msgid "Commands"
+msgstr "Команды"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:56
+#, kde-format
+msgid "Folders"
+msgstr "Папки"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:59
+#, kde-format
+msgid "Sound"
+msgstr "Звук"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:63
+#, kde-format
+msgid "MXP"
+msgstr "MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:69
+#, kde-format
+msgid "&Use colorized output (if available)"
+msgstr "&Использовать цветной вывод (если доступно)"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:70
+#, kde-format
+msgid "&Do not allow more than 100 repeated commands"
+msgstr "&Не разрешать более 100 повторов команды"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:76
+#, kde-format
+msgid "Enable telnet &negotiation on startup"
+msgstr "Включить &согласование параметров telnet при запуске"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:77
+#, kde-format
+msgid ""
+"Enables telnet negotiation for some option. Disabling it may resolve "
+"problems with some servers that do not understand these."
+msgstr ""
+"Включает согласование параметров telnet. Отключение может устранить проблемы "
+"с некоторыми серверами, которые их не распознают."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:81
+#, kde-format
+msgid "&Encoding:"
+msgstr "&Кодировка:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:84
+#, kde-format
+msgid ""
+"Lets you pick the output character encoding used by the server. This usually "
+"only needs to be set for non-English servers."
+msgstr ""
+"Позволяет выбрать кодировку символов вывода, используемую сервером. Обычно "
+"её нужно задавать только для серверов, работающих не на английском языке."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:90
+#, kde-format
+msgid "&Auto-append newlines after prompt"
+msgstr "&Автоматически добавлять переводы строк после приглашения"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:91
+#, kde-format
+msgid ""
+"Enables adding linefeeds after GA-terminated prompts to have properly "
+"aligned output."
+msgstr ""
+"Включает добавление переводов строк после приглашений, завершённых GA, для "
+"правильного выравнивания вывода."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:94
+#, kde-format
+msgid "&Show prompt in a separate field"
+msgstr "&Показывать приглашение в отдельном поле"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:98
+#, kde-format
+msgid "Show prompt in the s&tatus bar"
+msgstr "Показывать приглашение в с&троке состояния"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:101
+#, kde-format
+msgid "Show prompt in the &console"
+msgstr "Показывать приглашение в &консоли"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:104
+#, kde-format
+msgid "Start advanced transcript when session starts"
+msgstr "Начинать расширенный протокол при запуске сеанса"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&North"
+msgstr "&Север"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "No&rtheast"
+msgstr "Северо-в&осток"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:126
+#, kde-format
+msgid "&East"
+msgstr "&Восток"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "So&utheast"
+msgstr "Ю&го-восток"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "&South"
+msgstr "&Юг"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:127
+#, kde-format
+msgid "Sou&thwest"
+msgstr "Юго-за&пад"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&West"
+msgstr "&Запад"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "Nort&hwest"
+msgstr "С&еверо-запад"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Up"
+msgstr "Ввер&х"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:128
+#, kde-format
+msgid "&Down"
+msgstr "Вн&из"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:129
+#, kde-format
+msgid ""
+"This is a movement command. It is used by speed-walking and will also be "
+"used by the auto-mapper."
+msgstr ""
+"Это команда перемещения. Она используется при быстром перемещении, а также "
+"будет использоваться для автоматического построения карты."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:151
+#, kde-format
+msgid "External &scripts directory"
+msgstr "Папка внешних &сценариев"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:155
+#, kde-format
+msgid "Default directory where we will look for scripts."
+msgstr "Папка по умолчанию для поиска сценариев."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:158
+#: plugins/scripting/cscripteditor.cpp:78
+#, kde-format
+msgid "&Working directory"
+msgstr "&Рабочая папка"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:162
+#, kde-format
+msgid ""
+"Default working directory for your scripts. Making this the same as above is "
+"usually a good choice."
+msgstr ""
+"Рабочая папка по умолчанию для сценариев. Обычно лучший вариант — указать ту "
+"же папку, что и выше."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:165
+#, kde-format
+msgid "&Transcripts directory"
+msgstr "&Папка протоколов"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:169
+#, kde-format
+msgid "Directory where session transcripts will be saved by default."
+msgstr "Папка, в которой по умолчанию сохраняются протоколы сеансов."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:190
+#, kde-format
+msgid "&Enable sounds for this profile"
+msgstr "Включить &звуки для этого профиля"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:191
+#, kde-format
+msgid ""
+"Enable playing sounds with this profile.\n"
+"Note that this will only work if you enable sounds in global preferences.\n"
+"Also note that this will only work if your MUD supports <b>MSP</b> (MUD "
+"Sound Protocol)."
+msgstr ""
+"Включает воспроизведение звуков для этого профиля.\n"
+"Учтите, что это будет работать, только если звуки включены в глобальных "
+"параметрах.\n"
+"Учтите также, что это будет работать, только если MUD поддерживает <b>MSP</"
+"b> (MUD Sound Protocol)."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:196
+#, kde-format
+msgid "Only enable these if you need them:"
+msgstr "Включать их, только если они нужны:"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:197
+#, kde-format
+msgid "&Use MSP even if not negotiated"
+msgstr "&Использовать MSP, даже если он не согласован"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:198
+#, kde-format
+msgid ""
+"When this option is enabled, KMuddy will interpret MSP sequences all the "
+"time, even if no negotiation took place. Useful for MUDs that don't support "
+"telnet negotiation of MSP.\n"
+"But beware - only turn this on if your MUD really supports MSP to prevent "
+"other players from sending malicious MSP sequences, if you allow downloading "
+"of sounds."
+msgstr ""
+"Если этот параметр включён, KMuddy будет обрабатывать последовательности MSP "
+"постоянно, даже если согласование не проводилось. Полезно для MUD, не "
+"поддерживающих согласование MSP по telnet.\n"
+"Но осторожно: включайте это, только если ваш MUD действительно поддерживает "
+"MSP, — так другие игроки не смогут отправлять вредоносные последовательности "
+"MSP, если разрешена загрузка звуков."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:204
+#, kde-format
+msgid "Allow &mid-line MSP sequences"
+msgstr "Разрешить MSP-последовательности в &середине строки"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:205
+#, kde-format
+msgid ""
+"Mid-line MSP sequences are a zMUD's extension to the MSP spec that some MUDs "
+"seem to be using. You can enable support for this feature here, but ensure "
+"that other players cannot say/tell/whatever these sequences, or disable "
+"downloading support; otherwise players could instruct your client to "
+"download any file on the net..."
+msgstr ""
+"Последовательности MSP в середине строки — это расширение спецификации MSP, "
+"введённое в zMUD, которое, судя по всему, используют некоторые MUD. Здесь "
+"можно включить поддержку этой возможности, но следует убедиться, что другие "
+"игроки не могут передать эти последовательности командами say/tell или иным "
+"способом, либо отключить поддержку загрузки; иначе игроки смогут заставить "
+"клиент загрузить любой файл из Интернета…"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:221
+#, kde-format
+msgid "&Use MXP"
+msgstr "&Использовать MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:224
+#, kde-format
+msgid "Never"
+msgstr "Никогда"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:225
+#, kde-format
+msgid "If negotiated"
+msgstr "При согласовании"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:226
+#, kde-format
+msgid "Auto-detect"
+msgstr "Автоопределение"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:227
+#, kde-format
+msgid "Always on"
+msgstr "Всегда включено"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:228
+#, kde-format
+msgid ""
+"<qt><p>Here you can choose when will MXP be used.</p><ul><li><b>Never</b> "
+"MXP tags will never be parsed</li><li><b>If negotiated</b> MXP support will "
+"depend on successful telnet negotiation.</li><li><b>Auto-detect</b> MXP "
+"support will be auto-detected.</li><li><b>Always on</b> KMuddy will always "
+"look for MXP sequences.</li></ul></qt>"
+msgstr ""
+"<qt><p>Здесь можно выбрать, когда используется MXP.</p><ul><li><b>Никогда</"
+"b> теги MXP не разбираются</li><li><b>При согласовании</b> поддержка MXP "
+"зависит от успешного согласования параметров telnet.</"
+"li><li><b>Автоопределение</b> поддержка MXP определяется автоматически.</"
+"li><li><b>Всегда включено</b> KMuddy всегда ищет последовательности MXP.</"
+"li></ul></qt>"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:234
+#, kde-format
+msgid "MXP &variable prefix"
+msgstr "Префикс &переменной MXP"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:237
+#, kde-format
+msgid ""
+"Prefix prepended to each MXP variable from the server. Note that changing "
+"the prefix won't affect existing variables with old prefix."
+msgstr ""
+"Префикс, добавляемый к каждой переменной MXP, поступающей с сервера. Учтите, "
+"что изменение префикса не повлияет на существующие переменные со старым "
+"префиксом."
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:397
+#, kde-format
+msgid "Choose default script location"
+msgstr "Выбор расположения сценария по умолчанию"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:402
+#, kde-format
+msgid "Choose default script working directory"
+msgstr "Выбор рабочей папки сценариев по умолчанию"
+
+#: kmuddy/dialogs/dlgprofilesettings.cpp:407
+#, kde-format
+msgid "Choose default transcript directory"
+msgstr "Выбор папки протоколов по умолчанию"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:33
+#, kde-format
+msgid "Quick Connect"
+msgstr "Быстрое подключение"
+
+#: kmuddy/dialogs/dlgquickconnect.cpp:38
+#, kde-format
+msgid "&Host:"
+msgstr "&Узел:"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:41
+#, kde-format
+msgid "Connection statistics"
+msgstr "Статистика подключения"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:50
+#, kde-format
+msgid "&Statistics, updated every second:"
+msgstr "&Статистика, обновляется каждую секунду:"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:53
+#, kde-format
+msgid "Counter"
+msgstr "Счётчик"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:118
+#, kde-format
+msgid "Using MCCP"
+msgstr "Используется MCCP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "Yes"
+msgstr "Да"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:119 kmuddy/dialogs/dlgstatistics.cpp:123
+#: kmuddy/dialogs/dlgstatistics.cpp:126
+#, kde-format
+msgid "No"
+msgstr "Нет"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:120
+#, kde-format
+msgid "MCCP version"
+msgstr "Версия MCCP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:121
+#, kde-format
+msgid "N/A"
+msgstr "н/д"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:122
+#, kde-format
+msgid "Using MSP"
+msgstr "Используется MSP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:125
+#, kde-format
+msgid "Using MXP"
+msgstr "Используется MXP"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:128
+#, kde-format
+msgid "Sent bytes"
+msgstr "Отправлено байт"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:130
+#, kde-format
+msgid "Sent commands"
+msgstr "Отправлено команд"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:132
+#, kde-format
+msgid "Received bytes"
+msgstr "Получено байт"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:134
+#, kde-format
+msgid "... after decompression"
+msgstr "… после распаковки"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:136
+#, kde-format
+msgid "Received lines"
+msgstr "Получено строк"
+
+#: kmuddy/dialogs/dlgstatistics.cpp:138
+#, kde-format
+msgid "Connection time"
+msgstr "Время подключения"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:38
+#, kde-format
+msgid "Session Transcript"
+msgstr "Протокол сеанса"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:45
+#, kde-format
+msgid "Basic"
+msgstr "Обычный"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:46
+#, kde-format
+msgid "Advanced"
+msgstr "Расширенный"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:54
+#, kde-format
+msgid "&Enable basic transcript"
+msgstr "&Включить обычный протокол"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:56
+#, kde-format
+msgid ""
+"Enables or disabled the session transcript. Note that session transcript is "
+"automatically disabled when you disconnect."
+msgstr ""
+"Включает или отключает протокол сеанса. Учтите, что при отключении от "
+"сервера протокол сеанса отключается автоматически."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:60
+#, kde-format
+msgid "Transcript settings"
+msgstr "Параметры протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:66 kmuddy/dialogs/dlgtranscript.cpp:121
+#, kde-format
+msgid "Transcript &format"
+msgstr "&Формат протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:75
+#, kde-format
+msgid "&Overwrite existing file"
+msgstr "&Перезаписывать существующий файл"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:76
+#, kde-format
+msgid ""
+"If you enable this option, existing transcript file will be overwritten. "
+"Otherwise, new transcript will be appended to the end of an existing file "
+"(if it exists :))."
+msgstr ""
+"Если этот параметр включён, существующий файл протокола перезаписывается. В "
+"противном случае новый протокол дописывается в конец существующего файла "
+"(если он есть :))."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:79
+#, kde-format
+msgid "Include buffer &dump"
+msgstr "Включать &выгрузку буфера"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:80
+#, kde-format
+msgid ""
+"This will cause KMuddy to add complete buffer dump to the beginning of the "
+"transcript file."
+msgstr ""
+"При этом KMuddy добавит полный дамп буфера в начало файла протокола сеанса."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:109
+#, kde-format
+msgid "Enable &advanced transcript"
+msgstr "Включать &расширенный протокол"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:110
+#, kde-format
+msgid ""
+"This will enable advanced transcript, which allows you to have transcript "
+"running all the time, rotates it at midnight and so. Note that normal and "
+"advanced transcripts can both be running at the same time, if you want."
+msgstr ""
+"Включает расширенный протокол, который можно вести постоянно, со сменой "
+"файла в полночь и т.д. Учтите, что обычный и расширенный протоколы при "
+"желании могут работать одновременно."
+
+#: kmuddy/dialogs/dlgtranscript.cpp:115
+#, kde-format
+msgid "Advanced transcript settings"
+msgstr "Параметры расширенного протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:130
+#, kde-format
+msgid "&Rotate log at midnight every day"
+msgstr "&Каждый день в полночь начинать новый файл протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:131
+#, kde-format
+msgid ""
+"This will cause KMuddy to rotate session transcript every day at midnight"
+msgstr ""
+"KMuddy будет каждый день в полночь начинать новый файл протокола сеанса"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:134
+#, kde-format
+msgid "Prepend lines with &timestamp"
+msgstr "Добавлять &метку времени в начало строк"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:135
+#, kde-format
+msgid ""
+"This option will cause KMuddy to insert local timestamp in front of every "
+"line of logging"
+msgstr "KMuddy будет вставлять местное время перед каждой строкой протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:141
+#, kde-format
+msgid "Log name format"
+msgstr "Формат имени файла протокола"
+
+#: kmuddy/dialogs/dlgtranscript.cpp:142
+#, kde-format
+msgid ""
+"Here you can specify log format. You can use the following options: $W - "
+"world name, $h - hour, $m - minute, $D - day, $M - month, $Y - year, and any "
+"combination of alpha-numeric characters."
+msgstr ""
+"Здесь можно задать формат имени файла протокола. Доступны следующие "
+"параметры: $W — название мира, $h — час, $m — минута, $D — день, $M — месяц, "
+"$Y — год, а также любые сочетания букв и цифр."
+
+#: kmuddy/dialogs/dlgwindows.cpp:57
+#, kde-format
+msgid "&List of output windows"
+msgstr "&Список окон вывода"
+
+#: kmuddy/dialogs/dlgwindows.cpp:64
+#, kde-format
+msgid "&Show"
+msgstr "&Показать"
+
+#: kmuddy/dialogs/dlgwindows.cpp:65
+#, kde-format
+msgid "&Hide"
+msgstr "&Скрыть"
+
+#: kmuddy/dialogs/dlgwindows.cpp:66
+#, kde-format
+msgid "&Delete"
+msgstr "&Удалить"
+
+#: kmuddy/kmuddy.cpp:240
+#, kde-format
+msgid "&Connect..."
+msgstr "&Подключиться…"
+
+#: kmuddy/kmuddy.cpp:247
+#, kde-format
+msgid "&QuickConnect..."
+msgstr "&Быстрое подключение…"
+
+#: kmuddy/kmuddy.cpp:253
+#, kde-format
+msgid "&Disconnect"
+msgstr "&Отключиться"
+
+#: kmuddy/kmuddy.cpp:259
+#, kde-format
+msgid "&Reconnect"
+msgstr "&Переподключиться"
+
+#: kmuddy/kmuddy.cpp:264
+#, kde-format
+msgid "Close &tab"
+msgstr "Закрыть &вкладку"
+
+#: kmuddy/kmuddy.cpp:273
+#, kde-format
+msgid "Paste &As"
+msgstr "Вставить &как"
+
+#: kmuddy/kmuddy.cpp:282
+#, kde-format
+msgid "&Input"
+msgstr "&Ввод"
+
+#: kmuddy/kmuddy.cpp:289
+#, kde-format
+msgid "Copy &Selection"
+msgstr "&Копировать выделенное"
+
+#: kmuddy/kmuddy.cpp:295
+#, kde-format
+msgid "Enable command &parsing"
+msgstr "Включить &разбор команд"
+
+#: kmuddy/kmuddy.cpp:302
+#, kde-format
+msgid "Ca&ncel pending commands"
+msgstr "От&менить ожидающие команды"
+
+#: kmuddy/kmuddy.cpp:313
+#, kde-format
+msgid "Show &gaugebar"
+msgstr "Показать &панель индикаторов"
+
+#: kmuddy/kmuddy.cpp:326
+#, kde-format
+msgid "&Object Editor..."
+msgstr "Редактор &объектов…"
+
+#: kmuddy/kmuddy.cpp:331
+#, kde-format
+msgid "&Output windows..."
+msgstr "&Окна вывода…"
+
+#: kmuddy/kmuddy.cpp:335
+#, kde-format
+msgid "A&liases enabled"
+msgstr "&Псевдонимы включены"
+
+#: kmuddy/kmuddy.cpp:341
+#, kde-format
+msgid "Tri&ggers enabled"
+msgstr "&Триггеры включены"
+
+#: kmuddy/kmuddy.cpp:347
+#, kde-format
+msgid "Tim&ers enabled"
+msgstr "&Таймеры включены"
+
+#: kmuddy/kmuddy.cpp:352
+#, kde-format
+msgid "Macro &keys enabled"
+msgstr "&Клавиши макросов включены"
+
+#: kmuddy/kmuddy.cpp:357
+#, kde-format
+msgid "&MUD Preferences..."
+msgstr "&Параметры MUD…"
+
+#: kmuddy/kmuddy.cpp:362
+#, kde-format
+msgid "&Save Profile"
+msgstr "&Сохранить профиль"
+
+#: kmuddy/kmuddy.cpp:369
+#, kde-format
+msgid "&Session transcript..."
+msgstr "&Протокол сеанса…"
+
+#: kmuddy/kmuddy.cpp:374
+#, kde-format
+msgid "Dump output &buffer..."
+msgstr "Выгрузить &буфер вывода…"
+
+#: kmuddy/kmuddy.cpp:378
+#, kde-format
+msgid "&Decision assistant"
+msgstr "&Помощник в принятии решений"
+
+#: kmuddy/kmuddy.cpp:392
+#, kde-format
+msgid "&Global settings..."
+msgstr "&Глобальные параметры…"
+
+#: kmuddy/kmuddy.cpp:397
+#, kde-format
+msgid "&Plugins..."
+msgstr "&Модули…"
+
+#: kmuddy/kmuddy.cpp:402
+#, kde-format
+msgid "F&ull screen mode"
+msgstr "&Полноэкранный режим"
+
+#: kmuddy/kmuddy.cpp:412
+#, kde-format
+msgid "Shift line up"
+msgstr "Прокрутить на строку вверх"
+
+#: kmuddy/kmuddy.cpp:417
+#, kde-format
+msgid "Shift line down"
+msgstr "Прокрутить на строку вниз"
+
+#: kmuddy/kmuddy.cpp:422
+#, kde-format
+msgid "Shift page up"
+msgstr "Прокрутить на страницу вверх"
+
+#: kmuddy/kmuddy.cpp:427
+#, kde-format
+msgid "Shift page down"
+msgstr "Прокрутить на страницу вниз"
+
+#: kmuddy/kmuddy.cpp:432
+#, kde-format
+msgid "Split-screen up"
+msgstr "Разделённый экран: вверх"
+
+#: kmuddy/kmuddy.cpp:437
+#, kde-format
+msgid "Split-screen down"
+msgstr "Разделённый экран: вниз"
+
+#: kmuddy/kmuddy.cpp:442
+#, kde-format
+msgid "Previous tab"
+msgstr "Предыдущая вкладка"
+
+#: kmuddy/kmuddy.cpp:447
+#, kde-format
+msgid "Next tab"
+msgstr "Следующая вкладка"
+
+#: kmuddy/kmuddy.cpp:453 kmuddy/kmuddy.cpp:458 kmuddy/kmuddy.cpp:463
+#: kmuddy/kmuddy.cpp:468 kmuddy/kmuddy.cpp:473 kmuddy/kmuddy.cpp:478
+#: kmuddy/kmuddy.cpp:483 kmuddy/kmuddy.cpp:488 kmuddy/kmuddy.cpp:493
+#: kmuddy/kmuddy.cpp:498
+#, kde-format
+msgctxt "%1 - tab number"
+msgid "Switch to tab %1"
+msgstr "Переключиться на вкладку %1"
+
+#: kmuddy/kmuddy.cpp:521
+#, kde-format
+msgid "&Connection"
+msgstr "&Подключение"
+
+#: kmuddy/kmuddy.cpp:522
+#, kde-format
+msgid "&Edit"
+msgstr "&Правка"
+
+#. i18n: ectx: Menu (View)
+#: kmuddy/kmuddy.cpp:523 plugins/mapper/kmuddymapperpart.rc:4
+#, kde-format
+msgid "&View"
+msgstr "&Вид"
+
+#: kmuddy/kmuddy.cpp:524
+#, kde-format
+msgid "&Profile"
+msgstr "&Профиль"
+
+#: kmuddy/kmuddy.cpp:525
+#, kde-format
+msgid "&Tools"
+msgstr "&Сервис"
+
+#: kmuddy/kmuddy.cpp:526
+#, kde-format
+msgid "&Settings"
+msgstr "&Настройка"
+
+#: kmuddy/kmuddy.cpp:527
+#, kde-format
+msgid "&Help"
+msgstr "&Справка"
+
+#: kmuddy/kmuddy.cpp:903
+#, kde-format
+msgid "To reconnect, press %1 or use Connection / Reconnect."
+msgstr ""
+"Чтобы подключиться заново, нажмите %1 или выберите «Подключение» → "
+"«Переподключиться»."
+
+#: kmuddy/kmuddy.cpp:989
+#, kde-format
+msgid "Activity in the KMuddy Window"
+msgstr "Активность в окне KMuddy"
+
+#: kmuddy/kmuddy.cpp:1161
+#, kde-format
+msgid ""
+"Profile has been saved. Note that profiles are automatically saved upon "
+"disconnecting, and also every five minutes."
+msgstr ""
+"Профиль сохранён. Учтите, что профили автоматически сохраняются при "
+"отключении от сервера, а также каждые пять минут."
+
+#: kmuddy/macros.cpp:67
+#, kde-format
+msgid "/setval: Expression parsing failed."
+msgstr "/setval: не удалось разобрать выражение."
+
+#: kmuddy/macros.cpp:170
+#, kde-format
+msgid "No free resources of that type."
+msgstr "Нет свободных ресурсов этого типа."
+
+#: kmuddy/macros.cpp:192
+#, kde-format
+msgid "/tick: syntax: /tick timer-name"
+msgstr "/tick: синтаксис: /tick имя-таймера"
+
+#: kmuddy/macros.cpp:200 kmuddy/macros.cpp:229
+#, kde-format
+msgid "/tick: a timer with that name does not exist."
+msgstr "/tick: таймера с таким именем не существует."
+
+#: kmuddy/macros.cpp:204 kmuddy/macros.cpp:233
+#, kde-format
+msgid "/tick: this timer is currently disabled."
+msgstr "/tick: этот таймер сейчас отключён."
+
+#: kmuddy/macros.cpp:209
+#, kde-format
+msgid "Timer ticks in 1 second."
+msgid_plural "Timer ticks in %1 seconds."
+msgstr[0] "Таймер сработает через %1 секунду."
+msgstr[1] "Таймер сработает через %1 секунды."
+msgstr[2] "Таймер сработает через %1 секунд."
+msgstr[3] "Таймер сработает через 1 секунду."
+
+#: kmuddy/macros.cpp:211
+#, kde-format
+msgid "Timer ticks right now."
+msgstr "Таймер срабатывает прямо сейчас."
+
+#: kmuddy/macros.cpp:221
+#, kde-format
+msgid "/ticknow: syntax: /ticknow timer-name"
+msgstr "/ticknow: синтаксис: /ticknow имя-таймера"
+
+#: kmuddy/macros.cpp:363
+#, kde-format
+msgid "/else: called without the matching /if."
+msgstr "/else: вызов без соответствующего /if."
+
+#: kmuddy/macros.cpp:380
+#, kde-format
+msgid "/endif: called without the matching /if."
+msgstr "/endif: вызов без соответствующего /if."
+
+#: kmuddy/macros.cpp:398
+#, kde-format
+msgid "/oadd: syntax: /oadd parent name"
+msgstr "/oadd: синтаксис: /oadd родитель имя"
+
+#: kmuddy/macros.cpp:406
+#, kde-format
+msgid "/oadd: parent group does not exist."
+msgstr "/oadd: родительская группа не существует."
+
+#: kmuddy/macros.cpp:410
+#, kde-format
+msgid "/oadd: parent must be a group."
+msgstr "/oadd: родительский элемент должен быть группой."
+
+#: kmuddy/macros.cpp:415
+#, kde-format
+msgid "/oadd: object with this name already exists."
+msgstr "/oadd: объект с таким именем уже существует."
+
+#: kmuddy/macros.cpp:432
+#, kde-format
+msgid "/gadd: syntax: /gadd parent name"
+msgstr "/gadd: синтаксис: /gadd родитель имя"
+
+#: kmuddy/macros.cpp:439
+#, kde-format
+msgid "/gadd: parent group does not exist."
+msgstr "/gadd: родительская группа не существует."
+
+#: kmuddy/macros.cpp:443
+#, kde-format
+msgid "/gadd: the parent must be a group"
+msgstr "/gadd: родительский элемент должен быть группой"
+
+#: kmuddy/macros.cpp:449
+#, kde-format
+msgid "/gadd: such group already exists in that list"
+msgstr "/gadd: такая группа уже существует в этом списке."
+
+#: kmuddy/macros.cpp:465
+#, kde-format
+msgid "/odel: object does not exist."
+msgstr "/odel: объект не существует."
+
+#: kmuddy/macros.cpp:470
+#, kde-format
+msgid "/odel: root group may not be deleted."
+msgstr "/odel: корневую группу нельзя удалить."
+
+#: kmuddy/macros.cpp:488
+#, kde-format
+msgid "/omove: syntax: /omove object group [position]"
+msgstr "/omove: синтаксис: /omove объект группа [позиция]"
+
+#: kmuddy/macros.cpp:495
+#, kde-format
+msgid "/omove: object does not exist."
+msgstr "/omove: объект не существует."
+
+#: kmuddy/macros.cpp:499
+#, kde-format
+msgid "/omove: root group may not be moved."
+msgstr "/omove: перемещение корневой группы невозможно."
+
+#: kmuddy/macros.cpp:505
+#, kde-format
+msgid "/omove: group does not exist."
+msgstr "/omove: группа не существует."
+
+#: kmuddy/macros.cpp:509
+#, kde-format
+msgid "/omove: target must be a group."
+msgstr "/omove: целевой элемент должен быть группой."
+
+#: kmuddy/macros.cpp:513
+#, kde-format
+msgid "/omove: object and target must be in the same list."
+msgstr "/omove: объект и целевой объект должны находиться в одном списке."
+
+#: kmuddy/macros.cpp:525
+#, kde-format
+msgid "/omove: position out of range"
+msgstr "/omove: позиция вне диапазона."
+
+#: kmuddy/macros.cpp:540
+#, kde-format
+msgid "/oren: syntax: /oren object new-name"
+msgstr "/oren: синтаксис: /oren объект новое-имя"
+
+#: kmuddy/macros.cpp:547
+#, kde-format
+msgid "/oren: object does not exist."
+msgstr "/oren: объект не существует."
+
+#: kmuddy/macros.cpp:553
+#, kde-format
+msgid "/oren: root group cannot be renamed."
+msgstr "/oren: корневую группу нельзя переименовать."
+
+#: kmuddy/macros.cpp:559
+#, kde-format
+msgid "/oren: a group with this name already exists."
+msgstr "/oren: группа с таким именем уже существует."
+
+#: kmuddy/macros.cpp:566
+#, kde-format
+msgid "/oren: an object with this name already exists."
+msgstr "/oren: объект с таким именем уже существует."
+
+#: kmuddy/macros.cpp:581
+#, kde-format
+msgid "/opriority: syntax: /opriority object priority"
+msgstr "/opriority: синтаксис: /opriority объект приоритет"
+
+#: kmuddy/macros.cpp:588
+#, kde-format
+msgid "/opriority: object does not exist."
+msgstr "/opriority: объект не существует."
+
+#: kmuddy/macros.cpp:594
+#, kde-format
+msgid "/opriority: priority must be in the 1-1000 range."
+msgstr "/opriority: приоритет должен находиться в диапазоне 1–1000."
+
+#: kmuddy/macros.cpp:610
+#, kde-format
+msgid "/oenable: object does not exist."
+msgstr "/oenable: объект не существует."
+
+#: kmuddy/macros.cpp:626
+#, kde-format
+msgid "/odisable: object does not exist."
+msgstr "/odisable: объект не существует."
+
+#: kmuddy/macros.cpp:641
+#, kde-format
+msgid "/osetbattr: syntax: /osetbattr object parameter value"
+msgstr "/osetbattr: синтаксис: /osetbattr объект параметр значение"
+
+#: kmuddy/macros.cpp:648
+#, kde-format
+msgid "/osetbattr: object does not exist."
+msgstr "/osetbattr: объект не существует."
+
+# BUGME: the syntax hint of /osetiattr shows /osetbattr --ayavorsky 2026-10-10
+#: kmuddy/macros.cpp:665 kmuddy/macros.cpp:689
+#, kde-format
+msgid "/osetiattr: syntax: /osetbattr object parameter value"
+msgstr "/osetiattr: синтаксис: /osetbattr объект параметр значение"
+
+#: kmuddy/macros.cpp:672
+#, kde-format
+msgid "/osetiattr: object does not exist."
+msgstr "/osetiattr: объект не существует."
+
+#: kmuddy/macros.cpp:696
+#, kde-format
+msgid "/osetsattr: object does not exist."
+msgstr "/osetsattr: объект не существует."
+
+#: kmuddy/macros.cpp:713
+#, kde-format
+msgid "/tgroupon: group does not exist."
+msgstr "/tgroupon: группа не существует."
+
+#: kmuddy/macros.cpp:728
+#, kde-format
+msgid "/tgroupoff: group does not exist."
+msgstr "/tgroupoff: группа не существует."
+
+#: kmuddy/macros.cpp:744
+#, kde-format
+msgid "/agroupon: group does not exist."
+msgstr "/agroupon: группа не существует."
+
+#: kmuddy/macros.cpp:760
+#, kde-format
+msgid "/agroupoff: group does not exist."
+msgstr "/agroupoff: группа не существует."
+
+#: kmuddy/main.cpp:29
+#, kde-format
+msgid ""
+"KMuddy is a MUD (Multi-User Dungeon) client by KDE with a variety of "
+"features."
+msgstr ""
+"KMuddy — клиент MUD (Multi-User Dungeon) от KDE с множеством возможностей."
+
+#: kmuddy/main.cpp:35 kmuddy/main.cpp:37
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
+#, kde-format
+msgid "KMuddy"
+msgstr "KMuddy"
+
+#: kmuddy/main.cpp:39
+#, kde-format
+msgid "(c) 2002-2018, Tomas Mecir"
+msgstr "© Tomas Mecir, 2002–2018"
+
+#: kmuddy/main.cpp:40
+#, kde-format
+msgid "Tomas Mecir"
+msgstr "Tomas Mecir"
+
+#: kmuddy/main.cpp:41
+#, kde-format
+msgid "Main developer and maintainer"
+msgstr "Основной разработчик и сопровождающий"
+
+#: kmuddy/main.cpp:42
+#, kde-format
+msgid "Alex Bache"
+msgstr "Alex Bache"
+
+#: kmuddy/main.cpp:43
+#, kde-format
+msgid ""
+"Many improvements in external scripting, internal script parser, output view "
+"and aliases/triggers, bugfixes"
+msgstr ""
+"Множество улучшений во внешних сценариях, анализаторе внутренних сценариев, "
+"окне вывода и псевдонимах/триггерах, исправления ошибок"
+
+#: kmuddy/main.cpp:44
+#, kde-format
+msgid "Alsherok staff"
+msgstr "Команда Alsherok"
+
+#: kmuddy/main.cpp:45
+#, kde-format
+msgid "for releasing AFKMud codebase, used to test MCCP/MSP"
+msgstr "за выпуск кодовой базы AFKMud, использованной для проверки MCCP/MSP"
+
+#: kmuddy/main.cpp:46
+#, kde-format
+msgid "Andrea Cascio"
+msgstr "Andrea Cascio"
+
+#: kmuddy/main.cpp:47
+#, kde-format
+msgid "SuSE RPMs, speed-walking improvements"
+msgstr "Пакеты RPM для SuSE, улучшения быстрого перемещения"
+
+#: kmuddy/main.cpp:48
+#, kde-format
+msgid "Orion Elder"
+msgstr "Orion Elder"
+
+#: kmuddy/main.cpp:49
+#, kde-format
+msgid "KMuddy forum, many ideas"
+msgstr "Форум KMuddy, множество идей"
+
+#: kmuddy/main.cpp:50
+#, kde-format
+msgid "Scott Monachello"
+msgstr "Scott Monachello"
+
+#: kmuddy/main.cpp:51
+#, kde-format
+msgid "Improvements in scripting, bugfixes"
+msgstr "Улучшения в сценариях, исправления ошибок"
+
+#: kmuddy/main.cpp:52
+#, kde-format
+msgid "Tyler Montbriand"
+msgstr "Tyler Montbriand"
+
+#: kmuddy/main.cpp:53
+#, kde-format
+msgid "Help with SDL support"
+msgstr "Помощь в поддержке SDL"
+
+#: kmuddy/main.cpp:54
+#, kde-format
+msgid "Marco Mastroddi"
+msgstr "Marco Mastroddi"
+
+#: kmuddy/main.cpp:55
+#, kde-format
+msgid "Tick timers"
+msgstr "Таймеры с тактами"
+
+#: kmuddy/main.cpp:56
+#, kde-format
+msgid "Henrikki Almusa"
+msgstr "Henrikki Almusa"
+
+#: kmuddy/main.cpp:57
+#, kde-format
+msgid "Commands to enable/disable groups"
+msgstr "Команды включения и отключения групп"
+
+#: kmuddy/main.cpp:58
+#, kde-format
+msgid "Drossos Stamboulakis"
+msgstr "Drossos Stamboulakis"
+
+#: kmuddy/main.cpp:59
+#, kde-format
+msgid "Selection improvements, full screen mode, cross-tab commands"
+msgstr "Улучшения выделения, полноэкранный режим, команды между вкладками"
+
+#: kmuddy/main.cpp:60
+#, kde-format
+msgid "Antonio J. Soler Sanchez"
+msgstr "Antonio J. Soler Sanchez"
+
+#: kmuddy/main.cpp:61
+#, kde-format
+msgid "Spanish translation"
+msgstr "Перевод на испанский"
+
+#: kmuddy/main.cpp:62
+#, kde-format
+msgid "lontau"
+msgstr "lontau"
+
+#: kmuddy/main.cpp:63
+#, kde-format
+msgid "Code to access KMuddy variables in Ruby"
+msgstr "Код для доступа к переменным KMuddy на Ruby"
+
+#: kmuddy/main.cpp:64
+#, kde-format
+msgid "Magnus Lundborg"
+msgstr "Magnus Lundborg"
+
+#: kmuddy/main.cpp:64
+#, kde-format
+msgid "Tab-expansion improvements"
+msgstr "Улучшения автодополнения по клавише Tab"
+
+#: kmuddy/main.cpp:65
+#, kde-format
+msgid "Vladimir Lazarenko"
+msgstr "Vladimir Lazarenko"
+
+#: kmuddy/main.cpp:66
+#, kde-format
+msgid "Many improvements. Hosting KMuddy CVS."
+msgstr "Множество улучшений. Размещение репозитория CVS KMuddy."
+
+#: kmuddy/main.cpp:67
+#, kde-format
+msgid "Stuart Henshall"
+msgstr "Stuart Henshall"
+
+#: kmuddy/main.cpp:68
+#, kde-format
+msgid "Speed improvements."
+msgstr "Улучшения быстродействия."
+
+#: kmuddy/main.cpp:69
+#, kde-format
+msgid "Vadim Peretokin"
+msgstr "Vadim Peretokin"
+
+#: kmuddy/main.cpp:70
+#, kde-format
+msgid "Many improvements, website"
+msgstr "Множество улучшений, веб-сайт"
+
+#: kmuddy/main.cpp:71
+#, kde-format
+msgid "Heiko Koehn"
+msgstr "Heiko Koehn"
+
+#: kmuddy/main.cpp:72
+#, kde-format
+msgid "Scripting improvements"
+msgstr "Улучшения в сценариях"
+
+#: kmuddy/main.cpp:73
+#, kde-format
+msgid "Robert Marmorstein"
+msgstr "Robert Marmorstein"
+
+#: kmuddy/main.cpp:74
+#, kde-format
+msgid "Systray icon support"
+msgstr "Поддержка значка в системном лотке"
+
+#: libs/caliaseditor.cpp:88
+#, kde-format
+msgid "&Alias text"
+msgstr "&Текст псевдонима"
+
+#: libs/caliaseditor.cpp:106
+#, kde-format
+msgid ""
+"Type of matching. Alias will only be activated if this passes this type of "
+"test. Note that aliases are always matched as whole words."
+msgstr ""
+"Тип сопоставления. Псевдоним активируется, только если проходит эту "
+"проверку. Учтите, что псевдонимы всегда сопоставляются как целые слова."
+
+#: libs/caliaseditor.cpp:118
+#, kde-format
+msgid "&Replacement text(s)"
+msgstr "&Текст замены"
+
+#: libs/caliaseditor.cpp:122
+#, kde-format
+msgid "Command(s) that will replace command you have entered."
+msgstr "Команды, которые заменят введённую команду."
+
+#: libs/caliaseditor.cpp:137
+#, kde-format
+msgid ""
+"This is testing area. You can test your alias here to see if it does what "
+"you want it to do. Simply type in some text and see what happens."
+msgstr ""
+"Это область проверки. Здесь можно проверить псевдоним и убедиться, что он "
+"работает так, как нужно. Просто введите текст и посмотрите, что произойдёт."
+
+#: libs/caliaseditor.cpp:174
+#, kde-format
+msgid "Send original command"
+msgstr "Отправлять исходную команду"
+
+#: libs/caliaseditor.cpp:175
+#, kde-format
+msgid ""
+"If this alias matches your command, a replacement command will be sent. If "
+"you enable this option, both original and replacement commands are sent "
+"(original command is sent first)."
+msgstr ""
+"Если команда совпадает с этим псевдонимом, отправляется заменяющая команда. "
+"Если этот параметр включён, отправляются и исходная, и заменяющая команды "
+"(сначала отправляется исходная)."
+
+#: libs/caliaseditor.cpp:181
+#, kde-format
+msgid ""
+"When enabled, this alias will only match the text if there are spaces or "
+"nothing before/after the matched string."
+msgstr ""
+"Если этот параметр включён, псевдоним сопоставляет текст, только если перед "
+"сопоставляемой строкой и после неё есть пробелы или ничего."
+
+#: libs/caliaseditor.cpp:189
+#, kde-format
+msgid "Include prefix/suffix"
+msgstr "Включать префикс/суффикс"
+
+#: libs/caliaseditor.cpp:190
+#, kde-format
+msgid ""
+"Prefix/suffix of matched text will be automatically appended to the expanded "
+"text."
+msgstr ""
+"Префикс и суффикс сопоставляемого текста будут автоматически добавлены к "
+"развёрнутому тексту."
+
+#: libs/caliaseditor.cpp:194
+#, kde-format
+msgid ""
+"<p>With global matching, one alias/trigger can match multiple times, if it "
+"contains the pattern more than once. For example, if pattern is abc, it "
+"matches only once on abcdabcd of global matching is off, but twice if it is "
+"on. For each match, the requested actions are performed - so the commands "
+"can be sent multiple times, once per match.</p><p>Note that failing the "
+"condition doesn't terminate scanning, so you can use this to highlight names "
+"from a list (using the condition to check if a match is in the list), or "
+"something like that."
+msgstr ""
+"<p>При глобальном сопоставлении один псевдоним или триггер может совпасть "
+"несколько раз, если шаблон встречается в нём более одного раза. Например, "
+"если шаблон — abc, то при выключенном глобальном сопоставлении он совпадёт в "
+"строке abcdabcd только один раз, а при включённом — дважды. Для каждого "
+"совпадения выполняются запрошенные действия, поэтому команды могут "
+"отправляться несколько раз — по одному разу на каждое совпадение.</"
+"p><p>Учтите, что невыполнение условия не прекращает сканирование, поэтому "
+"это можно использовать для выделения имён из списка (проверяя условием, есть "
+"ли совпадение в списке) или для чего-то подобного."
+
+#: libs/caliaseditor.cpp:260
+#, kde-format
+msgid "This text did not match your alias."
+msgstr "Этот текст не соответствует псевдониму."
+
+#: libs/caliaseditor.cpp:265
+#, kde-format
+msgid "This text matches your alias."
+msgstr "Этот текст соответствует псевдониму."
+
+#: libs/caliaseditor.cpp:279
+#, kde-format
+msgid "Command: "
+msgstr "Команда: "
+
+#: libs/ccmdparser.cpp:431
+#, kde-format
+msgid "Sorry, count is limited to 100.\n"
+msgstr "Количество ограничено 100.\n"
+
+#: libs/ccmdparser.cpp:434
+#, kde-format
+msgid "You can disable this limit in Profile / MUD Preferences."
+msgstr "Это ограничение можно отключить в меню «Профиль» → «Параметры MUD»."
+
+#: libs/ccmdprocessor.cpp:285
+#, kde-format
+msgid "Sorry, but macro calls are only available for profile connections."
+msgstr "Вызовы макросов доступны только для подключений с профилем."
+
+#: libs/ccmdprocessor.cpp:296
+#, kde-format
+msgid "This macro does not exist."
+msgstr "Такого макроса не существует."
+
+#: libs/cconsole.cpp:134
+#, kde-format
+msgid "now"
+msgstr "сейчас"
+
+#: libs/cconsole.cpp:144
+#, kde-format
+msgid "hour"
+msgstr "час"
+
+#: libs/cconsole.cpp:144
+#, kde-format
+msgid "hours"
+msgstr "часов"
+
+#: libs/cconsole.cpp:149
+#, kde-format
+msgid "minute"
+msgstr "минута"
+
+#: libs/cconsole.cpp:149
+#, kde-format
+msgid "minutes"
+msgstr "минут"
+
+#: libs/cconsole.cpp:155
+#, kde-format
+msgid "second"
+msgstr "секунда"
+
+#: libs/cconsole.cpp:155
+#, kde-format
+msgid "seconds"
+msgstr "секунд"
+
+#: libs/cconsole.cpp:157
+#, kde-format
+msgid "ago"
+msgstr "назад"
+
+#: libs/cexpresolver.cpp:54
+#, kde-format
+msgid "Function %1 does not exist - assuming empty return value."
+msgstr ""
+"Функция %1 не существует — предполагается пустое возвращаемое значение."
+
+#: libs/clist.cpp:466
+#, kde-format
+msgid ""
+"This file does not contain the root group, and therefore cannot be loaded."
+msgstr "Файл не содержит корневую группу, поэтому его нельзя загрузить."
+
+#: libs/clist.cpp:469 libs/cvariablelist.cpp:373
+#: plugins/mapper/cmapzonemanager.cpp:230
+#, kde-format
+msgid ""
+"This file was created by a newer version of KMuddy, and this version is "
+"unable to open it."
+msgstr "Не удалось открыть файл: он создан более новой версией KMuddy."
+
+#: libs/clist.cpp:471
+#, kde-format
+msgid "This is not a KMuddy object file."
+msgstr "Это не файл объектов KMuddy."
+
+#: libs/clist.cpp:473 libs/cvariablelist.cpp:377
+#: plugins/mapper/cmapzonemanager.cpp:234
+#, kde-format
+msgid "This file is corrupted."
+msgstr "Файл повреждён."
+
+#: libs/clist.cpp:477 libs/cvariablelist.cpp:381
+#: plugins/mapper/cmapzonemanager.cpp:237
+#, kde-format
+msgid "Error at line %1, column %2: %3"
+msgstr "Ошибка в строке %1, столбец %2: %3"
+
+#: libs/clisteditor.cpp:75
+#, kde-format
+msgid "&Apply changes"
+msgstr "&Применить изменения"
+
+#: libs/clisteditor.cpp:76
+#, kde-format
+msgid "&Undo changes"
+msgstr "&Отменить изменения"
+
+#: libs/clisteditor.cpp:217
+#, kde-format
+msgid "&Enabled"
+msgstr "&Включено"
+
+#: libs/clisteditor.cpp:222
+#, kde-format
+msgid "&Priority"
+msgstr "&Приоритет"
+
+#: libs/clisteditor.cpp:224
+#, kde-format
+msgid "&Name"
+msgstr "&Имя"
+
+#: libs/clisteditor.cpp:286
+#, kde-format
+msgid "Cannot rename the group, as a group with this name already exists."
+msgstr ""
+"Не удалось переименовать группу, так как группа с таким именем уже "
+"существует."
+
+#: libs/clisteditor.cpp:293
+#, kde-format
+msgid "Cannot rename the object, as an object with this name already exists."
+msgstr ""
+"Не удалось переименовать объект, так как объект с таким именем уже "
+"существует."
+
+#: libs/clistgroup.cpp:229
+#, kde-format
+msgid "Error in file - group with no name."
+msgstr "Ошибка в файле — группа без имени."
+
+#: libs/clistgroup.cpp:233
+#, kde-format
+msgid "Error in file - duplicate group name."
+msgstr "Ошибка в файле — дублирование имени группы."
+
+#: libs/clistviewer.cpp:63
+#, kde-format
+msgid "Delete object"
+msgstr "Удалить объект"
+
+#: libs/clistviewer.cpp:68 libs/clistviewer.cpp:163
+#, kde-format
+msgid "Delete group"
+msgstr "Удалить группу"
+
+#: libs/clistviewer.cpp:72
+#, kde-format
+msgid "Add subgroup"
+msgstr "Добавить подгруппу"
+
+#: libs/clistviewer.cpp:77
+#, kde-format
+msgid "Add group"
+msgstr "Добавить группу"
+
+#: libs/clistviewer.cpp:82
+#, kde-format
+msgid "Add object"
+msgstr "Добавить объект"
+
+#: libs/clistviewer.cpp:162
+#, kde-format
+msgid "Do you really want to delete this group?"
+msgstr "Удалить группу?"
+
+#: libs/clistviewer.cpp:165
+#, kde-format
+msgid "Do you really want to delete this %1?"
+msgstr "Удалить: %1?"
+
+#: libs/clistviewer.cpp:166
+#, kde-format
+msgid "Delete %1"
+msgstr "Удалить %1"
+
+#: libs/clistviewer.cpp:192
+#, kde-format
+msgid "Create Group"
+msgstr "Создать группу"
+
+#: libs/clistviewer.cpp:192
+#, kde-format
+msgid "Please enter the group name:"
+msgstr "Введите имя группы:"
+
+#: libs/clistviewer.cpp:196
+#, kde-format
+msgid "Cannot create the group, as the provided name is not valid."
+msgstr "Не удалось создать группу, так как указанное имя недопустимо."
+
+#: libs/clistviewer.cpp:203
+#, kde-format
+msgid "Cannot create the group, as a group with this name already exists."
+msgstr ""
+"Не удалось создать группу, так как группа с таким именем уже существует."
+
+#: libs/cmsp.cpp:284
+#, kde-format
+msgid "MSP: Received corrupted sound trigger!"
+msgstr "MSP: получен повреждённый звуковой триггер."
+
+#: libs/cmsp.cpp:285
+#, kde-format
+msgid "MSP: Problem was: %1"
+msgstr "MSP: причина: %1"
+
+#: libs/cmsp.cpp:315
+#, kde-format
+msgid "Parameter names must be followed by '='."
+msgstr "После имени параметра должен следовать знак «=»."
+
+#: libs/cmsp.cpp:340
+#, kde-format
+msgid "Parameter %1 requires a numeric argument"
+msgstr "Для параметра %1 требуется числовой аргумент"
+
+#: libs/cmsp.cpp:351
+#, kde-format
+msgid "Value of param V is out of 0-100 range."
+msgstr "Значение параметра V выходит за пределы диапазона 0–100."
+
+#: libs/cmsp.cpp:360
+#, kde-format
+msgid "Value of param L is out of -1;1-100 range."
+msgstr "Значение параметра L выходит за пределы диапазона -1;1-100."
+
+#: libs/cmsp.cpp:373
+#, kde-format
+msgid "Value of param P is out of 0-100 range."
+msgstr "Значение параметра P выходит за пределы диапазона 0–100."
+
+#: libs/cmsp.cpp:382
+#, kde-format
+msgid "Value of param C must be 0 or 1."
+msgstr "Значение параметра C должно быть 0 или 1."
+
+#: libs/cmsp.cpp:393
+#, kde-format
+msgid "Received unfinished sequence."
+msgstr "Получена незавершённая последовательность."
+
+#: libs/cmsp.cpp:449
+#, kde-format
+msgid "MSP: Multiple downloads not supported, request ignored."
+msgstr "MSP: одновременные загрузки не поддерживаются, запрос игнорируется."
+
+#: libs/cmsp.cpp:469
+#, kde-format
+msgid "MSP: downloading of sounds disabled - request ignored."
+msgstr "MSP: загрузка звуков отключена — запрос проигнорирован."
+
+#: libs/coutput.cpp:228
+#, kde-format
+msgid "No, no, no!"
+msgstr "Нет, нет и ещё раз нет."
+
+#: libs/coutput.cpp:229
+#, kde-format
+msgid "I don't agree with it."
+msgstr "Не согласен с этим."
+
+#: libs/coutput.cpp:230
+#, kde-format
+msgid "Better not."
+msgstr "Лучше не надо."
+
+#: libs/coutput.cpp:231
+#, kde-format
+msgid "I'd probably suggest to reject."
+msgstr "Пожалуй, я бы предложил отклонить."
+
+#: libs/coutput.cpp:232
+#, kde-format
+msgid "Saying no seems a bit better."
+msgstr "Похоже, сказать «нет» немного лучше."
+
+#: libs/coutput.cpp:233
+#, kde-format
+msgid "Saying yes seems a bit better."
+msgstr "Похоже, ответить «да» немного лучше."
+
+#: libs/coutput.cpp:234
+#, kde-format
+msgid "I'd probably suggest to accept."
+msgstr "Вероятно, следует принять."
+
+#: libs/coutput.cpp:235
+#, kde-format
+msgid "Sounds good."
+msgstr "Хорошо."
+
+#: libs/coutput.cpp:236
+#, kde-format
+msgid "I agree with it."
+msgstr "Я согласен с этим."
+
+#: libs/coutput.cpp:237
+#, kde-format
+msgid "Definitely yes!"
+msgstr "Определённо да."
+
+#: libs/coutput.cpp:239
+#, kde-format
+msgid "My decision: %1"
+msgstr "Моё решение: %1"
+
+#: libs/cpluginmanager.cpp:267
+#, kde-format
+msgid "Plugins"
+msgstr "Модули"
+
+#: libs/cprofilemanager.cpp:71
+#, kde-format
+msgid "Profile name"
+msgstr "Имя профиля"
+
+#: libs/cprofilemanager.cpp:72
+#, kde-format
+msgid "Server"
+msgstr "Сервер"
+
+#: libs/cprofilemanager.cpp:73
+#, kde-format
+msgid "Port"
+msgstr "Порт"
+
+#: libs/cprofilemanager.cpp:74
+#, kde-format
+msgid "Login name"
+msgstr "Имя входа"
+
+#: libs/cscripteditor.cpp:46
+#, kde-format
+msgid "Enter your script here."
+msgstr "Введите здесь сценарий."
+
+#: libs/cscripteditor.cpp:47
+#, kde-format
+msgid ""
+"Enter a Javascript script that will be executed when the object is triggered."
+"<br /><br />The following routines are available in the script in addition "
+"to standard Javascript tools:<br /><br /><b>window.message(text)</b> - "
+"display a message<br /><b>window.send(command)</b> - send a command<br /"
+"><b>window.sendraw(command)</b> - send a command with no processing<br /"
+"><b>window.get(name)</b> - retrieve the value of a variable<br /><b>window."
+"set(name, value)</b> - set the value of a variable<br /><br />You can also "
+"use the following variables: <b>prefix, prefixfull, suffix, suffixfull, "
+"matched, line, matches[]</b>"
+msgstr ""
+"Введите сценарий Javascript, который будет выполнен при срабатывании объекта."
+"<br /><br />В сценарии, помимо стандартных средств Javascript, доступны "
+"следующие процедуры:<br /><br /><b>window.message(text)</b> — вывести "
+"сообщение<br /><b>window.send(command)</b> — отправить команду<br /"
+"><b>window.sendraw(command)</b> — отправить команду без обработки<br /"
+"><b>window.get(name)</b> — получить значение переменной<br /><b>window."
+"set(name, value)</b> — задать значение переменной<br /><br />Также можно "
+"использовать следующие переменные: <b>prefix, prefixfull, suffix, "
+"suffixfull, matched, line, matches[]</b>"
+
+#: libs/cstatus.cpp:42 libs/cstatus.cpp:189
+#, kde-format
+msgid "Off-line"
+msgstr "Не в сети"
+
+#: libs/cstatus.cpp:51 libs/cstatus.cpp:175 libs/cstatus.cpp:183
+#: libs/cstatus.cpp:219 libs/cstatus.cpp:268
+#, kde-format
+msgid "idle"
+msgstr "простаивает"
+
+#: libs/cstatus.cpp:181
+#, kde-format
+msgid "Connected"
+msgstr "Подключено"
+
+#: libs/cstatus.cpp:184
+#, kde-format
+msgid "Connected."
+msgstr "Подключено."
+
+#: libs/cstatus.cpp:190
+#, kde-format
+msgid "Disconnected."
+msgstr "Отключено."
+
+#: libs/cstatus.cpp:192
+#, kde-format
+msgid "Connection has been closed."
+msgstr "Подключение закрыто."
+
+#: libs/cvariablelist.cpp:375
+#, kde-format
+msgid "This is not a KMuddy variable list file."
+msgstr "Это не файл списка переменных KMuddy."
+
+#: plugins/converter/converterdialog.cpp:41
+#, kde-format
+msgid "Profile Converter"
+msgstr "Конвертер профилей"
+
+#: plugins/converter/converterdialog.cpp:49
+#, kde-format
+msgid ""
+"Pick profiles that you would like to convert and press Ok. This tool will "
+"create a new profile containing the information from the chosen profiles. "
+"Existing profiles will not be overwritten, even if they have the same name. "
+"The old profiles will be kept intact."
+msgstr ""
+"Выберите профили, которые нужно преобразовать, и нажмите «ОК». Этот "
+"инструмент создаст новый профиль, содержащий информацию из выбранных "
+"профилей. Существующие профили не перезаписываются, даже если у них "
+"одинаковые имена. Старые профили останутся без изменений."
+
+#: plugins/converter/converterdialog.cpp:54
+#, kde-format
+msgid "Path"
+msgstr "Путь"
+
+#: plugins/converter/converterplugin.cpp:73
+#, kde-format
+msgid "Profile &Converter..."
+msgstr "&Конвертер профилей…"
+
+#: plugins/converter/converterplugin.cpp:129
+#, kde-format
+msgid "The profiles have been successfully converted."
+msgstr "Профили успешно преобразованы."
+
+#: plugins/converter/converterplugin.cpp:131
+#, kde-format
+msgid "You did not specify any profiles to convert."
+msgstr "Не указаны профили для преобразования."
+
+#: plugins/mapper/cmapclipboard.cpp:64
+#, kde-format
+msgid "Select All"
+msgstr "Выбрать все"
+
+#: plugins/mapper/cmapclipboard.cpp:68
+#, kde-format
+msgid "Unselect All"
+msgstr "Снять выделение"
+
+#: plugins/mapper/cmapclipboard.cpp:72
+#, kde-format
+msgid "Invert Selection"
+msgstr "Обратить выделение"
+
+#: plugins/mapper/cmapclipboard.cpp:80
+#, kde-format
+msgid "Copy"
+msgstr "Копировать"
+
+#: plugins/mapper/cmapclipboard.cpp:84
+#, kde-format
+msgid "Cut"
+msgstr "Вырезать"
+
+#: plugins/mapper/cmapclipboard.cpp:88
+#, kde-format
+msgid "Paste"
+msgstr "Вставить"
+
+#: plugins/mapper/cmapclipboard.cpp:298 plugins/mapper/cmapclipboard.cpp:443
+#, kde-format
+msgid "Paste Element"
+msgstr "Вставить элемент"
+
+#: plugins/mapper/cmapclipboard.cpp:311 plugins/mapper/cmapclipboard.cpp:453
+#, kde-format
+msgid "Update Properties"
+msgstr "Обновить свойства"
+
+#: plugins/mapper/cmapclipboard.cpp:375
+#, kde-format
+msgid "Paste Path"
+msgstr "Вставить путь"
+
+#: plugins/mapper/cmapclipboard.cpp:466
+#, kde-format
+msgid "Delete Elements"
+msgstr "Удалить элементы"
+
+#: plugins/mapper/cmapelement.cpp:337
+#, kde-format
+msgid "Resize Element"
+msgstr "Изменить размер элемента"
+
+#: plugins/mapper/cmaplevel.cpp:32 plugins/mapper/cmaplevel.cpp:95
+#, kde-format
+msgid "Level %1"
+msgstr "Уровень %1"
+
+#: plugins/mapper/cmapmanager.cpp:122 plugins/mapper/cmapzonemanager.cpp:122
+#, kde-format
+msgid "Map #1"
+msgstr "Карта №1"
+
+#: plugins/mapper/cmapmanager.cpp:194
+#, kde-format
+msgid "Mapper: Directions"
+msgstr "Картограф: направления"
+
+#: plugins/mapper/cmapmanager.cpp:197
+#, kde-format
+msgid "Mapper: Movement"
+msgstr "Картограф: движение"
+
+#: plugins/mapper/cmapmanager.cpp:200
+#, kde-format
+msgid "Mapper: Colors"
+msgstr "Картограф: цвета"
+
+#: plugins/mapper/cmapmanager.cpp:203
+#, kde-format
+msgid "Mapper: Speedwalk"
+msgstr "Картограф: быстрое перемещение"
+
+#: plugins/mapper/cmapmanager.cpp:408
+#, kde-format
+msgid "Change Login Room"
+msgstr "Изменить комнату входа"
+
+#: plugins/mapper/cmapmanager.cpp:411
+#, kde-format
+msgid "Remove Login Room Status"
+msgstr "Снять состояние комнаты входа"
+
+#: plugins/mapper/cmapmanager.cpp:418
+#, kde-format
+msgid "Set Login Room Status"
+msgstr "Задать состояние комнаты входа"
+
+#: plugins/mapper/cmapmanager.cpp:450
+#, kde-format
+msgid "Change Current Room"
+msgstr "Изменить текущую комнату"
+
+#: plugins/mapper/cmapmanager.cpp:452
+#, kde-format
+msgid "Remove Current Room Status"
+msgstr "Удалить состояние текущей комнаты"
+
+#: plugins/mapper/cmapmanager.cpp:457
+#, kde-format
+msgid "Set Current Room Status"
+msgstr "Задать состояние текущей комнаты"
+
+#: plugins/mapper/cmapmanager.cpp:565
+#, kde-format
+msgid "Create Level"
+msgstr "Создать уровень"
+
+#: plugins/mapper/cmapmanager.cpp:634
+#: plugins/mapper/plugins/standard/tools/cmaptoolroom.cpp:29
+#, kde-format
+msgid "Create Room"
+msgstr "Создать комнату"
+
+#: plugins/mapper/cmapmanager.cpp:662 plugins/mapper/cmapmanager.cpp:691
+#, kde-format
+msgid "Create Text"
+msgstr "Создать текст"
+
+#: plugins/mapper/cmapmanager.cpp:761
+#, kde-format
+msgid "A path already exists at this location"
+msgstr "В этом месте уже существует путь"
+
+#: plugins/mapper/cmapmanager.cpp:761 plugins/mapper/cmapmanager.cpp:1444
+#: plugins/mapper/cmapmanager.cpp:1498 plugins/mapper/cmapmanager.cpp:1532
+#: plugins/mapper/cmapview.cpp:584 plugins/mapper/cmapview.cpp:606
+#: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
+#, kde-format
+msgid "KMuddy Mapper"
+msgstr "Картограф KMuddy"
+
+#: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
+#: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
+#, kde-format
+msgid "Create Path"
+msgstr "Создать путь"
+
+#: plugins/mapper/cmapmanager.cpp:854
+#, kde-format
+msgid "Delete Level"
+msgstr "Удалить уровень"
+
+#: plugins/mapper/cmapmanager.cpp:888 plugins/mapper/cmapmanager.cpp:897
+#, kde-format
+msgid "Delete Element"
+msgstr "Удалить элемент"
+
+#: plugins/mapper/cmapmanager.cpp:1444
+#, kde-format
+msgid "Speedwalking is already in progress"
+msgstr "Быстрое перемещение уже выполняется"
+
+#: plugins/mapper/cmapmanager.cpp:1498
+#, kde-format
+msgid "The automapper was unable to find a path to requested room"
+msgstr "Автокартограф не смог найти путь к запрошенной комнате"
+
+#: plugins/mapper/cmapmanager.cpp:1532
+#, kde-format
+msgid "Speedwalk abort because move limit was reached"
+msgstr "Быстрое перемещение прервано: достигнут предел числа ходов"
+
+#: plugins/mapper/cmapmanager.cpp:1631
+#, kde-format
+msgid "Move Elements in map"
+msgstr "Переместить элементы на карте"
+
+#: plugins/mapper/cmapmanager.cpp:1640
+#, kde-format
+msgid "Make Path Two-Way"
+msgstr "Сделать путь двусторонним"
+
+#: plugins/mapper/cmapmanager.cpp:1650
+#, kde-format
+msgid "Make Path One-Way"
+msgstr "Сделать путь односторонним"
+
+#: plugins/mapper/cmapmanager.cpp:1686 plugins/mapper/cmapmanager.cpp:1695
+#, kde-format
+msgid "Change Element Property"
+msgstr "Изменить свойство элемента"
+
+#: plugins/mapper/cmapmanager.cpp:1768
+#, kde-format
+msgid "Root Zone"
+msgstr "Корневая зона"
+
+#: plugins/mapper/cmapmanager.cpp:1784
+#, kde-format
+msgid "Test room 1"
+msgstr "Тестовая комната 1"
+
+#: plugins/mapper/cmapmanager.cpp:1787
+#, kde-format
+msgid "Test room 2"
+msgstr "Тестовая комната 2"
+
+#: plugins/mapper/cmapmanager.cpp:1790
+#, kde-format
+msgid "Test room 3"
+msgstr "Тестовая комната 3"
+
+#: plugins/mapper/cmapmanager.cpp:1793
+#, kde-format
+msgid "Test room 4"
+msgstr "Тестовая комната 4"
+
+#: plugins/mapper/cmapmanager.cpp:1809
+#, kde-format
+msgid "Set Special Exit"
+msgstr "Задать особый выход"
+
+#: plugins/mapper/cmappath.cpp:602 plugins/mapper/cmapview.cpp:684
+#, kde-format
+msgid "Add Bend"
+msgstr "Добавить изгиб"
+
+#: plugins/mapper/cmappath.cpp:614
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:210
+#, kde-format
+msgid "Move Bend"
+msgstr "Переместить изгиб"
+
+#: plugins/mapper/cmappath.cpp:629 plugins/mapper/cmapview.cpp:702
+#, kde-format
+msgid "Delete Path Segment"
+msgstr "Удалить сегмент пути"
+
+#: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:59
+#, kde-format
+msgid "Mapper"
+msgstr "Картограф"
+
+#: plugins/mapper/cmapview.cpp:79
+#, kde-format
+msgid "Follow Moves"
+msgstr "Следовать за перемещениями"
+
+#: plugins/mapper/cmapview.cpp:85
+#, kde-format
+msgid "Auto Create"
+msgstr "Автосоздание"
+
+#: plugins/mapper/cmapview.cpp:122
+#, kde-format
+msgid "&Grid"
+msgstr "&Сетка"
+
+#: plugins/mapper/cmapview.cpp:127
+#, kde-format
+msgid "Display Upper Level"
+msgstr "Показать верхний уровень"
+
+#: plugins/mapper/cmapview.cpp:132
+#, kde-format
+msgid "Display Lower Level"
+msgstr "Показать нижний уровень"
+
+#: plugins/mapper/cmapview.cpp:137
+#, kde-format
+msgid "Delete Current Level"
+msgstr "Удалить текущий уровень"
+
+#: plugins/mapper/cmapview.cpp:142
+#, kde-format
+msgid "Create New Zone"
+msgstr "Создать новую зону"
+
+#: plugins/mapper/cmapview.cpp:147
+#, kde-format
+msgid "Delete Current Zone"
+msgstr "Удалить текущую зону"
+
+#: plugins/mapper/cmapview.cpp:154
+#, kde-format
+msgid "Map Upper Level"
+msgstr "Нанести на карту верхний уровень"
+
+#: plugins/mapper/cmapview.cpp:158
+#, kde-format
+msgid "Map Lower Level"
+msgstr "Нанести на карту нижний уровень"
+
+#: plugins/mapper/cmapview.cpp:165
+#, kde-format
+msgid "Set &Current Position"
+msgstr "&Задать текущую позицию"
+
+#: plugins/mapper/cmapview.cpp:169
+#, kde-format
+msgid "Set Room to &Login Point"
+msgstr "Задать комнату как &точку входа"
+
+#: plugins/mapper/cmapview.cpp:173
+#, kde-format
+msgid "&Speed walk to room"
+msgstr "&Быстро перейти в комнату"
+
+#: plugins/mapper/cmapview.cpp:177
+#, kde-format
+msgid "&Delete room"
+msgstr "&Удалить комнату"
+
+#: plugins/mapper/cmapview.cpp:182 plugins/mapper/cmapview.cpp:194
+#: plugins/mapper/cmapview.cpp:226
+#, kde-format
+msgid "&Properties"
+msgstr "&Свойства"
+
+#: plugins/mapper/cmapview.cpp:189
+#, kde-format
+msgid "&Delete Text"
+msgstr "&Удалить текст"
+
+#: plugins/mapper/cmapview.cpp:201
+#, kde-format
+msgid "&One way"
+msgstr "&Односторонний"
+
+#: plugins/mapper/cmapview.cpp:205
+#, kde-format
+msgid "&Two way"
+msgstr "&Двусторонний"
+
+#: plugins/mapper/cmapview.cpp:209
+#, kde-format
+msgid "&Add Bend"
+msgstr "&Добавить изгиб"
+
+#: plugins/mapper/cmapview.cpp:213
+#, kde-format
+msgid "&Remove Segment"
+msgstr "&Удалить сегмент"
+
+#: plugins/mapper/cmapview.cpp:217
+#, kde-format
+msgid "&Edit Bends"
+msgstr "&Изменить изгибы"
+
+#: plugins/mapper/cmapview.cpp:221
+#, kde-format
+msgid "&Delete Path"
+msgstr "&Удалить путь"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdHide)
+#: plugins/mapper/cmapview.cpp:231
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:390
+#, kde-format
+msgid "Hide"
+msgstr "Скрыть"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCustom)
+#: plugins/mapper/cmapview.cpp:240
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:380
+#, kde-format
+msgid "Custom"
+msgstr "Другой"
+
+#: plugins/mapper/cmapview.cpp:243
+#, kde-format
+msgid "&Label"
+msgstr "&Метка"
+
+#: plugins/mapper/cmapview.cpp:584
+#, kde-format
+msgid "There is no level in that direction. Do you want to create a new one?"
+msgstr "В этом направлении уровня нет. Создать новый?"
+
+#: plugins/mapper/cmapview.cpp:584
+#, kde-format
+msgid "Create New Level"
+msgstr "Создать новый уровень"
+
+#: plugins/mapper/cmapview.cpp:606
+#, kde-format
+msgid "Are you sure that you want to delete the current level?"
+msgstr "Удалить текущий уровень?"
+
+#: plugins/mapper/cmapview.cpp:613
+#, kde-format
+msgid "Please enter the name of the new zone:"
+msgstr "Введите имя новой зоны:"
+
+#: plugins/mapper/cmapview.cpp:622
+#, kde-format
+msgid ""
+"Are you sure that you want to delete the current zone? This cannot be undone."
+msgstr "Удалить текущую зону? Это действие нельзя отменить."
+
+#: plugins/mapper/cmapview.cpp:759
+#, kde-format
+msgid "Change room label position"
+msgstr "Изменить положение метки комнаты"
+
+#: plugins/mapper/cmapview.cpp:785
+#, kde-format
+msgid "Change zone label position"
+msgstr "Изменить положение метки зоны"
+
+#: plugins/mapper/cmapviewstatusbar.cpp:55
+#, kde-format
+msgid "Current Room : "
+msgstr "Текущая комната: "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:56
+#, kde-format
+msgid "Level : "
+msgstr "Уровень: "
+
+#: plugins/mapper/cmapviewstatusbar.cpp:57
+#, kde-format
+msgid "Zone : "
+msgstr "Зона: "
+
+#: plugins/mapper/cmapzone.cpp:34
+#, kde-format
+msgid "Unnamed Zone"
+msgstr "Безымянная зона"
+
+#: plugins/mapper/cmapzonemanager.cpp:232
+#, kde-format
+msgid "This is not a KMuddy map list."
+msgstr "Это не список карт KMuddy."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapColorBase)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
+#, kde-format
+msgid "Mapper Colors Options"
+msgstr "Параметры цветов картографа"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
+#, kde-format
+msgid "Current Level"
+msgstr "Текущий уровень"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
+#, kde-format
+msgid "Default Path Color"
+msgstr "Цвет пути по умолчанию"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
+#, kde-format
+msgid "Default Room Color"
+msgstr "Цвет комнаты по умолчанию"
+
+#. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
+#, kde-format
+msgid "Current Position Color"
+msgstr "Цвет текущей позиции"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecialExit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:125
+#, kde-format
+msgid "Special Exit Color"
+msgstr "Цвет особого выхода"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLoginRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:135
+#, kde-format
+msgid "Login Room Color"
+msgstr "Цвет комнаты входа"
+
+#. i18n: ectx: property (text), widget (QLabel, lblEdit)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:183
+#, kde-format
+msgid "Edit Mode Color"
+msgstr "Цвет режима редактирования"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
+#, kde-format
+msgid "Default Text Color"
+msgstr "Цвет текста по умолчанию"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
+#, kde-format
+msgid "Default Zone Color"
+msgstr "Цвет зоны по умолчанию"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSelected)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
+#, kde-format
+msgid "Selected Color"
+msgstr "Цвет выделения"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLowerLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:310
+#, kde-format
+msgid "Lower Level"
+msgstr "Нижний уровень"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerRoom)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperRoom)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:322
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:482
+#, kde-format
+msgid "Room Color"
+msgstr "Цвет комнаты"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerPath)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperPath)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:351
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:472
+#, kde-format
+msgid "Path Color"
+msgstr "Цвет пути"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerText)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperText)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:361
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:502
+#, kde-format
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLowerZone)
+#. i18n: ectx: property (text), widget (QLabel, lblUpperZone)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:371
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:492
+#, kde-format
+msgid "Zone Color"
+msgstr "Цвет зоны"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraUpperLevel)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:441
+#, kde-format
+msgid "Upper Level"
+msgstr "Верхний уровень"
+
+#. i18n: ectx: property (text), widget (QLabel, lblBackground)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:578
+#, kde-format
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#. i18n: ectx: property (text), widget (QLabel, lblGrid)
+#: plugins/mapper/dialogs/dlgmapcolorbase.ui:607
+#, kde-format
+msgid "Grid Color"
+msgstr "Цвет сетки"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapDirectionsBase)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:17
+#, kde-format
+msgid "Directions"
+msgstr "Направления"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsLong)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:29
+#, kde-format
+msgid "Long Directions Commands"
+msgstr "Команды полных направлений"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:71
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:216
+#, kde-format
+msgid "North"
+msgstr "Север"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:81
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:226
+#, kde-format
+msgid "East"
+msgstr "Восток"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:91
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:236
+#, kde-format
+msgid "South"
+msgstr "Юг"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:101
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:246
+#, kde-format
+msgid "West"
+msgstr "Запад"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:131
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:276
+#, kde-format
+msgid "North East"
+msgstr "Северо-восток"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthEastShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:141
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:286
+#, kde-format
+msgid "South East"
+msgstr "Юго-восток"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblSouthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:151
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:296
+#, kde-format
+msgid "South West"
+msgstr "Юго-запад"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestLong)
+#. i18n: ectx: property (text), widget (QLabel, m_lblNorthWestShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:161
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:306
+#, kde-format
+msgid "North West"
+msgstr "Северо-запад"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraDirectionsShort)
+#: plugins/mapper/dialogs/dlgmapdirectionsbase.ui:174
+#, kde-format
+msgid "Short Directions Commands"
+msgstr "Команды сокращённых направлений"
+
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:85
+#: plugins/mapper/dialogs/dlgmapmovement.cpp:96
+#, kde-format
+msgid "Enter invalid movement string as a regular expression"
+msgstr "Введите строку недопустимого перемещения в виде регулярного выражения"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_fraMovement)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:17
+#, kde-format
+msgid "Valid Room Checking"
+msgstr "Проверка допустимости комнаты"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_chkEnableValidRoomChecking)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:23
+#, kde-format
+msgid "Enable valid room checking"
+msgstr "Включить проверку допустимости комнаты"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblInvalidMoveStrs)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:30
+#, kde-format
+msgid "Invalid Move Strings"
+msgstr "Строки недопустимого перемещения"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdAdd)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:61
+#, kde-format
+msgid "Add"
+msgstr "Добавить"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdEdit)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:68
+#, kde-format
+msgid "Edit"
+msgstr "Изменить"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_cmdRemove)
+#: plugins/mapper/dialogs/dlgmapmovementbase.ui:75
+#, kde-format
+msgid "Remove"
+msgstr "Удалить"
+
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:298
+#: plugins/mapper/dialogs/dlgmappathproperties.cpp:300
+#, kde-format
+msgid "Changed Path Properties"
+msgstr "Изменение свойств пути"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapPathPropertiesBase)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:14
+#, kde-format
+msgid "Path Properties"
+msgstr "Свойства пути"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:30
+#, kde-format
+msgid "Exits"
+msgstr "Выходы"
+
+#. i18n: ectx: property (title), widget (QGroupBox, grdExits)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:42
+#, kde-format
+msgid "Exit Details"
+msgstr "Подробности выхода"
+
+#. i18n: ectx: property (text), widget (QCheckBox, optTwoWay)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:54
+#, kde-format
+msgid "Two Way Exit"
+msgstr "Двусторонний выход"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkNormal)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:61
+#, kde-format
+msgid "Nor&mal exit"
+msgstr "Обы&чный выход"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:84
+#, kde-format
+msgid "Source Directions"
+msgstr "Исходные направления"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:124
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:488
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:322
+#, kde-format
+msgid "E"
+msgstr "В"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcS)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestS)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:146
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:510
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:190
+#, kde-format
+msgid "S"
+msgstr "Ю"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:190
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:466
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:256
+#, kde-format
+msgid "W"
+msgstr "З"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:212
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:378
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:344
+#, kde-format
+msgid "NE"
+msgstr "СВ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcNW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestNW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:234
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:444
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:278
+#, kde-format
+msgid "NW"
+msgstr "СЗ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSE)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSE)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:256
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:400
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:212
+#, kde-format
+msgid "SE"
+msgstr "ЮВ"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcN)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestN)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:278
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:422
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:300
+#, kde-format
+msgid "N"
+msgstr "С"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdSrcSW)
+#. i18n: ectx: property (text), widget (QPushButton, cmdDestSW)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:300
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:532
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:234
+#, kde-format
+msgid "SW"
+msgstr "ЮЗ"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:338
+#, kde-format
+msgid "Destination Direction"
+msgstr "Конечное направление"
+
+#. i18n: ectx: property (text), widget (QRadioButton, chkSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:574
+#, kde-format
+msgid "Spec&ial Exit"
+msgstr "Ос&обый выход"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSpecial)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:581
+#, kde-format
+msgid "Special Command"
+msgstr "Особая команда"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcToDest)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:599
+#, kde-format
+msgid "Source To Destination:"
+msgstr "Из исходной в конечную:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDestToSrc)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:622
+#, kde-format
+msgid "Destination To Source:"
+msgstr "Из конечной в исходную:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraSrcDestCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:653
+#, kde-format
+msgid "Src To Destination Commands"
+msgstr "Команды из исходной в конечную"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcBefore)
+#. i18n: ectx: property (text), widget (QLabel, lblDestBefore)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:665
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:706
+#, kde-format
+msgid "Before walking path:"
+msgstr "Перед прохождением пути:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSrcAfter)
+#. i18n: ectx: property (text), widget (QLabel, lblDestAfter)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:678
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:719
+#, kde-format
+msgid "After walking path:"
+msgstr "После прохождения пути:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDestSrcCommands)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:694
+#, kde-format
+msgid "Destination To Source Commands"
+msgstr "Команды из конечной в исходную"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdOk)
+#. i18n: ectx: property (text), widget (QPushButton, cmdOK)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:779
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:643
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:458
+#, kde-format
+msgid "OK"
+msgstr "ОК"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdCancel)
+#: plugins/mapper/dialogs/dlgmappathpropertiesbase.ui:786
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:653
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:468
+#, kde-format
+msgid "Cancel"
+msgstr "Отмена"
+
+#: plugins/mapper/dialogs/dlgmaproomproperties.cpp:96
+#: plugins/mapper/dialogs/dlgmaptextproperties.cpp:216
+#, kde-format
+msgid "Changed Room Properties"
+msgstr "Изменение свойств комнаты"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapRoomPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:14
+#, kde-format
+msgid "Room Properties"
+msgstr "Свойства комнаты"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:30
+#, kde-format
+msgid "&Description"
+msgstr "&Описание"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLabel)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:42
+#, kde-format
+msgid "Label:"
+msgstr "Метка:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDescription)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:55
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAppearance)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:69
+#, kde-format
+msgid "&Appearance"
+msgstr "&Внешний вид"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:81
+#, kde-format
+msgid "Color"
+msgstr "Цвет"
+
+#. i18n: ectx: property (text), widget (QLabel, lblRoomColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:101
+#, kde-format
+msgid "Room Color:"
+msgstr "Цвет комнаты:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkUseDefaltColor)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
+#, kde-format
+msgid "Default room color"
+msgstr "Цвет комнаты по умолчанию"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
+#, kde-format
+msgid "LabelPosition"
+msgstr "Положение метки"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:438
+#, kde-format
+msgid "&Exits"
+msgstr "В&ыходы"
+
+#. i18n: ectx: property (text), widget (QLabel, lblExits)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:458
+#, kde-format
+msgid "Room Exits:"
+msgstr "Выходы из комнаты:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:472
+#, kde-format
+msgid "Direction"
+msgstr "Направление"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:477
+#, kde-format
+msgid "Before command"
+msgstr "Команда перед"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, lstPaths)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:482
+#, kde-format
+msgid "After command"
+msgstr "Команда после"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdPathProperties)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:516
+#, kde-format
+msgid "Properties"
+msgstr "Свойства"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:533
+#, kde-format
+msgid "&Contents"
+msgstr "С&одержимое"
+
+#. i18n: ectx: property (text), widget (QLabel, lblContents)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:553
+#, kde-format
+msgid "RoomContents:"
+msgstr "Содержимое комнаты:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAddItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:599
+#, kde-format
+msgid "New Item"
+msgstr "Новый элемент"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdRemoveItem)
+#: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:606
+#, kde-format
+msgid "Remove Item"
+msgstr "Удалить элемент"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgMapSpeedwalkBase)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:14
+#, kde-format
+msgid "Speedwalk Options"
+msgstr "Параметры быстрого перемещения"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraLimit)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:26
+#, kde-format
+msgid "Limit Speedwalk Moves"
+msgstr "Ограничение числа ходов при быстром перемещении"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:38
+#, kde-format
+msgid "Limit speedwalk moves"
+msgstr "Ограничивать число ходов при быстром перемещении"
+
+#. i18n: ectx: property (text), widget (QLabel, lblLimitSpeedwalk)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:53
+#, kde-format
+msgid "Number of moves before aborting:"
+msgstr "Число ходов до прерывания:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fraDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:106
+#, kde-format
+msgid "Delay Speedwalk Moves"
+msgstr "Задержка между ходами при быстром перемещении"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: plugins/mapper/dialogs/dlgmapspeedwalkbase.ui:118
+#, kde-format
+msgid "Delay before sending next command (centi secconds)"
+msgstr "Задержка перед отправкой следующей команды (сотые доли секунды)"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DlgMapTextPropertiesBase)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:14
+#, kde-format
+msgid "Text Properties"
+msgstr "Свойства текста"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
+#, kde-format
+msgid "&Font"
+msgstr "&Шрифт"
+
+#. i18n: ectx: property (text), widget (QLabel, lblFamily)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
+#, kde-format
+msgid "Family:"
+msgstr "Гарнитура:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblColor_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:117
+#, kde-format
+msgid "Color:"
+msgstr "Цвет:"
+
+#. i18n: ectx: property (text), widget (KColorButton, cmdColor)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:139
+#, kde-format
+msgid "Button"
+msgstr "Кнопка"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:169
+#, kde-format
+msgid "S&ize"
+msgstr "&Размер"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:189
+#, kde-format
+msgid "Actual Size "
+msgstr "Фактический размер "
+
+#. i18n: ectx: property (text), widget (QLabel, Width_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:219
+#, kde-format
+msgid "Width (pixels):"
+msgstr "Ширина (пикселов):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblHeight_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:229
+#, kde-format
+msgid "Height (pixels):"
+msgstr "Высота (пикселов):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
+#, kde-format
+msgid "Font Size"
+msgstr "Размер шрифта"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSize_2)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
+#, kde-format
+msgid "Enter font size:"
+msgstr "Введите размер шрифта:"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
+#, kde-format
+msgid "Set Size"
+msgstr "Задать размер"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab3)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:379
+#: plugins/mapper/plugins/standard/tools/cmaptooltext.cpp:33
+#, kde-format
+msgid "Text"
+msgstr "Текст"
+
+#. i18n: ectx: property (text), widget (QLabel, lblText)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:391
+#, kde-format
+msgid "Text:"
+msgstr "Текст:"
+
+#. i18n: ectx: property (text), widget (QLabel, lblPreview)
+#: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:408
+#, kde-format
+msgid "Preview:"
+msgstr "Предварительный просмотр:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgSpeedwalkProgressBase)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:26
+#, kde-format
+msgid "Speedwalk Progress"
+msgstr "Ход быстрого перемещения"
+
+#. i18n: ectx: property (text), widget (QPushButton, cmdAbort)
+#: plugins/mapper/dialogs/dlgspeedwalkprogressbase.ui:44
+#, kde-format
+msgid "x"
+msgstr "×"
+
+#: plugins/mapper/kmuddy_mapper.cpp:70
+#, kde-format
+msgid "Show &mapper"
+msgstr "Показать &картограф"
+
+#. i18n: ectx: ToolBar (tools)
+#: plugins/mapper/kmuddymapperpart.rc:10
+#, kde-format
+msgid "Tools"
+msgstr "Сервис"
+
+#. i18n: ectx: ToolBar (navigation)
+#: plugins/mapper/kmuddymapperpart.rc:21
+#, kde-format
+msgid "Navigation"
+msgstr "Навигация"
+
+#: plugins/mapper/plugins/standard/cmapcmdmoveelements.cpp:28
+#, kde-format
+msgid "Move Elements"
+msgstr "Переместить элементы"
+
+#: plugins/mapper/plugins/standard/cmapcmdnotes.cpp:27
+#, kde-format
+msgid "Change element notes"
+msgstr "Изменить заметки элемента"
+
+#: plugins/mapper/plugins/standard/cmappluginstandard.cpp:70
+#, kde-format
+msgid "Notes"
+msgstr "Заметки"
+
+#: plugins/mapper/plugins/standard/propertyPanes/cmapnotespane.cpp:36
+#, kde-format
+msgid "Notes:"
+msgstr "Заметки:"
+
+#: plugins/mapper/plugins/standard/tools/cmaptooleraser.cpp:57
+#, kde-format
+msgid "Eraser"
+msgstr "Ластик"
+
+#: plugins/mapper/plugins/standard/tools/cmaptoolselect.cpp:34
+#, kde-format
+msgid "Select"
+msgstr "Выделить"
+
+#: plugins/scripting/cscript.cpp:68
+#, kde-format
+msgid "Sorry, single-instance script."
+msgstr "Сценарий допускает только один экземпляр."
+
+#: plugins/scripting/cscripteditor.cpp:61
+#, kde-format
+msgid "Script &name"
+msgstr "&Имя сценария"
+
+#: plugins/scripting/cscripteditor.cpp:65
+#, kde-format
+msgid "Name of this script."
+msgstr "Имя этого сценария."
+
+#: plugins/scripting/cscripteditor.cpp:69
+#, kde-format
+msgid "&Command to execute"
+msgstr "&Команда для выполнения"
+
+#: plugins/scripting/cscripteditor.cpp:73
+#, kde-format
+msgid ""
+"Command to execute, including parameters. Note that you can specify more "
+"parameters when executing the command from the input line, if you enable the "
+"Allow parameters checkbox."
+msgstr ""
+"Команда для выполнения, включая параметры. Учтите, что при выполнении "
+"команды из строки ввода можно указать дополнительные параметры, если включён "
+"флажок «Разрешить параметры»."
+
+#: plugins/scripting/cscripteditor.cpp:82
+#, kde-format
+msgid ""
+"Working directory for the script. Script will behave exactly as if it was "
+"run from this directory in console."
+msgstr ""
+"Рабочая папка для сценария. Сценарий будет выполняться точно так же, как "
+"если бы он был запущен из этой папки в консоли."
+
+#: plugins/scripting/cscripteditor.cpp:90
+#, kde-format
+msgid "Send user commands"
+msgstr "Отправлять команды пользователя"
+
+#: plugins/scripting/cscripteditor.cpp:91
+#, kde-format
+msgid ""
+"If script input is enabled, this enables sending of all sent commands to the "
+"script."
+msgstr "Если ввод сценария включён, ему передаются все отправляемые команды."
+
+#: plugins/scripting/cscripteditor.cpp:94
+#, kde-format
+msgid "Enable communication"
+msgstr "Включить обмен данными"
+
+#: plugins/scripting/cscripteditor.cpp:95
+#, kde-format
+msgid ""
+"Enables identification of lines of server output. Refer to the manual for "
+"more information."
+msgstr ""
+"Включает распознавание строк вывода сервера. Подробности — в руководстве."
+
+#: plugins/scripting/cscripteditor.cpp:98
+#, kde-format
+msgid "Single-instance script"
+msgstr "Только один экземпляр сценария"
+
+#: plugins/scripting/cscripteditor.cpp:99
+#, kde-format
+msgid ""
+"If an instance of this script is already running, another one can not be "
+"started."
+msgstr ""
+"Если экземпляр этого сценария уже запущен, запустить ещё один невозможно."
+
+#: plugins/scripting/cscripteditor.cpp:102
+#, kde-format
+msgid "Use flow control"
+msgstr "Использовать управление потоком"
+
+#: plugins/scripting/cscripteditor.cpp:103
+#, kde-format
+msgid ""
+"<p>If enabled, flow control will be used for this script. Flow control "
+"ensures that scripts are kept in sync, that means, that if two lines arrive "
+"from the server, the second one is not sent to the scripts until all running "
+"scripts have received the first one. However, in some situations, it's "
+"better not to use this feature.</p><p>If you don't need to disable flow "
+"control for some reason, leave this on.</p>"
+msgstr ""
+"<p>Если этот параметр включён, для этого сценария будет применяться "
+"управление потоком. Управление потоком обеспечивает синхронизацию сценариев: "
+"если от сервера приходят две строки, вторая не передаётся сценариям, пока "
+"все выполняющиеся сценарии не получат первую. Однако в некоторых ситуациях "
+"эту возможность лучше не использовать.</p><p>Если по какой-то причине не "
+"требуется отключать управление потоком, оставьте этот параметр включённым.</"
+"p>"
+
+#: plugins/scripting/cscripteditor.cpp:111
+#, kde-format
+msgid "Communicate variables"
+msgstr "Передавать переменные"
+
+#: plugins/scripting/cscripteditor.cpp:112
+#, kde-format
+msgid ""
+"If enabled, a UNIX domain socket will be created, allowing you to obtain and "
+"modify actual variable values. More information in the documentation."
+msgstr ""
+"Если включено, создаётся сокет домена UNIX, что позволяет получать и "
+"изменять фактические значения переменных. Дополнительные сведения — в "
+"документации."
+
+#: plugins/scripting/cscripteditor.cpp:145
+#, kde-format
+msgid "Choose script"
+msgstr "Выбор сценария"
+
+#: plugins/scripting/cscripteditor.cpp:153
+#, kde-format
+msgid "Choose working directory"
+msgstr "Выбор рабочей папки"
+
+#: plugins/scripting/cscriptlist.cpp:87
+#, kde-format
+msgid "Such external script does not exist!"
+msgstr "Такого внешнего сценария не существует."
+
+#: plugins/scripting/dlgrunninglist.cpp:31
+#, kde-format
+msgid "Running scripts"
+msgstr "Выполняющиеся сценарии"
+
+#: plugins/scripting/dlgrunninglist.cpp:39
+#, kde-format
+msgid "&Running scripts"
+msgstr "&Запущенные сценарии"
+
+#: plugins/scripting/dlgrunninglist.cpp:50
+#, kde-format
+msgid "&Terminate"
+msgstr "&Завершить"
+
+#: plugins/scripting/dlgrunninglist.cpp:54
+#, kde-format
+msgid "&Kill"
+msgstr "&Принудительно завершить"
+
+#: plugins/scripting/scriptingplugin.cpp:62
+#, kde-format
+msgid "/exec: Script list is not available."
+msgstr "/exec: список сценариев недоступен."
+
+#: plugins/scripting/scriptingplugin.cpp:122
+#, kde-format
+msgid "Scripts"
+msgstr "Сценарии"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:61
+#, kde-format
+msgid "Variable name that this trigger will be reacting on."
+msgstr "Имя переменной, на которую будет реагировать этот триггер."
+
+#: plugins/vartrigs/cvartriggereditor.cpp:63
+#, kde-format
+msgid "&Commands"
+msgstr "&Команды"
+
+#: plugins/vartrigs/cvartriggereditor.cpp:66
+#, kde-format
+msgid "Commands that will be executed when this trigger matches."
+msgstr "Команды, которые будут выполнены при срабатывании этого триггера."
+
+#: plugins/vartrigs/vartrigplugin.cpp:39
+#, kde-format
+msgid "Variable Triggers"
+msgstr "Триггеры переменных"
+
+#: plugins/varviewer/dlgvarviewer.cpp:70
+#, kde-format
+msgid "Variable"
+msgstr "Переменная"
+
+#: plugins/varviewer/dlgvarviewer.cpp:141
+#, kde-format
+msgid "Variables"
+msgstr "Переменные"
