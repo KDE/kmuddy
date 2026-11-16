@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:54+0000\n"
-"PO-Revision-Date: 2026-08-06 20:23+0300\n"
+"PO-Revision-Date: 2026-11-15 20:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1158,7 +1158,7 @@ msgstr "Çıktı alanı"
 #: kmuddy/dialogs/dlgappsettings.cpp:90
 #, kde-format
 msgid "Font"
-msgstr "Yazıtipi"
+msgstr "Yazı tipi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:93
 #, kde-format
@@ -1444,7 +1444,7 @@ msgstr "Seç…"
 #: kmuddy/dialogs/dlgappsettings.cpp:278
 #, kde-format
 msgid "Here you can select a font that will be used for main display."
-msgstr "Buradan ana ekran için kullanılacak bir yazıtipi seçebilirsiniz."
+msgstr "Buradan ana ekran için kullanılacak bir yazı tipi seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:282
 #, kde-format
@@ -1455,7 +1455,7 @@ msgstr "&Girdi satırı"
 #, kde-format
 msgid "Here you can select a font that will be used for the input line."
 msgstr ""
-"Buradan, girdi satırı için kullanılabilecek bir yazıtipi seçebilirsiniz."
+"Buradan, girdi satırı için kullanılabilecek bir yazı tipi seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:292
 #, kde-format
@@ -1467,7 +1467,7 @@ msgstr "&Çok satırlı girdi"
 msgid ""
 "Here you can select a font that will be used for the multi-line input window."
 msgstr ""
-"Buradan, çok satırlı girdi penceresi için kullanılabilecek bir yazıtipi "
+"Buradan, çok satırlı girdi penceresi için kullanılabilecek bir yazı tipi "
 "seçebilirsiniz."
 
 #: kmuddy/dialogs/dlgappsettings.cpp:317
@@ -5118,7 +5118,7 @@ msgstr "Metin Özellikleri"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:27
 #, kde-format
 msgid "&Font"
-msgstr "&Yazıtipi"
+msgstr "&Yazı Tipi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFamily)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:55
@@ -5166,13 +5166,13 @@ msgstr "Yükseklik (piksel):"
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:254
 #, kde-format
 msgid "Font Size"
-msgstr "Yazıtipi Puntosu"
+msgstr "Yazı Tipi Puntosu"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSize_2)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:300
 #, kde-format
 msgid "Enter font size:"
-msgstr "Yazıtipi puntosu gir:"
+msgstr "Yazı tipi puntosu gir:"
 
 #. i18n: ectx: property (text), widget (QPushButton, cmdSetSize)
 #: plugins/mapper/dialogs/dlgmaptextpropertiesbase.ui:346
