@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:54+0000\n"
-"PO-Revision-Date: 2026-11-16 18:42+0300\n"
+"PO-Revision-Date: 2026-11-23 18:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -214,7 +214,7 @@ msgstr "&En yüksek değişken (isteğe bağlı)"
 #: kmuddy/cgaugeeditor.cpp:69 kmuddy/cstatusvareditor.cpp:67
 #, kde-format
 msgid "Variable holding the maximum value (default=100)"
-msgstr "En yüksek değeri tutan değişken (öntanımlı = 100)"
+msgstr "En yüksek değeri tutan değişken (varsayılan = 100)"
 
 #: kmuddy/cgaugeeditor.cpp:75 kmuddy/cstatusvareditor.cpp:73
 #, kde-format
@@ -1317,7 +1317,7 @@ msgstr "Şunlara kendiliğinden bağlan:"
 #: kmuddy/dialogs/dlgappsettings.cpp:193
 #, kde-format
 msgid "Default &background color"
-msgstr "Öntanımlı &arka plan rengi"
+msgstr "Varsayılan &arka plan rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:196
 #, kde-format
@@ -1327,7 +1327,7 @@ msgstr "Bu renk, standart arka plan rengi olarak kullanılır."
 #: kmuddy/dialogs/dlgappsettings.cpp:198
 #, kde-format
 msgid "Default &text color"
-msgstr "Öntanımlı &metin rengi"
+msgstr "Varsayılan &metin rengi"
 
 #: kmuddy/dialogs/dlgappsettings.cpp:201
 #, kde-format
@@ -1964,7 +1964,7 @@ msgid ""
 msgstr ""
 "Bu etkinleştirildiğinde, yalnızca geçmiş arabelleğinin o anda görüntülenen "
 "kısmından arabelleğin sonuna kadar olan kısmı dökülecektir. Aksi takdirde "
-"arabelleğin tamamı boşaltılacaktır (öntanımlı)."
+"arabelleğin tamamı boşaltılacaktır (varsayılan)."
 
 #: kmuddy/dialogs/dlgdumpbuffer.cpp:52 kmuddy/dialogs/dlgtranscript.cpp:86
 #, kde-format
@@ -2441,7 +2441,7 @@ msgstr "Dış &betikler dizini"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:155
 #, kde-format
 msgid "Default directory where we will look for scripts."
-msgstr "Betikleri arayacağımız öntanımlı dizin."
+msgstr "Betikleri arayacağımız varsayılan dizin."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:158
 #: plugins/scripting/cscripteditor.cpp:78
@@ -2455,7 +2455,7 @@ msgid ""
 "Default working directory for your scripts. Making this the same as above is "
 "usually a good choice."
 msgstr ""
-"Betikleriniz için öntanımlı çalışma dizini. Bunu yukarısı ile aynı yapmak "
+"Betikleriniz için varsayılan çalışma dizini. Bunu yukarısı ile aynı yapmak "
 "genelde iyi bir seçimdir."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:165
@@ -2466,7 +2466,7 @@ msgstr "&Yazıdökümler dizini"
 #: kmuddy/dialogs/dlgprofilesettings.cpp:169
 #, kde-format
 msgid "Directory where session transcripts will be saved by default."
-msgstr "Yazıdökümlerin öntanımlı olarak kaydedileceği dizin."
+msgstr "Yazıdökümlerin varsayılan olarak kaydedileceği dizin."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:190
 #, kde-format
@@ -2593,17 +2593,17 @@ msgstr ""
 #: kmuddy/dialogs/dlgprofilesettings.cpp:397
 #, kde-format
 msgid "Choose default script location"
-msgstr "Öntanımlı betik konumunu seç"
+msgstr "Varsayılan betik konumunu seç"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:402
 #, kde-format
 msgid "Choose default script working directory"
-msgstr "Öntanımlı betik çalışma dizinini seç"
+msgstr "Varsayılan betik çalışma dizinini seç"
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:407
 #, kde-format
 msgid "Choose default transcript directory"
-msgstr "Öntanımlı yazıdöküm dizinini seç"
+msgstr "Varsayılan yazıdöküm dizinini seç"
 
 #: kmuddy/dialogs/dlgquickconnect.cpp:33
 #, kde-format
@@ -4525,13 +4525,13 @@ msgstr "Geçerli Düzey"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:57
 #, kde-format
 msgid "Default Path Color"
-msgstr "Öntanımlı Yol Rengi"
+msgstr "Varsayılan Yol Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultRoom)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:67
 #, kde-format
 msgid "Default Room Color"
-msgstr "Öntanımlı Oda Rengi"
+msgstr "Varsayılan Oda Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentPosition)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:115
@@ -4561,13 +4561,13 @@ msgstr "Düzenleme Kipi Rengi"
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:212
 #, kde-format
 msgid "Default Text Color"
-msgstr "Öntanımlı Metin Rengi"
+msgstr "Varsayılan Metin Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDefaultZone)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:222
 #, kde-format
 msgid "Default Zone Color"
-msgstr "Öntanımlı Bölge Rengi"
+msgstr "Varsayılan Bölge Rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSelected)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:289
@@ -5004,7 +5004,7 @@ msgstr "Oda Rengi:"
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:148
 #, kde-format
 msgid "Default room color"
-msgstr "Öntanımlı oda rengi"
+msgstr "Varsayılan oda rengi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraLabelPos)
 #: plugins/mapper/dialogs/dlgmaproompropertiesbase.ui:158
