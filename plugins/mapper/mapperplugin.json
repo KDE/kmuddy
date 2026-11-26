@@ -2,7 +2,7 @@
     "KPlugin": {
         "Description": "Implements a mapper",
         "Description[ar]": "نفّذ صانع خرائط",
-        "Description[ca@valencia]": "Implementa un mapador",
+        "Description[ca@valencia]": "Implementa un assignador",
         "Description[ca]": "Implementa un assignador",
         "Description[en_GB]": "Implements a mapper",
         "Description[eo]": "Realigas mapilon",
@@ -34,7 +34,7 @@
         "License": "GPL",
         "Name": "Mapper",
         "Name[ar]": "صانع خرائط",
-        "Name[ca@valencia]": "Mapador",
+        "Name[ca@valencia]": "Assignador",
         "Name[ca]": "Assignador",
         "Name[en_GB]": "Mapper",
         "Name[eo]": "Mapper",
