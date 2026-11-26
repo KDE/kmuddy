@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmuddy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:54+0000\n"
-"PO-Revision-Date: 2026-09-06 17:56+0200\n"
+"PO-Revision-Date: 2026-11-19 20:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -448,7 +448,7 @@ msgstr "S'ha trobat el servidor remot. S'està intentant la connexió."
 #: kmuddy/ctimer.cpp:78
 #, kde-format
 msgid " sec"
-msgstr " seg"
+msgstr " s"
 
 #: kmuddy/ctimer.cpp:80
 #, kde-format
@@ -2452,7 +2452,7 @@ msgid ""
 "used by the auto-mapper."
 msgstr ""
 "Esta és una ordre de moviment. S'utilitza per a la marxa ràpida i també serà "
-"emprada pel mapador automàtic."
+"emprada per l'assignador automàtic."
 
 #: kmuddy/dialogs/dlgprofilesettings.cpp:151
 #, kde-format
@@ -4167,22 +4167,22 @@ msgstr "Mapa núm. 1"
 #: plugins/mapper/cmapmanager.cpp:194
 #, kde-format
 msgid "Mapper: Directions"
-msgstr "Mapador: Direccions"
+msgstr "Assignador: Direccions"
 
 #: plugins/mapper/cmapmanager.cpp:197
 #, kde-format
 msgid "Mapper: Movement"
-msgstr "Mapador: Moviment"
+msgstr "Assignador: Moviment"
 
 #: plugins/mapper/cmapmanager.cpp:200
 #, kde-format
 msgid "Mapper: Colors"
-msgstr "Mapador: Colors"
+msgstr "Assignador: Colors"
 
 #: plugins/mapper/cmapmanager.cpp:203
 #, kde-format
 msgid "Mapper: Speedwalk"
-msgstr "Mapador: Marxa ràpida"
+msgstr "Assignador: Marxa ràpida"
 
 #: plugins/mapper/cmapmanager.cpp:408
 #, kde-format
@@ -4241,7 +4241,7 @@ msgstr "Ja hi ha un camí amb esta ubicació"
 #: plugins/mapper/cmapview.cpp:613 plugins/mapper/cmapview.cpp:622
 #, kde-format
 msgid "KMuddy Mapper"
-msgstr "Mapador de KMuddy"
+msgstr "Assignador de KMuddy"
 
 #: plugins/mapper/cmapmanager.cpp:774 plugins/mapper/cmapmanager.cpp:808
 #: plugins/mapper/plugins/standard/tools/cmaptoolpath.cpp:40
@@ -4268,7 +4268,7 @@ msgstr "La marxa ràpida ja es troba en progrés"
 #, kde-format
 msgid "The automapper was unable to find a path to requested room"
 msgstr ""
-"El mapador automàtic no ha pogut trobar un camí cap a la sala sol·licitada"
+"L'assignador automàtic no ha pogut trobar un camí cap a la sala sol·licitada"
 
 #: plugins/mapper/cmapmanager.cpp:1532
 #, kde-format
@@ -4346,7 +4346,7 @@ msgstr "Suprimix el segment del camí"
 #: plugins/mapper/cmapview.cpp:52 plugins/mapper/kmuddy_mapper.cpp:59
 #, kde-format
 msgid "Mapper"
-msgstr "Mapador"
+msgstr "Assignador"
 
 #: plugins/mapper/cmapview.cpp:79
 #, kde-format
@@ -4546,7 +4546,7 @@ msgstr "Esta no és una llista de mapes de KMuddy."
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:14
 #, kde-format
 msgid "Mapper Colors Options"
-msgstr "Opcions per als colors del mapador"
+msgstr "Opcions per als colors de l'assignador"
 
 #. i18n: ectx: property (title), widget (QGroupBox, fraCurrentLevel)
 #: plugins/mapper/dialogs/dlgmapcolorbase.ui:26
@@ -5247,7 +5247,7 @@ msgstr "x"
 #: plugins/mapper/kmuddy_mapper.cpp:70
 #, kde-format
 msgid "Show &mapper"
-msgstr "Mostra el &mapador"
+msgstr "Mostra l'&assignador"
 
 #. i18n: ectx: ToolBar (tools)
 #: plugins/mapper/kmuddymapperpart.rc:10
